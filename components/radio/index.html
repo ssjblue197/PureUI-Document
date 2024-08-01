@@ -45,10 +45,6 @@
     <script src="/assets/scripts/search.js" defer=""></script>
   </head>
   <body>
-    <a id="skip-to-main" class="visually-hidden" href="#main-content" data-smooth-link="false">
-      Skip to main content
-    </a>
-
     <button id="menu-toggle" type="button" aria-label="Menu">
       <svg width="148" height="148" viewBox="0 0 148 148" xmlns="http://www.w3.org/2000/svg">
         <g stroke="currentColor" stroke-width="18" fill="none" fill-rule="evenodd" stroke-linecap="round">
@@ -393,7 +389,6 @@
     </aside>
 
     <main>
-      <a id="main-content"></a>
       <article id="content" class="content content--with-toc">
         <div class="content__toc">
           <ul>
@@ -442,18 +437,18 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-242">
+            <div class="code-preview__source-group" id="code-preview-source-group-249">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-747"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-radio-group</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Select an option<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>a<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-767"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-radio-group</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Select an option<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>a<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-radio</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Option 1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-radio</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-radio</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Option 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-radio</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-radio</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Option 3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-radio</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-radio-group</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-747"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-767"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-748"><span class="token keyword">import</span> PRadio <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/radio'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-768"><span class="token keyword">import</span> PRadio <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/radio'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PRadioGroup <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/radio-group'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
@@ -463,7 +458,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PRadio</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Option 3</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PRadio</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PRadioGroup</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-748"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-768"></p-copy-button></pre>
               </div>
             </div>
 
@@ -472,7 +467,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-242"
+                aria-controls="code-preview-source-group-249"
               >
                 Source
                 <svg
@@ -545,18 +540,18 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-243">
+            <div class="code-preview__source-group" id="code-preview-source-group-250">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-749"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-radio-group</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Select an option<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>a<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-769"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-radio-group</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Select an option<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>a<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-radio</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Option 1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-radio</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-radio</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Option 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-radio</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-radio</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Option 3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-radio</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-radio-group</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-749"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-769"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-750"><span class="token keyword">import</span> PRadio <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/radio'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-770"><span class="token keyword">import</span> PRadio <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/radio'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PRadioGroup <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/radio-group'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
@@ -566,7 +561,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PRadio</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Option 3</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PRadio</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PRadioGroup</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-750"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-770"></p-copy-button></pre>
               </div>
             </div>
 
@@ -575,7 +570,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-243"
+                aria-controls="code-preview-source-group-250"
               >
                 Source
                 <svg
@@ -635,18 +630,18 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-244">
+            <div class="code-preview__source-group" id="code-preview-source-group-251">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-751"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-radio-group</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Select an option<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>a<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-771"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-radio-group</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Select an option<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>a<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-radio</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Option 1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-radio</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-radio</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2<span class="token punctuation">"</span></span> <span class="token attr-name">disabled</span><span class="token punctuation">&gt;</span></span>Option 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-radio</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-radio</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Option 3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-radio</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-radio-group</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-751"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-771"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-752"><span class="token keyword">import</span> PRadio <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/radio'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-772"><span class="token keyword">import</span> PRadio <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/radio'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PRadioGroup <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/radio-group'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
@@ -658,7 +653,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PRadio</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Option 3</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PRadio</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PRadioGroup</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-752"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-772"></p-copy-button></pre>
               </div>
             </div>
 
@@ -667,7 +662,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-244"
+                aria-controls="code-preview-source-group-251"
               >
                 Source
                 <svg
@@ -714,7 +709,7 @@
             Add the <code>size</code> attribute to the <a href="/components/radio-group">Radio Group</a> to change the
             radios’ size.
           </p>
-          <pre><code class="language-html" id="code-block-753"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-radio-group</span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>small<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+          <pre><code class="language-html" id="code-block-773"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-radio-group</span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>small<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-radio</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Small 1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-radio</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-radio</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Small 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-radio</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-radio</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Small 3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-radio</span><span class="token punctuation">&gt;</span></span>
@@ -735,8 +730,8 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-radio</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Large 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-radio</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-radio</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Large 3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-radio</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-radio-group</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-753"></p-copy-button></pre>
-          <pre><code class="language-jsx" id="code-block-754"><span class="token keyword">import</span> PRadio <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/react/radio"</span><span class="token punctuation">;</span>
+</code><p-copy-button class="copy-code-button" from="code-block-773"></p-copy-button></pre>
+          <pre><code class="language-jsx" id="code-block-774"><span class="token keyword">import</span> PRadio <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/react/radio"</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
@@ -763,7 +758,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PRadioGroup</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-754"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-774"></p-copy-button></pre>
 
           <h2 id="importing" class="anchor-heading">
             Importing<a href="#importing" aria-label='Direct link to "Importing"'></a>
@@ -792,7 +787,7 @@
                 >
                 using a script tag:
               </p>
-              <pre><code class="language-html" id="code-block-755"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.0.1/cdn/components/radio/radio.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-755"></p-copy-button></pre>
+              <pre><code class="language-html" id="code-block-775"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.0.1/cdn/components/radio/radio.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-775"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="import">
@@ -807,17 +802,17 @@
                 >
                 using a JavaScript import:
               </p>
-              <pre><code class="language-js" id="code-block-756"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.0.1/cdn/components/radio/radio.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-756"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-776"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.0.1/cdn/components/radio/radio.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-776"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="bundler">
               <p>To import this component using <a href="/getting-started/installation#bundling">a bundler</a>:</p>
-              <pre><code class="language-js" id="code-block-757"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/radio/radio.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-757"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-777"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/radio/radio.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-777"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="react">
               <p>To import this component as a <a href="/frameworks/react">React component</a>:</p>
-              <pre><code class="language-js" id="code-block-758"><span class="token keyword">import</span> PRadio <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/radio'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-758"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-778"><span class="token keyword">import</span> PRadio <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/radio'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-778"></p-copy-button></pre>
             </p-tab-panel>
           </p-tab-group>
 

@@ -1,10 +1,10 @@
-import "../chunks/chunk.2ALBA6CJ.js";
+import "../chunks/chunk.BJOMOILW.js";
 import {
   en_default
-} from "../chunks/chunk.2NHKJ2D2.js";
+} from "../chunks/chunk.XUJCEWOF.js";
 import {
   registerTranslation
-} from "../chunks/chunk.O27EHOBW.js";
+} from "../chunks/chunk.TDEXDIPB.js";
 import {
   __spreadProps,
   __spreadValues

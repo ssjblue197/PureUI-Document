@@ -1,6 +1,6 @@
 import {
   registerTranslation
-} from "../chunks/chunk.O27EHOBW.js";
+} from "../chunks/chunk.TDEXDIPB.js";
 import "../chunks/chunk.KIILAQWQ.js";
 
 // src/translations/id.ts

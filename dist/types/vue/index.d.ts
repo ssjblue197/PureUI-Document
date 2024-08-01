@@ -1,13 +1,13 @@
 import type { DefineComponent } from "vue";
 
-import type { PAvatar } from "../../components/avatar/avatar.component.js";
-import type { PAnimatedImage } from "../../components/animated-image/animated-image.component.js";
 import type { PAlert } from "../../components/alert/alert.component.js";
+import type { PAnimation } from "../../components/animation/animation.component.js";
+import type { PAnimatedImage } from "../../components/animated-image/animated-image.component.js";
+import type { PAvatar } from "../../components/avatar/avatar.component.js";
 import type { PBadge } from "../../components/badge/badge.component.js";
 import type { PBreadcrumb } from "../../components/breadcrumb/breadcrumb.component.js";
 import type { PBreadcrumbItem } from "../../components/breadcrumb-item/breadcrumb-item.component.js";
 import type { PButton } from "../../components/button/button.component.js";
-import type { PAnimation } from "../../components/animation/animation.component.js";
 import type { PButtonGroup } from "../../components/button-group/button-group.component.js";
 import type { PCalendar } from "../../components/calendar/calendar.component.js";
 import type { PCard } from "../../components/card/card.component.js";
@@ -60,20 +60,70 @@ import type { PTree } from "../../components/tree/tree.component.js";
 import type { PTreeItem } from "../../components/tree-item/tree-item.component.js";
 import type { PVisuallyHidden } from "../../components/visually-hidden/visually-hidden.component.js";
 
-type PAvatarProps = {
-  /** The image source to use for the avatar. */
-  image?: PAvatar["image"];
-  /** A label to use to describe the avatar to assistive devices. */
-  label?: PAvatar["label"];
-  /** Initials to use as a fallback when no image is available (1-2 characters max recommended). */
-  initials?: PAvatar["initials"];
-  /** Indicates how the browser should load the image. */
-  loading?: PAvatar["loading"];
-  /** The shape of the avatar. */
-  shape?: PAvatar["shape"];
+type PAlertProps = {
+  /** Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can
+use the `show()` and `hide()` methods and this attribute will reflect the alert's open state. */
+  open?: PAlert["open"];
+  /** Enables a close button that allows the user to dismiss the alert. */
+  closable?: PAlert["closable"];
+  /** The alert's theme variant. */
+  variant?: PAlert["variant"];
+  /** The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with
+the alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning
+the alert will not close on its own. */
+  duration?: PAlert["duration"];
+  /**  */
+  base?: PAlert["base"];
+  /** Emitted when the alert opens. */
+  "onp-show"?: (e: CustomEvent<never>) => void;
+  /** Emitted after the alert opens and all animations are complete. */
+  "onp-after-show"?: (e: CustomEvent<never>) => void;
+  /** Emitted when the alert closes. */
+  "onp-hide"?: (e: CustomEvent<never>) => void;
+  /** Emitted after the alert closes and all animations are complete. */
+  "onp-after-hide"?: (e: CustomEvent<never>) => void;
+};
 
-  /** The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause. */
-  onPError?: (e: CustomEvent<never>) => void;
+type PAnimationProps = {
+  /** The name of the built-in animation to use. For custom animations, use the `keyframes` prop. */
+  name?: PAnimation["name"];
+  /** Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when
+the animation finishes or gets canceled. */
+  play?: PAnimation["play"];
+  /** The number of milliseconds to delay the start of the animation. */
+  delay?: PAnimation["delay"];
+  /** Determines the direction of playback as well as the behavior when reaching the end of an iteration.
+[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction) */
+  direction?: PAnimation["direction"];
+  /** The number of milliseconds each iteration of the animation takes to complete. */
+  duration?: PAnimation["duration"];
+  /** The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function
+such as `cubic-bezier(0, 1, .76, 1.14)`. */
+  easing?: PAnimation["easing"];
+  /** The number of milliseconds to delay after the active period of an animation sequence. */
+  "end-delay"?: PAnimation["endDelay"];
+  /** Sets how the animation applies styles to its target before and after its execution. */
+  fill?: PAnimation["fill"];
+  /** The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops. */
+  iterations?: PAnimation["iterations"];
+  /** The offset at which to start the animation, usually between 0 (start) and 1 (end). */
+  "iteration-start"?: PAnimation["iterationStart"];
+  /** Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this
+to `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This
+value can be changed without causing the animation to restart. */
+  "playback-rate"?: PAnimation["playbackRate"];
+  /**  */
+  defaultPot?: PAnimation["defaultPot"];
+  /** The keyframes to use for the animation. If this is set, `name` will be ignored. */
+  keyframes?: PAnimation["keyframes"];
+  /** Gets and sets the current animation time. */
+  currentTime?: PAnimation["currentTime"];
+  /** Emitted when the animation is canceled. */
+  "onp-cancel"?: (e: CustomEvent<never>) => void;
+  /** Emitted when the animation finishes. */
+  "onp-finish"?: (e: CustomEvent<never>) => void;
+  /** Emitted when the animation starts or restarts. */
+  "onp-start"?: (e: CustomEvent<never>) => void;
 };
 
 type PAnimatedImageProps = {
@@ -90,33 +140,25 @@ type PAnimatedImageProps = {
   /**  */
   isLoaded?: PAnimatedImage["isLoaded"];
   /** Emitted when the image loads successfully. */
-  onPLoad?: (e: CustomEvent<never>) => void;
+  "onp-load"?: (e: CustomEvent<never>) => void;
   /** Emitted when the image fails to load. */
-  onPError?: (e: CustomEvent<never>) => void;
+  "onp-error"?: (e: CustomEvent<never>) => void;
 };
 
-type PAlertProps = {
-  /** Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can
-use the `show()` and `hide()` methods and this attribute will reflect the alert's open state. */
-  open?: PAlert["open"];
-  /** Enables a close button that allows the user to dismiss the alert. */
-  closable?: PAlert["closable"];
-  /** The alert's theme variant. */
-  variant?: PAlert["variant"];
-  /** The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with
-the alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning
-the alert will not close on its own. */
-  duration?: PAlert["duration"];
-  /**  */
-  base?: PAlert["base"];
-  /** Emitted when the alert opens. */
-  onPShow?: (e: CustomEvent<never>) => void;
-  /** Emitted after the alert opens and all animations are complete. */
-  onPAfterShow?: (e: CustomEvent<never>) => void;
-  /** Emitted when the alert closes. */
-  onPHide?: (e: CustomEvent<never>) => void;
-  /** Emitted after the alert closes and all animations are complete. */
-  onPAfterHide?: (e: CustomEvent<never>) => void;
+type PAvatarProps = {
+  /** The image source to use for the avatar. */
+  image?: PAvatar["image"];
+  /** A label to use to describe the avatar to assistive devices. */
+  label?: PAvatar["label"];
+  /** Initials to use as a fallback when no image is available (1-2 characters max recommended). */
+  initials?: PAvatar["initials"];
+  /** Indicates how the browser should load the image. */
+  loading?: PAvatar["loading"];
+  /** The shape of the avatar. */
+  shape?: PAvatar["shape"];
+
+  /** The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause. */
+  "onp-error"?: (e: CustomEvent<never>) => void;
 };
 
 type PBadgeProps = {
@@ -210,53 +252,11 @@ value of this attribute must be an id of a form in the same document or shadow r
   /** Gets the validation message */
   validationMessage?: PButton["validationMessage"];
   /** Emitted when the button loses focus. */
-  onPBlur?: (e: CustomEvent<never>) => void;
+  "onp-blur"?: (e: CustomEvent<never>) => void;
   /** Emitted when the button gains focus. */
-  onPFocus?: (e: CustomEvent<never>) => void;
+  "onp-focus"?: (e: CustomEvent<never>) => void;
   /** Emitted when the form control has been checked for validity and its constraints aren't satisfied. */
-  onPInvalid?: (e: CustomEvent<never>) => void;
-};
-
-type PAnimationProps = {
-  /** The name of the built-in animation to use. For custom animations, use the `keyframes` prop. */
-  name?: PAnimation["name"];
-  /** Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when
-the animation finishes or gets canceled. */
-  play?: PAnimation["play"];
-  /** The number of milliseconds to delay the start of the animation. */
-  delay?: PAnimation["delay"];
-  /** Determines the direction of playback as well as the behavior when reaching the end of an iteration.
-[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction) */
-  direction?: PAnimation["direction"];
-  /** The number of milliseconds each iteration of the animation takes to complete. */
-  duration?: PAnimation["duration"];
-  /** The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function
-such as `cubic-bezier(0, 1, .76, 1.14)`. */
-  easing?: PAnimation["easing"];
-  /** The number of milliseconds to delay after the active period of an animation sequence. */
-  "end-delay"?: PAnimation["endDelay"];
-  /** Sets how the animation applies styles to its target before and after its execution. */
-  fill?: PAnimation["fill"];
-  /** The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops. */
-  iterations?: PAnimation["iterations"];
-  /** The offset at which to start the animation, usually between 0 (start) and 1 (end). */
-  "iteration-start"?: PAnimation["iterationStart"];
-  /** Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this
-to `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This
-value can be changed without causing the animation to restart. */
-  "playback-rate"?: PAnimation["playbackRate"];
-  /**  */
-  defaultPot?: PAnimation["defaultPot"];
-  /** The keyframes to use for the animation. If this is set, `name` will be ignored. */
-  keyframes?: PAnimation["keyframes"];
-  /** Gets and sets the current animation time. */
-  currentTime?: PAnimation["currentTime"];
-  /** Emitted when the animation is canceled. */
-  onPCancel?: (e: CustomEvent<never>) => void;
-  /** Emitted when the animation finishes. */
-  onPFinish?: (e: CustomEvent<never>) => void;
-  /** Emitted when the animation starts or restarts. */
-  onPStart?: (e: CustomEvent<never>) => void;
+  "onp-invalid"?: (e: CustomEvent<never>) => void;
 };
 
 type PButtonGroupProps = {
@@ -284,7 +284,7 @@ type PCalendarProps = {
   selectedDates?: PCalendar["selectedDates"];
 
   /** Emitted when the date changes. */
-  onPChange?: (e: CustomEvent<never>) => void;
+  "onp-change"?: (e: CustomEvent<never>) => void;
 };
 
 type PCardProps = {};
@@ -320,7 +320,7 @@ greater than one. It can't be higher than `slides-per-page`. */
   /**  */
   dragging?: PCarousel["dragging"];
   /** Emitted when the active slide changes. */
-  onPSlideChange?: (e: CustomEvent<{ index: number; slide: PCarouselItem }>) => void;
+  "onp-slide-change"?: (e: CustomEvent<{ index: number; slide: PCarouselItem }>) => void;
 };
 
 type PCarouselItemProps = {};
@@ -358,15 +358,15 @@ the same document or shadow root for this to work. */
   /** Gets the validation message */
   validationMessage?: PCheckbox["validationMessage"];
   /** Emitted when the checkbox loses focus. */
-  onPBlur?: (e: CustomEvent<never>) => void;
+  "onp-blur"?: (e: CustomEvent<never>) => void;
   /** Emitted when the checked state changes. */
-  onPChange?: (e: CustomEvent<never>) => void;
+  "onp-change"?: (e: CustomEvent<never>) => void;
   /** Emitted when the checkbox gains focus. */
-  onPFocus?: (e: CustomEvent<never>) => void;
+  "onp-focus"?: (e: CustomEvent<never>) => void;
   /** Emitted when the checkbox receives input. */
-  onPInput?: (e: CustomEvent<never>) => void;
+  "onp-input"?: (e: CustomEvent<never>) => void;
   /** Emitted when the form control has been checked for validity and its constraints aren't satisfied. */
-  onPInvalid?: (e: CustomEvent<never>) => void;
+  "onp-invalid"?: (e: CustomEvent<never>) => void;
 };
 
 type PColorPickerProps = {
@@ -424,15 +424,15 @@ the same document or shadow root for this to work. */
   /** Gets the validation message */
   validationMessage?: PColorPicker["validationMessage"];
   /** Emitted when the color picker loses focus. */
-  onPBlur?: (e: CustomEvent<never>) => void;
+  "onp-blur"?: (e: CustomEvent<never>) => void;
   /** Emitted when the color picker's value changes. */
-  onPChange?: (e: CustomEvent<never>) => void;
+  "onp-change"?: (e: CustomEvent<never>) => void;
   /** Emitted when the color picker receives focus. */
-  onPFocus?: (e: CustomEvent<never>) => void;
+  "onp-focus"?: (e: CustomEvent<never>) => void;
   /** Emitted when the color picker receives input. */
-  onPInput?: (e: CustomEvent<never>) => void;
+  "onp-input"?: (e: CustomEvent<never>) => void;
   /** Emitted when the form control has been checked for validity and its constraints aren't satisfied. */
-  onPInvalid?: (e: CustomEvent<never>) => void;
+  "onp-invalid"?: (e: CustomEvent<never>) => void;
 };
 
 type PCopyButtonProps = {
@@ -472,9 +472,9 @@ scenarios. */
   /**  */
   status?: PCopyButton["status"];
   /** Emitted when the data has been copied. */
-  onPCopy?: (e: CustomEvent<never>) => void;
+  "onp-copy"?: (e: CustomEvent<never>) => void;
   /** Emitted when the data could not be copied. */
-  onPError?: (e: CustomEvent<never>) => void;
+  "onp-error"?: (e: CustomEvent<never>) => void;
 };
 
 type PDetailsProps = {
@@ -496,13 +496,13 @@ can use the `show()` and `hide()` methods and this attribute will reflect the de
   /**  */
   detailsObserver?: PDetails["detailsObserver"];
   /** Emitted when the details opens. */
-  onPShow?: (e: CustomEvent<never>) => void;
+  "onp-show"?: (e: CustomEvent<never>) => void;
   /** Emitted after the details opens and all animations are complete. */
-  onPAfterShow?: (e: CustomEvent<never>) => void;
+  "onp-after-show"?: (e: CustomEvent<never>) => void;
   /** Emitted when the details closes. */
-  onPHide?: (e: CustomEvent<never>) => void;
+  "onp-hide"?: (e: CustomEvent<never>) => void;
   /** Emitted after the details closes and all animations are complete. */
-  onPAfterHide?: (e: CustomEvent<never>) => void;
+  "onp-after-hide"?: (e: CustomEvent<never>) => void;
 };
 
 type PDialogProps = {
@@ -524,17 +524,17 @@ accessible way for users to dismiss the dialog. */
   /**  */
   overlay?: PDialog["overlay"];
   /** Emitted when the dialog opens. */
-  onPShow?: (e: CustomEvent<never>) => void;
+  "onp-show"?: (e: CustomEvent<never>) => void;
   /** Emitted after the dialog opens and all animations are complete. */
-  onPAfterShow?: (e: CustomEvent<never>) => void;
+  "onp-after-show"?: (e: CustomEvent<never>) => void;
   /** Emitted when the dialog closes. */
-  onPHide?: (e: CustomEvent<never>) => void;
+  "onp-hide"?: (e: CustomEvent<never>) => void;
   /** Emitted after the dialog closes and all animations are complete. */
-  onPAfterHide?: (e: CustomEvent<never>) => void;
+  "onp-after-hide"?: (e: CustomEvent<never>) => void;
   /** Emitted when the dialog opens and is ready to receive focus. Calling `event.preventDefault()` will prevent focusing and allow you to set it on a different element, such as an input. */
-  onPInitialFocus?: (e: CustomEvent<never>) => void;
+  "onp-initial-focus"?: (e: CustomEvent<never>) => void;
   /** Emitted when the user attempts to close the dialog by clicking the close button, clicking the overlay, or pressing escape. Calling `event.preventDefault()` will keep the dialog open. Avoid using this unless closing the dialog will result in destructive behavior such as data loss. */
-  onPRequestClose?: (e: CustomEvent<{ source: "close-button" | "keyboard" | "overlay" }>) => void;
+  "onp-request-close"?: (e: CustomEvent<{ source: "close-button" | "keyboard" | "overlay" }>) => void;
 };
 
 type PDividerProps = {
@@ -566,17 +566,17 @@ accessible way for users to dismiss the drawer. */
   /**  */
   overlay?: PDrawer["overlay"];
   /** Emitted when the drawer opens. */
-  onPShow?: (e: CustomEvent<never>) => void;
+  "onp-show"?: (e: CustomEvent<never>) => void;
   /** Emitted after the drawer opens and all animations are complete. */
-  onPAfterShow?: (e: CustomEvent<never>) => void;
+  "onp-after-show"?: (e: CustomEvent<never>) => void;
   /** Emitted when the drawer closes. */
-  onPHide?: (e: CustomEvent<never>) => void;
+  "onp-hide"?: (e: CustomEvent<never>) => void;
   /** Emitted after the drawer closes and all animations are complete. */
-  onPAfterHide?: (e: CustomEvent<never>) => void;
+  "onp-after-hide"?: (e: CustomEvent<never>) => void;
   /** Emitted when the drawer opens and is ready to receive focus. Calling `event.preventDefault()` will prevent focusing and allow you to set it on a different element, such as an input. */
-  onPInitialFocus?: (e: CustomEvent<never>) => void;
+  "onp-initial-focus"?: (e: CustomEvent<never>) => void;
   /** Emitted when the user attempts to close the drawer by clicking the close button, clicking the overlay, or pressing escape. Calling `event.preventDefault()` will keep the drawer open. Avoid using this unless closing the drawer will result in destructive behavior such as data loss. */
-  onPRequestClose?: (e: CustomEvent<{ source: "close-button" | "keyboard" | "overlay" }>) => void;
+  "onp-request-close"?: (e: CustomEvent<{ source: "close-button" | "keyboard" | "overlay" }>) => void;
 };
 
 type PDropdownProps = {
@@ -610,13 +610,13 @@ dropdowns that allow for multiple interactions. */
 components that use a dropdown internally. */
   containingElement?: PDropdown["containingElement"];
   /** Emitted when the dropdown opens. */
-  onPShow?: (e: CustomEvent<never>) => void;
+  "onp-show"?: (e: CustomEvent<never>) => void;
   /** Emitted after the dropdown opens and all animations are complete. */
-  onPAfterShow?: (e: CustomEvent<never>) => void;
+  "onp-after-show"?: (e: CustomEvent<never>) => void;
   /** Emitted when the dropdown closes. */
-  onPHide?: (e: CustomEvent<never>) => void;
+  "onp-hide"?: (e: CustomEvent<never>) => void;
   /** Emitted after the dropdown closes and all animations are complete. */
-  onPAfterHide?: (e: CustomEvent<never>) => void;
+  "onp-after-hide"?: (e: CustomEvent<never>) => void;
 };
 
 type PFormatBytesProps = {
@@ -693,9 +693,9 @@ ignored by assistive devices. */
   library?: PIcon["library"];
 
   /** Emitted when the icon has loaded. When using `spriteSheet: true` this will not emit. */
-  onPLoad?: (e: CustomEvent<never>) => void;
+  "onp-load"?: (e: CustomEvent<never>) => void;
   /** Emitted when the icon fails to load due to an error. When using `spriteSheet: true` this will not emit. */
-  onPError?: (e: CustomEvent<never>) => void;
+  "onp-error"?: (e: CustomEvent<never>) => void;
 };
 
 type PIconButtonProps = {
@@ -720,9 +720,9 @@ that describes what the icon button does. */
   /**  */
   button?: PIconButton["button"];
   /** Emitted when the icon button loses focus. */
-  onPBlur?: (e: CustomEvent<never>) => void;
+  "onp-blur"?: (e: CustomEvent<never>) => void;
   /** Emitted when the icon button gains focus. */
-  onPFocus?: (e: CustomEvent<never>) => void;
+  "onp-focus"?: (e: CustomEvent<never>) => void;
 };
 
 type PImageComparerProps = {
@@ -733,7 +733,7 @@ type PImageComparerProps = {
   /**  */
   handle?: PImageComparer["handle"];
   /** Emitted when the position changes. */
-  onPChange?: (e: CustomEvent<never>) => void;
+  "onp-change"?: (e: CustomEvent<never>) => void;
 };
 
 type PIncludeProps = {
@@ -747,9 +747,9 @@ code and can result in XSS attacks. */
   "allow-scripts"?: PInclude["allowScripts"];
 
   /** Emitted when the included file is loaded. */
-  onPLoad?: (e: CustomEvent<never>) => void;
+  "onp-load"?: (e: CustomEvent<never>) => void;
   /** Emitted when the included file fails to load due to an error. */
-  onPError?: (e: CustomEvent<{ status: number }>) => void;
+  "onp-error"?: (e: CustomEvent<{ status: number }>) => void;
 };
 
 type PInputProps = {
@@ -834,24 +834,24 @@ keyboard on supportive devices. */
   /** Gets the validation message */
   validationMessage?: PInput["validationMessage"];
   /** Emitted when the control loses focus. */
-  onPBlur?: (e: CustomEvent<never>) => void;
+  "onp-blur"?: (e: CustomEvent<never>) => void;
   /** Emitted when an alteration to the control's value is committed by the user. */
-  onPChange?: (e: CustomEvent<never>) => void;
+  "onp-change"?: (e: CustomEvent<never>) => void;
   /** Emitted when the clear button is activated. */
-  onPClear?: (e: CustomEvent<never>) => void;
+  "onp-clear"?: (e: CustomEvent<never>) => void;
   /** Emitted when the control gains focus. */
-  onPFocus?: (e: CustomEvent<never>) => void;
+  "onp-focus"?: (e: CustomEvent<never>) => void;
   /** Emitted when the control receives input. */
-  onPInput?: (e: CustomEvent<never>) => void;
+  "onp-input"?: (e: CustomEvent<never>) => void;
   /** Emitted when the form control has been checked for validity and its constraints aren't satisfied. */
-  onPInvalid?: (e: CustomEvent<never>) => void;
+  "onp-invalid"?: (e: CustomEvent<never>) => void;
 };
 
 type PMenuProps = {
   /**  */
   defaultSlot?: PMenu["defaultSlot"];
   /** Emitted when a menu item is selected. */
-  onPSelect?: (e: CustomEvent<{ item: PMenuItem }>) => void;
+  "onp-select"?: (e: CustomEvent<{ item: PMenuItem }>) => void;
 };
 
 type PMenuItemProps = {
@@ -889,7 +889,7 @@ type PMutationObserverProps = {
   disabled?: PMutationObserver["disabled"];
 
   /** Emitted when a mutation occurs. */
-  onPMutation?: (e: CustomEvent<{ mutationList: MutationRecord[] }>) => void;
+  "onp-mutation"?: (e: CustomEvent<{ mutationList: MutationRecord[] }>) => void;
 };
 
 type POptionProps = {
@@ -981,7 +981,7 @@ active. */
   /** A reference to the internal popup container. Useful for animating and styling the popup with JavaScript. */
   popup?: PPopup["popup"];
   /** Emitted when the popup is repositioned. This event can fire a lot, so avoid putting expensive operations in your listener or consider debouncing it. */
-  onPReposition?: (e: CustomEvent<never>) => void;
+  "onp-reposition"?: (e: CustomEvent<never>) => void;
 };
 
 type PProgressBarProps = {
@@ -1034,9 +1034,9 @@ attribute can typically be omitted. */
   /**  */
   checked?: PRadio["checked"];
   /** Emitted when the control loses focus. */
-  onPBlur?: (e: CustomEvent<never>) => void;
+  "onp-blur"?: (e: CustomEvent<never>) => void;
   /** Emitted when the control gains focus. */
-  onPFocus?: (e: CustomEvent<never>) => void;
+  "onp-focus"?: (e: CustomEvent<never>) => void;
 };
 
 type PRadioButtonProps = {
@@ -1054,9 +1054,9 @@ this attribute can typically be omitted. */
   /**  */
   hiddenInput?: PRadioButton["hiddenInput"];
   /** Emitted when the button loses focus. */
-  onPBlur?: (e: CustomEvent<never>) => void;
+  "onp-blur"?: (e: CustomEvent<never>) => void;
   /** Emitted when the button gains focus. */
-  onPFocus?: (e: CustomEvent<never>) => void;
+  "onp-focus"?: (e: CustomEvent<never>) => void;
 };
 
 type PRadioGroupProps = {
@@ -1088,11 +1088,11 @@ the same document or shadow root for this to work. */
   /** Gets the validation message */
   validationMessage?: PRadioGroup["validationMessage"];
   /** Emitted when the radio group's selected value changes. */
-  onPChange?: (e: CustomEvent<never>) => void;
+  "onp-change"?: (e: CustomEvent<never>) => void;
   /** Emitted when the radio group receives user input. */
-  onPInput?: (e: CustomEvent<never>) => void;
+  "onp-input"?: (e: CustomEvent<never>) => void;
   /** Emitted when the form control has been checked for validity and its constraints aren't satisfied. */
-  onPInvalid?: (e: CustomEvent<never>) => void;
+  "onp-invalid"?: (e: CustomEvent<never>) => void;
 };
 
 type PRangeProps = {
@@ -1134,15 +1134,15 @@ function should return a string to display in the tooltip. */
   /** Gets the validation message */
   validationMessage?: PRange["validationMessage"];
   /** Emitted when the control loses focus. */
-  onPBlur?: (e: CustomEvent<never>) => void;
+  "onp-blur"?: (e: CustomEvent<never>) => void;
   /** Emitted when an alteration to the control's value is committed by the user. */
-  onPChange?: (e: CustomEvent<never>) => void;
+  "onp-change"?: (e: CustomEvent<never>) => void;
   /** Emitted when the control gains focus. */
-  onPFocus?: (e: CustomEvent<never>) => void;
+  "onp-focus"?: (e: CustomEvent<never>) => void;
   /** Emitted when the control receives input. */
-  onPInput?: (e: CustomEvent<never>) => void;
+  "onp-input"?: (e: CustomEvent<never>) => void;
   /** Emitted when the form control has been checked for validity and its constraints aren't satisfied. */
-  onPInvalid?: (e: CustomEvent<never>) => void;
+  "onp-invalid"?: (e: CustomEvent<never>) => void;
 };
 
 type PRatingProps = {
@@ -1166,9 +1166,9 @@ well with `<p-icon>` elements. */
   /**  */
   rating?: PRating["rating"];
   /** Emitted when the rating's value changes. */
-  onPChange?: (e: CustomEvent<never>) => void;
+  "onp-change"?: (e: CustomEvent<never>) => void;
   /** Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value. */
-  onPHover?: (e: CustomEvent<{ phase: "start" | "move" | "end"; value: number }>) => void;
+  "onp-hover"?: (e: CustomEvent<{ phase: "start" | "move" | "end"; value: number }>) => void;
 };
 
 type PRelativeTimeProps = {
@@ -1190,7 +1190,7 @@ type PResizeObserverProps = {
   disabled?: PResizeObserver["disabled"];
 
   /** Emitted when the element is resized. */
-  onPResize?: (e: CustomEvent<{ entries: ResizeObserverEntry[] }>) => void;
+  "onp-resize"?: (e: CustomEvent<{ entries: ResizeObserverEntry[] }>) => void;
 };
 
 type PSelectProps = {
@@ -1263,25 +1263,25 @@ the specified value. */
   /** Gets the validation message */
   validationMessage?: PSelect["validationMessage"];
   /** Emitted when the control's value changes. */
-  onPChange?: (e: CustomEvent<never>) => void;
+  "onp-change"?: (e: CustomEvent<never>) => void;
   /** Emitted when the control's value is cleared. */
-  onPClear?: (e: CustomEvent<never>) => void;
+  "onp-clear"?: (e: CustomEvent<never>) => void;
   /** Emitted when the control receives input. */
-  onPInput?: (e: CustomEvent<never>) => void;
+  "onp-input"?: (e: CustomEvent<never>) => void;
   /** Emitted when the control gains focus. */
-  onPFocus?: (e: CustomEvent<never>) => void;
+  "onp-focus"?: (e: CustomEvent<never>) => void;
   /** Emitted when the control loses focus. */
-  onPBlur?: (e: CustomEvent<never>) => void;
+  "onp-blur"?: (e: CustomEvent<never>) => void;
   /** Emitted when the select's menu opens. */
-  onPShow?: (e: CustomEvent<never>) => void;
+  "onp-show"?: (e: CustomEvent<never>) => void;
   /** Emitted after the select's menu opens and all animations are complete. */
-  onPAfterShow?: (e: CustomEvent<never>) => void;
+  "onp-after-show"?: (e: CustomEvent<never>) => void;
   /** Emitted when the select's menu closes. */
-  onPHide?: (e: CustomEvent<never>) => void;
+  "onp-hide"?: (e: CustomEvent<never>) => void;
   /** Emitted after the select's menu closes and all animations are complete. */
-  onPAfterHide?: (e: CustomEvent<never>) => void;
+  "onp-after-hide"?: (e: CustomEvent<never>) => void;
   /** Emitted when the form control has been checked for validity and its constraints aren't satisfied. */
-  onPInvalid?: (e: CustomEvent<never>) => void;
+  "onp-invalid"?: (e: CustomEvent<never>) => void;
 };
 
 type PSkeletonProps = {
@@ -1313,7 +1313,7 @@ host element is resized. */
   /**  */
   divider?: PSplitPanel["divider"];
   /** Emitted when the divider's position changes. */
-  onPReposition?: (e: CustomEvent<never>) => void;
+  "onp-reposition"?: (e: CustomEvent<never>) => void;
 };
 
 type PSwitchProps = {
@@ -1346,15 +1346,15 @@ the same document or shadow root for this to work. */
   /** Gets the validation message */
   validationMessage?: PSwitch["validationMessage"];
   /** Emitted when the control loses focus. */
-  onPBlur?: (e: CustomEvent<never>) => void;
+  "onp-blur"?: (e: CustomEvent<never>) => void;
   /** Emitted when the control's checked state changes. */
-  onPChange?: (e: CustomEvent<never>) => void;
+  "onp-change"?: (e: CustomEvent<never>) => void;
   /** Emitted when the control receives input. */
-  onPInput?: (e: CustomEvent<never>) => void;
+  "onp-input"?: (e: CustomEvent<never>) => void;
   /** Emitted when the control gains focus. */
-  onPFocus?: (e: CustomEvent<never>) => void;
+  "onp-focus"?: (e: CustomEvent<never>) => void;
   /** Emitted when the form control has been checked for validity and its constraints aren't satisfied. */
-  onPInvalid?: (e: CustomEvent<never>) => void;
+  "onp-invalid"?: (e: CustomEvent<never>) => void;
 };
 
 type PTabProps = {
@@ -1369,7 +1369,7 @@ type PTabProps = {
   /**  */
   tab?: PTab["tab"];
   /** Emitted when the tab is closable and the close button is activated. */
-  onPClose?: (e: CustomEvent<never>) => void;
+  "onp-close"?: (e: CustomEvent<never>) => void;
 };
 
 type PTabGroupProps = {
@@ -1389,9 +1389,9 @@ manual, the tab will receive focus but will not show until the user presses spac
   /**  */
   indicator?: PTabGroup["indicator"];
   /** Emitted when a tab is shown. */
-  onPTabShow?: (e: CustomEvent<{ name: String }>) => void;
+  "onp-tab-show"?: (e: CustomEvent<{ name: String }>) => void;
   /** Emitted when a tab is hidden. */
-  onPTabHide?: (e: CustomEvent<{ name: String }>) => void;
+  "onp-tab-hide"?: (e: CustomEvent<{ name: String }>) => void;
 };
 
 type PTabPanelProps = {
@@ -1412,7 +1412,7 @@ type PTagProps = {
   removable?: PTag["removable"];
 
   /** Emitted when the remove button is activated. */
-  onPRemove?: (e: CustomEvent<never>) => void;
+  "onp-remove"?: (e: CustomEvent<never>) => void;
 };
 
 type PTextareaProps = {
@@ -1475,15 +1475,15 @@ keyboard on supportive devices. */
   /** Gets the validation message */
   validationMessage?: PTextarea["validationMessage"];
   /** Emitted when the control loses focus. */
-  onPBlur?: (e: CustomEvent<never>) => void;
+  "onp-blur"?: (e: CustomEvent<never>) => void;
   /** Emitted when an alteration to the control's value is committed by the user. */
-  onPChange?: (e: CustomEvent<never>) => void;
+  "onp-change"?: (e: CustomEvent<never>) => void;
   /** Emitted when the control gains focus. */
-  onPFocus?: (e: CustomEvent<never>) => void;
+  "onp-focus"?: (e: CustomEvent<never>) => void;
   /** Emitted when the control receives input. */
-  onPInput?: (e: CustomEvent<never>) => void;
+  "onp-input"?: (e: CustomEvent<never>) => void;
   /** Emitted when the form control has been checked for validity and its constraints aren't satisfied. */
-  onPInvalid?: (e: CustomEvent<never>) => void;
+  "onp-invalid"?: (e: CustomEvent<never>) => void;
 };
 
 type PTooltipProps = {
@@ -1515,13 +1515,13 @@ scenarios. */
   /**  */
   popup?: PTooltip["popup"];
   /** Emitted when the tooltip begins to show. */
-  onPShow?: (e: CustomEvent<never>) => void;
+  "onp-show"?: (e: CustomEvent<never>) => void;
   /** Emitted after the tooltip has shown and all animations are complete. */
-  onPAfterShow?: (e: CustomEvent<never>) => void;
+  "onp-after-show"?: (e: CustomEvent<never>) => void;
   /** Emitted when the tooltip begins to hide. */
-  onPHide?: (e: CustomEvent<never>) => void;
+  "onp-hide"?: (e: CustomEvent<never>) => void;
   /** Emitted after the tooltip has hidden and all animations are complete. */
-  onPAfterHide?: (e: CustomEvent<never>) => void;
+  "onp-after-hide"?: (e: CustomEvent<never>) => void;
 };
 
 type PTreeProps = {
@@ -1535,7 +1535,7 @@ displays checkboxes and allows more than one node to be selected. Leaf allows on
   /**  */
   collapsedIconSlot?: PTree["collapsedIconSlot"];
   /** Emitted when a tree item is selected or deselected. */
-  onPSelectionChange?: (e: CustomEvent<{ selection: PTreeItem[] }>) => void;
+  "onp-selection-change"?: (e: CustomEvent<{ selection: PTreeItem[] }>) => void;
 };
 
 type PTreeItemProps = {
@@ -1566,66 +1566,22 @@ type PTreeItemProps = {
   /**  */
   expandButtonSlot?: PTreeItem["expandButtonSlot"];
   /** Emitted when the tree item expands. */
-  onPExpand?: (e: CustomEvent<never>) => void;
+  "onp-expand"?: (e: CustomEvent<never>) => void;
   /** Emitted after the tree item expands and all animations are complete. */
-  onPAfterExpand?: (e: CustomEvent<never>) => void;
+  "onp-after-expand"?: (e: CustomEvent<never>) => void;
   /** Emitted when the tree item collapses. */
-  onPCollapse?: (e: CustomEvent<never>) => void;
+  "onp-collapse"?: (e: CustomEvent<never>) => void;
   /** Emitted after the tree item collapses and all animations are complete. */
-  onPAfterCollapse?: (e: CustomEvent<never>) => void;
+  "onp-after-collapse"?: (e: CustomEvent<never>) => void;
   /** Emitted when the tree item's lazy state changes. */
-  onPLazyChange?: (e: CustomEvent<never>) => void;
+  "onp-lazy-change"?: (e: CustomEvent<never>) => void;
   /** Emitted when a lazy item is selected. Use this event to asynchronously load data and append items to the tree before expanding. After appending new items, remove the `lazy` attribute to remove the loading state and update the tree. */
-  onPLazyLoad?: (e: CustomEvent<never>) => void;
+  "onp-lazy-load"?: (e: CustomEvent<never>) => void;
 };
 
 type PVisuallyHiddenProps = {};
 
 export type CustomElements = {
-  /**
-   * Avatars are used to represent a person or object.
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **p-error** - The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause.
-   *
-   * ### **Slots:**
-   *  - **icon** - The default icon to use when no image or initials are present. Works best with `<p-icon>`.
-   *
-   * ### **CSS Properties:**
-   *  - **--size** - The size of the avatar. _(default: undefined)_
-   *
-   * ### **CSS Parts:**
-   *  - **base** - The component's base wrapper.
-   * - **icon** - The container that wraps the avatar's icon.
-   * - **initials** - The container that wraps the avatar's initials.
-   * - **image** - The avatar image. Only shown when the `image` attribute is set.
-   */
-  "p-avatar": DefineComponent<PAvatarProps>;
-
-  /**
-   * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **p-load** - Emitted when the image loads successfully.
-   * - **p-error** - Emitted when the image fails to load.
-   *
-   * ### **Slots:**
-   *  - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.
-   * - **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.
-   *
-   * ### **CSS Properties:**
-   *  - **--control-box-size** - The size of the icon box. _(default: undefined)_
-   * - **--icon-size** - The size of the play/pause icons. _(default: undefined)_
-   *
-   * ### **CSS Parts:**
-   *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
-   */
-  "p-animated-image": DefineComponent<PAnimatedImageProps>;
-
   /**
    * Alerts are used to display important messages inline or as toast notifications.
    * ---
@@ -1656,6 +1612,69 @@ export type CustomElements = {
    * - **close-button__base** - The close button's exported `base` part.
    */
   "p-alert": DefineComponent<PAlertProps>;
+
+  /**
+   * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **p-cancel** - Emitted when the animation is canceled.
+   * - **p-finish** - Emitted when the animation finishes.
+   * - **p-start** - Emitted when the animation starts or restarts.
+   *
+   * ### **Methods:**
+   *  - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.
+   * - **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.
+   *
+   * ### **Slots:**
+   *  - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.
+   */
+  "p-animation": DefineComponent<PAnimationProps>;
+
+  /**
+   * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **p-load** - Emitted when the image loads successfully.
+   * - **p-error** - Emitted when the image fails to load.
+   *
+   * ### **Slots:**
+   *  - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.
+   * - **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.
+   *
+   * ### **CSS Properties:**
+   *  - **--control-box-size** - The size of the icon box. _(default: undefined)_
+   * - **--icon-size** - The size of the play/pause icons. _(default: undefined)_
+   *
+   * ### **CSS Parts:**
+   *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
+   */
+  "p-animated-image": DefineComponent<PAnimatedImageProps>;
+
+  /**
+   * Avatars are used to represent a person or object.
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **p-error** - The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause.
+   *
+   * ### **Slots:**
+   *  - **icon** - The default icon to use when no image or initials are present. Works best with `<p-icon>`.
+   *
+   * ### **CSS Properties:**
+   *  - **--size** - The size of the avatar. _(default: undefined)_
+   *
+   * ### **CSS Parts:**
+   *  - **base** - The component's base wrapper.
+   * - **icon** - The container that wraps the avatar's icon.
+   * - **initials** - The container that wraps the avatar's initials.
+   * - **image** - The avatar image. Only shown when the `image` attribute is set.
+   */
+  "p-avatar": DefineComponent<PAvatarProps>;
 
   /**
    * Badges are used to draw attention and display statuses or counts.
@@ -1737,25 +1756,6 @@ export type CustomElements = {
    * - **spinner** - The spinner that shows when the button is in the loading state.
    */
   "p-button": DefineComponent<PButtonProps>;
-
-  /**
-   * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **p-cancel** - Emitted when the animation is canceled.
-   * - **p-finish** - Emitted when the animation finishes.
-   * - **p-start** - Emitted when the animation starts or restarts.
-   *
-   * ### **Methods:**
-   *  - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.
-   * - **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.
-   *
-   * ### **Slots:**
-   *  - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.
-   */
-  "p-animation": DefineComponent<PAnimationProps>;
 
   /**
    * Button groups can be used to group related buttons into sections.

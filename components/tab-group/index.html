@@ -48,10 +48,6 @@
     <script src="/assets/scripts/search.js" defer=""></script>
   </head>
   <body>
-    <a id="skip-to-main" class="visually-hidden" href="#main-content" data-smooth-link="false">
-      Skip to main content
-    </a>
-
     <button id="menu-toggle" type="button" aria-label="Menu">
       <svg width="148" height="148" viewBox="0 0 148 148" xmlns="http://www.w3.org/2000/svg">
         <g stroke="currentColor" stroke-width="18" fill="none" fill-rule="evenodd" stroke-linecap="round">
@@ -396,7 +392,6 @@
     </aside>
 
     <main>
-      <a id="main-content"></a>
       <article id="content" class="content content--with-toc">
         <div class="content__toc">
           <ul>
@@ -462,9 +457,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-314">
+            <div class="code-preview__source-group" id="code-preview-source-group-319">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-935"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab-group</span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-949"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab-group</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span> <span class="token attr-name">panel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>general<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>General<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span> <span class="token attr-name">panel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>custom<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Custom<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span> <span class="token attr-name">panel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>advanced<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Advanced<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab</span><span class="token punctuation">&gt;</span></span>
@@ -475,11 +470,11 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab-panel</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>advanced<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This is the advanced tab panel.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab-panel</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab-panel</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>disabled<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This is a disabled tab panel.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab-panel</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab-group</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-935"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-949"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-936"><span class="token keyword">import</span> PTab <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-950"><span class="token keyword">import</span> PTab <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PTabGroup <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab-group'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PTabPanel <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab-panel'</span><span class="token punctuation">;</span>
 
@@ -504,7 +499,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PTabPanel</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>disabled<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">This is a disabled tab panel.</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTabPanel</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTabGroup</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-936"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-950"></p-copy-button></pre>
               </div>
             </div>
 
@@ -513,7 +508,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-314"
+                aria-controls="code-preview-source-group-319"
               >
                 Source
                 <svg
@@ -582,9 +577,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-315">
+            <div class="code-preview__source-group" id="code-preview-source-group-320">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-937"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab-group</span> <span class="token attr-name">placement</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bottom<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-951"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab-group</span> <span class="token attr-name">placement</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bottom<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span> <span class="token attr-name">panel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>general<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>General<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span> <span class="token attr-name">panel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>custom<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Custom<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span> <span class="token attr-name">panel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>advanced<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Advanced<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab</span><span class="token punctuation">&gt;</span></span>
@@ -595,11 +590,11 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab-panel</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>advanced<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This is the advanced tab panel.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab-panel</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab-panel</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>disabled<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This is a disabled tab panel.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab-panel</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab-group</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-937"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-951"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-938"><span class="token keyword">import</span> PTab <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-952"><span class="token keyword">import</span> PTab <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PTabGroup <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab-group'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PTabPanel <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab-panel'</span><span class="token punctuation">;</span>
 
@@ -624,7 +619,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PTabPanel</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>disabled<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">This is a disabled tab panel.</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTabPanel</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTabGroup</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-938"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-952"></p-copy-button></pre>
               </div>
             </div>
 
@@ -633,7 +628,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-315"
+                aria-controls="code-preview-source-group-320"
               >
                 Source
                 <svg
@@ -699,9 +694,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-316">
+            <div class="code-preview__source-group" id="code-preview-source-group-321">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-939"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab-group</span> <span class="token attr-name">placement</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>start<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-953"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab-group</span> <span class="token attr-name">placement</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>start<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span> <span class="token attr-name">panel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>general<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>General<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span> <span class="token attr-name">panel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>custom<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Custom<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span> <span class="token attr-name">panel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>advanced<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Advanced<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab</span><span class="token punctuation">&gt;</span></span>
@@ -712,11 +707,11 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab-panel</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>advanced<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This is the advanced tab panel.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab-panel</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab-panel</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>disabled<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This is a disabled tab panel.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab-panel</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab-group</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-939"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-953"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-940"><span class="token keyword">import</span> PTab <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-954"><span class="token keyword">import</span> PTab <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PTabGroup <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab-group'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PTabPanel <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab-panel'</span><span class="token punctuation">;</span>
 
@@ -741,7 +736,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PTabPanel</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>disabled<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">This is a disabled tab panel.</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTabPanel</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTabGroup</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-940"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-954"></p-copy-button></pre>
               </div>
             </div>
 
@@ -750,7 +745,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-316"
+                aria-controls="code-preview-source-group-321"
               >
                 Source
                 <svg
@@ -816,9 +811,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-317">
+            <div class="code-preview__source-group" id="code-preview-source-group-322">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-941"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab-group</span> <span class="token attr-name">placement</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>end<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-955"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab-group</span> <span class="token attr-name">placement</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>end<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span> <span class="token attr-name">panel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>general<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>General<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span> <span class="token attr-name">panel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>custom<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Custom<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span> <span class="token attr-name">panel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>advanced<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Advanced<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab</span><span class="token punctuation">&gt;</span></span>
@@ -829,11 +824,11 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab-panel</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>advanced<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This is the advanced tab panel.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab-panel</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab-panel</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>disabled<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This is a disabled tab panel.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab-panel</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab-group</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-941"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-955"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-942"><span class="token keyword">import</span> PTab <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-956"><span class="token keyword">import</span> PTab <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PTabGroup <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab-group'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PTabPanel <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab-panel'</span><span class="token punctuation">;</span>
 
@@ -858,7 +853,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PTabPanel</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>disabled<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">This is a disabled tab panel.</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTabPanel</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTabGroup</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-942"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-956"></p-copy-button></pre>
               </div>
             </div>
 
@@ -867,7 +862,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-317"
+                aria-controls="code-preview-source-group-322"
               >
                 Source
                 <svg
@@ -956,9 +951,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-318">
+            <div class="code-preview__source-group" id="code-preview-source-group-323">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-943"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab-group</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tabs-closable<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-957"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab-group</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tabs-closable<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span> <span class="token attr-name">panel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>general<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>General<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span> <span class="token attr-name">panel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>closable-1<span class="token punctuation">"</span></span> <span class="token attr-name">closable</span><span class="token punctuation">&gt;</span></span>Closable 1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span> <span class="token attr-name">panel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>closable-2<span class="token punctuation">"</span></span> <span class="token attr-name">closable</span><span class="token punctuation">&gt;</span></span>Closable 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab</span><span class="token punctuation">&gt;</span></span>
@@ -987,11 +982,11 @@
     panel<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-943"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-957"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-944"><span class="token keyword">import</span> PTab <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-958"><span class="token keyword">import</span> PTab <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PTabGroup <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab-group'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PTabPanel <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab-panel'</span><span class="token punctuation">;</span>
 
@@ -1032,7 +1027,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTabGroup</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-944"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-958"></p-copy-button></pre>
               </div>
             </div>
 
@@ -1041,7 +1036,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-318"
+                aria-controls="code-preview-source-group-323"
               >
                 Source
                 <svg
@@ -1139,9 +1134,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-319">
+            <div class="code-preview__source-group" id="code-preview-source-group-324">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-945"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab-group</span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-959"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab-group</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span> <span class="token attr-name">panel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tab-1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Tab 1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span> <span class="token attr-name">panel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tab-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Tab 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span> <span class="token attr-name">panel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tab-3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Tab 3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab</span><span class="token punctuation">&gt;</span></span>
@@ -1184,11 +1179,11 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab-panel</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tab-19<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Tab panel 19<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab-panel</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab-panel</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tab-20<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Tab panel 20<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab-panel</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab-group</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-945"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-959"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-946"><span class="token keyword">import</span> PTab <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-960"><span class="token keyword">import</span> PTab <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PTabGroup <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab-group'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PTabPanel <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab-panel'</span><span class="token punctuation">;</span>
 
@@ -1277,7 +1272,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PTabPanel</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tab-20<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Tab panel 20</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTabPanel</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTabGroup</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-946"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-960"></p-copy-button></pre>
               </div>
             </div>
 
@@ -1286,7 +1281,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-319"
+                aria-controls="code-preview-source-group-324"
               >
                 Source
                 <svg
@@ -1357,9 +1352,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-320">
+            <div class="code-preview__source-group" id="code-preview-source-group-325">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-947"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab-group</span> <span class="token attr-name">activation</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>manual<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-961"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab-group</span> <span class="token attr-name">activation</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>manual<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span> <span class="token attr-name">panel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>general<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>General<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span> <span class="token attr-name">panel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>custom<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Custom<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span> <span class="token attr-name">panel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>advanced<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Advanced<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab</span><span class="token punctuation">&gt;</span></span>
@@ -1370,11 +1365,11 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab-panel</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>advanced<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This is the advanced tab panel.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab-panel</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tab-panel</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>disabled<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This is a disabled tab panel.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab-panel</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tab-group</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-947"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-961"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-948"><span class="token keyword">import</span> PTab <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-962"><span class="token keyword">import</span> PTab <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PTabGroup <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab-group'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PTabPanel <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab-panel'</span><span class="token punctuation">;</span>
 
@@ -1399,7 +1394,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PTabPanel</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>disabled<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">This is a disabled tab panel.</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTabPanel</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTabGroup</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-948"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-962"></p-copy-button></pre>
               </div>
             </div>
 
@@ -1408,7 +1403,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-320"
+                aria-controls="code-preview-source-group-325"
               >
                 Source
                 <svg
@@ -1477,7 +1472,7 @@
                 >
                 using a script tag:
               </p>
-              <pre><code class="language-html" id="code-block-949"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.0.1/cdn/components/tab-group/tab-group.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-949"></p-copy-button></pre>
+              <pre><code class="language-html" id="code-block-963"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.0.1/cdn/components/tab-group/tab-group.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-963"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="import">
@@ -1492,17 +1487,17 @@
                 >
                 using a JavaScript import:
               </p>
-              <pre><code class="language-js" id="code-block-950"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.0.1/cdn/components/tab-group/tab-group.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-950"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-964"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.0.1/cdn/components/tab-group/tab-group.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-964"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="bundler">
               <p>To import this component using <a href="/getting-started/installation#bundling">a bundler</a>:</p>
-              <pre><code class="language-js" id="code-block-951"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/tab-group/tab-group.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-951"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-965"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/tab-group/tab-group.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-965"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="react">
               <p>To import this component as a <a href="/frameworks/react">React component</a>:</p>
-              <pre><code class="language-js" id="code-block-952"><span class="token keyword">import</span> PTabGroup <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab-group'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-952"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-966"><span class="token keyword">import</span> PTabGroup <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tab-group'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-966"></p-copy-button></pre>
             </p-tab-panel>
           </p-tab-group>
 
