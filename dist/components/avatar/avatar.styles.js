@@ -1,0 +1,8 @@
+import {
+  avatar_styles_default
+} from "../../chunks/chunk.5UHP4D6Z.js";
+import "../../chunks/chunk.N4FVDREO.js";
+import "../../chunks/chunk.KIILAQWQ.js";
+export {
+  avatar_styles_default as default
+};
