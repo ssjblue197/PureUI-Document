@@ -15,7 +15,7 @@
     <link rel="icon" href="/assets/images/logo.svg" type="image/x-icon" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:creator" content="shoelace_style" />
+    <meta name="twitter:creator" content="pure_ui" />
     <meta name="twitter:image" content="https://pureui.xyz/assets/images/og-image.png" />
 
     <meta property="og:url" content="https://pureui.xyz/getting-started/customizing/" />
@@ -59,23 +59,13 @@
 
     <div id="icon-toolbar">
       <a
-        href="https://github.com/shoelace-style/shoelace"
+        href="https://github.com/ssjblue197/Pure-UI-Document"
         title="View Pure UI on GitHub"
         class="external-link"
         rel="noopener noreferrer"
         target="_blank"
       >
         <p-icon name="github"></p-icon>
-      </a>
-
-      <a
-        href="https://twitter.com/shoelace_style"
-        title="Follow Pure UI on Twitter"
-        class="external-link"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <p-icon name="twitter"></p-icon>
       </a>
 
       <p-dropdown id="theme-selector" placement="bottom-end" distance="3">
@@ -463,7 +453,7 @@
             Many design tokens are described further along in this documentation. For a complete list, refer to
             <code>src/themes/light.css</code> in the project’s
             <a
-              href="https://github.com/shoelace-style/shoelace/blob/current/src/themes/light.css"
+              href="https://github.com/ssjblue197/pure-ui/blob/current/src/themes/light.css"
               class="external-link"
               rel="noopener noreferrer"
               target="_blank"
@@ -675,7 +665,7 @@
             <code>options</code> or <code>null</code> to disable the animation.
           </p>
           <p>This example will make all dialogs use a custom show animation.</p>
-          <pre><code class="language-js" id="code-block-40"><span class="token keyword">import</span> <span class="token punctuation">{</span> setDefaultAnimation <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/utilities/animation-registry.js'</span><span class="token punctuation">;</span>
+          <pre><code class="language-js" id="code-block-40"><span class="token keyword">import</span> <span class="token punctuation">{</span> setDefaultAnimation <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/utilities/animation-registry.js'</span><span class="token punctuation">;</span>
 
 <span class="token comment">// Change the default animation for all dialogs</span>
 <span class="token function">setDefaultAnimation</span><span class="token punctuation">(</span><span class="token string">'dialog.show'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
@@ -702,7 +692,7 @@
             <code>keyframes</code> and <code>options</code>.
           </p>
           <p>In this example, only the target dialog will use a custom show animation.</p>
-          <pre><code class="language-js" id="code-block-41"><span class="token keyword">import</span> <span class="token punctuation">{</span> setAnimation <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/utilities/animation-registry.js'</span><span class="token punctuation">;</span>
+          <pre><code class="language-js" id="code-block-41"><span class="token keyword">import</span> <span class="token punctuation">{</span> setAnimation <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/utilities/animation-registry.js'</span><span class="token punctuation">;</span>
 
 <span class="token comment">// Change the animation for a single dialog</span>
 <span class="token keyword">const</span> dialog <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#my-dialog'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>

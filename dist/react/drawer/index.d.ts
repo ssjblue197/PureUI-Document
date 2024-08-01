@@ -67,7 +67,7 @@ export type { PRequestCloseEvent } from '../../events/events.js';
  *
  * @property modal - Exposes the internal modal utility that controls focus trapping. To temporarily disable focus
  *   trapping and allow third-party modals spawned from an active Shoelace modal, call `modal.activateExternal()` when
- *   the third-party modal opens. Upon closing, call `modal.deactivateExternal()` to restore Shoelace's focus trapping.
+ *   the third-party modal opens. Upon closing, call `modal.deactivateExternal()` to restore pure ui 's focus trapping.
  */
 declare const reactWrapper: import("@lit/react").ReactWebComponent<Component, {
     onPShow: EventName<PShowEvent>;

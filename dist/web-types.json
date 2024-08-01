@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/JetBrains/web-types/master/schema/web-types.json",
-  "name": "@pure-ui/core",
+  "name": "pure-uikit",
   "version": "1.0.0",
   "description-markup": "markdown",
   "contributions": {
@@ -178,6 +178,53 @@
           }
         },
         {
+          "name": "p-badge",
+          "description": "Badges are used to draw attention and display statuses or counts.\n---\n\n\n### **Slots:**\n - _default_ - The badge's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "variant",
+              "description": "The badge's theme variant.",
+              "value": {
+                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'",
+                "default": "'primary'"
+              }
+            },
+            {
+              "name": "pill",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "pulse",
+              "description": "Makes the badge pulsate to draw attention.",
+              "value": { "type": "boolean", "default": "false" }
+            }
+          ],
+          "slots": [{ "name": "", "description": "The badge's content." }],
+          "events": [],
+          "js": {
+            "properties": [
+              {
+                "name": "variant",
+                "description": "The badge's theme variant.",
+                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+              },
+              {
+                "name": "pill",
+                "description": "Draws a pill-style badge with rounded edges.",
+                "type": "boolean"
+              },
+              {
+                "name": "pulse",
+                "description": "Makes the badge pulsate to draw attention.",
+                "type": "boolean"
+              }
+            ],
+            "events": []
+          }
+        },
+        {
           "name": "p-avatar",
           "description": "Avatars are used to represent a person or object.\n---\n\n\n### **Events:**\n - **p-error** - The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause.\n\n### **Slots:**\n - **icon** - The default icon to use when no image or initials are present. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--size** - The size of the avatar. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the avatar's icon.\n- **initials** - The container that wraps the avatar's initials.\n- **image** - The avatar image. Only shown when the `image` attribute is set.",
           "doc-url": "",
@@ -257,53 +304,6 @@
                 "description": "The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause."
               }
             ]
-          }
-        },
-        {
-          "name": "p-badge",
-          "description": "Badges are used to draw attention and display statuses or counts.\n---\n\n\n### **Slots:**\n - _default_ - The badge's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "variant",
-              "description": "The badge's theme variant.",
-              "value": {
-                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'",
-                "default": "'primary'"
-              }
-            },
-            {
-              "name": "pill",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "value": { "type": "boolean", "default": "false" }
-            },
-            {
-              "name": "pulse",
-              "description": "Makes the badge pulsate to draw attention.",
-              "value": { "type": "boolean", "default": "false" }
-            }
-          ],
-          "slots": [{ "name": "", "description": "The badge's content." }],
-          "events": [],
-          "js": {
-            "properties": [
-              {
-                "name": "variant",
-                "description": "The badge's theme variant.",
-                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
-              },
-              {
-                "name": "pill",
-                "description": "Draws a pill-style badge with rounded edges.",
-                "type": "boolean"
-              },
-              {
-                "name": "pulse",
-                "description": "Makes the badge pulsate to draw attention.",
-                "type": "boolean"
-              }
-            ],
-            "events": []
           }
         },
         {
@@ -399,171 +399,6 @@
               }
             ],
             "events": []
-          }
-        },
-        {
-          "name": "p-animation",
-          "description": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n---\n\n\n### **Events:**\n - **p-cancel** - Emitted when the animation is canceled.\n- **p-finish** - Emitted when the animation finishes.\n- **p-start** - Emitted when the animation starts or restarts.\n\n### **Methods:**\n - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.\n- **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.\n\n### **Slots:**\n - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "name",
-              "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
-              "value": { "type": "string", "default": "'none'" }
-            },
-            {
-              "name": "play",
-              "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
-              "value": { "type": "boolean", "default": "false" }
-            },
-            {
-              "name": "delay",
-              "description": "The number of milliseconds to delay the start of the animation.",
-              "value": { "type": "number", "default": "0" }
-            },
-            {
-              "name": "direction",
-              "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
-              "value": { "type": "PlaybackDirection", "default": "'normal'" }
-            },
-            {
-              "name": "duration",
-              "description": "The number of milliseconds each iteration of the animation takes to complete.",
-              "value": { "type": "number", "default": "1000" }
-            },
-            {
-              "name": "easing",
-              "description": "The easing function to use for the animation. This can be a Shoelace easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
-              "value": { "type": "string", "default": "'linear'" }
-            },
-            {
-              "name": "end-delay",
-              "description": "The number of milliseconds to delay after the active period of an animation sequence.",
-              "value": { "type": "number", "default": "0" }
-            },
-            {
-              "name": "fill",
-              "description": "Sets how the animation applies styles to its target before and after its execution.",
-              "value": { "type": "FillMode", "default": "'auto'" }
-            },
-            {
-              "name": "iterations",
-              "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops.",
-              "value": { "type": "string", "default": "Infinity" }
-            },
-            {
-              "name": "iteration-start",
-              "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
-              "value": { "type": "number", "default": "0" }
-            },
-            {
-              "name": "playback-rate",
-              "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
-              "value": { "type": "number", "default": "1" }
-            }
-          ],
-          "slots": [
-            {
-              "name": "",
-              "description": "The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements."
-            }
-          ],
-          "events": [
-            {
-              "name": "p-cancel",
-              "description": "Emitted when the animation is canceled."
-            },
-            {
-              "name": "p-finish",
-              "description": "Emitted when the animation finishes."
-            },
-            {
-              "name": "p-start",
-              "description": "Emitted when the animation starts or restarts."
-            }
-          ],
-          "js": {
-            "properties": [
-              { "name": "defaultPot", "type": "Promise<HTMLSlotElement>" },
-              {
-                "name": "name",
-                "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
-                "type": "string"
-              },
-              {
-                "name": "play",
-                "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
-                "type": "boolean"
-              },
-              {
-                "name": "delay",
-                "description": "The number of milliseconds to delay the start of the animation.",
-                "type": "number"
-              },
-              {
-                "name": "direction",
-                "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
-                "type": "PlaybackDirection"
-              },
-              {
-                "name": "duration",
-                "description": "The number of milliseconds each iteration of the animation takes to complete.",
-                "type": "number"
-              },
-              {
-                "name": "easing",
-                "description": "The easing function to use for the animation. This can be a Shoelace easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
-                "type": "string"
-              },
-              {
-                "name": "endDelay",
-                "description": "The number of milliseconds to delay after the active period of an animation sequence.",
-                "type": "number"
-              },
-              {
-                "name": "fill",
-                "description": "Sets how the animation applies styles to its target before and after its execution.",
-                "type": "FillMode"
-              },
-              {
-                "name": "iterations",
-                "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops."
-              },
-              {
-                "name": "iterationStart",
-                "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
-                "type": "number"
-              },
-              {
-                "name": "keyframes",
-                "description": "The keyframes to use for the animation. If this is set, `name` will be ignored.",
-                "type": "Keyframe[] | undefined"
-              },
-              {
-                "name": "playbackRate",
-                "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
-                "type": "number"
-              },
-              {
-                "name": "currentTime",
-                "description": "Gets and sets the current animation time.",
-                "type": "CSSNumberish"
-              }
-            ],
-            "events": [
-              {
-                "name": "p-cancel",
-                "description": "Emitted when the animation is canceled."
-              },
-              {
-                "name": "p-finish",
-                "description": "Emitted when the animation finishes."
-              },
-              {
-                "name": "p-start",
-                "description": "Emitted when the animation starts or restarts."
-              }
-            ]
           }
         },
         {
@@ -855,6 +690,171 @@
           }
         },
         {
+          "name": "p-animation",
+          "description": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n---\n\n\n### **Events:**\n - **p-cancel** - Emitted when the animation is canceled.\n- **p-finish** - Emitted when the animation finishes.\n- **p-start** - Emitted when the animation starts or restarts.\n\n### **Methods:**\n - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.\n- **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.\n\n### **Slots:**\n - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "name",
+              "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
+              "value": { "type": "string", "default": "'none'" }
+            },
+            {
+              "name": "play",
+              "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "delay",
+              "description": "The number of milliseconds to delay the start of the animation.",
+              "value": { "type": "number", "default": "0" }
+            },
+            {
+              "name": "direction",
+              "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
+              "value": { "type": "PlaybackDirection", "default": "'normal'" }
+            },
+            {
+              "name": "duration",
+              "description": "The number of milliseconds each iteration of the animation takes to complete.",
+              "value": { "type": "number", "default": "1000" }
+            },
+            {
+              "name": "easing",
+              "description": "The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
+              "value": { "type": "string", "default": "'linear'" }
+            },
+            {
+              "name": "end-delay",
+              "description": "The number of milliseconds to delay after the active period of an animation sequence.",
+              "value": { "type": "number", "default": "0" }
+            },
+            {
+              "name": "fill",
+              "description": "Sets how the animation applies styles to its target before and after its execution.",
+              "value": { "type": "FillMode", "default": "'auto'" }
+            },
+            {
+              "name": "iterations",
+              "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops.",
+              "value": { "type": "string", "default": "Infinity" }
+            },
+            {
+              "name": "iteration-start",
+              "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
+              "value": { "type": "number", "default": "0" }
+            },
+            {
+              "name": "playback-rate",
+              "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
+              "value": { "type": "number", "default": "1" }
+            }
+          ],
+          "slots": [
+            {
+              "name": "",
+              "description": "The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements."
+            }
+          ],
+          "events": [
+            {
+              "name": "p-cancel",
+              "description": "Emitted when the animation is canceled."
+            },
+            {
+              "name": "p-finish",
+              "description": "Emitted when the animation finishes."
+            },
+            {
+              "name": "p-start",
+              "description": "Emitted when the animation starts or restarts."
+            }
+          ],
+          "js": {
+            "properties": [
+              { "name": "defaultPot", "type": "Promise<HTMLSlotElement>" },
+              {
+                "name": "name",
+                "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
+                "type": "string"
+              },
+              {
+                "name": "play",
+                "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
+                "type": "boolean"
+              },
+              {
+                "name": "delay",
+                "description": "The number of milliseconds to delay the start of the animation.",
+                "type": "number"
+              },
+              {
+                "name": "direction",
+                "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
+                "type": "PlaybackDirection"
+              },
+              {
+                "name": "duration",
+                "description": "The number of milliseconds each iteration of the animation takes to complete.",
+                "type": "number"
+              },
+              {
+                "name": "easing",
+                "description": "The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
+                "type": "string"
+              },
+              {
+                "name": "endDelay",
+                "description": "The number of milliseconds to delay after the active period of an animation sequence.",
+                "type": "number"
+              },
+              {
+                "name": "fill",
+                "description": "Sets how the animation applies styles to its target before and after its execution.",
+                "type": "FillMode"
+              },
+              {
+                "name": "iterations",
+                "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops."
+              },
+              {
+                "name": "iterationStart",
+                "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
+                "type": "number"
+              },
+              {
+                "name": "keyframes",
+                "description": "The keyframes to use for the animation. If this is set, `name` will be ignored.",
+                "type": "Keyframe[] | undefined"
+              },
+              {
+                "name": "playbackRate",
+                "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
+                "type": "number"
+              },
+              {
+                "name": "currentTime",
+                "description": "Gets and sets the current animation time.",
+                "type": "CSSNumberish"
+              }
+            ],
+            "events": [
+              {
+                "name": "p-cancel",
+                "description": "Emitted when the animation is canceled."
+              },
+              {
+                "name": "p-finish",
+                "description": "Emitted when the animation finishes."
+              },
+              {
+                "name": "p-start",
+                "description": "Emitted when the animation starts or restarts."
+              }
+            ]
+          }
+        },
+        {
           "name": "p-button-group",
           "description": "Button groups can be used to group related buttons into sections.\n---\n\n\n### **Slots:**\n - _default_ - One or more `<p-button>` elements to display in the button group.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
           "doc-url": "",
@@ -887,7 +887,7 @@
         },
         {
           "name": "p-calendar",
-          "description": "A calendar prototype for Shoelace.\n---\n\n\n### **Events:**\n - **p-change** - Emitted when the date changes.\n\n### **Methods:**\n - **goToToday()** - Moves the calendar to the current month and year.\n- **goToPreviousMonth()** - Moves the calendar to the previous month.\n- **goToNextMonth()** - Moves the calendar to the next month.\n\n### **Slots:**\n - **footer** - Optional content to place in the calendar's footer.\n\n### **CSS Properties:**\n - **--border-color** - The calendar's border color. _(default: undefined)_\n- **--border-width** - The calendar's border width. _(default: undefined)_\n- **--border-radius** - The border radius of the calendar. _(default: undefined)_\n\n### **CSS Parts:**\n - **day** - Targets day cells.\n- **day-label** - Targets the day labels (the name of the days in the grid).\n- **day-weekend** - Targets days that fall on weekends.\n- **day-weekday** - Targets weekdays.\n- **day-current-month** - Targets days in the current month.\n- **day-previous-month** - Targets days in the previous month.\n- **day-next-month** - Targets days in the next month.\n- **day-today** - Targets today.\n- **day-selected** - Targets selected days.\n- **day-selection-start** - Targets days that begin a selection.\n- **day-selection-end** - Targets days that end a selection.",
+          "description": "A calendar prototype for Pure UI.\n---\n\n\n### **Events:**\n - **p-change** - Emitted when the date changes.\n\n### **Methods:**\n - **goToToday()** - Moves the calendar to the current month and year.\n- **goToPreviousMonth()** - Moves the calendar to the previous month.\n- **goToNextMonth()** - Moves the calendar to the next month.\n\n### **Slots:**\n - **footer** - Optional content to place in the calendar's footer.\n\n### **CSS Properties:**\n - **--border-color** - The calendar's border color. _(default: undefined)_\n- **--border-width** - The calendar's border width. _(default: undefined)_\n- **--border-radius** - The border radius of the calendar. _(default: undefined)_\n\n### **CSS Parts:**\n - **day** - Targets day cells.\n- **day-label** - Targets the day labels (the name of the days in the grid).\n- **day-weekend** - Targets days that fall on weekends.\n- **day-weekday** - Targets weekdays.\n- **day-current-month** - Targets days in the current month.\n- **day-previous-month** - Targets days in the previous month.\n- **day-next-month** - Targets days in the next month.\n- **day-today** - Targets today.\n- **day-selected** - Targets selected days.\n- **day-selection-start** - Targets days that begin a selection.\n- **day-selection-end** - Targets days that end a selection.",
           "doc-url": "",
           "attributes": [
             {
@@ -1855,7 +1855,7 @@
             "properties": [
               {
                 "name": "modal",
-                "description": "Exposes the internal modal utility that controls focus trapping. To temporarily disable focus trapping and allow third-party modals spawned from an active Shoelace modal, call `modal.activateExternal()` when the third-party modal opens. Upon closing, call `modal.deactivateExternal()` to restore Shoelace's focus trapping."
+                "description": "Exposes the internal modal utility that controls focus trapping. To temporarily disable focus trapping and allow third-party modals spawned from an active Pure UI modal, call `modal.activateExternal()` when the third-party modal opens. Upon closing, call `modal.deactivateExternal()` to restore pure ui 's focus trapping."
               },
               { "name": "dialog", "type": "HTMLElement" },
               { "name": "panel", "type": "HTMLElement" },
@@ -2008,7 +2008,7 @@
             "properties": [
               {
                 "name": "modal",
-                "description": "Exposes the internal modal utility that controls focus trapping. To temporarily disable focus trapping and allow third-party modals spawned from an active Shoelace modal, call `modal.activateExternal()` when the third-party modal opens. Upon closing, call `modal.deactivateExternal()` to restore Shoelace's focus trapping."
+                "description": "Exposes the internal modal utility that controls focus trapping. To temporarily disable focus trapping and allow third-party modals spawned from an active Shoelace modal, call `modal.activateExternal()` when the third-party modal opens. Upon closing, call `modal.deactivateExternal()` to restore pure ui 's focus trapping."
               },
               { "name": "drawer", "type": "HTMLElement" },
               { "name": "panel", "type": "HTMLElement" },

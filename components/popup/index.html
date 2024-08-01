@@ -18,7 +18,7 @@
     <link rel="icon" href="/assets/images/logo.svg" type="image/x-icon" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:creator" content="shoelace_style" />
+    <meta name="twitter:creator" content="pure_ui" />
     <meta name="twitter:image" content="https://pureui.xyz/assets/images/og-image.png" />
 
     <meta property="og:url" content="https://pureui.xyz/components/popup/" />
@@ -65,23 +65,13 @@
 
     <div id="icon-toolbar">
       <a
-        href="https://github.com/shoelace-style/shoelace"
+        href="https://github.com/ssjblue197/Pure-UI-Document"
         title="View Pure UI on GitHub"
         class="external-link"
         rel="noopener noreferrer"
         target="_blank"
       >
         <p-icon name="github"></p-icon>
-      </a>
-
-      <a
-        href="https://twitter.com/shoelace_style"
-        title="Follow Pure UI on Twitter"
-        class="external-link"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <p-icon name="twitter"></p-icon>
       </a>
 
       <p-dropdown id="theme-selector" placement="bottom-end" distance="3">
@@ -585,9 +575,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-216">
+            <div class="code-preview__source-group" id="code-preview-source-group-222">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-686"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>popup-overview<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-699"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>popup-overview<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-popup</span> <span class="token attr-name">placement</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>top<span class="token punctuation">"</span></span> <span class="token attr-name">active</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>anchor<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
@@ -673,16 +663,16 @@
     <span class="token property">margin-top</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-686"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-699"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-687"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/popup'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PSelect <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/select'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PMenuItem <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/menu-item'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PInput <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/input'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PSwitch <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/switch'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-700"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/popup'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PSelect <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/select'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PMenuItem <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/menu-item'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PInput <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/input'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PSwitch <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/switch'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> css <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
   .popup-overview p-popup {
@@ -796,7 +786,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-687"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-700"></p-copy-button></pre>
               </div>
             </div>
 
@@ -805,7 +795,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-216"
+                aria-controls="code-preview-source-group-222"
               >
                 Source
                 <svg
@@ -911,9 +901,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-217">
+            <div class="code-preview__source-group" id="code-preview-source-group-223">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-688"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>popup-active<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-701"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>popup-active<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-popup</span> <span class="token attr-name">placement</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>top<span class="token punctuation">"</span></span> <span class="token attr-name">active</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>anchor<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
@@ -947,13 +937,13 @@
 
   active<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'p-change'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>popup<span class="token punctuation">.</span>active <span class="token operator">=</span> active<span class="token punctuation">.</span>checked<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-688"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-701"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-689"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/popup'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PSwitch <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/switch'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-702"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/popup'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PSwitch <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/switch'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> css <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
   .popup-active span[slot='anchor'] {
@@ -993,7 +983,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-689"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-702"></p-copy-button></pre>
               </div>
             </div>
 
@@ -1002,7 +992,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-217"
+                aria-controls="code-preview-source-group-223"
               >
                 Source
                 <svg
@@ -1084,9 +1074,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-218">
+            <div class="code-preview__source-group" id="code-preview-source-group-224">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-690"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>external-anchor<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-703"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>external-anchor<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-popup</span> <span class="token attr-name">anchor</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>external-anchor<span class="token punctuation">"</span></span> <span class="token attr-name">placement</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>top<span class="token punctuation">"</span></span> <span class="token attr-name">active</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
@@ -1108,11 +1098,11 @@
     <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--p-border-radius-medium<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-690"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-703"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-691"><span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/popup'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-704"><span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/popup'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> css <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
   #external-anchor {
@@ -1144,7 +1134,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-691"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-704"></p-copy-button></pre>
               </div>
             </div>
 
@@ -1153,7 +1143,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-218"
+                aria-controls="code-preview-source-group-224"
               >
                 Source
                 <svg
@@ -1269,9 +1259,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-219">
+            <div class="code-preview__source-group" id="code-preview-source-group-225">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-692"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>popup-placement<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-705"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>popup-placement<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-popup</span> <span class="token attr-name">placement</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>top<span class="token punctuation">"</span></span> <span class="token attr-name">active</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>anchor<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
@@ -1321,14 +1311,14 @@
 
   select<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'p-change'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>popup<span class="token punctuation">.</span>placement <span class="token operator">=</span> select<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-692"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-705"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-693"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/popup'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PSelect <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/select'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PMenuItem <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/menu-item'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-706"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/popup'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PSelect <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/select'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PMenuItem <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/menu-item'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> css <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
   .popup-placement span[slot='anchor'] {
@@ -1382,7 +1372,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-693"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-706"></p-copy-button></pre>
               </div>
             </div>
 
@@ -1391,7 +1381,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-219"
+                aria-controls="code-preview-source-group-225"
               >
                 Source
                 <svg
@@ -1488,9 +1478,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-220">
+            <div class="code-preview__source-group" id="code-preview-source-group-226">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-694"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>popup-distance<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-707"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>popup-distance<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-popup</span> <span class="token attr-name">placement</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>top<span class="token punctuation">"</span></span> <span class="token attr-name">distance</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">active</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>anchor<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
@@ -1527,13 +1517,13 @@
 
   distance<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'p-input'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>popup<span class="token punctuation">.</span>distance <span class="token operator">=</span> distance<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-694"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-707"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-695"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/popup'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PRange <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/range'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-708"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/popup'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PRange <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/range'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> css <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
   .popup-distance span[slot='anchor'] {
@@ -1581,7 +1571,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-695"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-708"></p-copy-button></pre>
               </div>
             </div>
 
@@ -1590,7 +1580,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-220"
+                aria-controls="code-preview-source-group-226"
               >
                 Source
                 <svg
@@ -1687,9 +1677,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-221">
+            <div class="code-preview__source-group" id="code-preview-source-group-227">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-696"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>popup-skidding<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-709"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>popup-skidding<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-popup</span> <span class="token attr-name">placement</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>top<span class="token punctuation">"</span></span> <span class="token attr-name">skidding</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">active</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>anchor<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
@@ -1726,13 +1716,13 @@
 
   skidding<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'p-input'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>popup<span class="token punctuation">.</span>skidding <span class="token operator">=</span> skidding<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-696"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-709"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-697"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/popup'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PRange <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/range'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-710"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/popup'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PRange <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/range'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> css <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
   .popup-skidding span[slot='anchor'] {
@@ -1780,7 +1770,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-697"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-710"></p-copy-button></pre>
               </div>
             </div>
 
@@ -1789,7 +1779,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-221"
+                aria-controls="code-preview-source-group-227"
               >
                 Source
                 <svg
@@ -1936,9 +1926,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-222">
+            <div class="code-preview__source-group" id="code-preview-source-group-228">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-698"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>popup-arrow<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-711"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>popup-arrow<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-popup</span> <span class="token attr-name">placement</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>top<span class="token punctuation">"</span></span> <span class="token attr-name">arrow</span> <span class="token attr-name">arrow-placement</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>anchor<span class="token punctuation">"</span></span> <span class="token attr-name">distance</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>8<span class="token punctuation">"</span></span> <span class="token attr-name">active</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>anchor<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
@@ -2020,15 +2010,15 @@
     arrow<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'p-change'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>popup<span class="token punctuation">.</span>arrow <span class="token operator">=</span> arrow<span class="token punctuation">.</span>checked<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-698"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-711"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-699"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/popup'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PSelect <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/select'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PMenuItem <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/menu-item'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PSwitch <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/switch'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-712"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/popup'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PSelect <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/select'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PMenuItem <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/menu-item'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PSwitch <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/switch'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> css <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
   .popup-arrow p-popup {
@@ -2125,7 +2115,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-699"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-712"></p-copy-button></pre>
               </div>
             </div>
 
@@ -2134,7 +2124,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-222"
+                aria-controls="code-preview-source-group-228"
               >
                 Source
                 <svg
@@ -2242,9 +2232,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-223">
+            <div class="code-preview__source-group" id="code-preview-source-group-229">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-700"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>popup-sync<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-713"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>popup-sync<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-popup</span> <span class="token attr-name">placement</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>top<span class="token punctuation">"</span></span> <span class="token attr-name">sync</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width<span class="token punctuation">"</span></span> <span class="token attr-name">active</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>anchor<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
@@ -2289,14 +2279,14 @@
 
   sync<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'p-change'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>popup<span class="token punctuation">.</span>sync <span class="token operator">=</span> sync<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-700"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-713"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-701"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/popup'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PSelect <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/select'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PMenuItem <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/menu-item'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-714"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/popup'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PSelect <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/select'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PMenuItem <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/menu-item'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> css <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
   .popup-sync span[slot='anchor'] {
@@ -2344,7 +2334,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-701"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-714"></p-copy-button></pre>
               </div>
             </div>
 
@@ -2353,7 +2343,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-223"
+                aria-controls="code-preview-source-group-229"
               >
                 Source
                 <svg
@@ -2487,9 +2477,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-224">
+            <div class="code-preview__source-group" id="code-preview-source-group-230">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-702"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>popup-strategy<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-715"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>popup-strategy<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>overflow<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-popup</span> <span class="token attr-name">placement</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>top<span class="token punctuation">"</span></span> <span class="token attr-name">strategy</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fixed<span class="token punctuation">"</span></span> <span class="token attr-name">active</span><span class="token punctuation">&gt;</span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>anchor<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
@@ -2535,13 +2525,13 @@
 
   fixed<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'p-change'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>popup<span class="token punctuation">.</span>strategy <span class="token operator">=</span> fixed<span class="token punctuation">.</span>checked <span class="token operator">?</span> <span class="token string">'fixed'</span> <span class="token operator">:</span> <span class="token string">'absolute'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-702"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-715"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-703"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/popup'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PSwitch <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/switch'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-716"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/popup'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PSwitch <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/switch'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> css <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
   .popup-strategy .overflow {
@@ -2593,7 +2583,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-703"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-716"></p-copy-button></pre>
               </div>
             </div>
 
@@ -2602,7 +2592,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-224"
+                aria-controls="code-preview-source-group-230"
               >
                 Source
                 <svg
@@ -2707,9 +2697,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-225">
+            <div class="code-preview__source-group" id="code-preview-source-group-231">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-704"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>popup-flip<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-717"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>popup-flip<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>overflow<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-popup</span> <span class="token attr-name">placement</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>top<span class="token punctuation">"</span></span> <span class="token attr-name">flip</span> <span class="token attr-name">active</span><span class="token punctuation">&gt;</span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>anchor<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
@@ -2752,13 +2742,13 @@
 
   flip<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'p-change'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>popup<span class="token punctuation">.</span>flip <span class="token operator">=</span> flip<span class="token punctuation">.</span>checked<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-704"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-717"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-705"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/popup'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PSwitch <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/switch'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-718"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/popup'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PSwitch <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/switch'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> css <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
   .popup-flip .overflow {
@@ -2807,7 +2797,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-705"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-718"></p-copy-button></pre>
               </div>
             </div>
 
@@ -2816,7 +2806,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-225"
+                aria-controls="code-preview-source-group-231"
               >
                 Source
                 <svg
@@ -2925,9 +2915,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-226">
+            <div class="code-preview__source-group" id="code-preview-source-group-232">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-706"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>popup-flip-fallbacks<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-719"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>popup-flip-fallbacks<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>overflow<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-popup</span> <span class="token attr-name">placement</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>top<span class="token punctuation">"</span></span> <span class="token attr-name">flip</span> <span class="token attr-name">flip-fallback-placements</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>right bottom<span class="token punctuation">"</span></span> <span class="token attr-name">flip-fallback-strategy</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>initial<span class="token punctuation">"</span></span> <span class="token attr-name">active</span><span class="token punctuation">&gt;</span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>anchor<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
@@ -2959,11 +2949,11 @@
     <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--p-border-radius-medium<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-706"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-719"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-707"><span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/popup'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-720"><span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/popup'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> css <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
   .popup-flip-fallbacks .overflow {
@@ -3005,7 +2995,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-707"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-720"></p-copy-button></pre>
               </div>
             </div>
 
@@ -3014,7 +3004,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-226"
+                aria-controls="code-preview-source-group-232"
               >
                 Source
                 <svg
@@ -3115,9 +3105,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-227">
+            <div class="code-preview__source-group" id="code-preview-source-group-233">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-708"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>popup-shift<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-721"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>popup-shift<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>overflow<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-popup</span> <span class="token attr-name">placement</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>top<span class="token punctuation">"</span></span> <span class="token attr-name">shift</span> <span class="token attr-name">shift-padding</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>10<span class="token punctuation">"</span></span> <span class="token attr-name">active</span><span class="token punctuation">&gt;</span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>anchor<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
@@ -3158,13 +3148,13 @@
 
   shift<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'p-change'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>popup<span class="token punctuation">.</span>shift <span class="token operator">=</span> shift<span class="token punctuation">.</span>checked<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-708"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-721"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-709"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/popup'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PSwitch <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/switch'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-722"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/popup'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PSwitch <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/switch'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> css <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
   .popup-shift .overflow {
@@ -3211,7 +3201,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-709"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-722"></p-copy-button></pre>
               </div>
             </div>
 
@@ -3220,7 +3210,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-227"
+                aria-controls="code-preview-source-group-233"
               >
                 Source
                 <svg
@@ -3340,9 +3330,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-228">
+            <div class="code-preview__source-group" id="code-preview-source-group-234">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-710"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>popup-auto-size<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-723"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>popup-auto-size<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>overflow<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-popup</span> <span class="token attr-name">placement</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>top<span class="token punctuation">"</span></span> <span class="token attr-name">auto-size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>both<span class="token punctuation">"</span></span> <span class="token attr-name">auto-size-padding</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>10<span class="token punctuation">"</span></span> <span class="token attr-name">active</span><span class="token punctuation">&gt;</span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>anchor<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
@@ -3392,13 +3382,13 @@
 
   autoSize<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'p-change'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>popup<span class="token punctuation">.</span>autoSize <span class="token operator">=</span> autoSize<span class="token punctuation">.</span>checked <span class="token operator">?</span> <span class="token string">'both'</span> <span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-710"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-723"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-711"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/popup'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PSwitch <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/switch'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-724"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/popup'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PSwitch <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/switch'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> css <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
   .popup-auto-size .overflow {
@@ -3454,7 +3444,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-711"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-724"></p-copy-button></pre>
               </div>
             </div>
 
@@ -3463,7 +3453,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-228"
+                aria-controls="code-preview-source-group-234"
               >
                 Source
                 <svg
@@ -3576,9 +3566,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-229">
+            <div class="code-preview__source-group" id="code-preview-source-group-235">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-712"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>popup-hover-bridge<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-725"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>popup-hover-bridge<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-popup</span> <span class="token attr-name">placement</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>top<span class="token punctuation">"</span></span> <span class="token attr-name">hover-bridge</span> <span class="token attr-name">distance</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>10<span class="token punctuation">"</span></span> <span class="token attr-name">skidding</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">active</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>anchor<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
@@ -3628,14 +3618,14 @@
   skidding<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'p-input'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>popup<span class="token punctuation">.</span>skidding <span class="token operator">=</span> skidding<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   hoverBridge<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'p-change'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>popup<span class="token punctuation">.</span>hoverBridge <span class="token operator">=</span> hoverBridge<span class="token punctuation">.</span>checked<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-712"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-725"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-713"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/popup'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PRange <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/range'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PSwitch <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/switch'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-726"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/popup'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PRange <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/range'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PSwitch <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/switch'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> css <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
   .popup-hover-bridge span[slot='anchor'] {
@@ -3706,7 +3696,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-713"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-726"></p-copy-button></pre>
               </div>
             </div>
 
@@ -3715,7 +3705,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-229"
+                aria-controls="code-preview-source-group-235"
               >
                 Source
                 <svg
@@ -3773,13 +3763,13 @@
             >
             object as shown below.
           </p>
-          <pre><code class="language-ts" id="code-block-714"><span class="token keyword">const</span> virtualElement <span class="token operator">=</span> <span class="token punctuation">{</span>
+          <pre><code class="language-ts" id="code-block-727"><span class="token keyword">const</span> virtualElement <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token function">getBoundingClientRect</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token comment">// ...</span>
     <span class="token keyword">return</span> <span class="token punctuation">{</span> width<span class="token punctuation">,</span> height<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> top<span class="token punctuation">,</span> left<span class="token punctuation">,</span> right<span class="token punctuation">,</span> bottom <span class="token punctuation">}</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-714"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-727"></p-copy-button></pre>
           <p>
             This example anchors a popup to the mouse cursor using a virtual element. As such, a mouse is required to
             properly view it.
@@ -3872,9 +3862,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-230">
+            <div class="code-preview__source-group" id="code-preview-source-group-236">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-715"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>popup-virtual-element<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-728"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>popup-virtual-element<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-popup</span> <span class="token attr-name">placement</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>right-start<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>circle<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-popup</span><span class="token punctuation">&gt;</span></span>
@@ -3947,13 +3937,13 @@
     <span class="token selector">50%</span> <span class="token punctuation">{</span> <span class="token property">scale</span><span class="token punctuation">:</span> 1.1<span class="token punctuation">;</span> <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-715"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-728"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-716"><span class="token keyword">import</span> <span class="token punctuation">{</span> useRef<span class="token punctuation">,</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/popup'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PSwitch <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/switch'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-729"><span class="token keyword">import</span> <span class="token punctuation">{</span> useRef<span class="token punctuation">,</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/popup'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PSwitch <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/switch'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> css <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
   /* If you need to set a z-index, set it on the popup part like this */
@@ -4033,7 +4023,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-716"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-729"></p-copy-button></pre>
               </div>
             </div>
 
@@ -4042,7 +4032,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-230"
+                aria-controls="code-preview-source-group-236"
               >
                 Source
                 <svg
@@ -4088,14 +4078,14 @@
             Sometimes the <code>getBoundingClientRects</code> might be derived from a real element. In this case provide
             the anchor element as context to ensure clipping and position updates for the popup work well.
           </p>
-          <pre><code class="language-ts" id="code-block-717"><span class="token keyword">const</span> virtualElement <span class="token operator">=</span> <span class="token punctuation">{</span>
+          <pre><code class="language-ts" id="code-block-730"><span class="token keyword">const</span> virtualElement <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token function">getBoundingClientRect</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token comment">// ...</span>
     <span class="token keyword">return</span> <span class="token punctuation">{</span> width<span class="token punctuation">,</span> height<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> top<span class="token punctuation">,</span> left<span class="token punctuation">,</span> right<span class="token punctuation">,</span> bottom <span class="token punctuation">}</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   contextElement<span class="token operator">:</span> anchorElement
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-717"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-730"></p-copy-button></pre>
 
           <h2 id="importing" class="anchor-heading">
             Importing<a href="#importing" aria-label='Direct link to "Importing"'></a>
@@ -4116,7 +4106,7 @@
               <p>
                 To import this component from
                 <a
-                  href="https://www.jsdelivr.com/package/npm/@shoelace-style/shoelace"
+                  href="https://www.jsdelivr.com/package/npm/pure-uikit"
                   class="external-link"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -4124,14 +4114,14 @@
                 >
                 using a script tag:
               </p>
-              <pre><code class="language-html" id="code-block-718"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@1.0.0/cdn/components/popup/popup.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-718"></p-copy-button></pre>
+              <pre><code class="language-html" id="code-block-731"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.0.0/cdn/components/popup/popup.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-731"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="import">
               <p>
                 To import this component from
                 <a
-                  href="https://www.jsdelivr.com/package/npm/@shoelace-style/shoelace"
+                  href="https://www.jsdelivr.com/package/npm/pure-uikit"
                   class="external-link"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -4139,17 +4129,17 @@
                 >
                 using a JavaScript import:
               </p>
-              <pre><code class="language-js" id="code-block-719"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@1.0.0/cdn/components/popup/popup.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-719"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-732"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.0.0/cdn/components/popup/popup.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-732"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="bundler">
               <p>To import this component using <a href="/getting-started/installation#bundling">a bundler</a>:</p>
-              <pre><code class="language-js" id="code-block-720"><span class="token keyword">import</span> <span class="token string">'@shoelace-style/shoelace/dist/components/popup/popup.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-720"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-733"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/popup/popup.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-733"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="react">
               <p>To import this component as a <a href="/frameworks/react">React component</a>:</p>
-              <pre><code class="language-js" id="code-block-721"><span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/popup'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-721"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-734"><span class="token keyword">import</span> PPopup <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/popup'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-734"></p-copy-button></pre>
             </p-tab-panel>
           </p-tab-group>
 

@@ -191,73 +191,6 @@
       ]
     },
     {
-      "name": "p-animation",
-      "description": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n---\n\n\n### **Events:**\n - **p-cancel** - Emitted when the animation is canceled.\n- **p-finish** - Emitted when the animation finishes.\n- **p-start** - Emitted when the animation starts or restarts.\n\n### **Methods:**\n - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.\n- **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.\n\n### **Slots:**\n - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.",
-      "attributes": [
-        {
-          "name": "name",
-          "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
-          "values": []
-        },
-        {
-          "name": "play",
-          "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
-          "values": []
-        },
-        {
-          "name": "delay",
-          "description": "The number of milliseconds to delay the start of the animation.",
-          "values": []
-        },
-        {
-          "name": "direction",
-          "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
-          "values": [{ "name": "PlaybackDirection" }]
-        },
-        {
-          "name": "duration",
-          "description": "The number of milliseconds each iteration of the animation takes to complete.",
-          "values": []
-        },
-        {
-          "name": "easing",
-          "description": "The easing function to use for the animation. This can be a Shoelace easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
-          "values": []
-        },
-        {
-          "name": "end-delay",
-          "description": "The number of milliseconds to delay after the active period of an animation sequence.",
-          "values": []
-        },
-        {
-          "name": "fill",
-          "description": "Sets how the animation applies styles to its target before and after its execution.",
-          "values": [{ "name": "FillMode" }]
-        },
-        {
-          "name": "iterations",
-          "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops.",
-          "values": []
-        },
-        {
-          "name": "iteration-start",
-          "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
-          "values": []
-        },
-        {
-          "name": "playback-rate",
-          "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
-          "values": []
-        }
-      ],
-      "references": [
-        {
-          "name": "Documentation",
-          "url": "https://pureui.xyz/components/animation"
-        }
-      ]
-    },
-    {
       "name": "p-button",
       "description": "Buttons represent actions that are available to the user.\n---\n\n\n### **Events:**\n - **p-blur** - Emitted when the button loses focus.\n- **p-focus** - Emitted when the button gains focus.\n- **p-invalid** - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n\n### **Methods:**\n - **click()** - Simulates a click on the button.\n- **focus(options: _FocusOptions_)** - Sets focus on the button.\n- **blur()** - Removes focus from the button.\n- **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n\n### **Slots:**\n - _default_ - The button's label.\n- **prefix** - A presentational prefix icon or similar element.\n- **suffix** - A presentational suffix icon or similar element.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **prefix** - The container that wraps the prefix.\n- **label** - The button's label.\n- **suffix** - The container that wraps the suffix.\n- **caret** - The button's caret icon, an `<p-icon>` element.\n- **spinner** - The spinner that shows when the button is in the loading state.",
       "attributes": [
@@ -406,6 +339,73 @@
       ]
     },
     {
+      "name": "p-animation",
+      "description": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n---\n\n\n### **Events:**\n - **p-cancel** - Emitted when the animation is canceled.\n- **p-finish** - Emitted when the animation finishes.\n- **p-start** - Emitted when the animation starts or restarts.\n\n### **Methods:**\n - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.\n- **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.\n\n### **Slots:**\n - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.",
+      "attributes": [
+        {
+          "name": "name",
+          "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
+          "values": []
+        },
+        {
+          "name": "play",
+          "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
+          "values": []
+        },
+        {
+          "name": "delay",
+          "description": "The number of milliseconds to delay the start of the animation.",
+          "values": []
+        },
+        {
+          "name": "direction",
+          "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
+          "values": [{ "name": "PlaybackDirection" }]
+        },
+        {
+          "name": "duration",
+          "description": "The number of milliseconds each iteration of the animation takes to complete.",
+          "values": []
+        },
+        {
+          "name": "easing",
+          "description": "The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
+          "values": []
+        },
+        {
+          "name": "end-delay",
+          "description": "The number of milliseconds to delay after the active period of an animation sequence.",
+          "values": []
+        },
+        {
+          "name": "fill",
+          "description": "Sets how the animation applies styles to its target before and after its execution.",
+          "values": [{ "name": "FillMode" }]
+        },
+        {
+          "name": "iterations",
+          "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops.",
+          "values": []
+        },
+        {
+          "name": "iteration-start",
+          "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
+          "values": []
+        },
+        {
+          "name": "playback-rate",
+          "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
+          "values": []
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://pureui.xyz/components/animation"
+        }
+      ]
+    },
+    {
       "name": "p-button-group",
       "description": "Button groups can be used to group related buttons into sections.\n---\n\n\n### **Slots:**\n - _default_ - One or more `<p-button>` elements to display in the button group.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
       "attributes": [
@@ -424,7 +424,7 @@
     },
     {
       "name": "p-calendar",
-      "description": "A calendar prototype for Shoelace.\n---\n\n\n### **Events:**\n - **p-change** - Emitted when the date changes.\n\n### **Methods:**\n - **goToToday()** - Moves the calendar to the current month and year.\n- **goToPreviousMonth()** - Moves the calendar to the previous month.\n- **goToNextMonth()** - Moves the calendar to the next month.\n\n### **Slots:**\n - **footer** - Optional content to place in the calendar's footer.\n\n### **CSS Properties:**\n - **--border-color** - The calendar's border color. _(default: undefined)_\n- **--border-width** - The calendar's border width. _(default: undefined)_\n- **--border-radius** - The border radius of the calendar. _(default: undefined)_\n\n### **CSS Parts:**\n - **day** - Targets day cells.\n- **day-label** - Targets the day labels (the name of the days in the grid).\n- **day-weekend** - Targets days that fall on weekends.\n- **day-weekday** - Targets weekdays.\n- **day-current-month** - Targets days in the current month.\n- **day-previous-month** - Targets days in the previous month.\n- **day-next-month** - Targets days in the next month.\n- **day-today** - Targets today.\n- **day-selected** - Targets selected days.\n- **day-selection-start** - Targets days that begin a selection.\n- **day-selection-end** - Targets days that end a selection.",
+      "description": "A calendar prototype for Pure UI.\n---\n\n\n### **Events:**\n - **p-change** - Emitted when the date changes.\n\n### **Methods:**\n - **goToToday()** - Moves the calendar to the current month and year.\n- **goToPreviousMonth()** - Moves the calendar to the previous month.\n- **goToNextMonth()** - Moves the calendar to the next month.\n\n### **Slots:**\n - **footer** - Optional content to place in the calendar's footer.\n\n### **CSS Properties:**\n - **--border-color** - The calendar's border color. _(default: undefined)_\n- **--border-width** - The calendar's border width. _(default: undefined)_\n- **--border-radius** - The border radius of the calendar. _(default: undefined)_\n\n### **CSS Parts:**\n - **day** - Targets day cells.\n- **day-label** - Targets the day labels (the name of the days in the grid).\n- **day-weekend** - Targets days that fall on weekends.\n- **day-weekday** - Targets weekdays.\n- **day-current-month** - Targets days in the current month.\n- **day-previous-month** - Targets days in the previous month.\n- **day-next-month** - Targets days in the next month.\n- **day-today** - Targets today.\n- **day-selected** - Targets selected days.\n- **day-selection-start** - Targets days that begin a selection.\n- **day-selection-end** - Targets days that end a selection.",
       "attributes": [
         {
           "name": "month",

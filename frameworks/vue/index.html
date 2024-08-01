@@ -15,7 +15,7 @@
     <link rel="icon" href="/assets/images/logo.svg" type="image/x-icon" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:creator" content="shoelace_style" />
+    <meta name="twitter:creator" content="pure_ui" />
     <meta name="twitter:image" content="https://pureui.xyz/assets/images/og-image.png" />
 
     <meta property="og:url" content="https://pureui.xyz/frameworks/vue/" />
@@ -59,23 +59,13 @@
 
     <div id="icon-toolbar">
       <a
-        href="https://github.com/shoelace-style/shoelace"
+        href="https://github.com/ssjblue197/Pure-UI-Document"
         title="View Pure UI on GitHub"
         class="external-link"
         rel="noopener noreferrer"
         target="_blank"
       >
         <p-icon name="github"></p-icon>
-      </a>
-
-      <a
-        href="https://twitter.com/shoelace_style"
-        title="Follow Pure UI on Twitter"
-        class="external-link"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <p-icon name="twitter"></p-icon>
       </a>
 
       <p-dropdown id="theme-selector" placement="bottom-end" distance="3">
@@ -442,7 +432,7 @@
             Installation<a href="#installation" aria-label='Direct link to "Installation"'></a>
           </h2>
           <p>To add Pure UI to your Vue app, install the package from npm.</p>
-          <pre><code class="language-bash" id="code-block-28"><span class="token function">npm</span> <span class="token function">install</span> @shoelace-style/shoelace
+          <pre><code class="language-bash" id="code-block-28"><span class="token function">npm</span> <span class="token function">install</span> pure-uikit
 </code><p-copy-button class="copy-code-button" from="code-block-28"></p-copy-button></pre>
           <p>
             Next, <a href="/getting-started/themes">include a theme</a> and set the
@@ -450,16 +440,16 @@
             this example, we’ll import the light theme and use the CDN as a base path.
           </p>
           <pre><code class="language-jsx" id="code-block-29"><span class="token comment">// main.js or main.ts</span>
-<span class="token keyword">import</span> <span class="token string">'@shoelace-style/shoelace/dist/themes/light.css'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/utilities/base-path'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/themes/light.css'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/utilities/base-path'</span><span class="token punctuation">;</span>
 
-<span class="token function">setBasePath</span><span class="token punctuation">(</span><span class="token string">'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@1.0.0/cdn/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setBasePath</span><span class="token punctuation">(</span><span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.0.0/cdn/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code><p-copy-button class="copy-code-button" from="code-block-29"></p-copy-button></pre>
           <div role="alert" class="callout callout--tip">
             <p>
               If you’d rather not use the CDN for assets, you can create a build task that copies
-              <code>node_modules/@shoelace-style/shoelace/dist/assets</code> into a public folder in your app. Then you
-              can point the base path to that folder instead.
+              <code>node_modules/pure-uikit/dist/assets</code> into a public folder in your app. Then you can point the
+              base path to that folder instead.
             </p>
           </div>
           <h2 id="configuration" class="anchor-heading">
@@ -488,7 +478,7 @@
           </p>
           <pre><code class="language-json" id="code-block-30"><span class="token punctuation">{</span>
   <span class="token property">"compilerOptions"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token property">"types"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"@shoelace-style/shoelace/dist/types/vue"</span><span class="token punctuation">]</span>
+    <span class="token property">"types"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"pure-uikit/dist/types/vue"</span><span class="token punctuation">]</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code><p-copy-button class="copy-code-button" from="code-block-30"></p-copy-button></pre>
@@ -511,8 +501,8 @@
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">setup</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">{</span> ref <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span><span class="token punctuation">;</span>
-  <span class="token keyword">import</span> <span class="token string">'@shoelace-style/shoelace/dist/components/qr-code/qr-code.js'</span><span class="token punctuation">;</span>
-  <span class="token keyword">import</span> <span class="token string">'@shoelace-style/shoelace/dist/components/input/input.js'</span><span class="token punctuation">;</span>
+  <span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/qr-code/qr-code.js'</span><span class="token punctuation">;</span>
+  <span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/input/input.js'</span><span class="token punctuation">;</span>
 
   <span class="token keyword">const</span> qrCode <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
@@ -570,7 +560,7 @@
             <p>
               Are you using Pure UI with Vue?
               <a
-                href="https://github.com/shoelace-style/shoelace/blob/next/docs/frameworks/vue.md"
+                href="https://github.com/ssjblue197/pure-ui/blob/next/docs/frameworks/vue.md"
                 class="external-link"
                 rel="noopener noreferrer"
                 target="_blank"

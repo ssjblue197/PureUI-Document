@@ -15,7 +15,7 @@
     <link rel="icon" href="/assets/images/logo.svg" type="image/x-icon" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:creator" content="shoelace_style" />
+    <meta name="twitter:creator" content="pure_ui" />
     <meta name="twitter:image" content="https://pureui.xyz/assets/images/og-image.png" />
 
     <meta property="og:url" content="https://pureui.xyz/getting-started/localization/" />
@@ -59,23 +59,13 @@
 
     <div id="icon-toolbar">
       <a
-        href="https://github.com/shoelace-style/shoelace"
+        href="https://github.com/ssjblue197/Pure-UI-Document"
         title="View Pure UI on GitHub"
         class="external-link"
         rel="noopener noreferrer"
         target="_blank"
       >
         <p-icon name="github"></p-icon>
-      </a>
-
-      <a
-        href="https://twitter.com/shoelace_style"
-        title="Follow Pure UI on Twitter"
-        class="external-link"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <p-icon name="twitter"></p-icon>
       </a>
 
       <p-dropdown id="theme-selector" placement="bottom-end" distance="3">
@@ -441,7 +431,7 @@
           </p>
           <pre><code class="language-html" id="code-block-67"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>es<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/path/to/shoelace/dist/translations/es.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/path/to/pure-ui/dist/translations/es.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
 
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
@@ -464,7 +454,7 @@
             locale. As such, you do not need to import the English translation. To see a list of all available
             translations in the latest version,
             <a
-              href="https://github.com/shoelace-style/shoelace/tree/current/src/translations"
+              href="https://github.com/ssjblue197/pure-ui/tree/current/src/translations"
               class="external-link"
               rel="noopener noreferrer"
               target="_blank"
@@ -476,17 +466,14 @@
             <li>
               If you’re using the CDN,
               <a
-                href="https://www.jsdelivr.com/package/npm/@shoelace-style/shoelace?path=cdn25%2Ftranslations"
+                href="https://www.jsdelivr.com/package/npm/pure-uikit?path=cdn25%2Ftranslations"
                 class="external-link"
                 rel="noopener noreferrer"
                 target="_blank"
                 >import them from the CDN</a
               >
             </li>
-            <li>
-              If you’re using a bundler, import them from
-              <code>@shoelace-style/shoelace/dist/translations/[lang].js</code>
-            </li>
+            <li>If you’re using a bundler, import them from <code>pure-uikit/dist/translations/[lang].js</code></li>
           </ul>
           <p>
             You do not need to load translations up front. You can import them dynamically even after updating the
@@ -497,7 +484,7 @@
 document<span class="token punctuation">.</span>documentElement<span class="token punctuation">.</span>lang <span class="token operator">=</span> <span class="token string">'de'</span><span class="token punctuation">;</span>
 
 <span class="token comment">// Import the translation</span>
-<span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'/path/to/shoelace/dist/translations/de.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'/path/to/pure-ui/dist/translations/de.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code><p-copy-button class="copy-code-button" from="code-block-68"></p-copy-button></pre>
           <h3 id="translation-resolution" class="anchor-heading">
             Translation Resolution<a
@@ -529,7 +516,7 @@ document<span class="token punctuation">.</span>documentElement<span class="toke
             To contribute new translations or improvements to existing translations, please submit a pull request on
             GitHub. Translations are located in
             <a
-              href="https://github.com/shoelace-style/shoelace/blob/next/src/translations"
+              href="https://github.com/ssjblue197/pure-ui/blob/next/src/translations"
               class="external-link"
               rel="noopener noreferrer"
               target="_blank"
@@ -544,7 +531,7 @@ document<span class="token punctuation">.</span>documentElement<span class="toke
           <p>
             If you have any questions, please start a
             <a
-              href="https://github.com/shoelace-style/shoelace/discussions"
+              href="https://github.com/ssjblue197/pure-ui/discussions"
               class="external-link"
               rel="noopener noreferrer"
               target="_blank"
@@ -626,8 +613,8 @@ document<span class="token punctuation">.</span>documentElement<span class="toke
             Let’s create a Spanish translation as an example. The following assumes you’re using TypeScript, but you can
             also create translations with regular JavaScript.
           </p>
-          <pre><code class="language-js" id="code-block-71"><span class="token keyword">import</span> <span class="token punctuation">{</span> registerTranslation <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/utilities/localize'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> type <span class="token punctuation">{</span> Translation <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/utilities/localize'</span><span class="token punctuation">;</span>
+          <pre><code class="language-js" id="code-block-71"><span class="token keyword">import</span> <span class="token punctuation">{</span> registerTranslation <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/utilities/localize'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> type <span class="token punctuation">{</span> Translation <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/utilities/localize'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token literal-property property">translation</span><span class="token operator">:</span> Translation <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token literal-property property">$code</span><span class="token operator">:</span> <span class="token string">'es'</span><span class="token punctuation">,</span>

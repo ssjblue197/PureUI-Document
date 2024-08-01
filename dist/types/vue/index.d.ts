@@ -2,12 +2,12 @@ import type { DefineComponent } from "vue";
 
 import type { PAlert } from "../../components/alert/alert.component.js";
 import type { PAnimatedImage } from "../../components/animated-image/animated-image.component.js";
-import type { PAvatar } from "../../components/avatar/avatar.component.js";
 import type { PBadge } from "../../components/badge/badge.component.js";
+import type { PAvatar } from "../../components/avatar/avatar.component.js";
 import type { PBreadcrumb } from "../../components/breadcrumb/breadcrumb.component.js";
 import type { PBreadcrumbItem } from "../../components/breadcrumb-item/breadcrumb-item.component.js";
-import type { PAnimation } from "../../components/animation/animation.component.js";
 import type { PButton } from "../../components/button/button.component.js";
+import type { PAnimation } from "../../components/animation/animation.component.js";
 import type { PButtonGroup } from "../../components/button-group/button-group.component.js";
 import type { PCalendar } from "../../components/calendar/calendar.component.js";
 import type { PCard } from "../../components/card/card.component.js";
@@ -103,6 +103,15 @@ type PAnimatedImageProps = {
   onPError?: (e: CustomEvent<never>) => void;
 };
 
+type PBadgeProps = {
+  /** The badge's theme variant. */
+  variant?: PBadge["variant"];
+  /** Draws a pill-style badge with rounded edges. */
+  pill?: PBadge["pill"];
+  /** Makes the badge pulsate to draw attention. */
+  pulse?: PBadge["pulse"];
+};
+
 type PAvatarProps = {
   /** The image source to use for the avatar. */
   image?: PAvatar["image"];
@@ -117,15 +126,6 @@ type PAvatarProps = {
 
   /** The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause. */
   onPError?: (e: CustomEvent<never>) => void;
-};
-
-type PBadgeProps = {
-  /** The badge's theme variant. */
-  variant?: PBadge["variant"];
-  /** Draws a pill-style badge with rounded edges. */
-  pill?: PBadge["pill"];
-  /** Makes the badge pulsate to draw attention. */
-  pulse?: PBadge["pulse"];
 };
 
 type PBreadcrumbProps = {
@@ -146,48 +146,6 @@ internally. When unset, a button will be rendered instead. */
   target?: PBreadcrumbItem["target"];
   /** The `rel` attribute to use on the link. Only used when `href` is set. */
   rel?: PBreadcrumbItem["rel"];
-};
-
-type PAnimationProps = {
-  /** The name of the built-in animation to use. For custom animations, use the `keyframes` prop. */
-  name?: PAnimation["name"];
-  /** Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when
-the animation finishes or gets canceled. */
-  play?: PAnimation["play"];
-  /** The number of milliseconds to delay the start of the animation. */
-  delay?: PAnimation["delay"];
-  /** Determines the direction of playback as well as the behavior when reaching the end of an iteration.
-[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction) */
-  direction?: PAnimation["direction"];
-  /** The number of milliseconds each iteration of the animation takes to complete. */
-  duration?: PAnimation["duration"];
-  /** The easing function to use for the animation. This can be a Shoelace easing function or a custom easing function
-such as `cubic-bezier(0, 1, .76, 1.14)`. */
-  easing?: PAnimation["easing"];
-  /** The number of milliseconds to delay after the active period of an animation sequence. */
-  "end-delay"?: PAnimation["endDelay"];
-  /** Sets how the animation applies styles to its target before and after its execution. */
-  fill?: PAnimation["fill"];
-  /** The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops. */
-  iterations?: PAnimation["iterations"];
-  /** The offset at which to start the animation, usually between 0 (start) and 1 (end). */
-  "iteration-start"?: PAnimation["iterationStart"];
-  /** Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this
-to `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This
-value can be changed without causing the animation to restart. */
-  "playback-rate"?: PAnimation["playbackRate"];
-  /**  */
-  defaultPot?: PAnimation["defaultPot"];
-  /** The keyframes to use for the animation. If this is set, `name` will be ignored. */
-  keyframes?: PAnimation["keyframes"];
-  /** Gets and sets the current animation time. */
-  currentTime?: PAnimation["currentTime"];
-  /** Emitted when the animation is canceled. */
-  onPCancel?: (e: CustomEvent<never>) => void;
-  /** Emitted when the animation finishes. */
-  onPFinish?: (e: CustomEvent<never>) => void;
-  /** Emitted when the animation starts or restarts. */
-  onPStart?: (e: CustomEvent<never>) => void;
 };
 
 type PButtonProps = {
@@ -257,6 +215,48 @@ value of this attribute must be an id of a form in the same document or shadow r
   onPFocus?: (e: CustomEvent<never>) => void;
   /** Emitted when the form control has been checked for validity and its constraints aren't satisfied. */
   onPInvalid?: (e: CustomEvent<never>) => void;
+};
+
+type PAnimationProps = {
+  /** The name of the built-in animation to use. For custom animations, use the `keyframes` prop. */
+  name?: PAnimation["name"];
+  /** Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when
+the animation finishes or gets canceled. */
+  play?: PAnimation["play"];
+  /** The number of milliseconds to delay the start of the animation. */
+  delay?: PAnimation["delay"];
+  /** Determines the direction of playback as well as the behavior when reaching the end of an iteration.
+[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction) */
+  direction?: PAnimation["direction"];
+  /** The number of milliseconds each iteration of the animation takes to complete. */
+  duration?: PAnimation["duration"];
+  /** The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function
+such as `cubic-bezier(0, 1, .76, 1.14)`. */
+  easing?: PAnimation["easing"];
+  /** The number of milliseconds to delay after the active period of an animation sequence. */
+  "end-delay"?: PAnimation["endDelay"];
+  /** Sets how the animation applies styles to its target before and after its execution. */
+  fill?: PAnimation["fill"];
+  /** The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops. */
+  iterations?: PAnimation["iterations"];
+  /** The offset at which to start the animation, usually between 0 (start) and 1 (end). */
+  "iteration-start"?: PAnimation["iterationStart"];
+  /** Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this
+to `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This
+value can be changed without causing the animation to restart. */
+  "playback-rate"?: PAnimation["playbackRate"];
+  /**  */
+  defaultPot?: PAnimation["defaultPot"];
+  /** The keyframes to use for the animation. If this is set, `name` will be ignored. */
+  keyframes?: PAnimation["keyframes"];
+  /** Gets and sets the current animation time. */
+  currentTime?: PAnimation["currentTime"];
+  /** Emitted when the animation is canceled. */
+  onPCancel?: (e: CustomEvent<never>) => void;
+  /** Emitted when the animation finishes. */
+  onPFinish?: (e: CustomEvent<never>) => void;
+  /** Emitted when the animation starts or restarts. */
+  onPStart?: (e: CustomEvent<never>) => void;
 };
 
 type PButtonGroupProps = {
@@ -515,7 +515,7 @@ use the `show()` and `hide()` methods and this attribute will reflect the dialog
   /** Disables the header. This will also remove the default close button, so please ensure you provide an easy,
 accessible way for users to dismiss the dialog. */
   "no-header"?: PDialog["noHeader"];
-  /** Exposes the internal modal utility that controls focus trapping. To temporarily disable focus trapping and allow third-party modals spawned from an active Shoelace modal, call `modal.activateExternal()` when the third-party modal opens. Upon closing, call `modal.deactivateExternal()` to restore Shoelace's focus trapping. */
+  /** Exposes the internal modal utility that controls focus trapping. To temporarily disable focus trapping and allow third-party modals spawned from an active Pure UI modal, call `modal.activateExternal()` when the third-party modal opens. Upon closing, call `modal.deactivateExternal()` to restore pure ui 's focus trapping. */
   modal?: PDialog["modal"];
   /**  */
   dialog?: PDialog["dialog"];
@@ -557,7 +557,7 @@ its parent element, set this attribute and add `position: relative` to the paren
   /** Removes the header. This will also remove the default close button, so please ensure you provide an easy,
 accessible way for users to dismiss the drawer. */
   "no-header"?: PDrawer["noHeader"];
-  /** Exposes the internal modal utility that controls focus trapping. To temporarily disable focus trapping and allow third-party modals spawned from an active Shoelace modal, call `modal.activateExternal()` when the third-party modal opens. Upon closing, call `modal.deactivateExternal()` to restore Shoelace's focus trapping. */
+  /** Exposes the internal modal utility that controls focus trapping. To temporarily disable focus trapping and allow third-party modals spawned from an active Shoelace modal, call `modal.activateExternal()` when the third-party modal opens. Upon closing, call `modal.deactivateExternal()` to restore pure ui 's focus trapping. */
   modal?: PDrawer["modal"];
   /**  */
   drawer?: PDrawer["drawer"];
@@ -1636,6 +1636,19 @@ export type CustomElements = {
   "p-animated-image": DefineComponent<PAnimatedImageProps>;
 
   /**
+   * Badges are used to draw attention and display statuses or counts.
+   * ---
+   *
+   *
+   * ### **Slots:**
+   *  - _default_ - The badge's content.
+   *
+   * ### **CSS Parts:**
+   *  - **base** - The component's base wrapper.
+   */
+  "p-badge": DefineComponent<PBadgeProps>;
+
+  /**
    * Avatars are used to represent a person or object.
    * ---
    *
@@ -1656,19 +1669,6 @@ export type CustomElements = {
    * - **image** - The avatar image. Only shown when the `image` attribute is set.
    */
   "p-avatar": DefineComponent<PAvatarProps>;
-
-  /**
-   * Badges are used to draw attention and display statuses or counts.
-   * ---
-   *
-   *
-   * ### **Slots:**
-   *  - _default_ - The badge's content.
-   *
-   * ### **CSS Parts:**
-   *  - **base** - The component's base wrapper.
-   */
-  "p-badge": DefineComponent<PBadgeProps>;
 
   /**
    * Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.
@@ -1705,25 +1705,6 @@ export type CustomElements = {
   "p-breadcrumb-item": DefineComponent<PBreadcrumbItemProps>;
 
   /**
-   * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **p-cancel** - Emitted when the animation is canceled.
-   * - **p-finish** - Emitted when the animation finishes.
-   * - **p-start** - Emitted when the animation starts or restarts.
-   *
-   * ### **Methods:**
-   *  - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.
-   * - **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.
-   *
-   * ### **Slots:**
-   *  - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.
-   */
-  "p-animation": DefineComponent<PAnimationProps>;
-
-  /**
    * Buttons represent actions that are available to the user.
    * ---
    *
@@ -1758,6 +1739,25 @@ export type CustomElements = {
   "p-button": DefineComponent<PButtonProps>;
 
   /**
+   * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **p-cancel** - Emitted when the animation is canceled.
+   * - **p-finish** - Emitted when the animation finishes.
+   * - **p-start** - Emitted when the animation starts or restarts.
+   *
+   * ### **Methods:**
+   *  - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.
+   * - **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.
+   *
+   * ### **Slots:**
+   *  - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.
+   */
+  "p-animation": DefineComponent<PAnimationProps>;
+
+  /**
    * Button groups can be used to group related buttons into sections.
    * ---
    *
@@ -1771,7 +1771,7 @@ export type CustomElements = {
   "p-button-group": DefineComponent<PButtonGroupProps>;
 
   /**
-   * A calendar prototype for Shoelace.
+   * A calendar prototype for Pure UI.
    * ---
    *
    *

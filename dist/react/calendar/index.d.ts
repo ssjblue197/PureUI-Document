@@ -3,7 +3,7 @@ import { type EventName } from '@lit/react';
 import type { PChangeEvent } from '../../events/events.js';
 export type { PChangeEvent } from '../../events/events.js';
 /**
- * @summary A calendar prototype for Shoelace.
+ * @summary A calendar prototype for Pure UI.
  * @documentation https://pureui.xyz/components/calendar
  *
  * @since 2.0

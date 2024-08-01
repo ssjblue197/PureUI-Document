@@ -1017,363 +1017,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/animation/animation.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PAnimation",
-          "slots": [
-            {
-              "description": "The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "animation",
-              "type": {
-                "text": "Animation | undefined"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "hasStarted",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "defaultPot",
-              "type": {
-                "text": "Promise<HTMLSlotElement>"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "'none'",
-              "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
-              "attribute": "name"
-            },
-            {
-              "kind": "field",
-              "name": "play",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
-              "attribute": "play",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "delay",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The number of milliseconds to delay the start of the animation.",
-              "attribute": "delay"
-            },
-            {
-              "kind": "field",
-              "name": "direction",
-              "type": {
-                "text": "PlaybackDirection"
-              },
-              "default": "'normal'",
-              "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
-              "attribute": "direction"
-            },
-            {
-              "kind": "field",
-              "name": "duration",
-              "type": {
-                "text": "number"
-              },
-              "default": "1000",
-              "description": "The number of milliseconds each iteration of the animation takes to complete.",
-              "attribute": "duration"
-            },
-            {
-              "kind": "field",
-              "name": "easing",
-              "type": {
-                "text": "string"
-              },
-              "default": "'linear'",
-              "description": "The easing function to use for the animation. This can be a Shoelace easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
-              "attribute": "easing"
-            },
-            {
-              "kind": "field",
-              "name": "endDelay",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The number of milliseconds to delay after the active period of an animation sequence.",
-              "attribute": "end-delay"
-            },
-            {
-              "kind": "field",
-              "name": "fill",
-              "type": {
-                "text": "FillMode"
-              },
-              "default": "'auto'",
-              "description": "Sets how the animation applies styles to its target before and after its execution.",
-              "attribute": "fill"
-            },
-            {
-              "kind": "field",
-              "name": "iterations",
-              "default": "Infinity",
-              "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops.",
-              "attribute": "iterations"
-            },
-            {
-              "kind": "field",
-              "name": "iterationStart",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
-              "attribute": "iteration-start"
-            },
-            {
-              "kind": "field",
-              "name": "keyframes",
-              "type": {
-                "text": "Keyframe[] | undefined"
-              },
-              "description": "The keyframes to use for the animation. If this is set, `name` will be ignored."
-            },
-            {
-              "kind": "field",
-              "name": "playbackRate",
-              "type": {
-                "text": "number"
-              },
-              "default": "1",
-              "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
-              "attribute": "playback-rate"
-            },
-            {
-              "kind": "field",
-              "name": "currentTime",
-              "type": {
-                "text": "CSSNumberish"
-              },
-              "description": "Gets and sets the current animation time."
-            },
-            {
-              "kind": "field",
-              "name": "handleAnimationFinish",
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "handleAnimationCancel",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handlePotChange",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "createAnimation",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "destroyAnimation",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleAnimationChange"
-            },
-            {
-              "kind": "method",
-              "name": "handlePlayChange"
-            },
-            {
-              "kind": "method",
-              "name": "handlePlaybackRateChange"
-            },
-            {
-              "kind": "method",
-              "name": "cancel",
-              "description": "Clears all keyframe effects caused by this animation and aborts its playback."
-            },
-            {
-              "kind": "method",
-              "name": "finish",
-              "description": "Sets the playback time to the end of the animation corresponding to the current playback direction."
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the animation is canceled.",
-              "name": "p-cancel",
-              "reactName": "onPCancel",
-              "eventName": "PCancelEvent"
-            },
-            {
-              "description": "Emitted when the animation finishes.",
-              "name": "p-finish",
-              "reactName": "onPFinish",
-              "eventName": "PFinishEvent"
-            },
-            {
-              "description": "Emitted when the animation starts or restarts.",
-              "name": "p-start",
-              "reactName": "onPStart",
-              "eventName": "PStartEvent"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "'none'",
-              "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
-              "fieldName": "name"
-            },
-            {
-              "name": "play",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
-              "fieldName": "play"
-            },
-            {
-              "name": "delay",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The number of milliseconds to delay the start of the animation.",
-              "fieldName": "delay"
-            },
-            {
-              "name": "direction",
-              "type": {
-                "text": "PlaybackDirection"
-              },
-              "default": "'normal'",
-              "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
-              "fieldName": "direction"
-            },
-            {
-              "name": "duration",
-              "type": {
-                "text": "number"
-              },
-              "default": "1000",
-              "description": "The number of milliseconds each iteration of the animation takes to complete.",
-              "fieldName": "duration"
-            },
-            {
-              "name": "easing",
-              "type": {
-                "text": "string"
-              },
-              "default": "'linear'",
-              "description": "The easing function to use for the animation. This can be a Shoelace easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
-              "fieldName": "easing"
-            },
-            {
-              "name": "end-delay",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The number of milliseconds to delay after the active period of an animation sequence.",
-              "fieldName": "endDelay"
-            },
-            {
-              "name": "fill",
-              "type": {
-                "text": "FillMode"
-              },
-              "default": "'auto'",
-              "description": "Sets how the animation applies styles to its target before and after its execution.",
-              "fieldName": "fill"
-            },
-            {
-              "name": "iterations",
-              "default": "Infinity",
-              "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops.",
-              "resolveInitializer": {
-                "module": "src/components/animation/animation.component.ts"
-              },
-              "fieldName": "iterations"
-            },
-            {
-              "name": "iteration-start",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
-              "fieldName": "iterationStart"
-            },
-            {
-              "name": "playback-rate",
-              "type": {
-                "text": "number"
-              },
-              "default": "1",
-              "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
-              "fieldName": "playbackRate"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).",
-          "tagNameWithoutPrefix": "animation",
-          "tagName": "p-animation",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n * @documentation https://pureui.xyz/components/animation\n * @status stable\n * @since 2.0\n *\n * @event p-cancel - Emitted when the animation is canceled.\n * @event p-finish - Emitted when the animation finishes.\n * @event p-start - Emitted when the animation starts or restarts.\n *\n * @slot - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To\n *  animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.\n */",
-          "documentation": "https://pureui.xyz/components/animation",
-          "status": "stable",
-          "since": "2.0"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PAnimation",
-            "module": "components/animation/animation.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/button/button.js",
       "declarations": [
         {
@@ -2048,6 +1691,363 @@
     },
     {
       "kind": "javascript-module",
+      "path": "components/animation/animation.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PAnimation",
+          "slots": [
+            {
+              "description": "The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "animation",
+              "type": {
+                "text": "Animation | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "hasStarted",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "defaultPot",
+              "type": {
+                "text": "Promise<HTMLSlotElement>"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "'none'",
+              "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
+              "attribute": "name"
+            },
+            {
+              "kind": "field",
+              "name": "play",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
+              "attribute": "play",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "delay",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The number of milliseconds to delay the start of the animation.",
+              "attribute": "delay"
+            },
+            {
+              "kind": "field",
+              "name": "direction",
+              "type": {
+                "text": "PlaybackDirection"
+              },
+              "default": "'normal'",
+              "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
+              "attribute": "direction"
+            },
+            {
+              "kind": "field",
+              "name": "duration",
+              "type": {
+                "text": "number"
+              },
+              "default": "1000",
+              "description": "The number of milliseconds each iteration of the animation takes to complete.",
+              "attribute": "duration"
+            },
+            {
+              "kind": "field",
+              "name": "easing",
+              "type": {
+                "text": "string"
+              },
+              "default": "'linear'",
+              "description": "The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
+              "attribute": "easing"
+            },
+            {
+              "kind": "field",
+              "name": "endDelay",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The number of milliseconds to delay after the active period of an animation sequence.",
+              "attribute": "end-delay"
+            },
+            {
+              "kind": "field",
+              "name": "fill",
+              "type": {
+                "text": "FillMode"
+              },
+              "default": "'auto'",
+              "description": "Sets how the animation applies styles to its target before and after its execution.",
+              "attribute": "fill"
+            },
+            {
+              "kind": "field",
+              "name": "iterations",
+              "default": "Infinity",
+              "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops.",
+              "attribute": "iterations"
+            },
+            {
+              "kind": "field",
+              "name": "iterationStart",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
+              "attribute": "iteration-start"
+            },
+            {
+              "kind": "field",
+              "name": "keyframes",
+              "type": {
+                "text": "Keyframe[] | undefined"
+              },
+              "description": "The keyframes to use for the animation. If this is set, `name` will be ignored."
+            },
+            {
+              "kind": "field",
+              "name": "playbackRate",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
+              "attribute": "playback-rate"
+            },
+            {
+              "kind": "field",
+              "name": "currentTime",
+              "type": {
+                "text": "CSSNumberish"
+              },
+              "description": "Gets and sets the current animation time."
+            },
+            {
+              "kind": "field",
+              "name": "handleAnimationFinish",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "handleAnimationCancel",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handlePotChange",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "createAnimation",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "destroyAnimation",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleAnimationChange"
+            },
+            {
+              "kind": "method",
+              "name": "handlePlayChange"
+            },
+            {
+              "kind": "method",
+              "name": "handlePlaybackRateChange"
+            },
+            {
+              "kind": "method",
+              "name": "cancel",
+              "description": "Clears all keyframe effects caused by this animation and aborts its playback."
+            },
+            {
+              "kind": "method",
+              "name": "finish",
+              "description": "Sets the playback time to the end of the animation corresponding to the current playback direction."
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the animation is canceled.",
+              "name": "p-cancel",
+              "reactName": "onPCancel",
+              "eventName": "PCancelEvent"
+            },
+            {
+              "description": "Emitted when the animation finishes.",
+              "name": "p-finish",
+              "reactName": "onPFinish",
+              "eventName": "PFinishEvent"
+            },
+            {
+              "description": "Emitted when the animation starts or restarts.",
+              "name": "p-start",
+              "reactName": "onPStart",
+              "eventName": "PStartEvent"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "'none'",
+              "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
+              "fieldName": "name"
+            },
+            {
+              "name": "play",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
+              "fieldName": "play"
+            },
+            {
+              "name": "delay",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The number of milliseconds to delay the start of the animation.",
+              "fieldName": "delay"
+            },
+            {
+              "name": "direction",
+              "type": {
+                "text": "PlaybackDirection"
+              },
+              "default": "'normal'",
+              "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
+              "fieldName": "direction"
+            },
+            {
+              "name": "duration",
+              "type": {
+                "text": "number"
+              },
+              "default": "1000",
+              "description": "The number of milliseconds each iteration of the animation takes to complete.",
+              "fieldName": "duration"
+            },
+            {
+              "name": "easing",
+              "type": {
+                "text": "string"
+              },
+              "default": "'linear'",
+              "description": "The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
+              "fieldName": "easing"
+            },
+            {
+              "name": "end-delay",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The number of milliseconds to delay after the active period of an animation sequence.",
+              "fieldName": "endDelay"
+            },
+            {
+              "name": "fill",
+              "type": {
+                "text": "FillMode"
+              },
+              "default": "'auto'",
+              "description": "Sets how the animation applies styles to its target before and after its execution.",
+              "fieldName": "fill"
+            },
+            {
+              "name": "iterations",
+              "default": "Infinity",
+              "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops.",
+              "resolveInitializer": {
+                "module": "src/components/animation/animation.component.ts"
+              },
+              "fieldName": "iterations"
+            },
+            {
+              "name": "iteration-start",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
+              "fieldName": "iterationStart"
+            },
+            {
+              "name": "playback-rate",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
+              "fieldName": "playbackRate"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).",
+          "tagNameWithoutPrefix": "animation",
+          "tagName": "p-animation",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n * @documentation https://pureui.xyz/components/animation\n * @status stable\n * @since 2.0\n *\n * @event p-cancel - Emitted when the animation is canceled.\n * @event p-finish - Emitted when the animation finishes.\n * @event p-start - Emitted when the animation starts or restarts.\n *\n * @slot - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To\n *  animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.\n */",
+          "documentation": "https://pureui.xyz/components/animation",
+          "status": "stable",
+          "since": "2.0"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PAnimation",
+            "module": "components/animation/animation.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "components/button-group/button-group.js",
       "declarations": [
         {
@@ -2421,11 +2421,11 @@
             "name": "PureElement",
             "module": "/src/internal/pure-ui-element.js"
           },
-          "summary": "A calendar prototype for Shoelace.",
+          "summary": "A calendar prototype for Pure UI.",
           "tagNameWithoutPrefix": "calendar",
           "tagName": "p-calendar",
           "customElement": true,
-          "jsDoc": "/**\n * @summary A calendar prototype for Shoelace.\n * @documentation https://pureui.xyz/components/calendar\n *\n * @since 2.0\n * @status experimental\n *\n * @dependency p-example\n *\n * @event p-change - Emitted when the date changes.\n *\n * @slot footer - Optional content to place in the calendar's footer.\n *\n * @csspart day - Targets day cells.\n * @csspart day-label - Targets the day labels (the name of the days in the grid).\n * @csspart day-weekend - Targets days that fall on weekends.\n * @csspart day-weekday - Targets weekdays.\n * @csspart day-current-month - Targets days in the current month.\n * @csspart day-previous-month - Targets days in the previous month.\n * @csspart day-next-month - Targets days in the next month.\n * @csspart day-today - Targets today.\n * @csspart day-selected - Targets selected days.\n * @csspart day-selection-start - Targets days that begin a selection.\n * @csspart day-selection-end - Targets days that end a selection.\n *\n * @cssproperty --border-color - The calendar's border color.\n * @cssproperty --border-width - The calendar's border width.\n * @cssproperty --border-radius - The border radius of the calendar.\n */",
+          "jsDoc": "/**\n * @summary A calendar prototype for Pure UI.\n * @documentation https://pureui.xyz/components/calendar\n *\n * @since 2.0\n * @status experimental\n *\n * @dependency p-example\n *\n * @event p-change - Emitted when the date changes.\n *\n * @slot footer - Optional content to place in the calendar's footer.\n *\n * @csspart day - Targets day cells.\n * @csspart day-label - Targets the day labels (the name of the days in the grid).\n * @csspart day-weekend - Targets days that fall on weekends.\n * @csspart day-weekday - Targets weekdays.\n * @csspart day-current-month - Targets days in the current month.\n * @csspart day-previous-month - Targets days in the previous month.\n * @csspart day-next-month - Targets days in the next month.\n * @csspart day-today - Targets today.\n * @csspart day-selected - Targets selected days.\n * @csspart day-selection-start - Targets days that begin a selection.\n * @csspart day-selection-end - Targets days that end a selection.\n *\n * @cssproperty --border-color - The calendar's border color.\n * @cssproperty --border-width - The calendar's border width.\n * @cssproperty --border-radius - The border radius of the calendar.\n */",
           "documentation": "https://pureui.xyz/components/calendar",
           "since": "2.0",
           "status": "experimental",
@@ -5379,7 +5379,7 @@
               "name": "modal",
               "privacy": "public",
               "default": "new Modal(this)",
-              "description": "Exposes the internal modal utility that controls focus trapping. To temporarily disable focus trapping and allow third-party modals spawned from an active Shoelace modal, call `modal.activateExternal()` when the third-party modal opens. Upon closing, call `modal.deactivateExternal()` to restore Shoelace's focus trapping."
+              "description": "Exposes the internal modal utility that controls focus trapping. To temporarily disable focus trapping and allow third-party modals spawned from an active Pure UI modal, call `modal.activateExternal()` when the third-party modal opens. Upon closing, call `modal.deactivateExternal()` to restore pure ui 's focus trapping."
             },
             {
               "kind": "field",
@@ -5564,7 +5564,7 @@
           "tagNameWithoutPrefix": "dialog",
           "tagName": "p-dialog",
           "customElement": true,
-          "jsDoc": "/**\n * @summary Dialogs, sometimes called \"modals\", appear above the page and require the user's immediate attention.\n * @documentation https://pureui.xyz/components/dialog\n * @status stable\n * @since 2.0\n *\n * @dependency p-icon-button\n *\n * @slot - The dialog's main content.\n * @slot label - The dialog's label. Alternatively, you can use the `label` attribute.\n * @slot header-actions - Optional actions to add to the header. Works best with `<p-icon-button>`.\n * @slot footer - The dialog's footer, usually one or more buttons representing various options.\n *\n * @event p-show - Emitted when the dialog opens.\n * @event p-after-show - Emitted after the dialog opens and all animations are complete.\n * @event p-hide - Emitted when the dialog closes.\n * @event p-after-hide - Emitted after the dialog closes and all animations are complete.\n * @event p-initial-focus - Emitted when the dialog opens and is ready to receive focus. Calling\n *   `event.preventDefault()` will prevent focusing and allow you to set it on a different element, such as an input.\n * @event {{ source: 'close-button' | 'keyboard' | 'overlay' }} p-request-close - Emitted when the user attempts to\n *   close the dialog by clicking the close button, clicking the overlay, or pressing escape. Calling\n *   `event.preventDefault()` will keep the dialog open. Avoid using this unless closing the dialog will result in\n *   destructive behavior such as data loss.\n *\n * @csspart base - The component's base wrapper.\n * @csspart overlay - The overlay that covers the screen behind the dialog.\n * @csspart panel - The dialog's panel (where the dialog and its content are rendered).\n * @csspart header - The dialog's header. This element wraps the title and header actions.\n * @csspart header-actions - Optional actions to add to the header. Works best with `<p-icon-button>`.\n * @csspart title - The dialog's title.\n * @csspart close-button - The close button, an `<p-icon-button>`.\n * @csspart close-button__base - The close button's exported `base` part.\n * @csspart body - The dialog's body.\n * @csspart footer - The dialog's footer.\n *\n * @cssproperty --width - The preferred width of the dialog. Note that the dialog will shrink to accommodate smaller screens.\n * @cssproperty --header-spacing - The amount of padding to use for the header.\n * @cssproperty --body-spacing - The amount of padding to use for the body.\n * @cssproperty --footer-spacing - The amount of padding to use for the footer.\n *\n * @animation dialog.show - The animation to use when showing the dialog.\n * @animation dialog.hide - The animation to use when hiding the dialog.\n * @animation dialog.denyClose - The animation to use when a request to close the dialog is denied.\n * @animation dialog.overlay.show - The animation to use when showing the dialog's overlay.\n * @animation dialog.overlay.hide - The animation to use when hiding the dialog's overlay.\n *\n * @property modal - Exposes the internal modal utility that controls focus trapping. To temporarily disable focus\n *   trapping and allow third-party modals spawned from an active Shoelace modal, call `modal.activateExternal()` when\n *   the third-party modal opens. Upon closing, call `modal.deactivateExternal()` to restore Shoelace's focus trapping.\n */",
+          "jsDoc": "/**\n * @summary Dialogs, sometimes called \"modals\", appear above the page and require the user's immediate attention.\n * @documentation https://pureui.xyz/components/dialog\n * @status stable\n * @since 2.0\n *\n * @dependency p-icon-button\n *\n * @slot - The dialog's main content.\n * @slot label - The dialog's label. Alternatively, you can use the `label` attribute.\n * @slot header-actions - Optional actions to add to the header. Works best with `<p-icon-button>`.\n * @slot footer - The dialog's footer, usually one or more buttons representing various options.\n *\n * @event p-show - Emitted when the dialog opens.\n * @event p-after-show - Emitted after the dialog opens and all animations are complete.\n * @event p-hide - Emitted when the dialog closes.\n * @event p-after-hide - Emitted after the dialog closes and all animations are complete.\n * @event p-initial-focus - Emitted when the dialog opens and is ready to receive focus. Calling\n *   `event.preventDefault()` will prevent focusing and allow you to set it on a different element, such as an input.\n * @event {{ source: 'close-button' | 'keyboard' | 'overlay' }} p-request-close - Emitted when the user attempts to\n *   close the dialog by clicking the close button, clicking the overlay, or pressing escape. Calling\n *   `event.preventDefault()` will keep the dialog open. Avoid using this unless closing the dialog will result in\n *   destructive behavior such as data loss.\n *\n * @csspart base - The component's base wrapper.\n * @csspart overlay - The overlay that covers the screen behind the dialog.\n * @csspart panel - The dialog's panel (where the dialog and its content are rendered).\n * @csspart header - The dialog's header. This element wraps the title and header actions.\n * @csspart header-actions - Optional actions to add to the header. Works best with `<p-icon-button>`.\n * @csspart title - The dialog's title.\n * @csspart close-button - The close button, an `<p-icon-button>`.\n * @csspart close-button__base - The close button's exported `base` part.\n * @csspart body - The dialog's body.\n * @csspart footer - The dialog's footer.\n *\n * @cssproperty --width - The preferred width of the dialog. Note that the dialog will shrink to accommodate smaller screens.\n * @cssproperty --header-spacing - The amount of padding to use for the header.\n * @cssproperty --body-spacing - The amount of padding to use for the body.\n * @cssproperty --footer-spacing - The amount of padding to use for the footer.\n *\n * @animation dialog.show - The animation to use when showing the dialog.\n * @animation dialog.hide - The animation to use when hiding the dialog.\n * @animation dialog.denyClose - The animation to use when a request to close the dialog is denied.\n * @animation dialog.overlay.show - The animation to use when showing the dialog's overlay.\n * @animation dialog.overlay.hide - The animation to use when hiding the dialog's overlay.\n *\n * @property modal - Exposes the internal modal utility that controls focus trapping. To temporarily disable focus\n *   trapping and allow third-party modals spawned from an active Pure UI modal, call `modal.activateExternal()` when\n *   the third-party modal opens. Upon closing, call `modal.deactivateExternal()` to restore pure ui 's focus trapping.\n */",
           "documentation": "https://pureui.xyz/components/dialog",
           "status": "stable",
           "since": "2.0",
@@ -5804,7 +5804,7 @@
               "name": "modal",
               "privacy": "public",
               "default": "new Modal(this)",
-              "description": "Exposes the internal modal utility that controls focus trapping. To temporarily disable focus trapping and allow third-party modals spawned from an active Shoelace modal, call `modal.activateExternal()` when the third-party modal opens. Upon closing, call `modal.deactivateExternal()` to restore Shoelace's focus trapping."
+              "description": "Exposes the internal modal utility that controls focus trapping. To temporarily disable focus trapping and allow third-party modals spawned from an active Shoelace modal, call `modal.activateExternal()` when the third-party modal opens. Upon closing, call `modal.deactivateExternal()` to restore pure ui 's focus trapping."
             },
             {
               "kind": "field",
@@ -6033,7 +6033,7 @@
           "tagNameWithoutPrefix": "drawer",
           "tagName": "p-drawer",
           "customElement": true,
-          "jsDoc": "/**\n * @summary Drawers slide in from a container to expose additional options and information.\n * @documentation https://pureui.xyz/components/drawer\n * @status stable\n * @since 2.0\n *\n * @dependency p-icon-button\n *\n * @slot - The drawer's main content.\n * @slot label - The drawer's label. Alternatively, you can use the `label` attribute.\n * @slot header-actions - Optional actions to add to the header. Works best with `<p-icon-button>`.\n * @slot footer - The drawer's footer, usually one or more buttons representing various options.\n *\n * @event p-show - Emitted when the drawer opens.\n * @event p-after-show - Emitted after the drawer opens and all animations are complete.\n * @event p-hide - Emitted when the drawer closes.\n * @event p-after-hide - Emitted after the drawer closes and all animations are complete.\n * @event p-initial-focus - Emitted when the drawer opens and is ready to receive focus. Calling\n *   `event.preventDefault()` will prevent focusing and allow you to set it on a different element, such as an input.\n * @event {{ source: 'close-button' | 'keyboard' | 'overlay' }} p-request-close - Emitted when the user attempts to\n *   close the drawer by clicking the close button, clicking the overlay, or pressing escape. Calling\n *   `event.preventDefault()` will keep the drawer open. Avoid using this unless closing the drawer will result in\n *   destructive behavior such as data loss.\n *\n * @csspart base - The component's base wrapper.\n * @csspart overlay - The overlay that covers the screen behind the drawer.\n * @csspart panel - The drawer's panel (where the drawer and its content are rendered).\n * @csspart header - The drawer's header. This element wraps the title and header actions.\n * @csspart header-actions - Optional actions to add to the header. Works best with `<p-icon-button>`.\n * @csspart title - The drawer's title.\n * @csspart close-button - The close button, an `<p-icon-button>`.\n * @csspart close-button__base - The close button's exported `base` part.\n * @csspart body - The drawer's body.\n * @csspart footer - The drawer's footer.\n *\n * @cssproperty --size - The preferred size of the drawer. This will be applied to the drawer's width or height\n *   depending on its `placement`. Note that the drawer will shrink to accommodate smaller screens.\n * @cssproperty --header-spacing - The amount of padding to use for the header.\n * @cssproperty --body-spacing - The amount of padding to use for the body.\n * @cssproperty --footer-spacing - The amount of padding to use for the footer.\n *\n * @animation drawer.showTop - The animation to use when showing a drawer with `top` placement.\n * @animation drawer.showEnd - The animation to use when showing a drawer with `end` placement.\n * @animation drawer.showBottom - The animation to use when showing a drawer with `bottom` placement.\n * @animation drawer.showStart - The animation to use when showing a drawer with `start` placement.\n * @animation drawer.hideTop - The animation to use when hiding a drawer with `top` placement.\n * @animation drawer.hideEnd - The animation to use when hiding a drawer with `end` placement.\n * @animation drawer.hideBottom - The animation to use when hiding a drawer with `bottom` placement.\n * @animation drawer.hideStart - The animation to use when hiding a drawer with `start` placement.\n * @animation drawer.denyClose - The animation to use when a request to close the drawer is denied.\n * @animation drawer.overlay.show - The animation to use when showing the drawer's overlay.\n * @animation drawer.overlay.hide - The animation to use when hiding the drawer's overlay.\n *\n * @property modal - Exposes the internal modal utility that controls focus trapping. To temporarily disable focus\n *   trapping and allow third-party modals spawned from an active Shoelace modal, call `modal.activateExternal()` when\n *   the third-party modal opens. Upon closing, call `modal.deactivateExternal()` to restore Shoelace's focus trapping.\n */",
+          "jsDoc": "/**\n * @summary Drawers slide in from a container to expose additional options and information.\n * @documentation https://pureui.xyz/components/drawer\n * @status stable\n * @since 2.0\n *\n * @dependency p-icon-button\n *\n * @slot - The drawer's main content.\n * @slot label - The drawer's label. Alternatively, you can use the `label` attribute.\n * @slot header-actions - Optional actions to add to the header. Works best with `<p-icon-button>`.\n * @slot footer - The drawer's footer, usually one or more buttons representing various options.\n *\n * @event p-show - Emitted when the drawer opens.\n * @event p-after-show - Emitted after the drawer opens and all animations are complete.\n * @event p-hide - Emitted when the drawer closes.\n * @event p-after-hide - Emitted after the drawer closes and all animations are complete.\n * @event p-initial-focus - Emitted when the drawer opens and is ready to receive focus. Calling\n *   `event.preventDefault()` will prevent focusing and allow you to set it on a different element, such as an input.\n * @event {{ source: 'close-button' | 'keyboard' | 'overlay' }} p-request-close - Emitted when the user attempts to\n *   close the drawer by clicking the close button, clicking the overlay, or pressing escape. Calling\n *   `event.preventDefault()` will keep the drawer open. Avoid using this unless closing the drawer will result in\n *   destructive behavior such as data loss.\n *\n * @csspart base - The component's base wrapper.\n * @csspart overlay - The overlay that covers the screen behind the drawer.\n * @csspart panel - The drawer's panel (where the drawer and its content are rendered).\n * @csspart header - The drawer's header. This element wraps the title and header actions.\n * @csspart header-actions - Optional actions to add to the header. Works best with `<p-icon-button>`.\n * @csspart title - The drawer's title.\n * @csspart close-button - The close button, an `<p-icon-button>`.\n * @csspart close-button__base - The close button's exported `base` part.\n * @csspart body - The drawer's body.\n * @csspart footer - The drawer's footer.\n *\n * @cssproperty --size - The preferred size of the drawer. This will be applied to the drawer's width or height\n *   depending on its `placement`. Note that the drawer will shrink to accommodate smaller screens.\n * @cssproperty --header-spacing - The amount of padding to use for the header.\n * @cssproperty --body-spacing - The amount of padding to use for the body.\n * @cssproperty --footer-spacing - The amount of padding to use for the footer.\n *\n * @animation drawer.showTop - The animation to use when showing a drawer with `top` placement.\n * @animation drawer.showEnd - The animation to use when showing a drawer with `end` placement.\n * @animation drawer.showBottom - The animation to use when showing a drawer with `bottom` placement.\n * @animation drawer.showStart - The animation to use when showing a drawer with `start` placement.\n * @animation drawer.hideTop - The animation to use when hiding a drawer with `top` placement.\n * @animation drawer.hideEnd - The animation to use when hiding a drawer with `end` placement.\n * @animation drawer.hideBottom - The animation to use when hiding a drawer with `bottom` placement.\n * @animation drawer.hideStart - The animation to use when hiding a drawer with `start` placement.\n * @animation drawer.denyClose - The animation to use when a request to close the drawer is denied.\n * @animation drawer.overlay.show - The animation to use when showing the drawer's overlay.\n * @animation drawer.overlay.hide - The animation to use when hiding the drawer's overlay.\n *\n * @property modal - Exposes the internal modal utility that controls focus trapping. To temporarily disable focus\n *   trapping and allow third-party modals spawned from an active Shoelace modal, call `modal.activateExternal()` when\n *   the third-party modal opens. Upon closing, call `modal.deactivateExternal()` to restore pure ui 's focus trapping.\n */",
           "documentation": "https://pureui.xyz/components/drawer",
           "status": "stable",
           "since": "2.0",
@@ -17615,7 +17615,7 @@
     }
   ],
   "package": {
-    "name": "@pure-ui/core",
+    "name": "pure-uikit",
     "description": "A forward-thinking library of web components.",
     "version": "1.0.0",
     "author": "Mr.P",

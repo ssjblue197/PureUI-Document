@@ -1,5 +1,5 @@
-import PureElement from '../../internal/pure-ui-element.js';
 import PIcon from '../icon/icon.component.js';
+import PureElement from '../../internal/pure-ui-element.js';
 import type { CSSResultGroup } from 'lit';
 /**
  * @summary Avatars are used to represent a person or object.

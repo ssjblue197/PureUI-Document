@@ -5,7 +5,7 @@ export interface RenderDayOptions {
     content: string | TemplateResult;
 }
 /**
- * @summary A calendar prototype for Shoelace.
+ * @summary A calendar prototype for Pure UI.
  * @documentation https://pureui.xyz/components/calendar
  *
  * @since 2.0

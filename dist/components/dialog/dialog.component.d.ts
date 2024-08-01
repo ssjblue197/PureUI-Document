@@ -49,8 +49,8 @@ import type { CSSResultGroup } from 'lit';
  * @animation dialog.overlay.hide - The animation to use when hiding the dialog's overlay.
  *
  * @property modal - Exposes the internal modal utility that controls focus trapping. To temporarily disable focus
- *   trapping and allow third-party modals spawned from an active Shoelace modal, call `modal.activateExternal()` when
- *   the third-party modal opens. Upon closing, call `modal.deactivateExternal()` to restore Shoelace's focus trapping.
+ *   trapping and allow third-party modals spawned from an active Pure UI modal, call `modal.activateExternal()` when
+ *   the third-party modal opens. Upon closing, call `modal.deactivateExternal()` to restore pure ui 's focus trapping.
  */
 export default class PDialog extends PureElement {
     static styles: CSSResultGroup;

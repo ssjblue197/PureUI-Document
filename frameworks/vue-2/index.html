@@ -15,7 +15,7 @@
     <link rel="icon" href="/assets/images/logo.svg" type="image/x-icon" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:creator" content="shoelace_style" />
+    <meta name="twitter:creator" content="pure_ui" />
     <meta name="twitter:image" content="https://pureui.xyz/assets/images/og-image.png" />
 
     <meta property="og:url" content="https://pureui.xyz/frameworks/vue-2/" />
@@ -59,23 +59,13 @@
 
     <div id="icon-toolbar">
       <a
-        href="https://github.com/shoelace-style/shoelace"
+        href="https://github.com/ssjblue197/Pure-UI-Document"
         title="View Pure UI on GitHub"
         class="external-link"
         rel="noopener noreferrer"
         target="_blank"
       >
         <p-icon name="github"></p-icon>
-      </a>
-
-      <a
-        href="https://twitter.com/shoelace_style"
-        title="Follow Pure UI on Twitter"
-        class="external-link"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <p-icon name="twitter"></p-icon>
       </a>
 
       <p-dropdown id="theme-selector" placement="bottom-end" distance="3">
@@ -439,23 +429,23 @@
             Installation<a href="#installation" aria-label='Direct link to "Installation"'></a>
           </h2>
           <p>To add Pure UI to your Vue app, install the package from npm.</p>
-          <pre><code class="language-bash" id="code-block-20"><span class="token function">npm</span> <span class="token function">install</span> @shoelace-style/shoelace
-</code><p-copy-button class="copy-code-button" from="code-block-20"></p-copy-button></pre>
+          <pre><code class="language-bash" id="code-block-3"><span class="token function">npm</span> <span class="token function">install</span> pure-uikit
+</code><p-copy-button class="copy-code-button" from="code-block-3"></p-copy-button></pre>
           <p>
             Next, <a href="/getting-started/themes">include a theme</a> and set the
             <a href="/getting-started/installation#setting-the-base-path">base path</a> for icons and other assets. In
             this example, we’ll import the light theme and use the CDN as a base path.
           </p>
-          <pre><code class="language-jsx" id="code-block-21"><span class="token keyword">import</span> <span class="token string">'@shoelace-style/shoelace/dist/themes/light.css'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/utilities/base-path'</span><span class="token punctuation">;</span>
+          <pre><code class="language-jsx" id="code-block-4"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/themes/light.css'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/utilities/base-path'</span><span class="token punctuation">;</span>
 
-<span class="token function">setBasePath</span><span class="token punctuation">(</span><span class="token string">'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@1.0.0/cdn/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-21"></p-copy-button></pre>
+<span class="token function">setBasePath</span><span class="token punctuation">(</span><span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.0.0/cdn/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code><p-copy-button class="copy-code-button" from="code-block-4"></p-copy-button></pre>
           <div role="alert" class="callout callout--tip">
             <p>
               If you’d rather not use the CDN for assets, you can create a build task that copies
-              <code>node_modules/@shoelace-style/shoelace/dist/assets</code> into a public folder in your app. Then you
-              can point the base path to that folder instead.
+              <code>node_modules/pure-uikit/dist/assets</code> into a public folder in your app. Then you can point the
+              base path to that folder instead.
             </p>
           </div>
           <h2 id="configuration" class="anchor-heading">
@@ -465,7 +455,7 @@
             You’ll need to tell Vue to ignore Pure UI components. This is pretty easy because they all start with
             <code>p-</code>.
           </p>
-          <pre><code class="language-js" id="code-block-22"><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span><span class="token punctuation">;</span>
+          <pre><code class="language-js" id="code-block-5"><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./App.vue'</span><span class="token punctuation">;</span>
 
 Vue<span class="token punctuation">.</span>config<span class="token punctuation">.</span>ignoredElements <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">p-</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">]</span><span class="token punctuation">;</span>
@@ -475,7 +465,7 @@ Vue<span class="token punctuation">.</span>config<span class="token punctuation"
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 app<span class="token punctuation">.</span><span class="token function">$mount</span><span class="token punctuation">(</span><span class="token string">'#app'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-22"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-5"></p-copy-button></pre>
           <p>Now you can start using Pure UI components in your app!</p>
           <h2 id="usage" class="anchor-heading">Usage<a href="#usage" aria-label='Direct link to "Usage"'></a></h2>
           <h3 id="binding-complex-data" class="anchor-heading">
@@ -485,8 +475,8 @@ app<span class="token punctuation">.</span><span class="token function">$mount</
             When binding complex data such as objects and arrays, use the <code>.prop</code> modifier to make Vue bind
             them as a property instead of an attribute.
           </p>
-          <pre><code class="language-html" id="code-block-23"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-color-picker</span> <span class="token attr-name">:swatches.prop</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mySwatches<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-23"></p-copy-button></pre>
+          <pre><code class="language-html" id="code-block-6"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-color-picker</span> <span class="token attr-name">:swatches.prop</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mySwatches<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+</code><p-copy-button class="copy-code-button" from="code-block-6"></p-copy-button></pre>
           <h3 id="two-way-binding" class="anchor-heading">
             Two-way Binding<a href="#two-way-binding" aria-label='Direct link to "Two-way Binding"'></a>
           </h3>
@@ -500,11 +490,11 @@ app<span class="token punctuation">.</span><span class="token function">$mount</
               >no support for v-model on custom elements</a
             >, but you can still achieve two-way binding manually.
           </p>
-          <pre><code class="language-html" id="code-block-24"><span class="token comment">&lt;!-- This doesn't work --&gt;</span>
+          <pre><code class="language-html" id="code-block-7"><span class="token comment">&lt;!-- This doesn't work --&gt;</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-input</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-input</span><span class="token punctuation">&gt;</span></span>
 <span class="token comment">&lt;!-- This works, but it's a bit longer --&gt;</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-input</span> <span class="token attr-name">:value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span> <span class="token attr-name">@input</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name = $event.target.value<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-input</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-24"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-7"></p-copy-button></pre>
           <p>
             If that’s too verbose for your liking, you can use a custom directive instead.
             <a
@@ -517,10 +507,10 @@ app<span class="token punctuation">.</span><span class="token function">$mount</
             adds a custom directive that will work just like <code>v-model</code> but for Pure UI components. To install
             it, use this command.
           </p>
-          <pre><code class="language-bash" id="code-block-25"><span class="token function">npm</span> <span class="token function">install</span> @shoelace-style/vue-p-model@1
-</code><p-copy-button class="copy-code-button" from="code-block-25"></p-copy-button></pre>
+          <pre><code class="language-bash" id="code-block-8"><span class="token function">npm</span> <span class="token function">install</span> @shoelace-style/vue-p-model@1
+</code><p-copy-button class="copy-code-button" from="code-block-8"></p-copy-button></pre>
           <p>Next, import the directive and enable it like this.</p>
-          <pre><code class="language-js" id="code-block-26"><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span><span class="token punctuation">;</span>
+          <pre><code class="language-js" id="code-block-9"><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> Pure UIModelDirective <span class="token keyword">from</span> <span class="token string">'@shoelace-style/vue-p-model'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./App.vue'</span><span class="token punctuation">;</span>
 
@@ -532,15 +522,15 @@ Vue<span class="token punctuation">.</span>config<span class="token punctuation"
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 app<span class="token punctuation">.</span><span class="token function">$mount</span><span class="token punctuation">(</span><span class="token string">'#app'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-26"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-9"></p-copy-button></pre>
           <p>Now you can use the <code>v-p-model</code> directive to keep your data in sync!</p>
-          <pre><code class="language-html" id="code-block-27"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-input</span> <span class="token attr-name">v-p-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-input</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-27"></p-copy-button></pre>
+          <pre><code class="language-html" id="code-block-10"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-input</span> <span class="token attr-name">v-p-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-input</span><span class="token punctuation">&gt;</span></span>
+</code><p-copy-button class="copy-code-button" from="code-block-10"></p-copy-button></pre>
           <div role="alert" class="callout callout--tip">
             <p>
               Are you using Pure UI with Vue?
               <a
-                href="https://github.com/shoelace-style/shoelace/blob/next/docs/frameworks/vue-2.md"
+                href="https://github.com/ssjblue197/pure-ui/blob/next/docs/frameworks/vue-2.md"
                 class="external-link"
                 rel="noopener noreferrer"
                 target="_blank"

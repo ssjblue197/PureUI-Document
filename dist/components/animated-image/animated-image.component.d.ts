@@ -1,5 +1,5 @@
-import PureElement from '../../internal/pure-ui-element.js';
 import PIcon from '../icon/icon.component.js';
+import PureElement from '../../internal/pure-ui-element.js';
 import type { CSSResultGroup } from 'lit';
 /**
  * @summary A component for displaying animated GIFs and WEBPs that play and pause on interaction.

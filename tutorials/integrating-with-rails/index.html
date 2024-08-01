@@ -15,7 +15,7 @@
     <link rel="icon" href="/assets/images/logo.svg" type="image/x-icon" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:creator" content="shoelace_style" />
+    <meta name="twitter:creator" content="pure_ui" />
     <meta name="twitter:image" content="https://pureui.xyz/assets/images/og-image.png" />
 
     <meta property="og:url" content="https://pureui.xyz/tutorials/integrating-with-rails/" />
@@ -59,23 +59,13 @@
 
     <div id="icon-toolbar">
       <a
-        href="https://github.com/shoelace-style/shoelace"
+        href="https://github.com/ssjblue197/Pure-UI-Document"
         title="View Pure UI on GitHub"
         class="external-link"
         rel="noopener noreferrer"
         target="_blank"
       >
         <p-icon name="github"></p-icon>
-      </a>
-
-      <a
-        href="https://twitter.com/shoelace_style"
-        title="Follow Pure UI on Twitter"
-        class="external-link"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <p-icon name="twitter"></p-icon>
       </a>
 
       <p-dropdown id="theme-selector" placement="bottom-end" distance="3">
@@ -426,7 +416,7 @@
               This is a community-maintained document. Please <a href="/resources/community">ask the community</a> if
               you have questions about this integration. You can also
               <a
-                href="https://github.com/shoelace-style/shoelace/blob/next/docs/tutorials/integrating-with-rails.md"
+                href="https://github.com/ssjblue197/pure-ui/blob/next/docs/tutorials/integrating-with-rails.md"
                 class="external-link"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -448,8 +438,8 @@
             Instructions<a href="#instructions" aria-label='Direct link to "Instructions"'></a>
           </h2>
           <p>To get started using Pure UI with Rails, the following packages must be installed.</p>
-          <pre><code class="language-bash" id="code-block-144"><span class="token function">yarn</span> <span class="token function">add</span> @shoelace-style/shoelace copy-webpack-plugin
-</code><p-copy-button class="copy-code-button" from="code-block-144"></p-copy-button></pre>
+          <pre><code class="language-bash" id="code-block-121"><span class="token function">yarn</span> <span class="token function">add</span> pure-uikit copy-webpack-plugin
+</code><p-copy-button class="copy-code-button" from="code-block-121"></p-copy-button></pre>
           <h3 id="importing-the-default-theme" class="anchor-heading">
             Importing the Default Theme<a
               href="#importing-the-default-theme"
@@ -460,9 +450,9 @@
             The next step is to import Pure UI’s default theme (stylesheet) in
             <code>app/javascript/stylesheets/application.scss</code>.
           </p>
-          <pre><code class="language-css" id="code-block-145"><span class="token atrule"><span class="token rule">@import</span> <span class="token string">'@shoelace-style/shoelace/dist/themes/light'</span><span class="token punctuation">;</span></span>
-<span class="token atrule"><span class="token rule">@import</span> <span class="token string">'@shoelace-style/shoelace/dist/themes/dark'</span><span class="token punctuation">;</span></span> // Optional dark theme
-</code><p-copy-button class="copy-code-button" from="code-block-145"></p-copy-button></pre>
+          <pre><code class="language-css" id="code-block-122"><span class="token atrule"><span class="token rule">@import</span> <span class="token string">'pure-uikit/dist/themes/light'</span><span class="token punctuation">;</span></span>
+<span class="token atrule"><span class="token rule">@import</span> <span class="token string">'pure-uikit/dist/themes/dark'</span><span class="token punctuation">;</span></span> // Optional dark theme
+</code><p-copy-button class="copy-code-button" from="code-block-122"></p-copy-button></pre>
           <p>
             Fore more details about themes, please refer to
             <a href="/getting-started/themes#theme-basics">Theme Basics</a>.
@@ -477,8 +467,8 @@
             After importing the theme, you’ll need to import the JavaScript files for Pure UI. Add the following code to
             <code>app/javascript/packs/application.js</code>.
           </p>
-          <pre><code class="language-js" id="code-block-146"><span class="token keyword">import</span> <span class="token string">'../stylesheets/application.scss'</span>
-<span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath<span class="token punctuation">,</span> SlAlert<span class="token punctuation">,</span> SlAnimation<span class="token punctuation">,</span> SlButton<span class="token punctuation">,</span> <span class="token operator">...</span> <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace'</span>
+          <pre><code class="language-js" id="code-block-123"><span class="token keyword">import</span> <span class="token string">'../stylesheets/application.scss'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath<span class="token punctuation">,</span> SlAlert<span class="token punctuation">,</span> SlAnimation<span class="token punctuation">,</span> SlButton<span class="token punctuation">,</span> <span class="token operator">...</span> <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pure-uikit'</span>
 
 <span class="token comment">// ...</span>
 
@@ -487,7 +477,7 @@
 <span class="token comment">// Path to the assets folder (should be independent from the current script source path</span>
 <span class="token comment">// to work correctly in different environments)</span>
 <span class="token function">setBasePath</span><span class="token punctuation">(</span>rootUrl <span class="token operator">+</span> <span class="token string">'/packs/js/'</span><span class="token punctuation">)</span>
-</code><p-copy-button class="copy-code-button" from="code-block-146"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-123"></p-copy-button></pre>
           <h3 id="webpack-config" class="anchor-heading">
             webpack Config<a href="#webpack-config" aria-label='Direct link to "webpack Config"'></a>
           </h3>
@@ -495,19 +485,19 @@
             Next we need to add Pure UI’s assets to the final build output. To do this, modify
             <code>config/webpack/environment.js</code> to look like this.
           </p>
-          <pre><code class="language-js" id="code-block-147"><span class="token keyword">const</span> <span class="token punctuation">{</span> environment <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@rails/webpacker'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <pre><code class="language-js" id="code-block-124"><span class="token keyword">const</span> <span class="token punctuation">{</span> environment <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@rails/webpacker'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">// Pure UI config</span>
 <span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> CopyPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'copy-webpack-plugin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token comment">// Add shoelace assets to webpack's build process</span>
+<span class="token comment">// Add pure-ui assets to webpack's build process</span>
 environment<span class="token punctuation">.</span>plugins<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>
   <span class="token string">'CopyPlugin'</span><span class="token punctuation">,</span>
   <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     <span class="token literal-property property">patterns</span><span class="token operator">:</span> <span class="token punctuation">[</span>
       <span class="token punctuation">{</span>
-        <span class="token literal-property property">from</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'../../node_modules/@shoelace-style/shoelace/dist/assets'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">from</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'../../node_modules/pure-uikit/dist/assets'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
         <span class="token literal-property property">to</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'../../public/packs/js/assets'</span><span class="token punctuation">)</span>
       <span class="token punctuation">}</span>
     <span class="token punctuation">]</span>
@@ -515,7 +505,7 @@ environment<span class="token punctuation">.</span>plugins<span class="token pun
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 module<span class="token punctuation">.</span>exports <span class="token operator">=</span> environment<span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-147"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-124"></p-copy-button></pre>
           <h3 id="adding-pack-tags" class="anchor-heading">
             Adding Pack Tags<a href="#adding-pack-tags" aria-label='Direct link to "Adding Pack Tags"'></a>
           </h3>
@@ -524,7 +514,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
             <code>tags</code> in the <code>&lt;head&gt;</code> section of
             <code>app/views/layouts/application.html.erb</code>.
           </p>
-          <pre><code class="language-html" id="code-block-148"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">doctype</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+          <pre><code class="language-html" id="code-block-125"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">doctype</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
     <span class="token comment">&lt;!-- ... --&gt;</span>
@@ -536,7 +526,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
     &lt;%= yield %&gt;
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-148"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-125"></p-copy-button></pre>
           <p>Now you can start using Pure UI components with Rails!</p>
           <h2 id="additional-resources" class="anchor-heading">
             Additional Resources<a href="#additional-resources" aria-label='Direct link to "Additional Resources"'></a>
@@ -545,7 +535,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
             <li>
               There is a third-party
               <a
-                href="https://github.com/ParamagicDev/rails-shoelace-example"
+                href="https://github.com/ParamagicDev/rails-pure-ui-example"
                 class="external-link"
                 rel="noopener noreferrer"
                 target="_blank"

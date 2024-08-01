@@ -15,7 +15,7 @@
     <link rel="icon" href="/assets/images/logo.svg" type="image/x-icon" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:creator" content="shoelace_style" />
+    <meta name="twitter:creator" content="pure_ui" />
     <meta name="twitter:image" content="https://pureui.xyz/assets/images/og-image.png" />
 
     <meta property="og:url" content="https://pureui.xyz/tutorials/integrating-with-astro/" />
@@ -59,23 +59,13 @@
 
     <div id="icon-toolbar">
       <a
-        href="https://github.com/shoelace-style/shoelace"
+        href="https://github.com/ssjblue197/Pure-UI-Document"
         title="View Pure UI on GitHub"
         class="external-link"
         rel="noopener noreferrer"
         target="_blank"
       >
         <p-icon name="github"></p-icon>
-      </a>
-
-      <a
-        href="https://twitter.com/shoelace_style"
-        title="Follow Pure UI on Twitter"
-        class="external-link"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <p-icon name="twitter"></p-icon>
       </a>
 
       <p-dropdown id="theme-selector" placement="bottom-end" distance="3">
@@ -424,7 +414,7 @@
               This is a community-maintained document. Please <a href="/resources/community">ask the community</a> if
               you have questions about this integration. You can also
               <a
-                href="https://github.com/shoelace-style/shoelace/blob/next/docs/tutorials/integrating-with-astro.md"
+                href="https://github.com/ssjblue197/pure-ui/blob/next/docs/tutorials/integrating-with-astro.md"
                 class="external-link"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -467,15 +457,15 @@
             <li>Pure UI: 2.15.1</li>
           </ul>
           <p>To get started using Pure UI with Astro, the following packages must be installed.</p>
-          <pre><code class="language-bash" id="code-block-116"><span class="token function">npm</span> <span class="token function">install</span> @shoelace-style/shoelace rollup-plugin-copy
-</code><p-copy-button class="copy-code-button" from="code-block-116"></p-copy-button></pre>
+          <pre><code class="language-bash" id="code-block-96"><span class="token function">npm</span> <span class="token function">install</span> pure-uikit rollup-plugin-copy
+</code><p-copy-button class="copy-code-button" from="code-block-96"></p-copy-button></pre>
           <h3 id="importing-components" class="anchor-heading">
             Importing components<a href="#importing-components" aria-label='Direct link to "Importing components"'></a>
           </h3>
           <p>In <code>/src/pages/index.astro</code>, set the base path and import Pure UI.</p>
-          <pre><code class="language-html" id="code-block-117">---
+          <pre><code class="language-html" id="code-block-97">---
 // import default stylesheet
-import "@shoelace-style/shoelace/dist/themes/light.css";
+import "pure-uikit/dist/themes/light.css";
 ---
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
@@ -486,17 +476,17 @@ import "@shoelace-style/shoelace/dist/themes/light.css";
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
   <span class="token comment">// setBasePath to tell Pure UI where to load icons from.</span>
-  <span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/utilities/base-path.js'</span><span class="token punctuation">;</span>
-  <span class="token function">setBasePath</span><span class="token punctuation">(</span><span class="token string">'/shoelace-assets/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/utilities/base-path.js'</span><span class="token punctuation">;</span>
+  <span class="token function">setBasePath</span><span class="token punctuation">(</span><span class="token string">'/pure-ui-assets/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
   <span class="token comment">// Load all components.</span>
-  <span class="token keyword">import</span> <span class="token string">'@shoelace-style/shoelace'</span><span class="token punctuation">;</span>
+  <span class="token keyword">import</span> <span class="token string">'pure-uikit'</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-117"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-97"></p-copy-button></pre>
           <div role="alert" class="callout callout--tip">
             <p>
               If you want to cherry pick components, replace the main Pure UI import with ‘import
-              ”@shoelace-style/shoelace/dist/components/button/button.js”;’ for whichever component you would like.
+              “pure-uikit/dist/components/button/button.js”;’ for whichever component you would like.
             </p>
           </div>
           <p>
@@ -510,8 +500,8 @@ import "@shoelace-style/shoelace/dist/themes/light.css";
             ></a>
           </h3>
           <p>In <code>/src/pages/index.astro</code>, set custom animations after the Pure UI import.</p>
-          <pre><code class="language-html" id="code-block-118">---
-import { setBasePath } from "@shoelace-style/shoelace/dist/utilities/base-path.js";
+          <pre><code class="language-html" id="code-block-98">---
+import { setBasePath } from "pure-uikit/dist/utilities/base-path.js";
 setBasePath("dist/assets");
 ---
 
@@ -525,14 +515,14 @@ setBasePath("dist/assets");
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
   <span class="token comment">// setBasePath to tell Pure UI where to load icons from.</span>
-  <span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/utilities/base-path.js'</span><span class="token punctuation">;</span>
-  <span class="token function">setBasePath</span><span class="token punctuation">(</span><span class="token string">'/shoelace-assets/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/utilities/base-path.js'</span><span class="token punctuation">;</span>
+  <span class="token function">setBasePath</span><span class="token punctuation">(</span><span class="token string">'/pure-ui-assets/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
   <span class="token comment">// Load all components.</span>
-  <span class="token keyword">import</span> <span class="token string">'@shoelace-style/shoelace'</span><span class="token punctuation">;</span>
+  <span class="token keyword">import</span> <span class="token string">'pure-uikit'</span><span class="token punctuation">;</span>
 
   <span class="token keyword">const</span> duration <span class="token operator">=</span> <span class="token number">3000</span><span class="token punctuation">;</span>
-  <span class="token keyword">import</span> <span class="token punctuation">{</span> setDefaultAnimation <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/utilities/animation-registry.js'</span><span class="token punctuation">;</span>
+  <span class="token keyword">import</span> <span class="token punctuation">{</span> setDefaultAnimation <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/utilities/animation-registry.js'</span><span class="token punctuation">;</span>
 
   <span class="token function">setDefaultAnimation</span><span class="token punctuation">(</span><span class="token string">'tooltip.show'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
     <span class="token literal-property property">keyframes</span><span class="token operator">:</span> <span class="token punctuation">[</span>
@@ -542,7 +532,7 @@ setBasePath("dist/assets");
     <span class="token literal-property property">options</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">duration</span><span class="token operator">:</span> duration<span class="token punctuation">,</span> <span class="token literal-property property">easing</span><span class="token operator">:</span> <span class="token string">'ease'</span> <span class="token punctuation">}</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-118"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-98"></p-copy-button></pre>
           <h2 id="modifying-astro-config" class="anchor-heading">
             Modifying Astro Config<a
               href="#modifying-astro-config"
@@ -554,7 +544,7 @@ setBasePath("dist/assets");
             we can install <code>rollup-plugin-copy</code> to copy Pure UI’s assets into your public directory.
           </p>
           <p>Here’s what your Astro config should look like:</p>
-          <pre><code class="language-js" id="code-block-119"><span class="token comment">// astro.config.mjs</span>
+          <pre><code class="language-js" id="code-block-99"><span class="token comment">// astro.config.mjs</span>
 
 <span class="token keyword">import</span> <span class="token punctuation">{</span> defineConfig <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'astro/config'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> copy <span class="token keyword">from</span> <span class="token string">'rollup-plugin-copy'</span><span class="token punctuation">;</span>
@@ -567,14 +557,12 @@ setBasePath("dist/assets");
         <span class="token comment">// Copy only on first build. We dont want to trigger additional server reloads.</span>
         <span class="token literal-property property">copyOnce</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
         <span class="token literal-property property">hook</span><span class="token operator">:</span> <span class="token string">'buildStart'</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">targets</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-          <span class="token punctuation">{</span> <span class="token literal-property property">src</span><span class="token operator">:</span> <span class="token string">'node_modules/@shoelace-style/shoelace/dist/assets/*'</span><span class="token punctuation">,</span> <span class="token literal-property property">dest</span><span class="token operator">:</span> <span class="token string">'public/shoelace-assets/assets/'</span> <span class="token punctuation">}</span>
-        <span class="token punctuation">]</span>
+        <span class="token literal-property property">targets</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> <span class="token literal-property property">src</span><span class="token operator">:</span> <span class="token string">'node_modules/pure-uikit/dist/assets/*'</span><span class="token punctuation">,</span> <span class="token literal-property property">dest</span><span class="token operator">:</span> <span class="token string">'public/pure-ui-assets/assets/'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span>
       <span class="token punctuation">}</span><span class="token punctuation">)</span>
     <span class="token punctuation">]</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-119"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-99"></p-copy-button></pre>
         </div>
       </article>
     </main>

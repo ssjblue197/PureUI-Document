@@ -18,7 +18,7 @@
     <link rel="icon" href="/assets/images/logo.svg" type="image/x-icon" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:creator" content="shoelace_style" />
+    <meta name="twitter:creator" content="pure_ui" />
     <meta name="twitter:image" content="https://pureui.xyz/assets/images/og-image.png" />
 
     <meta property="og:url" content="https://pureui.xyz/components/tree/" />
@@ -65,23 +65,13 @@
 
     <div id="icon-toolbar">
       <a
-        href="https://github.com/shoelace-style/shoelace"
+        href="https://github.com/ssjblue197/Pure-UI-Document"
         title="View Pure UI on GitHub"
         class="external-link"
         rel="noopener noreferrer"
         target="_blank"
       >
         <p-icon name="github"></p-icon>
-      </a>
-
-      <a
-        href="https://twitter.com/shoelace_style"
-        title="Follow Pure UI on Twitter"
-        class="external-link"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <p-icon name="twitter"></p-icon>
       </a>
 
       <p-dropdown id="theme-selector" placement="bottom-end" distance="3">
@@ -487,7 +477,7 @@
 
             <div class="code-preview__source-group" id="code-preview-source-group-359">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-1065"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree</span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-1062"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree-item</span><span class="token punctuation">&gt;</span></span>
     Deciduous
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree-item</span><span class="token punctuation">&gt;</span></span>Birch<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tree-item</span><span class="token punctuation">&gt;</span></span>
@@ -514,12 +504,12 @@
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree-item</span><span class="token punctuation">&gt;</span></span>Fern<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tree-item</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tree-item</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tree</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-1065"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1062"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-1066"><span class="token keyword">import</span> PTree <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/tree'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PTreeItem <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/tree-item'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-1063"><span class="token keyword">import</span> PTree <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PTreeItem <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree-item'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PTree</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
@@ -550,7 +540,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTreeItem</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTree</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-1066"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1063"></p-copy-button></pre>
               </div>
             </div>
 
@@ -659,7 +649,7 @@
 
             <div class="code-preview__source-group" id="code-preview-source-group-360">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-1067"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-select</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>selection-mode<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>single<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Selection<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-1064"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-select</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>selection-mode<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>single<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Selection<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>single<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Single<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-option</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>multiple<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Multiple<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-option</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>leaf<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Leaf<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-option</span><span class="token punctuation">&gt;</span></span>
@@ -692,12 +682,12 @@
     tree<span class="token punctuation">.</span>selection <span class="token operator">=</span> selectionMode<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-1067"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1064"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-1068"><span class="token keyword">import</span> PTree <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/tree'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PTreeItem <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/tree-item'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-1065"><span class="token keyword">import</span> PTree <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PTreeItem <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree-item'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> <span class="token punctuation">[</span>selection<span class="token punctuation">,</span> setSelection<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">'single'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -730,7 +720,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-1068"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1065"></p-copy-button></pre>
               </div>
             </div>
 
@@ -833,7 +823,7 @@
 
             <div class="code-preview__source-group" id="code-preview-source-group-361">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-1069"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tree-with-lines<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-1066"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tree-with-lines<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree-item</span> <span class="token attr-name">expanded</span><span class="token punctuation">&gt;</span></span>
     Deciduous
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree-item</span><span class="token punctuation">&gt;</span></span>Birch<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tree-item</span><span class="token punctuation">&gt;</span></span>
@@ -866,12 +856,12 @@
     <span class="token property">--indent-guide-width</span><span class="token punctuation">:</span> 1px<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-1069"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1066"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-1070"><span class="token keyword">import</span> PTree <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/tree'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PTreeItem <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/tree-item'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-1067"><span class="token keyword">import</span> PTree <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PTreeItem <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree-item'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PTree</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tree-with-lines<span class="token punctuation">"</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token string-property property">'--indent-guide-width'</span><span class="token operator">:</span> <span class="token string">'1px'</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
@@ -902,7 +892,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTreeItem</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTree</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-1070"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1067"></p-copy-button></pre>
               </div>
             </div>
 
@@ -1000,7 +990,7 @@
 
             <div class="code-preview__source-group" id="code-preview-source-group-362">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-1071"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree</span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-1068"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree-item</span> <span class="token attr-name">lazy</span><span class="token punctuation">&gt;</span></span>Available Trees<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tree-item</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tree</span><span class="token punctuation">&gt;</span></span>
 
@@ -1023,12 +1013,12 @@
     <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-1071"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1068"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-1072"><span class="token keyword">import</span> PTree <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/tree'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PTreeItem <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/tree-item'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-1069"><span class="token keyword">import</span> PTree <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PTreeItem <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree-item'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> <span class="token punctuation">[</span>childItems<span class="token punctuation">,</span> setChildItems<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1055,7 +1045,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTree</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-1072"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1069"></p-copy-button></pre>
               </div>
             </div>
 
@@ -1165,7 +1155,7 @@
 
             <div class="code-preview__source-group" id="code-preview-source-group-363">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-1073"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>custom-icons<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-1070"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>custom-icons<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-icon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>plus-square<span class="token punctuation">"</span></span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>expand-icon<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-icon</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-icon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dash-square<span class="token punctuation">"</span></span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>collapse-icon<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-icon</span><span class="token punctuation">&gt;</span></span>
 
@@ -1202,12 +1192,12 @@
     <span class="token property">rotate</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-1073"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1070"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-1074"><span class="token keyword">import</span> PTree <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/tree'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PTreeItem <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/tree-item'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-1071"><span class="token keyword">import</span> PTree <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PTreeItem <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree-item'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PTree</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
@@ -1241,7 +1231,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTreeItem</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTree</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-1074"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1071"></p-copy-button></pre>
               </div>
             </div>
 
@@ -1347,7 +1337,7 @@
 
             <div class="code-preview__source-group" id="code-preview-source-group-364">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-1075"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tree-with-icons<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-1072"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tree-with-icons<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree-item</span> <span class="token attr-name">expanded</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-icon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>folder<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-icon</span><span class="token punctuation">&gt;</span></span>
     Documents
@@ -1387,13 +1377,13 @@
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tree-item</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tree-item</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tree</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-1075"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1072"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-1076"><span class="token keyword">import</span> PIcon <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/icon'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PTree <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/tree'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> PTreeItem <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/tree-item'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-1073"><span class="token keyword">import</span> PIcon <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/icon'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PTree <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PTreeItem <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree-item'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token punctuation">(</span>
@@ -1435,7 +1425,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTree</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-1076"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1073"></p-copy-button></pre>
               </div>
             </div>
 
@@ -1505,7 +1495,7 @@
               <p>
                 To import this component from
                 <a
-                  href="https://www.jsdelivr.com/package/npm/@shoelace-style/shoelace"
+                  href="https://www.jsdelivr.com/package/npm/pure-uikit"
                   class="external-link"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -1513,14 +1503,14 @@
                 >
                 using a script tag:
               </p>
-              <pre><code class="language-html" id="code-block-1077"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@1.0.0/cdn/components/tree/tree.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-1077"></p-copy-button></pre>
+              <pre><code class="language-html" id="code-block-1074"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.0.0/cdn/components/tree/tree.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-1074"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="import">
               <p>
                 To import this component from
                 <a
-                  href="https://www.jsdelivr.com/package/npm/@shoelace-style/shoelace"
+                  href="https://www.jsdelivr.com/package/npm/pure-uikit"
                   class="external-link"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -1528,17 +1518,17 @@
                 >
                 using a JavaScript import:
               </p>
-              <pre><code class="language-js" id="code-block-1078"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@1.0.0/cdn/components/tree/tree.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1078"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-1075"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.0.0/cdn/components/tree/tree.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1075"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="bundler">
               <p>To import this component using <a href="/getting-started/installation#bundling">a bundler</a>:</p>
-              <pre><code class="language-js" id="code-block-1079"><span class="token keyword">import</span> <span class="token string">'@shoelace-style/shoelace/dist/components/tree/tree.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1079"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-1076"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/tree/tree.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1076"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="react">
               <p>To import this component as a <a href="/frameworks/react">React component</a>:</p>
-              <pre><code class="language-js" id="code-block-1080"><span class="token keyword">import</span> PTree <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/tree'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1080"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-1077"><span class="token keyword">import</span> PTree <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1077"></p-copy-button></pre>
             </p-tab-panel>
           </p-tab-group>
 

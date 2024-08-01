@@ -15,7 +15,7 @@
     <link rel="icon" href="/assets/images/logo.svg" type="image/x-icon" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:creator" content="shoelace_style" />
+    <meta name="twitter:creator" content="pure_ui" />
     <meta name="twitter:image" content="https://pureui.xyz/assets/images/og-image.png" />
 
     <meta property="og:url" content="https://pureui.xyz/getting-started/form-controls/" />
@@ -59,23 +59,13 @@
 
     <div id="icon-toolbar">
       <a
-        href="https://github.com/shoelace-style/shoelace"
+        href="https://github.com/ssjblue197/Pure-UI-Document"
         title="View Pure UI on GitHub"
         class="external-link"
         rel="noopener noreferrer"
         target="_blank"
       >
         <p-icon name="github"></p-icon>
-      </a>
-
-      <a
-        href="https://twitter.com/shoelace_style"
-        title="Follow Pure UI on Twitter"
-        class="external-link"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <p-icon name="twitter"></p-icon>
       </a>
 
       <p-dropdown id="theme-selector" placement="bottom-end" distance="3">
@@ -496,23 +486,23 @@
             interface offers a standard way to serialize forms in the browser. You can create a
             <code>FormData</code> object from any <code>&lt;form&gt;</code> element like this.
           </p>
-          <pre><code class="language-js" id="code-block-42"><span class="token keyword">const</span> form <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'form'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <pre><code class="language-js" id="code-block-54"><span class="token keyword">const</span> form <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'form'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FormData</span><span class="token punctuation">(</span>form<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">// All form control data is available in a FormData object</span>
-</code><p-copy-button class="copy-code-button" from="code-block-42"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-54"></p-copy-button></pre>
           <p>
             However, some folks find <code>FormData</code> tricky to work with or they need to pass a JSON payload to
             their server. To accommodate this, Pure UI offers a serialization utility that gathers form data and returns
             a simple JavaScript object instead.
           </p>
-          <pre><code class="language-js" id="code-block-43"><span class="token keyword">import</span> <span class="token punctuation">{</span> serialize <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/utilities/form.js'</span><span class="token punctuation">;</span>
+          <pre><code class="language-js" id="code-block-55"><span class="token keyword">import</span> <span class="token punctuation">{</span> serialize <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/utilities/form.js'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> form <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'form'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token function">serialize</span><span class="token punctuation">(</span>form<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">// All form control data is available in a plain object</span>
-</code><p-copy-button class="copy-code-button" from="code-block-43"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-55"></p-copy-button></pre>
           <p>
             This results in an object with name/value pairs that map to each form control. If more than one form control
             shares the same name, the values will be passed as an array, e.g.
@@ -609,7 +599,7 @@
 
             <div class="code-preview__source-group" id="code-preview-source-group-3">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-44"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>input-validation-required<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-56"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>input-validation-required<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-input</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Name<span class="token punctuation">"</span></span> <span class="token attr-name">required</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-input</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-select</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Favorite Animal<span class="token punctuation">"</span></span> <span class="token attr-name">clearable</span> <span class="token attr-name">required</span><span class="token punctuation">&gt;</span></span>
@@ -644,16 +634,16 @@
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-44"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-56"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-45"><span class="token keyword">import</span> SlButton <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/button'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> SlCheckbox <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/checkbox'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> SlInput <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/input'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> SlMenuItem <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/menu-item'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> SlSelect <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/select'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> SlTextarea <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/textarea'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-57"><span class="token keyword">import</span> SlButton <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/button'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> SlCheckbox <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/checkbox'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> SlInput <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/input'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> SlMenuItem <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/menu-item'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> SlSelect <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/select'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> SlTextarea <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/textarea'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token keyword">function</span> <span class="token function">handleSubmit</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -683,7 +673,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-45"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-57"></p-copy-button></pre>
               </div>
             </div>
 
@@ -779,7 +769,7 @@
 
             <div class="code-preview__source-group" id="code-preview-source-group-4">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-46"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>input-validation-pattern<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-58"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>input-validation-pattern<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-input</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>letters<span class="token punctuation">"</span></span> <span class="token attr-name">required</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Letters<span class="token punctuation">"</span></span> <span class="token attr-name">pattern</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>[A-Za-z]+<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-input</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Submit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-button</span><span class="token punctuation">&gt;</span></span>
@@ -800,12 +790,12 @@
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-46"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-58"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-47"><span class="token keyword">import</span> SlButton <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/button'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> SlInput <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/input'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-59"><span class="token keyword">import</span> SlButton <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/button'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> SlInput <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/input'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token keyword">function</span> <span class="token function">handleSubmit</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -823,7 +813,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-47"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-59"></p-copy-button></pre>
               </div>
             </div>
 
@@ -913,7 +903,7 @@
 
             <div class="code-preview__source-group" id="code-preview-source-group-5">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-48"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>input-validation-type<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-60"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>input-validation-type<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>email<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Email<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>you@example.com<span class="token punctuation">"</span></span> <span class="token attr-name">required</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-input</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>url<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>URL<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://example.com/<span class="token punctuation">"</span></span> <span class="token attr-name">required</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-input</span><span class="token punctuation">&gt;</span></span>
@@ -936,12 +926,12 @@
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-48"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-60"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-49"><span class="token keyword">import</span> SlButton <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/button'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> SlInput <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/input'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-61"><span class="token keyword">import</span> SlButton <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/button'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> SlInput <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/input'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token keyword">function</span> <span class="token function">handleSubmit</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -961,7 +951,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-49"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-61"></p-copy-button></pre>
               </div>
             </div>
 
@@ -1028,7 +1018,7 @@
           <div class="code-preview">
             <div class="code-preview__preview">
               <form class="input-validation-custom">
-                <p-input label="Type “shoelace”" required=""></p-input>
+                <p-input label="Type “Pure UI”" required=""></p-input>
                 <br />
                 <p-button type="submit" variant="primary">Submit</p-button>
                 <p-button type="reset" variant="default">Reset</p-button>
@@ -1047,10 +1037,10 @@
                     });
 
                     input.addEventListener('p-input', () => {
-                      if (input.value === 'shoelace') {
+                      if (input.value === 'pure ui ') {
                         input.setCustomValidity('');
                       } else {
-                        input.setCustomValidity("Hey, you're supposed to type 'shoelace' before submitting this!");
+                        input.setCustomValidity("Hey, you're supposed to type 'pure ui ' before submitting this!");
                       }
                     });
                   }
@@ -1064,8 +1054,8 @@
 
             <div class="code-preview__source-group" id="code-preview-source-group-6">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-50"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>input-validation-custom<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-input</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Type “shoelace”<span class="token punctuation">"</span></span> <span class="token attr-name">required</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-input</span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-62"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>input-validation-custom<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-input</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Type “Pure UI”<span class="token punctuation">"</span></span> <span class="token attr-name">required</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-input</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Submit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-button</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>reset<span class="token punctuation">"</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>default<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Reset<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-button</span><span class="token punctuation">&gt;</span></span>
@@ -1086,21 +1076,21 @@
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     input<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'p-input'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>input<span class="token punctuation">.</span>value <span class="token operator">===</span> <span class="token string">'shoelace'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>input<span class="token punctuation">.</span>value <span class="token operator">===</span> <span class="token string">'pure ui '</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         input<span class="token punctuation">.</span><span class="token function">setCustomValidity</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
       <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-        input<span class="token punctuation">.</span><span class="token function">setCustomValidity</span><span class="token punctuation">(</span><span class="token string">"Hey, you're supposed to type 'shoelace' before submitting this!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        input<span class="token punctuation">.</span><span class="token function">setCustomValidity</span><span class="token punctuation">(</span><span class="token string">"Hey, you're supposed to type 'pure ui ' before submitting this!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
       <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-50"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-62"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-51"><span class="token keyword">import</span> <span class="token punctuation">{</span> useRef<span class="token punctuation">,</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> SlButton <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/button'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> SlInput <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/react/input'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-63"><span class="token keyword">import</span> <span class="token punctuation">{</span> useRef<span class="token punctuation">,</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> SlButton <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/button'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> SlInput <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/input'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> input <span class="token operator">=</span> <span class="token function">useRef</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1109,10 +1099,10 @@
   <span class="token keyword">function</span> <span class="token function">handleInput</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token function">setValue</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value <span class="token operator">===</span> <span class="token string">'shoelace'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value <span class="token operator">===</span> <span class="token string">'pure ui '</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       input<span class="token punctuation">.</span>current<span class="token punctuation">.</span><span class="token function">setCustomValidity</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-      input<span class="token punctuation">.</span>current<span class="token punctuation">.</span><span class="token function">setCustomValidity</span><span class="token punctuation">(</span><span class="token string">"Hey, you're supposed to type 'shoelace' before submitting this!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      input<span class="token punctuation">.</span>current<span class="token punctuation">.</span><span class="token function">setCustomValidity</span><span class="token punctuation">(</span><span class="token string">"Hey, you're supposed to type 'pure ui ' before submitting this!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
 
@@ -1123,7 +1113,7 @@
 
   <span class="token keyword">return</span> <span class="token punctuation">(</span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">onSubmit</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>handleSubmit<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
-      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">SlInput</span></span> <span class="token attr-name">ref</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>input<span class="token punctuation">}</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Type 'shoelace'<span class="token punctuation">"</span></span> <span class="token attr-name">required</span> <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>value<span class="token punctuation">}</span></span> <span class="token attr-name">onSlInput</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>handleInput<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">SlInput</span></span> <span class="token attr-name">ref</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>input<span class="token punctuation">}</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Type 'pure ui '<span class="token punctuation">"</span></span> <span class="token attr-name">required</span> <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>value<span class="token punctuation">}</span></span> <span class="token attr-name">onSlInput</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>handleInput<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
       </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
       </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">SlButton</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
         Submit
@@ -1131,7 +1121,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-51"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-63"></p-copy-button></pre>
               </div>
             </div>
 
@@ -1402,7 +1392,7 @@
 
             <div class="code-preview__source-group" id="code-preview-source-group-7">
               <div class="code-preview__source code-preview__source--html">
-                <pre><code class="language-html" id="code-block-52"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>validity-styles<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-64"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>validity-styles<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-input</span>
     <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span>
     <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Name<span class="token punctuation">"</span></span>
@@ -1499,7 +1489,7 @@
     <span class="token property">box-shadow</span><span class="token punctuation">:</span> 0 0 0 <span class="token function">var</span><span class="token punctuation">(</span>--p-focus-ring-width<span class="token punctuation">)</span> <span class="token function">var</span><span class="token punctuation">(</span>--p-color-success-300<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-52"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-64"></p-copy-button></pre>
               </div>
             </div>
 
@@ -1667,7 +1657,7 @@
 
             <div class="code-preview__source-group" id="code-preview-source-group-8">
               <div class="code-preview__source code-preview__source--html">
-                <pre><code class="language-html" id="code-block-53"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>inline-validation<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-65"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>inline-validation<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-input</span>
     <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span>
     <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Name<span class="token punctuation">"</span></span>
@@ -1766,7 +1756,7 @@
     <span class="token property">box-shadow</span><span class="token punctuation">:</span> 0 0 0 <span class="token function">var</span><span class="token punctuation">(</span>--p-focus-ring-width<span class="token punctuation">)</span> <span class="token function">var</span><span class="token punctuation">(</span>--p-color-success-300<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-53"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-65"></p-copy-button></pre>
               </div>
             </div>
 
@@ -1843,13 +1833,13 @@
               ><code>HTMLFormControlsCollection</code></a
             >, it returns an array of HTML and Pure UI form controls in the order they appear in the DOM.
           </p>
-          <pre><code class="language-js" id="code-block-54"><span class="token keyword">import</span> <span class="token punctuation">{</span> getFormControls <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@shoelace-style/shoelace/dist/utilities/form.js'</span><span class="token punctuation">;</span>
+          <pre><code class="language-js" id="code-block-66"><span class="token keyword">import</span> <span class="token punctuation">{</span> getFormControls <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/utilities/form.js'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> form <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#my-form'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> formControls <span class="token operator">=</span> <span class="token function">getFormControls</span><span class="token punctuation">(</span>form<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>formControls<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// e.g. [input, p-input, ...]</span>
-</code><p-copy-button class="copy-code-button" from="code-block-54"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-66"></p-copy-button></pre>
           <div role="alert" class="callout callout--tip">
             <p>
               You probably don’t need this function! If you’re gathering form data for submission, you probably want to
