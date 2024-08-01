@@ -1,7 +1,7 @@
 import type { DefineComponent } from "vue";
 
-import type { PAlert } from "../../components/alert/alert.component.js";
 import type { PAnimatedImage } from "../../components/animated-image/animated-image.component.js";
+import type { PAlert } from "../../components/alert/alert.component.js";
 import type { PAnimation } from "../../components/animation/animation.component.js";
 import type { PAvatar } from "../../components/avatar/avatar.component.js";
 import type { PBadge } from "../../components/badge/badge.component.js";
@@ -35,15 +35,15 @@ import type { PMenuLabel } from "../../components/menu-label/menu-label.componen
 import type { PMutationObserver } from "../../components/mutation-observer/mutation-observer.component.js";
 import type { POption } from "../../components/option/option.component.js";
 import type { PPopup } from "../../components/popup/popup.component.js";
-import type { PProgressRing } from "../../components/progress-ring/progress-ring.component.js";
 import type { PProgressBar } from "../../components/progress-bar/progress-bar.component.js";
+import type { PProgressRing } from "../../components/progress-ring/progress-ring.component.js";
 import type { PQrCode } from "../../components/qr-code/qr-code.component.js";
 import type { PRadio } from "../../components/radio/radio.component.js";
 import type { PRadioButton } from "../../components/radio-button/radio-button.component.js";
 import type { PRadioGroup } from "../../components/radio-group/radio-group.component.js";
-import type { PRange } from "../../components/range/range.component.js";
 import type { PRating } from "../../components/rating/rating.component.js";
 import type { PRelativeTime } from "../../components/relative-time/relative-time.component.js";
+import type { PRange } from "../../components/range/range.component.js";
 import type { PResizeObserver } from "../../components/resize-observer/resize-observer.component.js";
 import type { PSelect } from "../../components/select/select.component.js";
 import type { PSkeleton } from "../../components/skeleton/skeleton.component.js";
@@ -52,13 +52,32 @@ import type { PSplitPanel } from "../../components/split-panel/split-panel.compo
 import type { PSwitch } from "../../components/switch/switch.component.js";
 import type { PTab } from "../../components/tab/tab.component.js";
 import type { PTabGroup } from "../../components/tab-group/tab-group.component.js";
-import type { PTag } from "../../components/tag/tag.component.js";
 import type { PTabPanel } from "../../components/tab-panel/tab-panel.component.js";
+import type { PTag } from "../../components/tag/tag.component.js";
 import type { PTextarea } from "../../components/textarea/textarea.component.js";
 import type { PTooltip } from "../../components/tooltip/tooltip.component.js";
 import type { PTree } from "../../components/tree/tree.component.js";
 import type { PTreeItem } from "../../components/tree-item/tree-item.component.js";
 import type { PVisuallyHidden } from "../../components/visually-hidden/visually-hidden.component.js";
+
+type PAnimatedImageProps = {
+  /** The path to the image to load. */
+  src?: PAnimatedImage["src"];
+  /** A description of the image used by assistive devices. */
+  alt?: PAnimatedImage["alt"];
+  /** Plays the animation. When this attribute is remove, the animation will pause. */
+  play?: PAnimatedImage["play"];
+  /**  */
+  animatedImage?: PAnimatedImage["animatedImage"];
+  /**  */
+  frozenFrame?: PAnimatedImage["frozenFrame"];
+  /**  */
+  isLoaded?: PAnimatedImage["isLoaded"];
+  /** Emitted when the image loads successfully. */
+  "onp-load"?: (e: CustomEvent<never>) => void;
+  /** Emitted when the image fails to load. */
+  "onp-error"?: (e: CustomEvent<never>) => void;
+};
 
 type PAlertProps = {
   /** Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can
@@ -82,25 +101,6 @@ the alert will not close on its own. */
   "onp-hide"?: (e: CustomEvent<never>) => void;
   /** Emitted after the alert closes and all animations are complete. */
   "onp-after-hide"?: (e: CustomEvent<never>) => void;
-};
-
-type PAnimatedImageProps = {
-  /** The path to the image to load. */
-  src?: PAnimatedImage["src"];
-  /** A description of the image used by assistive devices. */
-  alt?: PAnimatedImage["alt"];
-  /** Plays the animation. When this attribute is remove, the animation will pause. */
-  play?: PAnimatedImage["play"];
-  /**  */
-  animatedImage?: PAnimatedImage["animatedImage"];
-  /**  */
-  frozenFrame?: PAnimatedImage["frozenFrame"];
-  /**  */
-  isLoaded?: PAnimatedImage["isLoaded"];
-  /** Emitted when the image loads successfully. */
-  "onp-load"?: (e: CustomEvent<never>) => void;
-  /** Emitted when the image fails to load. */
-  "onp-error"?: (e: CustomEvent<never>) => void;
 };
 
 type PAnimationProps = {
@@ -984,6 +984,15 @@ active. */
   "onp-reposition"?: (e: CustomEvent<never>) => void;
 };
 
+type PProgressBarProps = {
+  /** The current progress as a percentage, 0 to 100. */
+  value?: PProgressBar["value"];
+  /** When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state. */
+  indeterminate?: PProgressBar["indeterminate"];
+  /** A custom label for assistive devices. */
+  label?: PProgressBar["label"];
+};
+
 type PProgressRingProps = {
   /** The current progress as a percentage, 0 to 100. */
   value?: PProgressRing["value"];
@@ -993,15 +1002,6 @@ type PProgressRingProps = {
   indicator?: PProgressRing["indicator"];
   /**  */
   indicatorOffset?: PProgressRing["indicatorOffset"];
-};
-
-type PProgressBarProps = {
-  /** The current progress as a percentage, 0 to 100. */
-  value?: PProgressBar["value"];
-  /** When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state. */
-  indeterminate?: PProgressBar["indeterminate"];
-  /** A custom label for assistive devices. */
-  label?: PProgressBar["label"];
 };
 
 type PQrCodeProps = {
@@ -1095,6 +1095,46 @@ the same document or shadow root for this to work. */
   "onp-invalid"?: (e: CustomEvent<never>) => void;
 };
 
+type PRatingProps = {
+  /** A label that describes the rating to assistive devices. */
+  label?: PRating["label"];
+  /** The current rating. */
+  value?: PRating["value"];
+  /** The highest rating to show. */
+  max?: PRating["max"];
+  /** The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this
+attribute to `0.5`. */
+  precision?: PRating["precision"];
+  /** Makes the rating readonly. */
+  readonly?: PRating["readonly"];
+  /** Disables the rating. */
+  disabled?: PRating["disabled"];
+  /** A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.
+The function should return a string containing trusted HTML of the symbol to render at the specified value. Works
+well with `<p-icon>` elements. */
+  getSymbol?: PRating["getSymbol"];
+  /**  */
+  rating?: PRating["rating"];
+  /** Emitted when the rating's value changes. */
+  "onp-change"?: (e: CustomEvent<never>) => void;
+  /** Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value. */
+  "onp-hover"?: (e: CustomEvent<{ phase: "start" | "move" | "end"; value: number }>) => void;
+};
+
+type PRelativeTimeProps = {
+  /** The date from which to calculate time from. If not set, the current date and time will be used. When passing a
+string, it's strongly recommended to use the ISO 8601 format to ensure timezones are handled correctly. To convert
+a date to this format in JavaScript, use [`date.toISOString()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString). */
+  date?: PRelativeTime["date"];
+  /** The formatting style to use. */
+  format?: PRelativeTime["format"];
+  /** When `auto`, values such as "yesterday" and "tomorrow" will be shown when possible. When `always`, values such as
+"1 day ago" and "in 1 day" will be shown. */
+  numeric?: PRelativeTime["numeric"];
+  /** Keep the displayed value up to date as time passes. */
+  sync?: PRelativeTime["sync"];
+};
+
 type PRangeProps = {
   /**  */
   title?: PRange["title"];
@@ -1143,46 +1183,6 @@ function should return a string to display in the tooltip. */
   "onp-input"?: (e: CustomEvent<never>) => void;
   /** Emitted when the form control has been checked for validity and its constraints aren't satisfied. */
   "onp-invalid"?: (e: CustomEvent<never>) => void;
-};
-
-type PRatingProps = {
-  /** A label that describes the rating to assistive devices. */
-  label?: PRating["label"];
-  /** The current rating. */
-  value?: PRating["value"];
-  /** The highest rating to show. */
-  max?: PRating["max"];
-  /** The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this
-attribute to `0.5`. */
-  precision?: PRating["precision"];
-  /** Makes the rating readonly. */
-  readonly?: PRating["readonly"];
-  /** Disables the rating. */
-  disabled?: PRating["disabled"];
-  /** A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.
-The function should return a string containing trusted HTML of the symbol to render at the specified value. Works
-well with `<p-icon>` elements. */
-  getSymbol?: PRating["getSymbol"];
-  /**  */
-  rating?: PRating["rating"];
-  /** Emitted when the rating's value changes. */
-  "onp-change"?: (e: CustomEvent<never>) => void;
-  /** Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value. */
-  "onp-hover"?: (e: CustomEvent<{ phase: "start" | "move" | "end"; value: number }>) => void;
-};
-
-type PRelativeTimeProps = {
-  /** The date from which to calculate time from. If not set, the current date and time will be used. When passing a
-string, it's strongly recommended to use the ISO 8601 format to ensure timezones are handled correctly. To convert
-a date to this format in JavaScript, use [`date.toISOString()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString). */
-  date?: PRelativeTime["date"];
-  /** The formatting style to use. */
-  format?: PRelativeTime["format"];
-  /** When `auto`, values such as "yesterday" and "tomorrow" will be shown when possible. When `always`, values such as
-"1 day ago" and "in 1 day" will be shown. */
-  numeric?: PRelativeTime["numeric"];
-  /** Keep the displayed value up to date as time passes. */
-  sync?: PRelativeTime["sync"];
 };
 
 type PResizeObserverProps = {
@@ -1394,6 +1394,13 @@ manual, the tab will receive focus but will not show until the user presses spac
   "onp-tab-hide"?: (e: CustomEvent<{ name: String }>) => void;
 };
 
+type PTabPanelProps = {
+  /** The tab panel's name. */
+  name?: PTabPanel["name"];
+  /** When true, the tab panel will be shown. */
+  active?: PTabPanel["active"];
+};
+
 type PTagProps = {
   /** The tag's theme variant. */
   variant?: PTag["variant"];
@@ -1406,13 +1413,6 @@ type PTagProps = {
 
   /** Emitted when the remove button is activated. */
   "onp-remove"?: (e: CustomEvent<never>) => void;
-};
-
-type PTabPanelProps = {
-  /** The tab panel's name. */
-  name?: PTabPanel["name"];
-  /** When true, the tab panel will be shown. */
-  active?: PTabPanel["active"];
 };
 
 type PTextareaProps = {
@@ -1583,6 +1583,28 @@ type PVisuallyHiddenProps = {};
 
 export type CustomElements = {
   /**
+   * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **p-load** - Emitted when the image loads successfully.
+   * - **p-error** - Emitted when the image fails to load.
+   *
+   * ### **Slots:**
+   *  - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.
+   * - **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.
+   *
+   * ### **CSS Properties:**
+   *  - **--control-box-size** - The size of the icon box. _(default: undefined)_
+   * - **--icon-size** - The size of the play/pause icons. _(default: undefined)_
+   *
+   * ### **CSS Parts:**
+   *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
+   */
+  "p-animated-image": DefineComponent<PAnimatedImageProps>;
+
+  /**
    * Alerts are used to display important messages inline or as toast notifications.
    * ---
    *
@@ -1612,28 +1634,6 @@ export type CustomElements = {
    * - **close-button__base** - The close button's exported `base` part.
    */
   "p-alert": DefineComponent<PAlertProps>;
-
-  /**
-   * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **p-load** - Emitted when the image loads successfully.
-   * - **p-error** - Emitted when the image fails to load.
-   *
-   * ### **Slots:**
-   *  - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.
-   * - **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.
-   *
-   * ### **CSS Properties:**
-   *  - **--control-box-size** - The size of the icon box. _(default: undefined)_
-   * - **--icon-size** - The size of the play/pause icons. _(default: undefined)_
-   *
-   * ### **CSS Parts:**
-   *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
-   */
-  "p-animated-image": DefineComponent<PAnimatedImageProps>;
 
   /**
    * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
@@ -2429,6 +2429,27 @@ export type CustomElements = {
   "p-popup": DefineComponent<PPopupProps>;
 
   /**
+   * Progress bars are used to show the status of an ongoing operation.
+   * ---
+   *
+   *
+   * ### **Slots:**
+   *  - _default_ - A label to show inside the progress indicator.
+   *
+   * ### **CSS Properties:**
+   *  - **--height** - The progress bar's height. _(default: undefined)_
+   * - **--track-color** - The color of the track. _(default: undefined)_
+   * - **--indicator-color** - The color of the indicator. _(default: undefined)_
+   * - **--label-color** - The color of the label. _(default: undefined)_
+   *
+   * ### **CSS Parts:**
+   *  - **base** - The component's base wrapper.
+   * - **indicator** - The progress bar's indicator.
+   * - **label** - The progress bar's label.
+   */
+  "p-progress-bar": DefineComponent<PProgressBarProps>;
+
+  /**
    * Progress rings are used to show the progress of a determinate operation in a circular fashion.
    * ---
    *
@@ -2449,27 +2470,6 @@ export type CustomElements = {
    * - **label** - The progress ring label.
    */
   "p-progress-ring": DefineComponent<PProgressRingProps>;
-
-  /**
-   * Progress bars are used to show the status of an ongoing operation.
-   * ---
-   *
-   *
-   * ### **Slots:**
-   *  - _default_ - A label to show inside the progress indicator.
-   *
-   * ### **CSS Properties:**
-   *  - **--height** - The progress bar's height. _(default: undefined)_
-   * - **--track-color** - The color of the track. _(default: undefined)_
-   * - **--indicator-color** - The color of the indicator. _(default: undefined)_
-   * - **--label-color** - The color of the label. _(default: undefined)_
-   *
-   * ### **CSS Parts:**
-   *  - **base** - The component's base wrapper.
-   * - **indicator** - The progress bar's indicator.
-   * - **label** - The progress bar's label.
-   */
-  "p-progress-bar": DefineComponent<PProgressBarProps>;
 
   /**
    * Generates a [QR code](https://www.qrcode.com/) and renders it using the [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API).
@@ -2562,6 +2562,37 @@ export type CustomElements = {
   "p-radio-group": DefineComponent<PRadioGroupProps>;
 
   /**
+   * Ratings give users a way to quickly view and provide feedback.
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **p-change** - Emitted when the rating's value changes.
+   * - **p-hover** - Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value.
+   *
+   * ### **Methods:**
+   *  - **focus(options: _FocusOptions_)** - Sets focus on the rating.
+   * - **blur()** - Removes focus from the rating.
+   *
+   * ### **CSS Properties:**
+   *  - **--symbol-color** - The inactive color for symbols. _(default: undefined)_
+   * - **--symbol-color-active** - The active color for symbols. _(default: undefined)_
+   * - **--symbol-size** - The size of symbols. _(default: undefined)_
+   * - **--symbol-spacing** - The spacing to use around symbols. _(default: undefined)_
+   *
+   * ### **CSS Parts:**
+   *  - **base** - The component's base wrapper.
+   */
+  "p-rating": DefineComponent<PRatingProps>;
+
+  /**
+   * Outputs a localized time phrase relative to the current date and time.
+   * ---
+   *
+   */
+  "p-relative-time": DefineComponent<PRelativeTimeProps>;
+
+  /**
    * Ranges allow the user to select a single value within a given range using a slider.
    * ---
    *
@@ -2605,37 +2636,6 @@ export type CustomElements = {
    * - **tooltip** - The range's tooltip.
    */
   "p-range": DefineComponent<PRangeProps>;
-
-  /**
-   * Ratings give users a way to quickly view and provide feedback.
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **p-change** - Emitted when the rating's value changes.
-   * - **p-hover** - Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value.
-   *
-   * ### **Methods:**
-   *  - **focus(options: _FocusOptions_)** - Sets focus on the rating.
-   * - **blur()** - Removes focus from the rating.
-   *
-   * ### **CSS Properties:**
-   *  - **--symbol-color** - The inactive color for symbols. _(default: undefined)_
-   * - **--symbol-color-active** - The active color for symbols. _(default: undefined)_
-   * - **--symbol-size** - The size of symbols. _(default: undefined)_
-   * - **--symbol-spacing** - The spacing to use around symbols. _(default: undefined)_
-   *
-   * ### **CSS Parts:**
-   *  - **base** - The component's base wrapper.
-   */
-  "p-rating": DefineComponent<PRatingProps>;
-
-  /**
-   * Outputs a localized time phrase relative to the current date and time.
-   * ---
-   *
-   */
-  "p-relative-time": DefineComponent<PRelativeTimeProps>;
 
   /**
    * The Resize Observer component offers a thin, declarative interface to the [`ResizeObserver API`](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver).
@@ -2858,6 +2858,22 @@ export type CustomElements = {
   "p-tab-group": DefineComponent<PTabGroupProps>;
 
   /**
+   * Tab panels are used inside [tab groups](/components/tab-group) to display tabbed content.
+   * ---
+   *
+   *
+   * ### **Slots:**
+   *  - _default_ - The tab panel's content.
+   *
+   * ### **CSS Properties:**
+   *  - **--padding** - The tab panel's padding. _(default: undefined)_
+   *
+   * ### **CSS Parts:**
+   *  - **base** - The component's base wrapper.
+   */
+  "p-tab-panel": DefineComponent<PTabPanelProps>;
+
+  /**
    * Tags are used as labels to organize things or to indicate a selection.
    * ---
    *
@@ -2875,22 +2891,6 @@ export type CustomElements = {
    * - **remove-button__base** - The remove button's exported `base` part.
    */
   "p-tag": DefineComponent<PTagProps>;
-
-  /**
-   * Tab panels are used inside [tab groups](/components/tab-group) to display tabbed content.
-   * ---
-   *
-   *
-   * ### **Slots:**
-   *  - _default_ - The tab panel's content.
-   *
-   * ### **CSS Properties:**
-   *  - **--padding** - The tab panel's padding. _(default: undefined)_
-   *
-   * ### **CSS Parts:**
-   *  - **base** - The component's base wrapper.
-   */
-  "p-tab-panel": DefineComponent<PTabPanelProps>;
 
   /**
    * Textareas collect data from the user and allow multiple lines of text.

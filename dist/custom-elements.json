@@ -4,6 +4,192 @@
   "modules": [
     {
       "kind": "javascript-module",
+      "path": "components/animated-image/animated-image.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PAnimatedImage",
+          "cssProperties": [
+            {
+              "description": "The size of the icon box.",
+              "name": "--control-box-size"
+            },
+            {
+              "description": "The size of the play/pause icons.",
+              "name": "--icon-size"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The container that surrounds the pause/play icons and provides their background.",
+              "name": "control-box"
+            }
+          ],
+          "slots": [
+            {
+              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`.",
+              "name": "play-icon"
+            },
+            {
+              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`.",
+              "name": "pause-icon"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "dependencies",
+              "type": {
+                "text": "object"
+              },
+              "static": true,
+              "default": "{ \"p-icon\": PIcon }"
+            },
+            {
+              "kind": "field",
+              "name": "animatedImage",
+              "type": {
+                "text": "HTMLImageElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "frozenFrame",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "isLoaded",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "src",
+              "type": {
+                "text": "string"
+              },
+              "description": "The path to the image to load.",
+              "attribute": "src"
+            },
+            {
+              "kind": "field",
+              "name": "alt",
+              "type": {
+                "text": "string"
+              },
+              "description": "A description of the image used by assistive devices.",
+              "attribute": "alt"
+            },
+            {
+              "kind": "field",
+              "name": "play",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "attribute": "play",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleLoad",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleError",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handlePlayChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleSrcChange"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the image loads successfully.",
+              "name": "p-load",
+              "reactName": "onPLoad",
+              "eventName": "PLoadEvent"
+            },
+            {
+              "description": "Emitted when the image fails to load.",
+              "name": "p-error",
+              "reactName": "onPError",
+              "eventName": "PErrorEvent"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "src",
+              "type": {
+                "text": "string"
+              },
+              "description": "The path to the image to load.",
+              "fieldName": "src"
+            },
+            {
+              "name": "alt",
+              "type": {
+                "text": "string"
+              },
+              "description": "A description of the image used by assistive devices.",
+              "fieldName": "alt"
+            },
+            {
+              "name": "play",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "fieldName": "play"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.",
+          "tagNameWithoutPrefix": "animated-image",
+          "tagName": "p-animated-image",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n * @documentation https://pureui.xyz/components/animated-image\n * @status stable\n * @since 2.0\n *\n * @dependency p-icon\n *\n * @event p-load - Emitted when the image loads successfully.\n * @event p-error - Emitted when the image fails to load.\n *\n * @slot play-icon - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n * @slot pause-icon - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n *\n * @part control-box - The container that surrounds the pause/play icons and provides their background.\n *\n * @cssproperty --control-box-size - The size of the icon box.\n * @cssproperty --icon-size - The size of the play/pause icons.\n */",
+          "documentation": "https://pureui.xyz/components/animated-image",
+          "status": "stable",
+          "since": "2.0",
+          "dependencies": [
+            "p-icon"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PAnimatedImage",
+            "module": "components/animated-image/animated-image.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "components/alert/alert.js",
       "declarations": [
         {
@@ -258,192 +444,6 @@
           "declaration": {
             "name": "PAlert",
             "module": "components/alert/alert.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/animated-image/animated-image.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PAnimatedImage",
-          "cssProperties": [
-            {
-              "description": "The size of the icon box.",
-              "name": "--control-box-size"
-            },
-            {
-              "description": "The size of the play/pause icons.",
-              "name": "--icon-size"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The container that surrounds the pause/play icons and provides their background.",
-              "name": "control-box"
-            }
-          ],
-          "slots": [
-            {
-              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`.",
-              "name": "play-icon"
-            },
-            {
-              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`.",
-              "name": "pause-icon"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "dependencies",
-              "type": {
-                "text": "object"
-              },
-              "static": true,
-              "default": "{ \"p-icon\": PIcon }"
-            },
-            {
-              "kind": "field",
-              "name": "animatedImage",
-              "type": {
-                "text": "HTMLImageElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "frozenFrame",
-              "type": {
-                "text": "string"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "isLoaded",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "src",
-              "type": {
-                "text": "string"
-              },
-              "description": "The path to the image to load.",
-              "attribute": "src"
-            },
-            {
-              "kind": "field",
-              "name": "alt",
-              "type": {
-                "text": "string"
-              },
-              "description": "A description of the image used by assistive devices.",
-              "attribute": "alt"
-            },
-            {
-              "kind": "field",
-              "name": "play",
-              "type": {
-                "text": "boolean"
-              },
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "attribute": "play",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleClick",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleLoad",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleError",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handlePlayChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleSrcChange"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the image loads successfully.",
-              "name": "p-load",
-              "reactName": "onPLoad",
-              "eventName": "PLoadEvent"
-            },
-            {
-              "description": "Emitted when the image fails to load.",
-              "name": "p-error",
-              "reactName": "onPError",
-              "eventName": "PErrorEvent"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "src",
-              "type": {
-                "text": "string"
-              },
-              "description": "The path to the image to load.",
-              "fieldName": "src"
-            },
-            {
-              "name": "alt",
-              "type": {
-                "text": "string"
-              },
-              "description": "A description of the image used by assistive devices.",
-              "fieldName": "alt"
-            },
-            {
-              "name": "play",
-              "type": {
-                "text": "boolean"
-              },
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "fieldName": "play"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.",
-          "tagNameWithoutPrefix": "animated-image",
-          "tagName": "p-animated-image",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n * @documentation https://pureui.xyz/components/animated-image\n * @status stable\n * @since 2.0\n *\n * @dependency p-icon\n *\n * @event p-load - Emitted when the image loads successfully.\n * @event p-error - Emitted when the image fails to load.\n *\n * @slot play-icon - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n * @slot pause-icon - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n *\n * @part control-box - The container that surrounds the pause/play icons and provides their background.\n *\n * @cssproperty --control-box-size - The size of the icon box.\n * @cssproperty --icon-size - The size of the play/pause icons.\n */",
-          "documentation": "https://pureui.xyz/components/animated-image",
-          "status": "stable",
-          "since": "2.0",
-          "dependencies": [
-            "p-icon"
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PAnimatedImage",
-            "module": "components/animated-image/animated-image.js"
           }
         }
       ]
@@ -4621,270 +4621,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/details/details.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PDetails",
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The header that wraps both the summary and the expand/collapse icon.",
-              "name": "header"
-            },
-            {
-              "description": "The container that wraps the summary.",
-              "name": "summary"
-            },
-            {
-              "description": "The container that wraps the expand/collapse icons.",
-              "name": "summary-icon"
-            },
-            {
-              "description": "The details content.",
-              "name": "content"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The details' main content.",
-              "name": ""
-            },
-            {
-              "description": "The details' summary. Alternatively, you can use the `summary` attribute.",
-              "name": "summary"
-            },
-            {
-              "description": "Optional expand icon to use instead of the default. Works best with `<p-icon>`.",
-              "name": "expand-icon"
-            },
-            {
-              "description": "Optional collapse icon to use instead of the default. Works best with `<p-icon>`.",
-              "name": "collapse-icon"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "dependencies",
-              "type": {
-                "text": "object"
-              },
-              "static": true,
-              "default": "{\n    \"p-icon\": PIcon,\n  }"
-            },
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "readonly": true,
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "details",
-              "type": {
-                "text": "HTMLDetailsElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "header",
-              "type": {
-                "text": "HTMLElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "body",
-              "type": {
-                "text": "HTMLElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "expandIconSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "detailsObserver",
-              "type": {
-                "text": "MutationObserver"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "open",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Indicates whether or not the details is open. You can toggle this attribute to show and hide the details, or you\ncan use the `show()` and `hide()` methods and this attribute will reflect the details' open state.",
-              "attribute": "open",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "summary",
-              "type": {
-                "text": "string"
-              },
-              "description": "The summary to show in the header. If you need to display HTML, use the `summary` slot instead.",
-              "attribute": "summary"
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the details so it can't be toggled.",
-              "attribute": "disabled",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleSummaryClick",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleSummaryKeyDown",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleOpenChange"
-            },
-            {
-              "kind": "method",
-              "name": "show",
-              "description": "Shows the details."
-            },
-            {
-              "kind": "method",
-              "name": "hide",
-              "description": "Hides the details"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the details opens.",
-              "name": "p-show",
-              "reactName": "onPShow",
-              "eventName": "PShowEvent"
-            },
-            {
-              "description": "Emitted after the details opens and all animations are complete.",
-              "name": "p-after-show",
-              "reactName": "onPAfterShow",
-              "eventName": "PAfterShowEvent"
-            },
-            {
-              "description": "Emitted when the details closes.",
-              "name": "p-hide",
-              "reactName": "onPHide",
-              "eventName": "PHideEvent"
-            },
-            {
-              "description": "Emitted after the details closes and all animations are complete.",
-              "name": "p-after-hide",
-              "reactName": "onPAfterHide",
-              "eventName": "PAfterHideEvent"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "open",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Indicates whether or not the details is open. You can toggle this attribute to show and hide the details, or you\ncan use the `show()` and `hide()` methods and this attribute will reflect the details' open state.",
-              "fieldName": "open"
-            },
-            {
-              "name": "summary",
-              "type": {
-                "text": "string"
-              },
-              "description": "The summary to show in the header. If you need to display HTML, use the `summary` slot instead.",
-              "fieldName": "summary"
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the details so it can't be toggled.",
-              "fieldName": "disabled"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "Details show a brief summary and expand to show additional content.",
-          "tagNameWithoutPrefix": "details",
-          "tagName": "p-details",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary Details show a brief summary and expand to show additional content.\n * @documentation https://pureui.xyz/components/details\n * @status stable\n * @since 2.0\n *\n * @dependency p-icon\n *\n * @slot - The details' main content.\n * @slot summary - The details' summary. Alternatively, you can use the `summary` attribute.\n * @slot expand-icon - Optional expand icon to use instead of the default. Works best with `<p-icon>`.\n * @slot collapse-icon - Optional collapse icon to use instead of the default. Works best with `<p-icon>`.\n *\n * @event p-show - Emitted when the details opens.\n * @event p-after-show - Emitted after the details opens and all animations are complete.\n * @event p-hide - Emitted when the details closes.\n * @event p-after-hide - Emitted after the details closes and all animations are complete.\n *\n * @csspart base - The component's base wrapper.\n * @csspart header - The header that wraps both the summary and the expand/collapse icon.\n * @csspart summary - The container that wraps the summary.\n * @csspart summary-icon - The container that wraps the expand/collapse icons.\n * @csspart content - The details content.\n *\n * @animation details.show - The animation to use when showing details. You can use `height: auto` with this animation.\n * @animation details.hide - The animation to use when hiding details. You can use `height: auto` with this animation.\n */",
-          "documentation": "https://pureui.xyz/components/details",
-          "status": "stable",
-          "since": "2.0",
-          "dependencies": [
-            "p-icon"
-          ],
-          "animations": [
-            {
-              "name": "details.show",
-              "description": "The animation to use when showing details. You can use `height: auto` with this animation."
-            },
-            {
-              "name": "details.hide",
-              "description": "The animation to use when hiding details. You can use `height: auto` with this animation."
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PDetails",
-            "module": "components/details/details.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/copy-button/copy-button.js",
       "declarations": [
         {
@@ -5252,6 +4988,270 @@
           "declaration": {
             "name": "PCopyButton",
             "module": "components/copy-button/copy-button.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/details/details.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PDetails",
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The header that wraps both the summary and the expand/collapse icon.",
+              "name": "header"
+            },
+            {
+              "description": "The container that wraps the summary.",
+              "name": "summary"
+            },
+            {
+              "description": "The container that wraps the expand/collapse icons.",
+              "name": "summary-icon"
+            },
+            {
+              "description": "The details content.",
+              "name": "content"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The details' main content.",
+              "name": ""
+            },
+            {
+              "description": "The details' summary. Alternatively, you can use the `summary` attribute.",
+              "name": "summary"
+            },
+            {
+              "description": "Optional expand icon to use instead of the default. Works best with `<p-icon>`.",
+              "name": "expand-icon"
+            },
+            {
+              "description": "Optional collapse icon to use instead of the default. Works best with `<p-icon>`.",
+              "name": "collapse-icon"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "dependencies",
+              "type": {
+                "text": "object"
+              },
+              "static": true,
+              "default": "{\n    \"p-icon\": PIcon,\n  }"
+            },
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "readonly": true,
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "details",
+              "type": {
+                "text": "HTMLDetailsElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "header",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "body",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "expandIconSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "detailsObserver",
+              "type": {
+                "text": "MutationObserver"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Indicates whether or not the details is open. You can toggle this attribute to show and hide the details, or you\ncan use the `show()` and `hide()` methods and this attribute will reflect the details' open state.",
+              "attribute": "open",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "summary",
+              "type": {
+                "text": "string"
+              },
+              "description": "The summary to show in the header. If you need to display HTML, use the `summary` slot instead.",
+              "attribute": "summary"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the details so it can't be toggled.",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleSummaryClick",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleSummaryKeyDown",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleOpenChange"
+            },
+            {
+              "kind": "method",
+              "name": "show",
+              "description": "Shows the details."
+            },
+            {
+              "kind": "method",
+              "name": "hide",
+              "description": "Hides the details"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the details opens.",
+              "name": "p-show",
+              "reactName": "onPShow",
+              "eventName": "PShowEvent"
+            },
+            {
+              "description": "Emitted after the details opens and all animations are complete.",
+              "name": "p-after-show",
+              "reactName": "onPAfterShow",
+              "eventName": "PAfterShowEvent"
+            },
+            {
+              "description": "Emitted when the details closes.",
+              "name": "p-hide",
+              "reactName": "onPHide",
+              "eventName": "PHideEvent"
+            },
+            {
+              "description": "Emitted after the details closes and all animations are complete.",
+              "name": "p-after-hide",
+              "reactName": "onPAfterHide",
+              "eventName": "PAfterHideEvent"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Indicates whether or not the details is open. You can toggle this attribute to show and hide the details, or you\ncan use the `show()` and `hide()` methods and this attribute will reflect the details' open state.",
+              "fieldName": "open"
+            },
+            {
+              "name": "summary",
+              "type": {
+                "text": "string"
+              },
+              "description": "The summary to show in the header. If you need to display HTML, use the `summary` slot instead.",
+              "fieldName": "summary"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the details so it can't be toggled.",
+              "fieldName": "disabled"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "Details show a brief summary and expand to show additional content.",
+          "tagNameWithoutPrefix": "details",
+          "tagName": "p-details",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary Details show a brief summary and expand to show additional content.\n * @documentation https://pureui.xyz/components/details\n * @status stable\n * @since 2.0\n *\n * @dependency p-icon\n *\n * @slot - The details' main content.\n * @slot summary - The details' summary. Alternatively, you can use the `summary` attribute.\n * @slot expand-icon - Optional expand icon to use instead of the default. Works best with `<p-icon>`.\n * @slot collapse-icon - Optional collapse icon to use instead of the default. Works best with `<p-icon>`.\n *\n * @event p-show - Emitted when the details opens.\n * @event p-after-show - Emitted after the details opens and all animations are complete.\n * @event p-hide - Emitted when the details closes.\n * @event p-after-hide - Emitted after the details closes and all animations are complete.\n *\n * @csspart base - The component's base wrapper.\n * @csspart header - The header that wraps both the summary and the expand/collapse icon.\n * @csspart summary - The container that wraps the summary.\n * @csspart summary-icon - The container that wraps the expand/collapse icons.\n * @csspart content - The details content.\n *\n * @animation details.show - The animation to use when showing details. You can use `height: auto` with this animation.\n * @animation details.hide - The animation to use when hiding details. You can use `height: auto` with this animation.\n */",
+          "documentation": "https://pureui.xyz/components/details",
+          "status": "stable",
+          "since": "2.0",
+          "dependencies": [
+            "p-icon"
+          ],
+          "animations": [
+            {
+              "name": "details.show",
+              "description": "The animation to use when showing details. You can use `height: auto` with this animation."
+            },
+            {
+              "name": "details.hide",
+              "description": "The animation to use when hiding details. You can use `height: auto` with this animation."
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PDetails",
+            "module": "components/details/details.js"
           }
         }
       ]
@@ -6610,230 +6610,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/format-number/format-number.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PFormatNumber",
-          "members": [
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "readonly": true,
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The number to format.",
-              "attribute": "value"
-            },
-            {
-              "kind": "field",
-              "name": "type",
-              "type": {
-                "text": "\"currency\" | \"decimal\" | \"percent\""
-              },
-              "default": "\"decimal\"",
-              "description": "The formatting style to use.",
-              "attribute": "type"
-            },
-            {
-              "kind": "field",
-              "name": "noGrouping",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Turns off grouping separators.",
-              "attribute": "no-grouping"
-            },
-            {
-              "kind": "field",
-              "name": "currency",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"USD\"",
-              "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting.",
-              "attribute": "currency"
-            },
-            {
-              "kind": "field",
-              "name": "currencyDisplay",
-              "type": {
-                "text": "\"symbol\" | \"narrowSymbol\" | \"code\" | \"name\""
-              },
-              "default": "\"symbol\"",
-              "description": "How to display the currency.",
-              "attribute": "currency-display"
-            },
-            {
-              "kind": "field",
-              "name": "minimumIntegerDigits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The minimum number of integer digits to use. Possible values are 1-21.",
-              "attribute": "minimum-integer-digits"
-            },
-            {
-              "kind": "field",
-              "name": "minimumFractionDigits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The minimum number of fraction digits to use. Possible values are 0-20.",
-              "attribute": "minimum-fraction-digits"
-            },
-            {
-              "kind": "field",
-              "name": "maximumFractionDigits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The maximum number of fraction digits to use. Possible values are 0-0.",
-              "attribute": "maximum-fraction-digits"
-            },
-            {
-              "kind": "field",
-              "name": "minimumSignificantDigits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The minimum number of significant digits to use. Possible values are 1-21.",
-              "attribute": "minimum-significant-digits"
-            },
-            {
-              "kind": "field",
-              "name": "maximumSignificantDigits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The maximum number of significant digits to use,. Possible values are 1-21.",
-              "attribute": "maximum-significant-digits"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "value",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The number to format.",
-              "fieldName": "value"
-            },
-            {
-              "name": "type",
-              "type": {
-                "text": "\"currency\" | \"decimal\" | \"percent\""
-              },
-              "default": "\"decimal\"",
-              "description": "The formatting style to use.",
-              "fieldName": "type"
-            },
-            {
-              "name": "no-grouping",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Turns off grouping separators.",
-              "fieldName": "noGrouping"
-            },
-            {
-              "name": "currency",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"USD\"",
-              "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting.",
-              "fieldName": "currency"
-            },
-            {
-              "name": "currency-display",
-              "type": {
-                "text": "\"symbol\" | \"narrowSymbol\" | \"code\" | \"name\""
-              },
-              "default": "\"symbol\"",
-              "description": "How to display the currency.",
-              "fieldName": "currencyDisplay"
-            },
-            {
-              "name": "minimum-integer-digits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The minimum number of integer digits to use. Possible values are 1-21.",
-              "fieldName": "minimumIntegerDigits"
-            },
-            {
-              "name": "minimum-fraction-digits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The minimum number of fraction digits to use. Possible values are 0-20.",
-              "fieldName": "minimumFractionDigits"
-            },
-            {
-              "name": "maximum-fraction-digits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The maximum number of fraction digits to use. Possible values are 0-0.",
-              "fieldName": "maximumFractionDigits"
-            },
-            {
-              "name": "minimum-significant-digits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The minimum number of significant digits to use. Possible values are 1-21.",
-              "fieldName": "minimumSignificantDigits"
-            },
-            {
-              "name": "maximum-significant-digits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The maximum number of significant digits to use,. Possible values are 1-21.",
-              "fieldName": "maximumSignificantDigits"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "Formats a number using the specified locale and options.",
-          "tagNameWithoutPrefix": "format-number",
-          "tagName": "p-format-number",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary Formats a number using the specified locale and options.\n * @documentation https://pureui.xyz/components/format-number\n * @status stable\n * @since 2.0\n */",
-          "documentation": "https://pureui.xyz/components/format-number",
-          "status": "stable",
-          "since": "2.0"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PFormatNumber",
-            "module": "components/format-number/format-number.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/format-date/format-date.js",
       "declarations": [
         {
@@ -7080,6 +6856,230 @@
           "declaration": {
             "name": "PFormatDate",
             "module": "components/format-date/format-date.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/format-number/format-number.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PFormatNumber",
+          "members": [
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "readonly": true,
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The number to format.",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "type",
+              "type": {
+                "text": "\"currency\" | \"decimal\" | \"percent\""
+              },
+              "default": "\"decimal\"",
+              "description": "The formatting style to use.",
+              "attribute": "type"
+            },
+            {
+              "kind": "field",
+              "name": "noGrouping",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Turns off grouping separators.",
+              "attribute": "no-grouping"
+            },
+            {
+              "kind": "field",
+              "name": "currency",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"USD\"",
+              "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting.",
+              "attribute": "currency"
+            },
+            {
+              "kind": "field",
+              "name": "currencyDisplay",
+              "type": {
+                "text": "\"symbol\" | \"narrowSymbol\" | \"code\" | \"name\""
+              },
+              "default": "\"symbol\"",
+              "description": "How to display the currency.",
+              "attribute": "currency-display"
+            },
+            {
+              "kind": "field",
+              "name": "minimumIntegerDigits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The minimum number of integer digits to use. Possible values are 1-21.",
+              "attribute": "minimum-integer-digits"
+            },
+            {
+              "kind": "field",
+              "name": "minimumFractionDigits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The minimum number of fraction digits to use. Possible values are 0-20.",
+              "attribute": "minimum-fraction-digits"
+            },
+            {
+              "kind": "field",
+              "name": "maximumFractionDigits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The maximum number of fraction digits to use. Possible values are 0-0.",
+              "attribute": "maximum-fraction-digits"
+            },
+            {
+              "kind": "field",
+              "name": "minimumSignificantDigits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The minimum number of significant digits to use. Possible values are 1-21.",
+              "attribute": "minimum-significant-digits"
+            },
+            {
+              "kind": "field",
+              "name": "maximumSignificantDigits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The maximum number of significant digits to use,. Possible values are 1-21.",
+              "attribute": "maximum-significant-digits"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The number to format.",
+              "fieldName": "value"
+            },
+            {
+              "name": "type",
+              "type": {
+                "text": "\"currency\" | \"decimal\" | \"percent\""
+              },
+              "default": "\"decimal\"",
+              "description": "The formatting style to use.",
+              "fieldName": "type"
+            },
+            {
+              "name": "no-grouping",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Turns off grouping separators.",
+              "fieldName": "noGrouping"
+            },
+            {
+              "name": "currency",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"USD\"",
+              "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting.",
+              "fieldName": "currency"
+            },
+            {
+              "name": "currency-display",
+              "type": {
+                "text": "\"symbol\" | \"narrowSymbol\" | \"code\" | \"name\""
+              },
+              "default": "\"symbol\"",
+              "description": "How to display the currency.",
+              "fieldName": "currencyDisplay"
+            },
+            {
+              "name": "minimum-integer-digits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The minimum number of integer digits to use. Possible values are 1-21.",
+              "fieldName": "minimumIntegerDigits"
+            },
+            {
+              "name": "minimum-fraction-digits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The minimum number of fraction digits to use. Possible values are 0-20.",
+              "fieldName": "minimumFractionDigits"
+            },
+            {
+              "name": "maximum-fraction-digits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The maximum number of fraction digits to use. Possible values are 0-0.",
+              "fieldName": "maximumFractionDigits"
+            },
+            {
+              "name": "minimum-significant-digits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The minimum number of significant digits to use. Possible values are 1-21.",
+              "fieldName": "minimumSignificantDigits"
+            },
+            {
+              "name": "maximum-significant-digits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The maximum number of significant digits to use,. Possible values are 1-21.",
+              "fieldName": "maximumSignificantDigits"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "Formats a number using the specified locale and options.",
+          "tagNameWithoutPrefix": "format-number",
+          "tagName": "p-format-number",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary Formats a number using the specified locale and options.\n * @documentation https://pureui.xyz/components/format-number\n * @status stable\n * @since 2.0\n */",
+          "documentation": "https://pureui.xyz/components/format-number",
+          "status": "stable",
+          "since": "2.0"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PFormatNumber",
+            "module": "components/format-number/format-number.js"
           }
         }
       ]
@@ -7843,122 +7843,6 @@
           "declaration": {
             "name": "PInclude",
             "module": "components/include/include.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/menu/menu.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PMenu",
-          "slots": [
-            {
-              "description": "The menu's content, including menu items, menu labels, and dividers.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "defaultSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "method",
-              "name": "handleClick",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleKeyDown",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleMouseDown",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleSlotChange",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "isMenuItem",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "item",
-                  "type": {
-                    "text": "HTMLElement"
-                  }
-                }
-              ]
-            }
-          ],
-          "events": [
-            {
-              "type": {
-                "text": "{ item: PMenuItem }"
-              },
-              "description": "Emitted when a menu item is selected.",
-              "name": "p-select",
-              "reactName": "onPSelect",
-              "eventName": "PSelectEvent"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "Menus provide a list of options for the user to choose from.",
-          "tagNameWithoutPrefix": "menu",
-          "tagName": "p-menu",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary Menus provide a list of options for the user to choose from.\n * @documentation https://pureui.xyz/components/menu\n * @status stable\n * @since 2.0\n *\n * @slot - The menu's content, including menu items, menu labels, and dividers.\n *\n * @event {{ item: PMenuItem }} p-select - Emitted when a menu item is selected.\n */",
-          "documentation": "https://pureui.xyz/components/menu",
-          "status": "stable",
-          "since": "2.0"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PMenu",
-            "module": "components/menu/menu.js"
           }
         }
       ]
@@ -8975,6 +8859,122 @@
           "declaration": {
             "name": "PInput",
             "module": "components/input/input.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/menu/menu.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PMenu",
+          "slots": [
+            {
+              "description": "The menu's content, including menu items, menu labels, and dividers.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "defaultSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleKeyDown",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleMouseDown",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleSlotChange",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "isMenuItem",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "item",
+                  "type": {
+                    "text": "HTMLElement"
+                  }
+                }
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": {
+                "text": "{ item: PMenuItem }"
+              },
+              "description": "Emitted when a menu item is selected.",
+              "name": "p-select",
+              "reactName": "onPSelect",
+              "eventName": "PSelectEvent"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "Menus provide a list of options for the user to choose from.",
+          "tagNameWithoutPrefix": "menu",
+          "tagName": "p-menu",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary Menus provide a list of options for the user to choose from.\n * @documentation https://pureui.xyz/components/menu\n * @status stable\n * @since 2.0\n *\n * @slot - The menu's content, including menu items, menu labels, and dividers.\n *\n * @event {{ item: PMenuItem }} p-select - Emitted when a menu item is selected.\n */",
+          "documentation": "https://pureui.xyz/components/menu",
+          "status": "stable",
+          "since": "2.0"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PMenu",
+            "module": "components/menu/menu.js"
           }
         }
       ]
@@ -11616,583 +11616,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/range/range.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PRange",
-          "cssProperties": [
-            {
-              "description": "The size of the thumb.",
-              "name": "--thumb-size"
-            },
-            {
-              "description": "The vertical distance the tooltip is offset from the track.",
-              "name": "--tooltip-offset"
-            },
-            {
-              "description": "The color of the portion of the track that represents the current value.",
-              "name": "--track-color-active"
-            },
-            {
-              "description": "The of the portion of the track that represents the remaining value.",
-              "name": "--track-color-inactive"
-            },
-            {
-              "description": "The height of the track.",
-              "name": "--track-height"
-            },
-            {
-              "description": "The point of origin of the active track.",
-              "name": "--track-active-offset"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The form control that wraps the label, input, and help text.",
-              "name": "form-control"
-            },
-            {
-              "description": "The label's wrapper.",
-              "name": "form-control-label"
-            },
-            {
-              "description": "The range's wrapper.",
-              "name": "form-control-input"
-            },
-            {
-              "description": "The help text's wrapper.",
-              "name": "form-control-help-text"
-            },
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The internal `<input>` element.",
-              "name": "input"
-            },
-            {
-              "description": "The range's tooltip.",
-              "name": "tooltip"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The range's label. Alternatively, you can use the `label` attribute.",
-              "name": "label"
-            },
-            {
-              "description": "Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.",
-              "name": "help-text"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "formControlController",
-              "privacy": "private",
-              "readonly": true,
-              "default": "new FormControlController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "hasSlotController",
-              "privacy": "private",
-              "readonly": true,
-              "default": "new HasSlotController(this, \"help-text\", \"label\")"
-            },
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "readonly": true,
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "resizeObserver",
-              "type": {
-                "text": "ResizeObserver"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "input",
-              "type": {
-                "text": "HTMLInputElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "output",
-              "type": {
-                "text": "HTMLOutputElement | null"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "hasFocus",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "hasTooltip",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "title",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "attribute": "title"
-            },
-            {
-              "kind": "field",
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "The name of the range, submitted as a name/value pair with form data.",
-              "attribute": "name"
-            },
-            {
-              "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The current value of the range, submitted as a name/value pair with form data.",
-              "attribute": "value"
-            },
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "The range's label. If you need to display HTML, use the `label` slot instead.",
-              "attribute": "label"
-            },
-            {
-              "kind": "field",
-              "name": "helpText",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "The range's help text. If you need to display HTML, use the help-text slot instead.",
-              "attribute": "help-text"
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the range.",
-              "attribute": "disabled",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "min",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The minimum acceptable value of the range.",
-              "attribute": "min"
-            },
-            {
-              "kind": "field",
-              "name": "max",
-              "type": {
-                "text": "number"
-              },
-              "default": "100",
-              "description": "The maximum acceptable value of the range.",
-              "attribute": "max"
-            },
-            {
-              "kind": "field",
-              "name": "step",
-              "type": {
-                "text": "number"
-              },
-              "default": "1",
-              "description": "The interval at which the range will increase and decrease.",
-              "attribute": "step"
-            },
-            {
-              "kind": "field",
-              "name": "tooltip",
-              "type": {
-                "text": "\"top\" | \"bottom\" | \"none\""
-              },
-              "default": "\"top\"",
-              "description": "The preferred placement of the range's tooltip.",
-              "attribute": "tooltip"
-            },
-            {
-              "kind": "field",
-              "name": "tooltipFormatter",
-              "type": {
-                "text": "(value: number) => string"
-              },
-              "description": "A function used to format the tooltip's value. The range's value is passed as the first and only argument. The\nfunction should return a string to display in the tooltip."
-            },
-            {
-              "kind": "field",
-              "name": "form",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
-              "attribute": "form",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "defaultValue",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The default value of the form control. Primarily used for resetting the form control."
-            },
-            {
-              "kind": "field",
-              "name": "validity",
-              "description": "Gets the validity state object",
-              "readonly": true
-            },
-            {
-              "kind": "field",
-              "name": "validationMessage",
-              "description": "Gets the validation message",
-              "readonly": true
-            },
-            {
-              "kind": "method",
-              "name": "handleChange",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleInput",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleBlur",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleFocus",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleThumbDragStart",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleThumbDragEnd",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "syncProgress",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "percent",
-                  "type": {
-                    "text": "number"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "syncTooltip",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "percent",
-                  "type": {
-                    "text": "number"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleValueChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleDisabledChange"
-            },
-            {
-              "kind": "method",
-              "name": "syncRange"
-            },
-            {
-              "kind": "method",
-              "name": "handleInvalid",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "Event"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "focus",
-              "parameters": [
-                {
-                  "name": "options",
-                  "optional": true,
-                  "type": {
-                    "text": "FocusOptions"
-                  }
-                }
-              ],
-              "description": "Sets focus on the range."
-            },
-            {
-              "kind": "method",
-              "name": "blur",
-              "description": "Removes focus from the range."
-            },
-            {
-              "kind": "method",
-              "name": "stepUp",
-              "description": "Increments the value of the range by the value of the step attribute."
-            },
-            {
-              "kind": "method",
-              "name": "stepDown",
-              "description": "Decrements the value of the range by the value of the step attribute."
-            },
-            {
-              "kind": "method",
-              "name": "checkValidity",
-              "description": "Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid."
-            },
-            {
-              "kind": "method",
-              "name": "getForm",
-              "return": {
-                "type": {
-                  "text": "HTMLFormElement | null"
-                }
-              },
-              "description": "Gets the associated form, if one exists."
-            },
-            {
-              "kind": "method",
-              "name": "reportValidity",
-              "description": "Checks for validity and shows the browser's validation message if the control is invalid."
-            },
-            {
-              "kind": "method",
-              "name": "setCustomValidity",
-              "parameters": [
-                {
-                  "name": "message",
-                  "type": {
-                    "text": "string"
-                  }
-                }
-              ],
-              "description": "Sets a custom validation message. Pass an empty string to restore validity."
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the control loses focus.",
-              "name": "p-blur",
-              "reactName": "onPBlur",
-              "eventName": "PBlurEvent"
-            },
-            {
-              "description": "Emitted when an alteration to the control's value is committed by the user.",
-              "name": "p-change",
-              "reactName": "onPChange",
-              "eventName": "PChangeEvent"
-            },
-            {
-              "description": "Emitted when the control gains focus.",
-              "name": "p-focus",
-              "reactName": "onPFocus",
-              "eventName": "PFocusEvent"
-            },
-            {
-              "description": "Emitted when the control receives input.",
-              "name": "p-input",
-              "reactName": "onPInput",
-              "eventName": "PInputEvent"
-            },
-            {
-              "description": "Emitted when the form control has been checked for validity and its constraints aren't satisfied.",
-              "name": "p-invalid",
-              "reactName": "onPInvalid",
-              "eventName": "PInvalidEvent"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "title",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "fieldName": "title"
-            },
-            {
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "The name of the range, submitted as a name/value pair with form data.",
-              "fieldName": "name"
-            },
-            {
-              "name": "value",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The current value of the range, submitted as a name/value pair with form data.",
-              "fieldName": "value"
-            },
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "The range's label. If you need to display HTML, use the `label` slot instead.",
-              "fieldName": "label"
-            },
-            {
-              "name": "help-text",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "The range's help text. If you need to display HTML, use the help-text slot instead.",
-              "fieldName": "helpText"
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the range.",
-              "fieldName": "disabled"
-            },
-            {
-              "name": "min",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The minimum acceptable value of the range.",
-              "fieldName": "min"
-            },
-            {
-              "name": "max",
-              "type": {
-                "text": "number"
-              },
-              "default": "100",
-              "description": "The maximum acceptable value of the range.",
-              "fieldName": "max"
-            },
-            {
-              "name": "step",
-              "type": {
-                "text": "number"
-              },
-              "default": "1",
-              "description": "The interval at which the range will increase and decrease.",
-              "fieldName": "step"
-            },
-            {
-              "name": "tooltip",
-              "type": {
-                "text": "\"top\" | \"bottom\" | \"none\""
-              },
-              "default": "\"top\"",
-              "description": "The preferred placement of the range's tooltip.",
-              "fieldName": "tooltip"
-            },
-            {
-              "name": "form",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
-              "fieldName": "form"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "Ranges allow the user to select a single value within a given range using a slider.",
-          "tagNameWithoutPrefix": "range",
-          "tagName": "p-range",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary Ranges allow the user to select a single value within a given range using a slider.\n * @documentation https://pureui.xyz/components/range\n * @status stable\n * @since 2.0\n *\n * @slot label - The range's label. Alternatively, you can use the `label` attribute.\n * @slot help-text - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.\n *\n * @event p-blur - Emitted when the control loses focus.\n * @event p-change - Emitted when an alteration to the control's value is committed by the user.\n * @event p-focus - Emitted when the control gains focus.\n * @event p-input - Emitted when the control receives input.\n * @event p-invalid - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n *\n * @csspart form-control - The form control that wraps the label, input, and help text.\n * @csspart form-control-label - The label's wrapper.\n * @csspart form-control-input - The range's wrapper.\n * @csspart form-control-help-text - The help text's wrapper.\n * @csspart base - The component's base wrapper.\n * @csspart input - The internal `<input>` element.\n * @csspart tooltip - The range's tooltip.\n *\n * @cssproperty --thumb-size - The size of the thumb.\n * @cssproperty --tooltip-offset - The vertical distance the tooltip is offset from the track.\n * @cssproperty --track-color-active - The color of the portion of the track that represents the current value.\n * @cssproperty --track-color-inactive - The of the portion of the track that represents the remaining value.\n * @cssproperty --track-height - The height of the track.\n * @cssproperty --track-active-offset - The point of origin of the active track.\n */",
-          "documentation": "https://pureui.xyz/components/range",
-          "status": "stable",
-          "since": "2.0"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PRange",
-            "module": "components/range/range.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/rating/rating.js",
       "declarations": [
         {
@@ -12773,6 +12196,583 @@
           "declaration": {
             "name": "PRelativeTime",
             "module": "components/relative-time/relative-time.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/range/range.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PRange",
+          "cssProperties": [
+            {
+              "description": "The size of the thumb.",
+              "name": "--thumb-size"
+            },
+            {
+              "description": "The vertical distance the tooltip is offset from the track.",
+              "name": "--tooltip-offset"
+            },
+            {
+              "description": "The color of the portion of the track that represents the current value.",
+              "name": "--track-color-active"
+            },
+            {
+              "description": "The of the portion of the track that represents the remaining value.",
+              "name": "--track-color-inactive"
+            },
+            {
+              "description": "The height of the track.",
+              "name": "--track-height"
+            },
+            {
+              "description": "The point of origin of the active track.",
+              "name": "--track-active-offset"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The form control that wraps the label, input, and help text.",
+              "name": "form-control"
+            },
+            {
+              "description": "The label's wrapper.",
+              "name": "form-control-label"
+            },
+            {
+              "description": "The range's wrapper.",
+              "name": "form-control-input"
+            },
+            {
+              "description": "The help text's wrapper.",
+              "name": "form-control-help-text"
+            },
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The internal `<input>` element.",
+              "name": "input"
+            },
+            {
+              "description": "The range's tooltip.",
+              "name": "tooltip"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The range's label. Alternatively, you can use the `label` attribute.",
+              "name": "label"
+            },
+            {
+              "description": "Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.",
+              "name": "help-text"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "formControlController",
+              "privacy": "private",
+              "readonly": true,
+              "default": "new FormControlController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "hasSlotController",
+              "privacy": "private",
+              "readonly": true,
+              "default": "new HasSlotController(this, \"help-text\", \"label\")"
+            },
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "readonly": true,
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "resizeObserver",
+              "type": {
+                "text": "ResizeObserver"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "input",
+              "type": {
+                "text": "HTMLInputElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "output",
+              "type": {
+                "text": "HTMLOutputElement | null"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "hasFocus",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "hasTooltip",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "title",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "title"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The name of the range, submitted as a name/value pair with form data.",
+              "attribute": "name"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The current value of the range, submitted as a name/value pair with form data.",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The range's label. If you need to display HTML, use the `label` slot instead.",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "helpText",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The range's help text. If you need to display HTML, use the help-text slot instead.",
+              "attribute": "help-text"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the range.",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "min",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The minimum acceptable value of the range.",
+              "attribute": "min"
+            },
+            {
+              "kind": "field",
+              "name": "max",
+              "type": {
+                "text": "number"
+              },
+              "default": "100",
+              "description": "The maximum acceptable value of the range.",
+              "attribute": "max"
+            },
+            {
+              "kind": "field",
+              "name": "step",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "description": "The interval at which the range will increase and decrease.",
+              "attribute": "step"
+            },
+            {
+              "kind": "field",
+              "name": "tooltip",
+              "type": {
+                "text": "\"top\" | \"bottom\" | \"none\""
+              },
+              "default": "\"top\"",
+              "description": "The preferred placement of the range's tooltip.",
+              "attribute": "tooltip"
+            },
+            {
+              "kind": "field",
+              "name": "tooltipFormatter",
+              "type": {
+                "text": "(value: number) => string"
+              },
+              "description": "A function used to format the tooltip's value. The range's value is passed as the first and only argument. The\nfunction should return a string to display in the tooltip."
+            },
+            {
+              "kind": "field",
+              "name": "form",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
+              "attribute": "form",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "defaultValue",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The default value of the form control. Primarily used for resetting the form control."
+            },
+            {
+              "kind": "field",
+              "name": "validity",
+              "description": "Gets the validity state object",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "validationMessage",
+              "description": "Gets the validation message",
+              "readonly": true
+            },
+            {
+              "kind": "method",
+              "name": "handleChange",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleInput",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleBlur",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleFocus",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleThumbDragStart",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleThumbDragEnd",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "syncProgress",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "percent",
+                  "type": {
+                    "text": "number"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "syncTooltip",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "percent",
+                  "type": {
+                    "text": "number"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleValueChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleDisabledChange"
+            },
+            {
+              "kind": "method",
+              "name": "syncRange"
+            },
+            {
+              "kind": "method",
+              "name": "handleInvalid",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "focus",
+              "parameters": [
+                {
+                  "name": "options",
+                  "optional": true,
+                  "type": {
+                    "text": "FocusOptions"
+                  }
+                }
+              ],
+              "description": "Sets focus on the range."
+            },
+            {
+              "kind": "method",
+              "name": "blur",
+              "description": "Removes focus from the range."
+            },
+            {
+              "kind": "method",
+              "name": "stepUp",
+              "description": "Increments the value of the range by the value of the step attribute."
+            },
+            {
+              "kind": "method",
+              "name": "stepDown",
+              "description": "Decrements the value of the range by the value of the step attribute."
+            },
+            {
+              "kind": "method",
+              "name": "checkValidity",
+              "description": "Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid."
+            },
+            {
+              "kind": "method",
+              "name": "getForm",
+              "return": {
+                "type": {
+                  "text": "HTMLFormElement | null"
+                }
+              },
+              "description": "Gets the associated form, if one exists."
+            },
+            {
+              "kind": "method",
+              "name": "reportValidity",
+              "description": "Checks for validity and shows the browser's validation message if the control is invalid."
+            },
+            {
+              "kind": "method",
+              "name": "setCustomValidity",
+              "parameters": [
+                {
+                  "name": "message",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ],
+              "description": "Sets a custom validation message. Pass an empty string to restore validity."
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the control loses focus.",
+              "name": "p-blur",
+              "reactName": "onPBlur",
+              "eventName": "PBlurEvent"
+            },
+            {
+              "description": "Emitted when an alteration to the control's value is committed by the user.",
+              "name": "p-change",
+              "reactName": "onPChange",
+              "eventName": "PChangeEvent"
+            },
+            {
+              "description": "Emitted when the control gains focus.",
+              "name": "p-focus",
+              "reactName": "onPFocus",
+              "eventName": "PFocusEvent"
+            },
+            {
+              "description": "Emitted when the control receives input.",
+              "name": "p-input",
+              "reactName": "onPInput",
+              "eventName": "PInputEvent"
+            },
+            {
+              "description": "Emitted when the form control has been checked for validity and its constraints aren't satisfied.",
+              "name": "p-invalid",
+              "reactName": "onPInvalid",
+              "eventName": "PInvalidEvent"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "title",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "title"
+            },
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The name of the range, submitted as a name/value pair with form data.",
+              "fieldName": "name"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The current value of the range, submitted as a name/value pair with form data.",
+              "fieldName": "value"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The range's label. If you need to display HTML, use the `label` slot instead.",
+              "fieldName": "label"
+            },
+            {
+              "name": "help-text",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The range's help text. If you need to display HTML, use the help-text slot instead.",
+              "fieldName": "helpText"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the range.",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "min",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The minimum acceptable value of the range.",
+              "fieldName": "min"
+            },
+            {
+              "name": "max",
+              "type": {
+                "text": "number"
+              },
+              "default": "100",
+              "description": "The maximum acceptable value of the range.",
+              "fieldName": "max"
+            },
+            {
+              "name": "step",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "description": "The interval at which the range will increase and decrease.",
+              "fieldName": "step"
+            },
+            {
+              "name": "tooltip",
+              "type": {
+                "text": "\"top\" | \"bottom\" | \"none\""
+              },
+              "default": "\"top\"",
+              "description": "The preferred placement of the range's tooltip.",
+              "fieldName": "tooltip"
+            },
+            {
+              "name": "form",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
+              "fieldName": "form"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "Ranges allow the user to select a single value within a given range using a slider.",
+          "tagNameWithoutPrefix": "range",
+          "tagName": "p-range",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary Ranges allow the user to select a single value within a given range using a slider.\n * @documentation https://pureui.xyz/components/range\n * @status stable\n * @since 2.0\n *\n * @slot label - The range's label. Alternatively, you can use the `label` attribute.\n * @slot help-text - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.\n *\n * @event p-blur - Emitted when the control loses focus.\n * @event p-change - Emitted when an alteration to the control's value is committed by the user.\n * @event p-focus - Emitted when the control gains focus.\n * @event p-input - Emitted when the control receives input.\n * @event p-invalid - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n *\n * @csspart form-control - The form control that wraps the label, input, and help text.\n * @csspart form-control-label - The label's wrapper.\n * @csspart form-control-input - The range's wrapper.\n * @csspart form-control-help-text - The help text's wrapper.\n * @csspart base - The component's base wrapper.\n * @csspart input - The internal `<input>` element.\n * @csspart tooltip - The range's tooltip.\n *\n * @cssproperty --thumb-size - The size of the thumb.\n * @cssproperty --tooltip-offset - The vertical distance the tooltip is offset from the track.\n * @cssproperty --track-color-active - The color of the portion of the track that represents the current value.\n * @cssproperty --track-color-inactive - The of the portion of the track that represents the remaining value.\n * @cssproperty --track-height - The height of the track.\n * @cssproperty --track-active-offset - The point of origin of the active track.\n */",
+          "documentation": "https://pureui.xyz/components/range",
+          "status": "stable",
+          "since": "2.0"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PRange",
+            "module": "components/range/range.js"
           }
         }
       ]
@@ -17617,7 +17617,7 @@
   "package": {
     "name": "pure-uikit",
     "description": "A forward-thinking library of web components.",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "author": "Mr.P",
     "homepage": "https://pureui.xyz",
     "license": "MIT"

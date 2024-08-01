@@ -3,6 +3,33 @@
   "version": 1.1,
   "tags": [
     {
+      "name": "p-animated-image",
+      "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
+      "attributes": [
+        {
+          "name": "src",
+          "description": "The path to the image to load.",
+          "values": []
+        },
+        {
+          "name": "alt",
+          "description": "A description of the image used by assistive devices.",
+          "values": []
+        },
+        {
+          "name": "play",
+          "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+          "values": []
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://pureui.xyz/components/animated-image"
+        }
+      ]
+    },
+    {
       "name": "p-alert",
       "description": "Alerts are used to display important messages inline or as toast notifications.\n---\n\n\n### **Events:**\n - **p-show** - Emitted when the alert opens.\n- **p-after-show** - Emitted after the alert opens and all animations are complete.\n- **p-hide** - Emitted when the alert closes.\n- **p-after-hide** - Emitted after the alert closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the alert.\n- **hide()** - Hides the alert\n- **toast()** - Displays the alert as a toast notification. This will move the alert out of its position in the DOM and, when\ndismissed, it will be removed from the DOM completely. By storing a reference to the alert, you can reuse it by\ncalling this method again. The returned promise will resolve after the alert is hidden.\n\n### **Slots:**\n - _default_ - The alert's main content.\n- **icon** - An icon to show in the alert. Works best with `<p-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the optional icon.\n- **message** - The container that wraps the alert's main content.\n- **close-button** - The close button, an `<p-icon-button>`.\n- **close-button__base** - The close button's exported `base` part.",
       "attributes": [
@@ -37,33 +64,6 @@
         {
           "name": "Documentation",
           "url": "https://pureui.xyz/components/alert"
-        }
-      ]
-    },
-    {
-      "name": "p-animated-image",
-      "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
-      "attributes": [
-        {
-          "name": "src",
-          "description": "The path to the image to load.",
-          "values": []
-        },
-        {
-          "name": "alt",
-          "description": "A description of the image used by assistive devices.",
-          "values": []
-        },
-        {
-          "name": "play",
-          "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-          "values": []
-        }
-      ],
-      "references": [
-        {
-          "name": "Documentation",
-          "url": "https://pureui.xyz/components/animated-image"
         }
       ]
     },
@@ -700,33 +700,6 @@
       ]
     },
     {
-      "name": "p-details",
-      "description": "Details show a brief summary and expand to show additional content.\n---\n\n\n### **Events:**\n - **p-show** - Emitted when the details opens.\n- **p-after-show** - Emitted after the details opens and all animations are complete.\n- **p-hide** - Emitted when the details closes.\n- **p-after-hide** - Emitted after the details closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the details.\n- **hide()** - Hides the details\n\n### **Slots:**\n - _default_ - The details' main content.\n- **summary** - The details' summary. Alternatively, you can use the `summary` attribute.\n- **expand-icon** - Optional expand icon to use instead of the default. Works best with `<p-icon>`.\n- **collapse-icon** - Optional collapse icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **header** - The header that wraps both the summary and the expand/collapse icon.\n- **summary** - The container that wraps the summary.\n- **summary-icon** - The container that wraps the expand/collapse icons.\n- **content** - The details content.",
-      "attributes": [
-        {
-          "name": "open",
-          "description": "Indicates whether or not the details is open. You can toggle this attribute to show and hide the details, or you\ncan use the `show()` and `hide()` methods and this attribute will reflect the details' open state.",
-          "values": []
-        },
-        {
-          "name": "summary",
-          "description": "The summary to show in the header. If you need to display HTML, use the `summary` slot instead.",
-          "values": []
-        },
-        {
-          "name": "disabled",
-          "description": "Disables the details so it can't be toggled.",
-          "values": []
-        }
-      ],
-      "references": [
-        {
-          "name": "Documentation",
-          "url": "https://pureui.xyz/components/details"
-        }
-      ]
-    },
-    {
       "name": "p-copy-button",
       "description": "Copies text data to the clipboard when the user clicks the trigger.\n---\n\n\n### **Events:**\n - **p-copy** - Emitted when the data has been copied.\n- **p-error** - Emitted when the data could not be copied.\n\n### **Slots:**\n - **copy-icon** - The icon to show in the default copy state. Works best with `<p-icon>`.\n- **success-icon** - The icon to show when the content is copied. Works best with `<p-icon>`.\n- **error-icon** - The icon to show when a copy error occurs. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--success-color** - The color to use for success feedback. _(default: undefined)_\n- **--error-color** - The color to use for error feedback. _(default: undefined)_\n\n### **CSS Parts:**\n - **button** - The internal `<button>` element.\n- **copy-icon** - The container that holds the copy icon.\n- **success-icon** - The container that holds the success icon.\n- **error-icon** - The container that holds the error icon.\n- **tooltip__base** - The tooltip's exported `base` part.\n- **tooltip__base__popup** - The tooltip's exported `popup` part.\n- **tooltip__base__arrow** - The tooltip's exported `arrow` part.\n- **tooltip__body** - The tooltip's exported `body` part.",
       "attributes": [
@@ -785,6 +758,33 @@
         {
           "name": "Documentation",
           "url": "https://pureui.xyz/components/copy-button"
+        }
+      ]
+    },
+    {
+      "name": "p-details",
+      "description": "Details show a brief summary and expand to show additional content.\n---\n\n\n### **Events:**\n - **p-show** - Emitted when the details opens.\n- **p-after-show** - Emitted after the details opens and all animations are complete.\n- **p-hide** - Emitted when the details closes.\n- **p-after-hide** - Emitted after the details closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the details.\n- **hide()** - Hides the details\n\n### **Slots:**\n - _default_ - The details' main content.\n- **summary** - The details' summary. Alternatively, you can use the `summary` attribute.\n- **expand-icon** - Optional expand icon to use instead of the default. Works best with `<p-icon>`.\n- **collapse-icon** - Optional collapse icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **header** - The header that wraps both the summary and the expand/collapse icon.\n- **summary** - The container that wraps the summary.\n- **summary-icon** - The container that wraps the expand/collapse icons.\n- **content** - The details content.",
+      "attributes": [
+        {
+          "name": "open",
+          "description": "Indicates whether or not the details is open. You can toggle this attribute to show and hide the details, or you\ncan use the `show()` and `hide()` methods and this attribute will reflect the details' open state.",
+          "values": []
+        },
+        {
+          "name": "summary",
+          "description": "The summary to show in the header. If you need to display HTML, use the `summary` slot instead.",
+          "values": []
+        },
+        {
+          "name": "disabled",
+          "description": "Disables the details so it can't be toggled.",
+          "values": []
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://pureui.xyz/components/details"
         }
       ]
     },
@@ -976,77 +976,6 @@
       ]
     },
     {
-      "name": "p-format-number",
-      "description": "Formats a number using the specified locale and options.\n---\n",
-      "attributes": [
-        {
-          "name": "value",
-          "description": "The number to format.",
-          "values": []
-        },
-        {
-          "name": "type",
-          "description": "The formatting style to use.",
-          "values": [
-            { "name": "currency" },
-            { "name": "decimal" },
-            { "name": "percent" }
-          ]
-        },
-        {
-          "name": "no-grouping",
-          "description": "Turns off grouping separators.",
-          "values": []
-        },
-        {
-          "name": "currency",
-          "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting.",
-          "values": []
-        },
-        {
-          "name": "currency-display",
-          "description": "How to display the currency.",
-          "values": [
-            { "name": "symbol" },
-            { "name": "narrowSymbol" },
-            { "name": "code" },
-            { "name": "name" }
-          ]
-        },
-        {
-          "name": "minimum-integer-digits",
-          "description": "The minimum number of integer digits to use. Possible values are 1-21.",
-          "values": []
-        },
-        {
-          "name": "minimum-fraction-digits",
-          "description": "The minimum number of fraction digits to use. Possible values are 0-20.",
-          "values": []
-        },
-        {
-          "name": "maximum-fraction-digits",
-          "description": "The maximum number of fraction digits to use. Possible values are 0-0.",
-          "values": []
-        },
-        {
-          "name": "minimum-significant-digits",
-          "description": "The minimum number of significant digits to use. Possible values are 1-21.",
-          "values": []
-        },
-        {
-          "name": "maximum-significant-digits",
-          "description": "The maximum number of significant digits to use,. Possible values are 1-21.",
-          "values": []
-        }
-      ],
-      "references": [
-        {
-          "name": "Documentation",
-          "url": "https://pureui.xyz/components/format-number"
-        }
-      ]
-    },
-    {
       "name": "p-format-date",
       "description": "Formats a date/time using the specified locale and options.\n---\n",
       "attributes": [
@@ -1129,6 +1058,77 @@
         {
           "name": "Documentation",
           "url": "https://pureui.xyz/components/format-date"
+        }
+      ]
+    },
+    {
+      "name": "p-format-number",
+      "description": "Formats a number using the specified locale and options.\n---\n",
+      "attributes": [
+        {
+          "name": "value",
+          "description": "The number to format.",
+          "values": []
+        },
+        {
+          "name": "type",
+          "description": "The formatting style to use.",
+          "values": [
+            { "name": "currency" },
+            { "name": "decimal" },
+            { "name": "percent" }
+          ]
+        },
+        {
+          "name": "no-grouping",
+          "description": "Turns off grouping separators.",
+          "values": []
+        },
+        {
+          "name": "currency",
+          "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting.",
+          "values": []
+        },
+        {
+          "name": "currency-display",
+          "description": "How to display the currency.",
+          "values": [
+            { "name": "symbol" },
+            { "name": "narrowSymbol" },
+            { "name": "code" },
+            { "name": "name" }
+          ]
+        },
+        {
+          "name": "minimum-integer-digits",
+          "description": "The minimum number of integer digits to use. Possible values are 1-21.",
+          "values": []
+        },
+        {
+          "name": "minimum-fraction-digits",
+          "description": "The minimum number of fraction digits to use. Possible values are 0-20.",
+          "values": []
+        },
+        {
+          "name": "maximum-fraction-digits",
+          "description": "The maximum number of fraction digits to use. Possible values are 0-0.",
+          "values": []
+        },
+        {
+          "name": "minimum-significant-digits",
+          "description": "The minimum number of significant digits to use. Possible values are 1-21.",
+          "values": []
+        },
+        {
+          "name": "maximum-significant-digits",
+          "description": "The maximum number of significant digits to use,. Possible values are 1-21.",
+          "values": []
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://pureui.xyz/components/format-number"
         }
       ]
     },
@@ -1264,14 +1264,6 @@
           "name": "Documentation",
           "url": "https://pureui.xyz/components/include"
         }
-      ]
-    },
-    {
-      "name": "p-menu",
-      "description": "Menus provide a list of options for the user to choose from.\n---\n\n\n### **Events:**\n - **p-select** - Emitted when a menu item is selected.\n\n### **Slots:**\n - _default_ - The menu's content, including menu items, menu labels, and dividers.",
-      "attributes": [],
-      "references": [
-        { "name": "Documentation", "url": "https://pureui.xyz/components/menu" }
       ]
     },
     {
@@ -1475,6 +1467,14 @@
           "name": "Documentation",
           "url": "https://pureui.xyz/components/input"
         }
+      ]
+    },
+    {
+      "name": "p-menu",
+      "description": "Menus provide a list of options for the user to choose from.\n---\n\n\n### **Events:**\n - **p-select** - Emitted when a menu item is selected.\n\n### **Slots:**\n - _default_ - The menu's content, including menu items, menu labels, and dividers.",
+      "attributes": [],
+      "references": [
+        { "name": "Documentation", "url": "https://pureui.xyz/components/menu" }
       ]
     },
     {
@@ -1958,73 +1958,6 @@
       ]
     },
     {
-      "name": "p-range",
-      "description": "Ranges allow the user to select a single value within a given range using a slider.\n---\n\n\n### **Events:**\n - **p-blur** - Emitted when the control loses focus.\n- **p-change** - Emitted when an alteration to the control's value is committed by the user.\n- **p-focus** - Emitted when the control gains focus.\n- **p-input** - Emitted when the control receives input.\n- **p-invalid** - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n\n### **Methods:**\n - **focus(options: _FocusOptions_)** - Sets focus on the range.\n- **blur()** - Removes focus from the range.\n- **stepUp()** - Increments the value of the range by the value of the step attribute.\n- **stepDown()** - Decrements the value of the range by the value of the step attribute.\n- **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n\n### **Slots:**\n - **label** - The range's label. Alternatively, you can use the `label` attribute.\n- **help-text** - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.\n\n### **CSS Properties:**\n - **--thumb-size** - The size of the thumb. _(default: undefined)_\n- **--tooltip-offset** - The vertical distance the tooltip is offset from the track. _(default: undefined)_\n- **--track-color-active** - The color of the portion of the track that represents the current value. _(default: undefined)_\n- **--track-color-inactive** - The of the portion of the track that represents the remaining value. _(default: undefined)_\n- **--track-height** - The height of the track. _(default: undefined)_\n- **--track-active-offset** - The point of origin of the active track. _(default: undefined)_\n\n### **CSS Parts:**\n - **form-control** - The form control that wraps the label, input, and help text.\n- **form-control-label** - The label's wrapper.\n- **form-control-input** - The range's wrapper.\n- **form-control-help-text** - The help text's wrapper.\n- **base** - The component's base wrapper.\n- **input** - The internal `<input>` element.\n- **tooltip** - The range's tooltip.",
-      "attributes": [
-        { "name": "title", "values": [] },
-        {
-          "name": "name",
-          "description": "The name of the range, submitted as a name/value pair with form data.",
-          "values": []
-        },
-        {
-          "name": "value",
-          "description": "The current value of the range, submitted as a name/value pair with form data.",
-          "values": []
-        },
-        {
-          "name": "label",
-          "description": "The range's label. If you need to display HTML, use the `label` slot instead.",
-          "values": []
-        },
-        {
-          "name": "help-text",
-          "description": "The range's help text. If you need to display HTML, use the help-text slot instead.",
-          "values": []
-        },
-        {
-          "name": "disabled",
-          "description": "Disables the range.",
-          "values": []
-        },
-        {
-          "name": "min",
-          "description": "The minimum acceptable value of the range.",
-          "values": []
-        },
-        {
-          "name": "max",
-          "description": "The maximum acceptable value of the range.",
-          "values": []
-        },
-        {
-          "name": "step",
-          "description": "The interval at which the range will increase and decrease.",
-          "values": []
-        },
-        {
-          "name": "tooltip",
-          "description": "The preferred placement of the range's tooltip.",
-          "values": [
-            { "name": "top" },
-            { "name": "bottom" },
-            { "name": "none" }
-          ]
-        },
-        {
-          "name": "form",
-          "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
-          "values": []
-        }
-      ],
-      "references": [
-        {
-          "name": "Documentation",
-          "url": "https://pureui.xyz/components/range"
-        }
-      ]
-    },
-    {
       "name": "p-rating",
       "description": "Ratings give users a way to quickly view and provide feedback.\n---\n\n\n### **Events:**\n - **p-change** - Emitted when the rating's value changes.\n- **p-hover** - Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value.\n\n### **Methods:**\n - **focus(options: _FocusOptions_)** - Sets focus on the rating.\n- **blur()** - Removes focus from the rating.\n\n### **CSS Properties:**\n - **--symbol-color** - The inactive color for symbols. _(default: undefined)_\n- **--symbol-color-active** - The active color for symbols. _(default: undefined)_\n- **--symbol-size** - The size of symbols. _(default: undefined)_\n- **--symbol-spacing** - The spacing to use around symbols. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
       "attributes": [
@@ -2100,6 +2033,73 @@
         {
           "name": "Documentation",
           "url": "https://pureui.xyz/components/relative-time"
+        }
+      ]
+    },
+    {
+      "name": "p-range",
+      "description": "Ranges allow the user to select a single value within a given range using a slider.\n---\n\n\n### **Events:**\n - **p-blur** - Emitted when the control loses focus.\n- **p-change** - Emitted when an alteration to the control's value is committed by the user.\n- **p-focus** - Emitted when the control gains focus.\n- **p-input** - Emitted when the control receives input.\n- **p-invalid** - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n\n### **Methods:**\n - **focus(options: _FocusOptions_)** - Sets focus on the range.\n- **blur()** - Removes focus from the range.\n- **stepUp()** - Increments the value of the range by the value of the step attribute.\n- **stepDown()** - Decrements the value of the range by the value of the step attribute.\n- **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n\n### **Slots:**\n - **label** - The range's label. Alternatively, you can use the `label` attribute.\n- **help-text** - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.\n\n### **CSS Properties:**\n - **--thumb-size** - The size of the thumb. _(default: undefined)_\n- **--tooltip-offset** - The vertical distance the tooltip is offset from the track. _(default: undefined)_\n- **--track-color-active** - The color of the portion of the track that represents the current value. _(default: undefined)_\n- **--track-color-inactive** - The of the portion of the track that represents the remaining value. _(default: undefined)_\n- **--track-height** - The height of the track. _(default: undefined)_\n- **--track-active-offset** - The point of origin of the active track. _(default: undefined)_\n\n### **CSS Parts:**\n - **form-control** - The form control that wraps the label, input, and help text.\n- **form-control-label** - The label's wrapper.\n- **form-control-input** - The range's wrapper.\n- **form-control-help-text** - The help text's wrapper.\n- **base** - The component's base wrapper.\n- **input** - The internal `<input>` element.\n- **tooltip** - The range's tooltip.",
+      "attributes": [
+        { "name": "title", "values": [] },
+        {
+          "name": "name",
+          "description": "The name of the range, submitted as a name/value pair with form data.",
+          "values": []
+        },
+        {
+          "name": "value",
+          "description": "The current value of the range, submitted as a name/value pair with form data.",
+          "values": []
+        },
+        {
+          "name": "label",
+          "description": "The range's label. If you need to display HTML, use the `label` slot instead.",
+          "values": []
+        },
+        {
+          "name": "help-text",
+          "description": "The range's help text. If you need to display HTML, use the help-text slot instead.",
+          "values": []
+        },
+        {
+          "name": "disabled",
+          "description": "Disables the range.",
+          "values": []
+        },
+        {
+          "name": "min",
+          "description": "The minimum acceptable value of the range.",
+          "values": []
+        },
+        {
+          "name": "max",
+          "description": "The maximum acceptable value of the range.",
+          "values": []
+        },
+        {
+          "name": "step",
+          "description": "The interval at which the range will increase and decrease.",
+          "values": []
+        },
+        {
+          "name": "tooltip",
+          "description": "The preferred placement of the range's tooltip.",
+          "values": [
+            { "name": "top" },
+            { "name": "bottom" },
+            { "name": "none" }
+          ]
+        },
+        {
+          "name": "form",
+          "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
+          "values": []
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://pureui.xyz/components/range"
         }
       ]
     },

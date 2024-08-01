@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="default" data-pure-ui-version="1.0.1">
+<html lang="en" data-layout="default" data-pure-ui-version="1.0.2">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -83,7 +83,7 @@
         <a href="/">
           <img src="/assets/images/wordmark.svg" alt="Pure UI" />
         </a>
-        <div class="sidebar-version">1.0.1</div>
+        <div class="sidebar-version">1.0.2</div>
       </header>
 
       <button class="search-box" type="button" title="Press / to search" aria-label="Search" data-plugin="search">
@@ -424,7 +424,7 @@
             >
             on the <code>&lt;html&gt;</code> element. Here’s an example that renders Pure UI components in Spanish.
           </p>
-          <pre><code class="language-html" id="code-block-67"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>es<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+          <pre><code class="language-html" id="code-block-1006"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>es<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/path/to/pure-ui/dist/translations/es.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
@@ -433,7 +433,7 @@
     ...
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-67"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1006"></p-copy-button></pre>
           <p>
             Through the magic of a mutation observer, changing the <code>lang</code> attribute will automatically update
             all localized components to use the new locale.
@@ -475,12 +475,12 @@
             <code>lang</code> attribute. Once a translation is registered, localized components will update
             automatically.
           </p>
-          <pre><code class="language-js" id="code-block-68"><span class="token comment">// Same as setting &lt;html lang="de"&gt;</span>
+          <pre><code class="language-js" id="code-block-1007"><span class="token comment">// Same as setting &lt;html lang="de"&gt;</span>
 document<span class="token punctuation">.</span>documentElement<span class="token punctuation">.</span>lang <span class="token operator">=</span> <span class="token string">"de"</span><span class="token punctuation">;</span>
 
 <span class="token comment">// Import the translation</span>
 <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">"/path/to/pure-ui/dist/translations/de.js"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-68"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1007"></p-copy-button></pre>
           <h3 id="translation-resolution" class="anchor-heading">
             Translation Resolution<a
               href="#translation-resolution"
@@ -557,7 +557,7 @@ document<span class="token punctuation">.</span>documentElement<span class="toke
             You can use a different locale for an individual component by setting its <code>lang</code> and/or
             <code>dir</code> attributes. Here’s a contrived example to demonstrate.
           </p>
-          <pre><code class="language-html" id="code-block-69"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>es<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+          <pre><code class="language-html" id="code-block-1008"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>es<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   ...
 
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
@@ -565,12 +565,12 @@ document<span class="token punctuation">.</span>documentElement<span class="toke
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-button</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ru<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token comment">&lt;!-- Russian --&gt;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-button</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-69"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1008"></p-copy-button></pre>
           <p>
             For performance reasons, the <code>lang</code> and <code>dir</code> attributes must be on the component
             itself, not on an ancestor element.
           </p>
-          <pre><code class="language-html" id="code-block-70"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>es<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+          <pre><code class="language-html" id="code-block-1009"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>es<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   ...
 
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
@@ -579,7 +579,7 @@ document<span class="token punctuation">.</span>documentElement<span class="toke
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-70"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1009"></p-copy-button></pre>
           <p>
             This limitation exists because there’s no efficient way to determine the current locale of a given element
             in a DOM tree. I consider this a gap in the platform and
@@ -608,7 +608,7 @@ document<span class="token punctuation">.</span>documentElement<span class="toke
             Let’s create a Spanish translation as an example. The following assumes you’re using TypeScript, but you can
             also create translations with regular JavaScript.
           </p>
-          <pre><code class="language-js" id="code-block-71"><span class="token keyword">import</span> <span class="token punctuation">{</span> registerTranslation <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/utilities/localize'</span><span class="token punctuation">;</span>
+          <pre><code class="language-js" id="code-block-1010"><span class="token keyword">import</span> <span class="token punctuation">{</span> registerTranslation <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/utilities/localize'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> type <span class="token punctuation">{</span> Translation <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/utilities/localize'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token literal-property property">translation</span><span class="token operator">:</span> Translation <span class="token operator">=</span> <span class="token punctuation">{</span>
@@ -624,9 +624,9 @@ document<span class="token punctuation">.</span>documentElement<span class="toke
 <span class="token function">registerTranslation</span><span class="token punctuation">(</span>translation<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> translation<span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-71"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1010"></p-copy-button></pre>
           <p>Once your translation has been compiled to JavaScript, import it and activate it like this.</p>
-          <pre><code class="language-html" id="code-block-72"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>es<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+          <pre><code class="language-html" id="code-block-1011"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>es<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/path/to/es.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
@@ -635,7 +635,7 @@ document<span class="token punctuation">.</span>documentElement<span class="toke
     ...
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-72"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1011"></p-copy-button></pre>
           <div role="alert" class="callout callout--tip">
             <p>
               If your translation isn’t working, make sure you’re using the same localize module when importing
