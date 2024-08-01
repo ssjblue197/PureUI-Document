@@ -26,11 +26,11 @@ import {
   tree_item_default
 } from "../chunks/chunk.IDQEOZFD.js";
 import {
-  rating_default
-} from "../chunks/chunk.YZW5RW5R.js";
-import {
   relative_time_default
 } from "../chunks/chunk.MQNFEYDP.js";
+import {
+  rating_default
+} from "../chunks/chunk.YZW5RW5R.js";
 import {
   resize_observer_default
 } from "../chunks/chunk.SDYORP3Z.js";
@@ -125,11 +125,11 @@ import {
   card_default
 } from "../chunks/chunk.TCCQA54G.js";
 import {
-  carousel_item_default
-} from "../chunks/chunk.2MM6JNLS.js";
-import {
   carousel_default
 } from "../chunks/chunk.AHR76GSU.js";
+import {
+  carousel_item_default
+} from "../chunks/chunk.2MM6JNLS.js";
 import {
   checkbox_default
 } from "../chunks/chunk.KSD77AQY.js";
@@ -149,11 +149,11 @@ import {
   animation_default
 } from "../chunks/chunk.ZRCA4K5Q.js";
 import {
-  badge_default
-} from "../chunks/chunk.7Q6FNCUT.js";
-import {
   avatar_default
 } from "../chunks/chunk.A556JP6W.js";
+import {
+  badge_default
+} from "../chunks/chunk.7Q6FNCUT.js";
 import {
   breadcrumb_default
 } from "../chunks/chunk.MDHCV5JP.js";

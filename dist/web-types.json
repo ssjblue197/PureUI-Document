@@ -104,6 +104,80 @@
           }
         },
         {
+          "name": "p-animated-image",
+          "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "src",
+              "description": "The path to the image to load.",
+              "value": { "type": "string" }
+            },
+            {
+              "name": "alt",
+              "description": "A description of the image used by assistive devices.",
+              "value": { "type": "string" }
+            },
+            {
+              "name": "play",
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "value": { "type": "boolean" }
+            }
+          ],
+          "slots": [
+            {
+              "name": "play-icon",
+              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`."
+            },
+            {
+              "name": "pause-icon",
+              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`."
+            }
+          ],
+          "events": [
+            {
+              "name": "p-load",
+              "description": "Emitted when the image loads successfully."
+            },
+            {
+              "name": "p-error",
+              "description": "Emitted when the image fails to load."
+            }
+          ],
+          "js": {
+            "properties": [
+              { "name": "animatedImage", "type": "HTMLImageElement" },
+              { "name": "frozenFrame", "type": "string" },
+              { "name": "isLoaded", "type": "boolean" },
+              {
+                "name": "src",
+                "description": "The path to the image to load.",
+                "type": "string"
+              },
+              {
+                "name": "alt",
+                "description": "A description of the image used by assistive devices.",
+                "type": "string"
+              },
+              {
+                "name": "play",
+                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+                "type": "boolean"
+              }
+            ],
+            "events": [
+              {
+                "name": "p-load",
+                "description": "Emitted when the image loads successfully."
+              },
+              {
+                "name": "p-error",
+                "description": "Emitted when the image fails to load."
+              }
+            ]
+          }
+        },
+        {
           "name": "p-animation",
           "description": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n---\n\n\n### **Events:**\n - **p-cancel** - Emitted when the animation is canceled.\n- **p-finish** - Emitted when the animation finishes.\n- **p-start** - Emitted when the animation starts or restarts.\n\n### **Methods:**\n - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.\n- **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.\n\n### **Slots:**\n - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.",
           "doc-url": "",
@@ -264,80 +338,6 @@
               {
                 "name": "p-start",
                 "description": "Emitted when the animation starts or restarts."
-              }
-            ]
-          }
-        },
-        {
-          "name": "p-animated-image",
-          "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "src",
-              "description": "The path to the image to load.",
-              "value": { "type": "string" }
-            },
-            {
-              "name": "alt",
-              "description": "A description of the image used by assistive devices.",
-              "value": { "type": "string" }
-            },
-            {
-              "name": "play",
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "value": { "type": "boolean" }
-            }
-          ],
-          "slots": [
-            {
-              "name": "play-icon",
-              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`."
-            },
-            {
-              "name": "pause-icon",
-              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`."
-            }
-          ],
-          "events": [
-            {
-              "name": "p-load",
-              "description": "Emitted when the image loads successfully."
-            },
-            {
-              "name": "p-error",
-              "description": "Emitted when the image fails to load."
-            }
-          ],
-          "js": {
-            "properties": [
-              { "name": "animatedImage", "type": "HTMLImageElement" },
-              { "name": "frozenFrame", "type": "string" },
-              { "name": "isLoaded", "type": "boolean" },
-              {
-                "name": "src",
-                "description": "The path to the image to load.",
-                "type": "string"
-              },
-              {
-                "name": "alt",
-                "description": "A description of the image used by assistive devices.",
-                "type": "string"
-              },
-              {
-                "name": "play",
-                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-                "type": "boolean"
-              }
-            ],
-            "events": [
-              {
-                "name": "p-load",
-                "description": "Emitted when the image loads successfully."
-              },
-              {
-                "name": "p-error",
-                "description": "Emitted when the image fails to load."
               }
             ]
           }
@@ -3801,6 +3801,44 @@
           }
         },
         {
+          "name": "p-progress-ring",
+          "description": "Progress rings are used to show the progress of a determinate operation in a circular fashion.\n---\n\n\n### **Slots:**\n - _default_ - A label to show inside the ring.\n\n### **CSS Properties:**\n - **--size** - The diameter of the progress ring (cannot be a percentage). _(default: undefined)_\n- **--track-width** - The width of the track. _(default: undefined)_\n- **--track-color** - The color of the track. _(default: undefined)_\n- **--indicator-width** - The width of the indicator. Defaults to the track width. _(default: undefined)_\n- **--indicator-color** - The color of the indicator. _(default: undefined)_\n- **--indicator-transition-duration** - The duration of the indicator's transition when the value changes. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **label** - The progress ring label.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "value",
+              "description": "The current progress as a percentage, 0 to 100.",
+              "value": { "type": "number", "default": "0" }
+            },
+            {
+              "name": "label",
+              "description": "A custom label for assistive devices.",
+              "value": { "type": "string", "default": "\"\"" }
+            }
+          ],
+          "slots": [
+            { "name": "", "description": "A label to show inside the ring." }
+          ],
+          "events": [],
+          "js": {
+            "properties": [
+              { "name": "indicator", "type": "SVGCircleElement" },
+              { "name": "indicatorOffset", "type": "string" },
+              {
+                "name": "value",
+                "description": "The current progress as a percentage, 0 to 100.",
+                "type": "number"
+              },
+              {
+                "name": "label",
+                "description": "A custom label for assistive devices.",
+                "type": "string"
+              }
+            ],
+            "events": []
+          }
+        },
+        {
           "name": "p-progress-bar",
           "description": "Progress bars are used to show the status of an ongoing operation.\n---\n\n\n### **Slots:**\n - _default_ - A label to show inside the progress indicator.\n\n### **CSS Properties:**\n - **--height** - The progress bar's height. _(default: undefined)_\n- **--track-color** - The color of the track. _(default: undefined)_\n- **--indicator-color** - The color of the indicator. _(default: undefined)_\n- **--label-color** - The color of the label. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **indicator** - The progress bar's indicator.\n- **label** - The progress bar's label.",
           "doc-url": "",
@@ -3839,44 +3877,6 @@
                 "name": "indeterminate",
                 "description": "When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state.",
                 "type": "boolean"
-              },
-              {
-                "name": "label",
-                "description": "A custom label for assistive devices.",
-                "type": "string"
-              }
-            ],
-            "events": []
-          }
-        },
-        {
-          "name": "p-progress-ring",
-          "description": "Progress rings are used to show the progress of a determinate operation in a circular fashion.\n---\n\n\n### **Slots:**\n - _default_ - A label to show inside the ring.\n\n### **CSS Properties:**\n - **--size** - The diameter of the progress ring (cannot be a percentage). _(default: undefined)_\n- **--track-width** - The width of the track. _(default: undefined)_\n- **--track-color** - The color of the track. _(default: undefined)_\n- **--indicator-width** - The width of the indicator. Defaults to the track width. _(default: undefined)_\n- **--indicator-color** - The color of the indicator. _(default: undefined)_\n- **--indicator-transition-duration** - The duration of the indicator's transition when the value changes. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **label** - The progress ring label.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "value",
-              "description": "The current progress as a percentage, 0 to 100.",
-              "value": { "type": "number", "default": "0" }
-            },
-            {
-              "name": "label",
-              "description": "A custom label for assistive devices.",
-              "value": { "type": "string", "default": "\"\"" }
-            }
-          ],
-          "slots": [
-            { "name": "", "description": "A label to show inside the ring." }
-          ],
-          "events": [],
-          "js": {
-            "properties": [
-              { "name": "indicator", "type": "SVGCircleElement" },
-              { "name": "indicatorOffset", "type": "string" },
-              {
-                "name": "value",
-                "description": "The current progress as a percentage, 0 to 100.",
-                "type": "number"
               },
               {
                 "name": "label",
@@ -5452,40 +5452,6 @@
           }
         },
         {
-          "name": "p-tab-panel",
-          "description": "Tab panels are used inside [tab groups](/components/tab-group) to display tabbed content.\n---\n\n\n### **Slots:**\n - _default_ - The tab panel's content.\n\n### **CSS Properties:**\n - **--padding** - The tab panel's padding. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "name",
-              "description": "The tab panel's name.",
-              "value": { "type": "string", "default": "\"\"" }
-            },
-            {
-              "name": "active",
-              "description": "When true, the tab panel will be shown.",
-              "value": { "type": "boolean", "default": "false" }
-            }
-          ],
-          "slots": [{ "name": "", "description": "The tab panel's content." }],
-          "events": [],
-          "js": {
-            "properties": [
-              {
-                "name": "name",
-                "description": "The tab panel's name.",
-                "type": "string"
-              },
-              {
-                "name": "active",
-                "description": "When true, the tab panel will be shown.",
-                "type": "boolean"
-              }
-            ],
-            "events": []
-          }
-        },
-        {
           "name": "p-tag",
           "description": "Tags are used as labels to organize things or to indicate a selection.\n---\n\n\n### **Events:**\n - **p-remove** - Emitted when the remove button is activated.\n\n### **Slots:**\n - _default_ - The tag's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **content** - The tag's content.\n- **remove-button** - The tag's remove button, an `<p-icon-button>`.\n- **remove-button__base** - The remove button's exported `base` part.",
           "doc-url": "",
@@ -5553,6 +5519,40 @@
                 "description": "Emitted when the remove button is activated."
               }
             ]
+          }
+        },
+        {
+          "name": "p-tab-panel",
+          "description": "Tab panels are used inside [tab groups](/components/tab-group) to display tabbed content.\n---\n\n\n### **Slots:**\n - _default_ - The tab panel's content.\n\n### **CSS Properties:**\n - **--padding** - The tab panel's padding. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "name",
+              "description": "The tab panel's name.",
+              "value": { "type": "string", "default": "\"\"" }
+            },
+            {
+              "name": "active",
+              "description": "When true, the tab panel will be shown.",
+              "value": { "type": "boolean", "default": "false" }
+            }
+          ],
+          "slots": [{ "name": "", "description": "The tab panel's content." }],
+          "events": [],
+          "js": {
+            "properties": [
+              {
+                "name": "name",
+                "description": "The tab panel's name.",
+                "type": "string"
+              },
+              {
+                "name": "active",
+                "description": "When true, the tab panel will be shown.",
+                "type": "boolean"
+              }
+            ],
+            "events": []
           }
         },
         {

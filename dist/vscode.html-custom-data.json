@@ -41,6 +41,33 @@
       ]
     },
     {
+      "name": "p-animated-image",
+      "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
+      "attributes": [
+        {
+          "name": "src",
+          "description": "The path to the image to load.",
+          "values": []
+        },
+        {
+          "name": "alt",
+          "description": "A description of the image used by assistive devices.",
+          "values": []
+        },
+        {
+          "name": "play",
+          "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+          "values": []
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://pureui.xyz/components/animated-image"
+        }
+      ]
+    },
+    {
       "name": "p-animation",
       "description": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n---\n\n\n### **Events:**\n - **p-cancel** - Emitted when the animation is canceled.\n- **p-finish** - Emitted when the animation finishes.\n- **p-start** - Emitted when the animation starts or restarts.\n\n### **Methods:**\n - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.\n- **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.\n\n### **Slots:**\n - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.",
       "attributes": [
@@ -104,33 +131,6 @@
         {
           "name": "Documentation",
           "url": "https://pureui.xyz/components/animation"
-        }
-      ]
-    },
-    {
-      "name": "p-animated-image",
-      "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
-      "attributes": [
-        {
-          "name": "src",
-          "description": "The path to the image to load.",
-          "values": []
-        },
-        {
-          "name": "alt",
-          "description": "A description of the image used by assistive devices.",
-          "values": []
-        },
-        {
-          "name": "play",
-          "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-          "values": []
-        }
-      ],
-      "references": [
-        {
-          "name": "Documentation",
-          "url": "https://pureui.xyz/components/animated-image"
         }
       ]
     },
@@ -700,6 +700,33 @@
       ]
     },
     {
+      "name": "p-details",
+      "description": "Details show a brief summary and expand to show additional content.\n---\n\n\n### **Events:**\n - **p-show** - Emitted when the details opens.\n- **p-after-show** - Emitted after the details opens and all animations are complete.\n- **p-hide** - Emitted when the details closes.\n- **p-after-hide** - Emitted after the details closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the details.\n- **hide()** - Hides the details\n\n### **Slots:**\n - _default_ - The details' main content.\n- **summary** - The details' summary. Alternatively, you can use the `summary` attribute.\n- **expand-icon** - Optional expand icon to use instead of the default. Works best with `<p-icon>`.\n- **collapse-icon** - Optional collapse icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **header** - The header that wraps both the summary and the expand/collapse icon.\n- **summary** - The container that wraps the summary.\n- **summary-icon** - The container that wraps the expand/collapse icons.\n- **content** - The details content.",
+      "attributes": [
+        {
+          "name": "open",
+          "description": "Indicates whether or not the details is open. You can toggle this attribute to show and hide the details, or you\ncan use the `show()` and `hide()` methods and this attribute will reflect the details' open state.",
+          "values": []
+        },
+        {
+          "name": "summary",
+          "description": "The summary to show in the header. If you need to display HTML, use the `summary` slot instead.",
+          "values": []
+        },
+        {
+          "name": "disabled",
+          "description": "Disables the details so it can't be toggled.",
+          "values": []
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://pureui.xyz/components/details"
+        }
+      ]
+    },
+    {
       "name": "p-copy-button",
       "description": "Copies text data to the clipboard when the user clicks the trigger.\n---\n\n\n### **Events:**\n - **p-copy** - Emitted when the data has been copied.\n- **p-error** - Emitted when the data could not be copied.\n\n### **Slots:**\n - **copy-icon** - The icon to show in the default copy state. Works best with `<p-icon>`.\n- **success-icon** - The icon to show when the content is copied. Works best with `<p-icon>`.\n- **error-icon** - The icon to show when a copy error occurs. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--success-color** - The color to use for success feedback. _(default: undefined)_\n- **--error-color** - The color to use for error feedback. _(default: undefined)_\n\n### **CSS Parts:**\n - **button** - The internal `<button>` element.\n- **copy-icon** - The container that holds the copy icon.\n- **success-icon** - The container that holds the success icon.\n- **error-icon** - The container that holds the error icon.\n- **tooltip__base** - The tooltip's exported `base` part.\n- **tooltip__base__popup** - The tooltip's exported `popup` part.\n- **tooltip__base__arrow** - The tooltip's exported `arrow` part.\n- **tooltip__body** - The tooltip's exported `body` part.",
       "attributes": [
@@ -758,33 +785,6 @@
         {
           "name": "Documentation",
           "url": "https://pureui.xyz/components/copy-button"
-        }
-      ]
-    },
-    {
-      "name": "p-details",
-      "description": "Details show a brief summary and expand to show additional content.\n---\n\n\n### **Events:**\n - **p-show** - Emitted when the details opens.\n- **p-after-show** - Emitted after the details opens and all animations are complete.\n- **p-hide** - Emitted when the details closes.\n- **p-after-hide** - Emitted after the details closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the details.\n- **hide()** - Hides the details\n\n### **Slots:**\n - _default_ - The details' main content.\n- **summary** - The details' summary. Alternatively, you can use the `summary` attribute.\n- **expand-icon** - Optional expand icon to use instead of the default. Works best with `<p-icon>`.\n- **collapse-icon** - Optional collapse icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **header** - The header that wraps both the summary and the expand/collapse icon.\n- **summary** - The container that wraps the summary.\n- **summary-icon** - The container that wraps the expand/collapse icons.\n- **content** - The details content.",
-      "attributes": [
-        {
-          "name": "open",
-          "description": "Indicates whether or not the details is open. You can toggle this attribute to show and hide the details, or you\ncan use the `show()` and `hide()` methods and this attribute will reflect the details' open state.",
-          "values": []
-        },
-        {
-          "name": "summary",
-          "description": "The summary to show in the header. If you need to display HTML, use the `summary` slot instead.",
-          "values": []
-        },
-        {
-          "name": "disabled",
-          "description": "Disables the details so it can't be toggled.",
-          "values": []
-        }
-      ],
-      "references": [
-        {
-          "name": "Documentation",
-          "url": "https://pureui.xyz/components/details"
         }
       ]
     },
@@ -976,6 +976,77 @@
       ]
     },
     {
+      "name": "p-format-number",
+      "description": "Formats a number using the specified locale and options.\n---\n",
+      "attributes": [
+        {
+          "name": "value",
+          "description": "The number to format.",
+          "values": []
+        },
+        {
+          "name": "type",
+          "description": "The formatting style to use.",
+          "values": [
+            { "name": "currency" },
+            { "name": "decimal" },
+            { "name": "percent" }
+          ]
+        },
+        {
+          "name": "no-grouping",
+          "description": "Turns off grouping separators.",
+          "values": []
+        },
+        {
+          "name": "currency",
+          "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting.",
+          "values": []
+        },
+        {
+          "name": "currency-display",
+          "description": "How to display the currency.",
+          "values": [
+            { "name": "symbol" },
+            { "name": "narrowSymbol" },
+            { "name": "code" },
+            { "name": "name" }
+          ]
+        },
+        {
+          "name": "minimum-integer-digits",
+          "description": "The minimum number of integer digits to use. Possible values are 1-21.",
+          "values": []
+        },
+        {
+          "name": "minimum-fraction-digits",
+          "description": "The minimum number of fraction digits to use. Possible values are 0-20.",
+          "values": []
+        },
+        {
+          "name": "maximum-fraction-digits",
+          "description": "The maximum number of fraction digits to use. Possible values are 0-0.",
+          "values": []
+        },
+        {
+          "name": "minimum-significant-digits",
+          "description": "The minimum number of significant digits to use. Possible values are 1-21.",
+          "values": []
+        },
+        {
+          "name": "maximum-significant-digits",
+          "description": "The maximum number of significant digits to use,. Possible values are 1-21.",
+          "values": []
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://pureui.xyz/components/format-number"
+        }
+      ]
+    },
+    {
       "name": "p-format-date",
       "description": "Formats a date/time using the specified locale and options.\n---\n",
       "attributes": [
@@ -1058,77 +1129,6 @@
         {
           "name": "Documentation",
           "url": "https://pureui.xyz/components/format-date"
-        }
-      ]
-    },
-    {
-      "name": "p-format-number",
-      "description": "Formats a number using the specified locale and options.\n---\n",
-      "attributes": [
-        {
-          "name": "value",
-          "description": "The number to format.",
-          "values": []
-        },
-        {
-          "name": "type",
-          "description": "The formatting style to use.",
-          "values": [
-            { "name": "currency" },
-            { "name": "decimal" },
-            { "name": "percent" }
-          ]
-        },
-        {
-          "name": "no-grouping",
-          "description": "Turns off grouping separators.",
-          "values": []
-        },
-        {
-          "name": "currency",
-          "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting.",
-          "values": []
-        },
-        {
-          "name": "currency-display",
-          "description": "How to display the currency.",
-          "values": [
-            { "name": "symbol" },
-            { "name": "narrowSymbol" },
-            { "name": "code" },
-            { "name": "name" }
-          ]
-        },
-        {
-          "name": "minimum-integer-digits",
-          "description": "The minimum number of integer digits to use. Possible values are 1-21.",
-          "values": []
-        },
-        {
-          "name": "minimum-fraction-digits",
-          "description": "The minimum number of fraction digits to use. Possible values are 0-20.",
-          "values": []
-        },
-        {
-          "name": "maximum-fraction-digits",
-          "description": "The maximum number of fraction digits to use. Possible values are 0-0.",
-          "values": []
-        },
-        {
-          "name": "minimum-significant-digits",
-          "description": "The minimum number of significant digits to use. Possible values are 1-21.",
-          "values": []
-        },
-        {
-          "name": "maximum-significant-digits",
-          "description": "The maximum number of significant digits to use,. Possible values are 1-21.",
-          "values": []
-        }
-      ],
-      "references": [
-        {
-          "name": "Documentation",
-          "url": "https://pureui.xyz/components/format-number"
         }
       ]
     },
@@ -1264,6 +1264,14 @@
           "name": "Documentation",
           "url": "https://pureui.xyz/components/include"
         }
+      ]
+    },
+    {
+      "name": "p-menu",
+      "description": "Menus provide a list of options for the user to choose from.\n---\n\n\n### **Events:**\n - **p-select** - Emitted when a menu item is selected.\n\n### **Slots:**\n - _default_ - The menu's content, including menu items, menu labels, and dividers.",
+      "attributes": [],
+      "references": [
+        { "name": "Documentation", "url": "https://pureui.xyz/components/menu" }
       ]
     },
     {
@@ -1467,14 +1475,6 @@
           "name": "Documentation",
           "url": "https://pureui.xyz/components/input"
         }
-      ]
-    },
-    {
-      "name": "p-menu",
-      "description": "Menus provide a list of options for the user to choose from.\n---\n\n\n### **Events:**\n - **p-select** - Emitted when a menu item is selected.\n\n### **Slots:**\n - _default_ - The menu's content, including menu items, menu labels, and dividers.",
-      "attributes": [],
-      "references": [
-        { "name": "Documentation", "url": "https://pureui.xyz/components/menu" }
       ]
     },
     {
