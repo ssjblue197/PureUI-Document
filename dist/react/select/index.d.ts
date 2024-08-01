@@ -1,25 +1,25 @@
-import Component from '../../components/select/select.component.js';
-import { type EventName } from '@lit/react';
-import type { PChangeEvent } from '../../events/events.js';
-import type { PClearEvent } from '../../events/events.js';
-import type { PInputEvent } from '../../events/events.js';
-import type { PFocusEvent } from '../../events/events.js';
-import type { PBlurEvent } from '../../events/events.js';
-import type { PShowEvent } from '../../events/events.js';
-import type { PAfterShowEvent } from '../../events/events.js';
-import type { PHideEvent } from '../../events/events.js';
-import type { PAfterHideEvent } from '../../events/events.js';
-import type { PInvalidEvent } from '../../events/events.js';
-export type { PChangeEvent } from '../../events/events.js';
-export type { PClearEvent } from '../../events/events.js';
-export type { PInputEvent } from '../../events/events.js';
-export type { PFocusEvent } from '../../events/events.js';
-export type { PBlurEvent } from '../../events/events.js';
-export type { PShowEvent } from '../../events/events.js';
-export type { PAfterShowEvent } from '../../events/events.js';
-export type { PHideEvent } from '../../events/events.js';
-export type { PAfterHideEvent } from '../../events/events.js';
-export type { PInvalidEvent } from '../../events/events.js';
+import Component from "../../components/select/select.component.js";
+import { type EventName } from "@lit/react";
+import type { PChangeEvent } from "../../events/events.js";
+import type { PClearEvent } from "../../events/events.js";
+import type { PInputEvent } from "../../events/events.js";
+import type { PFocusEvent } from "../../events/events.js";
+import type { PBlurEvent } from "../../events/events.js";
+import type { PShowEvent } from "../../events/events.js";
+import type { PAfterShowEvent } from "../../events/events.js";
+import type { PHideEvent } from "../../events/events.js";
+import type { PAfterHideEvent } from "../../events/events.js";
+import type { PInvalidEvent } from "../../events/events.js";
+export type { PChangeEvent } from "../../events/events.js";
+export type { PClearEvent } from "../../events/events.js";
+export type { PInputEvent } from "../../events/events.js";
+export type { PFocusEvent } from "../../events/events.js";
+export type { PBlurEvent } from "../../events/events.js";
+export type { PShowEvent } from "../../events/events.js";
+export type { PAfterShowEvent } from "../../events/events.js";
+export type { PHideEvent } from "../../events/events.js";
+export type { PAfterHideEvent } from "../../events/events.js";
+export type { PInvalidEvent } from "../../events/events.js";
 /**
  * @summary Selects allow you to choose items from a menu of predefined options.
  * @documentation https://pureui.xyz/components/select

@@ -1,11 +1,11 @@
-import Component from '../../components/animation/animation.component.js';
-import { type EventName } from '@lit/react';
-import type { PCancelEvent } from '../../events/events.js';
-import type { PFinishEvent } from '../../events/events.js';
-import type { PStartEvent } from '../../events/events.js';
-export type { PCancelEvent } from '../../events/events.js';
-export type { PFinishEvent } from '../../events/events.js';
-export type { PStartEvent } from '../../events/events.js';
+import Component from "../../components/animation/animation.component.js";
+import { type EventName } from "@lit/react";
+import type { PCancelEvent } from "../../events/events.js";
+import type { PFinishEvent } from "../../events/events.js";
+import type { PStartEvent } from "../../events/events.js";
+export type { PCancelEvent } from "../../events/events.js";
+export type { PFinishEvent } from "../../events/events.js";
+export type { PStartEvent } from "../../events/events.js";
 /**
  * @summary Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
  * @documentation https://pureui.xyz/components/animation

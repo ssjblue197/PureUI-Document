@@ -3,6 +3,6 @@ export type PTabShowEvent = CustomEvent<{
 }>;
 declare global {
     interface GlobalEventHandlersEventMap {
-        'p-tab-show': PTabShowEvent;
+        "p-tab-show": PTabShowEvent;
     }
 }

@@ -1,6 +1,6 @@
-import PIcon from '../icon/icon.component.js';
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
+import PIcon from "../icon/icon.component.js";
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
 /**
  * @summary Details show a brief summary and expand to show additional content.
  * @documentation https://pureui.xyz/components/details
@@ -31,7 +31,7 @@ import type { CSSResultGroup } from 'lit';
 export default class PDetails extends PureElement {
     static styles: CSSResultGroup;
     static dependencies: {
-        'p-icon': typeof PIcon;
+        "p-icon": typeof PIcon;
     };
     private readonly localize;
     details: HTMLDetailsElement;

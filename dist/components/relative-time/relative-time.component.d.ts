@@ -1,4 +1,4 @@
-import PureElement from '../../internal/pure-ui-element.js';
+import PureElement from "../../internal/pure-ui-element.js";
 /**
  * @summary Outputs a localized time phrase relative to the current date and time.
  * @documentation https://pureui.xyz/components/relative-time
@@ -17,12 +17,12 @@ export default class PRelativeTime extends PureElement {
      */
     date: Date | string;
     /** The formatting style to use. */
-    format: 'long' | 'short' | 'narrow';
+    format: "long" | "short" | "narrow";
     /**
      * When `auto`, values such as "yesterday" and "tomorrow" will be shown when possible. When `always`, values such as
      * "1 day ago" and "in 1 day" will be shown.
      */
-    numeric: 'always' | 'auto';
+    numeric: "always" | "auto";
     /** Keep the displayed value up to date as time passes. */
     sync: boolean;
     disconnectedCallback(): void;

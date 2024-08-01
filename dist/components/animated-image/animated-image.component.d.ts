@@ -1,6 +1,6 @@
-import PIcon from '../icon/icon.component.js';
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
+import PIcon from "../icon/icon.component.js";
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
 /**
  * @summary A component for displaying animated GIFs and WEBPs that play and pause on interaction.
  * @documentation https://pureui.xyz/components/animated-image
@@ -23,7 +23,7 @@ import type { CSSResultGroup } from 'lit';
 export default class PAnimatedImage extends PureElement {
     static styles: CSSResultGroup;
     static dependencies: {
-        'p-icon': typeof PIcon;
+        "p-icon": typeof PIcon;
     };
     animatedImage: HTMLImageElement;
     frozenFrame: string;

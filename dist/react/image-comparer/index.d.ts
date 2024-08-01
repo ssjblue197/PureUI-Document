@@ -1,7 +1,7 @@
-import Component from '../../components/image-comparer/image-comparer.component.js';
-import { type EventName } from '@lit/react';
-import type { PChangeEvent } from '../../events/events.js';
-export type { PChangeEvent } from '../../events/events.js';
+import Component from "../../components/image-comparer/image-comparer.component.js";
+import { type EventName } from "@lit/react";
+import type { PChangeEvent } from "../../events/events.js";
+export type { PChangeEvent } from "../../events/events.js";
 /**
  * @summary Compare visual differences between similar photos with a sliding panel.
  * @documentation https://pureui.xyz/components/image-comparer

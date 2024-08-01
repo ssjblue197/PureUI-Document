@@ -1,7 +1,7 @@
-import PIcon from '../icon/icon.component.js';
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
-import type { ShoelaceFormControl } from '../../internal/pure-ui-element.js';
+import PIcon from "../icon/icon.component.js";
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
+import type { ShoelaceFormControl } from "../../internal/pure-ui-element.js";
 /**
  * @summary Checkboxes allow the user to toggle an option on or off.
  * @documentation https://pureui.xyz/components/checkbox
@@ -31,7 +31,7 @@ import type { ShoelaceFormControl } from '../../internal/pure-ui-element.js';
 export default class PCheckbox extends PureElement implements ShoelaceFormControl {
     static styles: CSSResultGroup;
     static dependencies: {
-        'p-icon': typeof PIcon;
+        "p-icon": typeof PIcon;
     };
     private readonly formControlController;
     private readonly hasSlotController;
@@ -43,7 +43,7 @@ export default class PCheckbox extends PureElement implements ShoelaceFormContro
     /** The current value of the checkbox, submitted as a name/value pair with form data. */
     value: string;
     /** The checkbox's size. */
-    size: 'small' | 'medium' | 'large';
+    size: "small" | "medium" | "large";
     /** Disables the checkbox. */
     disabled: boolean;
     /** Draws the checkbox in a checked state. */

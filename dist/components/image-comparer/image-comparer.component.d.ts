@@ -1,6 +1,6 @@
-import PIcon from '../icon/icon.component.js';
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
+import PIcon from "../icon/icon.component.js";
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
 /**
  * @summary Compare visual differences between similar photos with a sliding panel.
  * @documentation https://pureui.xyz/components/image-comparer
@@ -27,7 +27,7 @@ import type { CSSResultGroup } from 'lit';
 export default class PImageComparer extends PureElement {
     static styles: CSSResultGroup;
     static scopedElement: {
-        'p-icon': typeof PIcon;
+        "p-icon": typeof PIcon;
     };
     base: HTMLElement;
     handle: HTMLElement;

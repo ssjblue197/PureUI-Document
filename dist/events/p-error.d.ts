@@ -3,6 +3,6 @@ export type PErrorEvent = CustomEvent<{
 }>;
 declare global {
     interface GlobalEventHandlersEventMap {
-        'p-error': PErrorEvent;
+        "p-error": PErrorEvent;
     }
 }

@@ -1,5 +1,5 @@
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup, HTMLTemplateResult } from 'lit';
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup, HTMLTemplateResult } from "lit";
 /**
  * @summary Icons are symbols that can be used to represent various options within an application.
  * @documentation https://pureui.xyz/components/icon

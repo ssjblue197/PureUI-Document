@@ -1,4 +1,4 @@
-import Component from '../../components/menu-item/menu-item.component.js';
+import Component from "../../components/menu-item/menu-item.component.js";
 /**
  * @summary Menu items provide options for the user to pick from in a menu.
  * @documentation https://pureui.xyz/components/menu-item

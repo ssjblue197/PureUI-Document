@@ -1,6 +1,6 @@
-import PIcon from '../icon/icon.component.js';
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
+import PIcon from "../icon/icon.component.js";
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
 /**
  * @summary Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.
  * @documentation https://pureui.xyz/components/breadcrumb
@@ -17,7 +17,7 @@ import type { CSSResultGroup } from 'lit';
 export default class PBreadcrumb extends PureElement {
     static styles: CSSResultGroup;
     static dependencies: {
-        'p-icon': typeof PIcon;
+        "p-icon": typeof PIcon;
     };
     private readonly localize;
     private separatorDir;

@@ -1,4 +1,4 @@
-import PureElement from '../../internal/pure-ui-element.js';
+import PureElement from "../../internal/pure-ui-element.js";
 /**
  * @summary Formats a date/time using the specified locale and options.
  * @documentation https://pureui.xyz/components/format-date
@@ -14,26 +14,26 @@ export default class PFormatDate extends PureElement {
      */
     date: Date | string;
     /** The format for displaying the weekday. */
-    weekday: 'narrow' | 'short' | 'long';
+    weekday: "narrow" | "short" | "long";
     /** The format for displaying the era. */
-    era: 'narrow' | 'short' | 'long';
+    era: "narrow" | "short" | "long";
     /** The format for displaying the year. */
-    year: 'numeric' | '2-digit';
+    year: "numeric" | "2-digit";
     /** The format for displaying the month. */
-    month: 'numeric' | '2-digit' | 'narrow' | 'short' | 'long';
+    month: "numeric" | "2-digit" | "narrow" | "short" | "long";
     /** The format for displaying the day. */
-    day: 'numeric' | '2-digit';
+    day: "numeric" | "2-digit";
     /** The format for displaying the hour. */
-    hour: 'numeric' | '2-digit';
+    hour: "numeric" | "2-digit";
     /** The format for displaying the minute. */
-    minute: 'numeric' | '2-digit';
+    minute: "numeric" | "2-digit";
     /** The format for displaying the second. */
-    second: 'numeric' | '2-digit';
+    second: "numeric" | "2-digit";
     /** The format for displaying the time. */
-    timeZoneName: 'short' | 'long';
+    timeZoneName: "short" | "long";
     /** The time zone to express the time in. */
     timeZone: string;
     /** The format for displaying the hour. */
-    hourFormat: 'auto' | '12' | '24';
+    hourFormat: "auto" | "12" | "24";
     render(): import("lit-html").TemplateResult<1> | undefined;
 }

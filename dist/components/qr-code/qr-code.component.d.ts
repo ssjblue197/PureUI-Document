@@ -1,5 +1,5 @@
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
 /**
  * @summary Generates a [QR code](https://www.qrcode.com/) and renders it using the [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API).
  * @documentation https://pureui.xyz/components/qr-code
@@ -24,7 +24,7 @@ export default class PQrCode extends PureElement {
     /** The edge radius of each module. Must be between 0 and 0.5. */
     radius: number;
     /** The level of error correction to use. [Learn more](https://www.qrcode.com/en/about/error_correction.html) */
-    errorCorrection: 'L' | 'M' | 'Q' | 'H';
+    errorCorrection: "L" | "M" | "Q" | "H";
     firstUpdated(): void;
     generate(): void;
     render(): import("lit-html").TemplateResult<1>;

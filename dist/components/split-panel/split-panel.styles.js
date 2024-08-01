@@ -1,6 +1,6 @@
 import {
   split_panel_styles_default
-} from "../../chunks/chunk.LDU3GFTV.js";
+} from "../../chunks/chunk.VCMDMY66.js";
 import "../../chunks/chunk.N4FVDREO.js";
 import "../../chunks/chunk.KIILAQWQ.js";
 export {

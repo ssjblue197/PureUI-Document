@@ -1,11 +1,11 @@
-import Component from '../../components/radio-group/radio-group.component.js';
-import { type EventName } from '@lit/react';
-import type { PChangeEvent } from '../../events/events.js';
-import type { PInputEvent } from '../../events/events.js';
-import type { PInvalidEvent } from '../../events/events.js';
-export type { PChangeEvent } from '../../events/events.js';
-export type { PInputEvent } from '../../events/events.js';
-export type { PInvalidEvent } from '../../events/events.js';
+import Component from "../../components/radio-group/radio-group.component.js";
+import { type EventName } from "@lit/react";
+import type { PChangeEvent } from "../../events/events.js";
+import type { PInputEvent } from "../../events/events.js";
+import type { PInvalidEvent } from "../../events/events.js";
+export type { PChangeEvent } from "../../events/events.js";
+export type { PInputEvent } from "../../events/events.js";
+export type { PInvalidEvent } from "../../events/events.js";
 /**
  * @summary Radio groups are used to group multiple [radios](/components/radio) or [radio buttons](/components/radio-button) so they function as a single form control.
  * @documentation https://pureui.xyz/components/radio-group

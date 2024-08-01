@@ -1,13 +1,13 @@
-import Component from '../../components/alert/alert.component.js';
-import { type EventName } from '@lit/react';
-import type { PShowEvent } from '../../events/events.js';
-import type { PAfterShowEvent } from '../../events/events.js';
-import type { PHideEvent } from '../../events/events.js';
-import type { PAfterHideEvent } from '../../events/events.js';
-export type { PShowEvent } from '../../events/events.js';
-export type { PAfterShowEvent } from '../../events/events.js';
-export type { PHideEvent } from '../../events/events.js';
-export type { PAfterHideEvent } from '../../events/events.js';
+import Component from "../../components/alert/alert.component.js";
+import { type EventName } from "@lit/react";
+import type { PShowEvent } from "../../events/events.js";
+import type { PAfterShowEvent } from "../../events/events.js";
+import type { PHideEvent } from "../../events/events.js";
+import type { PAfterHideEvent } from "../../events/events.js";
+export type { PShowEvent } from "../../events/events.js";
+export type { PAfterShowEvent } from "../../events/events.js";
+export type { PHideEvent } from "../../events/events.js";
+export type { PAfterHideEvent } from "../../events/events.js";
 /**
  * @summary Alerts are used to display important messages inline or as toast notifications.
  * @documentation https://pureui.xyz/components/alert

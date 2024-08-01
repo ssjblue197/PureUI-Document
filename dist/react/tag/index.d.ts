@@ -1,7 +1,7 @@
-import Component from '../../components/tag/tag.component.js';
-import { type EventName } from '@lit/react';
-import type { PRemoveEvent } from '../../events/events.js';
-export type { PRemoveEvent } from '../../events/events.js';
+import Component from "../../components/tag/tag.component.js";
+import { type EventName } from "@lit/react";
+import type { PRemoveEvent } from "../../events/events.js";
+export type { PRemoveEvent } from "../../events/events.js";
 /**
  * @summary Tags are used as labels to organize things or to indicate a selection.
  * @documentation https://pureui.xyz/components/tag

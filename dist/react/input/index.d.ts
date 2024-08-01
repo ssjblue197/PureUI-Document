@@ -1,17 +1,17 @@
-import Component from '../../components/input/input.component.js';
-import { type EventName } from '@lit/react';
-import type { PBlurEvent } from '../../events/events.js';
-import type { PChangeEvent } from '../../events/events.js';
-import type { PClearEvent } from '../../events/events.js';
-import type { PFocusEvent } from '../../events/events.js';
-import type { PInputEvent } from '../../events/events.js';
-import type { PInvalidEvent } from '../../events/events.js';
-export type { PBlurEvent } from '../../events/events.js';
-export type { PChangeEvent } from '../../events/events.js';
-export type { PClearEvent } from '../../events/events.js';
-export type { PFocusEvent } from '../../events/events.js';
-export type { PInputEvent } from '../../events/events.js';
-export type { PInvalidEvent } from '../../events/events.js';
+import Component from "../../components/input/input.component.js";
+import { type EventName } from "@lit/react";
+import type { PBlurEvent } from "../../events/events.js";
+import type { PChangeEvent } from "../../events/events.js";
+import type { PClearEvent } from "../../events/events.js";
+import type { PFocusEvent } from "../../events/events.js";
+import type { PInputEvent } from "../../events/events.js";
+import type { PInvalidEvent } from "../../events/events.js";
+export type { PBlurEvent } from "../../events/events.js";
+export type { PChangeEvent } from "../../events/events.js";
+export type { PClearEvent } from "../../events/events.js";
+export type { PFocusEvent } from "../../events/events.js";
+export type { PInputEvent } from "../../events/events.js";
+export type { PInvalidEvent } from "../../events/events.js";
 /**
  * @summary Inputs collect data from the user.
  * @documentation https://pureui.xyz/components/input

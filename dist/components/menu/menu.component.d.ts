@@ -1,6 +1,6 @@
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
-import type PMenuItem from '../menu-item/menu-item.component.js';
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
+import type PMenuItem from "../menu-item/menu-item.component.js";
 export interface MenuSelectEventDetail {
     item: PMenuItem;
 }

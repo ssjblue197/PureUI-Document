@@ -1,6 +1,6 @@
-import PPopup from '../popup/popup.component.js';
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
+import PPopup from "../popup/popup.component.js";
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
 /**
  * @summary Tooltips display additional information based on a specific action.
  * @documentation https://pureui.xyz/components/tooltip
@@ -32,7 +32,7 @@ import type { CSSResultGroup } from 'lit';
 export default class PTooltip extends PureElement {
     static styles: CSSResultGroup;
     static dependencies: {
-        'p-popup': typeof PPopup;
+        "p-popup": typeof PPopup;
     };
     private hoverTimeout;
     private readonly localize;
@@ -46,7 +46,7 @@ export default class PTooltip extends PureElement {
      * The preferred placement of the tooltip. Note that the actual placement may vary as needed to keep the tooltip
      * inside of the viewport.
      */
-    placement: 'top' | 'top-start' | 'top-end' | 'right' | 'right-start' | 'right-end' | 'bottom' | 'bottom-start' | 'bottom-end' | 'left' | 'left-start' | 'left-end';
+    placement: "top" | "top-start" | "top-end" | "right" | "right-start" | "right-end" | "bottom" | "bottom-start" | "bottom-end" | "left" | "left-start" | "left-end";
     /** Disables the tooltip so it won't show when triggered. */
     disabled: boolean;
     /** The distance in pixels from which to offset the tooltip away from its target. */

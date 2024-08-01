@@ -1,6 +1,6 @@
-import PIcon from '../icon/icon.component.js';
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
+import PIcon from "../icon/icon.component.js";
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
 /**
  * @summary Icons buttons are simple, icon-only buttons that can be used for actions and in toolbars.
  * @documentation https://pureui.xyz/components/icon-button
@@ -17,7 +17,7 @@ import type { CSSResultGroup } from 'lit';
 export default class PIconButton extends PureElement {
     static styles: CSSResultGroup;
     static dependencies: {
-        'p-icon': typeof PIcon;
+        "p-icon": typeof PIcon;
     };
     button: HTMLButtonElement | HTMLLinkElement;
     private hasFocus;
@@ -33,7 +33,7 @@ export default class PIconButton extends PureElement {
     /** When set, the underlying button will be rendered as an `<a>` with this `href` instead of a `<button>`. */
     href?: string;
     /** Tells the browser where to open the link. Only used when `href` is set. */
-    target?: '_blank' | '_parent' | '_self' | '_top';
+    target?: "_blank" | "_parent" | "_self" | "_top";
     /** Tells the browser to download the linked file as this filename. Only used when `href` is set. */
     download?: string;
     /**

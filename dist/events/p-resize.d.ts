@@ -3,6 +3,6 @@ export type PResizeEvent = CustomEvent<{
 }>;
 declare global {
     interface GlobalEventHandlersEventMap {
-        'p-resize': PResizeEvent;
+        "p-resize": PResizeEvent;
     }
 }

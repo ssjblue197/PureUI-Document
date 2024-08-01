@@ -1,7 +1,7 @@
-import Modal from '../../internal/modal.js';
-import PIconButton from '../icon-button/icon-button.component.js';
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
+import Modal from "../../internal/modal.js";
+import PIconButton from "../icon-button/icon-button.component.js";
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
 /**
  * @summary Drawers slide in from a container to expose additional options and information.
  * @documentation https://pureui.xyz/components/drawer
@@ -62,7 +62,7 @@ import type { CSSResultGroup } from 'lit';
 export default class PDrawer extends PureElement {
     static styles: CSSResultGroup;
     static dependencies: {
-        'p-icon-button': typeof PIconButton;
+        "p-icon-button": typeof PIconButton;
     };
     private readonly hasSlotController;
     private readonly localize;
@@ -83,7 +83,7 @@ export default class PDrawer extends PureElement {
      */
     label: string;
     /** The direction from which the drawer will open. */
-    placement: 'top' | 'end' | 'bottom' | 'start';
+    placement: "top" | "end" | "bottom" | "start";
     /**
      * By default, the drawer slides out of its containing block (usually the viewport). To make the drawer slide out of
      * its parent element, set this attribute and add `position: relative` to the parent.

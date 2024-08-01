@@ -1,5 +1,5 @@
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
 /**
  * @summary Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.
  * @documentation https://pureui.xyz/components/breadcrumb-item
@@ -27,7 +27,7 @@ export default class PBreadcrumbItem extends PureElement {
      */
     href?: string;
     /** Tells the browser where to open the link. Only used when `href` is set. */
-    target?: '_blank' | '_parent' | '_self' | '_top';
+    target?: "_blank" | "_parent" | "_self" | "_top";
     /** The `rel` attribute to use on the link. Only used when `href` is set. */
     rel: string;
     render(): import("lit-html").TemplateResult<1>;

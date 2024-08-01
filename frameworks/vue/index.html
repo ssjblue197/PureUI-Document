@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="default" data-pure-ui-version="1.0.0">
+<html lang="en" data-layout="default" data-pure-ui-version="1.0.1">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/assets/styles/code-previews.css" />
     <link rel="stylesheet" href="/assets/styles/search.css" />
 
-    <link rel="icon" href="/assets/images/logo.svg" type="image/x-icon" />
+    <link rel="icon" href="/assets/images/logo.png" type="image/x-icon" />
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:creator" content="pure_ui" />
@@ -87,7 +87,7 @@
         <a href="/">
           <img src="/assets/images/wordmark.svg" alt="Pure UI" />
         </a>
-        <div class="sidebar-version">1.0.0</div>
+        <div class="sidebar-version">1.0.1</div>
       </header>
 
       <button class="search-box" type="button" title="Press / to search" aria-label="Search" data-plugin="search">
@@ -440,10 +440,10 @@
             this example, we’ll import the light theme and use the CDN as a base path.
           </p>
           <pre><code class="language-jsx" id="code-block-29"><span class="token comment">// main.js or main.ts</span>
-<span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/themes/light.css'</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/utilities/base-path'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">"pure-uikit/dist/themes/light.css"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/utilities/base-path"</span><span class="token punctuation">;</span>
 
-<span class="token function">setBasePath</span><span class="token punctuation">(</span><span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.0.0/cdn/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setBasePath</span><span class="token punctuation">(</span><span class="token string">"https://cdn.jsdelivr.net/npm/pure-uikit@1.0.1/cdn/"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code><p-copy-button class="copy-code-button" from="code-block-29"></p-copy-button></pre>
           <div role="alert" class="callout callout--tip">
             <p>
@@ -500,9 +500,9 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">setup</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
-  <span class="token keyword">import</span> <span class="token punctuation">{</span> ref <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span><span class="token punctuation">;</span>
-  <span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/qr-code/qr-code.js'</span><span class="token punctuation">;</span>
-  <span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/input/input.js'</span><span class="token punctuation">;</span>
+  <span class="token keyword">import</span> <span class="token punctuation">{</span> ref <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"vue"</span><span class="token punctuation">;</span>
+  <span class="token keyword">import</span> <span class="token string">"pure-uikit/dist/components/qr-code/qr-code.js"</span><span class="token punctuation">;</span>
+  <span class="token keyword">import</span> <span class="token string">"pure-uikit/dist/components/input/input.js"</span><span class="token punctuation">;</span>
 
   <span class="token keyword">const</span> qrCode <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>

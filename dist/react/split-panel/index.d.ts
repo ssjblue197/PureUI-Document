@@ -1,7 +1,7 @@
-import Component from '../../components/split-panel/split-panel.component.js';
-import { type EventName } from '@lit/react';
-import type { PRepositionEvent } from '../../events/events.js';
-export type { PRepositionEvent } from '../../events/events.js';
+import Component from "../../components/split-panel/split-panel.component.js";
+import { type EventName } from "@lit/react";
+import type { PRepositionEvent } from "../../events/events.js";
+export type { PRepositionEvent } from "../../events/events.js";
 /**
  * @summary Split panels display two adjacent panels, allowing the user to reposition them.
  * @documentation https://pureui.xyz/components/split-panel

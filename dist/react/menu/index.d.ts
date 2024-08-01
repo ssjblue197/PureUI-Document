@@ -1,7 +1,7 @@
-import Component from '../../components/menu/menu.component.js';
-import { type EventName } from '@lit/react';
-import type { PSelectEvent } from '../../events/events.js';
-export type { PSelectEvent } from '../../events/events.js';
+import Component from "../../components/menu/menu.component.js";
+import { type EventName } from "@lit/react";
+import type { PSelectEvent } from "../../events/events.js";
+export type { PSelectEvent } from "../../events/events.js";
 /**
  * @summary Menus provide a list of options for the user to choose from.
  * @documentation https://pureui.xyz/components/menu

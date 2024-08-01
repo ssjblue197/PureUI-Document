@@ -1,7 +1,7 @@
-import '../../internal/scrollend-polyfill.js';
-import PIcon from '../icon/icon.component.js';
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup, PropertyValueMap } from 'lit';
+import "../../internal/scrollend-polyfill.js";
+import PIcon from "../icon/icon.component.js";
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup, PropertyValueMap } from "lit";
 /**
  * @summary Carousels display an arbitrary number of content slides along a horizontal or vertical axis.
  *
@@ -34,7 +34,7 @@ import type { CSSResultGroup, PropertyValueMap } from 'lit';
 export default class PCarousel extends PureElement {
     static styles: CSSResultGroup;
     static dependencies: {
-        'p-icon': typeof PIcon;
+        "p-icon": typeof PIcon;
     };
     /** When set, allows the user to navigate the carousel in the same direction indefinitely. */
     loop: boolean;
@@ -54,7 +54,7 @@ export default class PCarousel extends PureElement {
      */
     slidesPerMove: number;
     /** Specifies the orientation in which the carousel will lay out.  */
-    orientation: 'horizontal' | 'vertical';
+    orientation: "horizontal" | "vertical";
     /** When set, it is possible to scroll through the slides by dragging them with the mouse. */
     mouseDragging: boolean;
     scrollContainer: HTMLElement;

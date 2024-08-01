@@ -1,4 +1,4 @@
-import type PIcon from '../icon/icon.js';
+import type PIcon from "../icon/icon.js";
 export type IconLibraryResolver = (name: string) => string;
 export type IconLibraryMutator = (svg: SVGElement) => void;
 export interface IconLibrary {
@@ -14,6 +14,6 @@ export declare function unwatchIcon(icon: PIcon): void;
 /** Returns a library from the registry. */
 export declare function getIconLibrary(name?: string): IconLibrary | undefined;
 /** Adds an icon library to the registry, or overrides an existing one. */
-export declare function registerIconLibrary(name: string, options: Omit<IconLibrary, 'name'>): void;
+export declare function registerIconLibrary(name: string, options: Omit<IconLibrary, "name">): void;
 /** Removes an icon library from the registry. */
 export declare function unregisterIconLibrary(name: string): void;

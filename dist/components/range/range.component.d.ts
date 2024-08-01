@@ -1,6 +1,6 @@
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
-import type { ShoelaceFormControl } from '../../internal/pure-ui-element.js';
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
+import type { ShoelaceFormControl } from "../../internal/pure-ui-element.js";
 /**
  * @summary Ranges allow the user to select a single value within a given range using a slider.
  * @documentation https://pureui.xyz/components/range
@@ -59,7 +59,7 @@ export default class PRange extends PureElement implements ShoelaceFormControl {
     /** The interval at which the range will increase and decrease. */
     step: number;
     /** The preferred placement of the range's tooltip. */
-    tooltip: 'top' | 'bottom' | 'none';
+    tooltip: "top" | "bottom" | "none";
     /**
      * A function used to format the tooltip's value. The range's value is passed as the first and only argument. The
      * function should return a string to display in the tooltip.

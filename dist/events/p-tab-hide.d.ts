@@ -3,6 +3,6 @@ export type PTabHideEvent = CustomEvent<{
 }>;
 declare global {
     interface GlobalEventHandlersEventMap {
-        'p-tab-hide': PTabHideEvent;
+        "p-tab-hide": PTabHideEvent;
     }
 }

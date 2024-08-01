@@ -1,7 +1,7 @@
-import PIcon from '../icon/icon.component.js';
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
-import type { ShoelaceFormControl } from '../../internal/pure-ui-element.js';
+import PIcon from "../icon/icon.component.js";
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
+import type { ShoelaceFormControl } from "../../internal/pure-ui-element.js";
 /**
  * @summary Inputs collect data from the user.
  * @documentation https://pureui.xyz/components/input
@@ -39,7 +39,7 @@ import type { ShoelaceFormControl } from '../../internal/pure-ui-element.js';
 export default class PInput extends PureElement implements ShoelaceFormControl {
     static styles: CSSResultGroup;
     static dependencies: {
-        'p-icon': typeof PIcon;
+        "p-icon": typeof PIcon;
     };
     private readonly formControlController;
     private readonly hasSlotController;
@@ -53,7 +53,7 @@ export default class PInput extends PureElement implements ShoelaceFormControl {
      * The type of input. Works the same as a native `<input>` element, but only a subset of types are supported. Defaults
      * to `text`.
      */
-    type: 'date' | 'datetime-local' | 'email' | 'number' | 'password' | 'search' | 'tel' | 'text' | 'time' | 'url';
+    type: "date" | "datetime-local" | "email" | "number" | "password" | "search" | "tel" | "text" | "time" | "url";
     /** The name of the input, submitted as a name/value pair with form data. */
     name: string;
     /** The current value of the input, submitted as a name/value pair with form data. */
@@ -61,7 +61,7 @@ export default class PInput extends PureElement implements ShoelaceFormControl {
     /** The default value of the form control. Primarily used for resetting the form control. */
     defaultValue: string;
     /** The input's size. */
-    size: 'small' | 'medium' | 'large';
+    size: "small" | "medium" | "large";
     /** Draws a filled input. */
     filled: boolean;
     /** Draws a pill-style input with rounded edges. */
@@ -106,11 +106,11 @@ export default class PInput extends PureElement implements ShoelaceFormControl {
      * Specifies the granularity that the value must adhere to, or the special value `any` which means no stepping is
      * implied, allowing any numeric value. Only applies to date and number input types.
      */
-    step: number | 'any';
+    step: number | "any";
     /** Controls whether and how text input is automatically capitalized as it is entered by the user. */
-    autocapitalize: 'off' | 'none' | 'on' | 'sentences' | 'words' | 'characters';
+    autocapitalize: "off" | "none" | "on" | "sentences" | "words" | "characters";
     /** Indicates whether the browser's autocorrect feature is on or off. */
-    autocorrect: 'off' | 'on';
+    autocorrect: "off" | "on";
     /**
      * Specifies what permission the browser has to provide assistance in filling out form field values. Refer to
      * [this page on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete) for available values.
@@ -119,14 +119,14 @@ export default class PInput extends PureElement implements ShoelaceFormControl {
     /** Indicates that the input should receive focus on page load. */
     autofocus: boolean;
     /** Used to customize the label or icon of the Enter key on virtual keyboards. */
-    enterkeyhint: 'enter' | 'done' | 'go' | 'next' | 'previous' | 'search' | 'send';
+    enterkeyhint: "enter" | "done" | "go" | "next" | "previous" | "search" | "send";
     /** Enables spell checking on the input. */
     spellcheck: boolean;
     /**
      * Tells the browser what type of data will be entered by the user, allowing it to display the appropriate virtual
      * keyboard on supportive devices.
      */
-    inputmode: 'none' | 'text' | 'decimal' | 'numeric' | 'tel' | 'search' | 'email' | 'url';
+    inputmode: "none" | "text" | "decimal" | "numeric" | "tel" | "search" | "email" | "url";
     /**
      * Gets or sets the current value as a `Date` object. Returns `null` if the value can't be converted. This will use the native `<input type="{{type}}">` implementation and may result in an error.
      */
@@ -158,9 +158,9 @@ export default class PInput extends PureElement implements ShoelaceFormControl {
     /** Selects all the text in the input. */
     select(): void;
     /** Sets the start and end positions of the text selection (0-based). */
-    setSelectionRange(selectionStart: number, selectionEnd: number, selectionDirection?: 'forward' | 'backward' | 'none'): void;
+    setSelectionRange(selectionStart: number, selectionEnd: number, selectionDirection?: "forward" | "backward" | "none"): void;
     /** Replaces a range of text with a new string. */
-    setRangeText(replacement: string, start?: number, end?: number, selectMode?: 'select' | 'start' | 'end' | 'preserve'): void;
+    setRangeText(replacement: string, start?: number, end?: number, selectMode?: "select" | "start" | "end" | "preserve"): void;
     /** Displays the browser picker for an input element (only works if the browser supports it for the input type). */
     showPicker(): void;
     /** Increments the value of a numeric input type by the value of the step attribute. */

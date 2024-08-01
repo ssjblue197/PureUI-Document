@@ -1,9 +1,9 @@
-import Component from '../../components/rating/rating.component.js';
-import { type EventName } from '@lit/react';
-import type { PChangeEvent } from '../../events/events.js';
-import type { PHoverEvent } from '../../events/events.js';
-export type { PChangeEvent } from '../../events/events.js';
-export type { PHoverEvent } from '../../events/events.js';
+import Component from "../../components/rating/rating.component.js";
+import { type EventName } from "@lit/react";
+import type { PChangeEvent } from "../../events/events.js";
+import type { PHoverEvent } from "../../events/events.js";
+export type { PChangeEvent } from "../../events/events.js";
+export type { PHoverEvent } from "../../events/events.js";
 /**
  * @summary Ratings give users a way to quickly view and provide feedback.
  * @documentation https://pureui.xyz/components/rating

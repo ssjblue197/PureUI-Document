@@ -1,4 +1,4 @@
-import Component from '../../components/menu-label/menu-label.component.js';
+import Component from "../../components/menu-label/menu-label.component.js";
 /**
  * @summary Menu labels are used to describe a group of menu items.
  * @documentation https://pureui.xyz/components/menu-label

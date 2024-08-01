@@ -1,4 +1,4 @@
-import type { ReactiveController, ReactiveControllerHost } from 'lit';
+import type { ReactiveController, ReactiveControllerHost } from "lit";
 /** A reactive controller that determines when slots exist. */
 export declare class HasSlotController implements ReactiveController {
     host: ReactiveControllerHost & Element;

@@ -8,4 +8,4 @@ export declare function lockBodyScrolling(lockingEl: HTMLElement): void;
  */
 export declare function unlockBodyScrolling(lockingEl: HTMLElement): void;
 /** Scrolls an element into view of its container. If the element is already in view, nothing will happen. */
-export declare function scrollIntoView(element: HTMLElement, container: HTMLElement, direction?: 'horizontal' | 'vertical' | 'both', behavior?: 'smooth' | 'auto'): void;
+export declare function scrollIntoView(element: HTMLElement, container: HTMLElement, direction?: "horizontal" | "vertical" | "both", behavior?: "smooth" | "auto"): void;

@@ -1,17 +1,17 @@
-import Component from '../../components/drawer/drawer.component.js';
-import { type EventName } from '@lit/react';
-import type { PShowEvent } from '../../events/events.js';
-import type { PAfterShowEvent } from '../../events/events.js';
-import type { PHideEvent } from '../../events/events.js';
-import type { PAfterHideEvent } from '../../events/events.js';
-import type { PInitialFocusEvent } from '../../events/events.js';
-import type { PRequestCloseEvent } from '../../events/events.js';
-export type { PShowEvent } from '../../events/events.js';
-export type { PAfterShowEvent } from '../../events/events.js';
-export type { PHideEvent } from '../../events/events.js';
-export type { PAfterHideEvent } from '../../events/events.js';
-export type { PInitialFocusEvent } from '../../events/events.js';
-export type { PRequestCloseEvent } from '../../events/events.js';
+import Component from "../../components/drawer/drawer.component.js";
+import { type EventName } from "@lit/react";
+import type { PShowEvent } from "../../events/events.js";
+import type { PAfterShowEvent } from "../../events/events.js";
+import type { PHideEvent } from "../../events/events.js";
+import type { PAfterHideEvent } from "../../events/events.js";
+import type { PInitialFocusEvent } from "../../events/events.js";
+import type { PRequestCloseEvent } from "../../events/events.js";
+export type { PShowEvent } from "../../events/events.js";
+export type { PAfterShowEvent } from "../../events/events.js";
+export type { PHideEvent } from "../../events/events.js";
+export type { PAfterHideEvent } from "../../events/events.js";
+export type { PInitialFocusEvent } from "../../events/events.js";
+export type { PRequestCloseEvent } from "../../events/events.js";
 /**
  * @summary Drawers slide in from a container to expose additional options and information.
  * @documentation https://pureui.xyz/components/drawer

@@ -1,104 +1,92 @@
 {
   "$schema": "https://raw.githubusercontent.com/JetBrains/web-types/master/schema/web-types.json",
   "name": "pure-uikit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description-markup": "markdown",
   "contributions": {
     "html": {
       "elements": [
         {
-          "name": "p-alert",
-          "description": "Alerts are used to display important messages inline or as toast notifications.\n---\n\n\n### **Events:**\n - **p-show** - Emitted when the alert opens.\n- **p-after-show** - Emitted after the alert opens and all animations are complete.\n- **p-hide** - Emitted when the alert closes.\n- **p-after-hide** - Emitted after the alert closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the alert.\n- **hide()** - Hides the alert\n- **toast()** - Displays the alert as a toast notification. This will move the alert out of its position in the DOM and, when\ndismissed, it will be removed from the DOM completely. By storing a reference to the alert, you can reuse it by\ncalling this method again. The returned promise will resolve after the alert is hidden.\n\n### **Slots:**\n - _default_ - The alert's main content.\n- **icon** - An icon to show in the alert. Works best with `<p-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the optional icon.\n- **message** - The container that wraps the alert's main content.\n- **close-button** - The close button, an `<p-icon-button>`.\n- **close-button__base** - The close button's exported `base` part.",
+          "name": "p-avatar",
+          "description": "Avatars are used to represent a person or object.\n---\n\n\n### **Events:**\n - **p-error** - The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause.\n\n### **Slots:**\n - **icon** - The default icon to use when no image or initials are present. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--size** - The size of the avatar. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the avatar's icon.\n- **initials** - The container that wraps the avatar's initials.\n- **image** - The avatar image. Only shown when the `image` attribute is set.",
           "doc-url": "",
           "attributes": [
             {
-              "name": "open",
-              "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
-              "value": { "type": "boolean", "default": "false" }
+              "name": "image",
+              "description": "The image source to use for the avatar.",
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
-              "name": "closable",
-              "description": "Enables a close button that allows the user to dismiss the alert.",
-              "value": { "type": "boolean", "default": "false" }
+              "name": "label",
+              "description": "A label to use to describe the avatar to assistive devices.",
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
-              "name": "variant",
-              "description": "The alert's theme variant.",
+              "name": "initials",
+              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+              "value": { "type": "string", "default": "\"\"" }
+            },
+            {
+              "name": "loading",
+              "description": "Indicates how the browser should load the image.",
               "value": {
-                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'",
-                "default": "'primary'"
+                "type": "\"eager\" | \"lazy\"",
+                "default": "\"eager\""
               }
             },
             {
-              "name": "duration",
-              "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
-              "value": { "type": "string", "default": "Infinity" }
+              "name": "shape",
+              "description": "The shape of the avatar.",
+              "value": {
+                "type": "\"circle\" | \"square\" | \"rounded\"",
+                "default": "\"circle\""
+              }
             }
           ],
           "slots": [
-            { "name": "", "description": "The alert's main content." },
             {
               "name": "icon",
-              "description": "An icon to show in the alert. Works best with `<p-icon>`."
+              "description": "The default icon to use when no image or initials are present. Works best with `<p-icon>`."
             }
           ],
           "events": [
             {
-              "name": "p-show",
-              "description": "Emitted when the alert opens."
-            },
-            {
-              "name": "p-after-show",
-              "description": "Emitted after the alert opens and all animations are complete."
-            },
-            {
-              "name": "p-hide",
-              "description": "Emitted when the alert closes."
-            },
-            {
-              "name": "p-after-hide",
-              "description": "Emitted after the alert closes and all animations are complete."
+              "name": "p-error",
+              "description": "The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause."
             }
           ],
           "js": {
             "properties": [
-              { "name": "base", "type": "HTMLElement" },
               {
-                "name": "open",
-                "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
-                "type": "boolean"
+                "name": "image",
+                "description": "The image source to use for the avatar.",
+                "type": "string"
               },
               {
-                "name": "closable",
-                "description": "Enables a close button that allows the user to dismiss the alert.",
-                "type": "boolean"
+                "name": "label",
+                "description": "A label to use to describe the avatar to assistive devices.",
+                "type": "string"
               },
               {
-                "name": "variant",
-                "description": "The alert's theme variant.",
-                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+                "name": "initials",
+                "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+                "type": "string"
               },
               {
-                "name": "duration",
-                "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own."
+                "name": "loading",
+                "description": "Indicates how the browser should load the image.",
+                "type": "\"eager\" | \"lazy\""
+              },
+              {
+                "name": "shape",
+                "description": "The shape of the avatar.",
+                "type": "\"circle\" | \"square\" | \"rounded\""
               }
             ],
             "events": [
               {
-                "name": "p-show",
-                "description": "Emitted when the alert opens."
-              },
-              {
-                "name": "p-after-show",
-                "description": "Emitted after the alert opens and all animations are complete."
-              },
-              {
-                "name": "p-hide",
-                "description": "Emitted when the alert closes."
-              },
-              {
-                "name": "p-after-hide",
-                "description": "Emitted after the alert closes and all animations are complete."
+                "name": "p-error",
+                "description": "The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause."
               }
             ]
           }
@@ -178,6 +166,103 @@
           }
         },
         {
+          "name": "p-alert",
+          "description": "Alerts are used to display important messages inline or as toast notifications.\n---\n\n\n### **Events:**\n - **p-show** - Emitted when the alert opens.\n- **p-after-show** - Emitted after the alert opens and all animations are complete.\n- **p-hide** - Emitted when the alert closes.\n- **p-after-hide** - Emitted after the alert closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the alert.\n- **hide()** - Hides the alert\n- **toast()** - Displays the alert as a toast notification. This will move the alert out of its position in the DOM and, when\ndismissed, it will be removed from the DOM completely. By storing a reference to the alert, you can reuse it by\ncalling this method again. The returned promise will resolve after the alert is hidden.\n\n### **Slots:**\n - _default_ - The alert's main content.\n- **icon** - An icon to show in the alert. Works best with `<p-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the optional icon.\n- **message** - The container that wraps the alert's main content.\n- **close-button** - The close button, an `<p-icon-button>`.\n- **close-button__base** - The close button's exported `base` part.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "open",
+              "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "closable",
+              "description": "Enables a close button that allows the user to dismiss the alert.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "variant",
+              "description": "The alert's theme variant.",
+              "value": {
+                "type": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\"",
+                "default": "\"primary\""
+              }
+            },
+            {
+              "name": "duration",
+              "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own.",
+              "value": { "type": "string", "default": "Infinity" }
+            }
+          ],
+          "slots": [
+            { "name": "", "description": "The alert's main content." },
+            {
+              "name": "icon",
+              "description": "An icon to show in the alert. Works best with `<p-icon>`."
+            }
+          ],
+          "events": [
+            {
+              "name": "p-show",
+              "description": "Emitted when the alert opens."
+            },
+            {
+              "name": "p-after-show",
+              "description": "Emitted after the alert opens and all animations are complete."
+            },
+            {
+              "name": "p-hide",
+              "description": "Emitted when the alert closes."
+            },
+            {
+              "name": "p-after-hide",
+              "description": "Emitted after the alert closes and all animations are complete."
+            }
+          ],
+          "js": {
+            "properties": [
+              { "name": "base", "type": "HTMLElement" },
+              {
+                "name": "open",
+                "description": "Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the alert's open state.",
+                "type": "boolean"
+              },
+              {
+                "name": "closable",
+                "description": "Enables a close button that allows the user to dismiss the alert.",
+                "type": "boolean"
+              },
+              {
+                "name": "variant",
+                "description": "The alert's theme variant.",
+                "type": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\""
+              },
+              {
+                "name": "duration",
+                "description": "The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with\nthe alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning\nthe alert will not close on its own."
+              }
+            ],
+            "events": [
+              {
+                "name": "p-show",
+                "description": "Emitted when the alert opens."
+              },
+              {
+                "name": "p-after-show",
+                "description": "Emitted after the alert opens and all animations are complete."
+              },
+              {
+                "name": "p-hide",
+                "description": "Emitted when the alert closes."
+              },
+              {
+                "name": "p-after-hide",
+                "description": "Emitted after the alert closes and all animations are complete."
+              }
+            ]
+          }
+        },
+        {
           "name": "p-badge",
           "description": "Badges are used to draw attention and display statuses or counts.\n---\n\n\n### **Slots:**\n - _default_ - The badge's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
           "doc-url": "",
@@ -186,8 +271,8 @@
               "name": "variant",
               "description": "The badge's theme variant.",
               "value": {
-                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'",
-                "default": "'primary'"
+                "type": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\"",
+                "default": "\"primary\""
               }
             },
             {
@@ -208,7 +293,7 @@
               {
                 "name": "variant",
                 "description": "The badge's theme variant.",
-                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger'"
+                "type": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\""
               },
               {
                 "name": "pill",
@@ -225,88 +310,6 @@
           }
         },
         {
-          "name": "p-avatar",
-          "description": "Avatars are used to represent a person or object.\n---\n\n\n### **Events:**\n - **p-error** - The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause.\n\n### **Slots:**\n - **icon** - The default icon to use when no image or initials are present. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--size** - The size of the avatar. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the avatar's icon.\n- **initials** - The container that wraps the avatar's initials.\n- **image** - The avatar image. Only shown when the `image` attribute is set.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "image",
-              "description": "The image source to use for the avatar.",
-              "value": { "type": "string", "default": "''" }
-            },
-            {
-              "name": "label",
-              "description": "A label to use to describe the avatar to assistive devices.",
-              "value": { "type": "string", "default": "''" }
-            },
-            {
-              "name": "initials",
-              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-              "value": { "type": "string", "default": "''" }
-            },
-            {
-              "name": "loading",
-              "description": "Indicates how the browser should load the image.",
-              "value": { "type": "'eager' | 'lazy'", "default": "'eager'" }
-            },
-            {
-              "name": "shape",
-              "description": "The shape of the avatar.",
-              "value": {
-                "type": "'circle' | 'square' | 'rounded'",
-                "default": "'circle'"
-              }
-            }
-          ],
-          "slots": [
-            {
-              "name": "icon",
-              "description": "The default icon to use when no image or initials are present. Works best with `<p-icon>`."
-            }
-          ],
-          "events": [
-            {
-              "name": "p-error",
-              "description": "The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause."
-            }
-          ],
-          "js": {
-            "properties": [
-              {
-                "name": "image",
-                "description": "The image source to use for the avatar.",
-                "type": "string"
-              },
-              {
-                "name": "label",
-                "description": "A label to use to describe the avatar to assistive devices.",
-                "type": "string"
-              },
-              {
-                "name": "initials",
-                "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-                "type": "string"
-              },
-              {
-                "name": "loading",
-                "description": "Indicates how the browser should load the image.",
-                "type": "'eager' | 'lazy'"
-              },
-              {
-                "name": "shape",
-                "description": "The shape of the avatar.",
-                "type": "'circle' | 'square' | 'rounded'"
-              }
-            ],
-            "events": [
-              {
-                "name": "p-error",
-                "description": "The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause."
-              }
-            ]
-          }
-        },
-        {
           "name": "p-breadcrumb",
           "description": "Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.\n---\n\n\n### **Slots:**\n - _default_ - One or more breadcrumb items to display.\n- **separator** - The separator to use between breadcrumb items. Works best with `<p-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
           "doc-url": "",
@@ -314,7 +317,7 @@
             {
               "name": "label",
               "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             }
           ],
           "slots": [
@@ -355,13 +358,16 @@
               "name": "target",
               "description": "Tells the browser where to open the link. Only used when `href` is set.",
               "value": {
-                "type": "'_blank' | '_parent' | '_self' | '_top' | undefined"
+                "type": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\" | undefined"
               }
             },
             {
               "name": "rel",
               "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
-              "value": { "type": "string", "default": "'noreferrer noopener'" }
+              "value": {
+                "type": "string",
+                "default": "\"noreferrer noopener\""
+              }
             }
           ],
           "slots": [
@@ -390,7 +396,7 @@
               {
                 "name": "target",
                 "description": "Tells the browser where to open the link. Only used when `href` is set.",
-                "type": "'_blank' | '_parent' | '_self' | '_top' | undefined"
+                "type": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\" | undefined"
               },
               {
                 "name": "rel",
@@ -406,21 +412,24 @@
           "description": "Buttons represent actions that are available to the user.\n---\n\n\n### **Events:**\n - **p-blur** - Emitted when the button loses focus.\n- **p-focus** - Emitted when the button gains focus.\n- **p-invalid** - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n\n### **Methods:**\n - **click()** - Simulates a click on the button.\n- **focus(options: _FocusOptions_)** - Sets focus on the button.\n- **blur()** - Removes focus from the button.\n- **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n\n### **Slots:**\n - _default_ - The button's label.\n- **prefix** - A presentational prefix icon or similar element.\n- **suffix** - A presentational suffix icon or similar element.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **prefix** - The container that wraps the prefix.\n- **label** - The button's label.\n- **suffix** - The container that wraps the suffix.\n- **caret** - The button's caret icon, an `<p-icon>` element.\n- **spinner** - The spinner that shows when the button is in the loading state.",
           "doc-url": "",
           "attributes": [
-            { "name": "title", "value": { "type": "string", "default": "''" } },
+            {
+              "name": "title",
+              "value": { "type": "string", "default": "\"\"" }
+            },
             {
               "name": "variant",
               "description": "The button's theme variant.",
               "value": {
-                "type": "'default' | 'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'text'",
-                "default": "'default'"
+                "type": "\"default\" | \"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\" | \"text\"",
+                "default": "\"default\""
               }
             },
             {
               "name": "size",
               "description": "The button's size.",
               "value": {
-                "type": "'small' | 'medium' | 'large'",
-                "default": "'medium'"
+                "type": "\"small\" | \"medium\" | \"large\"",
+                "default": "\"medium\""
               }
             },
             {
@@ -457,34 +466,39 @@
               "name": "type",
               "description": "The type of button. Note that the default value is `button` instead of `submit`, which is opposite of how native\n`<button>` elements behave. When the type is `submit`, the button will submit the surrounding form.",
               "value": {
-                "type": "'button' | 'submit' | 'reset'",
-                "default": "'button'"
+                "type": "\"button\" | \"submit\" | \"reset\"",
+                "default": "\"button\""
               }
             },
             {
               "name": "name",
               "description": "The name of the button, submitted as a name/value pair with form data, but only when this button is the submitter.\nThis attribute is ignored when `href` is present.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "value",
               "description": "The value of the button, submitted as a pair with the button's name as part of the form data, but only when this\nbutton is the submitter. This attribute is ignored when `href` is present.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "href",
               "description": "When set, the underlying button will be rendered as an `<a>` with this `href` instead of a `<button>`.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "target",
               "description": "Tells the browser where to open the link. Only used when `href` is present.",
-              "value": { "type": "'_blank' | '_parent' | '_self' | '_top'" }
+              "value": {
+                "type": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\""
+              }
             },
             {
               "name": "rel",
               "description": "When using `href`, this attribute will map to the underlying link's `rel` attribute. Unlike regular links, the\ndefault is `noreferrer noopener` to prevent security exploits. However, if you're using `target` to point to a\nspecific tab/window, this will prevent that from working correctly. You can remove or change the default value by\nsetting the attribute to an empty string or a value of your choice, respectively.",
-              "value": { "type": "string", "default": "'noreferrer noopener'" }
+              "value": {
+                "type": "string",
+                "default": "\"noreferrer noopener\""
+              }
             },
             {
               "name": "download",
@@ -505,13 +519,13 @@
               "name": "formenctype",
               "description": "Used to override the form owner's `enctype` attribute.",
               "value": {
-                "type": "'application/x-www-form-urlencoded' | 'multipart/form-data' | 'text/plain'"
+                "type": "\"application/x-www-form-urlencoded\" | \"multipart/form-data\" | \"text/plain\""
               }
             },
             {
               "name": "formmethod",
               "description": "Used to override the form owner's `method` attribute.",
-              "value": { "type": "'post' | 'get'" }
+              "value": { "type": "\"post\" | \"get\"" }
             },
             {
               "name": "formnovalidate",
@@ -522,7 +536,7 @@
               "name": "formtarget",
               "description": "Used to override the form owner's `target` attribute.",
               "value": {
-                "type": "'_self' | '_blank' | '_parent' | '_top' | string"
+                "type": "\"_self\" | \"_blank\" | \"_parent\" | \"_top\" | string"
               }
             }
           ],
@@ -562,12 +576,12 @@
               {
                 "name": "variant",
                 "description": "The button's theme variant.",
-                "type": "'default' | 'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'text'"
+                "type": "\"default\" | \"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\" | \"text\""
               },
               {
                 "name": "size",
                 "description": "The button's size.",
-                "type": "'small' | 'medium' | 'large'"
+                "type": "\"small\" | \"medium\" | \"large\""
               },
               {
                 "name": "caret",
@@ -602,7 +616,7 @@
               {
                 "name": "type",
                 "description": "The type of button. Note that the default value is `button` instead of `submit`, which is opposite of how native\n`<button>` elements behave. When the type is `submit`, the button will submit the surrounding form.",
-                "type": "'button' | 'submit' | 'reset'"
+                "type": "\"button\" | \"submit\" | \"reset\""
               },
               {
                 "name": "name",
@@ -622,7 +636,7 @@
               {
                 "name": "target",
                 "description": "Tells the browser where to open the link. Only used when `href` is present.",
-                "type": "'_blank' | '_parent' | '_self' | '_top'"
+                "type": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\""
               },
               {
                 "name": "rel",
@@ -647,12 +661,12 @@
               {
                 "name": "formEnctype",
                 "description": "Used to override the form owner's `enctype` attribute.",
-                "type": "'application/x-www-form-urlencoded' | 'multipart/form-data' | 'text/plain'"
+                "type": "\"application/x-www-form-urlencoded\" | \"multipart/form-data\" | \"text/plain\""
               },
               {
                 "name": "formMethod",
                 "description": "Used to override the form owner's `method` attribute.",
-                "type": "'post' | 'get'"
+                "type": "\"post\" | \"get\""
               },
               {
                 "name": "formNoValidate",
@@ -662,7 +676,7 @@
               {
                 "name": "formTarget",
                 "description": "Used to override the form owner's `target` attribute.",
-                "type": "'_self' | '_blank' | '_parent' | '_top' | string"
+                "type": "\"_self\" | \"_blank\" | \"_parent\" | \"_top\" | string"
               },
               {
                 "name": "validity",
@@ -697,7 +711,7 @@
             {
               "name": "name",
               "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
-              "value": { "type": "string", "default": "'none'" }
+              "value": { "type": "string", "default": "\"none\"" }
             },
             {
               "name": "play",
@@ -712,7 +726,7 @@
             {
               "name": "direction",
               "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
-              "value": { "type": "PlaybackDirection", "default": "'normal'" }
+              "value": { "type": "PlaybackDirection", "default": "\"normal\"" }
             },
             {
               "name": "duration",
@@ -722,7 +736,7 @@
             {
               "name": "easing",
               "description": "The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
-              "value": { "type": "string", "default": "'linear'" }
+              "value": { "type": "string", "default": "\"linear\"" }
             },
             {
               "name": "end-delay",
@@ -732,7 +746,7 @@
             {
               "name": "fill",
               "description": "Sets how the animation applies styles to its target before and after its execution.",
-              "value": { "type": "FillMode", "default": "'auto'" }
+              "value": { "type": "FillMode", "default": "\"auto\"" }
             },
             {
               "name": "iterations",
@@ -862,7 +876,7 @@
             {
               "name": "label",
               "description": "A label to use for the button group. This won't be displayed on the screen, but it will be announced by assistive\ndevices when interacting with the control and is strongly recommended.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             }
           ],
           "slots": [
@@ -904,16 +918,16 @@
               "name": "day-labels",
               "description": "Determines how day labels are shown, e.g. \"M\", \"Mon\", or \"Monday\".",
               "value": {
-                "type": "'narrow' | 'short' | 'long'",
-                "default": "'short'"
+                "type": "\"narrow\" | \"short\" | \"long\"",
+                "default": "\"short\""
               }
             },
             {
               "name": "month-labels",
               "description": "Determines how month labels are shown, e.g. \"J\", \"Jan\", or \"January\".",
               "value": {
-                "type": "'numeric' | '2-digit' | 'long' | 'short' | 'narrow'",
-                "default": "'long'"
+                "type": "\"numeric\" | \"2-digit\" | \"long\" | \"short\" | \"narrow\"",
+                "default": "\"long\""
               }
             },
             {
@@ -954,12 +968,12 @@
               {
                 "name": "dayLabels",
                 "description": "Determines how day labels are shown, e.g. \"M\", \"Mon\", or \"Monday\".",
-                "type": "'narrow' | 'short' | 'long'"
+                "type": "\"narrow\" | \"short\" | \"long\""
               },
               {
                 "name": "monthLabels",
                 "description": "Determines how month labels are shown, e.g. \"J\", \"Jan\", or \"January\".",
-                "type": "'numeric' | '2-digit' | 'long' | 'short' | 'narrow'"
+                "type": "\"numeric\" | \"2-digit\" | \"long\" | \"short\" | \"narrow\""
               },
               {
                 "name": "showAdjacentDates",
@@ -1047,8 +1061,8 @@
               "name": "orientation",
               "description": "Specifies the orientation in which the carousel will lay out.",
               "value": {
-                "type": "'horizontal' | 'vertical'",
-                "default": "'horizontal'"
+                "type": "\"horizontal\" | \"vertical\"",
+                "default": "\"horizontal\""
               }
             },
             {
@@ -1118,7 +1132,7 @@
               {
                 "name": "orientation",
                 "description": "Specifies the orientation in which the carousel will lay out.",
-                "type": "'horizontal' | 'vertical'"
+                "type": "\"horizontal\" | \"vertical\""
               },
               {
                 "name": "mouseDragging",
@@ -1156,11 +1170,14 @@
           "description": "Checkboxes allow the user to toggle an option on or off.\n---\n\n\n### **Events:**\n - **p-blur** - Emitted when the checkbox loses focus.\n- **p-change** - Emitted when the checked state changes.\n- **p-focus** - Emitted when the checkbox gains focus.\n- **p-input** - Emitted when the checkbox receives input.\n- **p-invalid** - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n\n### **Methods:**\n - **click()** - Simulates a click on the checkbox.\n- **focus(options: _FocusOptions_)** - Sets focus on the checkbox.\n- **blur()** - Removes focus from the checkbox.\n- **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. The value provided will be shown to the user when the form is submitted. To clear\nthe custom validation message, call this method with an empty string.\n\n### **Slots:**\n - _default_ - The checkbox's label.\n- **help-text** - Text that describes how to use the checkbox. Alternatively, you can use the `help-text` attribute.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **control** - The square container that wraps the checkbox's checked state.\n- **control--checked** - Matches the control part when the checkbox is checked.\n- **control--indeterminate** - Matches the control part when the checkbox is indeterminate.\n- **checked-icon** - The checked icon, an `<p-icon>` element.\n- **indeterminate-icon** - The indeterminate icon, an `<p-icon>` element.\n- **label** - The container that wraps the checkbox's label.\n- **form-control-help-text** - The help text's wrapper.",
           "doc-url": "",
           "attributes": [
-            { "name": "title", "value": { "type": "string", "default": "''" } },
+            {
+              "name": "title",
+              "value": { "type": "string", "default": "\"\"" }
+            },
             {
               "name": "name",
               "description": "The name of the checkbox, submitted as a name/value pair with form data.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "value",
@@ -1171,8 +1188,8 @@
               "name": "size",
               "description": "The checkbox's size.",
               "value": {
-                "type": "'small' | 'medium' | 'large'",
-                "default": "'medium'"
+                "type": "\"small\" | \"medium\" | \"large\"",
+                "default": "\"medium\""
               }
             },
             {
@@ -1193,7 +1210,7 @@
             {
               "name": "form",
               "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "required",
@@ -1203,7 +1220,7 @@
             {
               "name": "help-text",
               "description": "The checkbox's help text. If you need to display HTML, use the `help-text` slot instead.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             }
           ],
           "slots": [
@@ -1252,7 +1269,7 @@
               {
                 "name": "size",
                 "description": "The checkbox's size.",
-                "type": "'small' | 'medium' | 'large'"
+                "type": "\"small\" | \"medium\" | \"large\""
               },
               {
                 "name": "disabled",
@@ -1324,25 +1341,25 @@
         },
         {
           "name": "p-color-picker",
-          "description": "Color pickers allow the user to select a color.\n---\n\n\n### **Events:**\n - **p-blur** - Emitted when the color picker loses focus.\n- **p-change** - Emitted when the color picker's value changes.\n- **p-focus** - Emitted when the color picker receives focus.\n- **p-input** - Emitted when the color picker receives input.\n- **p-invalid** - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n\n### **Methods:**\n - **focus(options: _FocusOptions_)** - Sets focus on the color picker.\n- **blur()** - Removes focus from the color picker.\n- **getFormattedValue(format: _'hex' | 'hexa' | 'rgb' | 'rgba' | 'hsl' | 'hsla' | 'hsv' | 'hsva'_)** - Returns the current value as a string in the specified format.\n- **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n\n### **Slots:**\n - **label** - The color picker's form label. Alternatively, you can use the `label` attribute.\n\n### **CSS Properties:**\n - **--grid-width** - The width of the color grid. _(default: undefined)_\n- **--grid-height** - The height of the color grid. _(default: undefined)_\n- **--grid-handle-size** - The size of the color grid's handle. _(default: undefined)_\n- **--slider-height** - The height of the hue and alpha sliders. _(default: undefined)_\n- **--slider-handle-size** - The diameter of the slider's handle. _(default: undefined)_\n- **--swatch-size** - The size of each predefined color swatch. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **trigger** - The color picker's dropdown trigger.\n- **swatches** - The container that holds the swatches.\n- **swatch** - Each individual swatch.\n- **grid** - The color grid.\n- **grid-handle** - The color grid's handle.\n- **slider** - Hue and opacity sliders.\n- **slider-handle** - Hue and opacity slider handles.\n- **hue-slider** - The hue slider.\n- **hue-slider-handle** - The hue slider's handle.\n- **opacity-slider** - The opacity slider.\n- **opacity-slider-handle** - The opacity slider's handle.\n- **preview** - The preview color.\n- **input** - The text input.\n- **eye-dropper-button** - The eye dropper button.\n- **eye-dropper-button__base** - The eye dropper button's exported `button` part.\n- **eye-dropper-button__prefix** - The eye dropper button's exported `prefix` part.\n- **eye-dropper-button__label** - The eye dropper button's exported `label` part.\n- **eye-dropper-button__suffix** - The eye dropper button's exported `suffix` part.\n- **eye-dropper-button__caret** - The eye dropper button's exported `caret` part.\n- **format-button** - The format button.\n- **format-button__base** - The format button's exported `button` part.\n- **format-button__prefix** - The format button's exported `prefix` part.\n- **format-button__label** - The format button's exported `label` part.\n- **format-button__suffix** - The format button's exported `suffix` part.\n- **format-button__caret** - The format button's exported `caret` part.",
+          "description": "Color pickers allow the user to select a color.\n---\n\n\n### **Events:**\n - **p-blur** - Emitted when the color picker loses focus.\n- **p-change** - Emitted when the color picker's value changes.\n- **p-focus** - Emitted when the color picker receives focus.\n- **p-input** - Emitted when the color picker receives input.\n- **p-invalid** - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n\n### **Methods:**\n - **focus(options: _FocusOptions_)** - Sets focus on the color picker.\n- **blur()** - Removes focus from the color picker.\n- **getFormattedValue(format: _\"hex\" | \"hexa\" | \"rgb\" | \"rgba\" | \"hsl\" | \"hsla\" | \"hsv\" | \"hsva\"_)** - Returns the current value as a string in the specified format.\n- **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n\n### **Slots:**\n - **label** - The color picker's form label. Alternatively, you can use the `label` attribute.\n\n### **CSS Properties:**\n - **--grid-width** - The width of the color grid. _(default: undefined)_\n- **--grid-height** - The height of the color grid. _(default: undefined)_\n- **--grid-handle-size** - The size of the color grid's handle. _(default: undefined)_\n- **--slider-height** - The height of the hue and alpha sliders. _(default: undefined)_\n- **--slider-handle-size** - The diameter of the slider's handle. _(default: undefined)_\n- **--swatch-size** - The size of each predefined color swatch. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **trigger** - The color picker's dropdown trigger.\n- **swatches** - The container that holds the swatches.\n- **swatch** - Each individual swatch.\n- **grid** - The color grid.\n- **grid-handle** - The color grid's handle.\n- **slider** - Hue and opacity sliders.\n- **slider-handle** - Hue and opacity slider handles.\n- **hue-slider** - The hue slider.\n- **hue-slider-handle** - The hue slider's handle.\n- **opacity-slider** - The opacity slider.\n- **opacity-slider-handle** - The opacity slider's handle.\n- **preview** - The preview color.\n- **input** - The text input.\n- **eye-dropper-button** - The eye dropper button.\n- **eye-dropper-button__base** - The eye dropper button's exported `button` part.\n- **eye-dropper-button__prefix** - The eye dropper button's exported `prefix` part.\n- **eye-dropper-button__label** - The eye dropper button's exported `label` part.\n- **eye-dropper-button__suffix** - The eye dropper button's exported `suffix` part.\n- **eye-dropper-button__caret** - The eye dropper button's exported `caret` part.\n- **format-button** - The format button.\n- **format-button__base** - The format button's exported `button` part.\n- **format-button__prefix** - The format button's exported `prefix` part.\n- **format-button__label** - The format button's exported `label` part.\n- **format-button__suffix** - The format button's exported `suffix` part.\n- **format-button__caret** - The format button's exported `caret` part.",
           "doc-url": "",
           "attributes": [
             {
               "name": "value",
               "description": "The current value of the color picker. The value's format will vary based the `format` attribute. To get the value\nin a specific format, use the `getFormattedValue()` method. The value is submitted as a name/value pair with form\ndata.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "label",
               "description": "The color picker's label. This will not be displayed, but it will be announced by assistive devices. If you need to\ndisplay HTML, you can use the `label` slot` instead.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "format",
               "description": "The format to use. If opacity is enabled, these will translate to HEXA, RGBA, HSLA, and HSVA respectively. The color\npicker will accept user input in any format (including CSS color names) and convert it to the desired format.",
               "value": {
-                "type": "'hex' | 'rgb' | 'hsl' | 'hsv'",
-                "default": "'hex'"
+                "type": "\"hex\" | \"rgb\" | \"hsl\" | \"hsv\"",
+                "default": "\"hex\""
               }
             },
             {
@@ -1354,8 +1371,8 @@
               "name": "size",
               "description": "Determines the size of the color picker's trigger. This has no effect on inline color pickers.",
               "value": {
-                "type": "'small' | 'medium' | 'large'",
-                "default": "'medium'"
+                "type": "\"small\" | \"medium\" | \"large\"",
+                "default": "\"medium\""
               }
             },
             {
@@ -1366,7 +1383,7 @@
             {
               "name": "name",
               "description": "The name of the form control, submitted as a name/value pair with form data.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "disabled",
@@ -1391,12 +1408,12 @@
             {
               "name": "swatches",
               "description": "One or more predefined color swatches to display as presets in the color picker. Can include any format the color\npicker can parse, including HEX(A), RGB(A), HSL(A), HSV(A), and CSS color names. Each color must be separated by a\nsemicolon (`;`). Alternatively, you can pass an array of color values to this property using JavaScript.",
-              "value": { "type": "string | string[]", "default": "''" }
+              "value": { "type": "string | string[]", "default": "\"\"" }
             },
             {
               "name": "form",
               "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "required",
@@ -1457,7 +1474,7 @@
               {
                 "name": "format",
                 "description": "The format to use. If opacity is enabled, these will translate to HEXA, RGBA, HSLA, and HSVA respectively. The color\npicker will accept user input in any format (including CSS color names) and convert it to the desired format.",
-                "type": "'hex' | 'rgb' | 'hsl' | 'hsv'"
+                "type": "\"hex\" | \"rgb\" | \"hsl\" | \"hsv\""
               },
               {
                 "name": "inline",
@@ -1467,7 +1484,7 @@
               {
                 "name": "size",
                 "description": "Determines the size of the color picker's trigger. This has no effect on inline color pickers.",
-                "type": "'small' | 'medium' | 'large'"
+                "type": "\"small\" | \"medium\" | \"large\""
               },
               {
                 "name": "noFormatToggle",
@@ -1555,12 +1572,12 @@
             {
               "name": "value",
               "description": "The text value to copy.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "from",
               "description": "An id that references an element in the same document from which data will be copied. If both this and `value` are\npresent, this value will take precedence. By default, the target element's `textContent` will be copied. To copy an\nattribute, append the attribute name wrapped in square brackets, e.g. `from=\"el[value]\"`. To copy a property,\nappend a dot and the property name, e.g. `from=\"el.value\"`.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "disabled",
@@ -1570,17 +1587,17 @@
             {
               "name": "copy-label",
               "description": "A custom label to show in the tooltip.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "success-label",
               "description": "A custom label to show in the tooltip after copying.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "error-label",
               "description": "A custom label to show in the tooltip when a copy error occurs.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "feedback-duration",
@@ -1591,8 +1608,8 @@
               "name": "tooltip-placement",
               "description": "The preferred placement of the tooltip.",
               "value": {
-                "type": "'top' | 'right' | 'bottom' | 'left'",
-                "default": "'top'"
+                "type": "\"top\" | \"right\" | \"bottom\" | \"left\"",
+                "default": "\"top\""
               }
             },
             {
@@ -1632,7 +1649,10 @@
               { "name": "errorIcon", "type": "HTMLSlotElement" },
               { "name": "tooltip", "type": "PTooltip" },
               { "name": "isCopying", "type": "boolean" },
-              { "name": "status", "type": "'rest' | 'success' | 'error'" },
+              {
+                "name": "status",
+                "type": "\"rest\" | \"success\" | \"error\""
+              },
               {
                 "name": "value",
                 "description": "The text value to copy.",
@@ -1671,7 +1691,7 @@
               {
                 "name": "tooltipPlacement",
                 "description": "The preferred placement of the tooltip.",
-                "type": "'top' | 'right' | 'bottom' | 'left'"
+                "type": "\"top\" | \"right\" | \"bottom\" | \"left\""
               },
               {
                 "name": "hoist",
@@ -1801,7 +1821,7 @@
             {
               "name": "label",
               "description": "The dialog's label as displayed in the header. You should always include a relevant label even when using\n`no-header`, as it is required for proper accessibility. If you need to display HTML, use the `label` slot instead.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "no-header",
@@ -1941,14 +1961,14 @@
             {
               "name": "label",
               "description": "The drawer's label as displayed in the header. You should always include a relevant label even when using\n`no-header`, as it is required for proper accessibility. If you need to display HTML, use the `label` slot instead.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "placement",
               "description": "The direction from which the drawer will open.",
               "value": {
-                "type": "'top' | 'end' | 'bottom' | 'start'",
-                "default": "'end'"
+                "type": "\"top\" | \"end\" | \"bottom\" | \"start\"",
+                "default": "\"end\""
               }
             },
             {
@@ -2026,7 +2046,7 @@
               {
                 "name": "placement",
                 "description": "The direction from which the drawer will open.",
-                "type": "'top' | 'end' | 'bottom' | 'start'"
+                "type": "\"top\" | \"end\" | \"bottom\" | \"start\""
               },
               {
                 "name": "contained",
@@ -2082,8 +2102,8 @@
               "name": "placement",
               "description": "The preferred placement of the dropdown panel. Note that the actual placement may vary as needed to keep the panel\ninside of the viewport.",
               "value": {
-                "type": "| 'top'\n    | 'top-start'\n    | 'top-end'\n    | 'bottom'\n    | 'bottom-start'\n    | 'bottom-end'\n    | 'right'\n    | 'right-start'\n    | 'right-end'\n    | 'left'\n    | 'left-start'\n    | 'left-end'",
-                "default": "'bottom-start'"
+                "type": "| \"top\"\n    | \"top-start\"\n    | \"top-end\"\n    | \"bottom\"\n    | \"bottom-start\"\n    | \"bottom-end\"\n    | \"right\"\n    | \"right-start\"\n    | \"right-end\"\n    | \"left\"\n    | \"left-start\"\n    | \"left-end\"",
+                "default": "\"bottom-start\""
               }
             },
             {
@@ -2115,7 +2135,7 @@
               "name": "sync",
               "description": "Syncs the popup width or height to that of the trigger element.",
               "value": {
-                "type": "'width' | 'height' | 'both' | undefined",
+                "type": "\"width\" | \"height\" | \"both\" | undefined",
                 "default": "undefined"
               }
             }
@@ -2158,7 +2178,7 @@
               {
                 "name": "placement",
                 "description": "The preferred placement of the dropdown panel. Note that the actual placement may vary as needed to keep the panel\ninside of the viewport.",
-                "type": "| 'top'\n    | 'top-start'\n    | 'top-end'\n    | 'bottom'\n    | 'bottom-start'\n    | 'bottom-end'\n    | 'right'\n    | 'right-start'\n    | 'right-end'\n    | 'left'\n    | 'left-start'\n    | 'left-end'"
+                "type": "| \"top\"\n    | \"top-start\"\n    | \"top-end\"\n    | \"bottom\"\n    | \"bottom-start\"\n    | \"bottom-end\"\n    | \"right\"\n    | \"right-start\"\n    | \"right-end\"\n    | \"left\"\n    | \"left-start\"\n    | \"left-end\""
               },
               {
                 "name": "disabled",
@@ -2193,7 +2213,7 @@
               {
                 "name": "sync",
                 "description": "Syncs the popup width or height to that of the trigger element.",
-                "type": "'width' | 'height' | 'both' | undefined"
+                "type": "\"width\" | \"height\" | \"both\" | undefined"
               }
             ],
             "events": [
@@ -2229,14 +2249,14 @@
             {
               "name": "unit",
               "description": "The type of unit to display.",
-              "value": { "type": "'byte' | 'bit'", "default": "'byte'" }
+              "value": { "type": "\"byte\" | \"bit\"", "default": "\"byte\"" }
             },
             {
               "name": "display",
               "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
               "value": {
-                "type": "'long' | 'short' | 'narrow'",
-                "default": "'short'"
+                "type": "\"long\" | \"short\" | \"narrow\"",
+                "default": "\"short\""
               }
             }
           ],
@@ -2251,12 +2271,12 @@
               {
                 "name": "unit",
                 "description": "The type of unit to display.",
-                "type": "'byte' | 'bit'"
+                "type": "\"byte\" | \"bit\""
               },
               {
                 "name": "display",
                 "description": "Determines how to display the result, e.g. \"100 bytes\", \"100 b\", or \"100b\".",
-                "type": "'long' | 'short' | 'narrow'"
+                "type": "\"long\" | \"short\" | \"narrow\""
               }
             ],
             "events": []
@@ -2275,49 +2295,49 @@
             {
               "name": "weekday",
               "description": "The format for displaying the weekday.",
-              "value": { "type": "'narrow' | 'short' | 'long'" }
+              "value": { "type": "\"narrow\" | \"short\" | \"long\"" }
             },
             {
               "name": "era",
               "description": "The format for displaying the era.",
-              "value": { "type": "'narrow' | 'short' | 'long'" }
+              "value": { "type": "\"narrow\" | \"short\" | \"long\"" }
             },
             {
               "name": "year",
               "description": "The format for displaying the year.",
-              "value": { "type": "'numeric' | '2-digit'" }
+              "value": { "type": "\"numeric\" | \"2-digit\"" }
             },
             {
               "name": "month",
               "description": "The format for displaying the month.",
               "value": {
-                "type": "'numeric' | '2-digit' | 'narrow' | 'short' | 'long'"
+                "type": "\"numeric\" | \"2-digit\" | \"narrow\" | \"short\" | \"long\""
               }
             },
             {
               "name": "day",
               "description": "The format for displaying the day.",
-              "value": { "type": "'numeric' | '2-digit'" }
+              "value": { "type": "\"numeric\" | \"2-digit\"" }
             },
             {
               "name": "hour",
               "description": "The format for displaying the hour.",
-              "value": { "type": "'numeric' | '2-digit'" }
+              "value": { "type": "\"numeric\" | \"2-digit\"" }
             },
             {
               "name": "minute",
               "description": "The format for displaying the minute.",
-              "value": { "type": "'numeric' | '2-digit'" }
+              "value": { "type": "\"numeric\" | \"2-digit\"" }
             },
             {
               "name": "second",
               "description": "The format for displaying the second.",
-              "value": { "type": "'numeric' | '2-digit'" }
+              "value": { "type": "\"numeric\" | \"2-digit\"" }
             },
             {
               "name": "time-zone-name",
               "description": "The format for displaying the time.",
-              "value": { "type": "'short' | 'long'" }
+              "value": { "type": "\"short\" | \"long\"" }
             },
             {
               "name": "time-zone",
@@ -2327,7 +2347,10 @@
             {
               "name": "hour-format",
               "description": "The format for displaying the hour.",
-              "value": { "type": "'auto' | '12' | '24'", "default": "'auto'" }
+              "value": {
+                "type": "\"auto\" | \"12\" | \"24\"",
+                "default": "\"auto\""
+              }
             }
           ],
           "events": [],
@@ -2341,47 +2364,47 @@
               {
                 "name": "weekday",
                 "description": "The format for displaying the weekday.",
-                "type": "'narrow' | 'short' | 'long'"
+                "type": "\"narrow\" | \"short\" | \"long\""
               },
               {
                 "name": "era",
                 "description": "The format for displaying the era.",
-                "type": "'narrow' | 'short' | 'long'"
+                "type": "\"narrow\" | \"short\" | \"long\""
               },
               {
                 "name": "year",
                 "description": "The format for displaying the year.",
-                "type": "'numeric' | '2-digit'"
+                "type": "\"numeric\" | \"2-digit\""
               },
               {
                 "name": "month",
                 "description": "The format for displaying the month.",
-                "type": "'numeric' | '2-digit' | 'narrow' | 'short' | 'long'"
+                "type": "\"numeric\" | \"2-digit\" | \"narrow\" | \"short\" | \"long\""
               },
               {
                 "name": "day",
                 "description": "The format for displaying the day.",
-                "type": "'numeric' | '2-digit'"
+                "type": "\"numeric\" | \"2-digit\""
               },
               {
                 "name": "hour",
                 "description": "The format for displaying the hour.",
-                "type": "'numeric' | '2-digit'"
+                "type": "\"numeric\" | \"2-digit\""
               },
               {
                 "name": "minute",
                 "description": "The format for displaying the minute.",
-                "type": "'numeric' | '2-digit'"
+                "type": "\"numeric\" | \"2-digit\""
               },
               {
                 "name": "second",
                 "description": "The format for displaying the second.",
-                "type": "'numeric' | '2-digit'"
+                "type": "\"numeric\" | \"2-digit\""
               },
               {
                 "name": "timeZoneName",
                 "description": "The format for displaying the time.",
-                "type": "'short' | 'long'"
+                "type": "\"short\" | \"long\""
               },
               {
                 "name": "timeZone",
@@ -2391,7 +2414,7 @@
               {
                 "name": "hourFormat",
                 "description": "The format for displaying the hour.",
-                "type": "'auto' | '12' | '24'"
+                "type": "\"auto\" | \"12\" | \"24\""
               }
             ],
             "events": []
@@ -2411,8 +2434,8 @@
               "name": "type",
               "description": "The formatting style to use.",
               "value": {
-                "type": "'currency' | 'decimal' | 'percent'",
-                "default": "'decimal'"
+                "type": "\"currency\" | \"decimal\" | \"percent\"",
+                "default": "\"decimal\""
               }
             },
             {
@@ -2423,14 +2446,14 @@
             {
               "name": "currency",
               "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting.",
-              "value": { "type": "string", "default": "'USD'" }
+              "value": { "type": "string", "default": "\"USD\"" }
             },
             {
               "name": "currency-display",
               "description": "How to display the currency.",
               "value": {
-                "type": "'symbol' | 'narrowSymbol' | 'code' | 'name'",
-                "default": "'symbol'"
+                "type": "\"symbol\" | \"narrowSymbol\" | \"code\" | \"name\"",
+                "default": "\"symbol\""
               }
             },
             {
@@ -2470,7 +2493,7 @@
               {
                 "name": "type",
                 "description": "The formatting style to use.",
-                "type": "'currency' | 'decimal' | 'percent'"
+                "type": "\"currency\" | \"decimal\" | \"percent\""
               },
               {
                 "name": "noGrouping",
@@ -2485,7 +2508,7 @@
               {
                 "name": "currencyDisplay",
                 "description": "How to display the currency.",
-                "type": "'symbol' | 'narrowSymbol' | 'code' | 'name'"
+                "type": "\"symbol\" | \"narrowSymbol\" | \"code\" | \"name\""
               },
               {
                 "name": "minimumIntegerDigits",
@@ -2534,12 +2557,12 @@
             {
               "name": "label",
               "description": "An alternate description to use for assistive devices. If omitted, the icon will be considered presentational and\nignored by assistive devices.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "library",
               "description": "The name of a registered custom icon library.",
-              "value": { "type": "string", "default": "'default'" }
+              "value": { "type": "string", "default": "\"default\"" }
             }
           ],
           "events": [
@@ -2616,7 +2639,7 @@
               "name": "target",
               "description": "Tells the browser where to open the link. Only used when `href` is set.",
               "value": {
-                "type": "'_blank' | '_parent' | '_self' | '_top' | undefined"
+                "type": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\" | undefined"
               }
             },
             {
@@ -2627,7 +2650,7 @@
             {
               "name": "label",
               "description": "A description that gets read by assistive devices. For optimal accessibility, you should always include a label\nthat describes what the icon button does.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "disabled",
@@ -2674,7 +2697,7 @@
               {
                 "name": "target",
                 "description": "Tells the browser where to open the link. Only used when `href` is set.",
-                "type": "'_blank' | '_parent' | '_self' | '_top' | undefined"
+                "type": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\" | undefined"
               },
               {
                 "name": "download",
@@ -2767,8 +2790,8 @@
               "name": "mode",
               "description": "The fetch mode to use.",
               "value": {
-                "type": "'cors' | 'no-cors' | 'same-origin'",
-                "default": "'cors'"
+                "type": "\"cors\" | \"no-cors\" | \"same-origin\"",
+                "default": "\"cors\""
               }
             },
             {
@@ -2798,7 +2821,7 @@
               {
                 "name": "mode",
                 "description": "The fetch mode to use.",
-                "type": "'cors' | 'no-cors' | 'same-origin'"
+                "type": "\"cors\" | \"no-cors\" | \"same-origin\""
               },
               {
                 "name": "allowScripts",
@@ -2821,34 +2844,37 @@
         },
         {
           "name": "p-input",
-          "description": "Inputs collect data from the user.\n---\n\n\n### **Events:**\n - **p-blur** - Emitted when the control loses focus.\n- **p-change** - Emitted when an alteration to the control's value is committed by the user.\n- **p-clear** - Emitted when the clear button is activated.\n- **p-focus** - Emitted when the control gains focus.\n- **p-input** - Emitted when the control receives input.\n- **p-invalid** - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n\n### **Methods:**\n - **focus(options: _FocusOptions_)** - Sets focus on the input.\n- **blur()** - Removes focus from the input.\n- **select()** - Selects all the text in the input.\n- **setSelectionRange(selectionStart: _number_, selectionEnd: _number_, selectionDirection: _'forward' | 'backward' | 'none'_)** - Sets the start and end positions of the text selection (0-based).\n- **setRangeText(replacement: _string_, start: _number_, end: _number_, selectMode: _'select' | 'start' | 'end' | 'preserve'_)** - Replaces a range of text with a new string.\n- **showPicker()** - Displays the browser picker for an input element (only works if the browser supports it for the input type).\n- **stepUp()** - Increments the value of a numeric input type by the value of the step attribute.\n- **stepDown()** - Decrements the value of a numeric input type by the value of the step attribute.\n- **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n\n### **Slots:**\n - **label** - The input's label. Alternatively, you can use the `label` attribute.\n- **prefix** - Used to prepend a presentational icon or similar element to the input.\n- **suffix** - Used to append a presentational icon or similar element to the input.\n- **clear-icon** - An icon to use in lieu of the default clear icon.\n- **show-password-icon** - An icon to use in lieu of the default show password icon.\n- **hide-password-icon** - An icon to use in lieu of the default hide password icon.\n- **help-text** - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.\n\n### **CSS Parts:**\n - **form-control** - The form control that wraps the label, input, and help text.\n- **form-control-label** - The label's wrapper.\n- **form-control-input** - The input's wrapper.\n- **form-control-help-text** - The help text's wrapper.\n- **base** - The component's base wrapper.\n- **input** - The internal `<input>` control.\n- **prefix** - The container that wraps the prefix.\n- **clear-button** - The clear button.\n- **password-toggle-button** - The password toggle button.\n- **suffix** - The container that wraps the suffix.",
+          "description": "Inputs collect data from the user.\n---\n\n\n### **Events:**\n - **p-blur** - Emitted when the control loses focus.\n- **p-change** - Emitted when an alteration to the control's value is committed by the user.\n- **p-clear** - Emitted when the clear button is activated.\n- **p-focus** - Emitted when the control gains focus.\n- **p-input** - Emitted when the control receives input.\n- **p-invalid** - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n\n### **Methods:**\n - **focus(options: _FocusOptions_)** - Sets focus on the input.\n- **blur()** - Removes focus from the input.\n- **select()** - Selects all the text in the input.\n- **setSelectionRange(selectionStart: _number_, selectionEnd: _number_, selectionDirection: _\"forward\" | \"backward\" | \"none\"_)** - Sets the start and end positions of the text selection (0-based).\n- **setRangeText(replacement: _string_, start: _number_, end: _number_, selectMode: _\"select\" | \"start\" | \"end\" | \"preserve\"_)** - Replaces a range of text with a new string.\n- **showPicker()** - Displays the browser picker for an input element (only works if the browser supports it for the input type).\n- **stepUp()** - Increments the value of a numeric input type by the value of the step attribute.\n- **stepDown()** - Decrements the value of a numeric input type by the value of the step attribute.\n- **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n\n### **Slots:**\n - **label** - The input's label. Alternatively, you can use the `label` attribute.\n- **prefix** - Used to prepend a presentational icon or similar element to the input.\n- **suffix** - Used to append a presentational icon or similar element to the input.\n- **clear-icon** - An icon to use in lieu of the default clear icon.\n- **show-password-icon** - An icon to use in lieu of the default show password icon.\n- **hide-password-icon** - An icon to use in lieu of the default hide password icon.\n- **help-text** - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.\n\n### **CSS Parts:**\n - **form-control** - The form control that wraps the label, input, and help text.\n- **form-control-label** - The label's wrapper.\n- **form-control-input** - The input's wrapper.\n- **form-control-help-text** - The help text's wrapper.\n- **base** - The component's base wrapper.\n- **input** - The internal `<input>` control.\n- **prefix** - The container that wraps the prefix.\n- **clear-button** - The clear button.\n- **password-toggle-button** - The password toggle button.\n- **suffix** - The container that wraps the suffix.",
           "doc-url": "",
           "attributes": [
-            { "name": "title", "value": { "type": "string", "default": "''" } },
+            {
+              "name": "title",
+              "value": { "type": "string", "default": "\"\"" }
+            },
             {
               "name": "type",
               "description": "The type of input. Works the same as a native `<input>` element, but only a subset of types are supported. Defaults\nto `text`.",
               "value": {
-                "type": "| 'date'\n    | 'datetime-local'\n    | 'email'\n    | 'number'\n    | 'password'\n    | 'search'\n    | 'tel'\n    | 'text'\n    | 'time'\n    | 'url'",
-                "default": "'text'"
+                "type": "| \"date\"\n    | \"datetime-local\"\n    | \"email\"\n    | \"number\"\n    | \"password\"\n    | \"search\"\n    | \"tel\"\n    | \"text\"\n    | \"time\"\n    | \"url\"",
+                "default": "\"text\""
               }
             },
             {
               "name": "name",
               "description": "The name of the input, submitted as a name/value pair with form data.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "value",
               "description": "The current value of the input, submitted as a name/value pair with form data.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "size",
               "description": "The input's size.",
               "value": {
-                "type": "'small' | 'medium' | 'large'",
-                "default": "'medium'"
+                "type": "\"small\" | \"medium\" | \"large\"",
+                "default": "\"medium\""
               }
             },
             {
@@ -2864,12 +2890,12 @@
             {
               "name": "label",
               "description": "The input's label. If you need to display HTML, use the `label` slot instead.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "help-text",
               "description": "The input's help text. If you need to display HTML, use the `help-text` slot instead.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "clearable",
@@ -2884,7 +2910,7 @@
             {
               "name": "placeholder",
               "description": "Placeholder text to show as a hint when the input is empty.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "readonly",
@@ -2909,7 +2935,7 @@
             {
               "name": "form",
               "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "required",
@@ -2944,19 +2970,19 @@
             {
               "name": "step",
               "description": "Specifies the granularity that the value must adhere to, or the special value `any` which means no stepping is\nimplied, allowing any numeric value. Only applies to date and number input types.",
-              "value": { "type": "number | 'any'" }
+              "value": { "type": "number | \"any\"" }
             },
             {
               "name": "autocapitalize",
               "description": "Controls whether and how text input is automatically capitalized as it is entered by the user.",
               "value": {
-                "type": "'off' | 'none' | 'on' | 'sentences' | 'words' | 'characters'"
+                "type": "\"off\" | \"none\" | \"on\" | \"sentences\" | \"words\" | \"characters\""
               }
             },
             {
               "name": "autocorrect",
               "description": "Indicates whether the browser's autocorrect feature is on or off.",
-              "value": { "type": "'off' | 'on'" }
+              "value": { "type": "\"off\" | \"on\"" }
             },
             {
               "name": "autocomplete",
@@ -2972,7 +2998,7 @@
               "name": "enterkeyhint",
               "description": "Used to customize the label or icon of the Enter key on virtual keyboards.",
               "value": {
-                "type": "'enter' | 'done' | 'go' | 'next' | 'previous' | 'search' | 'send'"
+                "type": "\"enter\" | \"done\" | \"go\" | \"next\" | \"previous\" | \"search\" | \"send\""
               }
             },
             {
@@ -2984,7 +3010,7 @@
               "name": "inputmode",
               "description": "Tells the browser what type of data will be entered by the user, allowing it to display the appropriate virtual\nkeyboard on supportive devices.",
               "value": {
-                "type": "'none' | 'text' | 'decimal' | 'numeric' | 'tel' | 'search' | 'email' | 'url'"
+                "type": "\"none\" | \"text\" | \"decimal\" | \"numeric\" | \"tel\" | \"search\" | \"email\" | \"url\""
               }
             }
           ],
@@ -3051,7 +3077,7 @@
               {
                 "name": "type",
                 "description": "The type of input. Works the same as a native `<input>` element, but only a subset of types are supported. Defaults\nto `text`.",
-                "type": "| 'date'\n    | 'datetime-local'\n    | 'email'\n    | 'number'\n    | 'password'\n    | 'search'\n    | 'tel'\n    | 'text'\n    | 'time'\n    | 'url'"
+                "type": "| \"date\"\n    | \"datetime-local\"\n    | \"email\"\n    | \"number\"\n    | \"password\"\n    | \"search\"\n    | \"tel\"\n    | \"text\"\n    | \"time\"\n    | \"url\""
               },
               {
                 "name": "name",
@@ -3071,7 +3097,7 @@
               {
                 "name": "size",
                 "description": "The input's size.",
-                "type": "'small' | 'medium' | 'large'"
+                "type": "\"small\" | \"medium\" | \"large\""
               },
               {
                 "name": "filled",
@@ -3166,17 +3192,17 @@
               {
                 "name": "step",
                 "description": "Specifies the granularity that the value must adhere to, or the special value `any` which means no stepping is\nimplied, allowing any numeric value. Only applies to date and number input types.",
-                "type": "number | 'any'"
+                "type": "number | \"any\""
               },
               {
                 "name": "autocapitalize",
                 "description": "Controls whether and how text input is automatically capitalized as it is entered by the user.",
-                "type": "'off' | 'none' | 'on' | 'sentences' | 'words' | 'characters'"
+                "type": "\"off\" | \"none\" | \"on\" | \"sentences\" | \"words\" | \"characters\""
               },
               {
                 "name": "autocorrect",
                 "description": "Indicates whether the browser's autocorrect feature is on or off.",
-                "type": "'off' | 'on'"
+                "type": "\"off\" | \"on\""
               },
               {
                 "name": "autocomplete",
@@ -3191,7 +3217,7 @@
               {
                 "name": "enterkeyhint",
                 "description": "Used to customize the label or icon of the Enter key on virtual keyboards.",
-                "type": "'enter' | 'done' | 'go' | 'next' | 'previous' | 'search' | 'send'"
+                "type": "\"enter\" | \"done\" | \"go\" | \"next\" | \"previous\" | \"search\" | \"send\""
               },
               {
                 "name": "spellcheck",
@@ -3201,7 +3227,7 @@
               {
                 "name": "inputmode",
                 "description": "Tells the browser what type of data will be entered by the user, allowing it to display the appropriate virtual\nkeyboard on supportive devices.",
-                "type": "'none' | 'text' | 'decimal' | 'numeric' | 'tel' | 'search' | 'email' | 'url'"
+                "type": "\"none\" | \"text\" | \"decimal\" | \"numeric\" | \"tel\" | \"search\" | \"email\" | \"url\""
               },
               {
                 "name": "valueAsDate",
@@ -3288,8 +3314,8 @@
               "name": "type",
               "description": "The type of menu item to render. To use `checked`, this value must be set to `checkbox`.",
               "value": {
-                "type": "'normal' | 'checkbox'",
-                "default": "'normal'"
+                "type": "\"normal\" | \"checkbox\"",
+                "default": "\"normal\""
               }
             },
             {
@@ -3300,7 +3326,7 @@
             {
               "name": "value",
               "description": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "loading",
@@ -3336,7 +3362,7 @@
               {
                 "name": "type",
                 "description": "The type of menu item to render. To use `checked`, this value must be set to `checkbox`.",
-                "type": "'normal' | 'checkbox'"
+                "type": "\"normal\" | \"checkbox\""
               },
               {
                 "name": "checked",
@@ -3467,7 +3493,7 @@
             {
               "name": "value",
               "description": "The option's value. When selected, the containing form control will receive this value. The value must be unique\nfrom other options in the same group. Values may not contain spaces, as spaces are used as delimiters when listing\nmultiple values.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "disabled",
@@ -3526,16 +3552,16 @@
               "name": "placement",
               "description": "The preferred placement of the popup. Note that the actual placement will vary as configured to keep the\npanel inside of the viewport.",
               "value": {
-                "type": "| 'top'\n    | 'top-start'\n    | 'top-end'\n    | 'bottom'\n    | 'bottom-start'\n    | 'bottom-end'\n    | 'right'\n    | 'right-start'\n    | 'right-end'\n    | 'left'\n    | 'left-start'\n    | 'left-end'",
-                "default": "'top'"
+                "type": "| \"top\"\n    | \"top-start\"\n    | \"top-end\"\n    | \"bottom\"\n    | \"bottom-start\"\n    | \"bottom-end\"\n    | \"right\"\n    | \"right-start\"\n    | \"right-end\"\n    | \"left\"\n    | \"left-start\"\n    | \"left-end\"",
+                "default": "\"top\""
               }
             },
             {
               "name": "strategy",
               "description": "Determines how the popup is positioned. The `absolute` strategy works well in most cases, but if overflow is\nclipped, using a `fixed` position strategy can often workaround it.",
               "value": {
-                "type": "'absolute' | 'fixed'",
-                "default": "'absolute'"
+                "type": "\"absolute\" | \"fixed\"",
+                "default": "\"absolute\""
               }
             },
             {
@@ -3557,8 +3583,8 @@
               "name": "arrow-placement",
               "description": "The placement of the arrow. The default is `anchor`, which will align the arrow as close to the center of the\nanchor as possible, considering available space and `arrow-padding`. A value of `start`, `end`, or `center` will\nalign the arrow to the start, end, or center of the popover instead.",
               "value": {
-                "type": "'start' | 'end' | 'center' | 'anchor'",
-                "default": "'anchor'"
+                "type": "\"start\" | \"end\" | \"center\" | \"anchor\"",
+                "default": "\"anchor\""
               }
             },
             {
@@ -3574,14 +3600,14 @@
             {
               "name": "flip-fallback-placements",
               "description": "If the preferred placement doesn't fit, popup will be tested in these fallback placements until one fits. Must be a\nstring of any number of placements separated by a space, e.g. \"top bottom left\". If no placement fits, the flip\nfallback strategy will be used instead.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "flip-fallback-strategy",
               "description": "When neither the preferred placement nor the fallback placements fit, this value will be used to determine whether\nthe popup should be positioned using the best available fit based on available space or as it was initially\npreferred.",
               "value": {
-                "type": "'best-fit' | 'initial'",
-                "default": "'best-fit'"
+                "type": "\"best-fit\" | \"initial\"",
+                "default": "\"best-fit\""
               }
             },
             {
@@ -3612,12 +3638,12 @@
             {
               "name": "auto-size",
               "description": "When set, this will cause the popup to automatically resize itself to prevent it from overflowing.",
-              "value": { "type": "'horizontal' | 'vertical' | 'both'" }
+              "value": { "type": "\"horizontal\" | \"vertical\" | \"both\"" }
             },
             {
               "name": "sync",
               "description": "Syncs the popup's width or height to that of the anchor element.",
-              "value": { "type": "'width' | 'height' | 'both'" }
+              "value": { "type": "\"width\" | \"height\" | \"both\"" }
             },
             {
               "name": "autoSizeBoundary",
@@ -3668,12 +3694,12 @@
               {
                 "name": "placement",
                 "description": "The preferred placement of the popup. Note that the actual placement will vary as configured to keep the\npanel inside of the viewport.",
-                "type": "| 'top'\n    | 'top-start'\n    | 'top-end'\n    | 'bottom'\n    | 'bottom-start'\n    | 'bottom-end'\n    | 'right'\n    | 'right-start'\n    | 'right-end'\n    | 'left'\n    | 'left-start'\n    | 'left-end'"
+                "type": "| \"top\"\n    | \"top-start\"\n    | \"top-end\"\n    | \"bottom\"\n    | \"bottom-start\"\n    | \"bottom-end\"\n    | \"right\"\n    | \"right-start\"\n    | \"right-end\"\n    | \"left\"\n    | \"left-start\"\n    | \"left-end\""
               },
               {
                 "name": "strategy",
                 "description": "Determines how the popup is positioned. The `absolute` strategy works well in most cases, but if overflow is\nclipped, using a `fixed` position strategy can often workaround it.",
-                "type": "'absolute' | 'fixed'"
+                "type": "\"absolute\" | \"fixed\""
               },
               {
                 "name": "distance",
@@ -3693,7 +3719,7 @@
               {
                 "name": "arrowPlacement",
                 "description": "The placement of the arrow. The default is `anchor`, which will align the arrow as close to the center of the\nanchor as possible, considering available space and `arrow-padding`. A value of `start`, `end`, or `center` will\nalign the arrow to the start, end, or center of the popover instead.",
-                "type": "'start' | 'end' | 'center' | 'anchor'"
+                "type": "\"start\" | \"end\" | \"center\" | \"anchor\""
               },
               {
                 "name": "arrowPadding",
@@ -3713,7 +3739,7 @@
               {
                 "name": "flipFallbackStrategy",
                 "description": "When neither the preferred placement nor the fallback placements fit, this value will be used to determine whether\nthe popup should be positioned using the best available fit based on available space or as it was initially\npreferred.",
-                "type": "'best-fit' | 'initial'"
+                "type": "\"best-fit\" | \"initial\""
               },
               {
                 "name": "flipBoundary",
@@ -3743,12 +3769,12 @@
               {
                 "name": "autoSize",
                 "description": "When set, this will cause the popup to automatically resize itself to prevent it from overflowing.",
-                "type": "'horizontal' | 'vertical' | 'both'"
+                "type": "\"horizontal\" | \"vertical\" | \"both\""
               },
               {
                 "name": "sync",
                 "description": "Syncs the popup's width or height to that of the anchor element.",
-                "type": "'width' | 'height' | 'both'"
+                "type": "\"width\" | \"height\" | \"both\""
               },
               {
                 "name": "autoSizeBoundary",
@@ -3792,7 +3818,7 @@
             {
               "name": "label",
               "description": "A custom label for assistive devices.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             }
           ],
           "slots": [
@@ -3836,7 +3862,7 @@
             {
               "name": "label",
               "description": "A custom label for assistive devices.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             }
           ],
           "slots": [
@@ -3869,12 +3895,12 @@
             {
               "name": "value",
               "description": "The QR code's value.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "label",
               "description": "The label for assistive devices to announce. If unspecified, the value will be used instead.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "size",
@@ -3884,12 +3910,12 @@
             {
               "name": "fill",
               "description": "The fill color. This can be any valid CSS color, but not a CSS custom property.",
-              "value": { "type": "string", "default": "'black'" }
+              "value": { "type": "string", "default": "\"black\"" }
             },
             {
               "name": "background",
               "description": "The background color. This can be any valid CSS color or `transparent`. It cannot be a CSS custom property.",
-              "value": { "type": "string", "default": "'white'" }
+              "value": { "type": "string", "default": "\"white\"" }
             },
             {
               "name": "radius",
@@ -3899,7 +3925,10 @@
             {
               "name": "error-correction",
               "description": "The level of error correction to use. [Learn more](https://www.qrcode.com/en/about/error_correction.html)",
-              "value": { "type": "'L' | 'M' | 'Q' | 'H'", "default": "'H'" }
+              "value": {
+                "type": "\"L\" | \"M\" | \"Q\" | \"H\"",
+                "default": "\"H\""
+              }
             }
           ],
           "events": [],
@@ -3939,7 +3968,7 @@
               {
                 "name": "errorCorrection",
                 "description": "The level of error correction to use. [Learn more](https://www.qrcode.com/en/about/error_correction.html)",
-                "type": "'L' | 'M' | 'Q' | 'H'"
+                "type": "\"L\" | \"M\" | \"Q\" | \"H\""
               }
             ],
             "events": []
@@ -3959,8 +3988,8 @@
               "name": "size",
               "description": "The radio's size. When used inside a radio group, the size will be determined by the radio group's size so this\nattribute can typically be omitted.",
               "value": {
-                "type": "'small' | 'medium' | 'large'",
-                "default": "'medium'"
+                "type": "\"small\" | \"medium\" | \"large\"",
+                "default": "\"medium\""
               }
             },
             {
@@ -3991,7 +4020,7 @@
               {
                 "name": "size",
                 "description": "The radio's size. When used inside a radio group, the size will be determined by the radio group's size so this\nattribute can typically be omitted.",
-                "type": "'small' | 'medium' | 'large'"
+                "type": "\"small\" | \"medium\" | \"large\""
               },
               {
                 "name": "disabled",
@@ -4030,8 +4059,8 @@
               "name": "size",
               "description": "The radio button's size. When used inside a radio group, the size will be determined by the radio group's size so\nthis attribute can typically be omitted.",
               "value": {
-                "type": "'small' | 'medium' | 'large'",
-                "default": "'medium'"
+                "type": "\"small\" | \"medium\" | \"large\"",
+                "default": "\"medium\""
               }
             },
             {
@@ -4078,7 +4107,7 @@
               {
                 "name": "size",
                 "description": "The radio button's size. When used inside a radio group, the size will be determined by the radio group's size so\nthis attribute can typically be omitted.",
-                "type": "'small' | 'medium' | 'large'"
+                "type": "\"small\" | \"medium\" | \"large\""
               },
               {
                 "name": "pill",
@@ -4106,35 +4135,35 @@
             {
               "name": "label",
               "description": "The radio group's label. Required for proper accessibility. If you need to display HTML, use the `label` slot\ninstead.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "help-text",
               "description": "The radio groups's help text. If you need to display HTML, use the `help-text` slot instead.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "name",
               "description": "The name of the radio group, submitted as a name/value pair with form data.",
-              "value": { "type": "string", "default": "'option'" }
+              "value": { "type": "string", "default": "\"option\"" }
             },
             {
               "name": "value",
               "description": "The current value of the radio group, submitted as a name/value pair with form data.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "size",
               "description": "The radio group's size. This size will be applied to all child radios and radio buttons.",
               "value": {
-                "type": "'small' | 'medium' | 'large'",
-                "default": "'medium'"
+                "type": "\"small\" | \"medium\" | \"large\"",
+                "default": "\"medium\""
               }
             },
             {
               "name": "form",
               "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "required",
@@ -4198,7 +4227,7 @@
               {
                 "name": "size",
                 "description": "The radio group's size. This size will be applied to all child radios and radio buttons.",
-                "type": "'small' | 'medium' | 'large'"
+                "type": "\"small\" | \"medium\" | \"large\""
               },
               {
                 "name": "form",
@@ -4240,11 +4269,14 @@
           "description": "Ranges allow the user to select a single value within a given range using a slider.\n---\n\n\n### **Events:**\n - **p-blur** - Emitted when the control loses focus.\n- **p-change** - Emitted when an alteration to the control's value is committed by the user.\n- **p-focus** - Emitted when the control gains focus.\n- **p-input** - Emitted when the control receives input.\n- **p-invalid** - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n\n### **Methods:**\n - **focus(options: _FocusOptions_)** - Sets focus on the range.\n- **blur()** - Removes focus from the range.\n- **stepUp()** - Increments the value of the range by the value of the step attribute.\n- **stepDown()** - Decrements the value of the range by the value of the step attribute.\n- **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n\n### **Slots:**\n - **label** - The range's label. Alternatively, you can use the `label` attribute.\n- **help-text** - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.\n\n### **CSS Properties:**\n - **--thumb-size** - The size of the thumb. _(default: undefined)_\n- **--tooltip-offset** - The vertical distance the tooltip is offset from the track. _(default: undefined)_\n- **--track-color-active** - The color of the portion of the track that represents the current value. _(default: undefined)_\n- **--track-color-inactive** - The of the portion of the track that represents the remaining value. _(default: undefined)_\n- **--track-height** - The height of the track. _(default: undefined)_\n- **--track-active-offset** - The point of origin of the active track. _(default: undefined)_\n\n### **CSS Parts:**\n - **form-control** - The form control that wraps the label, input, and help text.\n- **form-control-label** - The label's wrapper.\n- **form-control-input** - The range's wrapper.\n- **form-control-help-text** - The help text's wrapper.\n- **base** - The component's base wrapper.\n- **input** - The internal `<input>` element.\n- **tooltip** - The range's tooltip.",
           "doc-url": "",
           "attributes": [
-            { "name": "title", "value": { "type": "string", "default": "''" } },
+            {
+              "name": "title",
+              "value": { "type": "string", "default": "\"\"" }
+            },
             {
               "name": "name",
               "description": "The name of the range, submitted as a name/value pair with form data.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "value",
@@ -4254,12 +4286,12 @@
             {
               "name": "label",
               "description": "The range's label. If you need to display HTML, use the `label` slot instead.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "help-text",
               "description": "The range's help text. If you need to display HTML, use the help-text slot instead.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "disabled",
@@ -4285,14 +4317,14 @@
               "name": "tooltip",
               "description": "The preferred placement of the range's tooltip.",
               "value": {
-                "type": "'top' | 'bottom' | 'none'",
-                "default": "'top'"
+                "type": "\"top\" | \"bottom\" | \"none\"",
+                "default": "\"top\""
               }
             },
             {
               "name": "form",
               "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             }
           ],
           "slots": [
@@ -4375,7 +4407,7 @@
               {
                 "name": "tooltip",
                 "description": "The preferred placement of the range's tooltip.",
-                "type": "'top' | 'bottom' | 'none'"
+                "type": "\"top\" | \"bottom\" | \"none\""
               },
               {
                 "name": "tooltipFormatter",
@@ -4433,7 +4465,7 @@
             {
               "name": "label",
               "description": "A label that describes the rating to assistive devices.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "value",
@@ -4543,14 +4575,17 @@
               "name": "format",
               "description": "The formatting style to use.",
               "value": {
-                "type": "'long' | 'short' | 'narrow'",
-                "default": "'long'"
+                "type": "\"long\" | \"short\" | \"narrow\"",
+                "default": "\"long\""
               }
             },
             {
               "name": "numeric",
               "description": "When `auto`, values such as \"yesterday\" and \"tomorrow\" will be shown when possible. When `always`, values such as\n\"1 day ago\" and \"in 1 day\" will be shown.",
-              "value": { "type": "'always' | 'auto'", "default": "'auto'" }
+              "value": {
+                "type": "\"always\" | \"auto\"",
+                "default": "\"auto\""
+              }
             },
             {
               "name": "sync",
@@ -4569,12 +4604,12 @@
               {
                 "name": "format",
                 "description": "The formatting style to use.",
-                "type": "'long' | 'short' | 'narrow'"
+                "type": "\"long\" | \"short\" | \"narrow\""
               },
               {
                 "name": "numeric",
                 "description": "When `auto`, values such as \"yesterday\" and \"tomorrow\" will be shown when possible. When `always`, values such as\n\"1 day ago\" and \"in 1 day\" will be shown.",
-                "type": "'always' | 'auto'"
+                "type": "\"always\" | \"auto\""
               },
               {
                 "name": "sync",
@@ -4634,25 +4669,25 @@
             {
               "name": "name",
               "description": "The name of the select, submitted as a name/value pair with form data.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "value",
               "description": "The current value of the select, submitted as a name/value pair with form data. When `multiple` is enabled, the\nvalue attribute will be a space-delimited list of values based on the options selected, and the value property will\nbe an array. **For this reason, values must not contain spaces.**",
-              "value": { "type": "string | string[]", "default": "''" }
+              "value": { "type": "string | string[]", "default": "\"\"" }
             },
             {
               "name": "size",
               "description": "The select's size.",
               "value": {
-                "type": "'small' | 'medium' | 'large'",
-                "default": "'medium'"
+                "type": "\"small\" | \"medium\" | \"large\"",
+                "default": "\"medium\""
               }
             },
             {
               "name": "placeholder",
               "description": "Placeholder text to show as a hint when the select is empty.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "multiple",
@@ -4697,22 +4732,25 @@
             {
               "name": "label",
               "description": "The select's label. If you need to display HTML, use the `label` slot instead.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "placement",
               "description": "The preferred placement of the select's menu. Note that the actual placement may vary as needed to keep the listbox\ninside of the viewport.",
-              "value": { "type": "'top' | 'bottom'", "default": "'bottom'" }
+              "value": {
+                "type": "\"top\" | \"bottom\"",
+                "default": "\"bottom\""
+              }
             },
             {
               "name": "help-text",
               "description": "The select's help text. If you need to display HTML, use the `help-text` slot instead.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "form",
               "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "required",
@@ -4827,7 +4865,7 @@
               {
                 "name": "size",
                 "description": "The select's size.",
-                "type": "'small' | 'medium' | 'large'"
+                "type": "\"small\" | \"medium\" | \"large\""
               },
               {
                 "name": "placeholder",
@@ -4882,7 +4920,7 @@
               {
                 "name": "placement",
                 "description": "The preferred placement of the select's menu. Note that the actual placement may vary as needed to keep the listbox\ninside of the viewport.",
-                "type": "'top' | 'bottom'"
+                "type": "\"top\" | \"bottom\""
               },
               {
                 "name": "helpText",
@@ -4966,8 +5004,8 @@
               "name": "effect",
               "description": "Determines which effect the skeleton will use.",
               "value": {
-                "type": "'pulse' | 'sheen' | 'none'",
-                "default": "'none'"
+                "type": "\"pulse\" | \"sheen\" | \"none\"",
+                "default": "\"none\""
               }
             }
           ],
@@ -4977,7 +5015,7 @@
               {
                 "name": "effect",
                 "description": "Determines which effect the skeleton will use.",
-                "type": "'pulse' | 'sheen' | 'none'"
+                "type": "\"pulse\" | \"sheen\" | \"none\""
               }
             ],
             "events": []
@@ -5019,7 +5057,7 @@
             {
               "name": "primary",
               "description": "If no primary panel is designated, both panels will resize proportionally when the host element is resized. If a\nprimary panel is designated, it will maintain its size and the other panel will grow or shrink as needed when the\nhost element is resized.",
-              "value": { "type": "'start' | 'end' | undefined" }
+              "value": { "type": "\"start\" | \"end\" | undefined" }
             },
             {
               "name": "snap",
@@ -5078,7 +5116,7 @@
               {
                 "name": "primary",
                 "description": "If no primary panel is designated, both panels will resize proportionally when the host element is resized. If a\nprimary panel is designated, it will maintain its size and the other panel will grow or shrink as needed when the\nhost element is resized.",
-                "type": "'start' | 'end' | undefined"
+                "type": "\"start\" | \"end\" | undefined"
               },
               {
                 "name": "snap",
@@ -5104,11 +5142,14 @@
           "description": "Switches allow the user to toggle an option on or off.\n---\n\n\n### **Events:**\n - **p-blur** - Emitted when the control loses focus.\n- **p-change** - Emitted when the control's checked state changes.\n- **p-input** - Emitted when the control receives input.\n- **p-focus** - Emitted when the control gains focus.\n- **p-invalid** - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n\n### **Methods:**\n - **click()** - Simulates a click on the switch.\n- **focus(options: _FocusOptions_)** - Sets focus on the switch.\n- **blur()** - Removes focus from the switch.\n- **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n\n### **Slots:**\n - _default_ - The switch's label.\n- **help-text** - Text that describes how to use the switch. Alternatively, you can use the `help-text` attribute.\n\n### **CSS Properties:**\n - **--width** - The width of the switch. _(default: undefined)_\n- **--height** - The height of the switch. _(default: undefined)_\n- **--thumb-size** - The size of the thumb. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **control** - The control that houses the switch's thumb.\n- **thumb** - The switch's thumb.\n- **label** - The switch's label.\n- **form-control-help-text** - The help text's wrapper.",
           "doc-url": "",
           "attributes": [
-            { "name": "title", "value": { "type": "string", "default": "''" } },
+            {
+              "name": "title",
+              "value": { "type": "string", "default": "\"\"" }
+            },
             {
               "name": "name",
               "description": "The name of the switch, submitted as a name/value pair with form data.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "value",
@@ -5119,8 +5160,8 @@
               "name": "size",
               "description": "The switch's size.",
               "value": {
-                "type": "'small' | 'medium' | 'large'",
-                "default": "'medium'"
+                "type": "\"small\" | \"medium\" | \"large\"",
+                "default": "\"medium\""
               }
             },
             {
@@ -5136,7 +5177,7 @@
             {
               "name": "form",
               "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "required",
@@ -5146,7 +5187,7 @@
             {
               "name": "help-text",
               "description": "The switch's help text. If you need to display HTML, use the `help-text` slot instead.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             }
           ],
           "slots": [
@@ -5195,7 +5236,7 @@
               {
                 "name": "size",
                 "description": "The switch's size.",
-                "type": "'small' | 'medium' | 'large'"
+                "type": "\"small\" | \"medium\" | \"large\""
               },
               {
                 "name": "disabled",
@@ -5268,7 +5309,7 @@
             {
               "name": "panel",
               "description": "The name of the tab panel this tab is associated with. The panel must be located in the same tab group.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "active",
@@ -5334,14 +5375,17 @@
               "name": "placement",
               "description": "The placement of the tabs.",
               "value": {
-                "type": "'top' | 'bottom' | 'start' | 'end'",
-                "default": "'top'"
+                "type": "\"top\" | \"bottom\" | \"start\" | \"end\"",
+                "default": "\"top\""
               }
             },
             {
               "name": "activation",
               "description": "When set to auto, navigating tabs with the arrow keys will instantly show the corresponding tab panel. When set to\nmanual, the tab will receive focus but will not show until the user presses spacebar or enter.",
-              "value": { "type": "'auto' | 'manual'", "default": "'auto'" }
+              "value": {
+                "type": "\"auto\" | \"manual\"",
+                "default": "\"auto\""
+              }
             },
             {
               "name": "no-scroll-controls",
@@ -5380,12 +5424,12 @@
               {
                 "name": "placement",
                 "description": "The placement of the tabs.",
-                "type": "'top' | 'bottom' | 'start' | 'end'"
+                "type": "\"top\" | \"bottom\" | \"start\" | \"end\""
               },
               {
                 "name": "activation",
                 "description": "When set to auto, navigating tabs with the arrow keys will instantly show the corresponding tab panel. When set to\nmanual, the tab will receive focus but will not show until the user presses spacebar or enter.",
-                "type": "'auto' | 'manual'"
+                "type": "\"auto\" | \"manual\""
               },
               {
                 "name": "noScrollControls",
@@ -5415,7 +5459,7 @@
             {
               "name": "name",
               "description": "The tab panel's name.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "active",
@@ -5450,16 +5494,16 @@
               "name": "variant",
               "description": "The tag's theme variant.",
               "value": {
-                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'text'",
-                "default": "'neutral'"
+                "type": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\" | \"text\"",
+                "default": "\"neutral\""
               }
             },
             {
               "name": "size",
               "description": "The tag's size.",
               "value": {
-                "type": "'small' | 'medium' | 'large'",
-                "default": "'medium'"
+                "type": "\"small\" | \"medium\" | \"large\"",
+                "default": "\"medium\""
               }
             },
             {
@@ -5485,12 +5529,12 @@
               {
                 "name": "variant",
                 "description": "The tag's theme variant.",
-                "type": "'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'text'"
+                "type": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\" | \"text\""
               },
               {
                 "name": "size",
                 "description": "The tag's size.",
-                "type": "'small' | 'medium' | 'large'"
+                "type": "\"small\" | \"medium\" | \"large\""
               },
               {
                 "name": "pill",
@@ -5513,26 +5557,29 @@
         },
         {
           "name": "p-textarea",
-          "description": "Textareas collect data from the user and allow multiple lines of text.\n---\n\n\n### **Events:**\n - **p-blur** - Emitted when the control loses focus.\n- **p-change** - Emitted when an alteration to the control's value is committed by the user.\n- **p-focus** - Emitted when the control gains focus.\n- **p-input** - Emitted when the control receives input.\n- **p-invalid** - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n\n### **Methods:**\n - **focus(options: _FocusOptions_)** - Sets focus on the textarea.\n- **blur()** - Removes focus from the textarea.\n- **select()** - Selects all the text in the textarea.\n- **scrollPosition(position: _{ top?: number; left?: number }_): _{ top: number; left: number } | undefined_** - Gets or sets the textarea's scroll position.\n- **setSelectionRange(selectionStart: _number_, selectionEnd: _number_, selectionDirection: _'forward' | 'backward' | 'none'_)** - Sets the start and end positions of the text selection (0-based).\n- **setRangeText(replacement: _string_, start: _number_, end: _number_, selectMode: _'select' | 'start' | 'end' | 'preserve'_)** - Replaces a range of text with a new string.\n- **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n\n### **Slots:**\n - **label** - The textarea's label. Alternatively, you can use the `label` attribute.\n- **help-text** - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.\n\n### **CSS Parts:**\n - **form-control** - The form control that wraps the label, input, and help text.\n- **form-control-label** - The label's wrapper.\n- **form-control-input** - The input's wrapper.\n- **form-control-help-text** - The help text's wrapper.\n- **base** - The component's base wrapper.\n- **textarea** - The internal `<textarea>` control.",
+          "description": "Textareas collect data from the user and allow multiple lines of text.\n---\n\n\n### **Events:**\n - **p-blur** - Emitted when the control loses focus.\n- **p-change** - Emitted when an alteration to the control's value is committed by the user.\n- **p-focus** - Emitted when the control gains focus.\n- **p-input** - Emitted when the control receives input.\n- **p-invalid** - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n\n### **Methods:**\n - **focus(options: _FocusOptions_)** - Sets focus on the textarea.\n- **blur()** - Removes focus from the textarea.\n- **select()** - Selects all the text in the textarea.\n- **scrollPosition(position: _{ top?: number; left?: number }_): _{ top: number; left: number } | undefined_** - Gets or sets the textarea's scroll position.\n- **setSelectionRange(selectionStart: _number_, selectionEnd: _number_, selectionDirection: _\"forward\" | \"backward\" | \"none\"_)** - Sets the start and end positions of the text selection (0-based).\n- **setRangeText(replacement: _string_, start: _number_, end: _number_, selectMode: _\"select\" | \"start\" | \"end\" | \"preserve\"_)** - Replaces a range of text with a new string.\n- **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n\n### **Slots:**\n - **label** - The textarea's label. Alternatively, you can use the `label` attribute.\n- **help-text** - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.\n\n### **CSS Parts:**\n - **form-control** - The form control that wraps the label, input, and help text.\n- **form-control-label** - The label's wrapper.\n- **form-control-input** - The input's wrapper.\n- **form-control-help-text** - The help text's wrapper.\n- **base** - The component's base wrapper.\n- **textarea** - The internal `<textarea>` control.",
           "doc-url": "",
           "attributes": [
-            { "name": "title", "value": { "type": "string", "default": "''" } },
+            {
+              "name": "title",
+              "value": { "type": "string", "default": "\"\"" }
+            },
             {
               "name": "name",
               "description": "The name of the textarea, submitted as a name/value pair with form data.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "value",
               "description": "The current value of the textarea, submitted as a name/value pair with form data.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "size",
               "description": "The textarea's size.",
               "value": {
-                "type": "'small' | 'medium' | 'large'",
-                "default": "'medium'"
+                "type": "\"small\" | \"medium\" | \"large\"",
+                "default": "\"medium\""
               }
             },
             {
@@ -5543,17 +5590,17 @@
             {
               "name": "label",
               "description": "The textarea's label. If you need to display HTML, use the `label` slot instead.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "help-text",
               "description": "The textarea's help text. If you need to display HTML, use the `help-text` slot instead.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "placeholder",
               "description": "Placeholder text to show as a hint when the input is empty.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "rows",
@@ -5564,8 +5611,8 @@
               "name": "resize",
               "description": "Controls how the textarea can be resized.",
               "value": {
-                "type": "'none' | 'vertical' | 'auto'",
-                "default": "'vertical'"
+                "type": "\"none\" | \"vertical\" | \"auto\"",
+                "default": "\"vertical\""
               }
             },
             {
@@ -5581,7 +5628,7 @@
             {
               "name": "form",
               "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "required",
@@ -5602,7 +5649,7 @@
               "name": "autocapitalize",
               "description": "Controls whether and how text input is automatically capitalized as it is entered by the user.",
               "value": {
-                "type": "'off' | 'none' | 'on' | 'sentences' | 'words' | 'characters'"
+                "type": "\"off\" | \"none\" | \"on\" | \"sentences\" | \"words\" | \"characters\""
               }
             },
             {
@@ -5624,7 +5671,7 @@
               "name": "enterkeyhint",
               "description": "Used to customize the label or icon of the Enter key on virtual keyboards.",
               "value": {
-                "type": "'enter' | 'done' | 'go' | 'next' | 'previous' | 'search' | 'send'"
+                "type": "\"enter\" | \"done\" | \"go\" | \"next\" | \"previous\" | \"search\" | \"send\""
               }
             },
             {
@@ -5636,7 +5683,7 @@
               "name": "inputmode",
               "description": "Tells the browser what type of data will be entered by the user, allowing it to display the appropriate virtual\nkeyboard on supportive devices.",
               "value": {
-                "type": "'none' | 'text' | 'decimal' | 'numeric' | 'tel' | 'search' | 'email' | 'url'"
+                "type": "\"none\" | \"text\" | \"decimal\" | \"numeric\" | \"tel\" | \"search\" | \"email\" | \"url\""
               }
             }
           ],
@@ -5689,7 +5736,7 @@
               {
                 "name": "size",
                 "description": "The textarea's size.",
-                "type": "'small' | 'medium' | 'large'"
+                "type": "\"small\" | \"medium\" | \"large\""
               },
               {
                 "name": "filled",
@@ -5719,7 +5766,7 @@
               {
                 "name": "resize",
                 "description": "Controls how the textarea can be resized.",
-                "type": "'none' | 'vertical' | 'auto'"
+                "type": "\"none\" | \"vertical\" | \"auto\""
               },
               {
                 "name": "disabled",
@@ -5754,7 +5801,7 @@
               {
                 "name": "autocapitalize",
                 "description": "Controls whether and how text input is automatically capitalized as it is entered by the user.",
-                "type": "'off' | 'none' | 'on' | 'sentences' | 'words' | 'characters'"
+                "type": "\"off\" | \"none\" | \"on\" | \"sentences\" | \"words\" | \"characters\""
               },
               {
                 "name": "autocorrect",
@@ -5774,7 +5821,7 @@
               {
                 "name": "enterkeyhint",
                 "description": "Used to customize the label or icon of the Enter key on virtual keyboards.",
-                "type": "'enter' | 'done' | 'go' | 'next' | 'previous' | 'search' | 'send'"
+                "type": "\"enter\" | \"done\" | \"go\" | \"next\" | \"previous\" | \"search\" | \"send\""
               },
               {
                 "name": "spellcheck",
@@ -5784,7 +5831,7 @@
               {
                 "name": "inputmode",
                 "description": "Tells the browser what type of data will be entered by the user, allowing it to display the appropriate virtual\nkeyboard on supportive devices.",
-                "type": "'none' | 'text' | 'decimal' | 'numeric' | 'tel' | 'search' | 'email' | 'url'"
+                "type": "\"none\" | \"text\" | \"decimal\" | \"numeric\" | \"tel\" | \"search\" | \"email\" | \"url\""
               },
               {
                 "name": "defaultValue",
@@ -5832,14 +5879,14 @@
             {
               "name": "content",
               "description": "The tooltip's content. If you need to display HTML, use the `content` slot instead.",
-              "value": { "type": "string", "default": "''" }
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
               "name": "placement",
               "description": "The preferred placement of the tooltip. Note that the actual placement may vary as needed to keep the tooltip\ninside of the viewport.",
               "value": {
-                "type": "| 'top'\n    | 'top-start'\n    | 'top-end'\n    | 'right'\n    | 'right-start'\n    | 'right-end'\n    | 'bottom'\n    | 'bottom-start'\n    | 'bottom-end'\n    | 'left'\n    | 'left-start'\n    | 'left-end'",
-                "default": "'top'"
+                "type": "| \"top\"\n    | \"top-start\"\n    | \"top-end\"\n    | \"right\"\n    | \"right-start\"\n    | \"right-end\"\n    | \"bottom\"\n    | \"bottom-start\"\n    | \"bottom-end\"\n    | \"left\"\n    | \"left-start\"\n    | \"left-end\"",
+                "default": "\"top\""
               }
             },
             {
@@ -5865,7 +5912,7 @@
             {
               "name": "trigger",
               "description": "Controls how the tooltip is activated. Possible options include `click`, `hover`, `focus`, and `manual`. Multiple\noptions can be passed by separating them with a space. When manual is used, the tooltip must be activated\nprogrammatically.",
-              "value": { "type": "string", "default": "'hover focus'" }
+              "value": { "type": "string", "default": "\"hover focus\"" }
             },
             {
               "name": "hoist",
@@ -5914,7 +5961,7 @@
               {
                 "name": "placement",
                 "description": "The preferred placement of the tooltip. Note that the actual placement may vary as needed to keep the tooltip\ninside of the viewport.",
-                "type": "| 'top'\n    | 'top-start'\n    | 'top-end'\n    | 'right'\n    | 'right-start'\n    | 'right-end'\n    | 'bottom'\n    | 'bottom-start'\n    | 'bottom-end'\n    | 'left'\n    | 'left-start'\n    | 'left-end'"
+                "type": "| \"top\"\n    | \"top-start\"\n    | \"top-end\"\n    | \"right\"\n    | \"right-start\"\n    | \"right-end\"\n    | \"bottom\"\n    | \"bottom-start\"\n    | \"bottom-end\"\n    | \"left\"\n    | \"left-start\"\n    | \"left-end\""
               },
               {
                 "name": "disabled",
@@ -5976,8 +6023,8 @@
               "name": "selection",
               "description": "The selection behavior of the tree. Single selection allows only one node to be selected at a time. Multiple\ndisplays checkboxes and allows more than one node to be selected. Leaf allows only leaf nodes to be selected.",
               "value": {
-                "type": "'single' | 'multiple' | 'leaf'",
-                "default": "'single'"
+                "type": "\"single\" | \"multiple\" | \"leaf\"",
+                "default": "\"single\""
               }
             }
           ],
@@ -6007,7 +6054,7 @@
               {
                 "name": "selection",
                 "description": "The selection behavior of the tree. Single selection allows only one node to be selected at a time. Multiple\ndisplays checkboxes and allows more than one node to be selected. Leaf allows only leaf nodes to be selected.",
-                "type": "'single' | 'multiple' | 'leaf'"
+                "type": "\"single\" | \"multiple\" | \"leaf\""
               }
             ],
             "events": [

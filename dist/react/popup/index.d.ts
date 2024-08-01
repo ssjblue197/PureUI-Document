@@ -1,7 +1,7 @@
-import Component from '../../components/popup/popup.component.js';
-import { type EventName } from '@lit/react';
-import type { PRepositionEvent } from '../../events/events.js';
-export type { PRepositionEvent } from '../../events/events.js';
+import Component from "../../components/popup/popup.component.js";
+import { type EventName } from "@lit/react";
+import type { PRepositionEvent } from "../../events/events.js";
+export type { PRepositionEvent } from "../../events/events.js";
 /**
  * @summary Popup is a utility that lets you declaratively anchor "popup" containers to another element.
  * @documentation https://pureui.xyz/components/popup

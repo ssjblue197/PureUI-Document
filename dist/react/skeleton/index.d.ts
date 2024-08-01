@@ -1,4 +1,4 @@
-import Component from '../../components/skeleton/skeleton.component.js';
+import Component from "../../components/skeleton/skeleton.component.js";
 /**
  * @summary Skeletons are used to provide a visual representation of where content will eventually be drawn.
  * @documentation https://pureui.xyz/components/skeleton

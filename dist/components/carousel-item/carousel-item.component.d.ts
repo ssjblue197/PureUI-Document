@@ -1,5 +1,5 @@
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
 /**
  * @summary A carousel item represent a slide within a [carousel](/components/carousel).
  *

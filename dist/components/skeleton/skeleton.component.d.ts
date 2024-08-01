@@ -1,5 +1,5 @@
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
 /**
  * @summary Skeletons are used to provide a visual representation of where content will eventually be drawn.
  * @documentation https://pureui.xyz/components/skeleton
@@ -16,6 +16,6 @@ import type { CSSResultGroup } from 'lit';
 export default class PSkeleton extends PureElement {
     static styles: CSSResultGroup;
     /** Determines which effect the skeleton will use. */
-    effect: 'pulse' | 'sheen' | 'none';
+    effect: "pulse" | "sheen" | "none";
     render(): import("lit-html").TemplateResult<1>;
 }

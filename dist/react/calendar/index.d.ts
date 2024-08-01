@@ -1,7 +1,7 @@
-import Component from '../../components/calendar/calendar.component.js';
-import { type EventName } from '@lit/react';
-import type { PChangeEvent } from '../../events/events.js';
-export type { PChangeEvent } from '../../events/events.js';
+import Component from "../../components/calendar/calendar.component.js";
+import { type EventName } from "@lit/react";
+import type { PChangeEvent } from "../../events/events.js";
+export type { PChangeEvent } from "../../events/events.js";
 /**
  * @summary A calendar prototype for Pure UI.
  * @documentation https://pureui.xyz/components/calendar

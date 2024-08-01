@@ -3,6 +3,6 @@ export type PMutationEvent = CustomEvent<{
 }>;
 declare global {
     interface GlobalEventHandlersEventMap {
-        'p-mutation': PMutationEvent;
+        "p-mutation": PMutationEvent;
     }
 }

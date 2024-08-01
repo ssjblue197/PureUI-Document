@@ -1,13 +1,13 @@
-import Component from '../../components/details/details.component.js';
-import { type EventName } from '@lit/react';
-import type { PShowEvent } from '../../events/events.js';
-import type { PAfterShowEvent } from '../../events/events.js';
-import type { PHideEvent } from '../../events/events.js';
-import type { PAfterHideEvent } from '../../events/events.js';
-export type { PShowEvent } from '../../events/events.js';
-export type { PAfterShowEvent } from '../../events/events.js';
-export type { PHideEvent } from '../../events/events.js';
-export type { PAfterHideEvent } from '../../events/events.js';
+import Component from "../../components/details/details.component.js";
+import { type EventName } from "@lit/react";
+import type { PShowEvent } from "../../events/events.js";
+import type { PAfterShowEvent } from "../../events/events.js";
+import type { PHideEvent } from "../../events/events.js";
+import type { PAfterHideEvent } from "../../events/events.js";
+export type { PShowEvent } from "../../events/events.js";
+export type { PAfterShowEvent } from "../../events/events.js";
+export type { PHideEvent } from "../../events/events.js";
+export type { PAfterHideEvent } from "../../events/events.js";
 /**
  * @summary Details show a brief summary and expand to show additional content.
  * @documentation https://pureui.xyz/components/details

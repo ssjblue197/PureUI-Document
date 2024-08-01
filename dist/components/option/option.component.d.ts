@@ -1,6 +1,6 @@
-import PIcon from '../icon/icon.component.js';
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
+import PIcon from "../icon/icon.component.js";
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
 /**
  * @summary Options define the selectable items within various form controls such as [select](/components/select).
  * @documentation https://pureui.xyz/components/option
@@ -22,7 +22,7 @@ import type { CSSResultGroup } from 'lit';
 export default class POption extends PureElement {
     static styles: CSSResultGroup;
     static dependencies: {
-        'p-icon': typeof PIcon;
+        "p-icon": typeof PIcon;
     };
     private cachedTextLabel;
     private readonly localize;

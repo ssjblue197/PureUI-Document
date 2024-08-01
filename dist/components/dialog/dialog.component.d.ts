@@ -1,7 +1,7 @@
-import Modal from '../../internal/modal.js';
-import PIconButton from '../icon-button/icon-button.component.js';
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
+import Modal from "../../internal/modal.js";
+import PIconButton from "../icon-button/icon-button.component.js";
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
 /**
  * @summary Dialogs, sometimes called "modals", appear above the page and require the user's immediate attention.
  * @documentation https://pureui.xyz/components/dialog
@@ -55,7 +55,7 @@ import type { CSSResultGroup } from 'lit';
 export default class PDialog extends PureElement {
     static styles: CSSResultGroup;
     static dependencies: {
-        'p-icon-button': typeof PIconButton;
+        "p-icon-button": typeof PIconButton;
     };
     private readonly hasSlotController;
     private readonly localize;

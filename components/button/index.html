@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="component" data-pure-ui-version="1.0.0">
+<html lang="en" data-layout="component" data-pure-ui-version="1.0.1">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/assets/styles/code-previews.css" />
     <link rel="stylesheet" href="/assets/styles/search.css" />
 
-    <link rel="icon" href="/assets/images/logo.svg" type="image/x-icon" />
+    <link rel="icon" href="/assets/images/logo.png" type="image/x-icon" />
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:creator" content="pure_ui" />
@@ -87,7 +87,7 @@
         <a href="/">
           <img src="/assets/images/wordmark.svg" alt="Pure UI" />
         </a>
-        <div class="sidebar-version">1.0.0</div>
+        <div class="sidebar-version">1.0.1</div>
       </header>
 
       <button class="search-box" type="button" title="Press / to search" aria-label="Search" data-plugin="search">
@@ -2010,7 +2010,7 @@
                 >
                 using a script tag:
               </p>
-              <pre><code class="language-html" id="code-block-290"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.0.0/cdn/components/button/button.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-290"></p-copy-button></pre>
+              <pre><code class="language-html" id="code-block-290"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.0.1/cdn/components/button/button.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-290"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="import">
@@ -2025,7 +2025,7 @@
                 >
                 using a JavaScript import:
               </p>
-              <pre><code class="language-js" id="code-block-291"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.0.0/cdn/components/button/button.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-291"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-291"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.0.1/cdn/components/button/button.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-291"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="bundler">
@@ -2101,10 +2101,10 @@
                     <p-icon label="yes" name="check-lg"></p-icon>
                   </td>
                   <td>
-                    <code>'default' | 'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'text'</code>
+                    <code>"default" | "primary" | "success" | "neutral" | "warning" | "danger" | "text"</code>
                   </td>
                   <td>
-                    <code>'default'</code>
+                    <code>"default"</code>
                   </td>
                 </tr>
 
@@ -2117,10 +2117,10 @@
                     <p-icon label="yes" name="check-lg"></p-icon>
                   </td>
                   <td>
-                    <code>'small' | 'medium' | 'large'</code>
+                    <code>"small" | "medium" | "large"</code>
                   </td>
                   <td>
-                    <code>'medium'</code>
+                    <code>"medium"</code>
                   </td>
                 </tr>
 
@@ -2237,10 +2237,10 @@
                   </td>
                   <td style="text-align: center"></td>
                   <td>
-                    <code>'button' | 'submit' | 'reset'</code>
+                    <code>"button" | "submit" | "reset"</code>
                   </td>
                   <td>
-                    <code>'button'</code>
+                    <code>"button"</code>
                   </td>
                 </tr>
 
@@ -2257,7 +2257,7 @@
                     <code>string</code>
                   </td>
                   <td>
-                    <code>''</code>
+                    <code>""</code>
                   </td>
                 </tr>
 
@@ -2274,7 +2274,7 @@
                     <code>string</code>
                   </td>
                   <td>
-                    <code>''</code>
+                    <code>""</code>
                   </td>
                 </tr>
 
@@ -2291,7 +2291,7 @@
                     <code>string</code>
                   </td>
                   <td>
-                    <code>''</code>
+                    <code>""</code>
                   </td>
                 </tr>
 
@@ -2302,7 +2302,7 @@
                   <td>Tells the browser where to open the link. Only used when <code>href</code> is present.</td>
                   <td style="text-align: center"></td>
                   <td>
-                    <code>'_blank' | '_parent' | '_self' | '_top'</code>
+                    <code>"_blank" | "_parent" | "_self" | "_top"</code>
                   </td>
                   <td>-</td>
                 </tr>
@@ -2323,7 +2323,7 @@
                     <code>string</code>
                   </td>
                   <td>
-                    <code>'noreferrer noopener'</code>
+                    <code>"noreferrer noopener"</code>
                   </td>
                 </tr>
 
@@ -2391,7 +2391,7 @@
                   <td>Used to override the form owner’s <code>enctype</code> attribute.</td>
                   <td style="text-align: center"></td>
                   <td>
-                    <code>'application/x-www-form-urlencoded' | 'multipart/form-data' | 'text/plain'</code>
+                    <code>"application/x-www-form-urlencoded" | "multipart/form-data" | "text/plain"</code>
                   </td>
                   <td>-</td>
                 </tr>
@@ -2410,7 +2410,7 @@
                   <td>Used to override the form owner’s <code>method</code> attribute.</td>
                   <td style="text-align: center"></td>
                   <td>
-                    <code>'post' | 'get'</code>
+                    <code>"post" | "get"</code>
                   </td>
                   <td>-</td>
                 </tr>
@@ -2448,7 +2448,7 @@
                   <td>Used to override the form owner’s <code>target</code> attribute.</td>
                   <td style="text-align: center"></td>
                   <td>
-                    <code>'_self' | '_blank' | '_parent' | '_top' | string</code>
+                    <code>"_self" | "_blank" | "_parent" | "_top" | string</code>
                   </td>
                   <td>-</td>
                 </tr>

@@ -1,7 +1,7 @@
-import PPopup from '../popup/popup.component.js';
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
-import type PMenu from '../menu/menu.js';
+import PPopup from "../popup/popup.component.js";
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
+import type PMenu from "../menu/menu.js";
 /**
  * @summary Dropdowns expose additional content that "drops down" in a panel.
  * @documentation https://pureui.xyz/components/dropdown
@@ -29,7 +29,7 @@ import type PMenu from '../menu/menu.js';
 export default class PDropdown extends PureElement {
     static styles: CSSResultGroup;
     static dependencies: {
-        'p-popup': typeof PPopup;
+        "p-popup": typeof PPopup;
     };
     popup: PPopup;
     trigger: HTMLSlotElement;
@@ -45,7 +45,7 @@ export default class PDropdown extends PureElement {
      * The preferred placement of the dropdown panel. Note that the actual placement may vary as needed to keep the panel
      * inside of the viewport.
      */
-    placement: 'top' | 'top-start' | 'top-end' | 'bottom' | 'bottom-start' | 'bottom-end' | 'right' | 'right-start' | 'right-end' | 'left' | 'left-start' | 'left-end';
+    placement: "top" | "top-start" | "top-end" | "bottom" | "bottom-start" | "bottom-end" | "right" | "right-start" | "right-end" | "left" | "left-start" | "left-end";
     /** Disables the dropdown so the panel will not open. */
     disabled: boolean;
     /**
@@ -70,7 +70,7 @@ export default class PDropdown extends PureElement {
     /**
      * Syncs the popup width or height to that of the trigger element.
      */
-    sync: 'width' | 'height' | 'both' | undefined;
+    sync: "width" | "height" | "both" | undefined;
     connectedCallback(): void;
     firstUpdated(): void;
     disconnectedCallback(): void;

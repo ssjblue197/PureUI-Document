@@ -1,4 +1,4 @@
-import type { LitElement } from 'lit';
+import type { LitElement } from "lit";
 type UpdateHandler = (prev?: unknown, next?: unknown) => void;
 type NonUndefined<A> = A extends undefined ? never : A;
 type UpdateHandlerFunctionKeys<T extends object> = {

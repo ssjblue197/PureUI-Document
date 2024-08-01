@@ -1,15 +1,15 @@
-import Component from '../../components/color-picker/color-picker.component.js';
-import { type EventName } from '@lit/react';
-import type { PBlurEvent } from '../../events/events.js';
-import type { PChangeEvent } from '../../events/events.js';
-import type { PFocusEvent } from '../../events/events.js';
-import type { PInputEvent } from '../../events/events.js';
-import type { PInvalidEvent } from '../../events/events.js';
-export type { PBlurEvent } from '../../events/events.js';
-export type { PChangeEvent } from '../../events/events.js';
-export type { PFocusEvent } from '../../events/events.js';
-export type { PInputEvent } from '../../events/events.js';
-export type { PInvalidEvent } from '../../events/events.js';
+import Component from "../../components/color-picker/color-picker.component.js";
+import { type EventName } from "@lit/react";
+import type { PBlurEvent } from "../../events/events.js";
+import type { PChangeEvent } from "../../events/events.js";
+import type { PFocusEvent } from "../../events/events.js";
+import type { PInputEvent } from "../../events/events.js";
+import type { PInvalidEvent } from "../../events/events.js";
+export type { PBlurEvent } from "../../events/events.js";
+export type { PChangeEvent } from "../../events/events.js";
+export type { PFocusEvent } from "../../events/events.js";
+export type { PInputEvent } from "../../events/events.js";
+export type { PInvalidEvent } from "../../events/events.js";
 /**
  * @summary Color pickers allow the user to select a color.
  * @documentation https://pureui.xyz/components/color-picker

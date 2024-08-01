@@ -1,6 +1,6 @@
-import type { ReactiveController, ReactiveControllerHost } from 'lit';
-import type { ShoelaceFormControl } from './pure-ui-element.js';
-import type SlButton from '../components/button/button.js';
+import type { ReactiveController, ReactiveControllerHost } from "lit";
+import type { ShoelaceFormControl } from "./pure-ui-element.js";
+import type SlButton from "../components/button/button.js";
 export declare const formCollections: WeakMap<HTMLFormElement, Set<ShoelaceFormControl>>;
 export interface FormControlControllerOptions {
     /** A function that returns the form containing the form control. */

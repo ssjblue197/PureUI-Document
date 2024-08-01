@@ -1,6 +1,6 @@
-import PIconButton from '../icon-button/icon-button.component.js';
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
+import PIconButton from "../icon-button/icon-button.component.js";
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
 /**
  * @summary Tabs are used inside [tab groups](/components/tab-group) to represent and activate [tab panels](/components/tab-panel).
  * @documentation https://pureui.xyz/components/tab
@@ -20,7 +20,7 @@ import type { CSSResultGroup } from 'lit';
 export default class PTab extends PureElement {
     static styles: CSSResultGroup;
     static dependencies: {
-        'p-icon-button': typeof PIconButton;
+        "p-icon-button": typeof PIconButton;
     };
     private readonly localize;
     private readonly attrId;
@@ -47,6 +47,6 @@ export default class PTab extends PureElement {
 }
 declare global {
     interface HTMLElementTagNameMap {
-        'p-tab': PTab;
+        "p-tab": PTab;
     }
 }

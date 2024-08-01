@@ -1,11 +1,11 @@
-import Component from '../../components/button/button.component.js';
-import { type EventName } from '@lit/react';
-import type { PBlurEvent } from '../../events/events.js';
-import type { PFocusEvent } from '../../events/events.js';
-import type { PInvalidEvent } from '../../events/events.js';
-export type { PBlurEvent } from '../../events/events.js';
-export type { PFocusEvent } from '../../events/events.js';
-export type { PInvalidEvent } from '../../events/events.js';
+import Component from "../../components/button/button.component.js";
+import { type EventName } from "@lit/react";
+import type { PBlurEvent } from "../../events/events.js";
+import type { PFocusEvent } from "../../events/events.js";
+import type { PInvalidEvent } from "../../events/events.js";
+export type { PBlurEvent } from "../../events/events.js";
+export type { PFocusEvent } from "../../events/events.js";
+export type { PInvalidEvent } from "../../events/events.js";
 /**
  * @summary Buttons represent actions that are available to the user.
  * @documentation https://pureui.xyz/components/button

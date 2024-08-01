@@ -1,15 +1,15 @@
-import Component from '../../components/textarea/textarea.component.js';
-import { type EventName } from '@lit/react';
-import type { PBlurEvent } from '../../events/events.js';
-import type { PChangeEvent } from '../../events/events.js';
-import type { PFocusEvent } from '../../events/events.js';
-import type { PInputEvent } from '../../events/events.js';
-import type { PInvalidEvent } from '../../events/events.js';
-export type { PBlurEvent } from '../../events/events.js';
-export type { PChangeEvent } from '../../events/events.js';
-export type { PFocusEvent } from '../../events/events.js';
-export type { PInputEvent } from '../../events/events.js';
-export type { PInvalidEvent } from '../../events/events.js';
+import Component from "../../components/textarea/textarea.component.js";
+import { type EventName } from "@lit/react";
+import type { PBlurEvent } from "../../events/events.js";
+import type { PChangeEvent } from "../../events/events.js";
+import type { PFocusEvent } from "../../events/events.js";
+import type { PInputEvent } from "../../events/events.js";
+import type { PInvalidEvent } from "../../events/events.js";
+export type { PBlurEvent } from "../../events/events.js";
+export type { PChangeEvent } from "../../events/events.js";
+export type { PFocusEvent } from "../../events/events.js";
+export type { PInputEvent } from "../../events/events.js";
+export type { PInvalidEvent } from "../../events/events.js";
 /**
  * @summary Textareas collect data from the user and allow multiple lines of text.
  * @documentation https://pureui.xyz/components/textarea

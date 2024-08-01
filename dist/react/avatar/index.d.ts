@@ -1,7 +1,7 @@
-import Component from '../../components/avatar/avatar.component.js';
-import { type EventName } from '@lit/react';
-import type { PErrorEvent } from '../../events/events.js';
-export type { PErrorEvent } from '../../events/events.js';
+import Component from "../../components/avatar/avatar.component.js";
+import { type EventName } from "@lit/react";
+import type { PErrorEvent } from "../../events/events.js";
+export type { PErrorEvent } from "../../events/events.js";
 /**
  * @summary Avatars are used to represent a person or object.
  * @documentation https://pureui.xyz/components/avatar

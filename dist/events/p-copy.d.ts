@@ -3,6 +3,6 @@ export type PCopyEvent = CustomEvent<{
 }>;
 declare global {
     interface GlobalEventHandlersEventMap {
-        'p-copy': PCopyEvent;
+        "p-copy": PCopyEvent;
     }
 }

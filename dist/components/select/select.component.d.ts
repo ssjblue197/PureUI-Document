@@ -1,10 +1,10 @@
-import PIcon from '../icon/icon.component.js';
-import PPopup from '../popup/popup.component.js';
-import PTag from '../tag/tag.component.js';
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup, TemplateResult } from 'lit';
-import type { ShoelaceFormControl } from '../../internal/pure-ui-element.js';
-import type POption from '../option/option.component.js';
+import PIcon from "../icon/icon.component.js";
+import PPopup from "../popup/popup.component.js";
+import PTag from "../tag/tag.component.js";
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup, TemplateResult } from "lit";
+import type { ShoelaceFormControl } from "../../internal/pure-ui-element.js";
+import type POption from "../option/option.component.js";
 /**
  * @summary Selects allow you to choose items from a menu of predefined options.
  * @documentation https://pureui.xyz/components/select
@@ -55,9 +55,9 @@ import type POption from '../option/option.component.js';
 export default class PSelect extends PureElement implements ShoelaceFormControl {
     static styles: CSSResultGroup;
     static dependencies: {
-        'p-icon': typeof PIcon;
-        'p-popup': typeof PPopup;
-        'p-tag': typeof PTag;
+        "p-icon": typeof PIcon;
+        "p-popup": typeof PPopup;
+        "p-tag": typeof PTag;
     };
     private readonly formControlController;
     private readonly hasSlotController;
@@ -85,7 +85,7 @@ export default class PSelect extends PureElement implements ShoelaceFormControl 
     /** The default value of the form control. Primarily used for resetting the form control. */
     defaultValue: string | string[];
     /** The select's size. */
-    size: 'small' | 'medium' | 'large';
+    size: "small" | "medium" | "large";
     /** Placeholder text to show as a hint when the select is empty. */
     placeholder: string;
     /** Allows more than one option to be selected. */
@@ -119,7 +119,7 @@ export default class PSelect extends PureElement implements ShoelaceFormControl 
      * The preferred placement of the select's menu. Note that the actual placement may vary as needed to keep the listbox
      * inside of the viewport.
      */
-    placement: 'top' | 'bottom';
+    placement: "top" | "bottom";
     /** The select's help text. If you need to display HTML, use the `help-text` slot instead. */
     helpText: string;
     /**

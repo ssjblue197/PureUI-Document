@@ -1,6 +1,6 @@
-import PIconButton from '../icon-button/icon-button.component.js';
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
+import PIconButton from "../icon-button/icon-button.component.js";
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
 /**
  * @summary Tab groups organize content into a container that shows one section at a time.
  * @documentation https://pureui.xyz/components/tab-group
@@ -32,7 +32,7 @@ import type { CSSResultGroup } from 'lit';
 export default class PTabGroup extends PureElement {
     static styles: CSSResultGroup;
     static dependencies: {
-        'p-icon-button': typeof PIconButton;
+        "p-icon-button": typeof PIconButton;
     };
     private readonly localize;
     private activeTab?;
@@ -47,12 +47,12 @@ export default class PTabGroup extends PureElement {
     indicator: HTMLElement;
     private hasScrollControls;
     /** The placement of the tabs. */
-    placement: 'top' | 'bottom' | 'start' | 'end';
+    placement: "top" | "bottom" | "start" | "end";
     /**
      * When set to auto, navigating tabs with the arrow keys will instantly show the corresponding tab panel. When set to
      * manual, the tab will receive focus but will not show until the user presses spacebar or enter.
      */
-    activation: 'auto' | 'manual';
+    activation: "auto" | "manual";
     /** Disables the scroll arrows that appear when tabs overflow. */
     noScrollControls: boolean;
     connectedCallback(): void;
@@ -77,6 +77,6 @@ export default class PTabGroup extends PureElement {
 }
 declare global {
     interface HTMLElementTagNameMap {
-        'p-tab-group': PTabGroup;
+        "p-tab-group": PTabGroup;
     }
 }

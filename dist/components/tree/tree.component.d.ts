@@ -1,6 +1,6 @@
-import PTreeItem from '../tree-item/tree-item.component.js';
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
+import PTreeItem from "../tree-item/tree-item.component.js";
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
 /**
  * @summary Trees allow you to display a hierarchical list of selectable [tree items](/components/tree-item). Items with children can be expanded and collapsed as desired by the user.
  * @documentation https://pureui.xyz/components/tree
@@ -31,7 +31,7 @@ export default class PTree extends PureElement {
      * The selection behavior of the tree. Single selection allows only one node to be selected at a time. Multiple
      * displays checkboxes and allows more than one node to be selected. Leaf allows only leaf nodes to be selected.
      */
-    selection: 'single' | 'multiple' | 'leaf';
+    selection: "single" | "multiple" | "leaf";
     private lastFocusedItem;
     private mutationObserver;
     private clickTarget;

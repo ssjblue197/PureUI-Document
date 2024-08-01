@@ -1,6 +1,6 @@
-import PIconButton from '../icon-button/icon-button.component.js';
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
+import PIconButton from "../icon-button/icon-button.component.js";
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
 /**
  * @summary Tags are used as labels to organize things or to indicate a selection.
  * @documentation https://pureui.xyz/components/tag
@@ -21,13 +21,13 @@ import type { CSSResultGroup } from 'lit';
 export default class PTag extends PureElement {
     static styles: CSSResultGroup;
     static dependencies: {
-        'p-icon-button': typeof PIconButton;
+        "p-icon-button": typeof PIconButton;
     };
     private readonly localize;
     /** The tag's theme variant. */
-    variant: 'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'text';
+    variant: "primary" | "success" | "neutral" | "warning" | "danger" | "text";
     /** The tag's size. */
-    size: 'small' | 'medium' | 'large';
+    size: "small" | "medium" | "large";
     /** Draws a pill-style tag with rounded edges. */
     pill: boolean;
     /** Makes the tag removable and shows a remove button. */

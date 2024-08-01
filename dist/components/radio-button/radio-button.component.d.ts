@@ -1,5 +1,5 @@
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
 /**
  * @summary Radios buttons allow the user to select a single option from a group using a button-like control.
  * @documentation https://pureui.xyz/components/radio-button
@@ -39,7 +39,7 @@ export default class PRadioButton extends PureElement {
      * The radio button's size. When used inside a radio group, the size will be determined by the radio group's size so
      * this attribute can typically be omitted.
      */
-    size: 'small' | 'medium' | 'large';
+    size: "small" | "medium" | "large";
     /** Draws a pill-style radio button with rounded edges. */
     pill: boolean;
     connectedCallback(): void;

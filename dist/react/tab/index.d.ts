@@ -1,7 +1,7 @@
-import Component from '../../components/tab/tab.component.js';
-import { type EventName } from '@lit/react';
-import type { PCloseEvent } from '../../events/events.js';
-export type { PCloseEvent } from '../../events/events.js';
+import Component from "../../components/tab/tab.component.js";
+import { type EventName } from "@lit/react";
+import type { PCloseEvent } from "../../events/events.js";
+export type { PCloseEvent } from "../../events/events.js";
 /**
  * @summary Tabs are used inside [tab groups](/components/tab-group) to represent and activate [tab panels](/components/tab-panel).
  * @documentation https://pureui.xyz/components/tab

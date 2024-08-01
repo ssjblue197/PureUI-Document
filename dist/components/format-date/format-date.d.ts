@@ -1,8 +1,8 @@
-import PFormatDate from './format-date.component.js';
-export * from './format-date.component.js';
+import PFormatDate from "./format-date.component.js";
+export * from "./format-date.component.js";
 export default PFormatDate;
 declare global {
     interface HTMLElementTagNameMap {
-        'p-format-date': PFormatDate;
+        "p-format-date": PFormatDate;
     }
 }

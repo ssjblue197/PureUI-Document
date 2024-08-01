@@ -1,8 +1,8 @@
-import PIcon from '../icon/icon.component.js';
-import PSpinner from '../spinner/spinner.component.js';
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
-import type { ShoelaceFormControl } from '../../internal/pure-ui-element.js';
+import PIcon from "../icon/icon.component.js";
+import PSpinner from "../spinner/spinner.component.js";
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
+import type { ShoelaceFormControl } from "../../internal/pure-ui-element.js";
 /**
  * @summary Buttons represent actions that are available to the user.
  * @documentation https://pureui.xyz/components/button
@@ -30,8 +30,8 @@ import type { ShoelaceFormControl } from '../../internal/pure-ui-element.js';
 export default class PButton extends PureElement implements ShoelaceFormControl {
     static styles: CSSResultGroup;
     static dependencies: {
-        'p-icon': typeof PIcon;
-        'p-spinner': typeof PSpinner;
+        "p-icon": typeof PIcon;
+        "p-spinner": typeof PSpinner;
     };
     private readonly formControlController;
     private readonly hasSlotController;
@@ -41,9 +41,9 @@ export default class PButton extends PureElement implements ShoelaceFormControl 
     invalid: boolean;
     title: string;
     /** The button's theme variant. */
-    variant: 'default' | 'primary' | 'success' | 'neutral' | 'warning' | 'danger' | 'text';
+    variant: "default" | "primary" | "success" | "neutral" | "warning" | "danger" | "text";
     /** The button's size. */
-    size: 'small' | 'medium' | 'large';
+    size: "small" | "medium" | "large";
     /** Draws the button with a caret. Used to indicate that the button triggers a dropdown menu or similar behavior. */
     caret: boolean;
     /** Disables the button. */
@@ -63,7 +63,7 @@ export default class PButton extends PureElement implements ShoelaceFormControl 
      * The type of button. Note that the default value is `button` instead of `submit`, which is opposite of how native
      * `<button>` elements behave. When the type is `submit`, the button will submit the surrounding form.
      */
-    type: 'button' | 'submit' | 'reset';
+    type: "button" | "submit" | "reset";
     /**
      * The name of the button, submitted as a name/value pair with form data, but only when this button is the submitter.
      * This attribute is ignored when `href` is present.
@@ -77,7 +77,7 @@ export default class PButton extends PureElement implements ShoelaceFormControl 
     /** When set, the underlying button will be rendered as an `<a>` with this `href` instead of a `<button>`. */
     href: string;
     /** Tells the browser where to open the link. Only used when `href` is present. */
-    target: '_blank' | '_parent' | '_self' | '_top';
+    target: "_blank" | "_parent" | "_self" | "_top";
     /**
      * When using `href`, this attribute will map to the underlying link's `rel` attribute. Unlike regular links, the
      * default is `noreferrer noopener` to prevent security exploits. However, if you're using `target` to point to a
@@ -95,13 +95,13 @@ export default class PButton extends PureElement implements ShoelaceFormControl 
     /** Used to override the form owner's `action` attribute. */
     formAction: string;
     /** Used to override the form owner's `enctype` attribute.  */
-    formEnctype: 'application/x-www-form-urlencoded' | 'multipart/form-data' | 'text/plain';
+    formEnctype: "application/x-www-form-urlencoded" | "multipart/form-data" | "text/plain";
     /** Used to override the form owner's `method` attribute.  */
-    formMethod: 'post' | 'get';
+    formMethod: "post" | "get";
     /** Used to override the form owner's `novalidate` attribute. */
     formNoValidate: boolean;
     /** Used to override the form owner's `target` attribute. */
-    formTarget: '_self' | '_blank' | '_parent' | '_top' | string;
+    formTarget: "_self" | "_blank" | "_parent" | "_top" | string;
     /** Gets the validity state object */
     get validity(): ValidityState;
     /** Gets the validation message */

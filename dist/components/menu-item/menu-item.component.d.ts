@@ -1,8 +1,8 @@
-import PIcon from '../icon/icon.component.js';
-import PPopup from '../popup/popup.component.js';
-import PSpinner from '../spinner/spinner.component.js';
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
+import PIcon from "../icon/icon.component.js";
+import PPopup from "../popup/popup.component.js";
+import PSpinner from "../spinner/spinner.component.js";
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
 /**
  * @summary Menu items provide options for the user to pick from in a menu.
  * @documentation https://pureui.xyz/components/menu-item
@@ -32,15 +32,15 @@ import type { CSSResultGroup } from 'lit';
 export default class PMenuItem extends PureElement {
     static styles: CSSResultGroup;
     static dependencies: {
-        'p-icon': typeof PIcon;
-        'p-popup': typeof PPopup;
-        'p-spinner': typeof PSpinner;
+        "p-icon": typeof PIcon;
+        "p-popup": typeof PPopup;
+        "p-spinner": typeof PSpinner;
     };
     private cachedTextLabel;
     defaultSlot: HTMLSlotElement;
     menuItem: HTMLElement;
     /** The type of menu item to render. To use `checked`, this value must be set to `checkbox`. */
-    type: 'normal' | 'checkbox';
+    type: "normal" | "checkbox";
     /** Draws the item in a checked state. */
     checked: boolean;
     /** A unique value to store in the menu item. This can be used as a way to identify menu items when selected. */

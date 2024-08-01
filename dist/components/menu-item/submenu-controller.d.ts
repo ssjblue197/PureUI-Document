@@ -1,6 +1,6 @@
-import { type HasSlotController } from '../../internal/slot.js';
-import type { ReactiveController, ReactiveControllerHost } from 'lit';
-import type PMenuItem from './menu-item.js';
+import { type HasSlotController } from "../../internal/slot.js";
+import type { ReactiveController, ReactiveControllerHost } from "lit";
+import type PMenuItem from "./menu-item.js";
 /** A reactive controller to manage the registration of event listeners for submenus. */
 export declare class SubmenuController implements ReactiveController {
     private host;

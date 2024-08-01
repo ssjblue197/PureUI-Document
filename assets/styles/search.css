@@ -242,8 +242,8 @@ body.search-visible {
   color: var(--docs-search-result-color-hover);
 }
 
-.search__results li[data-selected='true'] a,
-.search__results li[data-selected='true'] a * {
+.search__results li[data-selected="true"] a,
+.search__results li[data-selected="true"] a * {
   outline: none;
   background-color: var(--docs-search-result-background-active);
   color: var(--docs-search-result-color-active);

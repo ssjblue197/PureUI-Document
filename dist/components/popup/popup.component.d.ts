@@ -1,5 +1,5 @@
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
 export interface VirtualElement {
     getBoundingClientRect: () => DOMRect;
     contextElement?: Element;
@@ -55,12 +55,12 @@ export default class PPopup extends PureElement {
      * The preferred placement of the popup. Note that the actual placement will vary as configured to keep the
      * panel inside of the viewport.
      */
-    placement: 'top' | 'top-start' | 'top-end' | 'bottom' | 'bottom-start' | 'bottom-end' | 'right' | 'right-start' | 'right-end' | 'left' | 'left-start' | 'left-end';
+    placement: "top" | "top-start" | "top-end" | "bottom" | "bottom-start" | "bottom-end" | "right" | "right-start" | "right-end" | "left" | "left-start" | "left-end";
     /**
      * Determines how the popup is positioned. The `absolute` strategy works well in most cases, but if overflow is
      * clipped, using a `fixed` position strategy can often workaround it.
      */
-    strategy: 'absolute' | 'fixed';
+    strategy: "absolute" | "fixed";
     /** The distance in pixels from which to offset the panel away from its anchor. */
     distance: number;
     /** The distance in pixels from which to offset the panel along its anchor. */
@@ -76,7 +76,7 @@ export default class PPopup extends PureElement {
      * anchor as possible, considering available space and `arrow-padding`. A value of `start`, `end`, or `center` will
      * align the arrow to the start, end, or center of the popover instead.
      */
-    arrowPlacement: 'start' | 'end' | 'center' | 'anchor';
+    arrowPlacement: "start" | "end" | "center" | "anchor";
     /**
      * The amount of padding between the arrow and the edges of the popup. If the popup has a border-radius, for example,
      * this will prevent it from overflowing the corners.
@@ -98,7 +98,7 @@ export default class PPopup extends PureElement {
      * the popup should be positioned using the best available fit based on available space or as it was initially
      * preferred.
      */
-    flipFallbackStrategy: 'best-fit' | 'initial';
+    flipFallbackStrategy: "best-fit" | "initial";
     /**
      * The flip boundary describes clipping element(s) that overflow will be checked relative to when flipping. By
      * default, the boundary includes overflow ancestors that will cause the element to be clipped. If needed, you can
@@ -118,9 +118,9 @@ export default class PPopup extends PureElement {
     /** The amount of padding, in pixels, to exceed before the shift behavior will occur. */
     shiftPadding: number;
     /** When set, this will cause the popup to automatically resize itself to prevent it from overflowing. */
-    autoSize: 'horizontal' | 'vertical' | 'both';
+    autoSize: "horizontal" | "vertical" | "both";
     /** Syncs the popup's width or height to that of the anchor element. */
-    sync: 'width' | 'height' | 'both';
+    sync: "width" | "height" | "both";
     /**
      * The auto-size boundary describes clipping element(s) that overflow will be checked relative to when resizing. By
      * default, the boundary includes overflow ancestors that will cause the element to be clipped. If needed, you can

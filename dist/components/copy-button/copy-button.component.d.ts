@@ -1,7 +1,7 @@
-import PIcon from '../icon/icon.component.js';
-import PTooltip from '../tooltip/tooltip.component.js';
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
+import PIcon from "../icon/icon.component.js";
+import PTooltip from "../tooltip/tooltip.component.js";
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
 /**
  * @summary Copies text data to the clipboard when the user clicks the trigger.
  * @documentation https://pureui.xyz/components/copy
@@ -36,8 +36,8 @@ import type { CSSResultGroup } from 'lit';
 export default class PCopyButton extends PureElement {
     static styles: CSSResultGroup;
     static dependencies: {
-        'p-icon': typeof PIcon;
-        'p-tooltip': typeof PTooltip;
+        "p-icon": typeof PIcon;
+        "p-tooltip": typeof PTooltip;
     };
     private readonly localize;
     copyIcon: HTMLSlotElement;
@@ -45,7 +45,7 @@ export default class PCopyButton extends PureElement {
     errorIcon: HTMLSlotElement;
     tooltip: PTooltip;
     isCopying: boolean;
-    status: 'rest' | 'success' | 'error';
+    status: "rest" | "success" | "error";
     /** The text value to copy. */
     value: string;
     /**
@@ -66,7 +66,7 @@ export default class PCopyButton extends PureElement {
     /** The length of time to show feedback before restoring the default trigger. */
     feedbackDuration: number;
     /** The preferred placement of the tooltip. */
-    tooltipPlacement: 'top' | 'right' | 'bottom' | 'left';
+    tooltipPlacement: "top" | "right" | "bottom" | "left";
     /**
      * Enable this option to prevent the tooltip from being clipped when the component is placed inside a container with
      * `overflow: auto|hidden|scroll`. Hoisting uses a fixed positioning strategy that works in many, but not all,

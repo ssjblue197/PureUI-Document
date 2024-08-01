@@ -1,4 +1,4 @@
-import PureElement from '../../internal/pure-ui-element.js';
+import PureElement from "../../internal/pure-ui-element.js";
 /**
  * @summary Formats a number using the specified locale and options.
  * @documentation https://pureui.xyz/components/format-number
@@ -10,13 +10,13 @@ export default class PFormatNumber extends PureElement {
     /** The number to format. */
     value: number;
     /** The formatting style to use. */
-    type: 'currency' | 'decimal' | 'percent';
+    type: "currency" | "decimal" | "percent";
     /** Turns off grouping separators. */
     noGrouping: boolean;
     /** The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting. */
     currency: string;
     /** How to display the currency. */
-    currencyDisplay: 'symbol' | 'narrowSymbol' | 'code' | 'name';
+    currencyDisplay: "symbol" | "narrowSymbol" | "code" | "name";
     /** The minimum number of integer digits to use. Possible values are 1-21. */
     minimumIntegerDigits: number;
     /** The minimum number of fraction digits to use. Possible values are 0-20. */

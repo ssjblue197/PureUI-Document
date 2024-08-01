@@ -1,5 +1,5 @@
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
 /**
  * @summary The visually hidden utility makes content accessible to assistive devices without displaying it on the screen.
  * @documentation https://pureui.xyz/components/visually-hidden

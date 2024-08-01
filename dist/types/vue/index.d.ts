@@ -1,9 +1,9 @@
 import type { DefineComponent } from "vue";
 
-import type { PAlert } from "../../components/alert/alert.component.js";
-import type { PAnimatedImage } from "../../components/animated-image/animated-image.component.js";
-import type { PBadge } from "../../components/badge/badge.component.js";
 import type { PAvatar } from "../../components/avatar/avatar.component.js";
+import type { PAnimatedImage } from "../../components/animated-image/animated-image.component.js";
+import type { PAlert } from "../../components/alert/alert.component.js";
+import type { PBadge } from "../../components/badge/badge.component.js";
 import type { PBreadcrumb } from "../../components/breadcrumb/breadcrumb.component.js";
 import type { PBreadcrumbItem } from "../../components/breadcrumb-item/breadcrumb-item.component.js";
 import type { PButton } from "../../components/button/button.component.js";
@@ -60,6 +60,41 @@ import type { PTree } from "../../components/tree/tree.component.js";
 import type { PTreeItem } from "../../components/tree-item/tree-item.component.js";
 import type { PVisuallyHidden } from "../../components/visually-hidden/visually-hidden.component.js";
 
+type PAvatarProps = {
+  /** The image source to use for the avatar. */
+  image?: PAvatar["image"];
+  /** A label to use to describe the avatar to assistive devices. */
+  label?: PAvatar["label"];
+  /** Initials to use as a fallback when no image is available (1-2 characters max recommended). */
+  initials?: PAvatar["initials"];
+  /** Indicates how the browser should load the image. */
+  loading?: PAvatar["loading"];
+  /** The shape of the avatar. */
+  shape?: PAvatar["shape"];
+
+  /** The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause. */
+  onPError?: (e: CustomEvent<never>) => void;
+};
+
+type PAnimatedImageProps = {
+  /** The path to the image to load. */
+  src?: PAnimatedImage["src"];
+  /** A description of the image used by assistive devices. */
+  alt?: PAnimatedImage["alt"];
+  /** Plays the animation. When this attribute is remove, the animation will pause. */
+  play?: PAnimatedImage["play"];
+  /**  */
+  animatedImage?: PAnimatedImage["animatedImage"];
+  /**  */
+  frozenFrame?: PAnimatedImage["frozenFrame"];
+  /**  */
+  isLoaded?: PAnimatedImage["isLoaded"];
+  /** Emitted when the image loads successfully. */
+  onPLoad?: (e: CustomEvent<never>) => void;
+  /** Emitted when the image fails to load. */
+  onPError?: (e: CustomEvent<never>) => void;
+};
+
 type PAlertProps = {
   /** Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can
 use the `show()` and `hide()` methods and this attribute will reflect the alert's open state. */
@@ -84,25 +119,6 @@ the alert will not close on its own. */
   onPAfterHide?: (e: CustomEvent<never>) => void;
 };
 
-type PAnimatedImageProps = {
-  /** The path to the image to load. */
-  src?: PAnimatedImage["src"];
-  /** A description of the image used by assistive devices. */
-  alt?: PAnimatedImage["alt"];
-  /** Plays the animation. When this attribute is remove, the animation will pause. */
-  play?: PAnimatedImage["play"];
-  /**  */
-  animatedImage?: PAnimatedImage["animatedImage"];
-  /**  */
-  frozenFrame?: PAnimatedImage["frozenFrame"];
-  /**  */
-  isLoaded?: PAnimatedImage["isLoaded"];
-  /** Emitted when the image loads successfully. */
-  onPLoad?: (e: CustomEvent<never>) => void;
-  /** Emitted when the image fails to load. */
-  onPError?: (e: CustomEvent<never>) => void;
-};
-
 type PBadgeProps = {
   /** The badge's theme variant. */
   variant?: PBadge["variant"];
@@ -110,22 +126,6 @@ type PBadgeProps = {
   pill?: PBadge["pill"];
   /** Makes the badge pulsate to draw attention. */
   pulse?: PBadge["pulse"];
-};
-
-type PAvatarProps = {
-  /** The image source to use for the avatar. */
-  image?: PAvatar["image"];
-  /** A label to use to describe the avatar to assistive devices. */
-  label?: PAvatar["label"];
-  /** Initials to use as a fallback when no image is available (1-2 characters max recommended). */
-  initials?: PAvatar["initials"];
-  /** Indicates how the browser should load the image. */
-  loading?: PAvatar["loading"];
-  /** The shape of the avatar. */
-  shape?: PAvatar["shape"];
-
-  /** The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause. */
-  onPError?: (e: CustomEvent<never>) => void;
 };
 
 type PBreadcrumbProps = {
@@ -1583,6 +1583,50 @@ type PVisuallyHiddenProps = {};
 
 export type CustomElements = {
   /**
+   * Avatars are used to represent a person or object.
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **p-error** - The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause.
+   *
+   * ### **Slots:**
+   *  - **icon** - The default icon to use when no image or initials are present. Works best with `<p-icon>`.
+   *
+   * ### **CSS Properties:**
+   *  - **--size** - The size of the avatar. _(default: undefined)_
+   *
+   * ### **CSS Parts:**
+   *  - **base** - The component's base wrapper.
+   * - **icon** - The container that wraps the avatar's icon.
+   * - **initials** - The container that wraps the avatar's initials.
+   * - **image** - The avatar image. Only shown when the `image` attribute is set.
+   */
+  "p-avatar": DefineComponent<PAvatarProps>;
+
+  /**
+   * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **p-load** - Emitted when the image loads successfully.
+   * - **p-error** - Emitted when the image fails to load.
+   *
+   * ### **Slots:**
+   *  - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.
+   * - **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.
+   *
+   * ### **CSS Properties:**
+   *  - **--control-box-size** - The size of the icon box. _(default: undefined)_
+   * - **--icon-size** - The size of the play/pause icons. _(default: undefined)_
+   *
+   * ### **CSS Parts:**
+   *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
+   */
+  "p-animated-image": DefineComponent<PAnimatedImageProps>;
+
+  /**
    * Alerts are used to display important messages inline or as toast notifications.
    * ---
    *
@@ -1614,28 +1658,6 @@ export type CustomElements = {
   "p-alert": DefineComponent<PAlertProps>;
 
   /**
-   * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **p-load** - Emitted when the image loads successfully.
-   * - **p-error** - Emitted when the image fails to load.
-   *
-   * ### **Slots:**
-   *  - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.
-   * - **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.
-   *
-   * ### **CSS Properties:**
-   *  - **--control-box-size** - The size of the icon box. _(default: undefined)_
-   * - **--icon-size** - The size of the play/pause icons. _(default: undefined)_
-   *
-   * ### **CSS Parts:**
-   *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
-   */
-  "p-animated-image": DefineComponent<PAnimatedImageProps>;
-
-  /**
    * Badges are used to draw attention and display statuses or counts.
    * ---
    *
@@ -1647,28 +1669,6 @@ export type CustomElements = {
    *  - **base** - The component's base wrapper.
    */
   "p-badge": DefineComponent<PBadgeProps>;
-
-  /**
-   * Avatars are used to represent a person or object.
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **p-error** - The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause.
-   *
-   * ### **Slots:**
-   *  - **icon** - The default icon to use when no image or initials are present. Works best with `<p-icon>`.
-   *
-   * ### **CSS Properties:**
-   *  - **--size** - The size of the avatar. _(default: undefined)_
-   *
-   * ### **CSS Parts:**
-   *  - **base** - The component's base wrapper.
-   * - **icon** - The container that wraps the avatar's icon.
-   * - **initials** - The container that wraps the avatar's initials.
-   * - **image** - The avatar image. Only shown when the `image` attribute is set.
-   */
-  "p-avatar": DefineComponent<PAvatarProps>;
 
   /**
    * Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.
@@ -1934,7 +1934,7 @@ export type CustomElements = {
    * ### **Methods:**
    *  - **focus(options: _FocusOptions_)** - Sets focus on the color picker.
    * - **blur()** - Removes focus from the color picker.
-   * - **getFormattedValue(format: _'hex' | 'hexa' | 'rgb' | 'rgba' | 'hsl' | 'hsla' | 'hsv' | 'hsva'_)** - Returns the current value as a string in the specified format.
+   * - **getFormattedValue(format: _"hex" | "hexa" | "rgb" | "rgba" | "hsl" | "hsla" | "hsv" | "hsva"_)** - Returns the current value as a string in the specified format.
    * - **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.
    * - **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.
    * - **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.
@@ -2277,8 +2277,8 @@ export type CustomElements = {
    *  - **focus(options: _FocusOptions_)** - Sets focus on the input.
    * - **blur()** - Removes focus from the input.
    * - **select()** - Selects all the text in the input.
-   * - **setSelectionRange(selectionStart: _number_, selectionEnd: _number_, selectionDirection: _'forward' | 'backward' | 'none'_)** - Sets the start and end positions of the text selection (0-based).
-   * - **setRangeText(replacement: _string_, start: _number_, end: _number_, selectMode: _'select' | 'start' | 'end' | 'preserve'_)** - Replaces a range of text with a new string.
+   * - **setSelectionRange(selectionStart: _number_, selectionEnd: _number_, selectionDirection: _"forward" | "backward" | "none"_)** - Sets the start and end positions of the text selection (0-based).
+   * - **setRangeText(replacement: _string_, start: _number_, end: _number_, selectMode: _"select" | "start" | "end" | "preserve"_)** - Replaces a range of text with a new string.
    * - **showPicker()** - Displays the browser picker for an input element (only works if the browser supports it for the input type).
    * - **stepUp()** - Increments the value of a numeric input type by the value of the step attribute.
    * - **stepDown()** - Decrements the value of a numeric input type by the value of the step attribute.
@@ -2909,8 +2909,8 @@ export type CustomElements = {
    * - **blur()** - Removes focus from the textarea.
    * - **select()** - Selects all the text in the textarea.
    * - **scrollPosition(position: _{ top?: number; left?: number }_): _{ top: number; left: number } | undefined_** - Gets or sets the textarea's scroll position.
-   * - **setSelectionRange(selectionStart: _number_, selectionEnd: _number_, selectionDirection: _'forward' | 'backward' | 'none'_)** - Sets the start and end positions of the text selection (0-based).
-   * - **setRangeText(replacement: _string_, start: _number_, end: _number_, selectMode: _'select' | 'start' | 'end' | 'preserve'_)** - Replaces a range of text with a new string.
+   * - **setSelectionRange(selectionStart: _number_, selectionEnd: _number_, selectionDirection: _"forward" | "backward" | "none"_)** - Sets the start and end positions of the text selection (0-based).
+   * - **setRangeText(replacement: _string_, start: _number_, end: _number_, selectMode: _"select" | "start" | "end" | "preserve"_)** - Replaces a range of text with a new string.
    * - **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.
    * - **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.
    * - **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.

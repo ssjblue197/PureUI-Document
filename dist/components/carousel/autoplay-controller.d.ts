@@ -1,4 +1,4 @@
-import type { ReactiveController, ReactiveElement } from 'lit';
+import type { ReactiveController, ReactiveElement } from "lit";
 /**
  * A controller that repeatedly calls the specified callback with the provided interval time.
  * The timer is automatically paused while the user is interacting with the component.

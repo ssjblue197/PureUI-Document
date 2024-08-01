@@ -1,4 +1,4 @@
-import Component from '../../components/badge/badge.component.js';
+import Component from "../../components/badge/badge.component.js";
 /**
  * @summary Badges are used to draw attention and display statuses or counts.
  * @documentation https://pureui.xyz/components/badge

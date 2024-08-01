@@ -1,4 +1,4 @@
-import Component from '../../components/progress-bar/progress-bar.component.js';
+import Component from "../../components/progress-bar/progress-bar.component.js";
 /**
  * @summary Progress bars are used to show the status of an ongoing operation.
  * @documentation https://pureui.xyz/components/progress-bar

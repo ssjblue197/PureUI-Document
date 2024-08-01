@@ -1,8 +1,8 @@
-import { FormControlController } from '../../internal/form.js';
-import PButtonGroup from '../button-group/button-group.component.js';
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
-import type { ShoelaceFormControl } from '../../internal/pure-ui-element.js';
+import { FormControlController } from "../../internal/form.js";
+import PButtonGroup from "../button-group/button-group.component.js";
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
+import type { ShoelaceFormControl } from "../../internal/pure-ui-element.js";
 /**
  * @summary Radio groups are used to group multiple [radios](/components/radio) or [radio buttons](/components/radio-button) so they function as a single form control.
  * @documentation https://pureui.xyz/components/radio-group
@@ -30,7 +30,7 @@ import type { ShoelaceFormControl } from '../../internal/pure-ui-element.js';
 export default class PRadioGroup extends PureElement implements ShoelaceFormControl {
     static styles: CSSResultGroup;
     static dependencies: {
-        'p-button-group': typeof PButtonGroup;
+        "p-button-group": typeof PButtonGroup;
     };
     protected readonly formControlController: FormControlController;
     private readonly hasSlotController;
@@ -53,7 +53,7 @@ export default class PRadioGroup extends PureElement implements ShoelaceFormCont
     /** The current value of the radio group, submitted as a name/value pair with form data. */
     value: string;
     /** The radio group's size. This size will be applied to all child radios and radio buttons. */
-    size: 'small' | 'medium' | 'large';
+    size: "small" | "medium" | "large";
     /**
      * By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you
      * to place the form control outside of a form and associate it with the form that has this `id`. The form must be in

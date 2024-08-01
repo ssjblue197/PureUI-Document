@@ -1,12 +1,12 @@
-import PButton from '../button/button.component.js';
-import PButtonGroup from '../button-group/button-group.component.js';
-import PDropdown from '../dropdown/dropdown.component.js';
-import PIcon from '../icon/icon.component.js';
-import PInput from '../input/input.component.js';
-import PureElement from '../../internal/pure-ui-element.js';
-import PVisuallyHidden from '../visually-hidden/visually-hidden.component.js';
-import type { CSSResultGroup } from 'lit';
-import type { ShoelaceFormControl } from '../../internal/pure-ui-element.js';
+import PButton from "../button/button.component.js";
+import PButtonGroup from "../button-group/button-group.component.js";
+import PDropdown from "../dropdown/dropdown.component.js";
+import PIcon from "../icon/icon.component.js";
+import PInput from "../input/input.component.js";
+import PureElement from "../../internal/pure-ui-element.js";
+import PVisuallyHidden from "../visually-hidden/visually-hidden.component.js";
+import type { CSSResultGroup } from "lit";
+import type { ShoelaceFormControl } from "../../internal/pure-ui-element.js";
 /**
  * @summary Color pickers allow the user to select a color.
  * @documentation https://pureui.xyz/components/color-picker
@@ -64,12 +64,12 @@ import type { ShoelaceFormControl } from '../../internal/pure-ui-element.js';
 export default class PColorPicker extends PureElement implements ShoelaceFormControl {
     static styles: CSSResultGroup;
     static dependencies: {
-        'p-button-group': typeof PButtonGroup;
-        'p-button': typeof PButton;
-        'p-dropdown': typeof PDropdown;
-        'p-icon': typeof PIcon;
-        'p-input': typeof PInput;
-        'p-visually-hidden': typeof PVisuallyHidden;
+        "p-button-group": typeof PButtonGroup;
+        "p-button": typeof PButton;
+        "p-dropdown": typeof PDropdown;
+        "p-icon": typeof PIcon;
+        "p-input": typeof PInput;
+        "p-visually-hidden": typeof PVisuallyHidden;
     };
     private readonly formControlController;
     private isSafeValue;
@@ -104,11 +104,11 @@ export default class PColorPicker extends PureElement implements ShoelaceFormCon
      * The format to use. If opacity is enabled, these will translate to HEXA, RGBA, HSLA, and HSVA respectively. The color
      * picker will accept user input in any format (including CSS color names) and convert it to the desired format.
      */
-    format: 'hex' | 'rgb' | 'hsl' | 'hsv';
+    format: "hex" | "rgb" | "hsl" | "hsv";
     /** Renders the color picker inline rather than in a dropdown. */
     inline: boolean;
     /** Determines the size of the color picker's trigger. This has no effect on inline color pickers. */
-    size: 'small' | 'medium' | 'large';
+    size: "small" | "medium" | "large";
     /** Removes the button that lets users toggle between format.   */
     noFormatToggle: boolean;
     /** The name of the form control, submitted as a name/value pair with form data. */
@@ -177,7 +177,7 @@ export default class PColorPicker extends PureElement implements ShoelaceFormCon
     /** Removes focus from the color picker. */
     blur(): void;
     /** Returns the current value as a string in the specified format. */
-    getFormattedValue(format?: 'hex' | 'hexa' | 'rgb' | 'rgba' | 'hsl' | 'hsla' | 'hsv' | 'hsva'): string;
+    getFormattedValue(format?: "hex" | "hexa" | "rgb" | "rgba" | "hsl" | "hsla" | "hsv" | "hsva"): string;
     /** Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid. */
     checkValidity(): boolean;
     /** Gets the associated form, if one exists. */

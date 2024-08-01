@@ -1,4 +1,4 @@
-import Component from '../../components/spinner/spinner.component.js';
+import Component from "../../components/spinner/spinner.component.js";
 /**
  * @summary Spinners are used to show the progress of an indeterminate operation.
  * @documentation https://pureui.xyz/components/spinner

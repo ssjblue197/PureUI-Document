@@ -1,5 +1,5 @@
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
 /**
  * @summary Split panels display two adjacent panels, allowing the user to reposition them.
  * @documentation https://pureui.xyz/components/split-panel
@@ -46,7 +46,7 @@ export default class PSplitPanel extends PureElement {
      * primary panel is designated, it will maintain its size and the other panel will grow or shrink as needed when the
      * host element is resized.
      */
-    primary?: 'start' | 'end';
+    primary?: "start" | "end";
     /**
      * One or more space-separated values at which the divider should snap. Values can be in pixels or percentages, e.g.
      * `"100px 50%"`.
@@ -69,6 +69,6 @@ export default class PSplitPanel extends PureElement {
 }
 declare global {
     interface HTMLElementTagNameMap {
-        'p-split-panel': PSplitPanel;
+        "p-split-panel": PSplitPanel;
     }
 }

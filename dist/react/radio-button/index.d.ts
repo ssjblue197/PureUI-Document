@@ -1,9 +1,9 @@
-import Component from '../../components/radio-button/radio-button.component.js';
-import { type EventName } from '@lit/react';
-import type { PBlurEvent } from '../../events/events.js';
-import type { PFocusEvent } from '../../events/events.js';
-export type { PBlurEvent } from '../../events/events.js';
-export type { PFocusEvent } from '../../events/events.js';
+import Component from "../../components/radio-button/radio-button.component.js";
+import { type EventName } from "@lit/react";
+import type { PBlurEvent } from "../../events/events.js";
+import type { PFocusEvent } from "../../events/events.js";
+export type { PBlurEvent } from "../../events/events.js";
+export type { PFocusEvent } from "../../events/events.js";
 /**
  * @summary Radios buttons allow the user to select a single option from a group using a button-like control.
  * @documentation https://pureui.xyz/components/radio-button

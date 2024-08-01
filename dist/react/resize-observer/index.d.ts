@@ -1,7 +1,7 @@
-import Component from '../../components/resize-observer/resize-observer.component.js';
-import { type EventName } from '@lit/react';
-import type { PResizeEvent } from '../../events/events.js';
-export type { PResizeEvent } from '../../events/events.js';
+import Component from "../../components/resize-observer/resize-observer.component.js";
+import { type EventName } from "@lit/react";
+import type { PResizeEvent } from "../../events/events.js";
+export type { PResizeEvent } from "../../events/events.js";
 /**
  * @summary The Resize Observer component offers a thin, declarative interface to the [`ResizeObserver API`](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver).
  * @documentation https://pureui.xyz/components/resize-observer

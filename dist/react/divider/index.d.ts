@@ -1,4 +1,4 @@
-import Component from '../../components/divider/divider.component.js';
+import Component from "../../components/divider/divider.component.js";
 /**
  * @summary Dividers are used to visually separate or group elements.
  * @documentation https://pureui.xyz/components/divider

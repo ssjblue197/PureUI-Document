@@ -1,6 +1,6 @@
-import PIcon from '../icon/icon.component.js';
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
+import PIcon from "../icon/icon.component.js";
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
 /**
  * @summary Avatars are used to represent a person or object.
  * @documentation https://pureui.xyz/components/avatar
@@ -24,7 +24,7 @@ import type { CSSResultGroup } from 'lit';
 export default class PAvatar extends PureElement {
     static styles: CSSResultGroup;
     static dependencies: {
-        'p-icon': typeof PIcon;
+        "p-icon": typeof PIcon;
     };
     private hasError;
     /** The image source to use for the avatar. */
@@ -34,9 +34,9 @@ export default class PAvatar extends PureElement {
     /** Initials to use as a fallback when no image is available (1-2 characters max recommended). */
     initials: string;
     /** Indicates how the browser should load the image. */
-    loading: 'eager' | 'lazy';
+    loading: "eager" | "lazy";
     /** The shape of the avatar. */
-    shape: 'circle' | 'square' | 'rounded';
+    shape: "circle" | "square" | "rounded";
     handleImageChange(): void;
     private handleImageLoadError;
     render(): import("lit-html").TemplateResult<1>;

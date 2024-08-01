@@ -1,6 +1,6 @@
 import {
   carousel_styles_default
-} from "../../chunks/chunk.J6LEPELA.js";
+} from "../../chunks/chunk.HZNHMXDR.js";
 import "../../chunks/chunk.N4FVDREO.js";
 import "../../chunks/chunk.KIILAQWQ.js";
 export {

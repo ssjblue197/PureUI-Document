@@ -1,9 +1,9 @@
-import Component from '../../components/copy-button/copy-button.component.js';
-import { type EventName } from '@lit/react';
-import type { PCopyEvent } from '../../events/events.js';
-import type { PErrorEvent } from '../../events/events.js';
-export type { PCopyEvent } from '../../events/events.js';
-export type { PErrorEvent } from '../../events/events.js';
+import Component from "../../components/copy-button/copy-button.component.js";
+import { type EventName } from "@lit/react";
+import type { PCopyEvent } from "../../events/events.js";
+import type { PErrorEvent } from "../../events/events.js";
+export type { PCopyEvent } from "../../events/events.js";
+export type { PErrorEvent } from "../../events/events.js";
 /**
  * @summary Copies text data to the clipboard when the user clicks the trigger.
  * @documentation https://pureui.xyz/components/copy

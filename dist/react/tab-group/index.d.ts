@@ -1,9 +1,9 @@
-import Component from '../../components/tab-group/tab-group.component.js';
-import { type EventName } from '@lit/react';
-import type { PTabShowEvent } from '../../events/events.js';
-import type { PTabHideEvent } from '../../events/events.js';
-export type { PTabShowEvent } from '../../events/events.js';
-export type { PTabHideEvent } from '../../events/events.js';
+import Component from "../../components/tab-group/tab-group.component.js";
+import { type EventName } from "@lit/react";
+import type { PTabShowEvent } from "../../events/events.js";
+import type { PTabHideEvent } from "../../events/events.js";
+export type { PTabShowEvent } from "../../events/events.js";
+export type { PTabHideEvent } from "../../events/events.js";
 /**
  * @summary Tab groups organize content into a container that shows one section at a time.
  * @documentation https://pureui.xyz/components/tab-group

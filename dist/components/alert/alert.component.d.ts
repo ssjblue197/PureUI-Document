@@ -1,6 +1,6 @@
-import PIconButton from '../icon-button/icon-button.component.js';
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
+import PIconButton from "../icon-button/icon-button.component.js";
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
 /**
  * @summary Alerts are used to display important messages inline or as toast notifications.
  * @documentation https://pureui.xyz/components/alert
@@ -29,7 +29,7 @@ import type { CSSResultGroup } from 'lit';
 export default class PAlert extends PureElement {
     static styles: CSSResultGroup;
     static dependencies: {
-        'p-icon-button': typeof PIconButton;
+        "p-icon-button": typeof PIconButton;
     };
     private autoHideTimeout;
     private readonly hasSlotController;
@@ -43,7 +43,7 @@ export default class PAlert extends PureElement {
     /** Enables a close button that allows the user to dismiss the alert. */
     closable: boolean;
     /** The alert's theme variant. */
-    variant: 'primary' | 'success' | 'neutral' | 'warning' | 'danger';
+    variant: "primary" | "success" | "neutral" | "warning" | "danger";
     /**
      * The length of time, in milliseconds, the alert will show before closing itself. If the user interacts with
      * the alert before it closes (e.g. moves the mouse over it), the timer will restart. Defaults to `Infinity`, meaning

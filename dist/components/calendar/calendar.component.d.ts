@@ -1,5 +1,5 @@
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup, TemplateResult } from 'lit';
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup, TemplateResult } from "lit";
 export interface RenderDayOptions {
     disabled?: boolean;
     content: string | TemplateResult;
@@ -42,9 +42,9 @@ export default class PCalendar extends PureElement {
     /** The year to render. */
     year: number;
     /** Determines how day labels are shown, e.g. "M", "Mon", or "Monday". */
-    dayLabels: 'narrow' | 'short' | 'long';
+    dayLabels: "narrow" | "short" | "long";
     /** Determines how month labels are shown, e.g. "J", "Jan", or "January". */
-    monthLabels: 'numeric' | '2-digit' | 'long' | 'short' | 'narrow';
+    monthLabels: "numeric" | "2-digit" | "long" | "short" | "narrow";
     /** When true, dates from the previous and next month will also be shown to fill out the grid. */
     showAdjacentDates: boolean;
     /** Draws the target dates as a selection in the calendar. */

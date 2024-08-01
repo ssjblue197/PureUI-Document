@@ -336,7 +336,7 @@ ol ol:last-child {
 }
 
 .anchor-heading a::after {
-  content: '#';
+  content: "#";
   color: var(--p-color-primary-700);
   margin-inline: 0.5rem;
   opacity: 0;
@@ -569,7 +569,7 @@ pre:hover .copy-code-button,
 }
 
 .callout::before {
-  content: '';
+  content: "";
   position: absolute;
   top: calc(50% - 0.8rem);
   left: calc(-0.8rem - 2px);
@@ -585,7 +585,7 @@ pre:hover .copy-code-button,
 }
 
 .callout--tip::before {
-  content: 'i';
+  content: "i";
   font-style: italic;
   background-color: var(--p-color-primary-600);
 }
@@ -597,7 +597,7 @@ pre:hover .copy-code-button,
 }
 
 .callout--warning::before {
-  content: '!';
+  content: "!";
   background-color: var(--p-color-warning-600);
 }
 
@@ -608,7 +608,7 @@ pre:hover .copy-code-button,
 }
 
 .callout--danger::before {
-  content: '‼';
+  content: "‼";
   background-color: var(--p-color-danger-600);
 }
 
@@ -886,14 +886,14 @@ main {
   margin: 0;
 }
 
-.content__toc li[data-level='3'] {
+.content__toc li[data-level="3"] {
   margin-left: 1rem;
 }
 
 /* We don't use them, but just in case */
-.content__toc li[data-level='4'],
-.content__toc li[data-level='5'],
-.content__toc li[data-level='6'] {
+.content__toc li[data-level="4"],
+.content__toc li[data-level="5"],
+.content__toc li[data-level="6"] {
   margin-left: 2rem;
 }
 
@@ -945,7 +945,7 @@ main {
   }
 
   .content__toc ul::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     bottom: 1rem; /* don't cover the scrollbar */
@@ -962,7 +962,7 @@ main {
     margin-bottom: 0;
   }
 
-  .content__toc [data-level]:not([data-level='2']) {
+  .content__toc [data-level]:not([data-level="2"]) {
     display: none;
   }
 
@@ -1131,7 +1131,7 @@ html.sidebar-open #menu-toggle {
 /* Print styles */
 @media print {
   a:not(.anchor-heading)[href]::after {
-    content: ' (' attr(href) ')';
+    content: " (" attr(href) ")";
   }
 
   details,
@@ -1320,8 +1320,8 @@ html.sidebar-open #menu-toggle {
   }
 }
 
-body[data-page^='/tokens/'] .table-wrapper td:first-child,
-body[data-page^='/tokens/'] .table-wrapper td:first-child code {
+body[data-page^="/tokens/"] .table-wrapper td:first-child,
+body[data-page^="/tokens/"] .table-wrapper td:first-child code {
   white-space: nowrap;
 }
 
@@ -1341,7 +1341,7 @@ body[data-page^='/tokens/'] .table-wrapper td:first-child code {
 }
 
 .transition-demo:after {
-  content: '';
+  content: "";
   position: absolute;
   background-color: var(--p-color-primary-600);
   top: 0;

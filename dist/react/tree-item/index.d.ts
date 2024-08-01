@@ -1,17 +1,17 @@
-import Component from '../../components/tree-item/tree-item.component.js';
-import { type EventName } from '@lit/react';
-import type { PExpandEvent } from '../../events/events.js';
-import type { PAfterExpandEvent } from '../../events/events.js';
-import type { PCollapseEvent } from '../../events/events.js';
-import type { PAfterCollapseEvent } from '../../events/events.js';
-import type { PLazyChangeEvent } from '../../events/events.js';
-import type { PLazyLoadEvent } from '../../events/events.js';
-export type { PExpandEvent } from '../../events/events.js';
-export type { PAfterExpandEvent } from '../../events/events.js';
-export type { PCollapseEvent } from '../../events/events.js';
-export type { PAfterCollapseEvent } from '../../events/events.js';
-export type { PLazyChangeEvent } from '../../events/events.js';
-export type { PLazyLoadEvent } from '../../events/events.js';
+import Component from "../../components/tree-item/tree-item.component.js";
+import { type EventName } from "@lit/react";
+import type { PExpandEvent } from "../../events/events.js";
+import type { PAfterExpandEvent } from "../../events/events.js";
+import type { PCollapseEvent } from "../../events/events.js";
+import type { PAfterCollapseEvent } from "../../events/events.js";
+import type { PLazyChangeEvent } from "../../events/events.js";
+import type { PLazyLoadEvent } from "../../events/events.js";
+export type { PExpandEvent } from "../../events/events.js";
+export type { PAfterExpandEvent } from "../../events/events.js";
+export type { PCollapseEvent } from "../../events/events.js";
+export type { PAfterCollapseEvent } from "../../events/events.js";
+export type { PLazyChangeEvent } from "../../events/events.js";
+export type { PLazyLoadEvent } from "../../events/events.js";
 /**
  * @summary A tree item serves as a hierarchical node that lives inside a [tree](/components/tree).
  * @documentation https://pureui.xyz/components/tree-item

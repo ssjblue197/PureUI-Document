@@ -1,9 +1,9 @@
-import Component from '../../components/icon-button/icon-button.component.js';
-import { type EventName } from '@lit/react';
-import type { PBlurEvent } from '../../events/events.js';
-import type { PFocusEvent } from '../../events/events.js';
-export type { PBlurEvent } from '../../events/events.js';
-export type { PFocusEvent } from '../../events/events.js';
+import Component from "../../components/icon-button/icon-button.component.js";
+import { type EventName } from "@lit/react";
+import type { PBlurEvent } from "../../events/events.js";
+import type { PFocusEvent } from "../../events/events.js";
+export type { PBlurEvent } from "../../events/events.js";
+export type { PFocusEvent } from "../../events/events.js";
 /**
  * @summary Icons buttons are simple, icon-only buttons that can be used for actions and in toolbars.
  * @documentation https://pureui.xyz/components/icon-button

@@ -1,5 +1,5 @@
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
 /**
  * @summary Progress rings are used to show the progress of a determinate operation in a circular fashion.
  * @documentation https://pureui.xyz/components/progress-ring

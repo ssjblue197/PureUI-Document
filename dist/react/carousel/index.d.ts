@@ -1,7 +1,7 @@
-import Component from '../../components/carousel/carousel.component.js';
-import { type EventName } from '@lit/react';
-import type { PSlideChangeEvent } from '../../events/events.js';
-export type { PSlideChangeEvent } from '../../events/events.js';
+import Component from "../../components/carousel/carousel.component.js";
+import { type EventName } from "@lit/react";
+import type { PSlideChangeEvent } from "../../events/events.js";
+export type { PSlideChangeEvent } from "../../events/events.js";
 /**
  * @summary Carousels display an arbitrary number of content slides along a horizontal or vertical axis.
  *

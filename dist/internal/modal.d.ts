@@ -1,7 +1,7 @@
 export default class Modal {
     element: HTMLElement;
     isExternalActivated: boolean;
-    tabDirection: 'forward' | 'backward';
+    tabDirection: "forward" | "backward";
     currentFocus: HTMLElement | null;
     previousFocus: HTMLElement | null;
     elementsWithTabbableControls: string[];

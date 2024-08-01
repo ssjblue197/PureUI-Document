@@ -1,6 +1,6 @@
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
-import type { ShoelaceFormControl } from '../../internal/pure-ui-element.js';
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
+import type { ShoelaceFormControl } from "../../internal/pure-ui-element.js";
 /**
  * @summary Switches allow the user to toggle an option on or off.
  * @documentation https://pureui.xyz/components/switch
@@ -38,7 +38,7 @@ export default class PSwitch extends PureElement implements ShoelaceFormControl 
     /** The current value of the switch, submitted as a name/value pair with form data. */
     value: string;
     /** The switch's size. */
-    size: 'small' | 'medium' | 'large';
+    size: "small" | "medium" | "large";
     /** Disables the switch. */
     disabled: boolean;
     /** Draws the switch in a checked state. */
@@ -86,6 +86,6 @@ export default class PSwitch extends PureElement implements ShoelaceFormControl 
 }
 declare global {
     interface HTMLElementTagNameMap {
-        'p-switch': PSwitch;
+        "p-switch": PSwitch;
     }
 }

@@ -1,4 +1,4 @@
-import Component from '../../components/carousel-item/carousel-item.component.js';
+import Component from "../../components/carousel-item/carousel-item.component.js";
 /**
  * @summary A carousel item represent a slide within a [carousel](/components/carousel).
  *

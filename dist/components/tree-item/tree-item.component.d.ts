@@ -1,8 +1,8 @@
-import PCheckbox from '../checkbox/checkbox.component.js';
-import PIcon from '../icon/icon.component.js';
-import PSpinner from '../spinner/spinner.component.js';
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup, PropertyValueMap } from 'lit';
+import PCheckbox from "../checkbox/checkbox.component.js";
+import PIcon from "../icon/icon.component.js";
+import PSpinner from "../spinner/spinner.component.js";
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup, PropertyValueMap } from "lit";
 /**
  * @summary A tree item serves as a hierarchical node that lives inside a [tree](/components/tree).
  * @documentation https://pureui.xyz/components/tree-item
@@ -50,9 +50,9 @@ import type { CSSResultGroup, PropertyValueMap } from 'lit';
 export default class PTreeItem extends PureElement {
     static styles: CSSResultGroup;
     static dependencies: {
-        'p-checkbox': typeof PCheckbox;
-        'p-icon': typeof PIcon;
-        'p-spinner': typeof PSpinner;
+        "p-checkbox": typeof PCheckbox;
+        "p-icon": typeof PIcon;
+        "p-spinner": typeof PSpinner;
     };
     static isTreeItem(node: Node): boolean;
     private readonly localize;

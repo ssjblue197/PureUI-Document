@@ -1,9 +1,9 @@
-import Component from '../../components/animated-image/animated-image.component.js';
-import { type EventName } from '@lit/react';
-import type { PLoadEvent } from '../../events/events.js';
-import type { PErrorEvent } from '../../events/events.js';
-export type { PLoadEvent } from '../../events/events.js';
-export type { PErrorEvent } from '../../events/events.js';
+import Component from "../../components/animated-image/animated-image.component.js";
+import { type EventName } from "@lit/react";
+import type { PLoadEvent } from "../../events/events.js";
+import type { PErrorEvent } from "../../events/events.js";
+export type { PLoadEvent } from "../../events/events.js";
+export type { PErrorEvent } from "../../events/events.js";
 /**
  * @summary A component for displaying animated GIFs and WEBPs that play and pause on interaction.
  * @documentation https://pureui.xyz/components/animated-image

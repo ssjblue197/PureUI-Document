@@ -1,6 +1,6 @@
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
-import type { ShoelaceFormControl } from '../../internal/pure-ui-element.js';
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
+import type { ShoelaceFormControl } from "../../internal/pure-ui-element.js";
 /**
  * @summary Textareas collect data from the user and allow multiple lines of text.
  * @documentation https://pureui.xyz/components/textarea
@@ -36,7 +36,7 @@ export default class PTextarea extends PureElement implements ShoelaceFormContro
     /** The current value of the textarea, submitted as a name/value pair with form data. */
     value: string;
     /** The textarea's size. */
-    size: 'small' | 'medium' | 'large';
+    size: "small" | "medium" | "large";
     /** Draws a filled textarea. */
     filled: boolean;
     /** The textarea's label. If you need to display HTML, use the `label` slot instead. */
@@ -48,7 +48,7 @@ export default class PTextarea extends PureElement implements ShoelaceFormContro
     /** The number of rows to display by default. */
     rows: number;
     /** Controls how the textarea can be resized. */
-    resize: 'none' | 'vertical' | 'auto';
+    resize: "none" | "vertical" | "auto";
     /** Disables the textarea. */
     disabled: boolean;
     /** Makes the textarea readonly. */
@@ -66,7 +66,7 @@ export default class PTextarea extends PureElement implements ShoelaceFormContro
     /** The maximum length of input that will be considered valid. */
     maxlength: number;
     /** Controls whether and how text input is automatically capitalized as it is entered by the user. */
-    autocapitalize: 'off' | 'none' | 'on' | 'sentences' | 'words' | 'characters';
+    autocapitalize: "off" | "none" | "on" | "sentences" | "words" | "characters";
     /** Indicates whether the browser's autocorrect feature is on or off. */
     autocorrect: string;
     /**
@@ -77,14 +77,14 @@ export default class PTextarea extends PureElement implements ShoelaceFormContro
     /** Indicates that the input should receive focus on page load. */
     autofocus: boolean;
     /** Used to customize the label or icon of the Enter key on virtual keyboards. */
-    enterkeyhint: 'enter' | 'done' | 'go' | 'next' | 'previous' | 'search' | 'send';
+    enterkeyhint: "enter" | "done" | "go" | "next" | "previous" | "search" | "send";
     /** Enables spell checking on the textarea. */
     spellcheck: boolean;
     /**
      * Tells the browser what type of data will be entered by the user, allowing it to display the appropriate virtual
      * keyboard on supportive devices.
      */
-    inputmode: 'none' | 'text' | 'decimal' | 'numeric' | 'tel' | 'search' | 'email' | 'url';
+    inputmode: "none" | "text" | "decimal" | "numeric" | "tel" | "search" | "email" | "url";
     /** The default value of the form control. Primarily used for resetting the form control. */
     defaultValue: string;
     /** Gets the validity state object */
@@ -118,9 +118,9 @@ export default class PTextarea extends PureElement implements ShoelaceFormContro
         left: number;
     } | undefined;
     /** Sets the start and end positions of the text selection (0-based). */
-    setSelectionRange(selectionStart: number, selectionEnd: number, selectionDirection?: 'forward' | 'backward' | 'none'): void;
+    setSelectionRange(selectionStart: number, selectionEnd: number, selectionDirection?: "forward" | "backward" | "none"): void;
     /** Replaces a range of text with a new string. */
-    setRangeText(replacement: string, start?: number, end?: number, selectMode?: 'select' | 'start' | 'end' | 'preserve'): void;
+    setRangeText(replacement: string, start?: number, end?: number, selectMode?: "select" | "start" | "end" | "preserve"): void;
     /** Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid. */
     checkValidity(): boolean;
     /** Gets the associated form, if one exists. */

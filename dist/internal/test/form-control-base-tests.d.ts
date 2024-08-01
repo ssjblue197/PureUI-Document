@@ -1,4 +1,4 @@
-import type { ShoelaceFormControl } from '../pure-ui-element.js';
+import type { ShoelaceFormControl } from "../pure-ui-element.js";
 /** Runs a set of generic tests for Pure UI form controls */
 export declare function runFormControlBaseTests<T extends ShoelaceFormControl = ShoelaceFormControl>(tagNameOrConfig: string | {
     tagName: string;

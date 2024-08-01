@@ -1,7 +1,7 @@
-import Component from '../../components/tree/tree.component.js';
-import { type EventName } from '@lit/react';
-import type { PSelectionChangeEvent } from '../../events/events.js';
-export type { PSelectionChangeEvent } from '../../events/events.js';
+import Component from "../../components/tree/tree.component.js";
+import { type EventName } from "@lit/react";
+import type { PSelectionChangeEvent } from "../../events/events.js";
+export type { PSelectionChangeEvent } from "../../events/events.js";
 /**
  * @summary Trees allow you to display a hierarchical list of selectable [tree items](/components/tree-item). Items with children can be expanded and collapsed as desired by the user.
  * @documentation https://pureui.xyz/components/tree

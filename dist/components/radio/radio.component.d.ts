@@ -1,6 +1,6 @@
-import PIcon from '../icon/icon.component.js';
-import PureElement from '../../internal/pure-ui-element.js';
-import type { CSSResultGroup } from 'lit';
+import PIcon from "../icon/icon.component.js";
+import PureElement from "../../internal/pure-ui-element.js";
+import type { CSSResultGroup } from "lit";
 /**
  * @summary Radios allow the user to select a single option from a group.
  * @documentation https://pureui.xyz/components/radio
@@ -23,7 +23,7 @@ import type { CSSResultGroup } from 'lit';
 export default class PRadio extends PureElement {
     static styles: CSSResultGroup;
     static dependencies: {
-        'p-icon': typeof PIcon;
+        "p-icon": typeof PIcon;
     };
     checked: boolean;
     protected hasFocus: boolean;
@@ -33,7 +33,7 @@ export default class PRadio extends PureElement {
      * The radio's size. When used inside a radio group, the size will be determined by the radio group's size so this
      * attribute can typically be omitted.
      */
-    size: 'small' | 'medium' | 'large';
+    size: "small" | "medium" | "large";
     /** Disables the radio. */
     disabled: boolean;
     constructor();
