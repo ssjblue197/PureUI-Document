@@ -1,6 +1,6 @@
 import {
   menu_styles_default
-} from "../../chunks/chunk.54MRPTTZ.js";
+} from "../../chunks/chunk.QTXFDNJ2.js";
 import "../../chunks/chunk.N4FVDREO.js";
 import "../../chunks/chunk.KIILAQWQ.js";
 export {

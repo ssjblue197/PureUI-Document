@@ -221,17 +221,17 @@ export default css`
     --p-color-rose-900: hsl(354.5 100% 90.7%);
     --p-color-rose-950: hsl(353.3 100% 95.7%);
 
-    --p-color-primary-50: var(--p-color-sky-50);
-    --p-color-primary-100: var(--p-color-sky-100);
-    --p-color-primary-200: var(--p-color-sky-200);
-    --p-color-primary-300: var(--p-color-sky-300);
-    --p-color-primary-400: var(--p-color-sky-400);
-    --p-color-primary-500: var(--p-color-sky-500);
-    --p-color-primary-600: var(--p-color-sky-600);
-    --p-color-primary-700: var(--p-color-sky-700);
-    --p-color-primary-800: var(--p-color-sky-800);
-    --p-color-primary-900: var(--p-color-sky-900);
-    --p-color-primary-950: var(--p-color-sky-950);
+    --p-color-primary-50: var(--p-color-indigo-50);
+    --p-color-primary-100: var(--p-color-indigo-100);
+    --p-color-primary-200: var(--p-color-indigo-200);
+    --p-color-primary-300: var(--p-color-indigo-300);
+    --p-color-primary-400: var(--p-color-indigo-400);
+    --p-color-primary-500: var(--p-color-indigo-500);
+    --p-color-primary-600: var(--p-color-indigo-600);
+    --p-color-primary-700: var(--p-color-indigo-700);
+    --p-color-primary-800: var(--p-color-indigo-800);
+    --p-color-primary-900: var(--p-color-indigo-900);
+    --p-color-primary-950: var(--p-color-indigo-950);
 
     --p-color-success-50: var(--p-color-green-50);
     --p-color-success-100: var(--p-color-green-100);
@@ -333,7 +333,7 @@ export default css`
 
     --p-font-weight-light: 300;
     --p-font-weight-normal: 400;
-    --p-font-weight-semibold: 500;
+    --p-font-weight-medium: 500;
     --p-font-weight-bold: 700;
 
     --p-letter-spacing-denser: -0.03em;
@@ -359,9 +359,9 @@ export default css`
     --p-button-font-size-medium: var(--p-font-size-small);
     --p-button-font-size-large: var(--p-font-size-medium);
 
-    --p-input-height-small: 1.875rem;
+    --p-input-height-small: 2rem;
     --p-input-height-medium: 2.5rem;
-    --p-input-height-large: 3.125rem;
+    --p-input-height-large: 3rem;
 
     --p-input-background-color: var(--p-color-neutral-0);
     --p-input-background-color-hover: var(--p-input-background-color);
@@ -422,9 +422,9 @@ export default css`
     --p-input-help-text-font-size-large: var(--p-font-size-medium);
     --p-input-help-text-color: var(--p-color-neutral-600);
 
-    --p-toggle-size-small: 0.875rem;
-    --p-toggle-size-medium: 1.125rem;
-    --p-toggle-size-large: 1.375rem;
+    --p-toggle-size-small: 1rem;
+    --p-toggle-size-medium: 1.5rem;
+    --p-toggle-size-large: 2rem;
 
     --p-overlay-background-color: hsl(0 0% 0% / 43%);
 
@@ -432,14 +432,14 @@ export default css`
     --p-panel-border-color: var(--p-color-neutral-200);
     --p-panel-border-width: 1px;
 
-    --p-tooltip-border-radius: var(--p-border-radius-medium);
-    --p-tooltip-background-color: var(--p-color-neutral-800);
-    --p-tooltip-color: var(--p-color-neutral-0);
+    --p-tooltip-border-radius: var(--p-border-radius-large);
+    --p-tooltip-background-color: var(--p-color-neutral-0);
+    --p-tooltip-color: var(--p-color-neutral-700);
     --p-tooltip-font-family: var(--p-font-sans);
-    --p-tooltip-font-weight: var(--p-font-weight-normal);
-    --p-tooltip-font-size: var(--p-font-size-small);
+    --p-tooltip-font-weight: var(--p-font-weight-semibold);
+    --p-tooltip-font-size: var(--p-font-size-x-small);
     --p-tooltip-line-height: var(--p-line-height-dense);
-    --p-tooltip-padding: var(--p-spacing-2x-small) var(--p-spacing-x-small);
+    --p-tooltip-padding: var(--p-spacing-x-small) var(--p-spacing-x-small);
     --p-tooltip-arrow-size: 6px;
 
     --p-z-index-drawer: 700;
