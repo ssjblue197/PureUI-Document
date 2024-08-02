@@ -5,7 +5,7 @@ import type { CSSResultGroup } from "lit";
  * @summary Trees allow you to display a hierarchical list of selectable [tree items](/components/tree-item). Items with children can be expanded and collapsed as desired by the user.
  * @documentation https://pureui.xyz/components/tree
  * @status stable
- * @since 2.0
+ * @since 1.0
  *
  * @event {{ selection: PTreeItem[] }} p-selection-change - Emitted when a tree item is selected or deselected.
  *

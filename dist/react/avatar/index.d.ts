@@ -6,7 +6,7 @@ export type { PErrorEvent } from "../../events/events.js";
  * @summary Avatars are used to represent a person or object.
  * @documentation https://pureui.xyz/components/avatar
  * @status stable
- * @since 2.0
+ * @since 1.0
  *
  * @dependency p-icon
  *

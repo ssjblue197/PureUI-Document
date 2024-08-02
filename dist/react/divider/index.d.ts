@@ -3,7 +3,7 @@ import Component from "../../components/divider/divider.component.js";
  * @summary Dividers are used to visually separate or group elements.
  * @documentation https://pureui.xyz/components/divider
  * @status stable
- * @since 2.0
+ * @since 1.0
  *
  * @cssproperty --color - The color of the divider.
  * @cssproperty --width - The width of the divider.

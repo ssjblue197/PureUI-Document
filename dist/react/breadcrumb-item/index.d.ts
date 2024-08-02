@@ -3,7 +3,7 @@ import Component from "../../components/breadcrumb-item/breadcrumb-item.componen
  * @summary Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.
  * @documentation https://pureui.xyz/components/breadcrumb-item
  * @status stable
- * @since 2.0
+ * @since 1.0
  *
  * @slot - The breadcrumb item's label.
  * @slot prefix - An optional prefix, usually an icon or icon button.

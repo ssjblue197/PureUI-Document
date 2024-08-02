@@ -14,7 +14,7 @@ export type { PInvalidEvent } from "../../events/events.js";
  * @summary Color pickers allow the user to select a color.
  * @documentation https://pureui.xyz/components/color-picker
  * @status stable
- * @since 2.0
+ * @since 1.0
  *
  * @dependency p-button
  * @dependency p-button-group

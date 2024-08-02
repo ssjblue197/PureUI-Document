@@ -3,7 +3,7 @@ import Component from "../../components/menu-item/menu-item.component.js";
  * @summary Menu items provide options for the user to pick from in a menu.
  * @documentation https://pureui.xyz/components/menu-item
  * @status stable
- * @since 2.0
+ * @since 1.0
  *
  * @dependency p-icon
  * @dependency p-popup

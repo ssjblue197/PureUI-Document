@@ -12,7 +12,7 @@ export type { PAfterHideEvent } from "../../events/events.js";
  * @summary Details show a brief summary and expand to show additional content.
  * @documentation https://pureui.xyz/components/details
  * @status stable
- * @since 2.0
+ * @since 1.0
  *
  * @dependency p-icon
  *

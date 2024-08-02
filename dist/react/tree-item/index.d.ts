@@ -16,7 +16,7 @@ export type { PLazyLoadEvent } from "../../events/events.js";
  * @summary A tree item serves as a hierarchical node that lives inside a [tree](/components/tree).
  * @documentation https://pureui.xyz/components/tree-item
  * @status stable
- * @since 2.0
+ * @since 1.0
  *
  * @dependency p-checkbox
  * @dependency p-icon

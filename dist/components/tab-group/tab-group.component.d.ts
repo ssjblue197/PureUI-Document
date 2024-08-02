@@ -5,7 +5,7 @@ import type { CSSResultGroup } from "lit";
  * @summary Tab groups organize content into a container that shows one section at a time.
  * @documentation https://pureui.xyz/components/tab-group
  * @status stable
- * @since 2.0
+ * @since 1.0
  *
  * @dependency p-icon-button
  *

@@ -12,7 +12,7 @@ export type { PAfterHideEvent } from "../../events/events.js";
  * @summary Tooltips display additional information based on a specific action.
  * @documentation https://pureui.xyz/components/tooltip
  * @status stable
- * @since 2.0
+ * @since 1.0
  *
  * @dependency p-popup
  *

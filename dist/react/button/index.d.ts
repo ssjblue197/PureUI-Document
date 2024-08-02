@@ -10,7 +10,7 @@ export type { PInvalidEvent } from "../../events/events.js";
  * @summary Buttons represent actions that are available to the user.
  * @documentation https://pureui.xyz/components/button
  * @status stable
- * @since 2.0
+ * @since 1.0
  *
  * @dependency p-icon
  * @dependency p-spinner

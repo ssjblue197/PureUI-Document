@@ -3,7 +3,7 @@ import PureElement from "../../internal/pure-ui-element.js";
  * @summary Outputs a localized time phrase relative to the current date and time.
  * @documentation https://pureui.xyz/components/relative-time
  * @status stable
- * @since 2.0
+ * @since 1.0
  */
 export default class PRelativeTime extends PureElement {
     private readonly localize;

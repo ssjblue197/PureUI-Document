@@ -1,6 +1,6 @@
 import {
   breadcrumb_item_styles_default
-} from "../../chunks/chunk.5CN4BUNZ.js";
+} from "../../chunks/chunk.WUN6KET7.js";
 import "../../chunks/chunk.N4FVDREO.js";
 import "../../chunks/chunk.KIILAQWQ.js";
 export {

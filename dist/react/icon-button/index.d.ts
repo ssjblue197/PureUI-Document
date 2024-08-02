@@ -8,7 +8,7 @@ export type { PFocusEvent } from "../../events/events.js";
  * @summary Icons buttons are simple, icon-only buttons that can be used for actions and in toolbars.
  * @documentation https://pureui.xyz/components/icon-button
  * @status stable
- * @since 2.0
+ * @since 1.0
  *
  * @dependency p-icon
  *

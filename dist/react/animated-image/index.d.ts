@@ -8,7 +8,7 @@ export type { PErrorEvent } from "../../events/events.js";
  * @summary A component for displaying animated GIFs and WEBPs that play and pause on interaction.
  * @documentation https://pureui.xyz/components/animated-image
  * @status stable
- * @since 2.0
+ * @since 1.0
  *
  * @dependency p-icon
  *

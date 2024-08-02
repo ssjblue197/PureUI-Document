@@ -14,7 +14,7 @@ export type { PInvalidEvent } from "../../events/events.js";
  * @summary Ranges allow the user to select a single value within a given range using a slider.
  * @documentation https://pureui.xyz/components/range
  * @status stable
- * @since 2.0
+ * @since 1.0
  *
  * @slot label - The range's label. Alternatively, you can use the `label` attribute.
  * @slot help-text - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.

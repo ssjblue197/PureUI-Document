@@ -3,7 +3,7 @@ import Component from "../../components/progress-ring/progress-ring.component.js
  * @summary Progress rings are used to show the progress of a determinate operation in a circular fashion.
  * @documentation https://pureui.xyz/components/progress-ring
  * @status stable
- * @since 2.0
+ * @since 1.0
  *
  * @slot - A label to show inside the ring.
  *

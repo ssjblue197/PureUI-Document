@@ -14,7 +14,7 @@ export type { PInvalidEvent } from "../../events/events.js";
  * @summary Checkboxes allow the user to toggle an option on or off.
  * @documentation https://pureui.xyz/components/checkbox
  * @status stable
- * @since 2.0
+ * @since 1.0
  *
  * @dependency p-icon
  *

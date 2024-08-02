@@ -16,7 +16,7 @@ export type { PRequestCloseEvent } from "../../events/events.js";
  * @summary Dialogs, sometimes called "modals", appear above the page and require the user's immediate attention.
  * @documentation https://pureui.xyz/components/dialog
  * @status stable
- * @since 2.0
+ * @since 1.0
  *
  * @dependency p-icon-button
  *

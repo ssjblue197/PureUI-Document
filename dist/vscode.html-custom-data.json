@@ -41,6 +41,73 @@
       ]
     },
     {
+      "name": "p-animation",
+      "description": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n---\n\n\n### **Events:**\n - **p-cancel** - Emitted when the animation is canceled.\n- **p-finish** - Emitted when the animation finishes.\n- **p-start** - Emitted when the animation starts or restarts.\n\n### **Methods:**\n - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.\n- **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.\n\n### **Slots:**\n - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.",
+      "attributes": [
+        {
+          "name": "name",
+          "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
+          "values": []
+        },
+        {
+          "name": "play",
+          "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
+          "values": []
+        },
+        {
+          "name": "delay",
+          "description": "The number of milliseconds to delay the start of the animation.",
+          "values": []
+        },
+        {
+          "name": "direction",
+          "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
+          "values": [{ "name": "PlaybackDirection" }]
+        },
+        {
+          "name": "duration",
+          "description": "The number of milliseconds each iteration of the animation takes to complete.",
+          "values": []
+        },
+        {
+          "name": "easing",
+          "description": "The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
+          "values": []
+        },
+        {
+          "name": "end-delay",
+          "description": "The number of milliseconds to delay after the active period of an animation sequence.",
+          "values": []
+        },
+        {
+          "name": "fill",
+          "description": "Sets how the animation applies styles to its target before and after its execution.",
+          "values": [{ "name": "FillMode" }]
+        },
+        {
+          "name": "iterations",
+          "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops.",
+          "values": []
+        },
+        {
+          "name": "iteration-start",
+          "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
+          "values": []
+        },
+        {
+          "name": "playback-rate",
+          "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
+          "values": []
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://pureui.xyz/components/animation"
+        }
+      ]
+    },
+    {
       "name": "p-avatar",
       "description": "Avatars are used to represent a person or object.\n---\n\n\n### **Events:**\n - **p-error** - The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause.\n\n### **Slots:**\n - **icon** - The default icon to use when no image or initials are present. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--size** - The size of the avatar. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the avatar's icon.\n- **initials** - The container that wraps the avatar's initials.\n- **image** - The avatar image. Only shown when the `image` attribute is set.",
       "attributes": [
@@ -78,6 +145,33 @@
         {
           "name": "Documentation",
           "url": "https://pureui.xyz/components/avatar"
+        }
+      ]
+    },
+    {
+      "name": "p-animated-image",
+      "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
+      "attributes": [
+        {
+          "name": "src",
+          "description": "The path to the image to load.",
+          "values": []
+        },
+        {
+          "name": "alt",
+          "description": "A description of the image used by assistive devices.",
+          "values": []
+        },
+        {
+          "name": "play",
+          "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+          "values": []
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://pureui.xyz/components/animated-image"
         }
       ]
     },
@@ -308,100 +402,6 @@
         {
           "name": "Documentation",
           "url": "https://pureui.xyz/components/button"
-        }
-      ]
-    },
-    {
-      "name": "p-animation",
-      "description": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n---\n\n\n### **Events:**\n - **p-cancel** - Emitted when the animation is canceled.\n- **p-finish** - Emitted when the animation finishes.\n- **p-start** - Emitted when the animation starts or restarts.\n\n### **Methods:**\n - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.\n- **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.\n\n### **Slots:**\n - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.",
-      "attributes": [
-        {
-          "name": "name",
-          "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
-          "values": []
-        },
-        {
-          "name": "play",
-          "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
-          "values": []
-        },
-        {
-          "name": "delay",
-          "description": "The number of milliseconds to delay the start of the animation.",
-          "values": []
-        },
-        {
-          "name": "direction",
-          "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
-          "values": [{ "name": "PlaybackDirection" }]
-        },
-        {
-          "name": "duration",
-          "description": "The number of milliseconds each iteration of the animation takes to complete.",
-          "values": []
-        },
-        {
-          "name": "easing",
-          "description": "The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
-          "values": []
-        },
-        {
-          "name": "end-delay",
-          "description": "The number of milliseconds to delay after the active period of an animation sequence.",
-          "values": []
-        },
-        {
-          "name": "fill",
-          "description": "Sets how the animation applies styles to its target before and after its execution.",
-          "values": [{ "name": "FillMode" }]
-        },
-        {
-          "name": "iterations",
-          "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops.",
-          "values": []
-        },
-        {
-          "name": "iteration-start",
-          "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
-          "values": []
-        },
-        {
-          "name": "playback-rate",
-          "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
-          "values": []
-        }
-      ],
-      "references": [
-        {
-          "name": "Documentation",
-          "url": "https://pureui.xyz/components/animation"
-        }
-      ]
-    },
-    {
-      "name": "p-animated-image",
-      "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
-      "attributes": [
-        {
-          "name": "src",
-          "description": "The path to the image to load.",
-          "values": []
-        },
-        {
-          "name": "alt",
-          "description": "A description of the image used by assistive devices.",
-          "values": []
-        },
-        {
-          "name": "play",
-          "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-          "values": []
-        }
-      ],
-      "references": [
-        {
-          "name": "Documentation",
-          "url": "https://pureui.xyz/components/animated-image"
         }
       ]
     },

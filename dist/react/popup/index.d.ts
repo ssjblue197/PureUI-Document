@@ -6,7 +6,7 @@ export type { PRepositionEvent } from "../../events/events.js";
  * @summary Popup is a utility that lets you declaratively anchor "popup" containers to another element.
  * @documentation https://pureui.xyz/components/popup
  * @status stable
- * @since 2.0
+ * @since 1.0
  *
  * @event p-reposition - Emitted when the popup is repositioned. This event can fire a lot, so avoid putting expensive
  *  operations in your listener or consider debouncing it.
