@@ -1,6 +1,6 @@
 import PureElement from "../../internal/pure-ui-element.js";
 import type { CSSResultGroup } from "lit";
-import type { ShoelaceFormControl } from "../../internal/pure-ui-element.js";
+import type { PureFormControl } from "../../internal/pure-ui-element.js";
 /**
  * @summary Switches allow the user to toggle an option on or off.
  * @documentation https://pureui.xyz/components/switch
@@ -26,7 +26,7 @@ import type { ShoelaceFormControl } from "../../internal/pure-ui-element.js";
  * @cssproperty --height - The height of the switch.
  * @cssproperty --thumb-size - The size of the thumb.
  */
-export default class PSwitch extends PureElement implements ShoelaceFormControl {
+export default class PSwitch extends PureElement implements PureFormControl {
     static styles: CSSResultGroup;
     private readonly formControlController;
     private readonly hasSlotController;

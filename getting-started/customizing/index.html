@@ -429,7 +429,7 @@
             an example that changes the primary theme to purple based on existing
             <a href="/tokens/color#primitives">color primitives</a>.
           </p>
-          <pre><code class="language-css" id="code-block-974"><span class="token selector">:root</span> <span class="token punctuation">{</span>
+          <pre><code class="language-css" id="code-block-3"><span class="token selector">:root</span> <span class="token punctuation">{</span>
   <span class="token comment">/* Changes the primary theme color to purple using primitives */</span>
   <span class="token property">--p-color-primary-50</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--p-color-purple-50<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token property">--p-color-primary-100</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--p-color-purple-100<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -443,7 +443,7 @@
   <span class="token property">--p-color-primary-900</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--p-color-purple-900<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token property">--p-color-primary-950</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--p-color-purple-950<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code><p-copy-button class="copy-code-button" from="code-block-974"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-3"></p-copy-button></pre>
           <p>
             Many design tokens are described further along in this documentation. For a complete list, refer to
             <code>src/themes/light.css</code> in the project’s
@@ -515,9 +515,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-361">
+            <div class="code-preview__source-group" id="code-preview-source-group-2">
               <div class="code-preview__source code-preview__source--html">
-                <pre><code class="language-html" id="code-block-975"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tomato-button<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span> Tomato Button <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-button</span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-4"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tomato-button<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span> Tomato Button <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-button</span><span class="token punctuation">&gt;</span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
   <span class="token selector">.tomato-button::part(base)</span> <span class="token punctuation">{</span>
@@ -541,7 +541,7 @@
     <span class="token property">color</span><span class="token punctuation">:</span> tomato<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-975"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-4"></p-copy-button></pre>
               </div>
             </div>
 
@@ -550,7 +550,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-361"
+                aria-controls="code-preview-source-group-2"
               >
                 Source
                 <svg
@@ -623,18 +623,18 @@
             nor do they have the same <code>--p-</code> prefix since they’re scoped to a component.
           </p>
           <p>You can set custom properties on a component in your stylesheet.</p>
-          <pre><code class="language-css" id="code-block-976"><span class="token selector">p-avatar</span> <span class="token punctuation">{</span>
+          <pre><code class="language-css" id="code-block-5"><span class="token selector">p-avatar</span> <span class="token punctuation">{</span>
   <span class="token property">--size</span><span class="token punctuation">:</span> 6rem<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code><p-copy-button class="copy-code-button" from="code-block-976"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-5"></p-copy-button></pre>
           <p>This will also work if you need to target a subset of components with a specific class.</p>
-          <pre><code class="language-css" id="code-block-977"><span class="token selector">p-avatar.your-class</span> <span class="token punctuation">{</span>
+          <pre><code class="language-css" id="code-block-6"><span class="token selector">p-avatar.your-class</span> <span class="token punctuation">{</span>
   <span class="token property">--size</span><span class="token punctuation">:</span> 6rem<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code><p-copy-button class="copy-code-button" from="code-block-977"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-6"></p-copy-button></pre>
           <p>Alternatively, you can set them inline directly on the element.</p>
-          <pre><code class="language-html" id="code-block-978"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-avatar</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">--size</span><span class="token punctuation">:</span> 6rem<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-avatar</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-978"></p-copy-button></pre>
+          <pre><code class="language-html" id="code-block-7"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-avatar</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">--size</span><span class="token punctuation">:</span> 6rem<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-avatar</span><span class="token punctuation">&gt;</span></span>
+</code><p-copy-button class="copy-code-button" from="code-block-7"></p-copy-button></pre>
           <p>
             Not all components expose CSS custom properties. For those that do, they can be found in the component’s API
             documentation.
@@ -660,7 +660,7 @@
             <code>options</code> or <code>null</code> to disable the animation.
           </p>
           <p>This example will make all dialogs use a custom show animation.</p>
-          <pre><code class="language-js" id="code-block-979"><span class="token keyword">import</span> <span class="token punctuation">{</span> setDefaultAnimation <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/utilities/animation-registry.js"</span><span class="token punctuation">;</span>
+          <pre><code class="language-js" id="code-block-8"><span class="token keyword">import</span> <span class="token punctuation">{</span> setDefaultAnimation <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/utilities/animation-registry.js"</span><span class="token punctuation">;</span>
 
 <span class="token comment">// Change the default animation for all dialogs</span>
 <span class="token function">setDefaultAnimation</span><span class="token punctuation">(</span><span class="token string">"dialog.show"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
@@ -672,7 +672,7 @@
     <span class="token literal-property property">duration</span><span class="token operator">:</span> <span class="token number">500</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-979"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-8"></p-copy-button></pre>
           <div role="alert" class="callout callout--tip">
             <p>
               To support RTL languages in your animation, you can pass an additional property called
@@ -687,7 +687,7 @@
             <code>keyframes</code> and <code>options</code>.
           </p>
           <p>In this example, only the target dialog will use a custom show animation.</p>
-          <pre><code class="language-js" id="code-block-980"><span class="token keyword">import</span> <span class="token punctuation">{</span> setAnimation <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/utilities/animation-registry.js"</span><span class="token punctuation">;</span>
+          <pre><code class="language-js" id="code-block-9"><span class="token keyword">import</span> <span class="token punctuation">{</span> setAnimation <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/utilities/animation-registry.js"</span><span class="token punctuation">;</span>
 
 <span class="token comment">// Change the animation for a single dialog</span>
 <span class="token keyword">const</span> dialog <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#my-dialog"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -701,7 +701,7 @@
     <span class="token literal-property property">duration</span><span class="token operator">:</span> <span class="token number">500</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-980"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-9"></p-copy-button></pre>
           <p>
             To learn more about creating Web Animations, refer to the documentation for
             <a

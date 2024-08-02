@@ -1,6 +1,6 @@
 import PureElement from "../../internal/pure-ui-element.js";
 import type { CSSResultGroup } from "lit";
-import type { ShoelaceFormControl } from "../../internal/pure-ui-element.js";
+import type { PureFormControl } from "../../internal/pure-ui-element.js";
 /**
  * @summary Ranges allow the user to select a single value within a given range using a slider.
  * @documentation https://pureui.xyz/components/range
@@ -31,7 +31,7 @@ import type { ShoelaceFormControl } from "../../internal/pure-ui-element.js";
  * @cssproperty --track-height - The height of the track.
  * @cssproperty --track-active-offset - The point of origin of the active track.
  */
-export default class PRange extends PureElement implements ShoelaceFormControl {
+export default class PRange extends PureElement implements PureFormControl {
     static styles: CSSResultGroup;
     private readonly formControlController;
     private readonly hasSlotController;

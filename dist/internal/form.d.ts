@@ -1,30 +1,30 @@
 import type { ReactiveController, ReactiveControllerHost } from "lit";
-import type { ShoelaceFormControl } from "./pure-ui-element.js";
+import type { PureFormControl } from "./pure-ui-element.js";
 import type SlButton from "../components/button/button.js";
-export declare const formCollections: WeakMap<HTMLFormElement, Set<ShoelaceFormControl>>;
+export declare const formCollections: WeakMap<HTMLFormElement, Set<PureFormControl>>;
 export interface FormControlControllerOptions {
     /** A function that returns the form containing the form control. */
-    form: (input: ShoelaceFormControl) => HTMLFormElement | null;
+    form: (input: PureFormControl) => HTMLFormElement | null;
     /** A function that returns the form control's name, which will be submitted with the form data. */
-    name: (input: ShoelaceFormControl) => string;
+    name: (input: PureFormControl) => string;
     /** A function that returns the form control's current value. */
-    value: (input: ShoelaceFormControl) => unknown | unknown[];
+    value: (input: PureFormControl) => unknown | unknown[];
     /** A function that returns the form control's default value. */
-    defaultValue: (input: ShoelaceFormControl) => unknown | unknown[];
+    defaultValue: (input: PureFormControl) => unknown | unknown[];
     /** A function that returns the form control's current disabled state. If disabled, the value won't be submitted. */
-    disabled: (input: ShoelaceFormControl) => boolean;
+    disabled: (input: PureFormControl) => boolean;
     /**
      * A function that maps to the form control's reportValidity() function. When the control is invalid, this will
      * prevent submission and trigger the browser's constraint violation warning.
      */
-    reportValidity: (input: ShoelaceFormControl) => boolean;
+    reportValidity: (input: PureFormControl) => boolean;
     /**
      * A function that maps to the form control's `checkValidity()` function. When the control is invalid, this will return false.
      *   this is helpful is you want to check validation without triggering the native browser constraint violation warning.
      */
-    checkValidity: (input: ShoelaceFormControl) => boolean;
+    checkValidity: (input: PureFormControl) => boolean;
     /** A function that sets the form control's value */
-    setValue: (input: ShoelaceFormControl, value: unknown) => void;
+    setValue: (input: PureFormControl, value: unknown) => void;
     /**
      * An array of event names to listen to. When all events in the list are emitted, the control will receive validity
      * states such as user-valid and user-invalid.user interacted validity states. */
@@ -32,10 +32,10 @@ export interface FormControlControllerOptions {
 }
 /** A reactive controller to allow form controls to participate in form submission, validation, etc. */
 export declare class FormControlController implements ReactiveController {
-    host: ShoelaceFormControl & ReactiveControllerHost;
+    host: PureFormControl & ReactiveControllerHost;
     form?: HTMLFormElement | null;
     options: FormControlControllerOptions;
-    constructor(host: ReactiveControllerHost & ShoelaceFormControl, options?: Partial<FormControlControllerOptions>);
+    constructor(host: ReactiveControllerHost & PureFormControl, options?: Partial<FormControlControllerOptions>);
     hostConnected(): void;
     hostDisconnected(): void;
     hostUpdated(): void;

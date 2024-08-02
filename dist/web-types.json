@@ -7,80 +7,6 @@
     "html": {
       "elements": [
         {
-          "name": "p-animated-image",
-          "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "src",
-              "description": "The path to the image to load.",
-              "value": { "type": "string" }
-            },
-            {
-              "name": "alt",
-              "description": "A description of the image used by assistive devices.",
-              "value": { "type": "string" }
-            },
-            {
-              "name": "play",
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "value": { "type": "boolean" }
-            }
-          ],
-          "slots": [
-            {
-              "name": "play-icon",
-              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`."
-            },
-            {
-              "name": "pause-icon",
-              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`."
-            }
-          ],
-          "events": [
-            {
-              "name": "p-load",
-              "description": "Emitted when the image loads successfully."
-            },
-            {
-              "name": "p-error",
-              "description": "Emitted when the image fails to load."
-            }
-          ],
-          "js": {
-            "properties": [
-              { "name": "animatedImage", "type": "HTMLImageElement" },
-              { "name": "frozenFrame", "type": "string" },
-              { "name": "isLoaded", "type": "boolean" },
-              {
-                "name": "src",
-                "description": "The path to the image to load.",
-                "type": "string"
-              },
-              {
-                "name": "alt",
-                "description": "A description of the image used by assistive devices.",
-                "type": "string"
-              },
-              {
-                "name": "play",
-                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-                "type": "boolean"
-              }
-            ],
-            "events": [
-              {
-                "name": "p-load",
-                "description": "Emitted when the image loads successfully."
-              },
-              {
-                "name": "p-error",
-                "description": "Emitted when the image fails to load."
-              }
-            ]
-          }
-        },
-        {
           "name": "p-alert",
           "description": "Alerts are used to display important messages inline or as toast notifications.\n---\n\n\n### **Events:**\n - **p-show** - Emitted when the alert opens.\n- **p-after-show** - Emitted after the alert opens and all animations are complete.\n- **p-hide** - Emitted when the alert closes.\n- **p-after-hide** - Emitted after the alert closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the alert.\n- **hide()** - Hides the alert\n- **toast()** - Displays the alert as a toast notification. This will move the alert out of its position in the DOM and, when\ndismissed, it will be removed from the DOM completely. By storing a reference to the alert, you can reuse it by\ncalling this method again. The returned promise will resolve after the alert is hidden.\n\n### **Slots:**\n - _default_ - The alert's main content.\n- **icon** - An icon to show in the alert. Works best with `<p-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the optional icon.\n- **message** - The container that wraps the alert's main content.\n- **close-button** - The close button, an `<p-icon-button>`.\n- **close-button__base** - The close button's exported `base` part.",
           "doc-url": "",
@@ -475,38 +401,77 @@
           }
         },
         {
-          "name": "p-breadcrumb",
-          "description": "Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.\n---\n\n\n### **Slots:**\n - _default_ - One or more breadcrumb items to display.\n- **separator** - The separator to use between breadcrumb items. Works best with `<p-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+          "name": "p-animated-image",
+          "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
           "doc-url": "",
           "attributes": [
             {
-              "name": "label",
-              "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
-              "value": { "type": "string", "default": "\"\"" }
+              "name": "src",
+              "description": "The path to the image to load.",
+              "value": { "type": "string" }
+            },
+            {
+              "name": "alt",
+              "description": "A description of the image used by assistive devices.",
+              "value": { "type": "string" }
+            },
+            {
+              "name": "play",
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "value": { "type": "boolean" }
             }
           ],
           "slots": [
             {
-              "name": "",
-              "description": "One or more breadcrumb items to display."
+              "name": "play-icon",
+              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`."
             },
             {
-              "name": "separator",
-              "description": "The separator to use between breadcrumb items. Works best with `<p-icon>`."
+              "name": "pause-icon",
+              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`."
             }
           ],
-          "events": [],
+          "events": [
+            {
+              "name": "p-load",
+              "description": "Emitted when the image loads successfully."
+            },
+            {
+              "name": "p-error",
+              "description": "Emitted when the image fails to load."
+            }
+          ],
           "js": {
             "properties": [
-              { "name": "defaultSlot", "type": "HTMLSlotElement" },
-              { "name": "separatorSlot", "type": "HTMLSlotElement" },
+              { "name": "animatedImage", "type": "HTMLImageElement" },
+              { "name": "frozenFrame", "type": "string" },
+              { "name": "isLoaded", "type": "boolean" },
               {
-                "name": "label",
-                "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
+                "name": "src",
+                "description": "The path to the image to load.",
                 "type": "string"
+              },
+              {
+                "name": "alt",
+                "description": "A description of the image used by assistive devices.",
+                "type": "string"
+              },
+              {
+                "name": "play",
+                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+                "type": "boolean"
               }
             ],
-            "events": []
+            "events": [
+              {
+                "name": "p-load",
+                "description": "Emitted when the image loads successfully."
+              },
+              {
+                "name": "p-error",
+                "description": "Emitted when the image fails to load."
+              }
+            ]
           }
         },
         {
@@ -566,6 +531,41 @@
               {
                 "name": "rel",
                 "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
+                "type": "string"
+              }
+            ],
+            "events": []
+          }
+        },
+        {
+          "name": "p-breadcrumb",
+          "description": "Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.\n---\n\n\n### **Slots:**\n - _default_ - One or more breadcrumb items to display.\n- **separator** - The separator to use between breadcrumb items. Works best with `<p-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "label",
+              "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
+              "value": { "type": "string", "default": "\"\"" }
+            }
+          ],
+          "slots": [
+            {
+              "name": "",
+              "description": "One or more breadcrumb items to display."
+            },
+            {
+              "name": "separator",
+              "description": "The separator to use between breadcrumb items. Works best with `<p-icon>`."
+            }
+          ],
+          "events": [],
+          "js": {
+            "properties": [
+              { "name": "defaultSlot", "type": "HTMLSlotElement" },
+              { "name": "separatorSlot", "type": "HTMLSlotElement" },
+              {
+                "name": "label",
+                "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
                 "type": "string"
               }
             ],
@@ -2028,7 +2028,7 @@
             "properties": [
               {
                 "name": "modal",
-                "description": "Exposes the internal modal utility that controls focus trapping. To temporarily disable focus trapping and allow third-party modals spawned from an active Shoelace modal, call `modal.activateExternal()` when the third-party modal opens. Upon closing, call `modal.deactivateExternal()` to restore pure ui 's focus trapping."
+                "description": "Exposes the internal modal utility that controls focus trapping. To temporarily disable focus trapping and allow third-party modals spawned from an active Pure UI modal, call `modal.activateExternal()` when the third-party modal opens. Upon closing, call `modal.deactivateExternal()` to restore pure ui 's focus trapping."
               },
               { "name": "drawer", "type": "HTMLElement" },
               { "name": "panel", "type": "HTMLElement" },
@@ -4265,169 +4265,6 @@
           }
         },
         {
-          "name": "p-rating",
-          "description": "Ratings give users a way to quickly view and provide feedback.\n---\n\n\n### **Events:**\n - **p-change** - Emitted when the rating's value changes.\n- **p-hover** - Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value.\n\n### **Methods:**\n - **focus(options: _FocusOptions_)** - Sets focus on the rating.\n- **blur()** - Removes focus from the rating.\n\n### **CSS Properties:**\n - **--symbol-color** - The inactive color for symbols. _(default: undefined)_\n- **--symbol-color-active** - The active color for symbols. _(default: undefined)_\n- **--symbol-size** - The size of symbols. _(default: undefined)_\n- **--symbol-spacing** - The spacing to use around symbols. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "label",
-              "description": "A label that describes the rating to assistive devices.",
-              "value": { "type": "string", "default": "\"\"" }
-            },
-            {
-              "name": "value",
-              "description": "The current rating.",
-              "value": { "type": "number", "default": "0" }
-            },
-            {
-              "name": "max",
-              "description": "The highest rating to show.",
-              "value": { "type": "number", "default": "5" }
-            },
-            {
-              "name": "precision",
-              "description": "The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this\nattribute to `0.5`.",
-              "value": { "type": "number", "default": "1" }
-            },
-            {
-              "name": "readonly",
-              "description": "Makes the rating readonly.",
-              "value": { "type": "boolean", "default": "false" }
-            },
-            {
-              "name": "disabled",
-              "description": "Disables the rating.",
-              "value": { "type": "boolean", "default": "false" }
-            },
-            {
-              "name": "getSymbol",
-              "description": "A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.\nThe function should return a string containing trusted HTML of the symbol to render at the specified value. Works\nwell with `<p-icon>` elements.",
-              "value": { "type": "(value: number) => string" }
-            }
-          ],
-          "events": [
-            {
-              "name": "p-change",
-              "description": "Emitted when the rating's value changes."
-            },
-            {
-              "name": "p-hover",
-              "type": "{ phase: 'start' | 'move' | 'end', value: number }",
-              "description": "Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value."
-            }
-          ],
-          "js": {
-            "properties": [
-              { "name": "rating", "type": "HTMLElement" },
-              {
-                "name": "label",
-                "description": "A label that describes the rating to assistive devices.",
-                "type": "string"
-              },
-              {
-                "name": "value",
-                "description": "The current rating.",
-                "type": "number"
-              },
-              {
-                "name": "max",
-                "description": "The highest rating to show.",
-                "type": "number"
-              },
-              {
-                "name": "precision",
-                "description": "The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this\nattribute to `0.5`.",
-                "type": "number"
-              },
-              {
-                "name": "readonly",
-                "description": "Makes the rating readonly.",
-                "type": "boolean"
-              },
-              {
-                "name": "disabled",
-                "description": "Disables the rating.",
-                "type": "boolean"
-              },
-              {
-                "name": "getSymbol",
-                "description": "A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.\nThe function should return a string containing trusted HTML of the symbol to render at the specified value. Works\nwell with `<p-icon>` elements.",
-                "type": "(value: number) => string"
-              }
-            ],
-            "events": [
-              {
-                "name": "p-change",
-                "description": "Emitted when the rating's value changes."
-              },
-              {
-                "name": "p-hover",
-                "type": "{ phase: 'start' | 'move' | 'end', value: number }",
-                "description": "Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value."
-              }
-            ]
-          }
-        },
-        {
-          "name": "p-relative-time",
-          "description": "Outputs a localized time phrase relative to the current date and time.\n---\n",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "date",
-              "description": "The date from which to calculate time from. If not set, the current date and time will be used. When passing a\nstring, it's strongly recommended to use the ISO 8601 format to ensure timezones are handled correctly. To convert\na date to this format in JavaScript, use [`date.toISOString()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString).",
-              "value": { "type": "Date | string", "default": "new Date()" }
-            },
-            {
-              "name": "format",
-              "description": "The formatting style to use.",
-              "value": {
-                "type": "\"long\" | \"short\" | \"narrow\"",
-                "default": "\"long\""
-              }
-            },
-            {
-              "name": "numeric",
-              "description": "When `auto`, values such as \"yesterday\" and \"tomorrow\" will be shown when possible. When `always`, values such as\n\"1 day ago\" and \"in 1 day\" will be shown.",
-              "value": {
-                "type": "\"always\" | \"auto\"",
-                "default": "\"auto\""
-              }
-            },
-            {
-              "name": "sync",
-              "description": "Keep the displayed value up to date as time passes.",
-              "value": { "type": "boolean", "default": "false" }
-            }
-          ],
-          "events": [],
-          "js": {
-            "properties": [
-              {
-                "name": "date",
-                "description": "The date from which to calculate time from. If not set, the current date and time will be used. When passing a\nstring, it's strongly recommended to use the ISO 8601 format to ensure timezones are handled correctly. To convert\na date to this format in JavaScript, use [`date.toISOString()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString).",
-                "type": "Date | string"
-              },
-              {
-                "name": "format",
-                "description": "The formatting style to use.",
-                "type": "\"long\" | \"short\" | \"narrow\""
-              },
-              {
-                "name": "numeric",
-                "description": "When `auto`, values such as \"yesterday\" and \"tomorrow\" will be shown when possible. When `always`, values such as\n\"1 day ago\" and \"in 1 day\" will be shown.",
-                "type": "\"always\" | \"auto\""
-              },
-              {
-                "name": "sync",
-                "description": "Keep the displayed value up to date as time passes.",
-                "type": "boolean"
-              }
-            ],
-            "events": []
-          }
-        },
-        {
           "name": "p-range",
           "description": "Ranges allow the user to select a single value within a given range using a slider.\n---\n\n\n### **Events:**\n - **p-blur** - Emitted when the control loses focus.\n- **p-change** - Emitted when an alteration to the control's value is committed by the user.\n- **p-focus** - Emitted when the control gains focus.\n- **p-input** - Emitted when the control receives input.\n- **p-invalid** - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n\n### **Methods:**\n - **focus(options: _FocusOptions_)** - Sets focus on the range.\n- **blur()** - Removes focus from the range.\n- **stepUp()** - Increments the value of the range by the value of the step attribute.\n- **stepDown()** - Decrements the value of the range by the value of the step attribute.\n- **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n\n### **Slots:**\n - **label** - The range's label. Alternatively, you can use the `label` attribute.\n- **help-text** - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.\n\n### **CSS Properties:**\n - **--thumb-size** - The size of the thumb. _(default: undefined)_\n- **--tooltip-offset** - The vertical distance the tooltip is offset from the track. _(default: undefined)_\n- **--track-color-active** - The color of the portion of the track that represents the current value. _(default: undefined)_\n- **--track-color-inactive** - The of the portion of the track that represents the remaining value. _(default: undefined)_\n- **--track-height** - The height of the track. _(default: undefined)_\n- **--track-active-offset** - The point of origin of the active track. _(default: undefined)_\n\n### **CSS Parts:**\n - **form-control** - The form control that wraps the label, input, and help text.\n- **form-control-label** - The label's wrapper.\n- **form-control-input** - The range's wrapper.\n- **form-control-help-text** - The help text's wrapper.\n- **base** - The component's base wrapper.\n- **input** - The internal `<input>` element.\n- **tooltip** - The range's tooltip.",
           "doc-url": "",
@@ -4618,6 +4455,169 @@
                 "description": "Emitted when the form control has been checked for validity and its constraints aren't satisfied."
               }
             ]
+          }
+        },
+        {
+          "name": "p-rating",
+          "description": "Ratings give users a way to quickly view and provide feedback.\n---\n\n\n### **Events:**\n - **p-change** - Emitted when the rating's value changes.\n- **p-hover** - Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value.\n\n### **Methods:**\n - **focus(options: _FocusOptions_)** - Sets focus on the rating.\n- **blur()** - Removes focus from the rating.\n\n### **CSS Properties:**\n - **--symbol-color** - The inactive color for symbols. _(default: undefined)_\n- **--symbol-color-active** - The active color for symbols. _(default: undefined)_\n- **--symbol-size** - The size of symbols. _(default: undefined)_\n- **--symbol-spacing** - The spacing to use around symbols. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "label",
+              "description": "A label that describes the rating to assistive devices.",
+              "value": { "type": "string", "default": "\"\"" }
+            },
+            {
+              "name": "value",
+              "description": "The current rating.",
+              "value": { "type": "number", "default": "0" }
+            },
+            {
+              "name": "max",
+              "description": "The highest rating to show.",
+              "value": { "type": "number", "default": "5" }
+            },
+            {
+              "name": "precision",
+              "description": "The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this\nattribute to `0.5`.",
+              "value": { "type": "number", "default": "1" }
+            },
+            {
+              "name": "readonly",
+              "description": "Makes the rating readonly.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "disabled",
+              "description": "Disables the rating.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "getSymbol",
+              "description": "A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.\nThe function should return a string containing trusted HTML of the symbol to render at the specified value. Works\nwell with `<p-icon>` elements.",
+              "value": { "type": "(value: number) => string" }
+            }
+          ],
+          "events": [
+            {
+              "name": "p-change",
+              "description": "Emitted when the rating's value changes."
+            },
+            {
+              "name": "p-hover",
+              "type": "{ phase: 'start' | 'move' | 'end', value: number }",
+              "description": "Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value."
+            }
+          ],
+          "js": {
+            "properties": [
+              { "name": "rating", "type": "HTMLElement" },
+              {
+                "name": "label",
+                "description": "A label that describes the rating to assistive devices.",
+                "type": "string"
+              },
+              {
+                "name": "value",
+                "description": "The current rating.",
+                "type": "number"
+              },
+              {
+                "name": "max",
+                "description": "The highest rating to show.",
+                "type": "number"
+              },
+              {
+                "name": "precision",
+                "description": "The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this\nattribute to `0.5`.",
+                "type": "number"
+              },
+              {
+                "name": "readonly",
+                "description": "Makes the rating readonly.",
+                "type": "boolean"
+              },
+              {
+                "name": "disabled",
+                "description": "Disables the rating.",
+                "type": "boolean"
+              },
+              {
+                "name": "getSymbol",
+                "description": "A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.\nThe function should return a string containing trusted HTML of the symbol to render at the specified value. Works\nwell with `<p-icon>` elements.",
+                "type": "(value: number) => string"
+              }
+            ],
+            "events": [
+              {
+                "name": "p-change",
+                "description": "Emitted when the rating's value changes."
+              },
+              {
+                "name": "p-hover",
+                "type": "{ phase: 'start' | 'move' | 'end', value: number }",
+                "description": "Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value."
+              }
+            ]
+          }
+        },
+        {
+          "name": "p-relative-time",
+          "description": "Outputs a localized time phrase relative to the current date and time.\n---\n",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "date",
+              "description": "The date from which to calculate time from. If not set, the current date and time will be used. When passing a\nstring, it's strongly recommended to use the ISO 8601 format to ensure timezones are handled correctly. To convert\na date to this format in JavaScript, use [`date.toISOString()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString).",
+              "value": { "type": "Date | string", "default": "new Date()" }
+            },
+            {
+              "name": "format",
+              "description": "The formatting style to use.",
+              "value": {
+                "type": "\"long\" | \"short\" | \"narrow\"",
+                "default": "\"long\""
+              }
+            },
+            {
+              "name": "numeric",
+              "description": "When `auto`, values such as \"yesterday\" and \"tomorrow\" will be shown when possible. When `always`, values such as\n\"1 day ago\" and \"in 1 day\" will be shown.",
+              "value": {
+                "type": "\"always\" | \"auto\"",
+                "default": "\"auto\""
+              }
+            },
+            {
+              "name": "sync",
+              "description": "Keep the displayed value up to date as time passes.",
+              "value": { "type": "boolean", "default": "false" }
+            }
+          ],
+          "events": [],
+          "js": {
+            "properties": [
+              {
+                "name": "date",
+                "description": "The date from which to calculate time from. If not set, the current date and time will be used. When passing a\nstring, it's strongly recommended to use the ISO 8601 format to ensure timezones are handled correctly. To convert\na date to this format in JavaScript, use [`date.toISOString()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString).",
+                "type": "Date | string"
+              },
+              {
+                "name": "format",
+                "description": "The formatting style to use.",
+                "type": "\"long\" | \"short\" | \"narrow\""
+              },
+              {
+                "name": "numeric",
+                "description": "When `auto`, values such as \"yesterday\" and \"tomorrow\" will be shown when possible. When `always`, values such as\n\"1 day ago\" and \"in 1 day\" will be shown.",
+                "type": "\"always\" | \"auto\""
+              },
+              {
+                "name": "sync",
+                "description": "Keep the displayed value up to date as time passes.",
+                "type": "boolean"
+              }
+            ],
+            "events": []
           }
         },
         {

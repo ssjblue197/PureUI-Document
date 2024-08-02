@@ -23,7 +23,7 @@ export default class PureElement extends LitElement {
     static dependencies: Record<string, typeof PureElement>;
     constructor();
 }
-export interface ShoelaceFormControl extends PureElement {
+export interface PureFormControl extends PureElement {
     name: string;
     value: unknown;
     disabled?: boolean;

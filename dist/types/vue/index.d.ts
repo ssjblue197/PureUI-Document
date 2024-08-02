@@ -1,12 +1,12 @@
 import type { DefineComponent } from "vue";
 
-import type { PAnimatedImage } from "../../components/animated-image/animated-image.component.js";
 import type { PAlert } from "../../components/alert/alert.component.js";
 import type { PAnimation } from "../../components/animation/animation.component.js";
 import type { PAvatar } from "../../components/avatar/avatar.component.js";
 import type { PBadge } from "../../components/badge/badge.component.js";
-import type { PBreadcrumb } from "../../components/breadcrumb/breadcrumb.component.js";
+import type { PAnimatedImage } from "../../components/animated-image/animated-image.component.js";
 import type { PBreadcrumbItem } from "../../components/breadcrumb-item/breadcrumb-item.component.js";
+import type { PBreadcrumb } from "../../components/breadcrumb/breadcrumb.component.js";
 import type { PButton } from "../../components/button/button.component.js";
 import type { PButtonGroup } from "../../components/button-group/button-group.component.js";
 import type { PCalendar } from "../../components/calendar/calendar.component.js";
@@ -41,9 +41,9 @@ import type { PQrCode } from "../../components/qr-code/qr-code.component.js";
 import type { PRadio } from "../../components/radio/radio.component.js";
 import type { PRadioButton } from "../../components/radio-button/radio-button.component.js";
 import type { PRadioGroup } from "../../components/radio-group/radio-group.component.js";
+import type { PRange } from "../../components/range/range.component.js";
 import type { PRating } from "../../components/rating/rating.component.js";
 import type { PRelativeTime } from "../../components/relative-time/relative-time.component.js";
-import type { PRange } from "../../components/range/range.component.js";
 import type { PResizeObserver } from "../../components/resize-observer/resize-observer.component.js";
 import type { PSelect } from "../../components/select/select.component.js";
 import type { PSkeleton } from "../../components/skeleton/skeleton.component.js";
@@ -59,25 +59,6 @@ import type { PTooltip } from "../../components/tooltip/tooltip.component.js";
 import type { PTree } from "../../components/tree/tree.component.js";
 import type { PTreeItem } from "../../components/tree-item/tree-item.component.js";
 import type { PVisuallyHidden } from "../../components/visually-hidden/visually-hidden.component.js";
-
-type PAnimatedImageProps = {
-  /** The path to the image to load. */
-  src?: PAnimatedImage["src"];
-  /** A description of the image used by assistive devices. */
-  alt?: PAnimatedImage["alt"];
-  /** Plays the animation. When this attribute is remove, the animation will pause. */
-  play?: PAnimatedImage["play"];
-  /**  */
-  animatedImage?: PAnimatedImage["animatedImage"];
-  /**  */
-  frozenFrame?: PAnimatedImage["frozenFrame"];
-  /**  */
-  isLoaded?: PAnimatedImage["isLoaded"];
-  /** Emitted when the image loads successfully. */
-  "onp-load"?: (e: CustomEvent<never>) => void;
-  /** Emitted when the image fails to load. */
-  "onp-error"?: (e: CustomEvent<never>) => void;
-};
 
 type PAlertProps = {
   /** Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can
@@ -170,14 +151,23 @@ type PBadgeProps = {
   pulse?: PBadge["pulse"];
 };
 
-type PBreadcrumbProps = {
-  /** The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by
-screen readers and other assistive devices to provide more context for users. */
-  label?: PBreadcrumb["label"];
+type PAnimatedImageProps = {
+  /** The path to the image to load. */
+  src?: PAnimatedImage["src"];
+  /** A description of the image used by assistive devices. */
+  alt?: PAnimatedImage["alt"];
+  /** Plays the animation. When this attribute is remove, the animation will pause. */
+  play?: PAnimatedImage["play"];
   /**  */
-  defaultSlot?: PBreadcrumb["defaultSlot"];
+  animatedImage?: PAnimatedImage["animatedImage"];
   /**  */
-  separatorSlot?: PBreadcrumb["separatorSlot"];
+  frozenFrame?: PAnimatedImage["frozenFrame"];
+  /**  */
+  isLoaded?: PAnimatedImage["isLoaded"];
+  /** Emitted when the image loads successfully. */
+  "onp-load"?: (e: CustomEvent<never>) => void;
+  /** Emitted when the image fails to load. */
+  "onp-error"?: (e: CustomEvent<never>) => void;
 };
 
 type PBreadcrumbItemProps = {
@@ -188,6 +178,16 @@ internally. When unset, a button will be rendered instead. */
   target?: PBreadcrumbItem["target"];
   /** The `rel` attribute to use on the link. Only used when `href` is set. */
   rel?: PBreadcrumbItem["rel"];
+};
+
+type PBreadcrumbProps = {
+  /** The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by
+screen readers and other assistive devices to provide more context for users. */
+  label?: PBreadcrumb["label"];
+  /**  */
+  defaultSlot?: PBreadcrumb["defaultSlot"];
+  /**  */
+  separatorSlot?: PBreadcrumb["separatorSlot"];
 };
 
 type PButtonProps = {
@@ -557,7 +557,7 @@ its parent element, set this attribute and add `position: relative` to the paren
   /** Removes the header. This will also remove the default close button, so please ensure you provide an easy,
 accessible way for users to dismiss the drawer. */
   "no-header"?: PDrawer["noHeader"];
-  /** Exposes the internal modal utility that controls focus trapping. To temporarily disable focus trapping and allow third-party modals spawned from an active Shoelace modal, call `modal.activateExternal()` when the third-party modal opens. Upon closing, call `modal.deactivateExternal()` to restore pure ui 's focus trapping. */
+  /** Exposes the internal modal utility that controls focus trapping. To temporarily disable focus trapping and allow third-party modals spawned from an active Pure UI modal, call `modal.activateExternal()` when the third-party modal opens. Upon closing, call `modal.deactivateExternal()` to restore pure ui 's focus trapping. */
   modal?: PDrawer["modal"];
   /**  */
   drawer?: PDrawer["drawer"];
@@ -1095,46 +1095,6 @@ the same document or shadow root for this to work. */
   "onp-invalid"?: (e: CustomEvent<never>) => void;
 };
 
-type PRatingProps = {
-  /** A label that describes the rating to assistive devices. */
-  label?: PRating["label"];
-  /** The current rating. */
-  value?: PRating["value"];
-  /** The highest rating to show. */
-  max?: PRating["max"];
-  /** The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this
-attribute to `0.5`. */
-  precision?: PRating["precision"];
-  /** Makes the rating readonly. */
-  readonly?: PRating["readonly"];
-  /** Disables the rating. */
-  disabled?: PRating["disabled"];
-  /** A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.
-The function should return a string containing trusted HTML of the symbol to render at the specified value. Works
-well with `<p-icon>` elements. */
-  getSymbol?: PRating["getSymbol"];
-  /**  */
-  rating?: PRating["rating"];
-  /** Emitted when the rating's value changes. */
-  "onp-change"?: (e: CustomEvent<never>) => void;
-  /** Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value. */
-  "onp-hover"?: (e: CustomEvent<{ phase: "start" | "move" | "end"; value: number }>) => void;
-};
-
-type PRelativeTimeProps = {
-  /** The date from which to calculate time from. If not set, the current date and time will be used. When passing a
-string, it's strongly recommended to use the ISO 8601 format to ensure timezones are handled correctly. To convert
-a date to this format in JavaScript, use [`date.toISOString()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString). */
-  date?: PRelativeTime["date"];
-  /** The formatting style to use. */
-  format?: PRelativeTime["format"];
-  /** When `auto`, values such as "yesterday" and "tomorrow" will be shown when possible. When `always`, values such as
-"1 day ago" and "in 1 day" will be shown. */
-  numeric?: PRelativeTime["numeric"];
-  /** Keep the displayed value up to date as time passes. */
-  sync?: PRelativeTime["sync"];
-};
-
 type PRangeProps = {
   /**  */
   title?: PRange["title"];
@@ -1183,6 +1143,46 @@ function should return a string to display in the tooltip. */
   "onp-input"?: (e: CustomEvent<never>) => void;
   /** Emitted when the form control has been checked for validity and its constraints aren't satisfied. */
   "onp-invalid"?: (e: CustomEvent<never>) => void;
+};
+
+type PRatingProps = {
+  /** A label that describes the rating to assistive devices. */
+  label?: PRating["label"];
+  /** The current rating. */
+  value?: PRating["value"];
+  /** The highest rating to show. */
+  max?: PRating["max"];
+  /** The precision at which the rating will increase and decrease. For example, to allow half-star ratings, set this
+attribute to `0.5`. */
+  precision?: PRating["precision"];
+  /** Makes the rating readonly. */
+  readonly?: PRating["readonly"];
+  /** Disables the rating. */
+  disabled?: PRating["disabled"];
+  /** A function that customizes the symbol to be rendered. The first and only argument is the rating's current value.
+The function should return a string containing trusted HTML of the symbol to render at the specified value. Works
+well with `<p-icon>` elements. */
+  getSymbol?: PRating["getSymbol"];
+  /**  */
+  rating?: PRating["rating"];
+  /** Emitted when the rating's value changes. */
+  "onp-change"?: (e: CustomEvent<never>) => void;
+  /** Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value. */
+  "onp-hover"?: (e: CustomEvent<{ phase: "start" | "move" | "end"; value: number }>) => void;
+};
+
+type PRelativeTimeProps = {
+  /** The date from which to calculate time from. If not set, the current date and time will be used. When passing a
+string, it's strongly recommended to use the ISO 8601 format to ensure timezones are handled correctly. To convert
+a date to this format in JavaScript, use [`date.toISOString()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString). */
+  date?: PRelativeTime["date"];
+  /** The formatting style to use. */
+  format?: PRelativeTime["format"];
+  /** When `auto`, values such as "yesterday" and "tomorrow" will be shown when possible. When `always`, values such as
+"1 day ago" and "in 1 day" will be shown. */
+  numeric?: PRelativeTime["numeric"];
+  /** Keep the displayed value up to date as time passes. */
+  sync?: PRelativeTime["sync"];
 };
 
 type PResizeObserverProps = {
@@ -1583,28 +1583,6 @@ type PVisuallyHiddenProps = {};
 
 export type CustomElements = {
   /**
-   * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **p-load** - Emitted when the image loads successfully.
-   * - **p-error** - Emitted when the image fails to load.
-   *
-   * ### **Slots:**
-   *  - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.
-   * - **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.
-   *
-   * ### **CSS Properties:**
-   *  - **--control-box-size** - The size of the icon box. _(default: undefined)_
-   * - **--icon-size** - The size of the play/pause icons. _(default: undefined)_
-   *
-   * ### **CSS Parts:**
-   *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
-   */
-  "p-animated-image": DefineComponent<PAnimatedImageProps>;
-
-  /**
    * Alerts are used to display important messages inline or as toast notifications.
    * ---
    *
@@ -1690,18 +1668,26 @@ export type CustomElements = {
   "p-badge": DefineComponent<PBadgeProps>;
 
   /**
-   * Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.
+   * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
    * ---
    *
    *
+   * ### **Events:**
+   *  - **p-load** - Emitted when the image loads successfully.
+   * - **p-error** - Emitted when the image fails to load.
+   *
    * ### **Slots:**
-   *  - _default_ - One or more breadcrumb items to display.
-   * - **separator** - The separator to use between breadcrumb items. Works best with `<p-icon>`.
+   *  - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.
+   * - **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.
+   *
+   * ### **CSS Properties:**
+   *  - **--control-box-size** - The size of the icon box. _(default: undefined)_
+   * - **--icon-size** - The size of the play/pause icons. _(default: undefined)_
    *
    * ### **CSS Parts:**
-   *  - **base** - The component's base wrapper.
+   *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
    */
-  "p-breadcrumb": DefineComponent<PBreadcrumbProps>;
+  "p-animated-image": DefineComponent<PAnimatedImageProps>;
 
   /**
    * Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.
@@ -1722,6 +1708,20 @@ export type CustomElements = {
    * - **separator** - The container that wraps the separator.
    */
   "p-breadcrumb-item": DefineComponent<PBreadcrumbItemProps>;
+
+  /**
+   * Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.
+   * ---
+   *
+   *
+   * ### **Slots:**
+   *  - _default_ - One or more breadcrumb items to display.
+   * - **separator** - The separator to use between breadcrumb items. Works best with `<p-icon>`.
+   *
+   * ### **CSS Parts:**
+   *  - **base** - The component's base wrapper.
+   */
+  "p-breadcrumb": DefineComponent<PBreadcrumbProps>;
 
   /**
    * Buttons represent actions that are available to the user.
@@ -2562,37 +2562,6 @@ export type CustomElements = {
   "p-radio-group": DefineComponent<PRadioGroupProps>;
 
   /**
-   * Ratings give users a way to quickly view and provide feedback.
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **p-change** - Emitted when the rating's value changes.
-   * - **p-hover** - Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value.
-   *
-   * ### **Methods:**
-   *  - **focus(options: _FocusOptions_)** - Sets focus on the rating.
-   * - **blur()** - Removes focus from the rating.
-   *
-   * ### **CSS Properties:**
-   *  - **--symbol-color** - The inactive color for symbols. _(default: undefined)_
-   * - **--symbol-color-active** - The active color for symbols. _(default: undefined)_
-   * - **--symbol-size** - The size of symbols. _(default: undefined)_
-   * - **--symbol-spacing** - The spacing to use around symbols. _(default: undefined)_
-   *
-   * ### **CSS Parts:**
-   *  - **base** - The component's base wrapper.
-   */
-  "p-rating": DefineComponent<PRatingProps>;
-
-  /**
-   * Outputs a localized time phrase relative to the current date and time.
-   * ---
-   *
-   */
-  "p-relative-time": DefineComponent<PRelativeTimeProps>;
-
-  /**
    * Ranges allow the user to select a single value within a given range using a slider.
    * ---
    *
@@ -2636,6 +2605,37 @@ export type CustomElements = {
    * - **tooltip** - The range's tooltip.
    */
   "p-range": DefineComponent<PRangeProps>;
+
+  /**
+   * Ratings give users a way to quickly view and provide feedback.
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **p-change** - Emitted when the rating's value changes.
+   * - **p-hover** - Emitted when the user hovers over a value. The `phase` property indicates when hovering starts, moves to a new value, or ends. The `value` property tells what the rating's value would be if the user were to commit to the hovered value.
+   *
+   * ### **Methods:**
+   *  - **focus(options: _FocusOptions_)** - Sets focus on the rating.
+   * - **blur()** - Removes focus from the rating.
+   *
+   * ### **CSS Properties:**
+   *  - **--symbol-color** - The inactive color for symbols. _(default: undefined)_
+   * - **--symbol-color-active** - The active color for symbols. _(default: undefined)_
+   * - **--symbol-size** - The size of symbols. _(default: undefined)_
+   * - **--symbol-spacing** - The spacing to use around symbols. _(default: undefined)_
+   *
+   * ### **CSS Parts:**
+   *  - **base** - The component's base wrapper.
+   */
+  "p-rating": DefineComponent<PRatingProps>;
+
+  /**
+   * Outputs a localized time phrase relative to the current date and time.
+   * ---
+   *
+   */
+  "p-relative-time": DefineComponent<PRelativeTimeProps>;
 
   /**
    * The Resize Observer component offers a thin, declarative interface to the [`ResizeObserver API`](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver).

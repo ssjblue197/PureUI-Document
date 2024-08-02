@@ -4,192 +4,6 @@
   "modules": [
     {
       "kind": "javascript-module",
-      "path": "components/animated-image/animated-image.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PAnimatedImage",
-          "cssProperties": [
-            {
-              "description": "The size of the icon box.",
-              "name": "--control-box-size"
-            },
-            {
-              "description": "The size of the play/pause icons.",
-              "name": "--icon-size"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The container that surrounds the pause/play icons and provides their background.",
-              "name": "control-box"
-            }
-          ],
-          "slots": [
-            {
-              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`.",
-              "name": "play-icon"
-            },
-            {
-              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`.",
-              "name": "pause-icon"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "dependencies",
-              "type": {
-                "text": "object"
-              },
-              "static": true,
-              "default": "{ \"p-icon\": PIcon }"
-            },
-            {
-              "kind": "field",
-              "name": "animatedImage",
-              "type": {
-                "text": "HTMLImageElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "frozenFrame",
-              "type": {
-                "text": "string"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "isLoaded",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "src",
-              "type": {
-                "text": "string"
-              },
-              "description": "The path to the image to load.",
-              "attribute": "src"
-            },
-            {
-              "kind": "field",
-              "name": "alt",
-              "type": {
-                "text": "string"
-              },
-              "description": "A description of the image used by assistive devices.",
-              "attribute": "alt"
-            },
-            {
-              "kind": "field",
-              "name": "play",
-              "type": {
-                "text": "boolean"
-              },
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "attribute": "play",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleClick",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleLoad",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleError",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handlePlayChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleSrcChange"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the image loads successfully.",
-              "name": "p-load",
-              "reactName": "onPLoad",
-              "eventName": "PLoadEvent"
-            },
-            {
-              "description": "Emitted when the image fails to load.",
-              "name": "p-error",
-              "reactName": "onPError",
-              "eventName": "PErrorEvent"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "src",
-              "type": {
-                "text": "string"
-              },
-              "description": "The path to the image to load.",
-              "fieldName": "src"
-            },
-            {
-              "name": "alt",
-              "type": {
-                "text": "string"
-              },
-              "description": "A description of the image used by assistive devices.",
-              "fieldName": "alt"
-            },
-            {
-              "name": "play",
-              "type": {
-                "text": "boolean"
-              },
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "fieldName": "play"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.",
-          "tagNameWithoutPrefix": "animated-image",
-          "tagName": "p-animated-image",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n * @documentation https://pureui.xyz/components/animated-image\n * @status stable\n * @since 2.0\n *\n * @dependency p-icon\n *\n * @event p-load - Emitted when the image loads successfully.\n * @event p-error - Emitted when the image fails to load.\n *\n * @slot play-icon - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n * @slot pause-icon - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n *\n * @part control-box - The container that surrounds the pause/play icons and provides their background.\n *\n * @cssproperty --control-box-size - The size of the icon box.\n * @cssproperty --icon-size - The size of the play/pause icons.\n */",
-          "documentation": "https://pureui.xyz/components/animated-image",
-          "status": "stable",
-          "since": "2.0",
-          "dependencies": [
-            "p-icon"
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PAnimatedImage",
-            "module": "components/animated-image/animated-image.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/alert/alert.js",
       "declarations": [
         {
@@ -1008,115 +822,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/badge/badge.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PBadge",
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The badge's content.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "variant",
-              "type": {
-                "text": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\""
-              },
-              "default": "\"primary\"",
-              "description": "The badge's theme variant.",
-              "attribute": "variant",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "pill",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "attribute": "pill",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "pulse",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the badge pulsate to draw attention.",
-              "attribute": "pulse",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "name": "variant",
-              "type": {
-                "text": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\""
-              },
-              "default": "\"primary\"",
-              "description": "The badge's theme variant.",
-              "fieldName": "variant"
-            },
-            {
-              "name": "pill",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "fieldName": "pill"
-            },
-            {
-              "name": "pulse",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the badge pulsate to draw attention.",
-              "fieldName": "pulse"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "Badges are used to draw attention and display statuses or counts.",
-          "tagNameWithoutPrefix": "badge",
-          "tagName": "p-badge",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary Badges are used to draw attention and display statuses or counts.\n * @documentation https://pureui.xyz/components/badge\n * @status stable\n * @since 2.0\n *\n * @slot - The badge's content.\n *\n * @csspart base - The component's base wrapper.\n */",
-          "documentation": "https://pureui.xyz/components/badge",
-          "status": "stable",
-          "since": "2.0"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PBadge",
-            "module": "components/badge/badge.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/breadcrumb/breadcrumb.js",
       "declarations": [
         {
@@ -1231,6 +936,301 @@
           "declaration": {
             "name": "PBreadcrumb",
             "module": "components/breadcrumb/breadcrumb.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/badge/badge.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PBadge",
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The badge's content.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\""
+              },
+              "default": "\"primary\"",
+              "description": "The badge's theme variant.",
+              "attribute": "variant",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pill",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "attribute": "pill",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pulse",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the badge pulsate to draw attention.",
+              "attribute": "pulse",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "variant",
+              "type": {
+                "text": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\""
+              },
+              "default": "\"primary\"",
+              "description": "The badge's theme variant.",
+              "fieldName": "variant"
+            },
+            {
+              "name": "pill",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "fieldName": "pill"
+            },
+            {
+              "name": "pulse",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the badge pulsate to draw attention.",
+              "fieldName": "pulse"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "Badges are used to draw attention and display statuses or counts.",
+          "tagNameWithoutPrefix": "badge",
+          "tagName": "p-badge",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary Badges are used to draw attention and display statuses or counts.\n * @documentation https://pureui.xyz/components/badge\n * @status stable\n * @since 2.0\n *\n * @slot - The badge's content.\n *\n * @csspart base - The component's base wrapper.\n */",
+          "documentation": "https://pureui.xyz/components/badge",
+          "status": "stable",
+          "since": "2.0"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PBadge",
+            "module": "components/badge/badge.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/animated-image/animated-image.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PAnimatedImage",
+          "cssProperties": [
+            {
+              "description": "The size of the icon box.",
+              "name": "--control-box-size"
+            },
+            {
+              "description": "The size of the play/pause icons.",
+              "name": "--icon-size"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The container that surrounds the pause/play icons and provides their background.",
+              "name": "control-box"
+            }
+          ],
+          "slots": [
+            {
+              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`.",
+              "name": "play-icon"
+            },
+            {
+              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`.",
+              "name": "pause-icon"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "dependencies",
+              "type": {
+                "text": "object"
+              },
+              "static": true,
+              "default": "{ \"p-icon\": PIcon }"
+            },
+            {
+              "kind": "field",
+              "name": "animatedImage",
+              "type": {
+                "text": "HTMLImageElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "frozenFrame",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "isLoaded",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "src",
+              "type": {
+                "text": "string"
+              },
+              "description": "The path to the image to load.",
+              "attribute": "src"
+            },
+            {
+              "kind": "field",
+              "name": "alt",
+              "type": {
+                "text": "string"
+              },
+              "description": "A description of the image used by assistive devices.",
+              "attribute": "alt"
+            },
+            {
+              "kind": "field",
+              "name": "play",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "attribute": "play",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleLoad",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleError",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handlePlayChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleSrcChange"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the image loads successfully.",
+              "name": "p-load",
+              "reactName": "onPLoad",
+              "eventName": "PLoadEvent"
+            },
+            {
+              "description": "Emitted when the image fails to load.",
+              "name": "p-error",
+              "reactName": "onPError",
+              "eventName": "PErrorEvent"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "src",
+              "type": {
+                "text": "string"
+              },
+              "description": "The path to the image to load.",
+              "fieldName": "src"
+            },
+            {
+              "name": "alt",
+              "type": {
+                "text": "string"
+              },
+              "description": "A description of the image used by assistive devices.",
+              "fieldName": "alt"
+            },
+            {
+              "name": "play",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "fieldName": "play"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.",
+          "tagNameWithoutPrefix": "animated-image",
+          "tagName": "p-animated-image",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n * @documentation https://pureui.xyz/components/animated-image\n * @status stable\n * @since 2.0\n *\n * @dependency p-icon\n *\n * @event p-load - Emitted when the image loads successfully.\n * @event p-error - Emitted when the image fails to load.\n *\n * @slot play-icon - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n * @slot pause-icon - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n *\n * @part control-box - The container that surrounds the pause/play icons and provides their background.\n *\n * @cssproperty --control-box-size - The size of the icon box.\n * @cssproperty --icon-size - The size of the play/pause icons.\n */",
+          "documentation": "https://pureui.xyz/components/animated-image",
+          "status": "stable",
+          "since": "2.0",
+          "dependencies": [
+            "p-icon"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PAnimatedImage",
+            "module": "components/animated-image/animated-image.js"
           }
         }
       ]
@@ -5804,7 +5804,7 @@
               "name": "modal",
               "privacy": "public",
               "default": "new Modal(this)",
-              "description": "Exposes the internal modal utility that controls focus trapping. To temporarily disable focus trapping and allow third-party modals spawned from an active Shoelace modal, call `modal.activateExternal()` when the third-party modal opens. Upon closing, call `modal.deactivateExternal()` to restore pure ui 's focus trapping."
+              "description": "Exposes the internal modal utility that controls focus trapping. To temporarily disable focus trapping and allow third-party modals spawned from an active Pure UI modal, call `modal.activateExternal()` when the third-party modal opens. Upon closing, call `modal.deactivateExternal()` to restore pure ui 's focus trapping."
             },
             {
               "kind": "field",
@@ -6033,7 +6033,7 @@
           "tagNameWithoutPrefix": "drawer",
           "tagName": "p-drawer",
           "customElement": true,
-          "jsDoc": "/**\n * @summary Drawers slide in from a container to expose additional options and information.\n * @documentation https://pureui.xyz/components/drawer\n * @status stable\n * @since 2.0\n *\n * @dependency p-icon-button\n *\n * @slot - The drawer's main content.\n * @slot label - The drawer's label. Alternatively, you can use the `label` attribute.\n * @slot header-actions - Optional actions to add to the header. Works best with `<p-icon-button>`.\n * @slot footer - The drawer's footer, usually one or more buttons representing various options.\n *\n * @event p-show - Emitted when the drawer opens.\n * @event p-after-show - Emitted after the drawer opens and all animations are complete.\n * @event p-hide - Emitted when the drawer closes.\n * @event p-after-hide - Emitted after the drawer closes and all animations are complete.\n * @event p-initial-focus - Emitted when the drawer opens and is ready to receive focus. Calling\n *   `event.preventDefault()` will prevent focusing and allow you to set it on a different element, such as an input.\n * @event {{ source: 'close-button' | 'keyboard' | 'overlay' }} p-request-close - Emitted when the user attempts to\n *   close the drawer by clicking the close button, clicking the overlay, or pressing escape. Calling\n *   `event.preventDefault()` will keep the drawer open. Avoid using this unless closing the drawer will result in\n *   destructive behavior such as data loss.\n *\n * @csspart base - The component's base wrapper.\n * @csspart overlay - The overlay that covers the screen behind the drawer.\n * @csspart panel - The drawer's panel (where the drawer and its content are rendered).\n * @csspart header - The drawer's header. This element wraps the title and header actions.\n * @csspart header-actions - Optional actions to add to the header. Works best with `<p-icon-button>`.\n * @csspart title - The drawer's title.\n * @csspart close-button - The close button, an `<p-icon-button>`.\n * @csspart close-button__base - The close button's exported `base` part.\n * @csspart body - The drawer's body.\n * @csspart footer - The drawer's footer.\n *\n * @cssproperty --size - The preferred size of the drawer. This will be applied to the drawer's width or height\n *   depending on its `placement`. Note that the drawer will shrink to accommodate smaller screens.\n * @cssproperty --header-spacing - The amount of padding to use for the header.\n * @cssproperty --body-spacing - The amount of padding to use for the body.\n * @cssproperty --footer-spacing - The amount of padding to use for the footer.\n *\n * @animation drawer.showTop - The animation to use when showing a drawer with `top` placement.\n * @animation drawer.showEnd - The animation to use when showing a drawer with `end` placement.\n * @animation drawer.showBottom - The animation to use when showing a drawer with `bottom` placement.\n * @animation drawer.showStart - The animation to use when showing a drawer with `start` placement.\n * @animation drawer.hideTop - The animation to use when hiding a drawer with `top` placement.\n * @animation drawer.hideEnd - The animation to use when hiding a drawer with `end` placement.\n * @animation drawer.hideBottom - The animation to use when hiding a drawer with `bottom` placement.\n * @animation drawer.hideStart - The animation to use when hiding a drawer with `start` placement.\n * @animation drawer.denyClose - The animation to use when a request to close the drawer is denied.\n * @animation drawer.overlay.show - The animation to use when showing the drawer's overlay.\n * @animation drawer.overlay.hide - The animation to use when hiding the drawer's overlay.\n *\n * @property modal - Exposes the internal modal utility that controls focus trapping. To temporarily disable focus\n *   trapping and allow third-party modals spawned from an active Shoelace modal, call `modal.activateExternal()` when\n *   the third-party modal opens. Upon closing, call `modal.deactivateExternal()` to restore pure ui 's focus trapping.\n */",
+          "jsDoc": "/**\n * @summary Drawers slide in from a container to expose additional options and information.\n * @documentation https://pureui.xyz/components/drawer\n * @status stable\n * @since 2.0\n *\n * @dependency p-icon-button\n *\n * @slot - The drawer's main content.\n * @slot label - The drawer's label. Alternatively, you can use the `label` attribute.\n * @slot header-actions - Optional actions to add to the header. Works best with `<p-icon-button>`.\n * @slot footer - The drawer's footer, usually one or more buttons representing various options.\n *\n * @event p-show - Emitted when the drawer opens.\n * @event p-after-show - Emitted after the drawer opens and all animations are complete.\n * @event p-hide - Emitted when the drawer closes.\n * @event p-after-hide - Emitted after the drawer closes and all animations are complete.\n * @event p-initial-focus - Emitted when the drawer opens and is ready to receive focus. Calling\n *   `event.preventDefault()` will prevent focusing and allow you to set it on a different element, such as an input.\n * @event {{ source: 'close-button' | 'keyboard' | 'overlay' }} p-request-close - Emitted when the user attempts to\n *   close the drawer by clicking the close button, clicking the overlay, or pressing escape. Calling\n *   `event.preventDefault()` will keep the drawer open. Avoid using this unless closing the drawer will result in\n *   destructive behavior such as data loss.\n *\n * @csspart base - The component's base wrapper.\n * @csspart overlay - The overlay that covers the screen behind the drawer.\n * @csspart panel - The drawer's panel (where the drawer and its content are rendered).\n * @csspart header - The drawer's header. This element wraps the title and header actions.\n * @csspart header-actions - Optional actions to add to the header. Works best with `<p-icon-button>`.\n * @csspart title - The drawer's title.\n * @csspart close-button - The close button, an `<p-icon-button>`.\n * @csspart close-button__base - The close button's exported `base` part.\n * @csspart body - The drawer's body.\n * @csspart footer - The drawer's footer.\n *\n * @cssproperty --size - The preferred size of the drawer. This will be applied to the drawer's width or height\n *   depending on its `placement`. Note that the drawer will shrink to accommodate smaller screens.\n * @cssproperty --header-spacing - The amount of padding to use for the header.\n * @cssproperty --body-spacing - The amount of padding to use for the body.\n * @cssproperty --footer-spacing - The amount of padding to use for the footer.\n *\n * @animation drawer.showTop - The animation to use when showing a drawer with `top` placement.\n * @animation drawer.showEnd - The animation to use when showing a drawer with `end` placement.\n * @animation drawer.showBottom - The animation to use when showing a drawer with `bottom` placement.\n * @animation drawer.showStart - The animation to use when showing a drawer with `start` placement.\n * @animation drawer.hideTop - The animation to use when hiding a drawer with `top` placement.\n * @animation drawer.hideEnd - The animation to use when hiding a drawer with `end` placement.\n * @animation drawer.hideBottom - The animation to use when hiding a drawer with `bottom` placement.\n * @animation drawer.hideStart - The animation to use when hiding a drawer with `start` placement.\n * @animation drawer.denyClose - The animation to use when a request to close the drawer is denied.\n * @animation drawer.overlay.show - The animation to use when showing the drawer's overlay.\n * @animation drawer.overlay.hide - The animation to use when hiding the drawer's overlay.\n *\n * @property modal - Exposes the internal modal utility that controls focus trapping. To temporarily disable focus\n *   trapping and allow third-party modals spawned from an active Pure UI modal, call `modal.activateExternal()` when\n *   the third-party modal opens. Upon closing, call `modal.deactivateExternal()` to restore pure ui 's focus trapping.\n */",
           "documentation": "https://pureui.xyz/components/drawer",
           "status": "stable",
           "since": "2.0",
@@ -11616,6 +11616,583 @@
     },
     {
       "kind": "javascript-module",
+      "path": "components/range/range.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PRange",
+          "cssProperties": [
+            {
+              "description": "The size of the thumb.",
+              "name": "--thumb-size"
+            },
+            {
+              "description": "The vertical distance the tooltip is offset from the track.",
+              "name": "--tooltip-offset"
+            },
+            {
+              "description": "The color of the portion of the track that represents the current value.",
+              "name": "--track-color-active"
+            },
+            {
+              "description": "The of the portion of the track that represents the remaining value.",
+              "name": "--track-color-inactive"
+            },
+            {
+              "description": "The height of the track.",
+              "name": "--track-height"
+            },
+            {
+              "description": "The point of origin of the active track.",
+              "name": "--track-active-offset"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The form control that wraps the label, input, and help text.",
+              "name": "form-control"
+            },
+            {
+              "description": "The label's wrapper.",
+              "name": "form-control-label"
+            },
+            {
+              "description": "The range's wrapper.",
+              "name": "form-control-input"
+            },
+            {
+              "description": "The help text's wrapper.",
+              "name": "form-control-help-text"
+            },
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The internal `<input>` element.",
+              "name": "input"
+            },
+            {
+              "description": "The range's tooltip.",
+              "name": "tooltip"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The range's label. Alternatively, you can use the `label` attribute.",
+              "name": "label"
+            },
+            {
+              "description": "Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.",
+              "name": "help-text"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "formControlController",
+              "privacy": "private",
+              "readonly": true,
+              "default": "new FormControlController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "hasSlotController",
+              "privacy": "private",
+              "readonly": true,
+              "default": "new HasSlotController(this, \"help-text\", \"label\")"
+            },
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "readonly": true,
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "resizeObserver",
+              "type": {
+                "text": "ResizeObserver"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "input",
+              "type": {
+                "text": "HTMLInputElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "output",
+              "type": {
+                "text": "HTMLOutputElement | null"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "hasFocus",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "hasTooltip",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "title",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "title"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The name of the range, submitted as a name/value pair with form data.",
+              "attribute": "name"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The current value of the range, submitted as a name/value pair with form data.",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The range's label. If you need to display HTML, use the `label` slot instead.",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "helpText",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The range's help text. If you need to display HTML, use the help-text slot instead.",
+              "attribute": "help-text"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the range.",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "min",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The minimum acceptable value of the range.",
+              "attribute": "min"
+            },
+            {
+              "kind": "field",
+              "name": "max",
+              "type": {
+                "text": "number"
+              },
+              "default": "100",
+              "description": "The maximum acceptable value of the range.",
+              "attribute": "max"
+            },
+            {
+              "kind": "field",
+              "name": "step",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "description": "The interval at which the range will increase and decrease.",
+              "attribute": "step"
+            },
+            {
+              "kind": "field",
+              "name": "tooltip",
+              "type": {
+                "text": "\"top\" | \"bottom\" | \"none\""
+              },
+              "default": "\"top\"",
+              "description": "The preferred placement of the range's tooltip.",
+              "attribute": "tooltip"
+            },
+            {
+              "kind": "field",
+              "name": "tooltipFormatter",
+              "type": {
+                "text": "(value: number) => string"
+              },
+              "description": "A function used to format the tooltip's value. The range's value is passed as the first and only argument. The\nfunction should return a string to display in the tooltip."
+            },
+            {
+              "kind": "field",
+              "name": "form",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
+              "attribute": "form",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "defaultValue",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The default value of the form control. Primarily used for resetting the form control."
+            },
+            {
+              "kind": "field",
+              "name": "validity",
+              "description": "Gets the validity state object",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "validationMessage",
+              "description": "Gets the validation message",
+              "readonly": true
+            },
+            {
+              "kind": "method",
+              "name": "handleChange",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleInput",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleBlur",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleFocus",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleThumbDragStart",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleThumbDragEnd",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "syncProgress",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "percent",
+                  "type": {
+                    "text": "number"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "syncTooltip",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "percent",
+                  "type": {
+                    "text": "number"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleValueChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleDisabledChange"
+            },
+            {
+              "kind": "method",
+              "name": "syncRange"
+            },
+            {
+              "kind": "method",
+              "name": "handleInvalid",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "focus",
+              "parameters": [
+                {
+                  "name": "options",
+                  "optional": true,
+                  "type": {
+                    "text": "FocusOptions"
+                  }
+                }
+              ],
+              "description": "Sets focus on the range."
+            },
+            {
+              "kind": "method",
+              "name": "blur",
+              "description": "Removes focus from the range."
+            },
+            {
+              "kind": "method",
+              "name": "stepUp",
+              "description": "Increments the value of the range by the value of the step attribute."
+            },
+            {
+              "kind": "method",
+              "name": "stepDown",
+              "description": "Decrements the value of the range by the value of the step attribute."
+            },
+            {
+              "kind": "method",
+              "name": "checkValidity",
+              "description": "Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid."
+            },
+            {
+              "kind": "method",
+              "name": "getForm",
+              "return": {
+                "type": {
+                  "text": "HTMLFormElement | null"
+                }
+              },
+              "description": "Gets the associated form, if one exists."
+            },
+            {
+              "kind": "method",
+              "name": "reportValidity",
+              "description": "Checks for validity and shows the browser's validation message if the control is invalid."
+            },
+            {
+              "kind": "method",
+              "name": "setCustomValidity",
+              "parameters": [
+                {
+                  "name": "message",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ],
+              "description": "Sets a custom validation message. Pass an empty string to restore validity."
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the control loses focus.",
+              "name": "p-blur",
+              "reactName": "onPBlur",
+              "eventName": "PBlurEvent"
+            },
+            {
+              "description": "Emitted when an alteration to the control's value is committed by the user.",
+              "name": "p-change",
+              "reactName": "onPChange",
+              "eventName": "PChangeEvent"
+            },
+            {
+              "description": "Emitted when the control gains focus.",
+              "name": "p-focus",
+              "reactName": "onPFocus",
+              "eventName": "PFocusEvent"
+            },
+            {
+              "description": "Emitted when the control receives input.",
+              "name": "p-input",
+              "reactName": "onPInput",
+              "eventName": "PInputEvent"
+            },
+            {
+              "description": "Emitted when the form control has been checked for validity and its constraints aren't satisfied.",
+              "name": "p-invalid",
+              "reactName": "onPInvalid",
+              "eventName": "PInvalidEvent"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "title",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "title"
+            },
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The name of the range, submitted as a name/value pair with form data.",
+              "fieldName": "name"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The current value of the range, submitted as a name/value pair with form data.",
+              "fieldName": "value"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The range's label. If you need to display HTML, use the `label` slot instead.",
+              "fieldName": "label"
+            },
+            {
+              "name": "help-text",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The range's help text. If you need to display HTML, use the help-text slot instead.",
+              "fieldName": "helpText"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the range.",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "min",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The minimum acceptable value of the range.",
+              "fieldName": "min"
+            },
+            {
+              "name": "max",
+              "type": {
+                "text": "number"
+              },
+              "default": "100",
+              "description": "The maximum acceptable value of the range.",
+              "fieldName": "max"
+            },
+            {
+              "name": "step",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "description": "The interval at which the range will increase and decrease.",
+              "fieldName": "step"
+            },
+            {
+              "name": "tooltip",
+              "type": {
+                "text": "\"top\" | \"bottom\" | \"none\""
+              },
+              "default": "\"top\"",
+              "description": "The preferred placement of the range's tooltip.",
+              "fieldName": "tooltip"
+            },
+            {
+              "name": "form",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
+              "fieldName": "form"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "Ranges allow the user to select a single value within a given range using a slider.",
+          "tagNameWithoutPrefix": "range",
+          "tagName": "p-range",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary Ranges allow the user to select a single value within a given range using a slider.\n * @documentation https://pureui.xyz/components/range\n * @status stable\n * @since 2.0\n *\n * @slot label - The range's label. Alternatively, you can use the `label` attribute.\n * @slot help-text - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.\n *\n * @event p-blur - Emitted when the control loses focus.\n * @event p-change - Emitted when an alteration to the control's value is committed by the user.\n * @event p-focus - Emitted when the control gains focus.\n * @event p-input - Emitted when the control receives input.\n * @event p-invalid - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n *\n * @csspart form-control - The form control that wraps the label, input, and help text.\n * @csspart form-control-label - The label's wrapper.\n * @csspart form-control-input - The range's wrapper.\n * @csspart form-control-help-text - The help text's wrapper.\n * @csspart base - The component's base wrapper.\n * @csspart input - The internal `<input>` element.\n * @csspart tooltip - The range's tooltip.\n *\n * @cssproperty --thumb-size - The size of the thumb.\n * @cssproperty --tooltip-offset - The vertical distance the tooltip is offset from the track.\n * @cssproperty --track-color-active - The color of the portion of the track that represents the current value.\n * @cssproperty --track-color-inactive - The of the portion of the track that represents the remaining value.\n * @cssproperty --track-height - The height of the track.\n * @cssproperty --track-active-offset - The point of origin of the active track.\n */",
+          "documentation": "https://pureui.xyz/components/range",
+          "status": "stable",
+          "since": "2.0"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PRange",
+            "module": "components/range/range.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "components/rating/rating.js",
       "declarations": [
         {
@@ -12196,583 +12773,6 @@
           "declaration": {
             "name": "PRelativeTime",
             "module": "components/relative-time/relative-time.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/range/range.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PRange",
-          "cssProperties": [
-            {
-              "description": "The size of the thumb.",
-              "name": "--thumb-size"
-            },
-            {
-              "description": "The vertical distance the tooltip is offset from the track.",
-              "name": "--tooltip-offset"
-            },
-            {
-              "description": "The color of the portion of the track that represents the current value.",
-              "name": "--track-color-active"
-            },
-            {
-              "description": "The of the portion of the track that represents the remaining value.",
-              "name": "--track-color-inactive"
-            },
-            {
-              "description": "The height of the track.",
-              "name": "--track-height"
-            },
-            {
-              "description": "The point of origin of the active track.",
-              "name": "--track-active-offset"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The form control that wraps the label, input, and help text.",
-              "name": "form-control"
-            },
-            {
-              "description": "The label's wrapper.",
-              "name": "form-control-label"
-            },
-            {
-              "description": "The range's wrapper.",
-              "name": "form-control-input"
-            },
-            {
-              "description": "The help text's wrapper.",
-              "name": "form-control-help-text"
-            },
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The internal `<input>` element.",
-              "name": "input"
-            },
-            {
-              "description": "The range's tooltip.",
-              "name": "tooltip"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The range's label. Alternatively, you can use the `label` attribute.",
-              "name": "label"
-            },
-            {
-              "description": "Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.",
-              "name": "help-text"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "formControlController",
-              "privacy": "private",
-              "readonly": true,
-              "default": "new FormControlController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "hasSlotController",
-              "privacy": "private",
-              "readonly": true,
-              "default": "new HasSlotController(this, \"help-text\", \"label\")"
-            },
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "readonly": true,
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "resizeObserver",
-              "type": {
-                "text": "ResizeObserver"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "input",
-              "type": {
-                "text": "HTMLInputElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "output",
-              "type": {
-                "text": "HTMLOutputElement | null"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "hasFocus",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "hasTooltip",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "title",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "attribute": "title"
-            },
-            {
-              "kind": "field",
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "The name of the range, submitted as a name/value pair with form data.",
-              "attribute": "name"
-            },
-            {
-              "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The current value of the range, submitted as a name/value pair with form data.",
-              "attribute": "value"
-            },
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "The range's label. If you need to display HTML, use the `label` slot instead.",
-              "attribute": "label"
-            },
-            {
-              "kind": "field",
-              "name": "helpText",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "The range's help text. If you need to display HTML, use the help-text slot instead.",
-              "attribute": "help-text"
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the range.",
-              "attribute": "disabled",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "min",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The minimum acceptable value of the range.",
-              "attribute": "min"
-            },
-            {
-              "kind": "field",
-              "name": "max",
-              "type": {
-                "text": "number"
-              },
-              "default": "100",
-              "description": "The maximum acceptable value of the range.",
-              "attribute": "max"
-            },
-            {
-              "kind": "field",
-              "name": "step",
-              "type": {
-                "text": "number"
-              },
-              "default": "1",
-              "description": "The interval at which the range will increase and decrease.",
-              "attribute": "step"
-            },
-            {
-              "kind": "field",
-              "name": "tooltip",
-              "type": {
-                "text": "\"top\" | \"bottom\" | \"none\""
-              },
-              "default": "\"top\"",
-              "description": "The preferred placement of the range's tooltip.",
-              "attribute": "tooltip"
-            },
-            {
-              "kind": "field",
-              "name": "tooltipFormatter",
-              "type": {
-                "text": "(value: number) => string"
-              },
-              "description": "A function used to format the tooltip's value. The range's value is passed as the first and only argument. The\nfunction should return a string to display in the tooltip."
-            },
-            {
-              "kind": "field",
-              "name": "form",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
-              "attribute": "form",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "defaultValue",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The default value of the form control. Primarily used for resetting the form control."
-            },
-            {
-              "kind": "field",
-              "name": "validity",
-              "description": "Gets the validity state object",
-              "readonly": true
-            },
-            {
-              "kind": "field",
-              "name": "validationMessage",
-              "description": "Gets the validation message",
-              "readonly": true
-            },
-            {
-              "kind": "method",
-              "name": "handleChange",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleInput",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleBlur",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleFocus",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleThumbDragStart",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleThumbDragEnd",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "syncProgress",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "percent",
-                  "type": {
-                    "text": "number"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "syncTooltip",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "percent",
-                  "type": {
-                    "text": "number"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleValueChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleDisabledChange"
-            },
-            {
-              "kind": "method",
-              "name": "syncRange"
-            },
-            {
-              "kind": "method",
-              "name": "handleInvalid",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "Event"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "focus",
-              "parameters": [
-                {
-                  "name": "options",
-                  "optional": true,
-                  "type": {
-                    "text": "FocusOptions"
-                  }
-                }
-              ],
-              "description": "Sets focus on the range."
-            },
-            {
-              "kind": "method",
-              "name": "blur",
-              "description": "Removes focus from the range."
-            },
-            {
-              "kind": "method",
-              "name": "stepUp",
-              "description": "Increments the value of the range by the value of the step attribute."
-            },
-            {
-              "kind": "method",
-              "name": "stepDown",
-              "description": "Decrements the value of the range by the value of the step attribute."
-            },
-            {
-              "kind": "method",
-              "name": "checkValidity",
-              "description": "Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid."
-            },
-            {
-              "kind": "method",
-              "name": "getForm",
-              "return": {
-                "type": {
-                  "text": "HTMLFormElement | null"
-                }
-              },
-              "description": "Gets the associated form, if one exists."
-            },
-            {
-              "kind": "method",
-              "name": "reportValidity",
-              "description": "Checks for validity and shows the browser's validation message if the control is invalid."
-            },
-            {
-              "kind": "method",
-              "name": "setCustomValidity",
-              "parameters": [
-                {
-                  "name": "message",
-                  "type": {
-                    "text": "string"
-                  }
-                }
-              ],
-              "description": "Sets a custom validation message. Pass an empty string to restore validity."
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the control loses focus.",
-              "name": "p-blur",
-              "reactName": "onPBlur",
-              "eventName": "PBlurEvent"
-            },
-            {
-              "description": "Emitted when an alteration to the control's value is committed by the user.",
-              "name": "p-change",
-              "reactName": "onPChange",
-              "eventName": "PChangeEvent"
-            },
-            {
-              "description": "Emitted when the control gains focus.",
-              "name": "p-focus",
-              "reactName": "onPFocus",
-              "eventName": "PFocusEvent"
-            },
-            {
-              "description": "Emitted when the control receives input.",
-              "name": "p-input",
-              "reactName": "onPInput",
-              "eventName": "PInputEvent"
-            },
-            {
-              "description": "Emitted when the form control has been checked for validity and its constraints aren't satisfied.",
-              "name": "p-invalid",
-              "reactName": "onPInvalid",
-              "eventName": "PInvalidEvent"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "title",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "fieldName": "title"
-            },
-            {
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "The name of the range, submitted as a name/value pair with form data.",
-              "fieldName": "name"
-            },
-            {
-              "name": "value",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The current value of the range, submitted as a name/value pair with form data.",
-              "fieldName": "value"
-            },
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "The range's label. If you need to display HTML, use the `label` slot instead.",
-              "fieldName": "label"
-            },
-            {
-              "name": "help-text",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "The range's help text. If you need to display HTML, use the help-text slot instead.",
-              "fieldName": "helpText"
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the range.",
-              "fieldName": "disabled"
-            },
-            {
-              "name": "min",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The minimum acceptable value of the range.",
-              "fieldName": "min"
-            },
-            {
-              "name": "max",
-              "type": {
-                "text": "number"
-              },
-              "default": "100",
-              "description": "The maximum acceptable value of the range.",
-              "fieldName": "max"
-            },
-            {
-              "name": "step",
-              "type": {
-                "text": "number"
-              },
-              "default": "1",
-              "description": "The interval at which the range will increase and decrease.",
-              "fieldName": "step"
-            },
-            {
-              "name": "tooltip",
-              "type": {
-                "text": "\"top\" | \"bottom\" | \"none\""
-              },
-              "default": "\"top\"",
-              "description": "The preferred placement of the range's tooltip.",
-              "fieldName": "tooltip"
-            },
-            {
-              "name": "form",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
-              "fieldName": "form"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "Ranges allow the user to select a single value within a given range using a slider.",
-          "tagNameWithoutPrefix": "range",
-          "tagName": "p-range",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary Ranges allow the user to select a single value within a given range using a slider.\n * @documentation https://pureui.xyz/components/range\n * @status stable\n * @since 2.0\n *\n * @slot label - The range's label. Alternatively, you can use the `label` attribute.\n * @slot help-text - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.\n *\n * @event p-blur - Emitted when the control loses focus.\n * @event p-change - Emitted when an alteration to the control's value is committed by the user.\n * @event p-focus - Emitted when the control gains focus.\n * @event p-input - Emitted when the control receives input.\n * @event p-invalid - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n *\n * @csspart form-control - The form control that wraps the label, input, and help text.\n * @csspart form-control-label - The label's wrapper.\n * @csspart form-control-input - The range's wrapper.\n * @csspart form-control-help-text - The help text's wrapper.\n * @csspart base - The component's base wrapper.\n * @csspart input - The internal `<input>` element.\n * @csspart tooltip - The range's tooltip.\n *\n * @cssproperty --thumb-size - The size of the thumb.\n * @cssproperty --tooltip-offset - The vertical distance the tooltip is offset from the track.\n * @cssproperty --track-color-active - The color of the portion of the track that represents the current value.\n * @cssproperty --track-color-inactive - The of the portion of the track that represents the remaining value.\n * @cssproperty --track-height - The height of the track.\n * @cssproperty --track-active-offset - The point of origin of the active track.\n */",
-          "documentation": "https://pureui.xyz/components/range",
-          "status": "stable",
-          "since": "2.0"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PRange",
-            "module": "components/range/range.js"
           }
         }
       ]

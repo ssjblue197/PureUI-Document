@@ -3,7 +3,7 @@ import PPopup from "../popup/popup.component.js";
 import PTag from "../tag/tag.component.js";
 import PureElement from "../../internal/pure-ui-element.js";
 import type { CSSResultGroup, TemplateResult } from "lit";
-import type { ShoelaceFormControl } from "../../internal/pure-ui-element.js";
+import type { PureFormControl } from "../../internal/pure-ui-element.js";
 import type POption from "../option/option.component.js";
 /**
  * @summary Selects allow you to choose items from a menu of predefined options.
@@ -52,7 +52,7 @@ import type POption from "../option/option.component.js";
  * @csspart clear-button - The clear button.
  * @csspart expand-icon - The container that wraps the expand icon.
  */
-export default class PSelect extends PureElement implements ShoelaceFormControl {
+export default class PSelect extends PureElement implements PureFormControl {
     static styles: CSSResultGroup;
     static dependencies: {
         "p-icon": typeof PIcon;
