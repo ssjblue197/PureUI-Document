@@ -287,7 +287,8 @@ export default css`
     --p-border-radius-small: 0.1875rem;
     --p-border-radius-medium: 0.25rem;
     --p-border-radius-large: 0.5rem;
-    --p-border-radius-x-large: 1rem;
+    --p-border-radius-x-large: 0.75rem;
+    --p-border-radius-2x-large: 1rem;
 
     --p-border-radius-circle: 50%;
     --p-border-radius-pill: 9999px;
