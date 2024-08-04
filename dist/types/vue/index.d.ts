@@ -1,9 +1,9 @@
 import type { DefineComponent } from "vue";
 
 import type { PAlert } from "../../components/alert/alert.component.js";
+import type { PAnimatedImage } from "../../components/animated-image/animated-image.component.js";
 import type { PAnimation } from "../../components/animation/animation.component.js";
 import type { PAvatar } from "../../components/avatar/avatar.component.js";
-import type { PAnimatedImage } from "../../components/animated-image/animated-image.component.js";
 import type { PBadge } from "../../components/badge/badge.component.js";
 import type { PBreadcrumb } from "../../components/breadcrumb/breadcrumb.component.js";
 import type { PBreadcrumbItem } from "../../components/breadcrumb-item/breadcrumb-item.component.js";
@@ -84,6 +84,25 @@ the alert will not close on its own. */
   "onp-after-hide"?: (e: CustomEvent<never>) => void;
 };
 
+type PAnimatedImageProps = {
+  /** The path to the image to load. */
+  src?: PAnimatedImage["src"];
+  /** A description of the image used by assistive devices. */
+  alt?: PAnimatedImage["alt"];
+  /** Plays the animation. When this attribute is remove, the animation will pause. */
+  play?: PAnimatedImage["play"];
+  /**  */
+  animatedImage?: PAnimatedImage["animatedImage"];
+  /**  */
+  frozenFrame?: PAnimatedImage["frozenFrame"];
+  /**  */
+  isLoaded?: PAnimatedImage["isLoaded"];
+  /** Emitted when the image loads successfully. */
+  "onp-load"?: (e: CustomEvent<never>) => void;
+  /** Emitted when the image fails to load. */
+  "onp-error"?: (e: CustomEvent<never>) => void;
+};
+
 type PAnimationProps = {
   /** The name of the built-in animation to use. For custom animations, use the `keyframes` prop. */
   name?: PAnimation["name"];
@@ -139,25 +158,6 @@ type PAvatarProps = {
   shape?: PAvatar["shape"];
 
   /** The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause. */
-  "onp-error"?: (e: CustomEvent<never>) => void;
-};
-
-type PAnimatedImageProps = {
-  /** The path to the image to load. */
-  src?: PAnimatedImage["src"];
-  /** A description of the image used by assistive devices. */
-  alt?: PAnimatedImage["alt"];
-  /** Plays the animation. When this attribute is remove, the animation will pause. */
-  play?: PAnimatedImage["play"];
-  /**  */
-  animatedImage?: PAnimatedImage["animatedImage"];
-  /**  */
-  frozenFrame?: PAnimatedImage["frozenFrame"];
-  /**  */
-  isLoaded?: PAnimatedImage["isLoaded"];
-  /** Emitted when the image loads successfully. */
-  "onp-load"?: (e: CustomEvent<never>) => void;
-  /** Emitted when the image fails to load. */
   "onp-error"?: (e: CustomEvent<never>) => void;
 };
 
@@ -1614,6 +1614,28 @@ export type CustomElements = {
   "p-alert": DefineComponent<PAlertProps>;
 
   /**
+   * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **p-load** - Emitted when the image loads successfully.
+   * - **p-error** - Emitted when the image fails to load.
+   *
+   * ### **Slots:**
+   *  - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.
+   * - **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.
+   *
+   * ### **CSS Properties:**
+   *  - **--control-box-size** - The size of the icon box. _(default: undefined)_
+   * - **--icon-size** - The size of the play/pause icons. _(default: undefined)_
+   *
+   * ### **CSS Parts:**
+   *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
+   */
+  "p-animated-image": DefineComponent<PAnimatedImageProps>;
+
+  /**
    * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
    * ---
    *
@@ -1653,28 +1675,6 @@ export type CustomElements = {
    * - **image** - The avatar image. Only shown when the `image` attribute is set.
    */
   "p-avatar": DefineComponent<PAvatarProps>;
-
-  /**
-   * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **p-load** - Emitted when the image loads successfully.
-   * - **p-error** - Emitted when the image fails to load.
-   *
-   * ### **Slots:**
-   *  - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.
-   * - **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.
-   *
-   * ### **CSS Properties:**
-   *  - **--control-box-size** - The size of the icon box. _(default: undefined)_
-   * - **--icon-size** - The size of the play/pause icons. _(default: undefined)_
-   *
-   * ### **CSS Parts:**
-   *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
-   */
-  "p-animated-image": DefineComponent<PAnimatedImageProps>;
 
   /**
    * Badges are used to draw attention and display statuses or counts.
