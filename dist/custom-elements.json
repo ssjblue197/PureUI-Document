@@ -6183,6 +6183,17 @@
             },
             {
               "kind": "field",
+              "name": "behavior",
+              "type": {
+                "text": "\"click\" | \"hover\""
+              },
+              "default": "\"click\"",
+              "description": "The behavior of the dropdown. This determines how the dropdown is triggered. The default behavior is \"click\",\nwhich means the dropdown is triggered by a click event on the trigger element. The other allowed value is \"hover\",\nwhich means the dropdown is triggered by a mouse hover event on the trigger element.",
+              "attribute": "behavior",
+              "reflects": true
+            },
+            {
+              "kind": "field",
               "name": "open",
               "type": {
                 "text": "boolean"
@@ -6308,6 +6319,16 @@
             },
             {
               "kind": "method",
+              "name": "handleTriggerMouseEnter",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleTriggerMouseLeave",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
               "name": "handleTriggerKeyDown",
               "parameters": [
                 {
@@ -6393,6 +6414,15 @@
             }
           ],
           "attributes": [
+            {
+              "name": "behavior",
+              "type": {
+                "text": "\"click\" | \"hover\""
+              },
+              "default": "\"click\"",
+              "description": "The behavior of the dropdown. This determines how the dropdown is triggered. The default behavior is \"click\",\nwhich means the dropdown is triggered by a click event on the trigger element. The other allowed value is \"hover\",\nwhich means the dropdown is triggered by a mouse hover event on the trigger element.",
+              "fieldName": "behavior"
+            },
             {
               "name": "open",
               "type": {
@@ -8256,7 +8286,7 @@
               "kind": "field",
               "name": "autocomplete",
               "type": {
-                "text": "string"
+                "text": "\"off\" | \"on\" | string"
               },
               "description": "Specifies what permission the browser has to provide assistance in filling out form field values. Refer to\n[this page on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete) for available values.",
               "attribute": "autocomplete"
@@ -8796,7 +8826,7 @@
             {
               "name": "autocomplete",
               "type": {
-                "text": "string"
+                "text": "\"off\" | \"on\" | string"
               },
               "description": "Specifies what permission the browser has to provide assistance in filling out form field values. Refer to\n[this page on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete) for available values.",
               "fieldName": "autocomplete"
@@ -9612,6 +9642,17 @@
             },
             {
               "kind": "field",
+              "name": "hidden",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "When true, the option is hidden from view.\n\nThis is typically used when dynamically rendering a list of options. When an option becomes hidden, it will not be\nrendered in the DOM. When the option becomes visible again, it will be re-rendered in the DOM.",
+              "attribute": "hidden",
+              "reflects": true
+            },
+            {
+              "kind": "field",
               "name": "value",
               "type": {
                 "text": "string"
@@ -9666,6 +9707,15 @@
             }
           ],
           "attributes": [
+            {
+              "name": "hidden",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "When true, the option is hidden from view.\n\nThis is typically used when dynamically rendering a list of options. When an option becomes hidden, it will not be\nrendered in the DOM. When the option becomes visible again, it will be re-rendered in the DOM.",
+              "fieldName": "hidden"
+            },
             {
               "name": "value",
               "type": {
@@ -13037,14 +13087,6 @@
             },
             {
               "kind": "field",
-              "name": "typeToSelectTimeout",
-              "type": {
-                "text": "number"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
               "name": "closeWatcher",
               "type": {
                 "text": "CloseWatcher | null"
@@ -13117,6 +13159,17 @@
                 "text": "POption[]"
               },
               "default": "[]"
+            },
+            {
+              "kind": "field",
+              "name": "showSearch",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Indicates whether a search box should be shown for finding options quickly.\nThis property is reflected as a boolean attribute, `show-search`, on the element.",
+              "reflects": true,
+              "attribute": "show-search"
             },
             {
               "kind": "field",
@@ -13550,6 +13603,11 @@
             },
             {
               "kind": "method",
+              "name": "handleFilterOptions",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
               "name": "show",
               "description": "Shows the listbox."
             },
@@ -13674,6 +13732,15 @@
             }
           ],
           "attributes": [
+            {
+              "name": "show-search",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Indicates whether a search box should be shown for finding options quickly.\nThis property is reflected as a boolean attribute, `show-search`, on the element.",
+              "fieldName": "showSearch"
+            },
             {
               "name": "name",
               "type": {
@@ -17617,7 +17684,7 @@
   "package": {
     "name": "pure-uikit",
     "description": "A forward-thinking library of web components.",
-    "version": "1.0.7",
+    "version": "1.0.9",
     "author": "Mr.P",
     "homepage": "https://pureui.xyz",
     "license": "MIT"

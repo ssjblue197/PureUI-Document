@@ -115,7 +115,7 @@ export default class PInput extends PureElement implements PureFormControl {
      * Specifies what permission the browser has to provide assistance in filling out form field values. Refer to
      * [this page on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete) for available values.
      */
-    autocomplete: string;
+    autocomplete: "off" | "on" | string;
     /** Indicates that the input should receive focus on page load. */
     autofocus: boolean;
     /** Used to customize the label or icon of the Enter key on virtual keyboards. */

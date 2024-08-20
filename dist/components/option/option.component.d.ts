@@ -31,6 +31,17 @@ export default class POption extends PureElement {
     selected: boolean;
     hasHover: boolean;
     /**
+     * When true, the option is hidden from view.
+     *
+     * This is typically used when dynamically rendering a list of options. When an option becomes hidden, it will not be
+     * rendered in the DOM. When the option becomes visible again, it will be re-rendered in the DOM.
+     *
+     * @attribute hidden
+     * @type boolean
+     * @default false
+     */
+    hidden: boolean;
+    /**
      * The option's value. When selected, the containing form control will receive this value. The value must be unique
      * from other options in the same group. Values may not contain spaces, as spaces are used as delimiters when listing
      * multiple values.

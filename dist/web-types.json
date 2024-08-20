@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/JetBrains/web-types/master/schema/web-types.json",
   "name": "pure-uikit",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description-markup": "markdown",
   "contributions": {
     "html": {
@@ -99,6 +99,80 @@
               {
                 "name": "p-after-hide",
                 "description": "Emitted after the alert closes and all animations are complete."
+              }
+            ]
+          }
+        },
+        {
+          "name": "p-animated-image",
+          "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "src",
+              "description": "The path to the image to load.",
+              "value": { "type": "string" }
+            },
+            {
+              "name": "alt",
+              "description": "A description of the image used by assistive devices.",
+              "value": { "type": "string" }
+            },
+            {
+              "name": "play",
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "value": { "type": "boolean" }
+            }
+          ],
+          "slots": [
+            {
+              "name": "play-icon",
+              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`."
+            },
+            {
+              "name": "pause-icon",
+              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`."
+            }
+          ],
+          "events": [
+            {
+              "name": "p-load",
+              "description": "Emitted when the image loads successfully."
+            },
+            {
+              "name": "p-error",
+              "description": "Emitted when the image fails to load."
+            }
+          ],
+          "js": {
+            "properties": [
+              { "name": "animatedImage", "type": "HTMLImageElement" },
+              { "name": "frozenFrame", "type": "string" },
+              { "name": "isLoaded", "type": "boolean" },
+              {
+                "name": "src",
+                "description": "The path to the image to load.",
+                "type": "string"
+              },
+              {
+                "name": "alt",
+                "description": "A description of the image used by assistive devices.",
+                "type": "string"
+              },
+              {
+                "name": "play",
+                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+                "type": "boolean"
+              }
+            ],
+            "events": [
+              {
+                "name": "p-load",
+                "description": "Emitted when the image loads successfully."
+              },
+              {
+                "name": "p-error",
+                "description": "Emitted when the image fails to load."
               }
             ]
           }
@@ -264,80 +338,6 @@
               {
                 "name": "p-start",
                 "description": "Emitted when the animation starts or restarts."
-              }
-            ]
-          }
-        },
-        {
-          "name": "p-animated-image",
-          "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "src",
-              "description": "The path to the image to load.",
-              "value": { "type": "string" }
-            },
-            {
-              "name": "alt",
-              "description": "A description of the image used by assistive devices.",
-              "value": { "type": "string" }
-            },
-            {
-              "name": "play",
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "value": { "type": "boolean" }
-            }
-          ],
-          "slots": [
-            {
-              "name": "play-icon",
-              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`."
-            },
-            {
-              "name": "pause-icon",
-              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`."
-            }
-          ],
-          "events": [
-            {
-              "name": "p-load",
-              "description": "Emitted when the image loads successfully."
-            },
-            {
-              "name": "p-error",
-              "description": "Emitted when the image fails to load."
-            }
-          ],
-          "js": {
-            "properties": [
-              { "name": "animatedImage", "type": "HTMLImageElement" },
-              { "name": "frozenFrame", "type": "string" },
-              { "name": "isLoaded", "type": "boolean" },
-              {
-                "name": "src",
-                "description": "The path to the image to load.",
-                "type": "string"
-              },
-              {
-                "name": "alt",
-                "description": "A description of the image used by assistive devices.",
-                "type": "string"
-              },
-              {
-                "name": "play",
-                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-                "type": "boolean"
-              }
-            ],
-            "events": [
-              {
-                "name": "p-load",
-                "description": "Emitted when the image loads successfully."
-              },
-              {
-                "name": "p-error",
-                "description": "Emitted when the image fails to load."
               }
             ]
           }
@@ -2094,6 +2094,14 @@
           "doc-url": "",
           "attributes": [
             {
+              "name": "behavior",
+              "description": "The behavior of the dropdown. This determines how the dropdown is triggered. The default behavior is \"click\",\nwhich means the dropdown is triggered by a click event on the trigger element. The other allowed value is \"hover\",\nwhich means the dropdown is triggered by a mouse hover event on the trigger element.",
+              "value": {
+                "type": "\"click\" | \"hover\"",
+                "default": "\"click\""
+              }
+            },
+            {
               "name": "open",
               "description": "Indicates whether or not the dropdown is open. You can toggle this attribute to show and hide the dropdown, or you\ncan use the `show()` and `hide()` methods and this attribute will reflect the dropdown's open state.",
               "value": { "type": "boolean", "default": "false" }
@@ -2170,6 +2178,11 @@
               { "name": "popup", "type": "PPopup" },
               { "name": "trigger", "type": "HTMLSlotElement" },
               { "name": "panel", "type": "HTMLSlotElement" },
+              {
+                "name": "behavior",
+                "description": "The behavior of the dropdown. This determines how the dropdown is triggered. The default behavior is \"click\",\nwhich means the dropdown is triggered by a click event on the trigger element. The other allowed value is \"hover\",\nwhich means the dropdown is triggered by a mouse hover event on the trigger element.",
+                "type": "\"click\" | \"hover\""
+              },
               {
                 "name": "open",
                 "description": "Indicates whether or not the dropdown is open. You can toggle this attribute to show and hide the dropdown, or you\ncan use the `show()` and `hide()` methods and this attribute will reflect the dropdown's open state.",
@@ -2987,7 +3000,7 @@
             {
               "name": "autocomplete",
               "description": "Specifies what permission the browser has to provide assistance in filling out form field values. Refer to\n[this page on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete) for available values.",
-              "value": { "type": "string" }
+              "value": { "type": "\"off\" | \"on\" | string" }
             },
             {
               "name": "autofocus",
@@ -3207,7 +3220,7 @@
               {
                 "name": "autocomplete",
                 "description": "Specifies what permission the browser has to provide assistance in filling out form field values. Refer to\n[this page on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete) for available values.",
-                "type": "string"
+                "type": "\"off\" | \"on\" | string"
               },
               {
                 "name": "autofocus",
@@ -3491,6 +3504,11 @@
           "doc-url": "",
           "attributes": [
             {
+              "name": "hidden",
+              "description": "When true, the option is hidden from view.\n\nThis is typically used when dynamically rendering a list of options. When an option becomes hidden, it will not be\nrendered in the DOM. When the option becomes visible again, it will be re-rendered in the DOM.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
               "name": "value",
               "description": "The option's value. When selected, the containing form control will receive this value. The value must be unique\nfrom other options in the same group. Values may not contain spaces, as spaces are used as delimiters when listing\nmultiple values.",
               "value": { "type": "string", "default": "\"\"" }
@@ -3519,6 +3537,11 @@
               { "name": "current", "type": "boolean" },
               { "name": "selected", "type": "boolean" },
               { "name": "hasHover", "type": "boolean" },
+              {
+                "name": "hidden",
+                "description": "When true, the option is hidden from view.\n\nThis is typically used when dynamically rendering a list of options. When an option becomes hidden, it will not be\nrendered in the DOM. When the option becomes visible again, it will be re-rendered in the DOM.",
+                "type": "boolean"
+              },
               {
                 "name": "value",
                 "description": "The option's value. When selected, the containing form control will receive this value. The value must be unique\nfrom other options in the same group. Values may not contain spaces, as spaces are used as delimiters when listing\nmultiple values.",
@@ -4667,6 +4690,11 @@
           "doc-url": "",
           "attributes": [
             {
+              "name": "show-search",
+              "description": "Indicates whether a search box should be shown for finding options quickly.\nThis property is reflected as a boolean attribute, `show-search`, on the element.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
               "name": "name",
               "description": "The name of the select, submitted as a name/value pair with form data.",
               "value": { "type": "string", "default": "\"\"" }
@@ -4847,6 +4875,11 @@
               { "name": "displayLabel", "type": "string" },
               { "name": "currentOption", "type": "POption" },
               { "name": "selectedOptions", "type": "POption[]" },
+              {
+                "name": "showSearch",
+                "description": "Indicates whether a search box should be shown for finding options quickly.\nThis property is reflected as a boolean attribute, `show-search`, on the element.",
+                "type": "boolean"
+              },
               {
                 "name": "name",
                 "description": "The name of the select, submitted as a name/value pair with form data.",

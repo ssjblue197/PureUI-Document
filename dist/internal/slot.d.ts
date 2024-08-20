@@ -9,6 +9,13 @@ export declare class HasSlotController implements ReactiveController {
     test(slotName: string): boolean;
     hostConnected(): void;
     hostDisconnected(): void;
+    /**
+     * This function is the event handler for the `slotchange` event. When a slot's content changes, this function
+     * is called. It checks if the slot that changed is one of the slots that this controller is watching. If it is,
+     * it requests an update from the host element.
+     *
+     * @param {Event} event - The event object that triggered this function.
+     */
     private handleSlotChange;
 }
 /**

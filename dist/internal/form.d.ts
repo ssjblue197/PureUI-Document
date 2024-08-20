@@ -1,6 +1,6 @@
 import type { PureFormControl } from "./pure-ui-element.js";
 import type { ReactiveController, ReactiveControllerHost } from "lit";
-import type SlButton from "../components/button/button.js";
+import type PButton from "../components/button/button.js";
 export declare const formCollections: WeakMap<HTMLFormElement, Set<PureFormControl>>;
 export interface FormControlControllerOptions {
     /** A function that returns the form containing the form control. */
@@ -52,9 +52,9 @@ export declare class FormControlController implements ReactiveController {
     /** Returns the associated `<form>` element, if one exists. */
     getForm(): HTMLFormElement | null;
     /** Resets the form, restoring all the control to their default value */
-    reset(submitter?: HTMLInputElement | SlButton): void;
+    reset(submitter?: HTMLInputElement | PButton): void;
     /** Submits the form, triggering validation and form data injection. */
-    submit(submitter?: HTMLInputElement | SlButton): void;
+    submit(submitter?: HTMLInputElement | PButton): void;
     /**
      * Synchronously sets the form control's validity. Call this when you know the future validity but need to update
      * the host element immediately, i.e. before Lit updates the component in the next update.

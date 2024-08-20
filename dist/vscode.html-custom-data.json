@@ -879,6 +879,11 @@
       "description": "Dropdowns expose additional content that \"drops down\" in a panel.\n---\n\n\n### **Events:**\n - **p-show** - Emitted when the dropdown opens.\n- **p-after-show** - Emitted after the dropdown opens and all animations are complete.\n- **p-hide** - Emitted when the dropdown closes.\n- **p-after-hide** - Emitted after the dropdown closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the dropdown panel.\n- **hide()** - Hides the dropdown panel\n- **reposition()** - Instructs the dropdown menu to reposition. Useful when the position or size of the trigger changes when the menu\nis activated.\n\n### **Slots:**\n - _default_ - The dropdown's main content.\n- **trigger** - The dropdown's trigger, usually a `<p-button>` element.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper, an `<p-popup>` element.\n- **base__popup** - The popup's exported `popup` part. Use this to target the tooltip's popup container.\n- **trigger** - The container that wraps the trigger.\n- **panel** - The panel that gets shown when the dropdown is open.",
       "attributes": [
         {
+          "name": "behavior",
+          "description": "The behavior of the dropdown. This determines how the dropdown is triggered. The default behavior is \"click\",\nwhich means the dropdown is triggered by a click event on the trigger element. The other allowed value is \"hover\",\nwhich means the dropdown is triggered by a mouse hover event on the trigger element.",
+          "values": [{ "name": "click" }, { "name": "hover" }]
+        },
+        {
           "name": "open",
           "description": "Indicates whether or not the dropdown is open. You can toggle this attribute to show and hide the dropdown, or you\ncan use the `show()` and `hide()` methods and this attribute will reflect the dropdown's open state.",
           "values": []
@@ -1422,7 +1427,7 @@
         {
           "name": "autocomplete",
           "description": "Specifies what permission the browser has to provide assistance in filling out form field values. Refer to\n[this page on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete) for available values.",
-          "values": []
+          "values": [{ "name": "off" }, { "name": "on" }]
         },
         {
           "name": "autofocus",
@@ -1571,6 +1576,11 @@
       "name": "p-option",
       "description": "Options define the selectable items within various form controls such as [select](/components/select).\n---\n\n\n### **Methods:**\n - **getTextLabel()** - Returns a plain text label based on the option's content.\n\n### **Slots:**\n - _default_ - The option's label.\n- **prefix** - Used to prepend an icon or similar element to the menu item.\n- **suffix** - Used to append an icon or similar element to the menu item.\n\n### **CSS Parts:**\n - **checked-icon** - The checked icon, an `<p-icon>` element.\n- **base** - The component's base wrapper.\n- **label** - The option's label.\n- **prefix** - The container that wraps the prefix.\n- **suffix** - The container that wraps the suffix.",
       "attributes": [
+        {
+          "name": "hidden",
+          "description": "When true, the option is hidden from view.\n\nThis is typically used when dynamically rendering a list of options. When an option becomes hidden, it will not be\nrendered in the DOM. When the option becomes visible again, it will be re-rendered in the DOM.",
+          "values": []
+        },
         {
           "name": "value",
           "description": "The option's value. When selected, the containing form control will receive this value. The value must be unique\nfrom other options in the same group. Values may not contain spaces, as spaces are used as delimiters when listing\nmultiple values.",
@@ -2124,6 +2134,11 @@
       "name": "p-select",
       "description": "Selects allow you to choose items from a menu of predefined options.\n---\n\n\n### **Events:**\n - **p-change** - Emitted when the control's value changes.\n- **p-clear** - Emitted when the control's value is cleared.\n- **p-input** - Emitted when the control receives input.\n- **p-focus** - Emitted when the control gains focus.\n- **p-blur** - Emitted when the control loses focus.\n- **p-show** - Emitted when the select's menu opens.\n- **p-after-show** - Emitted after the select's menu opens and all animations are complete.\n- **p-hide** - Emitted when the select's menu closes.\n- **p-after-hide** - Emitted after the select's menu closes and all animations are complete.\n- **p-invalid** - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n\n### **Methods:**\n - **show()** - Shows the listbox.\n- **hide()** - Hides the listbox.\n- **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n- **focus(options: _FocusOptions_)** - Sets focus on the control.\n- **blur()** - Removes focus from the control.\n\n### **Slots:**\n - _default_ - The listbox options. Must be `<p-option>` elements. You can use `<p-divider>` to group items visually.\n- **label** - The input's label. Alternatively, you can use the `label` attribute.\n- **prefix** - Used to prepend a presentational icon or similar element to the combobox.\n- **suffix** - Used to append a presentational icon or similar element to the combobox.\n- **clear-icon** - An icon to use in lieu of the default clear icon.\n- **expand-icon** - The icon to show when the control is expanded and collapsed. Rotates on open and close.\n- **help-text** - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.\n\n### **CSS Parts:**\n - **form-control** - The form control that wraps the label, input, and help text.\n- **form-control-label** - The label's wrapper.\n- **form-control-input** - The select's wrapper.\n- **form-control-help-text** - The help text's wrapper.\n- **combobox** - The container the wraps the prefix, suffix, combobox, clear icon, and expand button.\n- **prefix** - The container that wraps the prefix slot.\n- **suffix** - The container that wraps the suffix slot.\n- **display-input** - The element that displays the selected option's label, an `<input>` element.\n- **listbox** - The listbox container where options are slotted.\n- **tags** - The container that houses option tags when `multiselect` is used.\n- **tag** - The individual tags that represent each multiselect option.\n- **tag__base** - The tag's base part.\n- **tag__content** - The tag's content part.\n- **tag__remove-button** - The tag's remove button.\n- **tag__remove-button__base** - The tag's remove button base part.\n- **clear-button** - The clear button.\n- **expand-icon** - The container that wraps the expand icon.",
       "attributes": [
+        {
+          "name": "show-search",
+          "description": "Indicates whether a search box should be shown for finding options quickly.\nThis property is reflected as a boolean attribute, `show-search`, on the element.",
+          "values": []
+        },
         {
           "name": "name",
           "description": "The name of the select, submitted as a name/value pair with form data.",

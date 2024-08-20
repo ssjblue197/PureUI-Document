@@ -63,7 +63,6 @@ export default class PSelect extends PureElement implements PureFormControl {
     private readonly hasSlotController;
     private readonly localize;
     private typeToSelectString;
-    private typeToSelectTimeout;
     private closeWatcher;
     popup: PPopup;
     combobox: HTMLSlotElement;
@@ -74,6 +73,15 @@ export default class PSelect extends PureElement implements PureFormControl {
     displayLabel: string;
     currentOption: POption;
     selectedOptions: POption[];
+    /**
+     * Indicates whether a search box should be shown for finding options quickly.
+     * This property is reflected as a boolean attribute, `show-search`, on the element.
+     *
+     * @type {boolean}
+     * @reflect
+     * @attribute
+     */
+    showSearch: boolean;
     /** The name of the select, submitted as a name/value pair with form data. */
     name: string;
     /**
@@ -167,6 +175,7 @@ export default class PSelect extends PureElement implements PureFormControl {
     handleDisabledChange(): void;
     handleValueChange(): void;
     handleOpenChange(): Promise<void>;
+    private handleFilterOptions;
     /** Shows the listbox. */
     show(): Promise<void>;
     /** Hides the listbox. */
