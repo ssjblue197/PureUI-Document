@@ -1,7 +1,7 @@
 import {
   divider_styles_default
-} from "../../chunks/chunk.5ARF5ZES.js";
-import "../../chunks/chunk.N4FVDREO.js";
+} from "../../chunks/chunk.XGJ3HNR7.js";
+import "../../chunks/chunk.YOCEZMWG.js";
 import "../../chunks/chunk.KIILAQWQ.js";
 export {
   divider_styles_default as default

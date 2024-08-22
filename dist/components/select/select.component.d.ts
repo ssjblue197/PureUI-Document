@@ -62,17 +62,54 @@ export default class PSelect extends PureElement implements PureFormControl {
     private readonly formControlController;
     private readonly hasSlotController;
     private readonly localize;
-    private typeToSelectString;
+    private keyword;
     private closeWatcher;
     popup: PPopup;
     combobox: HTMLSlotElement;
     displayInput: HTMLInputElement;
     valueInput: HTMLInputElement;
     listbox: HTMLSlotElement;
+    /**
+     * Indicates whether the control has focus.
+     * @type {boolean}
+     */
     private hasFocus;
+    /**
+     * The display label to show in the select when no options are selected.
+     * Used when the control is not focused.
+     * @type {string}
+     */
     displayLabel: string;
+    /**
+     * The currently selected option.
+     * @type {POption}
+     */
     currentOption: POption;
+    /**
+     * The selected options.
+     * @type {POption[]}
+     */
     selectedOptions: POption[];
+    /**
+     * The maximum number of options that can be selected.
+     * Defaults to -1, which means there is no limit.
+     *
+     * @type {number}
+     * @reflect
+     * @attribute
+     * @default -1
+     */
+    maxCount: number;
+    /**
+     * Indicates whether the select should operate in tag mode, where selected options
+     * are shown as tags and the user can remove them or add new tag by "Enter" after typing new tag.
+     * This property is reflected as a boolean attribute, `tag-mode`, on the element.
+     *
+     * @type {boolean}
+     * @reflect
+     * @attribute
+     */
+    tagMode: boolean;
     /**
      * Indicates whether a search box should be shown for finding options quickly.
      * This property is reflected as a boolean attribute, `show-search`, on the element.
@@ -153,6 +190,7 @@ export default class PSelect extends PureElement implements PureFormControl {
     private removeOpenListeners;
     private handleFocus;
     private handleBlur;
+    handleInput(): void;
     private handleDocumentFocusIn;
     private handleDocumentKeyDown;
     private handleDocumentMouseDown;
@@ -164,6 +202,7 @@ export default class PSelect extends PureElement implements PureFormControl {
     private handleOptionClick;
     private handleDefaultSlotChange;
     private handleTagRemove;
+    private handleAddNewTag;
     private getAllOptions;
     private getFirstOption;
     private setCurrentOption;
