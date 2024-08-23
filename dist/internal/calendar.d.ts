@@ -26,3 +26,5 @@ export declare function isWeekday(date: Date): boolean;
 export declare function getDayName(date: Date, locale?: string, format?: Intl.DateTimeFormatOptions["weekday"]): string;
 /** Returns a localized, human-readable month name. */
 export declare function getMonthName(date: Date, locale?: string, format?: Intl.DateTimeFormatOptions["month"]): string;
+export declare function getDateLabelWithFormat(date: Date, locale?: string, format?: Intl.DateTimeFormatOptions): string;
+export declare function getDateDifferentFrom(date: Date, days: number): Date;

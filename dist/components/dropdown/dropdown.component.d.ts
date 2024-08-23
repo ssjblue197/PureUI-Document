@@ -36,6 +36,7 @@ export default class PDropdown extends PureElement {
     panel: HTMLSlotElement;
     private readonly localize;
     private closeWatcher;
+    autoClose: boolean;
     /**
      * The behavior of the dropdown. This determines how the dropdown is triggered. The default behavior is "click",
      * which means the dropdown is triggered by a click event on the trigger element. The other allowed value is "hover",

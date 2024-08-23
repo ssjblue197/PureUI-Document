@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="component" data-pure-ui-version="1.1.5">
+<html lang="en" data-layout="component" data-pure-ui-version="1.1.6">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -89,7 +89,7 @@
         <a href="/">
           <img src="/assets/images/wordmark.svg" alt="Pure UI" />
         </a>
-        <div class="sidebar-version">1.1.5</div>
+        <div class="sidebar-version">1.1.6</div>
       </header>
 
       <button class="search-box" type="button" title="Press / to search" aria-label="Search" data-plugin="search">
@@ -425,8 +425,8 @@
             </div>
 
             <div class="component-header__info">
-              <p-badge variant="neutral" pill=""> Since 1.0 </p-badge>
-              <p-badge variant="warning" pill="" style="text-transform: capitalize"> experimental </p-badge>
+              <p-badge variant="neutral" pill=""> Since 1.1.5 </p-badge>
+              <p-badge variant="primary" pill="" style="text-transform: capitalize"> stable </p-badge>
             </div>
           </header>
 
@@ -434,7 +434,7 @@
 
           <div class="code-preview">
             <div class="code-preview__preview">
-              <p-calendar show-today="" mode="inline" clearable="">
+              <p-calendar show-today="" mode="dialog" close-on-select="" type="range" show-adjacent-dates="">
                 <div slot="footer"></div>
               </p-calendar>
 
@@ -445,7 +445,7 @@
 
             <div class="code-preview__source-group" id="code-preview-source-group-66">
               <div class="code-preview__source code-preview__source--html">
-                <pre><code class="language-html" id="code-block-294"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-calendar</span> <span class="token attr-name">show-today</span> <span class="token attr-name">mode</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>inline<span class="token punctuation">"</span></span> <span class="token attr-name">clearable</span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-294"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-calendar</span> <span class="token attr-name">show-today</span> <span class="token attr-name">mode</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dialog<span class="token punctuation">"</span></span> <span class="token attr-name">close-on-select</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>range<span class="token punctuation">"</span></span> <span class="token attr-name">show-adjacent-dates</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>footer<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-calendar</span><span class="token punctuation">&gt;</span></span>
 </code><p-copy-button class="copy-code-button" from="code-block-294"></p-copy-button></pre>
@@ -632,8 +632,8 @@
             Date Selection<a href="#date-selection" aria-label='Direct link to "Date Selection"'></a>
           </h3>
           <p>
-            One or more dates can be selected by setting the <code>selectedDates</code> property. An array of dates is
-            accepted and the selection does not have to be continuous.
+            One or more dates can be selected by setting the <code>value</code> property. An array of dates is accepted
+            and the selection does not have to be continuous.
           </p>
 
           <div class="code-preview">
@@ -646,7 +646,7 @@
                   const today = new Date();
 
                   // Set the selected date range from the 12-15 of the current month
-                  calendar.selectedDates = [
+                  calendar.value = [
                     new Date(today.getFullYear(), today.getMonth(), 12),
                     new Date(today.getFullYear(), today.getMonth(), 13),
                     new Date(today.getFullYear(), today.getMonth(), 14),
@@ -669,7 +669,7 @@
   <span class="token keyword">const</span> today <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
   <span class="token comment">// Set the selected date range from the 12-15 of the current month</span>
-  calendar<span class="token punctuation">.</span>selectedDates <span class="token operator">=</span> <span class="token punctuation">[</span>
+  calendar<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token punctuation">[</span>
     <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>today<span class="token punctuation">.</span><span class="token function">getFullYear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> today<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
     <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>today<span class="token punctuation">.</span><span class="token function">getFullYear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> today<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
     <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>today<span class="token punctuation">.</span><span class="token function">getFullYear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> today<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
@@ -877,7 +877,7 @@
                 >
                 using a script tag:
               </p>
-              <pre><code class="language-html" id="code-block-300"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.1.5/cdn/components/calendar/calendar.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-300"></p-copy-button></pre>
+              <pre><code class="language-html" id="code-block-300"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.1.6/cdn/components/calendar/calendar.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-300"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="import">
@@ -892,7 +892,7 @@
                 >
                 using a JavaScript import:
               </p>
-              <pre><code class="language-js" id="code-block-301"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.1.5/cdn/components/calendar/calendar.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-301"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-301"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.1.6/cdn/components/calendar/calendar.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-301"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="bundler">
@@ -987,6 +987,60 @@
               <tbody>
                 <tr>
                   <td>
+                    <code class="nowrap">closeOnSelect</code>
+
+                    <br />
+                    <p-tooltip content="This attribute is different from its property">
+                      <small>
+                        <code class="nowrap"> close-on-select </code>
+                      </small>
+                    </p-tooltip>
+                  </td>
+                  <td>
+                    Whether to close the calendar when a date is selected. When <code>true</code>, the calendar will
+                    close after a date is selected. This attribute only applies when the calendar is in dialog mode and
+                    type not “multiple”.
+                  </td>
+                  <td style="text-align: center"></td>
+                  <td>
+                    <code>boolean</code>
+                  </td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <code class="nowrap">formatter</code>
+                  </td>
+                  <td>
+                    The date format to use when formatting the date. The format string is a combination of the following
+                    tokens: | Token | Description | |——-|————-| | undefined |<code>YY</code>it year | | undefined |
+                    <code>YYYY</code>t year | | undefined <code>M</code>numeric (0–11) | | undefined
+                    |<code>MM</code>umeric (00–11) | | undefined | <code>MMM</code>breviated | | undefined |
+                    <code>MMMM</code>ll | | undefined <code>D</code>month, numeric (1–31) | | undefined
+                    |<code>DD</code>onth, numeric (01–31) | | undefined <code>d</code>week, numeric (0–6) | | undefined
+                    |<code>dd</code>eek, numeric (Su-Sa) | | undefined | <code>ddd</code>ek, abbreviated | | undefined |
+                    <code>dddd</code>ek, full | | undefined <code>H</code>umeric, 24-hour (0–23) | | undefined
+                    |<code>HH</code>meric, 24-hour (00–23) | | undefined <code>h</code>umeric, 12-hour (1–12) | |
+                    undefined |<code>hh</code>meric, 12-hour (01–12) | | undefined <code>m</code> numeric (0–59) | |
+                    undefined |<code>mm</code>numeric (00–59) | | undefined <code>s</code> numeric (0–59) | | undefined
+                    |<code>ss</code>numeric (00–59) |
+                  </td>
+                  <td style="text-align: center">
+                    <p-icon label="yes" name="check-lg"></p-icon>
+                  </td>
+                  <td>
+                    <code>string</code>
+                  </td>
+                  <td>
+                    <code>"YYYY-MM-DD"</code>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
                     <code class="nowrap">typing</code>
                   </td>
                   <td>
@@ -1030,9 +1084,11 @@
                   <td>The currently selected option.</td>
                   <td style="text-align: center"></td>
                   <td>
-                    <code>POption</code>
+                    <code>Date</code>
                   </td>
-                  <td>-</td>
+                  <td>
+                    <code>undefined</code>
+                  </td>
                 </tr>
 
                 <tr>
@@ -1042,7 +1098,7 @@
                   <td>The selected options.</td>
                   <td style="text-align: center"></td>
                   <td>
-                    <code>POption[]</code>
+                    <code>Date[]</code>
                   </td>
                   <td>
                     <code>[]</code>
@@ -1122,7 +1178,7 @@
                     <code>string</code>
                   </td>
                   <td>
-                    <code>"DD/MM/YYYY"</code>
+                    <code>"MM/DD/YYYY"</code>
                   </td>
                 </tr>
 
@@ -1356,7 +1412,7 @@
                   </td>
                   <td style="text-align: center"></td>
                   <td>
-                    <code>(option: POption, index: number) =&gt; TemplateResult | string | HTMLElement</code>
+                    <code>(option: Date, index: number) =&gt; TemplateResult | string | HTMLElement</code>
                   </td>
                   <td>-</td>
                 </tr>
@@ -1758,25 +1814,33 @@
                 <tr>
                   <td class="nowrap"><code>goToPreviousMonth()</code></td>
                   <td>Moves the calendar to the previous month.</td>
-                  <td>-</td>
+                  <td>
+                    <code> event: MouseEvent </code>
+                  </td>
                 </tr>
 
                 <tr>
                   <td class="nowrap"><code>goToNextMonth()</code></td>
                   <td>Moves the calendar to the next month.</td>
-                  <td>-</td>
+                  <td>
+                    <code> event: MouseEvent </code>
+                  </td>
                 </tr>
 
                 <tr>
                   <td class="nowrap"><code>goToPreviousYear()</code></td>
                   <td>Moves the calendar to the previous year.</td>
-                  <td>-</td>
+                  <td>
+                    <code> event: MouseEvent </code>
+                  </td>
                 </tr>
 
                 <tr>
                   <td class="nowrap"><code>goToNextYear()</code></td>
                   <td>Moves the calendar to the next year.</td>
-                  <td>-</td>
+                  <td>
+                    <code> event: MouseEvent </code>
+                  </td>
                 </tr>
               </tbody>
             </table>

@@ -41,33 +41,6 @@
       ]
     },
     {
-      "name": "p-animated-image",
-      "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
-      "attributes": [
-        {
-          "name": "src",
-          "description": "The path to the image to load.",
-          "values": []
-        },
-        {
-          "name": "alt",
-          "description": "A description of the image used by assistive devices.",
-          "values": []
-        },
-        {
-          "name": "play",
-          "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-          "values": []
-        }
-      ],
-      "references": [
-        {
-          "name": "Documentation",
-          "url": "https://pureui.xyz/components/animated-image"
-        }
-      ]
-    },
-    {
       "name": "p-animation",
       "description": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n---\n\n\n### **Events:**\n - **p-cancel** - Emitted when the animation is canceled.\n- **p-finish** - Emitted when the animation finishes.\n- **p-start** - Emitted when the animation starts or restarts.\n\n### **Methods:**\n - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.\n- **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.\n\n### **Slots:**\n - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.",
       "attributes": [
@@ -135,6 +108,74 @@
       ]
     },
     {
+      "name": "p-animated-image",
+      "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
+      "attributes": [
+        {
+          "name": "src",
+          "description": "The path to the image to load.",
+          "values": []
+        },
+        {
+          "name": "alt",
+          "description": "A description of the image used by assistive devices.",
+          "values": []
+        },
+        {
+          "name": "play",
+          "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+          "values": []
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://pureui.xyz/components/animated-image"
+        }
+      ]
+    },
+    {
+      "name": "p-avatar",
+      "description": "Avatars are used to represent a person or object.\n---\n\n\n### **Events:**\n - **p-error** - The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause.\n\n### **Slots:**\n - **icon** - The default icon to use when no image or initials are present. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--size** - The size of the avatar. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the avatar's icon.\n- **initials** - The container that wraps the avatar's initials.\n- **image** - The avatar image. Only shown when the `image` attribute is set.",
+      "attributes": [
+        {
+          "name": "image",
+          "description": "The image source to use for the avatar.",
+          "values": []
+        },
+        {
+          "name": "label",
+          "description": "A label to use to describe the avatar to assistive devices.",
+          "values": []
+        },
+        {
+          "name": "initials",
+          "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+          "values": []
+        },
+        {
+          "name": "loading",
+          "description": "Indicates how the browser should load the image.",
+          "values": [{ "name": "eager" }, { "name": "lazy" }]
+        },
+        {
+          "name": "shape",
+          "description": "The shape of the avatar.",
+          "values": [
+            { "name": "circle" },
+            { "name": "square" },
+            { "name": "rounded" }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://pureui.xyz/components/avatar"
+        }
+      ]
+    },
+    {
       "name": "p-badge",
       "description": "Badges are used to draw attention and display statuses or counts.\n---\n\n\n### **Slots:**\n - _default_ - The badge's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
       "attributes": [
@@ -181,47 +222,6 @@
         {
           "name": "Documentation",
           "url": "https://pureui.xyz/components/breadcrumb"
-        }
-      ]
-    },
-    {
-      "name": "p-avatar",
-      "description": "Avatars are used to represent a person or object.\n---\n\n\n### **Events:**\n - **p-error** - The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause.\n\n### **Slots:**\n - **icon** - The default icon to use when no image or initials are present. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--size** - The size of the avatar. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the avatar's icon.\n- **initials** - The container that wraps the avatar's initials.\n- **image** - The avatar image. Only shown when the `image` attribute is set.",
-      "attributes": [
-        {
-          "name": "image",
-          "description": "The image source to use for the avatar.",
-          "values": []
-        },
-        {
-          "name": "label",
-          "description": "A label to use to describe the avatar to assistive devices.",
-          "values": []
-        },
-        {
-          "name": "initials",
-          "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-          "values": []
-        },
-        {
-          "name": "loading",
-          "description": "Indicates how the browser should load the image.",
-          "values": [{ "name": "eager" }, { "name": "lazy" }]
-        },
-        {
-          "name": "shape",
-          "description": "The shape of the avatar.",
-          "values": [
-            { "name": "circle" },
-            { "name": "square" },
-            { "name": "rounded" }
-          ]
-        }
-      ],
-      "references": [
-        {
-          "name": "Documentation",
-          "url": "https://pureui.xyz/components/avatar"
         }
       ]
     },
@@ -424,9 +424,18 @@
     },
     {
       "name": "p-calendar",
-      "description": "A calendar prototype for Pure UI.\n---\n\n\n### **Events:**\n - **p-change** - Emitted when the control's value changes.\n- **p-clear** - Emitted when the control's value is cleared.\n- **p-input** - Emitted when the control receives input.\n- **p-focus** - Emitted when the control gains focus.\n- **p-blur** - Emitted when the control loses focus.\n- **p-show** - Emitted when the select's menu opens.\n- **p-after-show** - Emitted after the select's menu opens and all animations are complete.\n- **p-hide** - Emitted when the select's menu closes.\n- **p-after-hide** - Emitted after the select's menu closes and all animations are complete.\n- **p-invalid** - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n\n### **Methods:**\n - **show()** - Shows the calendar.\n- **hide()** - Hides the calendar.\n- **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n- **focus(options: _FocusOptions_)** - Sets focus on the control.\n- **blur()** - Removes focus from the control.\n- **goToToday()** - Moves the calendar to the current month and year.\n- **goToPreviousMonth()** - Moves the calendar to the previous month.\n- **goToNextMonth()** - Moves the calendar to the next month.\n- **goToPreviousYear()** - Moves the calendar to the previous year.\n- **goToNextYear()** - Moves the calendar to the next year.\n\n### **Slots:**\n - **footer** - Optional content to place in the calendar's footer.\n- **label** - The input's label. Alternatively, you can use the `label` attribute.\n- **prefix** - Used to prepend a presentational icon or similar element to the calendar.\n- **suffix** - Used to append a presentational icon or similar element to the calendar.\n- **clear-icon** - An icon to use in lieu of the default clear icon.\n- **help-text** - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.\n\n### **CSS Properties:**\n - **--border-color** - The calendar's border color. _(default: undefined)_\n- **--border-width** - The calendar's border width. _(default: undefined)_\n- **--border-radius** - The border radius of the calendar. _(default: undefined)_\n\n### **CSS Parts:**\n - **day** - Targets day cells.\n- **day-label** - Targets the day labels (the name of the days in the grid).\n- **day-weekend** - Targets days that fall on weekends.\n- **day-weekday** - Targets weekdays.\n- **day-current-month** - Targets days in the current month.\n- **day-previous-month** - Targets days in the previous month.\n- **day-next-month** - Targets days in the next month.\n- **day-today** - Targets today.\n- **day-selected** - Targets selected days.\n- **day-selection-start** - Targets days that begin a selection.\n- **day-selection-end** - Targets days that end a selection.",
+      "description": "A calendar prototype for Pure UI.\n---\n\n\n### **Events:**\n - **p-change** - Emitted when the control's value changes.\n- **p-clear** - Emitted when the control's value is cleared.\n- **p-input** - Emitted when the control receives input.\n- **p-focus** - Emitted when the control gains focus.\n- **p-blur** - Emitted when the control loses focus.\n- **p-show** - Emitted when the select's menu opens.\n- **p-after-show** - Emitted after the select's menu opens and all animations are complete.\n- **p-hide** - Emitted when the select's menu closes.\n- **p-after-hide** - Emitted after the select's menu closes and all animations are complete.\n- **p-invalid** - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n\n### **Methods:**\n - **show()** - Shows the calendar.\n- **hide()** - Hides the calendar.\n- **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n- **focus(options: _FocusOptions_)** - Sets focus on the control.\n- **blur()** - Removes focus from the control.\n- **goToToday()** - Moves the calendar to the current month and year.\n- **goToPreviousMonth(event: _MouseEvent_)** - Moves the calendar to the previous month.\n- **goToNextMonth(event: _MouseEvent_)** - Moves the calendar to the next month.\n- **goToPreviousYear(event: _MouseEvent_)** - Moves the calendar to the previous year.\n- **goToNextYear(event: _MouseEvent_)** - Moves the calendar to the next year.\n\n### **Slots:**\n - **footer** - Optional content to place in the calendar's footer.\n- **label** - The input's label. Alternatively, you can use the `label` attribute.\n- **prefix** - Used to prepend a presentational icon or similar element to the calendar.\n- **suffix** - Used to append a presentational icon or similar element to the calendar.\n- **clear-icon** - An icon to use in lieu of the default clear icon.\n- **help-text** - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.\n\n### **CSS Properties:**\n - **--border-color** - The calendar's border color. _(default: undefined)_\n- **--border-width** - The calendar's border width. _(default: undefined)_\n- **--border-radius** - The border radius of the calendar. _(default: undefined)_\n\n### **CSS Parts:**\n - **day** - Targets day cells.\n- **day-label** - Targets the day labels (the name of the days in the grid).\n- **day-weekend** - Targets days that fall on weekends.\n- **day-weekday** - Targets weekdays.\n- **day-current-month** - Targets days in the current month.\n- **day-previous-month** - Targets days in the previous month.\n- **day-next-month** - Targets days in the next month.\n- **day-today** - Targets today.\n- **day-selected** - Targets selected days.\n- **day-selection-start** - Targets days that begin a selection.\n- **day-selection-end** - Targets days that end a selection.",
       "attributes": [
-        { "name": "formatter", "values": [] },
+        {
+          "name": "close-on-select",
+          "description": "Whether to close the calendar when a date is selected.\n\nWhen `true`, the calendar will close after a date is selected.\n\nThis attribute only applies when the calendar is in dialog mode and type not \"multiple\".",
+          "values": []
+        },
+        {
+          "name": "formatter",
+          "description": "The date format to use when formatting the date.\n\nThe format string is a combination of the following tokens:\n\n| Token | Description |\n|-------|-------------|\n| `YY`  | Four-digit year |\n| `YYYY` | Four-digit year |\n| `M`   | Month, numeric (0-11) |\n| `MM`  | Month, numeric (00-11) |\n| `MMM` | Month, abbreviated |\n| `MMMM` | Month, full |\n| `D`   | Day of month, numeric (1-31) |\n| `DD`  | Day of month, numeric (01-31) |\n| `d`   | Day of week, numeric (0-6) |\n| `dd`  | Day of week, numeric (Su-Sa) |\n| `ddd` | Day of week, abbreviated |\n| `dddd` | Day of week, full |\n| `H`   | Hour, numeric, 24-hour (0-23) |\n| `HH`  | Hour, numeric, 24-hour (00-23) |\n| `h`   | Hour, numeric, 12-hour (1-12) |\n| `hh`  | Hour, numeric, 12-hour (01-12) |\n| `m`   | Minute, numeric (0-59) |\n| `mm`  | Minute, numeric (00-59) |\n| `s`   | Second, numeric (0-59) |\n| `ss`  | Second, numeric (00-59) |",
+          "values": []
+        },
         {
           "name": "typing",
           "description": "Indicates whether the calendar is in typing mode.\nTyping mode means that the calendar accepts user input and emits `p-input` and `p-change` events when the user types a valid date.\nWhen typing mode is `false`, the calendar does not accept user input and does not emit `p-input` or `p-change` events.",
@@ -520,7 +529,7 @@
           "name": "getTag",
           "description": "A function that customizes the tags to be rendered when type=multiple. The first argument is the option, the second\nis the current tag's index.  The function should return either a Lit TemplateResult or a string containing trusted HTML of the symbol to render at\nthe specified value.",
           "values": [
-            { "name": "(option: POption, index: number) => TemplateResult" },
+            { "name": "(option: Date, index: number) => TemplateResult" },
             { "name": "HTMLElement" }
           ]
         },
@@ -996,6 +1005,7 @@
       "name": "p-dropdown",
       "description": "Dropdowns expose additional content that \"drops down\" in a panel.\n---\n\n\n### **Events:**\n - **p-show** - Emitted when the dropdown opens.\n- **p-after-show** - Emitted after the dropdown opens and all animations are complete.\n- **p-hide** - Emitted when the dropdown closes.\n- **p-after-hide** - Emitted after the dropdown closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the dropdown panel.\n- **hide()** - Hides the dropdown panel\n- **reposition()** - Instructs the dropdown menu to reposition. Useful when the position or size of the trigger changes when the menu\nis activated.\n\n### **Slots:**\n - _default_ - The dropdown's main content.\n- **trigger** - The dropdown's trigger, usually a `<p-button>` element.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper, an `<p-popup>` element.\n- **base__popup** - The popup's exported `popup` part. Use this to target the tooltip's popup container.\n- **trigger** - The container that wraps the trigger.\n- **panel** - The panel that gets shown when the dropdown is open.",
       "attributes": [
+        { "name": "auto-close", "values": [] },
         {
           "name": "behavior",
           "description": "The behavior of the dropdown. This determines how the dropdown is triggered. The default behavior is \"click\",\nwhich means the dropdown is triggered by a click event on the trigger element. The other allowed value is \"hover\",\nwhich means the dropdown is triggered by a mouse hover event on the trigger element.",

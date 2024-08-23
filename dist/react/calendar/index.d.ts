@@ -24,8 +24,8 @@ export type { PInvalidEvent } from "../../events/events.js";
  * @summary A calendar prototype for Pure UI.
  * @documentation https://pureui.xyz/components/calendar
  *
- * @since 1.0
- * @status experimental
+ * @since 1.1.5
+ * @status stable
  *
  * @dependency p-icon
  * @dependency p-popup

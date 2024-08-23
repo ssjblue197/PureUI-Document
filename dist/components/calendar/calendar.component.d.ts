@@ -4,7 +4,6 @@ import PTag from "../tag/tag.component.js";
 import PureElement from "../../internal/pure-ui-element.js";
 import type { CSSResultGroup, TemplateResult } from "lit";
 import type { PureFormControl } from "../../internal/pure-ui-element.js";
-import type POption from "../option/option.component.js";
 export interface RenderDayOptions {
     disabled?: boolean;
     content: string | TemplateResult;
@@ -13,8 +12,8 @@ export interface RenderDayOptions {
  * @summary A calendar prototype for Pure UI.
  * @documentation https://pureui.xyz/components/calendar
  *
- * @since 1.0
- * @status experimental
+ * @since 1.1.5
+ * @status stable
  *
  * @dependency p-icon
  * @dependency p-popup
@@ -72,6 +71,46 @@ export default class PCalendar extends PureElement implements PureFormControl {
     displayInput: HTMLInputElement;
     valueInput: HTMLInputElement;
     calendar: HTMLSlotElement;
+    /**
+     * Whether to close the calendar when a date is selected.
+     *
+     * When `true`, the calendar will close after a date is selected.
+     *
+     * This attribute only applies when the calendar is in dialog mode and type not "multiple".
+     * @defaultValue false
+     */
+    closeOnSelect: boolean;
+    /**
+     * The date format to use when formatting the date.
+     *
+     * The format string is a combination of the following tokens:
+     *
+     * | Token | Description |
+     * |-------|-------------|
+     * | `YY`  | Four-digit year |
+     * | `YYYY` | Four-digit year |
+     * | `M`   | Month, numeric (0-11) |
+     * | `MM`  | Month, numeric (00-11) |
+     * | `MMM` | Month, abbreviated |
+     * | `MMMM` | Month, full |
+     * | `D`   | Day of month, numeric (1-31) |
+     * | `DD`  | Day of month, numeric (01-31) |
+     * | `d`   | Day of week, numeric (0-6) |
+     * | `dd`  | Day of week, numeric (Su-Sa) |
+     * | `ddd` | Day of week, abbreviated |
+     * | `dddd` | Day of week, full |
+     * | `H`   | Hour, numeric, 24-hour (0-23) |
+     * | `HH`  | Hour, numeric, 24-hour (00-23) |
+     * | `h`   | Hour, numeric, 12-hour (1-12) |
+     * | `hh`  | Hour, numeric, 12-hour (01-12) |
+     * | `m`   | Minute, numeric (0-59) |
+     * | `mm`  | Minute, numeric (00-59) |
+     * | `s`   | Second, numeric (0-59) |
+     * | `ss`  | Second, numeric (00-59) |
+     *
+     * @type {string}
+     * @default "YYYY-MM-DD"
+     */
     formatter: string;
     /**
      * Indicates whether the calendar is in typing mode.
@@ -95,16 +134,17 @@ export default class PCalendar extends PureElement implements PureFormControl {
     displayLabel: string;
     /**
      * The currently selected option.
-     * @type {POption}
+     * @type {Date}
      */
-    currentOption: POption;
+    currentOption?: Date;
     /**
      * The selected options.
-     * @type {POption[]}
+     * @type {Date[]}
      */
-    selectedOptions: POption[];
+    selectedOptions: Date[];
     /** The name of the calendar, submitted as a name/value pair with form data. */
     name: string;
+    temporalEndDate?: Date;
     /**
      * The current value of the calendar, submitted as a name/value pair with form data. When type is set to`multiple`, the
      * value attribute will be a space-delimited list of values based on the dates selected, and the value property will
@@ -162,7 +202,7 @@ export default class PCalendar extends PureElement implements PureFormControl {
      * is the current tag's index.  The function should return either a Lit TemplateResult or a string containing trusted HTML of the symbol to render at
      * the specified value.
      */
-    getTag: (option: POption, index: number) => TemplateResult | string | HTMLElement;
+    getTag: (option: Date, index: number) => TemplateResult | string | HTMLElement;
     /**
      * When `true`, the calendar will show a button to quickly jump to today's date.
      *
@@ -228,12 +268,13 @@ export default class PCalendar extends PureElement implements PureFormControl {
     private handleComboboxKeyDown;
     private handleClearClick;
     private handleClearMouseDown;
-    private handleOptionClick;
+    private checkIsDuplicateDate;
+    private handleSetTemporaryEndDate;
+    private handleSelectDate;
     private handleTagRemove;
     private getAllOptions;
     private setCurrentOption;
     private setSelectedOptions;
-    private toggleOptionSelection;
     private selectionChanged;
     protected get tags(): TemplateResult<1>[];
     private handleInvalid;
@@ -259,13 +300,13 @@ export default class PCalendar extends PureElement implements PureFormControl {
     /** Moves the calendar to the current month and year. */
     goToToday(): void;
     /** Moves the calendar to the previous month. */
-    goToPreviousMonth(): void;
+    goToPreviousMonth(event: MouseEvent): void;
     /** Moves the calendar to the next month. */
-    goToNextMonth(): void;
+    goToNextMonth(event: MouseEvent): void;
     /** Moves the calendar to the previous year. */
-    goToPreviousYear(): void;
+    goToPreviousYear(event: MouseEvent): void;
     /** Moves the calendar to the next year. */
-    goToNextYear(): void;
+    goToNextYear(event: MouseEvent): void;
     handleMonthChange(): void;
     render(): TemplateResult<1>;
 }

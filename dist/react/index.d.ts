@@ -1,9 +1,9 @@
 export { default as PAlert } from './alert/index.js';
-export { default as PAnimatedImage } from './animated-image/index.js';
 export { default as PAnimation } from './animation/index.js';
+export { default as PAnimatedImage } from './animated-image/index.js';
+export { default as PAvatar } from './avatar/index.js';
 export { default as PBadge } from './badge/index.js';
 export { default as PBreadcrumb } from './breadcrumb/index.js';
-export { default as PAvatar } from './avatar/index.js';
 export { default as PBreadcrumbItem } from './breadcrumb-item/index.js';
 export { default as PButton } from './button/index.js';
 export { default as PButtonGroup } from './button-group/index.js';

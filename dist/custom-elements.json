@@ -264,192 +264,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/animated-image/animated-image.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PAnimatedImage",
-          "cssProperties": [
-            {
-              "description": "The size of the icon box.",
-              "name": "--control-box-size"
-            },
-            {
-              "description": "The size of the play/pause icons.",
-              "name": "--icon-size"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The container that surrounds the pause/play icons and provides their background.",
-              "name": "control-box"
-            }
-          ],
-          "slots": [
-            {
-              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`.",
-              "name": "play-icon"
-            },
-            {
-              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`.",
-              "name": "pause-icon"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "dependencies",
-              "type": {
-                "text": "object"
-              },
-              "static": true,
-              "default": "{ \"p-icon\": PIcon }"
-            },
-            {
-              "kind": "field",
-              "name": "animatedImage",
-              "type": {
-                "text": "HTMLImageElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "frozenFrame",
-              "type": {
-                "text": "string"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "isLoaded",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "src",
-              "type": {
-                "text": "string"
-              },
-              "description": "The path to the image to load.",
-              "attribute": "src"
-            },
-            {
-              "kind": "field",
-              "name": "alt",
-              "type": {
-                "text": "string"
-              },
-              "description": "A description of the image used by assistive devices.",
-              "attribute": "alt"
-            },
-            {
-              "kind": "field",
-              "name": "play",
-              "type": {
-                "text": "boolean"
-              },
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "attribute": "play",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleClick",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleLoad",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleError",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handlePlayChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleSrcChange"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the image loads successfully.",
-              "name": "p-load",
-              "reactName": "onPLoad",
-              "eventName": "PLoadEvent"
-            },
-            {
-              "description": "Emitted when the image fails to load.",
-              "name": "p-error",
-              "reactName": "onPError",
-              "eventName": "PErrorEvent"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "src",
-              "type": {
-                "text": "string"
-              },
-              "description": "The path to the image to load.",
-              "fieldName": "src"
-            },
-            {
-              "name": "alt",
-              "type": {
-                "text": "string"
-              },
-              "description": "A description of the image used by assistive devices.",
-              "fieldName": "alt"
-            },
-            {
-              "name": "play",
-              "type": {
-                "text": "boolean"
-              },
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "fieldName": "play"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.",
-          "tagNameWithoutPrefix": "animated-image",
-          "tagName": "p-animated-image",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n * @documentation https://pureui.xyz/components/animated-image\n * @status stable\n * @since 1.0\n *\n * @dependency p-icon\n *\n * @event p-load - Emitted when the image loads successfully.\n * @event p-error - Emitted when the image fails to load.\n *\n * @slot play-icon - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n * @slot pause-icon - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n *\n * @part control-box - The container that surrounds the pause/play icons and provides their background.\n *\n * @cssproperty --control-box-size - The size of the icon box.\n * @cssproperty --icon-size - The size of the play/pause icons.\n */",
-          "documentation": "https://pureui.xyz/components/animated-image",
-          "status": "stable",
-          "since": "1.0",
-          "dependencies": [
-            "p-icon"
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PAnimatedImage",
-            "module": "components/animated-image/animated-image.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/animation/animation.js",
       "declarations": [
         {
@@ -807,6 +621,393 @@
     },
     {
       "kind": "javascript-module",
+      "path": "components/animated-image/animated-image.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PAnimatedImage",
+          "cssProperties": [
+            {
+              "description": "The size of the icon box.",
+              "name": "--control-box-size"
+            },
+            {
+              "description": "The size of the play/pause icons.",
+              "name": "--icon-size"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The container that surrounds the pause/play icons and provides their background.",
+              "name": "control-box"
+            }
+          ],
+          "slots": [
+            {
+              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`.",
+              "name": "play-icon"
+            },
+            {
+              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`.",
+              "name": "pause-icon"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "dependencies",
+              "type": {
+                "text": "object"
+              },
+              "static": true,
+              "default": "{ \"p-icon\": PIcon }"
+            },
+            {
+              "kind": "field",
+              "name": "animatedImage",
+              "type": {
+                "text": "HTMLImageElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "frozenFrame",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "isLoaded",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "src",
+              "type": {
+                "text": "string"
+              },
+              "description": "The path to the image to load.",
+              "attribute": "src"
+            },
+            {
+              "kind": "field",
+              "name": "alt",
+              "type": {
+                "text": "string"
+              },
+              "description": "A description of the image used by assistive devices.",
+              "attribute": "alt"
+            },
+            {
+              "kind": "field",
+              "name": "play",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "attribute": "play",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleLoad",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleError",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handlePlayChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleSrcChange"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the image loads successfully.",
+              "name": "p-load",
+              "reactName": "onPLoad",
+              "eventName": "PLoadEvent"
+            },
+            {
+              "description": "Emitted when the image fails to load.",
+              "name": "p-error",
+              "reactName": "onPError",
+              "eventName": "PErrorEvent"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "src",
+              "type": {
+                "text": "string"
+              },
+              "description": "The path to the image to load.",
+              "fieldName": "src"
+            },
+            {
+              "name": "alt",
+              "type": {
+                "text": "string"
+              },
+              "description": "A description of the image used by assistive devices.",
+              "fieldName": "alt"
+            },
+            {
+              "name": "play",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "fieldName": "play"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.",
+          "tagNameWithoutPrefix": "animated-image",
+          "tagName": "p-animated-image",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n * @documentation https://pureui.xyz/components/animated-image\n * @status stable\n * @since 1.0\n *\n * @dependency p-icon\n *\n * @event p-load - Emitted when the image loads successfully.\n * @event p-error - Emitted when the image fails to load.\n *\n * @slot play-icon - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n * @slot pause-icon - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n *\n * @part control-box - The container that surrounds the pause/play icons and provides their background.\n *\n * @cssproperty --control-box-size - The size of the icon box.\n * @cssproperty --icon-size - The size of the play/pause icons.\n */",
+          "documentation": "https://pureui.xyz/components/animated-image",
+          "status": "stable",
+          "since": "1.0",
+          "dependencies": [
+            "p-icon"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PAnimatedImage",
+            "module": "components/animated-image/animated-image.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/avatar/avatar.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PAvatar",
+          "cssProperties": [
+            {
+              "description": "The size of the avatar.",
+              "name": "--size"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The container that wraps the avatar's icon.",
+              "name": "icon"
+            },
+            {
+              "description": "The container that wraps the avatar's initials.",
+              "name": "initials"
+            },
+            {
+              "description": "The avatar image. Only shown when the `image` attribute is set.",
+              "name": "image"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The default icon to use when no image or initials are present. Works best with `<p-icon>`.",
+              "name": "icon"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "dependencies",
+              "type": {
+                "text": "object"
+              },
+              "static": true,
+              "default": "{\n    \"p-icon\": PIcon,\n  }"
+            },
+            {
+              "kind": "field",
+              "name": "hasError",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "image",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The image source to use for the avatar.",
+              "attribute": "image"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "A label to use to describe the avatar to assistive devices.",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "initials",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+              "attribute": "initials"
+            },
+            {
+              "kind": "field",
+              "name": "loading",
+              "type": {
+                "text": "\"eager\" | \"lazy\""
+              },
+              "default": "\"eager\"",
+              "description": "Indicates how the browser should load the image.",
+              "attribute": "loading"
+            },
+            {
+              "kind": "field",
+              "name": "shape",
+              "type": {
+                "text": "\"circle\" | \"square\" | \"rounded\""
+              },
+              "default": "\"circle\"",
+              "description": "The shape of the avatar.",
+              "attribute": "shape",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleImageChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleImageLoadError",
+              "privacy": "private"
+            }
+          ],
+          "events": [
+            {
+              "description": "The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause.",
+              "name": "p-error",
+              "reactName": "onPError",
+              "eventName": "PErrorEvent"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "image",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The image source to use for the avatar.",
+              "fieldName": "image"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "A label to use to describe the avatar to assistive devices.",
+              "fieldName": "label"
+            },
+            {
+              "name": "initials",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+              "fieldName": "initials"
+            },
+            {
+              "name": "loading",
+              "type": {
+                "text": "\"eager\" | \"lazy\""
+              },
+              "default": "\"eager\"",
+              "description": "Indicates how the browser should load the image.",
+              "fieldName": "loading"
+            },
+            {
+              "name": "shape",
+              "type": {
+                "text": "\"circle\" | \"square\" | \"rounded\""
+              },
+              "default": "\"circle\"",
+              "description": "The shape of the avatar.",
+              "fieldName": "shape"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "Avatars are used to represent a person or object.",
+          "tagNameWithoutPrefix": "avatar",
+          "tagName": "p-avatar",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary Avatars are used to represent a person or object.\n * @documentation https://pureui.xyz/components/avatar\n * @status stable\n * @since 1.0\n *\n * @dependency p-icon\n *\n * @event p-error - The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some\n * unknown cause.\n *\n * @slot icon - The default icon to use when no image or initials are present. Works best with `<p-icon>`.\n *\n * @csspart base - The component's base wrapper.\n * @csspart icon - The container that wraps the avatar's icon.\n * @csspart initials - The container that wraps the avatar's initials.\n * @csspart image - The avatar image. Only shown when the `image` attribute is set.\n *\n * @cssproperty --size - The size of the avatar.\n */",
+          "documentation": "https://pureui.xyz/components/avatar",
+          "status": "stable",
+          "since": "1.0",
+          "dependencies": [
+            "p-icon"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PAvatar",
+            "module": "components/avatar/avatar.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "components/badge/badge.js",
       "declarations": [
         {
@@ -1030,207 +1231,6 @@
           "declaration": {
             "name": "PBreadcrumb",
             "module": "components/breadcrumb/breadcrumb.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/avatar/avatar.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PAvatar",
-          "cssProperties": [
-            {
-              "description": "The size of the avatar.",
-              "name": "--size"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The container that wraps the avatar's icon.",
-              "name": "icon"
-            },
-            {
-              "description": "The container that wraps the avatar's initials.",
-              "name": "initials"
-            },
-            {
-              "description": "The avatar image. Only shown when the `image` attribute is set.",
-              "name": "image"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The default icon to use when no image or initials are present. Works best with `<p-icon>`.",
-              "name": "icon"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "dependencies",
-              "type": {
-                "text": "object"
-              },
-              "static": true,
-              "default": "{\n    \"p-icon\": PIcon,\n  }"
-            },
-            {
-              "kind": "field",
-              "name": "hasError",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "image",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "The image source to use for the avatar.",
-              "attribute": "image"
-            },
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "A label to use to describe the avatar to assistive devices.",
-              "attribute": "label"
-            },
-            {
-              "kind": "field",
-              "name": "initials",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-              "attribute": "initials"
-            },
-            {
-              "kind": "field",
-              "name": "loading",
-              "type": {
-                "text": "\"eager\" | \"lazy\""
-              },
-              "default": "\"eager\"",
-              "description": "Indicates how the browser should load the image.",
-              "attribute": "loading"
-            },
-            {
-              "kind": "field",
-              "name": "shape",
-              "type": {
-                "text": "\"circle\" | \"square\" | \"rounded\""
-              },
-              "default": "\"circle\"",
-              "description": "The shape of the avatar.",
-              "attribute": "shape",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleImageChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleImageLoadError",
-              "privacy": "private"
-            }
-          ],
-          "events": [
-            {
-              "description": "The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause.",
-              "name": "p-error",
-              "reactName": "onPError",
-              "eventName": "PErrorEvent"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "image",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "The image source to use for the avatar.",
-              "fieldName": "image"
-            },
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "A label to use to describe the avatar to assistive devices.",
-              "fieldName": "label"
-            },
-            {
-              "name": "initials",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-              "fieldName": "initials"
-            },
-            {
-              "name": "loading",
-              "type": {
-                "text": "\"eager\" | \"lazy\""
-              },
-              "default": "\"eager\"",
-              "description": "Indicates how the browser should load the image.",
-              "fieldName": "loading"
-            },
-            {
-              "name": "shape",
-              "type": {
-                "text": "\"circle\" | \"square\" | \"rounded\""
-              },
-              "default": "\"circle\"",
-              "description": "The shape of the avatar.",
-              "fieldName": "shape"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "Avatars are used to represent a person or object.",
-          "tagNameWithoutPrefix": "avatar",
-          "tagName": "p-avatar",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary Avatars are used to represent a person or object.\n * @documentation https://pureui.xyz/components/avatar\n * @status stable\n * @since 1.0\n *\n * @dependency p-icon\n *\n * @event p-error - The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some\n * unknown cause.\n *\n * @slot icon - The default icon to use when no image or initials are present. Works best with `<p-icon>`.\n *\n * @csspart base - The component's base wrapper.\n * @csspart icon - The container that wraps the avatar's icon.\n * @csspart initials - The container that wraps the avatar's initials.\n * @csspart image - The avatar image. Only shown when the `image` attribute is set.\n *\n * @cssproperty --size - The size of the avatar.\n */",
-          "documentation": "https://pureui.xyz/components/avatar",
-          "status": "stable",
-          "since": "1.0",
-          "dependencies": [
-            "p-icon"
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PAvatar",
-            "module": "components/avatar/avatar.js"
           }
         }
       ]
@@ -2295,7 +2295,7 @@
               "name": "formControlController",
               "privacy": "private",
               "readonly": true,
-              "default": "new FormControlController(this, {\n    assumeInteractionOn: [\"p-blur\", \"p-input\", \"p-select\"],\n  })"
+              "default": "new FormControlController(this, {\n    assumeInteractionOn: [\"p-blur\", \"p-input\", \"p-select\", \"p-change\"],\n  })"
             },
             {
               "kind": "field",
@@ -2365,11 +2365,22 @@
             },
             {
               "kind": "field",
+              "name": "closeOnSelect",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether to close the calendar when a date is selected.\n\nWhen `true`, the calendar will close after a date is selected.\n\nThis attribute only applies when the calendar is in dialog mode and type not \"multiple\".",
+              "attribute": "close-on-select"
+            },
+            {
+              "kind": "field",
               "name": "formatter",
               "type": {
                 "text": "string"
               },
               "default": "\"YYYY-MM-DD\"",
+              "description": "The date format to use when formatting the date.\n\nThe format string is a combination of the following tokens:\n\n| Token | Description |\n|-------|-------------|\n| `YY`  | Four-digit year |\n| `YYYY` | Four-digit year |\n| `M`   | Month, numeric (0-11) |\n| `MM`  | Month, numeric (00-11) |\n| `MMM` | Month, abbreviated |\n| `MMMM` | Month, full |\n| `D`   | Day of month, numeric (1-31) |\n| `DD`  | Day of month, numeric (01-31) |\n| `d`   | Day of week, numeric (0-6) |\n| `dd`  | Day of week, numeric (Su-Sa) |\n| `ddd` | Day of week, abbreviated |\n| `dddd` | Day of week, full |\n| `H`   | Hour, numeric, 24-hour (0-23) |\n| `HH`  | Hour, numeric, 24-hour (00-23) |\n| `h`   | Hour, numeric, 12-hour (1-12) |\n| `hh`  | Hour, numeric, 12-hour (01-12) |\n| `m`   | Minute, numeric (0-59) |\n| `mm`  | Minute, numeric (00-59) |\n| `s`   | Second, numeric (0-59) |\n| `ss`  | Second, numeric (00-59) |",
               "attribute": "formatter",
               "reflects": true
             },
@@ -2407,15 +2418,16 @@
               "kind": "field",
               "name": "currentOption",
               "type": {
-                "text": "POption"
+                "text": "Date"
               },
+              "default": "undefined",
               "description": "The currently selected option."
             },
             {
               "kind": "field",
               "name": "selectedOptions",
               "type": {
-                "text": "POption[]"
+                "text": "Date[]"
               },
               "default": "[]",
               "description": "The selected options."
@@ -2429,6 +2441,14 @@
               "default": "\"\"",
               "description": "The name of the calendar, submitted as a name/value pair with form data.",
               "attribute": "name"
+            },
+            {
+              "kind": "field",
+              "name": "temporalEndDate",
+              "type": {
+                "text": "Date | undefined"
+              },
+              "default": "undefined"
             },
             {
               "kind": "field",
@@ -2466,7 +2486,7 @@
               "type": {
                 "text": "string"
               },
-              "default": "\"DD/MM/YYYY\"",
+              "default": "\"MM/DD/YYYY\"",
               "description": "Placeholder text to show as a hint when the select is empty.",
               "attribute": "placeholder"
             },
@@ -2601,7 +2621,7 @@
               "kind": "field",
               "name": "getTag",
               "type": {
-                "text": "(option: POption, index: number) => TemplateResult | string | HTMLElement"
+                "text": "(option: Date, index: number) => TemplateResult | string | HTMLElement"
               },
               "description": "A function that customizes the tags to be rendered when type=multiple. The first argument is the option, the second\nis the current tag's index.  The function should return either a Lit TemplateResult or a string containing trusted HTML of the symbol to render at\nthe specified value.",
               "attribute": "getTag"
@@ -2820,13 +2840,39 @@
             },
             {
               "kind": "method",
-              "name": "handleOptionClick",
+              "name": "checkIsDuplicateDate",
               "privacy": "private",
               "parameters": [
                 {
-                  "name": "event",
+                  "name": "day",
                   "type": {
-                    "text": "MouseEvent"
+                    "text": "CalendarDay"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleSetTemporaryEndDate",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "day",
+                  "type": {
+                    "text": "CalendarDay"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleSelectDate",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "day",
+                  "type": {
+                    "text": "CalendarDay"
                   }
                 }
               ]
@@ -2845,7 +2891,7 @@
                 {
                   "name": "option",
                   "type": {
-                    "text": "POption"
+                    "text": "Date"
                   }
                 }
               ]
@@ -2862,8 +2908,9 @@
               "parameters": [
                 {
                   "name": "option",
+                  "optional": true,
                   "type": {
-                    "text": "POption | null"
+                    "text": "Date"
                   }
                 }
               ]
@@ -2874,29 +2921,9 @@
               "privacy": "private",
               "parameters": [
                 {
-                  "name": "option",
+                  "name": "options",
                   "type": {
-                    "text": "POption | POption[]"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "toggleOptionSelection",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "option",
-                  "type": {
-                    "text": "POption"
-                  }
-                },
-                {
-                  "name": "force",
-                  "optional": true,
-                  "type": {
-                    "text": "boolean"
+                    "text": "Date[]"
                   }
                 }
               ]
@@ -3007,21 +3034,53 @@
             {
               "kind": "method",
               "name": "goToPreviousMonth",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ],
               "description": "Moves the calendar to the previous month."
             },
             {
               "kind": "method",
               "name": "goToNextMonth",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ],
               "description": "Moves the calendar to the next month."
             },
             {
               "kind": "method",
               "name": "goToPreviousYear",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ],
               "description": "Moves the calendar to the previous year."
             },
             {
               "kind": "method",
               "name": "goToNextYear",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ],
               "description": "Moves the calendar to the next year."
             },
             {
@@ -3093,11 +3152,21 @@
           ],
           "attributes": [
             {
+              "name": "close-on-select",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Whether to close the calendar when a date is selected.\n\nWhen `true`, the calendar will close after a date is selected.\n\nThis attribute only applies when the calendar is in dialog mode and type not \"multiple\".",
+              "fieldName": "closeOnSelect"
+            },
+            {
               "name": "formatter",
               "type": {
                 "text": "string"
               },
               "default": "\"YYYY-MM-DD\"",
+              "description": "The date format to use when formatting the date.\n\nThe format string is a combination of the following tokens:\n\n| Token | Description |\n|-------|-------------|\n| `YY`  | Four-digit year |\n| `YYYY` | Four-digit year |\n| `M`   | Month, numeric (0-11) |\n| `MM`  | Month, numeric (00-11) |\n| `MMM` | Month, abbreviated |\n| `MMMM` | Month, full |\n| `D`   | Day of month, numeric (1-31) |\n| `DD`  | Day of month, numeric (01-31) |\n| `d`   | Day of week, numeric (0-6) |\n| `dd`  | Day of week, numeric (Su-Sa) |\n| `ddd` | Day of week, abbreviated |\n| `dddd` | Day of week, full |\n| `H`   | Hour, numeric, 24-hour (0-23) |\n| `HH`  | Hour, numeric, 24-hour (00-23) |\n| `h`   | Hour, numeric, 12-hour (1-12) |\n| `hh`  | Hour, numeric, 12-hour (01-12) |\n| `m`   | Minute, numeric (0-59) |\n| `mm`  | Minute, numeric (00-59) |\n| `s`   | Second, numeric (0-59) |\n| `ss`  | Second, numeric (00-59) |",
               "fieldName": "formatter"
             },
             {
@@ -3141,7 +3210,7 @@
               "type": {
                 "text": "string"
               },
-              "default": "\"DD/MM/YYYY\"",
+              "default": "\"MM/DD/YYYY\"",
               "description": "Placeholder text to show as a hint when the select is empty.",
               "fieldName": "placeholder"
             },
@@ -3256,7 +3325,7 @@
             {
               "name": "getTag",
               "type": {
-                "text": "(option: POption, index: number) => TemplateResult | string | HTMLElement"
+                "text": "(option: Date, index: number) => TemplateResult | string | HTMLElement"
               },
               "description": "A function that customizes the tags to be rendered when type=multiple. The first argument is the option, the second\nis the current tag's index.  The function should return either a Lit TemplateResult or a string containing trusted HTML of the symbol to render at\nthe specified value.",
               "fieldName": "getTag"
@@ -3357,10 +3426,10 @@
           "tagNameWithoutPrefix": "calendar",
           "tagName": "p-calendar",
           "customElement": true,
-          "jsDoc": "/**\n * @summary A calendar prototype for Pure UI.\n * @documentation https://pureui.xyz/components/calendar\n *\n * @since 1.0\n * @status experimental\n *\n * @dependency p-icon\n * @dependency p-popup\n * @dependency p-tag\n *\n * @event p-change - Emitted when the control's value changes.\n * @event p-clear - Emitted when the control's value is cleared.\n * @event p-input - Emitted when the control receives input.\n * @event p-focus - Emitted when the control gains focus.\n * @event p-blur - Emitted when the control loses focus.\n * @event p-show - Emitted when the select's menu opens.\n * @event p-after-show - Emitted after the select's menu opens and all animations are complete.\n * @event p-hide - Emitted when the select's menu closes.\n * @event p-after-hide - Emitted after the select's menu closes and all animations are complete.\n * @event p-invalid - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n *\n *\n * @slot footer - Optional content to place in the calendar's footer.\n * @slot label - The input's label. Alternatively, you can use the `label` attribute.\n * @slot prefix - Used to prepend a presentational icon or similar element to the calendar.\n * @slot suffix - Used to append a presentational icon or similar element to the calendar.\n * @slot clear-icon - An icon to use in lieu of the default clear icon.\n * @slot help-text - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.\n *\n * @csspart day - Targets day cells.\n * @csspart day-label - Targets the day labels (the name of the days in the grid).\n * @csspart day-weekend - Targets days that fall on weekends.\n * @csspart day-weekday - Targets weekdays.\n * @csspart day-current-month - Targets days in the current month.\n * @csspart day-previous-month - Targets days in the previous month.\n * @csspart day-next-month - Targets days in the next month.\n * @csspart day-today - Targets today.\n * @csspart day-selected - Targets selected days.\n * @csspart day-selection-start - Targets days that begin a selection.\n * @csspart day-selection-end - Targets days that end a selection.\n *\n * @cssproperty --border-color - The calendar's border color.\n * @cssproperty --border-width - The calendar's border width.\n * @cssproperty --border-radius - The border radius of the calendar.\n */",
+          "jsDoc": "/**\n * @summary A calendar prototype for Pure UI.\n * @documentation https://pureui.xyz/components/calendar\n *\n * @since 1.1.5\n * @status stable\n *\n * @dependency p-icon\n * @dependency p-popup\n * @dependency p-tag\n *\n * @event p-change - Emitted when the control's value changes.\n * @event p-clear - Emitted when the control's value is cleared.\n * @event p-input - Emitted when the control receives input.\n * @event p-focus - Emitted when the control gains focus.\n * @event p-blur - Emitted when the control loses focus.\n * @event p-show - Emitted when the select's menu opens.\n * @event p-after-show - Emitted after the select's menu opens and all animations are complete.\n * @event p-hide - Emitted when the select's menu closes.\n * @event p-after-hide - Emitted after the select's menu closes and all animations are complete.\n * @event p-invalid - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n *\n *\n * @slot footer - Optional content to place in the calendar's footer.\n * @slot label - The input's label. Alternatively, you can use the `label` attribute.\n * @slot prefix - Used to prepend a presentational icon or similar element to the calendar.\n * @slot suffix - Used to append a presentational icon or similar element to the calendar.\n * @slot clear-icon - An icon to use in lieu of the default clear icon.\n * @slot help-text - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.\n *\n * @csspart day - Targets day cells.\n * @csspart day-label - Targets the day labels (the name of the days in the grid).\n * @csspart day-weekend - Targets days that fall on weekends.\n * @csspart day-weekday - Targets weekdays.\n * @csspart day-current-month - Targets days in the current month.\n * @csspart day-previous-month - Targets days in the previous month.\n * @csspart day-next-month - Targets days in the next month.\n * @csspart day-today - Targets today.\n * @csspart day-selected - Targets selected days.\n * @csspart day-selection-start - Targets days that begin a selection.\n * @csspart day-selection-end - Targets days that end a selection.\n *\n * @cssproperty --border-color - The calendar's border color.\n * @cssproperty --border-width - The calendar's border width.\n * @cssproperty --border-radius - The border radius of the calendar.\n */",
           "documentation": "https://pureui.xyz/components/calendar",
-          "since": "1.0",
-          "status": "experimental",
+          "since": "1.1.5",
+          "status": "stable",
           "dependencies": [
             "p-icon",
             "p-popup",
@@ -7117,6 +7186,16 @@
             },
             {
               "kind": "field",
+              "name": "autoClose",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "auto-close",
+              "reflects": true
+            },
+            {
+              "kind": "field",
               "name": "behavior",
               "type": {
                 "text": "\"click\" | \"hover\""
@@ -7348,6 +7427,14 @@
             }
           ],
           "attributes": [
+            {
+              "name": "auto-close",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "autoClose"
+            },
             {
               "name": "behavior",
               "type": {
@@ -18679,7 +18766,7 @@
   "package": {
     "name": "pure-uikit",
     "description": "A forward-thinking library of web components.",
-    "version": "1.1.5",
+    "version": "1.1.6",
     "author": "Mr.P",
     "homepage": "https://pureui.xyz",
     "license": "MIT"
