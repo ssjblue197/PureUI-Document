@@ -1,11 +1,85 @@
 {
   "$schema": "https://raw.githubusercontent.com/JetBrains/web-types/master/schema/web-types.json",
   "name": "pure-uikit",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description-markup": "markdown",
   "contributions": {
     "html": {
       "elements": [
+        {
+          "name": "p-animated-image",
+          "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "src",
+              "description": "The path to the image to load.",
+              "value": { "type": "string" }
+            },
+            {
+              "name": "alt",
+              "description": "A description of the image used by assistive devices.",
+              "value": { "type": "string" }
+            },
+            {
+              "name": "play",
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "value": { "type": "boolean" }
+            }
+          ],
+          "slots": [
+            {
+              "name": "play-icon",
+              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`."
+            },
+            {
+              "name": "pause-icon",
+              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`."
+            }
+          ],
+          "events": [
+            {
+              "name": "p-load",
+              "description": "Emitted when the image loads successfully."
+            },
+            {
+              "name": "p-error",
+              "description": "Emitted when the image fails to load."
+            }
+          ],
+          "js": {
+            "properties": [
+              { "name": "animatedImage", "type": "HTMLImageElement" },
+              { "name": "frozenFrame", "type": "string" },
+              { "name": "isLoaded", "type": "boolean" },
+              {
+                "name": "src",
+                "description": "The path to the image to load.",
+                "type": "string"
+              },
+              {
+                "name": "alt",
+                "description": "A description of the image used by assistive devices.",
+                "type": "string"
+              },
+              {
+                "name": "play",
+                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+                "type": "boolean"
+              }
+            ],
+            "events": [
+              {
+                "name": "p-load",
+                "description": "Emitted when the image loads successfully."
+              },
+              {
+                "name": "p-error",
+                "description": "Emitted when the image fails to load."
+              }
+            ]
+          }
+        },
         {
           "name": "p-alert",
           "description": "Alerts are used to display important messages inline or as toast notifications.\n---\n\n\n### **Events:**\n - **p-show** - Emitted when the alert opens.\n- **p-after-show** - Emitted after the alert opens and all animations are complete.\n- **p-hide** - Emitted when the alert closes.\n- **p-after-hide** - Emitted after the alert closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the alert.\n- **hide()** - Hides the alert\n- **toast()** - Displays the alert as a toast notification. This will move the alert out of its position in the DOM and, when\ndismissed, it will be removed from the DOM completely. By storing a reference to the alert, you can reuse it by\ncalling this method again. The returned promise will resolve after the alert is hidden.\n\n### **Slots:**\n - _default_ - The alert's main content.\n- **icon** - An icon to show in the alert. Works best with `<p-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the optional icon.\n- **message** - The container that wraps the alert's main content.\n- **close-button** - The close button, an `<p-icon-button>`.\n- **close-button__base** - The close button's exported `base` part.",
@@ -99,91 +173,6 @@
               {
                 "name": "p-after-hide",
                 "description": "Emitted after the alert closes and all animations are complete."
-              }
-            ]
-          }
-        },
-        {
-          "name": "p-avatar",
-          "description": "Avatars are used to represent a person or object.\n---\n\n\n### **Events:**\n - **p-error** - The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause.\n\n### **Slots:**\n - **icon** - The default icon to use when no image or initials are present. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--size** - The size of the avatar. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the avatar's icon.\n- **initials** - The container that wraps the avatar's initials.\n- **image** - The avatar image. Only shown when the `image` attribute is set.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "image",
-              "description": "The image source to use for the avatar.",
-              "value": { "type": "string", "default": "\"\"" }
-            },
-            {
-              "name": "label",
-              "description": "A label to use to describe the avatar to assistive devices.",
-              "value": { "type": "string", "default": "\"\"" }
-            },
-            {
-              "name": "initials",
-              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-              "value": { "type": "string", "default": "\"\"" }
-            },
-            {
-              "name": "loading",
-              "description": "Indicates how the browser should load the image.",
-              "value": {
-                "type": "\"eager\" | \"lazy\"",
-                "default": "\"eager\""
-              }
-            },
-            {
-              "name": "shape",
-              "description": "The shape of the avatar.",
-              "value": {
-                "type": "\"circle\" | \"square\" | \"rounded\"",
-                "default": "\"circle\""
-              }
-            }
-          ],
-          "slots": [
-            {
-              "name": "icon",
-              "description": "The default icon to use when no image or initials are present. Works best with `<p-icon>`."
-            }
-          ],
-          "events": [
-            {
-              "name": "p-error",
-              "description": "The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause."
-            }
-          ],
-          "js": {
-            "properties": [
-              {
-                "name": "image",
-                "description": "The image source to use for the avatar.",
-                "type": "string"
-              },
-              {
-                "name": "label",
-                "description": "A label to use to describe the avatar to assistive devices.",
-                "type": "string"
-              },
-              {
-                "name": "initials",
-                "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-                "type": "string"
-              },
-              {
-                "name": "loading",
-                "description": "Indicates how the browser should load the image.",
-                "type": "\"eager\" | \"lazy\""
-              },
-              {
-                "name": "shape",
-                "description": "The shape of the avatar.",
-                "type": "\"circle\" | \"square\" | \"rounded\""
-              }
-            ],
-            "events": [
-              {
-                "name": "p-error",
-                "description": "The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause."
               }
             ]
           }
@@ -354,77 +343,170 @@
           }
         },
         {
-          "name": "p-animated-image",
-          "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
+          "name": "p-avatar",
+          "description": "Avatars are used to represent a person or object.\n---\n\n\n### **Events:**\n - **p-error** - The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause.\n\n### **Slots:**\n - **icon** - The default icon to use when no image or initials are present. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--size** - The size of the avatar. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the avatar's icon.\n- **initials** - The container that wraps the avatar's initials.\n- **image** - The avatar image. Only shown when the `image` attribute is set.",
           "doc-url": "",
           "attributes": [
             {
-              "name": "src",
-              "description": "The path to the image to load.",
-              "value": { "type": "string" }
+              "name": "image",
+              "description": "The image source to use for the avatar.",
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
-              "name": "alt",
-              "description": "A description of the image used by assistive devices.",
-              "value": { "type": "string" }
+              "name": "label",
+              "description": "A label to use to describe the avatar to assistive devices.",
+              "value": { "type": "string", "default": "\"\"" }
             },
             {
-              "name": "play",
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "value": { "type": "boolean" }
+              "name": "initials",
+              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+              "value": { "type": "string", "default": "\"\"" }
+            },
+            {
+              "name": "loading",
+              "description": "Indicates how the browser should load the image.",
+              "value": {
+                "type": "\"eager\" | \"lazy\"",
+                "default": "\"eager\""
+              }
+            },
+            {
+              "name": "shape",
+              "description": "The shape of the avatar.",
+              "value": {
+                "type": "\"circle\" | \"square\" | \"rounded\"",
+                "default": "\"circle\""
+              }
             }
           ],
           "slots": [
             {
-              "name": "play-icon",
-              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`."
-            },
-            {
-              "name": "pause-icon",
-              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`."
+              "name": "icon",
+              "description": "The default icon to use when no image or initials are present. Works best with `<p-icon>`."
             }
           ],
           "events": [
             {
-              "name": "p-load",
-              "description": "Emitted when the image loads successfully."
-            },
-            {
               "name": "p-error",
-              "description": "Emitted when the image fails to load."
+              "description": "The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause."
             }
           ],
           "js": {
             "properties": [
-              { "name": "animatedImage", "type": "HTMLImageElement" },
-              { "name": "frozenFrame", "type": "string" },
-              { "name": "isLoaded", "type": "boolean" },
               {
-                "name": "src",
-                "description": "The path to the image to load.",
+                "name": "image",
+                "description": "The image source to use for the avatar.",
                 "type": "string"
               },
               {
-                "name": "alt",
-                "description": "A description of the image used by assistive devices.",
+                "name": "label",
+                "description": "A label to use to describe the avatar to assistive devices.",
                 "type": "string"
               },
               {
-                "name": "play",
-                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-                "type": "boolean"
+                "name": "initials",
+                "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+                "type": "string"
+              },
+              {
+                "name": "loading",
+                "description": "Indicates how the browser should load the image.",
+                "type": "\"eager\" | \"lazy\""
+              },
+              {
+                "name": "shape",
+                "description": "The shape of the avatar.",
+                "type": "\"circle\" | \"square\" | \"rounded\""
               }
             ],
             "events": [
               {
-                "name": "p-load",
-                "description": "Emitted when the image loads successfully."
-              },
-              {
                 "name": "p-error",
-                "description": "Emitted when the image fails to load."
+                "description": "The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause."
               }
             ]
+          }
+        },
+        {
+          "name": "p-badge",
+          "description": "Badges are used to draw attention and display statuses or counts.\n---\n\n\n### **Slots:**\n - _default_ - The badge's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "variant",
+              "description": "The badge's theme variant.",
+              "value": {
+                "type": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\"",
+                "default": "\"primary\""
+              }
+            },
+            {
+              "name": "pill",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "pulse",
+              "description": "Makes the badge pulsate to draw attention.",
+              "value": { "type": "boolean", "default": "false" }
+            }
+          ],
+          "slots": [{ "name": "", "description": "The badge's content." }],
+          "events": [],
+          "js": {
+            "properties": [
+              {
+                "name": "variant",
+                "description": "The badge's theme variant.",
+                "type": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\""
+              },
+              {
+                "name": "pill",
+                "description": "Draws a pill-style badge with rounded edges.",
+                "type": "boolean"
+              },
+              {
+                "name": "pulse",
+                "description": "Makes the badge pulsate to draw attention.",
+                "type": "boolean"
+              }
+            ],
+            "events": []
+          }
+        },
+        {
+          "name": "p-breadcrumb",
+          "description": "Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.\n---\n\n\n### **Slots:**\n - _default_ - One or more breadcrumb items to display.\n- **separator** - The separator to use between breadcrumb items. Works best with `<p-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "label",
+              "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
+              "value": { "type": "string", "default": "\"\"" }
+            }
+          ],
+          "slots": [
+            {
+              "name": "",
+              "description": "One or more breadcrumb items to display."
+            },
+            {
+              "name": "separator",
+              "description": "The separator to use between breadcrumb items. Works best with `<p-icon>`."
+            }
+          ],
+          "events": [],
+          "js": {
+            "properties": [
+              { "name": "defaultSlot", "type": "HTMLSlotElement" },
+              { "name": "separatorSlot", "type": "HTMLSlotElement" },
+              {
+                "name": "label",
+                "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
+                "type": "string"
+              }
+            ],
+            "events": []
           }
         },
         {
@@ -485,88 +567,6 @@
                 "name": "rel",
                 "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
                 "type": "string"
-              }
-            ],
-            "events": []
-          }
-        },
-        {
-          "name": "p-breadcrumb",
-          "description": "Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.\n---\n\n\n### **Slots:**\n - _default_ - One or more breadcrumb items to display.\n- **separator** - The separator to use between breadcrumb items. Works best with `<p-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "label",
-              "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
-              "value": { "type": "string", "default": "\"\"" }
-            }
-          ],
-          "slots": [
-            {
-              "name": "",
-              "description": "One or more breadcrumb items to display."
-            },
-            {
-              "name": "separator",
-              "description": "The separator to use between breadcrumb items. Works best with `<p-icon>`."
-            }
-          ],
-          "events": [],
-          "js": {
-            "properties": [
-              { "name": "defaultSlot", "type": "HTMLSlotElement" },
-              { "name": "separatorSlot", "type": "HTMLSlotElement" },
-              {
-                "name": "label",
-                "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
-                "type": "string"
-              }
-            ],
-            "events": []
-          }
-        },
-        {
-          "name": "p-badge",
-          "description": "Badges are used to draw attention and display statuses or counts.\n---\n\n\n### **Slots:**\n - _default_ - The badge's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "variant",
-              "description": "The badge's theme variant.",
-              "value": {
-                "type": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\"",
-                "default": "\"primary\""
-              }
-            },
-            {
-              "name": "pill",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "value": { "type": "boolean", "default": "false" }
-            },
-            {
-              "name": "pulse",
-              "description": "Makes the badge pulsate to draw attention.",
-              "value": { "type": "boolean", "default": "false" }
-            }
-          ],
-          "slots": [{ "name": "", "description": "The badge's content." }],
-          "events": [],
-          "js": {
-            "properties": [
-              {
-                "name": "variant",
-                "description": "The badge's theme variant.",
-                "type": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\""
-              },
-              {
-                "name": "pill",
-                "description": "Draws a pill-style badge with rounded edges.",
-                "type": "boolean"
-              },
-              {
-                "name": "pulse",
-                "description": "Makes the badge pulsate to draw attention.",
-                "type": "boolean"
               }
             ],
             "events": []
@@ -901,7 +901,7 @@
         },
         {
           "name": "p-calendar",
-          "description": "A calendar prototype for Pure UI.\n---\n\n\n### **Events:**\n - **p-change** - Emitted when the control's value changes.\n- **p-clear** - Emitted when the control's value is cleared.\n- **p-input** - Emitted when the control receives input.\n- **p-focus** - Emitted when the control gains focus.\n- **p-blur** - Emitted when the control loses focus.\n- **p-show** - Emitted when the select's menu opens.\n- **p-after-show** - Emitted after the select's menu opens and all animations are complete.\n- **p-hide** - Emitted when the select's menu closes.\n- **p-after-hide** - Emitted after the select's menu closes and all animations are complete.\n- **p-invalid** - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n\n### **Methods:**\n - **show()** - Shows the calendar.\n- **hide()** - Hides the calendar.\n- **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n- **focus(options: _FocusOptions_)** - Sets focus on the control.\n- **blur()** - Removes focus from the control.\n- **goToToday()** - Moves the calendar to the current month and year.\n- **goToPreviousMonth(event: _MouseEvent_)** - Moves the calendar to the previous month.\n- **goToNextMonth(event: _MouseEvent_)** - Moves the calendar to the next month.\n- **goToPreviousYear(event: _MouseEvent_)** - Moves the calendar to the previous year.\n- **goToNextYear(event: _MouseEvent_)** - Moves the calendar to the next year.\n\n### **Slots:**\n - **footer** - Optional content to place in the calendar's footer.\n- **label** - The input's label. Alternatively, you can use the `label` attribute.\n- **prefix** - Used to prepend a presentational icon or similar element to the calendar.\n- **suffix** - Used to append a presentational icon or similar element to the calendar.\n- **clear-icon** - An icon to use in lieu of the default clear icon.\n- **help-text** - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.\n\n### **CSS Properties:**\n - **--border-color** - The calendar's border color. _(default: undefined)_\n- **--border-width** - The calendar's border width. _(default: undefined)_\n- **--border-radius** - The border radius of the calendar. _(default: undefined)_\n\n### **CSS Parts:**\n - **day** - Targets day cells.\n- **day-label** - Targets the day labels (the name of the days in the grid).\n- **day-weekend** - Targets days that fall on weekends.\n- **day-weekday** - Targets weekdays.\n- **day-current-month** - Targets days in the current month.\n- **day-previous-month** - Targets days in the previous month.\n- **day-next-month** - Targets days in the next month.\n- **day-today** - Targets today.\n- **day-selected** - Targets selected days.\n- **day-selection-start** - Targets days that begin a selection.\n- **day-selection-end** - Targets days that end a selection.",
+          "description": "Calendar shows a monthly view of the Gregorian calendar, optionally allowing users to interact with dates.\n---\n\n\n### **Events:**\n - **p-change** - Emitted when the control's value changes.\n- **p-clear** - Emitted when the control's value is cleared.\n- **p-input** - Emitted when the control receives input.\n- **p-focus** - Emitted when the control gains focus.\n- **p-blur** - Emitted when the control loses focus.\n- **p-show** - Emitted when the select's menu opens.\n- **p-after-show** - Emitted after the select's menu opens and all animations are complete.\n- **p-hide** - Emitted when the select's menu closes.\n- **p-after-hide** - Emitted after the select's menu closes and all animations are complete.\n- **p-invalid** - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n\n### **Methods:**\n - **show()** - Shows the calendar.\n- **hide()** - Hides the calendar.\n- **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n- **focus(options: _FocusOptions_)** - Sets focus on the control.\n- **blur()** - Removes focus from the control.\n- **goToToday()** - Moves the calendar to the current month and year.\n- **goToPreviousMonth(event: _MouseEvent_)** - Moves the calendar to the previous month.\n- **goToNextMonth(event: _MouseEvent_)** - Moves the calendar to the next month.\n- **goToPreviousYear(event: _MouseEvent_)** - Moves the calendar to the previous year.\n- **goToNextYear(event: _MouseEvent_)** - Moves the calendar to the next year.\n\n### **Slots:**\n - **footer** - Optional content to place in the calendar's footer.\n- **label** - The input's label. Alternatively, you can use the `label` attribute.\n- **prefix** - Used to prepend a presentational icon or similar element to the calendar.\n- **suffix** - Used to append a presentational icon or similar element to the calendar.\n- **clear-icon** - An icon to use in lieu of the default clear icon.\n- **help-text** - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.\n\n### **CSS Properties:**\n - **--border-color** - The calendar's border color. _(default: undefined)_\n- **--border-width** - The calendar's border width. _(default: undefined)_\n- **--border-radius** - The border radius of the calendar. _(default: undefined)_\n\n### **CSS Parts:**\n - **calendar** - The component's container.\n- **day** - Targets day cells.\n- **day-label** - Targets the day labels (the name of the days in the grid).\n- **day-weekend** - Targets days that fall on weekends.\n- **day-weekday** - Targets weekdays.\n- **day-current-focus** - Targets days that are focused (used for keyboard navigation).\n- **day-current-month** - Targets days in the current month.\n- **day-previous-month** - Targets days in the previous month.\n- **day-next-month** - Targets days in the next month.\n- **day-today** - Targets today.\n- **day-selected** - Targets selected days.\n- **day-selection-start** - Targets days that begin a selection.\n- **day-selected-in-range** - Targets days that are in the middle of a selection when use type=\"range\".\n- **day-selection-end** - Targets days that end a selection.\n- **tag** - Targets days that selected when use type=\"multiple\".",
           "doc-url": "",
           "attributes": [
             {

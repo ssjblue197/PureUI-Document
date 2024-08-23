@@ -41,6 +41,33 @@
       ]
     },
     {
+      "name": "p-animated-image",
+      "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
+      "attributes": [
+        {
+          "name": "src",
+          "description": "The path to the image to load.",
+          "values": []
+        },
+        {
+          "name": "alt",
+          "description": "A description of the image used by assistive devices.",
+          "values": []
+        },
+        {
+          "name": "play",
+          "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+          "values": []
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://pureui.xyz/components/animated-image"
+        }
+      ]
+    },
+    {
       "name": "p-animation",
       "description": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n---\n\n\n### **Events:**\n - **p-cancel** - Emitted when the animation is canceled.\n- **p-finish** - Emitted when the animation finishes.\n- **p-start** - Emitted when the animation starts or restarts.\n\n### **Methods:**\n - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.\n- **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.\n\n### **Slots:**\n - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.",
       "attributes": [
@@ -104,33 +131,6 @@
         {
           "name": "Documentation",
           "url": "https://pureui.xyz/components/animation"
-        }
-      ]
-    },
-    {
-      "name": "p-animated-image",
-      "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
-      "attributes": [
-        {
-          "name": "src",
-          "description": "The path to the image to load.",
-          "values": []
-        },
-        {
-          "name": "alt",
-          "description": "A description of the image used by assistive devices.",
-          "values": []
-        },
-        {
-          "name": "play",
-          "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-          "values": []
-        }
-      ],
-      "references": [
-        {
-          "name": "Documentation",
-          "url": "https://pureui.xyz/components/animated-image"
         }
       ]
     },
@@ -424,7 +424,7 @@
     },
     {
       "name": "p-calendar",
-      "description": "A calendar prototype for Pure UI.\n---\n\n\n### **Events:**\n - **p-change** - Emitted when the control's value changes.\n- **p-clear** - Emitted when the control's value is cleared.\n- **p-input** - Emitted when the control receives input.\n- **p-focus** - Emitted when the control gains focus.\n- **p-blur** - Emitted when the control loses focus.\n- **p-show** - Emitted when the select's menu opens.\n- **p-after-show** - Emitted after the select's menu opens and all animations are complete.\n- **p-hide** - Emitted when the select's menu closes.\n- **p-after-hide** - Emitted after the select's menu closes and all animations are complete.\n- **p-invalid** - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n\n### **Methods:**\n - **show()** - Shows the calendar.\n- **hide()** - Hides the calendar.\n- **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n- **focus(options: _FocusOptions_)** - Sets focus on the control.\n- **blur()** - Removes focus from the control.\n- **goToToday()** - Moves the calendar to the current month and year.\n- **goToPreviousMonth(event: _MouseEvent_)** - Moves the calendar to the previous month.\n- **goToNextMonth(event: _MouseEvent_)** - Moves the calendar to the next month.\n- **goToPreviousYear(event: _MouseEvent_)** - Moves the calendar to the previous year.\n- **goToNextYear(event: _MouseEvent_)** - Moves the calendar to the next year.\n\n### **Slots:**\n - **footer** - Optional content to place in the calendar's footer.\n- **label** - The input's label. Alternatively, you can use the `label` attribute.\n- **prefix** - Used to prepend a presentational icon or similar element to the calendar.\n- **suffix** - Used to append a presentational icon or similar element to the calendar.\n- **clear-icon** - An icon to use in lieu of the default clear icon.\n- **help-text** - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.\n\n### **CSS Properties:**\n - **--border-color** - The calendar's border color. _(default: undefined)_\n- **--border-width** - The calendar's border width. _(default: undefined)_\n- **--border-radius** - The border radius of the calendar. _(default: undefined)_\n\n### **CSS Parts:**\n - **day** - Targets day cells.\n- **day-label** - Targets the day labels (the name of the days in the grid).\n- **day-weekend** - Targets days that fall on weekends.\n- **day-weekday** - Targets weekdays.\n- **day-current-month** - Targets days in the current month.\n- **day-previous-month** - Targets days in the previous month.\n- **day-next-month** - Targets days in the next month.\n- **day-today** - Targets today.\n- **day-selected** - Targets selected days.\n- **day-selection-start** - Targets days that begin a selection.\n- **day-selection-end** - Targets days that end a selection.",
+      "description": "Calendar shows a monthly view of the Gregorian calendar, optionally allowing users to interact with dates.\n---\n\n\n### **Events:**\n - **p-change** - Emitted when the control's value changes.\n- **p-clear** - Emitted when the control's value is cleared.\n- **p-input** - Emitted when the control receives input.\n- **p-focus** - Emitted when the control gains focus.\n- **p-blur** - Emitted when the control loses focus.\n- **p-show** - Emitted when the select's menu opens.\n- **p-after-show** - Emitted after the select's menu opens and all animations are complete.\n- **p-hide** - Emitted when the select's menu closes.\n- **p-after-hide** - Emitted after the select's menu closes and all animations are complete.\n- **p-invalid** - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n\n### **Methods:**\n - **show()** - Shows the calendar.\n- **hide()** - Hides the calendar.\n- **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n- **focus(options: _FocusOptions_)** - Sets focus on the control.\n- **blur()** - Removes focus from the control.\n- **goToToday()** - Moves the calendar to the current month and year.\n- **goToPreviousMonth(event: _MouseEvent_)** - Moves the calendar to the previous month.\n- **goToNextMonth(event: _MouseEvent_)** - Moves the calendar to the next month.\n- **goToPreviousYear(event: _MouseEvent_)** - Moves the calendar to the previous year.\n- **goToNextYear(event: _MouseEvent_)** - Moves the calendar to the next year.\n\n### **Slots:**\n - **footer** - Optional content to place in the calendar's footer.\n- **label** - The input's label. Alternatively, you can use the `label` attribute.\n- **prefix** - Used to prepend a presentational icon or similar element to the calendar.\n- **suffix** - Used to append a presentational icon or similar element to the calendar.\n- **clear-icon** - An icon to use in lieu of the default clear icon.\n- **help-text** - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.\n\n### **CSS Properties:**\n - **--border-color** - The calendar's border color. _(default: undefined)_\n- **--border-width** - The calendar's border width. _(default: undefined)_\n- **--border-radius** - The border radius of the calendar. _(default: undefined)_\n\n### **CSS Parts:**\n - **calendar** - The component's container.\n- **day** - Targets day cells.\n- **day-label** - Targets the day labels (the name of the days in the grid).\n- **day-weekend** - Targets days that fall on weekends.\n- **day-weekday** - Targets weekdays.\n- **day-current-focus** - Targets days that are focused (used for keyboard navigation).\n- **day-current-month** - Targets days in the current month.\n- **day-previous-month** - Targets days in the previous month.\n- **day-next-month** - Targets days in the next month.\n- **day-today** - Targets today.\n- **day-selected** - Targets selected days.\n- **day-selection-start** - Targets days that begin a selection.\n- **day-selected-in-range** - Targets days that are in the middle of a selection when use type=\"range\".\n- **day-selection-end** - Targets days that end a selection.\n- **tag** - Targets days that selected when use type=\"multiple\".",
       "attributes": [
         {
           "name": "close-on-select",

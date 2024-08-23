@@ -21,7 +21,7 @@ export type { PHideEvent } from "../../events/events.js";
 export type { PAfterHideEvent } from "../../events/events.js";
 export type { PInvalidEvent } from "../../events/events.js";
 /**
- * @summary A calendar prototype for Pure UI.
+ * @summary Calendar shows a monthly view of the Gregorian calendar, optionally allowing users to interact with dates.
  * @documentation https://pureui.xyz/components/calendar
  *
  * @since 1.1.5
@@ -50,17 +50,22 @@ export type { PInvalidEvent } from "../../events/events.js";
  * @slot clear-icon - An icon to use in lieu of the default clear icon.
  * @slot help-text - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.
  *
+ * @csspart calendar - The component's container.
  * @csspart day - Targets day cells.
  * @csspart day-label - Targets the day labels (the name of the days in the grid).
  * @csspart day-weekend - Targets days that fall on weekends.
  * @csspart day-weekday - Targets weekdays.
+ * @csspart day-current-focus - Targets days that are focused (used for keyboard navigation).
  * @csspart day-current-month - Targets days in the current month.
  * @csspart day-previous-month - Targets days in the previous month.
  * @csspart day-next-month - Targets days in the next month.
  * @csspart day-today - Targets today.
  * @csspart day-selected - Targets selected days.
  * @csspart day-selection-start - Targets days that begin a selection.
+ * @csspart day-selected-in-range - Targets days that are in the middle of a selection when use type="range".
  * @csspart day-selection-end - Targets days that end a selection.
+ * @csspart tag - Targets days that selected when use type="multiple".
+ *
  *
  * @cssproperty --border-color - The calendar's border color.
  * @cssproperty --border-width - The calendar's border width.

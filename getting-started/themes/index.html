@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="default" data-pure-ui-version="1.1.6">
+<html lang="en" data-layout="default" data-pure-ui-version="1.1.7">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -83,7 +83,7 @@
         <a href="/">
           <img src="/assets/images/wordmark.svg" alt="Pure UI" />
         </a>
-        <div class="sidebar-version">1.1.6</div>
+        <div class="sidebar-version">1.1.7</div>
       </header>
 
       <button class="search-box" type="button" title="Press / to search" aria-label="Search" data-plugin="search">
@@ -457,11 +457,11 @@
             All selectors must be scoped to the theme’s class to ensure interoperability with other themes. You should
             also scope them to <code>:host</code> so they can be imported and applied to custom element shadow roots.
           </p>
-          <pre><code class="language-css" id="code-block-73"><span class="token selector">:host,
+          <pre><code class="language-css" id="code-block-67"><span class="token selector">:host,
 .p-theme-purple-power</span> <span class="token punctuation">{</span>
   <span class="token comment">/* ... */</span>
 <span class="token punctuation">}</span>
-</code><p-copy-button class="copy-code-button" from="code-block-73"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-67"></p-copy-button></pre>
           <h3 id="activating-themes" class="anchor-heading">
             Activating Themes<a href="#activating-themes" aria-label='Direct link to "Activating Themes"'></a>
           </h3>
@@ -469,7 +469,7 @@
             To activate a theme, import it and apply the theme’s class to the <code>&lt;html&gt;</code> element. This
             example imports and activates the built-in dark theme.
           </p>
-          <pre><code class="language-html" id="code-block-74"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>p-theme-dark<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+          <pre><code class="language-html" id="code-block-68"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>p-theme-dark<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>path/to/pure-ui/dist/themes/dark.css<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
@@ -478,7 +478,7 @@
     ...
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-74"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-68"></p-copy-button></pre>
           <div role="alert" class="callout callout--tip">
             <p>
               There is one exception to this rule — the light theme <em>does not</em> need to be activated. For
@@ -496,7 +496,7 @@
             You can activate themes on various containers throughout the page. This example uses the light theme with a
             dark-themed sidebar.
           </p>
-          <pre><code class="language-html" id="code-block-75"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+          <pre><code class="language-html" id="code-block-69"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>path/to/pure-ui/dist/themes/light.css<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>path/to/pure-ui/dist/themes/dark.css<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
@@ -510,7 +510,7 @@
     <span class="token comment">&lt;!-- light-themed content --&gt;</span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-75"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-69"></p-copy-button></pre>
           <p>It’s for this reason that themes must be scoped to specific classes.</p>
           <h2 id="creating-themes" class="anchor-heading">
             Creating Themes<a href="#creating-themes" aria-label='Direct link to "Creating Themes"'></a>
@@ -534,18 +534,18 @@
             your theme <em>after</em> the built-in theme.
           </p>
           <p>If you’re customizing the light theme, you should scope your styles to the following selectors.</p>
-          <pre><code class="language-css" id="code-block-76"><span class="token selector">:root,
+          <pre><code class="language-css" id="code-block-70"><span class="token selector">:root,
 :host,
 .p-theme-light</span> <span class="token punctuation">{</span>
   <span class="token comment">/* your custom styles here */</span>
 <span class="token punctuation">}</span>
-</code><p-copy-button class="copy-code-button" from="code-block-76"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-70"></p-copy-button></pre>
           <p>If you’re customizing the dark theme, you should scope your styles to the following selectors.</p>
-          <pre><code class="language-css" id="code-block-77"><span class="token selector">:host,
+          <pre><code class="language-css" id="code-block-71"><span class="token selector">:host,
 .p-theme-dark</span> <span class="token punctuation">{</span>
   <span class="token comment">/* your custom styles here */</span>
 <span class="token punctuation">}</span>
-</code><p-copy-button class="copy-code-button" from="code-block-77"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-71"></p-copy-button></pre>
           <p>
             By customizing a built-in theme, you’ll maintain a smaller stylesheet containing only the changes you’ve
             made. Contrast this to <a href="#creating-a-new-theme">creating a new theme</a>, where you need to
@@ -569,11 +569,11 @@
             Start by changing the selector to match your theme’s name. Assuming your new theme is called “Purple Power”,
             your theme should be scoped like this.
           </p>
-          <pre><code class="language-css" id="code-block-78"><span class="token selector">:host,
+          <pre><code class="language-css" id="code-block-72"><span class="token selector">:host,
 .p-theme-purple-power</span> <span class="token punctuation">{</span>
   <span class="token comment">/* your custom styles here */</span>
 <span class="token punctuation">}</span>
-</code><p-copy-button class="copy-code-button" from="code-block-78"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-72"></p-copy-button></pre>
           <p>
             By creating a new theme, you won’t be relying on a built-in theme as a foundation. Because the theme is
             decoupled from the built-ins, you can activate it independently as an alternative to the built-ins. This is
@@ -601,15 +601,15 @@
             dark modes with minimal effort.
           </p>
           <p>To install the dark theme, add the following to the <code>&lt;head&gt;</code> section of your page.</p>
-          <pre><code class="language-html" id="code-block-79"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.1.6/cdn/themes/dark.css<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-79"></p-copy-button></pre>
+          <pre><code class="language-html" id="code-block-73"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.1.7/cdn/themes/dark.css<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+</code><p-copy-button class="copy-code-button" from="code-block-73"></p-copy-button></pre>
           <p>
             To activate the theme, apply the <code>p-theme-dark</code> class to the <code>&lt;html&gt;</code> element.
           </p>
-          <pre><code class="language-html" id="code-block-80"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>p-theme-dark<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+          <pre><code class="language-html" id="code-block-74"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>p-theme-dark<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   ...
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-80"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-74"></p-copy-button></pre>
           <h3 id="detecting-the-users-color-scheme-preference" class="anchor-heading">
             Detecting the User’s Color Scheme Preference<a
               href="#detecting-the-users-color-scheme-preference"
