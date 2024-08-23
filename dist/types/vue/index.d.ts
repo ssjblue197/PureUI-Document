@@ -4,9 +4,9 @@ import type { PAlert } from "../../components/alert/alert.component.js";
 import type { PAvatar } from "../../components/avatar/avatar.component.js";
 import type { PBadge } from "../../components/badge/badge.component.js";
 import type { PBreadcrumb } from "../../components/breadcrumb/breadcrumb.component.js";
+import type { PBreadcrumbItem } from "../../components/breadcrumb-item/breadcrumb-item.component.js";
 import type { PAnimatedImage } from "../../components/animated-image/animated-image.component.js";
 import type { PAnimation } from "../../components/animation/animation.component.js";
-import type { PBreadcrumbItem } from "../../components/breadcrumb-item/breadcrumb-item.component.js";
 import type { PButton } from "../../components/button/button.component.js";
 import type { PButtonGroup } from "../../components/button-group/button-group.component.js";
 import type { PCalendar } from "../../components/calendar/calendar.component.js";
@@ -119,6 +119,16 @@ screen readers and other assistive devices to provide more context for users. */
   separatorSlot?: PBreadcrumb["separatorSlot"];
 };
 
+type PBreadcrumbItemProps = {
+  /** Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered
+internally. When unset, a button will be rendered instead. */
+  href?: PBreadcrumbItem["href"];
+  /** Tells the browser where to open the link. Only used when `href` is set. */
+  target?: PBreadcrumbItem["target"];
+  /** The `rel` attribute to use on the link. Only used when `href` is set. */
+  rel?: PBreadcrumbItem["rel"];
+};
+
 type PAnimatedImageProps = {
   /** The path to the image to load. */
   src?: PAnimatedImage["src"];
@@ -178,16 +188,6 @@ value can be changed without causing the animation to restart. */
   "onp-finish"?: (e: CustomEvent<never>) => void;
   /** Emitted when the animation starts or restarts. */
   "onp-start"?: (e: CustomEvent<never>) => void;
-};
-
-type PBreadcrumbItemProps = {
-  /** Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered
-internally. When unset, a button will be rendered instead. */
-  href?: PBreadcrumbItem["href"];
-  /** Tells the browser where to open the link. Only used when `href` is set. */
-  target?: PBreadcrumbItem["target"];
-  /** The `rel` attribute to use on the link. Only used when `href` is set. */
-  rel?: PBreadcrumbItem["rel"];
 };
 
 type PButtonProps = {
@@ -270,21 +270,127 @@ devices when interacting with the control and is strongly recommended. */
 };
 
 type PCalendarProps = {
+  /**  */
+  formatter?: PCalendar["formatter"];
+  /** Indicates whether the calendar is in typing mode.
+Typing mode means that the calendar accepts user input and emits `p-input` and `p-change` events when the user types a valid date.
+When typing mode is `false`, the calendar does not accept user input and does not emit `p-input` or `p-change` events. */
+  typing?: PCalendar["typing"];
+  /** The name of the calendar, submitted as a name/value pair with form data. */
+  name?: PCalendar["name"];
+  /** The current value of the calendar, submitted as a name/value pair with form data. When type is set to`multiple`, the
+value attribute will be a space-delimited list of values based on the dates selected, and the value property will
+be an array. **For this reason, values must not contain spaces.** */
+  value?: PCalendar["value"];
+  /** The select's size. */
+  size?: PCalendar["size"];
+  /** Placeholder text to show as a hint when the select is empty. */
+  placeholder?: PCalendar["placeholder"];
+  /** The maximum number of selected options to show when `multiple` is true. After the maximum, "+n" will be shown to
+indicate the number of additional items that are selected. Set to 0 to remove the limit. */
+  "max-options-visible"?: PCalendar["maxOptionsVisible"];
+  /** Disables the select control. */
+  disabled?: PCalendar["disabled"];
+  /** Adds a clear button when the select is not empty. */
+  clearable?: PCalendar["clearable"];
+  /** Indicates whether or not the calendar is open. You can toggle this attribute to show and hide the menu, or you can
+use the `show()` and `hide()` methods and this attribute will reflect the select's open state. */
+  open?: PCalendar["open"];
+  /** Enable this option to prevent the calendar from being clipped when the component is placed inside a container with
+`overflow: auto|scroll`. Hoisting uses a fixed positioning strategy that works in many, but not all, scenarios. */
+  hoist?: PCalendar["hoist"];
+  /** Draws a filled select. */
+  filled?: PCalendar["filled"];
+  /** Draws a pill-style select with rounded edges. */
+  pill?: PCalendar["pill"];
+  /** The calendar's label. If you need to display HTML, use the `label` slot instead. */
+  label?: PCalendar["label"];
+  /** The preferred placement of the calendar's popup. Note that the actual placement may vary as needed to keep the calendar
+inside of the viewport. */
+  placement?: PCalendar["placement"];
+  /** The select's help text. If you need to display HTML, use the `help-text` slot instead. */
+  "help-text"?: PCalendar["helpText"];
+  /** By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you
+to place the form control outside of a form and associate it with the form that has this `id`. The form must be in
+the same document or shadow root for this to work. */
+  form?: PCalendar["form"];
+  /** The select's required attribute. */
+  required?: PCalendar["required"];
+  /** A function that customizes the tags to be rendered when type=multiple. The first argument is the option, the second
+is the current tag's index.  The function should return either a Lit TemplateResult or a string containing trusted HTML of the symbol to render at
+the specified value. */
+  getTag?: PCalendar["getTag"];
+  /** When `true`, the calendar will show a button to quickly jump to today's date. */
+  "show-today"?: PCalendar["showToday"];
+  /** The mode of the calendar.
+- "default": calendar is displayed in a popup.
+- "inline": calendar is displayed inline.
+TODO in future.... */
+  mode?: PCalendar["mode"];
+  /** The type of selection the calendar allows.
+- "single": allows selecting a single date.
+- "multiple": allows selecting multiple dates.
+- "range": allows selecting a range of dates. */
+  type?: PCalendar["type"];
+  /** If `true`, the calendar will automatically receive focus when it open.
+This can be useful when using the calendar in a dialog or other scenario where it should
+receive focus without requiring the user to click on it. */
+  autofocus?: PCalendar["autofocus"];
   /** The month to render, 1-12/ */
   month?: PCalendar["month"];
   /** The year to render. */
   year?: PCalendar["year"];
+  /** The date to render. */
+  date?: PCalendar["date"];
   /** Determines how day labels are shown, e.g. "M", "Mon", or "Monday". */
   "day-labels"?: PCalendar["dayLabels"];
   /** Determines how month labels are shown, e.g. "J", "Jan", or "January". */
   "month-labels"?: PCalendar["monthLabels"];
   /** When true, dates from the previous and next month will also be shown to fill out the grid. */
   "show-adjacent-dates"?: PCalendar["showAdjacentDates"];
-  /** Draws the target dates as a selection in the calendar. */
-  selectedDates?: PCalendar["selectedDates"];
-
-  /** Emitted when the date changes. */
+  /**  */
+  popup?: PCalendar["popup"];
+  /**  */
+  combobox?: PCalendar["combobox"];
+  /**  */
+  displayInput?: PCalendar["displayInput"];
+  /**  */
+  valueInput?: PCalendar["valueInput"];
+  /**  */
+  calendar?: PCalendar["calendar"];
+  /** The display label to show in the select when no options are selected.
+Used when the control is not focused. */
+  displayLabel?: PCalendar["displayLabel"];
+  /** The currently selected option. */
+  currentOption?: PCalendar["currentOption"];
+  /** The selected options. */
+  selectedOptions?: PCalendar["selectedOptions"];
+  /** The default value of the form control. Primarily used for resetting the form control. */
+  defaultValue?: PCalendar["defaultValue"];
+  /** Gets the validity state object */
+  validity?: PCalendar["validity"];
+  /** Gets the validation message */
+  validationMessage?: PCalendar["validationMessage"];
+  /** Emitted when the control's value changes. */
   "onp-change"?: (e: CustomEvent<never>) => void;
+  /** Emitted when the control's value is cleared. */
+  "onp-clear"?: (e: CustomEvent<never>) => void;
+  /** Emitted when the control receives input. */
+  "onp-input"?: (e: CustomEvent<never>) => void;
+  /** Emitted when the control gains focus. */
+  "onp-focus"?: (e: CustomEvent<never>) => void;
+  /** Emitted when the control loses focus. */
+  "onp-blur"?: (e: CustomEvent<never>) => void;
+  /** Emitted when the select's menu opens. */
+  "onp-show"?: (e: CustomEvent<never>) => void;
+  /** Emitted after the select's menu opens and all animations are complete. */
+  "onp-after-show"?: (e: CustomEvent<never>) => void;
+  /** Emitted when the select's menu closes. */
+  "onp-hide"?: (e: CustomEvent<never>) => void;
+  /** Emitted after the select's menu closes and all animations are complete. */
+  "onp-after-hide"?: (e: CustomEvent<never>) => void;
+  /** Emitted when the form control has been checked for validity and its constraints aren't satisfied. */
+  "onp-invalid"?: (e: CustomEvent<never>) => void;
 };
 
 type PCardProps = {};
@@ -1683,6 +1789,26 @@ export type CustomElements = {
   "p-breadcrumb": DefineComponent<PBreadcrumbProps>;
 
   /**
+   * Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.
+   * ---
+   *
+   *
+   * ### **Slots:**
+   *  - _default_ - The breadcrumb item's label.
+   * - **prefix** - An optional prefix, usually an icon or icon button.
+   * - **suffix** - An optional suffix, usually an icon or icon button.
+   * - **separator** - The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<p-breadcrumb>` instead.
+   *
+   * ### **CSS Parts:**
+   *  - **base** - The component's base wrapper.
+   * - **label** - The breadcrumb item's label.
+   * - **prefix** - The container that wraps the prefix.
+   * - **suffix** - The container that wraps the suffix.
+   * - **separator** - The container that wraps the separator.
+   */
+  "p-breadcrumb-item": DefineComponent<PBreadcrumbItemProps>;
+
+  /**
    * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
    * ---
    *
@@ -1722,26 +1848,6 @@ export type CustomElements = {
    *  - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.
    */
   "p-animation": DefineComponent<PAnimationProps>;
-
-  /**
-   * Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.
-   * ---
-   *
-   *
-   * ### **Slots:**
-   *  - _default_ - The breadcrumb item's label.
-   * - **prefix** - An optional prefix, usually an icon or icon button.
-   * - **suffix** - An optional suffix, usually an icon or icon button.
-   * - **separator** - The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<p-breadcrumb>` instead.
-   *
-   * ### **CSS Parts:**
-   *  - **base** - The component's base wrapper.
-   * - **label** - The breadcrumb item's label.
-   * - **prefix** - The container that wraps the prefix.
-   * - **suffix** - The container that wraps the suffix.
-   * - **separator** - The container that wraps the separator.
-   */
-  "p-breadcrumb-item": DefineComponent<PBreadcrumbItemProps>;
 
   /**
    * Buttons represent actions that are available to the user.
@@ -1796,15 +1902,39 @@ export type CustomElements = {
    *
    *
    * ### **Events:**
-   *  - **p-change** - Emitted when the date changes.
+   *  - **p-change** - Emitted when the control's value changes.
+   * - **p-clear** - Emitted when the control's value is cleared.
+   * - **p-input** - Emitted when the control receives input.
+   * - **p-focus** - Emitted when the control gains focus.
+   * - **p-blur** - Emitted when the control loses focus.
+   * - **p-show** - Emitted when the select's menu opens.
+   * - **p-after-show** - Emitted after the select's menu opens and all animations are complete.
+   * - **p-hide** - Emitted when the select's menu closes.
+   * - **p-after-hide** - Emitted after the select's menu closes and all animations are complete.
+   * - **p-invalid** - Emitted when the form control has been checked for validity and its constraints aren't satisfied.
    *
    * ### **Methods:**
-   *  - **goToToday()** - Moves the calendar to the current month and year.
+   *  - **show()** - Shows the calendar.
+   * - **hide()** - Hides the calendar.
+   * - **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.
+   * - **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.
+   * - **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.
+   * - **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.
+   * - **focus(options: _FocusOptions_)** - Sets focus on the control.
+   * - **blur()** - Removes focus from the control.
+   * - **goToToday()** - Moves the calendar to the current month and year.
    * - **goToPreviousMonth()** - Moves the calendar to the previous month.
    * - **goToNextMonth()** - Moves the calendar to the next month.
+   * - **goToPreviousYear()** - Moves the calendar to the previous year.
+   * - **goToNextYear()** - Moves the calendar to the next year.
    *
    * ### **Slots:**
    *  - **footer** - Optional content to place in the calendar's footer.
+   * - **label** - The input's label. Alternatively, you can use the `label` attribute.
+   * - **prefix** - Used to prepend a presentational icon or similar element to the calendar.
+   * - **suffix** - Used to append a presentational icon or similar element to the calendar.
+   * - **clear-icon** - An icon to use in lieu of the default clear icon.
+   * - **help-text** - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.
    *
    * ### **CSS Properties:**
    *  - **--border-color** - The calendar's border color. _(default: undefined)_

@@ -18,9 +18,11 @@ export interface Translation extends DefaultTranslation {
     hidePassword: string;
     loading: string;
     nextMonth?: string;
+    nextYear?: string;
     nextSlide: string;
     numOptionsSelected: (num: number) => string;
     previousMonth?: string;
+    previousYear?: string;
     previousSlide: string;
     progress: string;
     remove: string;
@@ -31,4 +33,5 @@ export interface Translation extends DefaultTranslation {
     showPassword: string;
     slideNum: (slide: number) => string;
     toggleColorFormat: string;
+    today?: string;
 }

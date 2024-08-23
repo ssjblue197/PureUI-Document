@@ -271,6 +271,69 @@
           }
         },
         {
+          "name": "p-breadcrumb-item",
+          "description": "Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.\n---\n\n\n### **Slots:**\n - _default_ - The breadcrumb item's label.\n- **prefix** - An optional prefix, usually an icon or icon button.\n- **suffix** - An optional suffix, usually an icon or icon button.\n- **separator** - The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<p-breadcrumb>` instead.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **label** - The breadcrumb item's label.\n- **prefix** - The container that wraps the prefix.\n- **suffix** - The container that wraps the suffix.\n- **separator** - The container that wraps the separator.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "href",
+              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
+              "value": { "type": "string | undefined" }
+            },
+            {
+              "name": "target",
+              "description": "Tells the browser where to open the link. Only used when `href` is set.",
+              "value": {
+                "type": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\" | undefined"
+              }
+            },
+            {
+              "name": "rel",
+              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
+              "value": {
+                "type": "string",
+                "default": "\"noreferrer noopener\""
+              }
+            }
+          ],
+          "slots": [
+            { "name": "", "description": "The breadcrumb item's label." },
+            {
+              "name": "prefix",
+              "description": "An optional prefix, usually an icon or icon button."
+            },
+            {
+              "name": "suffix",
+              "description": "An optional suffix, usually an icon or icon button."
+            },
+            {
+              "name": "separator",
+              "description": "The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<p-breadcrumb>` instead."
+            }
+          ],
+          "events": [],
+          "js": {
+            "properties": [
+              {
+                "name": "href",
+                "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
+                "type": "string | undefined"
+              },
+              {
+                "name": "target",
+                "description": "Tells the browser where to open the link. Only used when `href` is set.",
+                "type": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\" | undefined"
+              },
+              {
+                "name": "rel",
+                "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
+                "type": "string"
+              }
+            ],
+            "events": []
+          }
+        },
+        {
           "name": "p-animated-image",
           "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
           "doc-url": "",
@@ -507,69 +570,6 @@
                 "description": "Emitted when the animation starts or restarts."
               }
             ]
-          }
-        },
-        {
-          "name": "p-breadcrumb-item",
-          "description": "Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.\n---\n\n\n### **Slots:**\n - _default_ - The breadcrumb item's label.\n- **prefix** - An optional prefix, usually an icon or icon button.\n- **suffix** - An optional suffix, usually an icon or icon button.\n- **separator** - The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<p-breadcrumb>` instead.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **label** - The breadcrumb item's label.\n- **prefix** - The container that wraps the prefix.\n- **suffix** - The container that wraps the suffix.\n- **separator** - The container that wraps the separator.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "href",
-              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
-              "value": { "type": "string | undefined" }
-            },
-            {
-              "name": "target",
-              "description": "Tells the browser where to open the link. Only used when `href` is set.",
-              "value": {
-                "type": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\" | undefined"
-              }
-            },
-            {
-              "name": "rel",
-              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
-              "value": {
-                "type": "string",
-                "default": "\"noreferrer noopener\""
-              }
-            }
-          ],
-          "slots": [
-            { "name": "", "description": "The breadcrumb item's label." },
-            {
-              "name": "prefix",
-              "description": "An optional prefix, usually an icon or icon button."
-            },
-            {
-              "name": "suffix",
-              "description": "An optional suffix, usually an icon or icon button."
-            },
-            {
-              "name": "separator",
-              "description": "The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<p-breadcrumb>` instead."
-            }
-          ],
-          "events": [],
-          "js": {
-            "properties": [
-              {
-                "name": "href",
-                "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
-                "type": "string | undefined"
-              },
-              {
-                "name": "target",
-                "description": "Tells the browser where to open the link. Only used when `href` is set.",
-                "type": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\" | undefined"
-              },
-              {
-                "name": "rel",
-                "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
-                "type": "string"
-              }
-            ],
-            "events": []
           }
         },
         {
@@ -901,9 +901,137 @@
         },
         {
           "name": "p-calendar",
-          "description": "A calendar prototype for Pure UI.\n---\n\n\n### **Events:**\n - **p-change** - Emitted when the date changes.\n\n### **Methods:**\n - **goToToday()** - Moves the calendar to the current month and year.\n- **goToPreviousMonth()** - Moves the calendar to the previous month.\n- **goToNextMonth()** - Moves the calendar to the next month.\n\n### **Slots:**\n - **footer** - Optional content to place in the calendar's footer.\n\n### **CSS Properties:**\n - **--border-color** - The calendar's border color. _(default: undefined)_\n- **--border-width** - The calendar's border width. _(default: undefined)_\n- **--border-radius** - The border radius of the calendar. _(default: undefined)_\n\n### **CSS Parts:**\n - **day** - Targets day cells.\n- **day-label** - Targets the day labels (the name of the days in the grid).\n- **day-weekend** - Targets days that fall on weekends.\n- **day-weekday** - Targets weekdays.\n- **day-current-month** - Targets days in the current month.\n- **day-previous-month** - Targets days in the previous month.\n- **day-next-month** - Targets days in the next month.\n- **day-today** - Targets today.\n- **day-selected** - Targets selected days.\n- **day-selection-start** - Targets days that begin a selection.\n- **day-selection-end** - Targets days that end a selection.",
+          "description": "A calendar prototype for Pure UI.\n---\n\n\n### **Events:**\n - **p-change** - Emitted when the control's value changes.\n- **p-clear** - Emitted when the control's value is cleared.\n- **p-input** - Emitted when the control receives input.\n- **p-focus** - Emitted when the control gains focus.\n- **p-blur** - Emitted when the control loses focus.\n- **p-show** - Emitted when the select's menu opens.\n- **p-after-show** - Emitted after the select's menu opens and all animations are complete.\n- **p-hide** - Emitted when the select's menu closes.\n- **p-after-hide** - Emitted after the select's menu closes and all animations are complete.\n- **p-invalid** - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n\n### **Methods:**\n - **show()** - Shows the calendar.\n- **hide()** - Hides the calendar.\n- **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n- **focus(options: _FocusOptions_)** - Sets focus on the control.\n- **blur()** - Removes focus from the control.\n- **goToToday()** - Moves the calendar to the current month and year.\n- **goToPreviousMonth()** - Moves the calendar to the previous month.\n- **goToNextMonth()** - Moves the calendar to the next month.\n- **goToPreviousYear()** - Moves the calendar to the previous year.\n- **goToNextYear()** - Moves the calendar to the next year.\n\n### **Slots:**\n - **footer** - Optional content to place in the calendar's footer.\n- **label** - The input's label. Alternatively, you can use the `label` attribute.\n- **prefix** - Used to prepend a presentational icon or similar element to the calendar.\n- **suffix** - Used to append a presentational icon or similar element to the calendar.\n- **clear-icon** - An icon to use in lieu of the default clear icon.\n- **help-text** - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.\n\n### **CSS Properties:**\n - **--border-color** - The calendar's border color. _(default: undefined)_\n- **--border-width** - The calendar's border width. _(default: undefined)_\n- **--border-radius** - The border radius of the calendar. _(default: undefined)_\n\n### **CSS Parts:**\n - **day** - Targets day cells.\n- **day-label** - Targets the day labels (the name of the days in the grid).\n- **day-weekend** - Targets days that fall on weekends.\n- **day-weekday** - Targets weekdays.\n- **day-current-month** - Targets days in the current month.\n- **day-previous-month** - Targets days in the previous month.\n- **day-next-month** - Targets days in the next month.\n- **day-today** - Targets today.\n- **day-selected** - Targets selected days.\n- **day-selection-start** - Targets days that begin a selection.\n- **day-selection-end** - Targets days that end a selection.",
           "doc-url": "",
           "attributes": [
+            {
+              "name": "formatter",
+              "value": { "type": "string", "default": "\"YYYY-MM-DD\"" }
+            },
+            {
+              "name": "typing",
+              "description": "Indicates whether the calendar is in typing mode.\nTyping mode means that the calendar accepts user input and emits `p-input` and `p-change` events when the user types a valid date.\nWhen typing mode is `false`, the calendar does not accept user input and does not emit `p-input` or `p-change` events.",
+              "value": { "type": "boolean", "default": "true" }
+            },
+            {
+              "name": "name",
+              "description": "The name of the calendar, submitted as a name/value pair with form data.",
+              "value": { "type": "string", "default": "\"\"" }
+            },
+            {
+              "name": "value",
+              "description": "The current value of the calendar, submitted as a name/value pair with form data. When type is set to`multiple`, the\nvalue attribute will be a space-delimited list of values based on the dates selected, and the value property will\nbe an array. **For this reason, values must not contain spaces.**",
+              "value": { "type": "Date[]", "default": "[]" }
+            },
+            {
+              "name": "size",
+              "description": "The select's size.",
+              "value": {
+                "type": "\"small\" | \"medium\" | \"large\"",
+                "default": "\"medium\""
+              }
+            },
+            {
+              "name": "placeholder",
+              "description": "Placeholder text to show as a hint when the select is empty.",
+              "value": { "type": "string", "default": "\"DD/MM/YYYY\"" }
+            },
+            {
+              "name": "max-options-visible",
+              "description": "The maximum number of selected options to show when `multiple` is true. After the maximum, \"+n\" will be shown to\nindicate the number of additional items that are selected. Set to 0 to remove the limit.",
+              "value": { "type": "number", "default": "3" }
+            },
+            {
+              "name": "disabled",
+              "description": "Disables the select control.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "clearable",
+              "description": "Adds a clear button when the select is not empty.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "open",
+              "description": "Indicates whether or not the calendar is open. You can toggle this attribute to show and hide the menu, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the select's open state.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "hoist",
+              "description": "Enable this option to prevent the calendar from being clipped when the component is placed inside a container with\n`overflow: auto|scroll`. Hoisting uses a fixed positioning strategy that works in many, but not all, scenarios.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "filled",
+              "description": "Draws a filled select.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "pill",
+              "description": "Draws a pill-style select with rounded edges.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "label",
+              "description": "The calendar's label. If you need to display HTML, use the `label` slot instead.",
+              "value": { "type": "string", "default": "\"\"" }
+            },
+            {
+              "name": "placement",
+              "description": "The preferred placement of the calendar's popup. Note that the actual placement may vary as needed to keep the calendar\ninside of the viewport.",
+              "value": {
+                "type": "\"top\" | \"bottom\"",
+                "default": "\"bottom\""
+              }
+            },
+            {
+              "name": "help-text",
+              "description": "The select's help text. If you need to display HTML, use the `help-text` slot instead.",
+              "value": { "type": "string", "default": "\"\"" }
+            },
+            {
+              "name": "form",
+              "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
+              "value": { "type": "string", "default": "\"\"" }
+            },
+            {
+              "name": "required",
+              "description": "The select's required attribute.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "getTag",
+              "description": "A function that customizes the tags to be rendered when type=multiple. The first argument is the option, the second\nis the current tag's index.  The function should return either a Lit TemplateResult or a string containing trusted HTML of the symbol to render at\nthe specified value.",
+              "value": {
+                "type": "(option: POption, index: number) => TemplateResult | string | HTMLElement"
+              }
+            },
+            {
+              "name": "show-today",
+              "description": "When `true`, the calendar will show a button to quickly jump to today's date.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "mode",
+              "description": "The mode of the calendar.\n- \"default\": calendar is displayed in a popup.\n- \"inline\": calendar is displayed inline.\nTODO in future....",
+              "value": {
+                "type": "\"default\" | \"inline\"",
+                "default": "\"default\""
+              }
+            },
+            {
+              "name": "type",
+              "description": "The type of selection the calendar allows.\n- \"single\": allows selecting a single date.\n- \"multiple\": allows selecting multiple dates.\n- \"range\": allows selecting a range of dates.",
+              "value": {
+                "type": "\"single\" | \"multiple\" | \"range\"",
+                "default": "\"single\""
+              }
+            },
+            {
+              "name": "autofocus",
+              "description": "If `true`, the calendar will automatically receive focus when it open.\nThis can be useful when using the calendar in a dialog or other scenario where it should\nreceive focus without requiring the user to click on it.",
+              "value": { "type": "boolean", "default": "false" }
+            },
             {
               "name": "month",
               "description": "The month to render, 1-12/",
@@ -912,6 +1040,11 @@
             {
               "name": "year",
               "description": "The year to render.",
+              "value": { "type": "number" }
+            },
+            {
+              "name": "date",
+              "description": "The date to render.",
               "value": { "type": "number" }
             },
             {
@@ -934,27 +1067,214 @@
               "name": "show-adjacent-dates",
               "description": "When true, dates from the previous and next month will also be shown to fill out the grid.",
               "value": { "type": "boolean", "default": "false" }
-            },
-            {
-              "name": "selectedDates",
-              "description": "Draws the target dates as a selection in the calendar.",
-              "value": { "type": "Date[]", "default": "[]" }
             }
           ],
           "slots": [
             {
               "name": "footer",
               "description": "Optional content to place in the calendar's footer."
+            },
+            {
+              "name": "label",
+              "description": "The input's label. Alternatively, you can use the `label` attribute."
+            },
+            {
+              "name": "prefix",
+              "description": "Used to prepend a presentational icon or similar element to the calendar."
+            },
+            {
+              "name": "suffix",
+              "description": "Used to append a presentational icon or similar element to the calendar."
+            },
+            {
+              "name": "clear-icon",
+              "description": "An icon to use in lieu of the default clear icon."
+            },
+            {
+              "name": "help-text",
+              "description": "Text that describes how to use the input. Alternatively, you can use the `help-text` attribute."
             }
           ],
           "events": [
             {
               "name": "p-change",
-              "description": "Emitted when the date changes."
+              "description": "Emitted when the control's value changes."
+            },
+            {
+              "name": "p-clear",
+              "description": "Emitted when the control's value is cleared."
+            },
+            {
+              "name": "p-input",
+              "description": "Emitted when the control receives input."
+            },
+            {
+              "name": "p-focus",
+              "description": "Emitted when the control gains focus."
+            },
+            {
+              "name": "p-blur",
+              "description": "Emitted when the control loses focus."
+            },
+            {
+              "name": "p-show",
+              "description": "Emitted when the select's menu opens."
+            },
+            {
+              "name": "p-after-show",
+              "description": "Emitted after the select's menu opens and all animations are complete."
+            },
+            {
+              "name": "p-hide",
+              "description": "Emitted when the select's menu closes."
+            },
+            {
+              "name": "p-after-hide",
+              "description": "Emitted after the select's menu closes and all animations are complete."
+            },
+            {
+              "name": "p-invalid",
+              "description": "Emitted when the form control has been checked for validity and its constraints aren't satisfied."
             }
           ],
           "js": {
             "properties": [
+              { "name": "popup", "type": "PPopup" },
+              { "name": "combobox", "type": "HTMLSlotElement" },
+              { "name": "displayInput", "type": "HTMLInputElement" },
+              { "name": "valueInput", "type": "HTMLInputElement" },
+              { "name": "calendar", "type": "HTMLSlotElement" },
+              { "name": "formatter", "type": "string" },
+              {
+                "name": "typing",
+                "description": "Indicates whether the calendar is in typing mode.\nTyping mode means that the calendar accepts user input and emits `p-input` and `p-change` events when the user types a valid date.\nWhen typing mode is `false`, the calendar does not accept user input and does not emit `p-input` or `p-change` events.",
+                "type": "boolean"
+              },
+              {
+                "name": "displayLabel",
+                "description": "The display label to show in the select when no options are selected.\nUsed when the control is not focused.",
+                "type": "string"
+              },
+              {
+                "name": "currentOption",
+                "description": "The currently selected option.",
+                "type": "POption"
+              },
+              {
+                "name": "selectedOptions",
+                "description": "The selected options.",
+                "type": "POption[]"
+              },
+              {
+                "name": "name",
+                "description": "The name of the calendar, submitted as a name/value pair with form data.",
+                "type": "string"
+              },
+              {
+                "name": "value",
+                "description": "The current value of the calendar, submitted as a name/value pair with form data. When type is set to`multiple`, the\nvalue attribute will be a space-delimited list of values based on the dates selected, and the value property will\nbe an array. **For this reason, values must not contain spaces.**",
+                "type": "Date[]"
+              },
+              {
+                "name": "defaultValue",
+                "description": "The default value of the form control. Primarily used for resetting the form control.",
+                "type": "Date | Date[]"
+              },
+              {
+                "name": "size",
+                "description": "The select's size.",
+                "type": "\"small\" | \"medium\" | \"large\""
+              },
+              {
+                "name": "placeholder",
+                "description": "Placeholder text to show as a hint when the select is empty.",
+                "type": "string"
+              },
+              {
+                "name": "maxOptionsVisible",
+                "description": "The maximum number of selected options to show when `multiple` is true. After the maximum, \"+n\" will be shown to\nindicate the number of additional items that are selected. Set to 0 to remove the limit.",
+                "type": "number"
+              },
+              {
+                "name": "disabled",
+                "description": "Disables the select control.",
+                "type": "boolean"
+              },
+              {
+                "name": "clearable",
+                "description": "Adds a clear button when the select is not empty.",
+                "type": "boolean"
+              },
+              {
+                "name": "open",
+                "description": "Indicates whether or not the calendar is open. You can toggle this attribute to show and hide the menu, or you can\nuse the `show()` and `hide()` methods and this attribute will reflect the select's open state.",
+                "type": "boolean"
+              },
+              {
+                "name": "hoist",
+                "description": "Enable this option to prevent the calendar from being clipped when the component is placed inside a container with\n`overflow: auto|scroll`. Hoisting uses a fixed positioning strategy that works in many, but not all, scenarios.",
+                "type": "boolean"
+              },
+              {
+                "name": "filled",
+                "description": "Draws a filled select.",
+                "type": "boolean"
+              },
+              {
+                "name": "pill",
+                "description": "Draws a pill-style select with rounded edges.",
+                "type": "boolean"
+              },
+              {
+                "name": "label",
+                "description": "The calendar's label. If you need to display HTML, use the `label` slot instead.",
+                "type": "string"
+              },
+              {
+                "name": "placement",
+                "description": "The preferred placement of the calendar's popup. Note that the actual placement may vary as needed to keep the calendar\ninside of the viewport.",
+                "type": "\"top\" | \"bottom\""
+              },
+              {
+                "name": "helpText",
+                "description": "The select's help text. If you need to display HTML, use the `help-text` slot instead.",
+                "type": "string"
+              },
+              {
+                "name": "form",
+                "description": "By default, form controls are associated with the nearest containing `<form>` element. This attribute allows you\nto place the form control outside of a form and associate it with the form that has this `id`. The form must be in\nthe same document or shadow root for this to work.",
+                "type": "string"
+              },
+              {
+                "name": "required",
+                "description": "The select's required attribute.",
+                "type": "boolean"
+              },
+              {
+                "name": "getTag",
+                "description": "A function that customizes the tags to be rendered when type=multiple. The first argument is the option, the second\nis the current tag's index.  The function should return either a Lit TemplateResult or a string containing trusted HTML of the symbol to render at\nthe specified value.",
+                "type": "(option: POption, index: number) => TemplateResult | string | HTMLElement"
+              },
+              {
+                "name": "showToday",
+                "description": "When `true`, the calendar will show a button to quickly jump to today's date.",
+                "type": "boolean"
+              },
+              {
+                "name": "mode",
+                "description": "The mode of the calendar.\n- \"default\": calendar is displayed in a popup.\n- \"inline\": calendar is displayed inline.\nTODO in future....",
+                "type": "\"default\" | \"inline\""
+              },
+              {
+                "name": "type",
+                "description": "The type of selection the calendar allows.\n- \"single\": allows selecting a single date.\n- \"multiple\": allows selecting multiple dates.\n- \"range\": allows selecting a range of dates.",
+                "type": "\"single\" | \"multiple\" | \"range\""
+              },
+              {
+                "name": "autofocus",
+                "description": "If `true`, the calendar will automatically receive focus when it open.\nThis can be useful when using the calendar in a dialog or other scenario where it should\nreceive focus without requiring the user to click on it.",
+                "type": "boolean"
+              },
               {
                 "name": "month",
                 "description": "The month to render, 1-12/",
@@ -963,6 +1283,11 @@
               {
                 "name": "year",
                 "description": "The year to render.",
+                "type": "number"
+              },
+              {
+                "name": "date",
+                "description": "The date to render.",
                 "type": "number"
               },
               {
@@ -981,15 +1306,54 @@
                 "type": "boolean"
               },
               {
-                "name": "selectedDates",
-                "description": "Draws the target dates as a selection in the calendar.",
-                "type": "Date[]"
+                "name": "validity",
+                "description": "Gets the validity state object"
+              },
+              {
+                "name": "validationMessage",
+                "description": "Gets the validation message"
               }
             ],
             "events": [
               {
                 "name": "p-change",
-                "description": "Emitted when the date changes."
+                "description": "Emitted when the control's value changes."
+              },
+              {
+                "name": "p-clear",
+                "description": "Emitted when the control's value is cleared."
+              },
+              {
+                "name": "p-input",
+                "description": "Emitted when the control receives input."
+              },
+              {
+                "name": "p-focus",
+                "description": "Emitted when the control gains focus."
+              },
+              {
+                "name": "p-blur",
+                "description": "Emitted when the control loses focus."
+              },
+              {
+                "name": "p-show",
+                "description": "Emitted when the select's menu opens."
+              },
+              {
+                "name": "p-after-show",
+                "description": "Emitted after the select's menu opens and all animations are complete."
+              },
+              {
+                "name": "p-hide",
+                "description": "Emitted when the select's menu closes."
+              },
+              {
+                "name": "p-after-hide",
+                "description": "Emitted after the select's menu closes and all animations are complete."
+              },
+              {
+                "name": "p-invalid",
+                "description": "Emitted when the form control has been checked for validity and its constraints aren't satisfied."
               }
             ]
           }

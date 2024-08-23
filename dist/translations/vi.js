@@ -19,6 +19,7 @@ var translation = {
   hidePassword: "\u1EA8n m\u1EADt kh\u1EA9u",
   loading: "\u0110ang t\u1EA3i",
   nextMonth: "Th\xE1ng sau",
+  nextYear: "N\u0103m sau",
   nextSlide: "Trang ti\u1EBFp theo",
   numOptionsSelected: (num) => {
     if (num === 0)
@@ -28,6 +29,7 @@ var translation = {
     return `${num} l\u1EF1a ch\u1ECDn \u0111\xE3 \u0111\u01B0\u1EE3c ch\u1ECDn`;
   },
   previousMonth: "Th\xE1ng tr\u01B0\u1EDBc",
+  previousYear: "N\u0103m tr\u01B0\u1EDBc",
   previousSlide: "Trang tr\u01B0\u1EDBc",
   progress: "Ti\u1EBFn \u0111\u1ED9",
   remove: "X\xF3a",
@@ -37,7 +39,8 @@ var translation = {
   selectAColorFromTheScreen: "Ch\u1ECDn m\u1ED9t m\xE0u t\u1EEB m\xE0n h\xECnh",
   showPassword: "Hi\u1EC7n m\u1EADt kh\u1EA9u",
   slideNum: (slide) => `Trang ${slide}`,
-  toggleColorFormat: "Chuy\u1EC3n \u0111\u1ED5i \u0111\u1ECBnh d\u1EA1ng m\xE0u"
+  toggleColorFormat: "Chuy\u1EC3n \u0111\u1ED5i \u0111\u1ECBnh d\u1EA1ng m\xE0u",
+  today: "H\xF4m nay"
 };
 registerTranslation(translation);
 var vi_default = translation;
