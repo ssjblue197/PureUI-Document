@@ -1,11 +1,11 @@
 import type { DefineComponent } from "vue";
 
 import type { PAlert } from "../../components/alert/alert.component.js";
-import type { PAvatar } from "../../components/avatar/avatar.component.js";
 import type { PBadge } from "../../components/badge/badge.component.js";
+import type { PAvatar } from "../../components/avatar/avatar.component.js";
 import type { PBreadcrumb } from "../../components/breadcrumb/breadcrumb.component.js";
-import type { PBreadcrumbItem } from "../../components/breadcrumb-item/breadcrumb-item.component.js";
 import type { PAnimatedImage } from "../../components/animated-image/animated-image.component.js";
+import type { PBreadcrumbItem } from "../../components/breadcrumb-item/breadcrumb-item.component.js";
 import type { PAnimation } from "../../components/animation/animation.component.js";
 import type { PButton } from "../../components/button/button.component.js";
 import type { PButtonGroup } from "../../components/button-group/button-group.component.js";
@@ -84,6 +84,15 @@ the alert will not close on its own. */
   "onp-after-hide"?: (e: CustomEvent<never>) => void;
 };
 
+type PBadgeProps = {
+  /** The badge's theme variant. */
+  variant?: PBadge["variant"];
+  /** Draws a pill-style badge with rounded edges. */
+  pill?: PBadge["pill"];
+  /** Makes the badge pulsate to draw attention. */
+  pulse?: PBadge["pulse"];
+};
+
 type PAvatarProps = {
   /** The image source to use for the avatar. */
   image?: PAvatar["image"];
@@ -100,15 +109,6 @@ type PAvatarProps = {
   "onp-error"?: (e: CustomEvent<never>) => void;
 };
 
-type PBadgeProps = {
-  /** The badge's theme variant. */
-  variant?: PBadge["variant"];
-  /** Draws a pill-style badge with rounded edges. */
-  pill?: PBadge["pill"];
-  /** Makes the badge pulsate to draw attention. */
-  pulse?: PBadge["pulse"];
-};
-
 type PBreadcrumbProps = {
   /** The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by
 screen readers and other assistive devices to provide more context for users. */
@@ -117,16 +117,6 @@ screen readers and other assistive devices to provide more context for users. */
   defaultSlot?: PBreadcrumb["defaultSlot"];
   /**  */
   separatorSlot?: PBreadcrumb["separatorSlot"];
-};
-
-type PBreadcrumbItemProps = {
-  /** Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered
-internally. When unset, a button will be rendered instead. */
-  href?: PBreadcrumbItem["href"];
-  /** Tells the browser where to open the link. Only used when `href` is set. */
-  target?: PBreadcrumbItem["target"];
-  /** The `rel` attribute to use on the link. Only used when `href` is set. */
-  rel?: PBreadcrumbItem["rel"];
 };
 
 type PAnimatedImageProps = {
@@ -146,6 +136,16 @@ type PAnimatedImageProps = {
   "onp-load"?: (e: CustomEvent<never>) => void;
   /** Emitted when the image fails to load. */
   "onp-error"?: (e: CustomEvent<never>) => void;
+};
+
+type PBreadcrumbItemProps = {
+  /** Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered
+internally. When unset, a button will be rendered instead. */
+  href?: PBreadcrumbItem["href"];
+  /** Tells the browser where to open the link. Only used when `href` is set. */
+  target?: PBreadcrumbItem["target"];
+  /** The `rel` attribute to use on the link. Only used when `href` is set. */
+  rel?: PBreadcrumbItem["rel"];
 };
 
 type PAnimationProps = {
@@ -1740,6 +1740,19 @@ export type CustomElements = {
   "p-alert": DefineComponent<PAlertProps>;
 
   /**
+   * Badges are used to draw attention and display statuses or counts.
+   * ---
+   *
+   *
+   * ### **Slots:**
+   *  - _default_ - The badge's content.
+   *
+   * ### **CSS Parts:**
+   *  - **base** - The component's base wrapper.
+   */
+  "p-badge": DefineComponent<PBadgeProps>;
+
+  /**
    * Avatars are used to represent a person or object.
    * ---
    *
@@ -1762,19 +1775,6 @@ export type CustomElements = {
   "p-avatar": DefineComponent<PAvatarProps>;
 
   /**
-   * Badges are used to draw attention and display statuses or counts.
-   * ---
-   *
-   *
-   * ### **Slots:**
-   *  - _default_ - The badge's content.
-   *
-   * ### **CSS Parts:**
-   *  - **base** - The component's base wrapper.
-   */
-  "p-badge": DefineComponent<PBadgeProps>;
-
-  /**
    * Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.
    * ---
    *
@@ -1787,26 +1787,6 @@ export type CustomElements = {
    *  - **base** - The component's base wrapper.
    */
   "p-breadcrumb": DefineComponent<PBreadcrumbProps>;
-
-  /**
-   * Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.
-   * ---
-   *
-   *
-   * ### **Slots:**
-   *  - _default_ - The breadcrumb item's label.
-   * - **prefix** - An optional prefix, usually an icon or icon button.
-   * - **suffix** - An optional suffix, usually an icon or icon button.
-   * - **separator** - The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<p-breadcrumb>` instead.
-   *
-   * ### **CSS Parts:**
-   *  - **base** - The component's base wrapper.
-   * - **label** - The breadcrumb item's label.
-   * - **prefix** - The container that wraps the prefix.
-   * - **suffix** - The container that wraps the suffix.
-   * - **separator** - The container that wraps the separator.
-   */
-  "p-breadcrumb-item": DefineComponent<PBreadcrumbItemProps>;
 
   /**
    * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
@@ -1829,6 +1809,26 @@ export type CustomElements = {
    *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
    */
   "p-animated-image": DefineComponent<PAnimatedImageProps>;
+
+  /**
+   * Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.
+   * ---
+   *
+   *
+   * ### **Slots:**
+   *  - _default_ - The breadcrumb item's label.
+   * - **prefix** - An optional prefix, usually an icon or icon button.
+   * - **suffix** - An optional suffix, usually an icon or icon button.
+   * - **separator** - The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<p-breadcrumb>` instead.
+   *
+   * ### **CSS Parts:**
+   *  - **base** - The component's base wrapper.
+   * - **label** - The breadcrumb item's label.
+   * - **prefix** - The container that wraps the prefix.
+   * - **suffix** - The container that wraps the suffix.
+   * - **separator** - The container that wraps the separator.
+   */
+  "p-breadcrumb-item": DefineComponent<PBreadcrumbItemProps>;
 
   /**
    * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
