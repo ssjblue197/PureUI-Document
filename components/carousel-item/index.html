@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="component" data-pure-ui-version="1.1.9">
+<html lang="en" data-layout="component" data-pure-ui-version="1.1.10">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -83,7 +83,7 @@
         <a href="/">
           <img src="/assets/images/wordmark.svg" alt="Pure UI" />
         </a>
-        <div class="sidebar-version">1.1.9</div>
+        <div class="sidebar-version">1.1.10</div>
       </header>
 
       <button class="search-box" type="button" title="Press / to search" aria-label="Search" data-plugin="search">
@@ -259,6 +259,10 @@
 
               <li>
                 <a href="/components/option"> Option </a>
+              </li>
+
+              <li>
+                <a href="/components/paginate"> Paginate </a>
               </li>
 
               <li>
@@ -457,9 +461,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-74">
+            <div class="code-preview__source-group" id="code-preview-source-group-79">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-306"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-carousel</span> <span class="token attr-name">pagination</span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-320"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-carousel</span> <span class="token attr-name">pagination</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-carousel-item</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span>
       <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>The sun shines on the mountains and trees - Photo by Adam Kool on Unsplash<span class="token punctuation">"</span></span>
@@ -491,11 +495,11 @@
     <span class="token punctuation">/&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-carousel-item</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-carousel</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-306"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-320"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-307"><span class="token keyword">import</span> PCarousel <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/carousel'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-321"><span class="token keyword">import</span> PCarousel <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/carousel'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PCarouselItem <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/carousel-item'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
@@ -532,7 +536,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PCarouselItem</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PCarousel</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-307"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-321"></p-copy-button></pre>
               </div>
             </div>
 
@@ -541,7 +545,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-74"
+                aria-controls="code-preview-source-group-79"
               >
                 Source
                 <svg
@@ -614,7 +618,7 @@
                 >
                 using a script tag:
               </p>
-              <pre><code class="language-html" id="code-block-308"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.1.9/cdn/components/carousel-item/carousel-item.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-308"></p-copy-button></pre>
+              <pre><code class="language-html" id="code-block-322"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.1.10/cdn/components/carousel-item/carousel-item.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-322"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="import">
@@ -629,17 +633,17 @@
                 >
                 using a JavaScript import:
               </p>
-              <pre><code class="language-js" id="code-block-309"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.1.9/cdn/components/carousel-item/carousel-item.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-309"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-323"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.1.10/cdn/components/carousel-item/carousel-item.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-323"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="bundler">
               <p>To import this component using <a href="/getting-started/installation#bundling">a bundler</a>:</p>
-              <pre><code class="language-js" id="code-block-310"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/carousel-item/carousel-item.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-310"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-324"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/carousel-item/carousel-item.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-324"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="react">
               <p>To import this component as a <a href="/frameworks/react">React component</a>:</p>
-              <pre><code class="language-js" id="code-block-311"><span class="token keyword">import</span> PCarouselItem <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/carousel-item'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-311"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-325"><span class="token keyword">import</span> PCarouselItem <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/carousel-item'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-325"></p-copy-button></pre>
             </p-tab-panel>
           </p-tab-group>
 

@@ -1,7 +1,7 @@
 import {
   breadcrumb_styles_default
-} from "../../chunks/chunk.MUCESMCE.js";
-import "../../chunks/chunk.YOCEZMWG.js";
+} from "../../chunks/chunk.PSW6YFSB.js";
+import "../../chunks/chunk.XHSHLALN.js";
 import "../../chunks/chunk.KIILAQWQ.js";
 export {
   breadcrumb_styles_default as default

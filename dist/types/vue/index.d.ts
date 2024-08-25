@@ -1,7 +1,7 @@
 import type { DefineComponent } from "vue";
 
-import type { PAnimatedImage } from "../../components/animated-image/animated-image.component.js";
 import type { PAlert } from "../../components/alert/alert.component.js";
+import type { PAnimatedImage } from "../../components/animated-image/animated-image.component.js";
 import type { PAnimation } from "../../components/animation/animation.component.js";
 import type { PAvatar } from "../../components/avatar/avatar.component.js";
 import type { PBadge } from "../../components/badge/badge.component.js";
@@ -34,6 +34,7 @@ import type { PMenuItem } from "../../components/menu-item/menu-item.component.j
 import type { PMenuLabel } from "../../components/menu-label/menu-label.component.js";
 import type { PMutationObserver } from "../../components/mutation-observer/mutation-observer.component.js";
 import type { POption } from "../../components/option/option.component.js";
+import type { PPaginate } from "../../components/paginate/paginate.component.js";
 import type { PPopup } from "../../components/popup/popup.component.js";
 import type { PProgressBar } from "../../components/progress-bar/progress-bar.component.js";
 import type { PProgressRing } from "../../components/progress-ring/progress-ring.component.js";
@@ -60,25 +61,6 @@ import type { PTree } from "../../components/tree/tree.component.js";
 import type { PTreeItem } from "../../components/tree-item/tree-item.component.js";
 import type { PVisuallyHidden } from "../../components/visually-hidden/visually-hidden.component.js";
 
-type PAnimatedImageProps = {
-  /** The path to the image to load. */
-  src?: PAnimatedImage["src"];
-  /** A description of the image used by assistive devices. */
-  alt?: PAnimatedImage["alt"];
-  /** Plays the animation. When this attribute is remove, the animation will pause. */
-  play?: PAnimatedImage["play"];
-  /**  */
-  animatedImage?: PAnimatedImage["animatedImage"];
-  /**  */
-  frozenFrame?: PAnimatedImage["frozenFrame"];
-  /**  */
-  isLoaded?: PAnimatedImage["isLoaded"];
-  /** Emitted when the image loads successfully. */
-  "onp-load"?: (e: CustomEvent<never>) => void;
-  /** Emitted when the image fails to load. */
-  "onp-error"?: (e: CustomEvent<never>) => void;
-};
-
 type PAlertProps = {
   /** Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can
 use the `show()` and `hide()` methods and this attribute will reflect the alert's open state. */
@@ -101,6 +83,25 @@ the alert will not close on its own. */
   "onp-hide"?: (e: CustomEvent<never>) => void;
   /** Emitted after the alert closes and all animations are complete. */
   "onp-after-hide"?: (e: CustomEvent<never>) => void;
+};
+
+type PAnimatedImageProps = {
+  /** The path to the image to load. */
+  src?: PAnimatedImage["src"];
+  /** A description of the image used by assistive devices. */
+  alt?: PAnimatedImage["alt"];
+  /** Plays the animation. When this attribute is remove, the animation will pause. */
+  play?: PAnimatedImage["play"];
+  /**  */
+  animatedImage?: PAnimatedImage["animatedImage"];
+  /**  */
+  frozenFrame?: PAnimatedImage["frozenFrame"];
+  /**  */
+  isLoaded?: PAnimatedImage["isLoaded"];
+  /** Emitted when the image loads successfully. */
+  "onp-load"?: (e: CustomEvent<never>) => void;
+  /** Emitted when the image fails to load. */
+  "onp-error"?: (e: CustomEvent<never>) => void;
 };
 
 type PAnimationProps = {
@@ -1059,6 +1060,30 @@ multiple values. */
   hasHover?: POption["hasHover"];
 };
 
+type PPaginateProps = {
+  /**  */
+  title?: PPaginate["title"];
+  /** The button's theme variant. */
+  variant?: PPaginate["variant"];
+  /** The button's size. */
+  size?: PPaginate["size"];
+  /** Disables the button. */
+  disabled?: PPaginate["disabled"];
+  /** Draws a pill-style button with rounded edges. */
+  pill?: PPaginate["pill"];
+  /** The total items to paginate. */
+  total?: PPaginate["total"];
+  /** The current page. */
+  page?: PPaginate["page"];
+  /** The limit items in a page. */
+  limit?: PPaginate["limit"];
+  /** The limit visible pages to show. */
+  "max-visible-pages"?: PPaginate["maxVisiblePages"];
+
+  /** Emitted when the page changed. */
+  "onp-change"?: (e: CustomEvent<never>) => void;
+};
+
 type PPopupProps = {
   /** The element the popup will be anchored to. If the anchor lives outside of the popup, you can provide the anchor
 element `id`, a DOM element reference, or a `VirtualElement`. If the anchor lives inside the popup, use the
@@ -1744,28 +1769,6 @@ type PVisuallyHiddenProps = {};
 
 export type CustomElements = {
   /**
-   * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **p-load** - Emitted when the image loads successfully.
-   * - **p-error** - Emitted when the image fails to load.
-   *
-   * ### **Slots:**
-   *  - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.
-   * - **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.
-   *
-   * ### **CSS Properties:**
-   *  - **--control-box-size** - The size of the icon box. _(default: undefined)_
-   * - **--icon-size** - The size of the play/pause icons. _(default: undefined)_
-   *
-   * ### **CSS Parts:**
-   *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
-   */
-  "p-animated-image": DefineComponent<PAnimatedImageProps>;
-
-  /**
    * Alerts are used to display important messages inline or as toast notifications.
    * ---
    *
@@ -1795,6 +1798,28 @@ export type CustomElements = {
    * - **close-button__base** - The close button's exported `base` part.
    */
   "p-alert": DefineComponent<PAlertProps>;
+
+  /**
+   * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **p-load** - Emitted when the image loads successfully.
+   * - **p-error** - Emitted when the image fails to load.
+   *
+   * ### **Slots:**
+   *  - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.
+   * - **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.
+   *
+   * ### **CSS Properties:**
+   *  - **--control-box-size** - The size of the icon box. _(default: undefined)_
+   * - **--icon-size** - The size of the play/pause icons. _(default: undefined)_
+   *
+   * ### **CSS Parts:**
+   *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
+   */
+  "p-animated-image": DefineComponent<PAnimatedImageProps>;
 
   /**
    * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
@@ -2588,6 +2613,24 @@ export type CustomElements = {
    * - **suffix** - The container that wraps the suffix.
    */
   "p-option": DefineComponent<POptionProps>;
+
+  /**
+   * Paginate represent actions that are available to the user.
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **p-change** - Emitted when the page changed.
+   *
+   * ### **Slots:**
+   *  - **prefix** - A presentational prefix icon or similar element.
+   * - **suffix** - A presentational suffix icon or similar element.
+   *
+   * ### **CSS Parts:**
+   *  - **prefix** - The container that wraps the prefix.
+   * - **suffix** - The container that wraps the suffix.
+   */
+  "p-paginate": DefineComponent<PPaginateProps>;
 
   /**
    * Popup is a utility that lets you declaratively anchor "popup" containers to another element.

@@ -144,7 +144,7 @@ export default class PCalendar extends PureElement implements PureFormControl {
     currentOption?: Date;
     /**
      * The selected options.
-     * @type {Date[]}
+     * @type {Date | Date[]}
      */
     selectedOptions: Date[];
     /** The name of the calendar, submitted as a name/value pair with form data. */
@@ -155,7 +155,7 @@ export default class PCalendar extends PureElement implements PureFormControl {
      * value attribute will be a space-delimited list of values based on the dates selected, and the value property will
      * be an array. **For this reason, values must not contain spaces.**
      */
-    value: Date[];
+    value: Date | Date[];
     /** The default value of the form control. Primarily used for resetting the form control. */
     defaultValue: Date | Date[];
     /** The select's size. */

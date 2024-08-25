@@ -1,85 +1,11 @@
 {
   "$schema": "https://raw.githubusercontent.com/JetBrains/web-types/master/schema/web-types.json",
   "name": "pure-uikit",
-  "version": "1.1.7",
+  "version": "1.1.10",
   "description-markup": "markdown",
   "contributions": {
     "html": {
       "elements": [
-        {
-          "name": "p-animated-image",
-          "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "src",
-              "description": "The path to the image to load.",
-              "value": { "type": "string" }
-            },
-            {
-              "name": "alt",
-              "description": "A description of the image used by assistive devices.",
-              "value": { "type": "string" }
-            },
-            {
-              "name": "play",
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "value": { "type": "boolean" }
-            }
-          ],
-          "slots": [
-            {
-              "name": "play-icon",
-              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`."
-            },
-            {
-              "name": "pause-icon",
-              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`."
-            }
-          ],
-          "events": [
-            {
-              "name": "p-load",
-              "description": "Emitted when the image loads successfully."
-            },
-            {
-              "name": "p-error",
-              "description": "Emitted when the image fails to load."
-            }
-          ],
-          "js": {
-            "properties": [
-              { "name": "animatedImage", "type": "HTMLImageElement" },
-              { "name": "frozenFrame", "type": "string" },
-              { "name": "isLoaded", "type": "boolean" },
-              {
-                "name": "src",
-                "description": "The path to the image to load.",
-                "type": "string"
-              },
-              {
-                "name": "alt",
-                "description": "A description of the image used by assistive devices.",
-                "type": "string"
-              },
-              {
-                "name": "play",
-                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-                "type": "boolean"
-              }
-            ],
-            "events": [
-              {
-                "name": "p-load",
-                "description": "Emitted when the image loads successfully."
-              },
-              {
-                "name": "p-error",
-                "description": "Emitted when the image fails to load."
-              }
-            ]
-          }
-        },
         {
           "name": "p-alert",
           "description": "Alerts are used to display important messages inline or as toast notifications.\n---\n\n\n### **Events:**\n - **p-show** - Emitted when the alert opens.\n- **p-after-show** - Emitted after the alert opens and all animations are complete.\n- **p-hide** - Emitted when the alert closes.\n- **p-after-hide** - Emitted after the alert closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the alert.\n- **hide()** - Hides the alert\n- **toast()** - Displays the alert as a toast notification. This will move the alert out of its position in the DOM and, when\ndismissed, it will be removed from the DOM completely. By storing a reference to the alert, you can reuse it by\ncalling this method again. The returned promise will resolve after the alert is hidden.\n\n### **Slots:**\n - _default_ - The alert's main content.\n- **icon** - An icon to show in the alert. Works best with `<p-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the optional icon.\n- **message** - The container that wraps the alert's main content.\n- **close-button** - The close button, an `<p-icon-button>`.\n- **close-button__base** - The close button's exported `base` part.",
@@ -173,6 +99,80 @@
               {
                 "name": "p-after-hide",
                 "description": "Emitted after the alert closes and all animations are complete."
+              }
+            ]
+          }
+        },
+        {
+          "name": "p-animated-image",
+          "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "src",
+              "description": "The path to the image to load.",
+              "value": { "type": "string" }
+            },
+            {
+              "name": "alt",
+              "description": "A description of the image used by assistive devices.",
+              "value": { "type": "string" }
+            },
+            {
+              "name": "play",
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "value": { "type": "boolean" }
+            }
+          ],
+          "slots": [
+            {
+              "name": "play-icon",
+              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`."
+            },
+            {
+              "name": "pause-icon",
+              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`."
+            }
+          ],
+          "events": [
+            {
+              "name": "p-load",
+              "description": "Emitted when the image loads successfully."
+            },
+            {
+              "name": "p-error",
+              "description": "Emitted when the image fails to load."
+            }
+          ],
+          "js": {
+            "properties": [
+              { "name": "animatedImage", "type": "HTMLImageElement" },
+              { "name": "frozenFrame", "type": "string" },
+              { "name": "isLoaded", "type": "boolean" },
+              {
+                "name": "src",
+                "description": "The path to the image to load.",
+                "type": "string"
+              },
+              {
+                "name": "alt",
+                "description": "A description of the image used by assistive devices.",
+                "type": "string"
+              },
+              {
+                "name": "play",
+                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+                "type": "boolean"
+              }
+            ],
+            "events": [
+              {
+                "name": "p-load",
+                "description": "Emitted when the image loads successfully."
+              },
+              {
+                "name": "p-error",
+                "description": "Emitted when the image fails to load."
               }
             ]
           }
@@ -927,7 +927,7 @@
             {
               "name": "value",
               "description": "The current value of the calendar, submitted as a name/value pair with form data. When type is set to`multiple`, the\nvalue attribute will be a space-delimited list of values based on the dates selected, and the value property will\nbe an array. **For this reason, values must not contain spaces.**",
-              "value": { "type": "Date[]", "default": "[]" }
+              "value": { "type": "Date | Date[]", "default": "[]" }
             },
             {
               "name": "size",
@@ -1072,7 +1072,7 @@
             {
               "name": "show-adjacent-dates",
               "description": "When true, dates from the previous and next month will also be shown to fill out the grid.",
-              "value": { "type": "boolean", "default": "false" }
+              "value": { "type": "boolean", "default": "true" }
             }
           ],
           "slots": [
@@ -1178,7 +1178,7 @@
               {
                 "name": "selectedOptions",
                 "description": "The selected options.",
-                "type": "Date[]"
+                "type": "Date | Date[]"
               },
               {
                 "name": "name",
@@ -1189,7 +1189,7 @@
               {
                 "name": "value",
                 "description": "The current value of the calendar, submitted as a name/value pair with form data. When type is set to`multiple`, the\nvalue attribute will be a space-delimited list of values based on the dates selected, and the value property will\nbe an array. **For this reason, values must not contain spaces.**",
-                "type": "Date[]"
+                "type": "Date | Date[]"
               },
               {
                 "name": "defaultValue",
@@ -3939,6 +3939,130 @@
               }
             ],
             "events": []
+          }
+        },
+        {
+          "name": "p-paginate",
+          "description": "Paginate represent actions that are available to the user.\n---\n\n\n### **Events:**\n - **p-change** - Emitted when the page changed.\n\n### **Slots:**\n - **prefix** - A presentational prefix icon or similar element.\n- **suffix** - A presentational suffix icon or similar element.\n\n### **CSS Parts:**\n - **prefix** - The container that wraps the prefix.\n- **suffix** - The container that wraps the suffix.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "title",
+              "value": { "type": "string", "default": "\"\"" }
+            },
+            {
+              "name": "variant",
+              "description": "The button's theme variant.",
+              "value": {
+                "type": "\"default\" | \"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\" | \"text\"",
+                "default": "\"default\""
+              }
+            },
+            {
+              "name": "size",
+              "description": "The button's size.",
+              "value": {
+                "type": "\"small\" | \"medium\" | \"large\"",
+                "default": "\"medium\""
+              }
+            },
+            {
+              "name": "disabled",
+              "description": "Disables the button.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "pill",
+              "description": "Draws a pill-style button with rounded edges.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "total",
+              "description": "The total items to paginate.",
+              "value": { "type": "number", "default": "119" }
+            },
+            {
+              "name": "page",
+              "description": "The current page.",
+              "value": { "type": "number", "default": "1" }
+            },
+            {
+              "name": "limit",
+              "description": "The limit items in a page.",
+              "value": { "type": "number", "default": "12" }
+            },
+            {
+              "name": "max-visible-pages",
+              "description": "The limit visible pages to show.",
+              "value": { "type": "number", "default": "3" }
+            }
+          ],
+          "slots": [
+            {
+              "name": "prefix",
+              "description": "A presentational prefix icon or similar element."
+            },
+            {
+              "name": "suffix",
+              "description": "A presentational suffix icon or similar element."
+            }
+          ],
+          "events": [
+            {
+              "name": "p-change",
+              "description": "Emitted when the page changed."
+            }
+          ],
+          "js": {
+            "properties": [
+              { "name": "title", "type": "string" },
+              {
+                "name": "variant",
+                "description": "The button's theme variant.",
+                "type": "\"default\" | \"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\" | \"text\""
+              },
+              {
+                "name": "size",
+                "description": "The button's size.",
+                "type": "\"small\" | \"medium\" | \"large\""
+              },
+              {
+                "name": "disabled",
+                "description": "Disables the button.",
+                "type": "boolean"
+              },
+              {
+                "name": "pill",
+                "description": "Draws a pill-style button with rounded edges.",
+                "type": "boolean"
+              },
+              {
+                "name": "total",
+                "description": "The total items to paginate.",
+                "type": "number"
+              },
+              {
+                "name": "page",
+                "description": "The current page.",
+                "type": "number"
+              },
+              {
+                "name": "limit",
+                "description": "The limit items in a page.",
+                "type": "number"
+              },
+              {
+                "name": "maxVisiblePages",
+                "description": "The limit visible pages to show.",
+                "type": "number"
+              }
+            ],
+            "events": [
+              {
+                "name": "p-change",
+                "description": "Emitted when the page changed."
+              }
+            ]
           }
         },
         {

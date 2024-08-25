@@ -32,6 +32,7 @@ export { default as PMenuItem } from './menu-item/index.js';
 export { default as PMenuLabel } from './menu-label/index.js';
 export { default as PMutationObserver } from './mutation-observer/index.js';
 export { default as POption } from './option/index.js';
+export { default as PPaginate } from './paginate/index.js';
 export { default as PPopup } from './popup/index.js';
 export { default as PProgressBar } from './progress-bar/index.js';
 export { default as PProgressRing } from './progress-ring/index.js';

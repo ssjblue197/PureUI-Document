@@ -449,7 +449,7 @@
         {
           "name": "value",
           "description": "The current value of the calendar, submitted as a name/value pair with form data. When type is set to`multiple`, the\nvalue attribute will be a space-delimited list of values based on the dates selected, and the value property will\nbe an array. **For this reason, values must not contain spaces.**",
-          "values": [{ "name": "Date[]" }]
+          "values": [{ "name": "Date" }, { "name": "Date[]" }]
         },
         {
           "name": "size",
@@ -1724,6 +1724,67 @@
         {
           "name": "Documentation",
           "url": "https://pureui.xyz/components/option"
+        }
+      ]
+    },
+    {
+      "name": "p-paginate",
+      "description": "Paginate represent actions that are available to the user.\n---\n\n\n### **Events:**\n - **p-change** - Emitted when the page changed.\n\n### **Slots:**\n - **prefix** - A presentational prefix icon or similar element.\n- **suffix** - A presentational suffix icon or similar element.\n\n### **CSS Parts:**\n - **prefix** - The container that wraps the prefix.\n- **suffix** - The container that wraps the suffix.",
+      "attributes": [
+        { "name": "title", "values": [] },
+        {
+          "name": "variant",
+          "description": "The button's theme variant.",
+          "values": [
+            { "name": "default" },
+            { "name": "primary" },
+            { "name": "success" },
+            { "name": "neutral" },
+            { "name": "warning" },
+            { "name": "danger" },
+            { "name": "text" }
+          ]
+        },
+        {
+          "name": "size",
+          "description": "The button's size.",
+          "values": [
+            { "name": "small" },
+            { "name": "medium" },
+            { "name": "large" }
+          ]
+        },
+        {
+          "name": "disabled",
+          "description": "Disables the button.",
+          "values": []
+        },
+        {
+          "name": "pill",
+          "description": "Draws a pill-style button with rounded edges.",
+          "values": []
+        },
+        {
+          "name": "total",
+          "description": "The total items to paginate.",
+          "values": []
+        },
+        { "name": "page", "description": "The current page.", "values": [] },
+        {
+          "name": "limit",
+          "description": "The limit items in a page.",
+          "values": []
+        },
+        {
+          "name": "max-visible-pages",
+          "description": "The limit visible pages to show.",
+          "values": []
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://pureui.xyz/components/paginate"
         }
       ]
     },

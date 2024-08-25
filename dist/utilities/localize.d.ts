@@ -17,10 +17,12 @@ export interface Translation extends DefaultTranslation {
     goToSlide: (slide: number, count: number) => string;
     hidePassword: string;
     loading: string;
+    nextPage?: string;
     nextMonth?: string;
     nextYear?: string;
     nextSlide: string;
     numOptionsSelected: (num: number) => string;
+    previousPage?: string;
     previousMonth?: string;
     previousYear?: string;
     previousSlide: string;

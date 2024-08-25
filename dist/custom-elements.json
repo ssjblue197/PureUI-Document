@@ -2443,7 +2443,7 @@
               "kind": "field",
               "name": "selectedOptions",
               "type": {
-                "text": "Date[]"
+                "text": "Date | Date[]"
               },
               "default": "[]",
               "description": "The selected options."
@@ -2470,7 +2470,7 @@
               "kind": "field",
               "name": "value",
               "type": {
-                "text": "Date[]"
+                "text": "Date | Date[]"
               },
               "default": "[]",
               "description": "The current value of the calendar, submitted as a name/value pair with form data. When type is set to`multiple`, the\nvalue attribute will be a space-delimited list of values based on the dates selected, and the value property will\nbe an array. **For this reason, values must not contain spaces.**",
@@ -2742,7 +2742,7 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "false",
+              "default": "true",
               "description": "When true, dates from the previous and next month will also be shown to fill out the grid.",
               "attribute": "show-adjacent-dates"
             },
@@ -3206,7 +3206,7 @@
             {
               "name": "value",
               "type": {
-                "text": "Date[]"
+                "text": "Date | Date[]"
               },
               "default": "[]",
               "description": "The current value of the calendar, submitted as a name/value pair with form data. When type is set to`multiple`, the\nvalue attribute will be a space-delimited list of values based on the dates selected, and the value property will\nbe an array. **For this reason, values must not contain spaces.**",
@@ -3429,7 +3429,7 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "false",
+              "default": "true",
               "description": "When true, dates from the previous and next month will also be shown to fill out the grid.",
               "fieldName": "showAdjacentDates"
             }
@@ -10796,6 +10796,293 @@
           "declaration": {
             "name": "POption",
             "module": "components/option/option.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/paginate/paginate.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PPaginate",
+          "cssParts": [
+            {
+              "description": "The container that wraps the prefix.",
+              "name": "prefix"
+            },
+            {
+              "description": "The container that wraps the suffix.",
+              "name": "suffix"
+            }
+          ],
+          "slots": [
+            {
+              "description": "A presentational prefix icon or similar element.",
+              "name": "prefix"
+            },
+            {
+              "description": "A presentational suffix icon or similar element.",
+              "name": "suffix"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "dependencies",
+              "type": {
+                "text": "object"
+              },
+              "static": true,
+              "default": "{\n    \"p-icon\": PIcon,\n  }"
+            },
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "readonly": true,
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "title",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "title"
+            },
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "\"default\" | \"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\" | \"text\""
+              },
+              "default": "\"default\"",
+              "description": "The button's theme variant.",
+              "attribute": "variant",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "\"small\" | \"medium\" | \"large\""
+              },
+              "default": "\"medium\"",
+              "description": "The button's size.",
+              "attribute": "size",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the button.",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pill",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a pill-style button with rounded edges.",
+              "attribute": "pill",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "total",
+              "type": {
+                "text": "number"
+              },
+              "default": "119",
+              "description": "The total items to paginate.",
+              "attribute": "total",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "page",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "description": "The current page.",
+              "attribute": "page",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "limit",
+              "type": {
+                "text": "number"
+              },
+              "default": "12",
+              "description": "The limit items in a page.",
+              "attribute": "limit",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "maxVisiblePages",
+              "type": {
+                "text": "number"
+              },
+              "default": "3",
+              "description": "The limit visible pages to show.",
+              "attribute": "max-visible-pages",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "getPages",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "changePage",
+              "parameters": [
+                {
+                  "name": "newPage",
+                  "type": {
+                    "text": "number | string"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "prevPage"
+            },
+            {
+              "kind": "method",
+              "name": "nextPage"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the page changed.",
+              "name": "p-change",
+              "reactName": "onPChange",
+              "eventName": "PChangeEvent"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "title",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "title"
+            },
+            {
+              "name": "variant",
+              "type": {
+                "text": "\"default\" | \"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\" | \"text\""
+              },
+              "default": "\"default\"",
+              "description": "The button's theme variant.",
+              "fieldName": "variant"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "\"small\" | \"medium\" | \"large\""
+              },
+              "default": "\"medium\"",
+              "description": "The button's size.",
+              "fieldName": "size"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the button.",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "pill",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a pill-style button with rounded edges.",
+              "fieldName": "pill"
+            },
+            {
+              "name": "total",
+              "type": {
+                "text": "number"
+              },
+              "default": "119",
+              "description": "The total items to paginate.",
+              "fieldName": "total"
+            },
+            {
+              "name": "page",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "description": "The current page.",
+              "fieldName": "page"
+            },
+            {
+              "name": "limit",
+              "type": {
+                "text": "number"
+              },
+              "default": "12",
+              "description": "The limit items in a page.",
+              "fieldName": "limit"
+            },
+            {
+              "name": "max-visible-pages",
+              "type": {
+                "text": "number"
+              },
+              "default": "3",
+              "description": "The limit visible pages to show.",
+              "fieldName": "maxVisiblePages"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "Paginate represent actions that are available to the user.",
+          "tagNameWithoutPrefix": "paginate",
+          "tagName": "p-paginate",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary Paginate represent actions that are available to the user.\n * @documentation https://pureui.xyz/components/button\n * @status stable\n * @since 1.0\n *\n * @dependency p-icon\n * @dependency p-button\n *\n * @event p-change - Emitted when the page changed.\n *\n * @slot prefix - A presentational prefix icon or similar element.\n * @slot suffix - A presentational suffix icon or similar element.\n *\n * @csspart prefix - The container that wraps the prefix.\n * @csspart suffix - The container that wraps the suffix.\n */",
+          "documentation": "https://pureui.xyz/components/button",
+          "status": "stable",
+          "since": "1.0",
+          "dependencies": [
+            "p-icon",
+            "p-button"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PPaginate",
+            "module": "components/paginate/paginate.js"
           }
         }
       ]
@@ -18782,7 +19069,7 @@
   "package": {
     "name": "pure-uikit",
     "description": "A forward-thinking library of web components.",
-    "version": "1.1.7",
+    "version": "1.1.10",
     "author": "Mr.P",
     "homepage": "https://pureui.xyz",
     "license": "MIT"
