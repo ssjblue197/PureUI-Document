@@ -2,8 +2,8 @@ import type { DefineComponent } from "vue";
 
 import type { PAlert } from "../../components/alert/alert.component.js";
 import type { PAnimatedImage } from "../../components/animated-image/animated-image.component.js";
-import type { PAnimation } from "../../components/animation/animation.component.js";
 import type { PAvatar } from "../../components/avatar/avatar.component.js";
+import type { PAnimation } from "../../components/animation/animation.component.js";
 import type { PBadge } from "../../components/badge/badge.component.js";
 import type { PBreadcrumb } from "../../components/breadcrumb/breadcrumb.component.js";
 import type { PBreadcrumbItem } from "../../components/breadcrumb-item/breadcrumb-item.component.js";
@@ -24,8 +24,8 @@ import type { PDropdown } from "../../components/dropdown/dropdown.component.js"
 import type { PFormatBytes } from "../../components/format-bytes/format-bytes.component.js";
 import type { PFormatDate } from "../../components/format-date/format-date.component.js";
 import type { PFormatNumber } from "../../components/format-number/format-number.component.js";
-import type { PIcon } from "../../components/icon/icon.component.js";
 import type { PIconButton } from "../../components/icon-button/icon-button.component.js";
+import type { PIcon } from "../../components/icon/icon.component.js";
 import type { PImageComparer } from "../../components/image-comparer/image-comparer.component.js";
 import type { PInclude } from "../../components/include/include.component.js";
 import type { PInput } from "../../components/input/input.component.js";
@@ -35,8 +35,8 @@ import type { PMenuLabel } from "../../components/menu-label/menu-label.componen
 import type { PMutationObserver } from "../../components/mutation-observer/mutation-observer.component.js";
 import type { POption } from "../../components/option/option.component.js";
 import type { PPaginate } from "../../components/paginate/paginate.component.js";
-import type { PPopup } from "../../components/popup/popup.component.js";
 import type { PProgressBar } from "../../components/progress-bar/progress-bar.component.js";
+import type { PPopup } from "../../components/popup/popup.component.js";
 import type { PProgressRing } from "../../components/progress-ring/progress-ring.component.js";
 import type { PQrCode } from "../../components/qr-code/qr-code.component.js";
 import type { PRadio } from "../../components/radio/radio.component.js";
@@ -104,6 +104,22 @@ type PAnimatedImageProps = {
   "onp-error"?: (e: CustomEvent<never>) => void;
 };
 
+type PAvatarProps = {
+  /** The image source to use for the avatar. */
+  image?: PAvatar["image"];
+  /** A label to use to describe the avatar to assistive devices. */
+  label?: PAvatar["label"];
+  /** Initials to use as a fallback when no image is available (1-2 characters max recommended). */
+  initials?: PAvatar["initials"];
+  /** Indicates how the browser should load the image. */
+  loading?: PAvatar["loading"];
+  /** The shape of the avatar. */
+  shape?: PAvatar["shape"];
+
+  /** The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause. */
+  "onp-error"?: (e: CustomEvent<never>) => void;
+};
+
 type PAnimationProps = {
   /** The name of the built-in animation to use. For custom animations, use the `keyframes` prop. */
   name?: PAnimation["name"];
@@ -144,22 +160,6 @@ value can be changed without causing the animation to restart. */
   "onp-finish"?: (e: CustomEvent<never>) => void;
   /** Emitted when the animation starts or restarts. */
   "onp-start"?: (e: CustomEvent<never>) => void;
-};
-
-type PAvatarProps = {
-  /** The image source to use for the avatar. */
-  image?: PAvatar["image"];
-  /** A label to use to describe the avatar to assistive devices. */
-  label?: PAvatar["label"];
-  /** Initials to use as a fallback when no image is available (1-2 characters max recommended). */
-  initials?: PAvatar["initials"];
-  /** Indicates how the browser should load the image. */
-  loading?: PAvatar["loading"];
-  /** The shape of the avatar. */
-  shape?: PAvatar["shape"];
-
-  /** The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause. */
-  "onp-error"?: (e: CustomEvent<never>) => void;
 };
 
 type PBadgeProps = {
@@ -826,24 +826,6 @@ type PFormatNumberProps = {
   "maximum-significant-digits"?: PFormatNumber["maximumSignificantDigits"];
 };
 
-type PIconProps = {
-  /** The name of the icon to draw. Available names depend on the icon library being used. */
-  name?: PIcon["name"];
-  /** An external URL of an SVG file. Be sure you trust the content you are including, as it will be executed as code and
-can result in XSS attacks. */
-  src?: PIcon["src"];
-  /** An alternate description to use for assistive devices. If omitted, the icon will be considered presentational and
-ignored by assistive devices. */
-  label?: PIcon["label"];
-  /** The name of a registered custom icon library. */
-  library?: PIcon["library"];
-
-  /** Emitted when the icon has loaded. When using `spriteSheet: true` this will not emit. */
-  "onp-load"?: (e: CustomEvent<never>) => void;
-  /** Emitted when the icon fails to load due to an error. When using `spriteSheet: true` this will not emit. */
-  "onp-error"?: (e: CustomEvent<never>) => void;
-};
-
 type PIconButtonProps = {
   /** The name of the icon to draw. Available names depend on the icon library being used. */
   name?: PIconButton["name"];
@@ -869,6 +851,24 @@ that describes what the icon button does. */
   "onp-blur"?: (e: CustomEvent<never>) => void;
   /** Emitted when the icon button gains focus. */
   "onp-focus"?: (e: CustomEvent<never>) => void;
+};
+
+type PIconProps = {
+  /** The name of the icon to draw. Available names depend on the icon library being used. */
+  name?: PIcon["name"];
+  /** An external URL of an SVG file. Be sure you trust the content you are including, as it will be executed as code and
+can result in XSS attacks. */
+  src?: PIcon["src"];
+  /** An alternate description to use for assistive devices. If omitted, the icon will be considered presentational and
+ignored by assistive devices. */
+  label?: PIcon["label"];
+  /** The name of a registered custom icon library. */
+  library?: PIcon["library"];
+
+  /** Emitted when the icon has loaded. When using `spriteSheet: true` this will not emit. */
+  "onp-load"?: (e: CustomEvent<never>) => void;
+  /** Emitted when the icon fails to load due to an error. When using `spriteSheet: true` this will not emit. */
+  "onp-error"?: (e: CustomEvent<never>) => void;
 };
 
 type PImageComparerProps = {
@@ -1084,6 +1084,15 @@ type PPaginateProps = {
   "onp-change"?: (e: CustomEvent<never>) => void;
 };
 
+type PProgressBarProps = {
+  /** The current progress as a percentage, 0 to 100. */
+  value?: PProgressBar["value"];
+  /** When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state. */
+  indeterminate?: PProgressBar["indeterminate"];
+  /** A custom label for assistive devices. */
+  label?: PProgressBar["label"];
+};
+
 type PPopupProps = {
   /** The element the popup will be anchored to. If the anchor lives outside of the popup, you can provide the anchor
 element `id`, a DOM element reference, or a `VirtualElement`. If the anchor lives inside the popup, use the
@@ -1157,15 +1166,6 @@ active. */
   popup?: PPopup["popup"];
   /** Emitted when the popup is repositioned. This event can fire a lot, so avoid putting expensive operations in your listener or consider debouncing it. */
   "onp-reposition"?: (e: CustomEvent<never>) => void;
-};
-
-type PProgressBarProps = {
-  /** The current progress as a percentage, 0 to 100. */
-  value?: PProgressBar["value"];
-  /** When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state. */
-  indeterminate?: PProgressBar["indeterminate"];
-  /** A custom label for assistive devices. */
-  label?: PProgressBar["label"];
 };
 
 type PProgressRingProps = {
@@ -1822,25 +1822,6 @@ export type CustomElements = {
   "p-animated-image": DefineComponent<PAnimatedImageProps>;
 
   /**
-   * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **p-cancel** - Emitted when the animation is canceled.
-   * - **p-finish** - Emitted when the animation finishes.
-   * - **p-start** - Emitted when the animation starts or restarts.
-   *
-   * ### **Methods:**
-   *  - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.
-   * - **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.
-   *
-   * ### **Slots:**
-   *  - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.
-   */
-  "p-animation": DefineComponent<PAnimationProps>;
-
-  /**
    * Avatars are used to represent a person or object.
    * ---
    *
@@ -1861,6 +1842,25 @@ export type CustomElements = {
    * - **image** - The avatar image. Only shown when the `image` attribute is set.
    */
   "p-avatar": DefineComponent<PAvatarProps>;
+
+  /**
+   * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **p-cancel** - Emitted when the animation is canceled.
+   * - **p-finish** - Emitted when the animation finishes.
+   * - **p-start** - Emitted when the animation starts or restarts.
+   *
+   * ### **Methods:**
+   *  - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.
+   * - **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.
+   *
+   * ### **Slots:**
+   *  - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.
+   */
+  "p-animation": DefineComponent<PAnimationProps>;
 
   /**
    * Badges are used to draw attention and display statuses or counts.
@@ -2404,21 +2404,6 @@ export type CustomElements = {
   "p-format-number": DefineComponent<PFormatNumberProps>;
 
   /**
-   * Icons are symbols that can be used to represent various options within an application.
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **p-load** - Emitted when the icon has loaded. When using `spriteSheet: true` this will not emit.
-   * - **p-error** - Emitted when the icon fails to load due to an error. When using `spriteSheet: true` this will not emit.
-   *
-   * ### **CSS Parts:**
-   *  - **svg** - The internal SVG element.
-   * - **use** - The <use> element generated when using `spriteSheet: true`
-   */
-  "p-icon": DefineComponent<PIconProps>;
-
-  /**
    * Icons buttons are simple, icon-only buttons that can be used for actions and in toolbars.
    * ---
    *
@@ -2436,6 +2421,21 @@ export type CustomElements = {
    *  - **base** - The component's base wrapper.
    */
   "p-icon-button": DefineComponent<PIconButtonProps>;
+
+  /**
+   * Icons are symbols that can be used to represent various options within an application.
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **p-load** - Emitted when the icon has loaded. When using `spriteSheet: true` this will not emit.
+   * - **p-error** - Emitted when the icon fails to load due to an error. When using `spriteSheet: true` this will not emit.
+   *
+   * ### **CSS Parts:**
+   *  - **svg** - The internal SVG element.
+   * - **use** - The <use> element generated when using `spriteSheet: true`
+   */
+  "p-icon": DefineComponent<PIconProps>;
 
   /**
    * Compare visual differences between similar photos with a sliding panel.
@@ -2633,6 +2633,27 @@ export type CustomElements = {
   "p-paginate": DefineComponent<PPaginateProps>;
 
   /**
+   * Progress bars are used to show the status of an ongoing operation.
+   * ---
+   *
+   *
+   * ### **Slots:**
+   *  - _default_ - A label to show inside the progress indicator.
+   *
+   * ### **CSS Properties:**
+   *  - **--height** - The progress bar's height. _(default: undefined)_
+   * - **--track-color** - The color of the track. _(default: undefined)_
+   * - **--indicator-color** - The color of the indicator. _(default: undefined)_
+   * - **--label-color** - The color of the label. _(default: undefined)_
+   *
+   * ### **CSS Parts:**
+   *  - **base** - The component's base wrapper.
+   * - **indicator** - The progress bar's indicator.
+   * - **label** - The progress bar's label.
+   */
+  "p-progress-bar": DefineComponent<PProgressBarProps>;
+
+  /**
    * Popup is a utility that lets you declaratively anchor "popup" containers to another element.
    * ---
    *
@@ -2659,27 +2680,6 @@ export type CustomElements = {
    * - **hover-bridge** - The hover bridge element. Only available when the `hover-bridge` option is enabled.
    */
   "p-popup": DefineComponent<PPopupProps>;
-
-  /**
-   * Progress bars are used to show the status of an ongoing operation.
-   * ---
-   *
-   *
-   * ### **Slots:**
-   *  - _default_ - A label to show inside the progress indicator.
-   *
-   * ### **CSS Properties:**
-   *  - **--height** - The progress bar's height. _(default: undefined)_
-   * - **--track-color** - The color of the track. _(default: undefined)_
-   * - **--indicator-color** - The color of the indicator. _(default: undefined)_
-   * - **--label-color** - The color of the label. _(default: undefined)_
-   *
-   * ### **CSS Parts:**
-   *  - **base** - The component's base wrapper.
-   * - **indicator** - The progress bar's indicator.
-   * - **label** - The progress bar's label.
-   */
-  "p-progress-bar": DefineComponent<PProgressBarProps>;
 
   /**
    * Progress rings are used to show the progress of a determinate operation in a circular fashion.

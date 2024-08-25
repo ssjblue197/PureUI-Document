@@ -264,192 +264,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/animated-image/animated-image.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PAnimatedImage",
-          "cssProperties": [
-            {
-              "description": "The size of the icon box.",
-              "name": "--control-box-size"
-            },
-            {
-              "description": "The size of the play/pause icons.",
-              "name": "--icon-size"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The container that surrounds the pause/play icons and provides their background.",
-              "name": "control-box"
-            }
-          ],
-          "slots": [
-            {
-              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`.",
-              "name": "play-icon"
-            },
-            {
-              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`.",
-              "name": "pause-icon"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "dependencies",
-              "type": {
-                "text": "object"
-              },
-              "static": true,
-              "default": "{ \"p-icon\": PIcon }"
-            },
-            {
-              "kind": "field",
-              "name": "animatedImage",
-              "type": {
-                "text": "HTMLImageElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "frozenFrame",
-              "type": {
-                "text": "string"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "isLoaded",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "src",
-              "type": {
-                "text": "string"
-              },
-              "description": "The path to the image to load.",
-              "attribute": "src"
-            },
-            {
-              "kind": "field",
-              "name": "alt",
-              "type": {
-                "text": "string"
-              },
-              "description": "A description of the image used by assistive devices.",
-              "attribute": "alt"
-            },
-            {
-              "kind": "field",
-              "name": "play",
-              "type": {
-                "text": "boolean"
-              },
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "attribute": "play",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleClick",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleLoad",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleError",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handlePlayChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleSrcChange"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the image loads successfully.",
-              "name": "p-load",
-              "reactName": "onPLoad",
-              "eventName": "PLoadEvent"
-            },
-            {
-              "description": "Emitted when the image fails to load.",
-              "name": "p-error",
-              "reactName": "onPError",
-              "eventName": "PErrorEvent"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "src",
-              "type": {
-                "text": "string"
-              },
-              "description": "The path to the image to load.",
-              "fieldName": "src"
-            },
-            {
-              "name": "alt",
-              "type": {
-                "text": "string"
-              },
-              "description": "A description of the image used by assistive devices.",
-              "fieldName": "alt"
-            },
-            {
-              "name": "play",
-              "type": {
-                "text": "boolean"
-              },
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "fieldName": "play"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.",
-          "tagNameWithoutPrefix": "animated-image",
-          "tagName": "p-animated-image",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n * @documentation https://pureui.xyz/components/animated-image\n * @status stable\n * @since 1.0\n *\n * @dependency p-icon\n *\n * @event p-load - Emitted when the image loads successfully.\n * @event p-error - Emitted when the image fails to load.\n *\n * @slot play-icon - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n * @slot pause-icon - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n *\n * @part control-box - The container that surrounds the pause/play icons and provides their background.\n *\n * @cssproperty --control-box-size - The size of the icon box.\n * @cssproperty --icon-size - The size of the play/pause icons.\n */",
-          "documentation": "https://pureui.xyz/components/animated-image",
-          "status": "stable",
-          "since": "1.0",
-          "dependencies": [
-            "p-icon"
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PAnimatedImage",
-            "module": "components/animated-image/animated-image.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/animation/animation.js",
       "declarations": [
         {
@@ -801,6 +615,192 @@
           "declaration": {
             "name": "PAnimation",
             "module": "components/animation/animation.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/animated-image/animated-image.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PAnimatedImage",
+          "cssProperties": [
+            {
+              "description": "The size of the icon box.",
+              "name": "--control-box-size"
+            },
+            {
+              "description": "The size of the play/pause icons.",
+              "name": "--icon-size"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The container that surrounds the pause/play icons and provides their background.",
+              "name": "control-box"
+            }
+          ],
+          "slots": [
+            {
+              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`.",
+              "name": "play-icon"
+            },
+            {
+              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`.",
+              "name": "pause-icon"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "dependencies",
+              "type": {
+                "text": "object"
+              },
+              "static": true,
+              "default": "{ \"p-icon\": PIcon }"
+            },
+            {
+              "kind": "field",
+              "name": "animatedImage",
+              "type": {
+                "text": "HTMLImageElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "frozenFrame",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "isLoaded",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "src",
+              "type": {
+                "text": "string"
+              },
+              "description": "The path to the image to load.",
+              "attribute": "src"
+            },
+            {
+              "kind": "field",
+              "name": "alt",
+              "type": {
+                "text": "string"
+              },
+              "description": "A description of the image used by assistive devices.",
+              "attribute": "alt"
+            },
+            {
+              "kind": "field",
+              "name": "play",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "attribute": "play",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleLoad",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleError",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handlePlayChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleSrcChange"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the image loads successfully.",
+              "name": "p-load",
+              "reactName": "onPLoad",
+              "eventName": "PLoadEvent"
+            },
+            {
+              "description": "Emitted when the image fails to load.",
+              "name": "p-error",
+              "reactName": "onPError",
+              "eventName": "PErrorEvent"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "src",
+              "type": {
+                "text": "string"
+              },
+              "description": "The path to the image to load.",
+              "fieldName": "src"
+            },
+            {
+              "name": "alt",
+              "type": {
+                "text": "string"
+              },
+              "description": "A description of the image used by assistive devices.",
+              "fieldName": "alt"
+            },
+            {
+              "name": "play",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "fieldName": "play"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.",
+          "tagNameWithoutPrefix": "animated-image",
+          "tagName": "p-animated-image",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n * @documentation https://pureui.xyz/components/animated-image\n * @status stable\n * @since 1.0\n *\n * @dependency p-icon\n *\n * @event p-load - Emitted when the image loads successfully.\n * @event p-error - Emitted when the image fails to load.\n *\n * @slot play-icon - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n * @slot pause-icon - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n *\n * @part control-box - The container that surrounds the pause/play icons and provides their background.\n *\n * @cssproperty --control-box-size - The size of the icon box.\n * @cssproperty --icon-size - The size of the play/pause icons.\n */",
+          "documentation": "https://pureui.xyz/components/animated-image",
+          "status": "stable",
+          "since": "1.0",
+          "dependencies": [
+            "p-icon"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PAnimatedImage",
+            "module": "components/animated-image/animated-image.js"
           }
         }
       ]
@@ -19069,7 +19069,7 @@
   "package": {
     "name": "pure-uikit",
     "description": "A forward-thinking library of web components.",
-    "version": "1.1.10",
+    "version": "1.1.11",
     "author": "Mr.P",
     "homepage": "https://pureui.xyz",
     "license": "MIT"
