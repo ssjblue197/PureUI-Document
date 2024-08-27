@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/JetBrains/web-types/master/schema/web-types.json",
   "name": "pure-uikit",
-  "version": "1.1.11",
+  "version": "1.1.12",
   "description-markup": "markdown",
   "contributions": {
     "html": {
@@ -99,165 +99,6 @@
               {
                 "name": "p-after-hide",
                 "description": "Emitted after the alert closes and all animations are complete."
-              }
-            ]
-          }
-        },
-        {
-          "name": "p-animated-image",
-          "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "src",
-              "description": "The path to the image to load.",
-              "value": { "type": "string" }
-            },
-            {
-              "name": "alt",
-              "description": "A description of the image used by assistive devices.",
-              "value": { "type": "string" }
-            },
-            {
-              "name": "play",
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "value": { "type": "boolean" }
-            }
-          ],
-          "slots": [
-            {
-              "name": "play-icon",
-              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`."
-            },
-            {
-              "name": "pause-icon",
-              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`."
-            }
-          ],
-          "events": [
-            {
-              "name": "p-load",
-              "description": "Emitted when the image loads successfully."
-            },
-            {
-              "name": "p-error",
-              "description": "Emitted when the image fails to load."
-            }
-          ],
-          "js": {
-            "properties": [
-              { "name": "animatedImage", "type": "HTMLImageElement" },
-              { "name": "frozenFrame", "type": "string" },
-              { "name": "isLoaded", "type": "boolean" },
-              {
-                "name": "src",
-                "description": "The path to the image to load.",
-                "type": "string"
-              },
-              {
-                "name": "alt",
-                "description": "A description of the image used by assistive devices.",
-                "type": "string"
-              },
-              {
-                "name": "play",
-                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-                "type": "boolean"
-              }
-            ],
-            "events": [
-              {
-                "name": "p-load",
-                "description": "Emitted when the image loads successfully."
-              },
-              {
-                "name": "p-error",
-                "description": "Emitted when the image fails to load."
-              }
-            ]
-          }
-        },
-        {
-          "name": "p-avatar",
-          "description": "Avatars are used to represent a person or object.\n---\n\n\n### **Events:**\n - **p-error** - The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause.\n\n### **Slots:**\n - **icon** - The default icon to use when no image or initials are present. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--size** - The size of the avatar. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the avatar's icon.\n- **initials** - The container that wraps the avatar's initials.\n- **image** - The avatar image. Only shown when the `image` attribute is set.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "image",
-              "description": "The image source to use for the avatar.",
-              "value": { "type": "string", "default": "\"\"" }
-            },
-            {
-              "name": "label",
-              "description": "A label to use to describe the avatar to assistive devices.",
-              "value": { "type": "string", "default": "\"\"" }
-            },
-            {
-              "name": "initials",
-              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-              "value": { "type": "string", "default": "\"\"" }
-            },
-            {
-              "name": "loading",
-              "description": "Indicates how the browser should load the image.",
-              "value": {
-                "type": "\"eager\" | \"lazy\"",
-                "default": "\"eager\""
-              }
-            },
-            {
-              "name": "shape",
-              "description": "The shape of the avatar.",
-              "value": {
-                "type": "\"circle\" | \"square\" | \"rounded\"",
-                "default": "\"circle\""
-              }
-            }
-          ],
-          "slots": [
-            {
-              "name": "icon",
-              "description": "The default icon to use when no image or initials are present. Works best with `<p-icon>`."
-            }
-          ],
-          "events": [
-            {
-              "name": "p-error",
-              "description": "The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause."
-            }
-          ],
-          "js": {
-            "properties": [
-              {
-                "name": "image",
-                "description": "The image source to use for the avatar.",
-                "type": "string"
-              },
-              {
-                "name": "label",
-                "description": "A label to use to describe the avatar to assistive devices.",
-                "type": "string"
-              },
-              {
-                "name": "initials",
-                "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-                "type": "string"
-              },
-              {
-                "name": "loading",
-                "description": "Indicates how the browser should load the image.",
-                "type": "\"eager\" | \"lazy\""
-              },
-              {
-                "name": "shape",
-                "description": "The shape of the avatar.",
-                "type": "\"circle\" | \"square\" | \"rounded\""
-              }
-            ],
-            "events": [
-              {
-                "name": "p-error",
-                "description": "The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause."
               }
             ]
           }
@@ -428,50 +269,162 @@
           }
         },
         {
-          "name": "p-badge",
-          "description": "Badges are used to draw attention and display statuses or counts.\n---\n\n\n### **Slots:**\n - _default_ - The badge's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+          "name": "p-avatar",
+          "description": "Avatars are used to represent a person or object.\n---\n\n\n### **Events:**\n - **p-error** - The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause.\n\n### **Slots:**\n - **icon** - The default icon to use when no image or initials are present. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--size** - The size of the avatar. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the avatar's icon.\n- **initials** - The container that wraps the avatar's initials.\n- **image** - The avatar image. Only shown when the `image` attribute is set.",
           "doc-url": "",
           "attributes": [
             {
-              "name": "variant",
-              "description": "The badge's theme variant.",
+              "name": "image",
+              "description": "The image source to use for the avatar.",
+              "value": { "type": "string", "default": "\"\"" }
+            },
+            {
+              "name": "label",
+              "description": "A label to use to describe the avatar to assistive devices.",
+              "value": { "type": "string", "default": "\"\"" }
+            },
+            {
+              "name": "initials",
+              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+              "value": { "type": "string", "default": "\"\"" }
+            },
+            {
+              "name": "loading",
+              "description": "Indicates how the browser should load the image.",
               "value": {
-                "type": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\"",
-                "default": "\"primary\""
+                "type": "\"eager\" | \"lazy\"",
+                "default": "\"eager\""
               }
             },
             {
-              "name": "pill",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "value": { "type": "boolean", "default": "false" }
-            },
-            {
-              "name": "pulse",
-              "description": "Makes the badge pulsate to draw attention.",
-              "value": { "type": "boolean", "default": "false" }
+              "name": "shape",
+              "description": "The shape of the avatar.",
+              "value": {
+                "type": "\"circle\" | \"square\" | \"rounded\"",
+                "default": "\"circle\""
+              }
             }
           ],
-          "slots": [{ "name": "", "description": "The badge's content." }],
-          "events": [],
+          "slots": [
+            {
+              "name": "icon",
+              "description": "The default icon to use when no image or initials are present. Works best with `<p-icon>`."
+            }
+          ],
+          "events": [
+            {
+              "name": "p-error",
+              "description": "The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause."
+            }
+          ],
           "js": {
             "properties": [
               {
-                "name": "variant",
-                "description": "The badge's theme variant.",
-                "type": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\""
+                "name": "image",
+                "description": "The image source to use for the avatar.",
+                "type": "string"
               },
               {
-                "name": "pill",
-                "description": "Draws a pill-style badge with rounded edges.",
-                "type": "boolean"
+                "name": "label",
+                "description": "A label to use to describe the avatar to assistive devices.",
+                "type": "string"
               },
               {
-                "name": "pulse",
-                "description": "Makes the badge pulsate to draw attention.",
+                "name": "initials",
+                "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+                "type": "string"
+              },
+              {
+                "name": "loading",
+                "description": "Indicates how the browser should load the image.",
+                "type": "\"eager\" | \"lazy\""
+              },
+              {
+                "name": "shape",
+                "description": "The shape of the avatar.",
+                "type": "\"circle\" | \"square\" | \"rounded\""
+              }
+            ],
+            "events": [
+              {
+                "name": "p-error",
+                "description": "The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause."
+              }
+            ]
+          }
+        },
+        {
+          "name": "p-animated-image",
+          "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "src",
+              "description": "The path to the image to load.",
+              "value": { "type": "string" }
+            },
+            {
+              "name": "alt",
+              "description": "A description of the image used by assistive devices.",
+              "value": { "type": "string" }
+            },
+            {
+              "name": "play",
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "value": { "type": "boolean" }
+            }
+          ],
+          "slots": [
+            {
+              "name": "play-icon",
+              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`."
+            },
+            {
+              "name": "pause-icon",
+              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`."
+            }
+          ],
+          "events": [
+            {
+              "name": "p-load",
+              "description": "Emitted when the image loads successfully."
+            },
+            {
+              "name": "p-error",
+              "description": "Emitted when the image fails to load."
+            }
+          ],
+          "js": {
+            "properties": [
+              { "name": "animatedImage", "type": "HTMLImageElement" },
+              { "name": "frozenFrame", "type": "string" },
+              { "name": "isLoaded", "type": "boolean" },
+              {
+                "name": "src",
+                "description": "The path to the image to load.",
+                "type": "string"
+              },
+              {
+                "name": "alt",
+                "description": "A description of the image used by assistive devices.",
+                "type": "string"
+              },
+              {
+                "name": "play",
+                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
                 "type": "boolean"
               }
             ],
-            "events": []
+            "events": [
+              {
+                "name": "p-load",
+                "description": "Emitted when the image loads successfully."
+              },
+              {
+                "name": "p-error",
+                "description": "Emitted when the image fails to load."
+              }
+            ]
           }
         },
         {
@@ -567,6 +520,53 @@
                 "name": "rel",
                 "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
                 "type": "string"
+              }
+            ],
+            "events": []
+          }
+        },
+        {
+          "name": "p-badge",
+          "description": "Badges are used to draw attention and display statuses or counts.\n---\n\n\n### **Slots:**\n - _default_ - The badge's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "variant",
+              "description": "The badge's theme variant.",
+              "value": {
+                "type": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\"",
+                "default": "\"primary\""
+              }
+            },
+            {
+              "name": "pill",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "pulse",
+              "description": "Makes the badge pulsate to draw attention.",
+              "value": { "type": "boolean", "default": "false" }
+            }
+          ],
+          "slots": [{ "name": "", "description": "The badge's content." }],
+          "events": [],
+          "js": {
+            "properties": [
+              {
+                "name": "variant",
+                "description": "The badge's theme variant.",
+                "type": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\""
+              },
+              {
+                "name": "pill",
+                "description": "Draws a pill-style badge with rounded edges.",
+                "type": "boolean"
+              },
+              {
+                "name": "pulse",
+                "description": "Makes the badge pulsate to draw attention.",
+                "type": "boolean"
               }
             ],
             "events": []
@@ -898,6 +898,29 @@
             ],
             "events": []
           }
+        },
+        {
+          "name": "p-card",
+          "description": "Cards can be used to group related subjects in a container.\n---\n\n\n### **Slots:**\n - _default_ - The card's main content.\n- **header** - An optional header for the card.\n- **footer** - An optional footer for the card.\n- **image** - An optional image to render at the start of the card.\n\n### **CSS Properties:**\n - **--border-color** - The card's border color, including borders that occur inside the card. _(default: undefined)_\n- **--border-radius** - The border radius for the card's edges. _(default: undefined)_\n- **--border-width** - The width of the card's borders. _(default: undefined)_\n- **--padding** - The padding to use for the card's sections. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **image** - The container that wraps the card's image.\n- **header** - The container that wraps the card's header.\n- **body** - The container that wraps the card's main content.\n- **footer** - The container that wraps the card's footer.",
+          "doc-url": "",
+          "attributes": [],
+          "slots": [
+            { "name": "", "description": "The card's main content." },
+            {
+              "name": "header",
+              "description": "An optional header for the card."
+            },
+            {
+              "name": "footer",
+              "description": "An optional footer for the card."
+            },
+            {
+              "name": "image",
+              "description": "An optional image to render at the start of the card."
+            }
+          ],
+          "events": [],
+          "js": { "properties": [], "events": [] }
         },
         {
           "name": "p-calendar",
@@ -1373,29 +1396,6 @@
               }
             ]
           }
-        },
-        {
-          "name": "p-card",
-          "description": "Cards can be used to group related subjects in a container.\n---\n\n\n### **Slots:**\n - _default_ - The card's main content.\n- **header** - An optional header for the card.\n- **footer** - An optional footer for the card.\n- **image** - An optional image to render at the start of the card.\n\n### **CSS Properties:**\n - **--border-color** - The card's border color, including borders that occur inside the card. _(default: undefined)_\n- **--border-radius** - The border radius for the card's edges. _(default: undefined)_\n- **--border-width** - The width of the card's borders. _(default: undefined)_\n- **--padding** - The padding to use for the card's sections. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **image** - The container that wraps the card's image.\n- **header** - The container that wraps the card's header.\n- **body** - The container that wraps the card's main content.\n- **footer** - The container that wraps the card's footer.",
-          "doc-url": "",
-          "attributes": [],
-          "slots": [
-            { "name": "", "description": "The card's main content." },
-            {
-              "name": "header",
-              "description": "An optional header for the card."
-            },
-            {
-              "name": "footer",
-              "description": "An optional footer for the card."
-            },
-            {
-              "name": "image",
-              "description": "An optional image to render at the start of the card."
-            }
-          ],
-          "events": [],
-          "js": { "properties": [], "events": [] }
         },
         {
           "name": "p-carousel",
@@ -2938,6 +2938,77 @@
           }
         },
         {
+          "name": "p-icon",
+          "description": "Icons are symbols that can be used to represent various options within an application.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the icon has loaded. When using `spriteSheet: true` this will not emit.\n- **p-error** - Emitted when the icon fails to load due to an error. When using `spriteSheet: true` this will not emit.\n\n### **CSS Parts:**\n - **svg** - The internal SVG element.\n- **use** - The <use> element generated when using `spriteSheet: true`",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "name",
+              "description": "The name of the icon to draw. Available names depend on the icon library being used.",
+              "value": { "type": "string | undefined" }
+            },
+            {
+              "name": "src",
+              "description": "An external URL of an SVG file. Be sure you trust the content you are including, as it will be executed as code and\ncan result in XSS attacks.",
+              "value": { "type": "string | undefined" }
+            },
+            {
+              "name": "label",
+              "description": "An alternate description to use for assistive devices. If omitted, the icon will be considered presentational and\nignored by assistive devices.",
+              "value": { "type": "string", "default": "\"\"" }
+            },
+            {
+              "name": "library",
+              "description": "The name of a registered custom icon library.",
+              "value": { "type": "string", "default": "\"default\"" }
+            }
+          ],
+          "events": [
+            {
+              "name": "p-load",
+              "description": "Emitted when the icon has loaded. When using `spriteSheet: true` this will not emit."
+            },
+            {
+              "name": "p-error",
+              "description": "Emitted when the icon fails to load due to an error. When using `spriteSheet: true` this will not emit."
+            }
+          ],
+          "js": {
+            "properties": [
+              {
+                "name": "name",
+                "description": "The name of the icon to draw. Available names depend on the icon library being used.",
+                "type": "string | undefined"
+              },
+              {
+                "name": "src",
+                "description": "An external URL of an SVG file. Be sure you trust the content you are including, as it will be executed as code and\ncan result in XSS attacks.",
+                "type": "string | undefined"
+              },
+              {
+                "name": "label",
+                "description": "An alternate description to use for assistive devices. If omitted, the icon will be considered presentational and\nignored by assistive devices.",
+                "type": "string"
+              },
+              {
+                "name": "library",
+                "description": "The name of a registered custom icon library.",
+                "type": "string"
+              }
+            ],
+            "events": [
+              {
+                "name": "p-load",
+                "description": "Emitted when the icon has loaded. When using `spriteSheet: true` this will not emit."
+              },
+              {
+                "name": "p-error",
+                "description": "Emitted when the icon fails to load due to an error. When using `spriteSheet: true` this will not emit."
+              }
+            ]
+          }
+        },
+        {
           "name": "p-icon-button",
           "description": "Icons buttons are simple, icon-only buttons that can be used for actions and in toolbars.\n---\n\n\n### **Events:**\n - **p-blur** - Emitted when the icon button loses focus.\n- **p-focus** - Emitted when the icon button gains focus.\n\n### **Methods:**\n - **click()** - Simulates a click on the icon button.\n- **focus(options: _FocusOptions_)** - Sets focus on the icon button.\n- **blur()** - Removes focus from the icon button.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
           "doc-url": "",
@@ -3050,77 +3121,6 @@
               {
                 "name": "p-focus",
                 "description": "Emitted when the icon button gains focus."
-              }
-            ]
-          }
-        },
-        {
-          "name": "p-icon",
-          "description": "Icons are symbols that can be used to represent various options within an application.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the icon has loaded. When using `spriteSheet: true` this will not emit.\n- **p-error** - Emitted when the icon fails to load due to an error. When using `spriteSheet: true` this will not emit.\n\n### **CSS Parts:**\n - **svg** - The internal SVG element.\n- **use** - The <use> element generated when using `spriteSheet: true`",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "name",
-              "description": "The name of the icon to draw. Available names depend on the icon library being used.",
-              "value": { "type": "string | undefined" }
-            },
-            {
-              "name": "src",
-              "description": "An external URL of an SVG file. Be sure you trust the content you are including, as it will be executed as code and\ncan result in XSS attacks.",
-              "value": { "type": "string | undefined" }
-            },
-            {
-              "name": "label",
-              "description": "An alternate description to use for assistive devices. If omitted, the icon will be considered presentational and\nignored by assistive devices.",
-              "value": { "type": "string", "default": "\"\"" }
-            },
-            {
-              "name": "library",
-              "description": "The name of a registered custom icon library.",
-              "value": { "type": "string", "default": "\"default\"" }
-            }
-          ],
-          "events": [
-            {
-              "name": "p-load",
-              "description": "Emitted when the icon has loaded. When using `spriteSheet: true` this will not emit."
-            },
-            {
-              "name": "p-error",
-              "description": "Emitted when the icon fails to load due to an error. When using `spriteSheet: true` this will not emit."
-            }
-          ],
-          "js": {
-            "properties": [
-              {
-                "name": "name",
-                "description": "The name of the icon to draw. Available names depend on the icon library being used.",
-                "type": "string | undefined"
-              },
-              {
-                "name": "src",
-                "description": "An external URL of an SVG file. Be sure you trust the content you are including, as it will be executed as code and\ncan result in XSS attacks.",
-                "type": "string | undefined"
-              },
-              {
-                "name": "label",
-                "description": "An alternate description to use for assistive devices. If omitted, the icon will be considered presentational and\nignored by assistive devices.",
-                "type": "string"
-              },
-              {
-                "name": "library",
-                "description": "The name of a registered custom icon library.",
-                "type": "string"
-              }
-            ],
-            "events": [
-              {
-                "name": "p-load",
-                "description": "Emitted when the icon has loaded. When using `spriteSheet: true` this will not emit."
-              },
-              {
-                "name": "p-error",
-                "description": "Emitted when the icon fails to load due to an error. When using `spriteSheet: true` this will not emit."
               }
             ]
           }
@@ -4066,55 +4066,6 @@
           }
         },
         {
-          "name": "p-progress-bar",
-          "description": "Progress bars are used to show the status of an ongoing operation.\n---\n\n\n### **Slots:**\n - _default_ - A label to show inside the progress indicator.\n\n### **CSS Properties:**\n - **--height** - The progress bar's height. _(default: undefined)_\n- **--track-color** - The color of the track. _(default: undefined)_\n- **--indicator-color** - The color of the indicator. _(default: undefined)_\n- **--label-color** - The color of the label. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **indicator** - The progress bar's indicator.\n- **label** - The progress bar's label.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "value",
-              "description": "The current progress as a percentage, 0 to 100.",
-              "value": { "type": "number", "default": "0" }
-            },
-            {
-              "name": "indeterminate",
-              "description": "When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state.",
-              "value": { "type": "boolean", "default": "false" }
-            },
-            {
-              "name": "label",
-              "description": "A custom label for assistive devices.",
-              "value": { "type": "string", "default": "\"\"" }
-            }
-          ],
-          "slots": [
-            {
-              "name": "",
-              "description": "A label to show inside the progress indicator."
-            }
-          ],
-          "events": [],
-          "js": {
-            "properties": [
-              {
-                "name": "value",
-                "description": "The current progress as a percentage, 0 to 100.",
-                "type": "number"
-              },
-              {
-                "name": "indeterminate",
-                "description": "When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state.",
-                "type": "boolean"
-              },
-              {
-                "name": "label",
-                "description": "A custom label for assistive devices.",
-                "type": "string"
-              }
-            ],
-            "events": []
-          }
-        },
-        {
           "name": "p-popup",
           "description": "Popup is a utility that lets you declaratively anchor \"popup\" containers to another element.\n---\n\n\n### **Events:**\n - **p-reposition** - Emitted when the popup is repositioned. This event can fire a lot, so avoid putting expensive operations in your listener or consider debouncing it.\n\n### **Methods:**\n - **reposition()** - Forces the popup to recalculate and reposition itself.\n\n### **Slots:**\n - _default_ - The popup's content.\n- **anchor** - The element the popup will be anchored to. If the anchor lives outside of the popup, you can use the `anchor` attribute or property instead.\n\n### **CSS Properties:**\n - **--arrow-size** - The size of the arrow. Note that an arrow won't be shown unless the `arrow` attribute is used. _(default: 6px)_\n- **--arrow-color** - The color of the arrow. _(default: var(--p-color-neutral-0))_\n- **--auto-size-available-width** - A read-only custom property that determines the amount of width the popup can be before overflowing. Useful for positioning child elements that need to overflow. This property is only available when using `auto-size`. _(default: undefined)_\n- **--auto-size-available-height** - A read-only custom property that determines the amount of height the popup can be before overflowing. Useful for positioning child elements that need to overflow. This property is only available when using `auto-size`. _(default: undefined)_\n\n### **CSS Parts:**\n - **arrow** - The arrow's container. Avoid setting `top|bottom|left|right` properties, as these values are assigned dynamically as the popup moves. This is most useful for applying a background color to match the popup, and maybe a border or box shadow.\n- **popup** - The popup's container. Useful for setting a background color, box shadow, etc.\n- **hover-bridge** - The hover bridge element. Only available when the `hover-bridge` option is enabled.",
           "doc-url": "",
@@ -4379,6 +4330,55 @@
                 "description": "Emitted when the popup is repositioned. This event can fire a lot, so avoid putting expensive operations in your listener or consider debouncing it."
               }
             ]
+          }
+        },
+        {
+          "name": "p-progress-bar",
+          "description": "Progress bars are used to show the status of an ongoing operation.\n---\n\n\n### **Slots:**\n - _default_ - A label to show inside the progress indicator.\n\n### **CSS Properties:**\n - **--height** - The progress bar's height. _(default: undefined)_\n- **--track-color** - The color of the track. _(default: undefined)_\n- **--indicator-color** - The color of the indicator. _(default: undefined)_\n- **--label-color** - The color of the label. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **indicator** - The progress bar's indicator.\n- **label** - The progress bar's label.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "value",
+              "description": "The current progress as a percentage, 0 to 100.",
+              "value": { "type": "number", "default": "0" }
+            },
+            {
+              "name": "indeterminate",
+              "description": "When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "label",
+              "description": "A custom label for assistive devices.",
+              "value": { "type": "string", "default": "\"\"" }
+            }
+          ],
+          "slots": [
+            {
+              "name": "",
+              "description": "A label to show inside the progress indicator."
+            }
+          ],
+          "events": [],
+          "js": {
+            "properties": [
+              {
+                "name": "value",
+                "description": "The current progress as a percentage, 0 to 100.",
+                "type": "number"
+              },
+              {
+                "name": "indeterminate",
+                "description": "When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an indeterminate state.",
+                "type": "boolean"
+              },
+              {
+                "name": "label",
+                "description": "A custom label for assistive devices.",
+                "type": "string"
+              }
+            ],
+            "events": []
           }
         },
         {
