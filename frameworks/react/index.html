@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="default" data-pure-ui-version="1.1.12">
+<html lang="en" data-layout="default" data-pure-ui-version="1.1.14">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -83,7 +83,7 @@
         <a href="/">
           <img src="/assets/images/wordmark.svg" alt="Pure UI" />
         </a>
-        <div class="sidebar-version">1.1.12</div>
+        <div class="sidebar-version">1.1.14</div>
       </header>
 
       <button class="search-box" type="button" title="Press / to search" aria-label="Search" data-plugin="search">
@@ -419,19 +419,19 @@
             Installation<a href="#installation" aria-label='Direct link to "Installation"'></a>
           </h2>
           <p>To add Pure UI to your React app, install the package from npm.</p>
-          <pre><code class="language-bash" id="code-block-959"><span class="token function">npm</span> <span class="token function">install</span> pure-uikit
-</code><p-copy-button class="copy-code-button" from="code-block-959"></p-copy-button></pre>
+          <pre><code class="language-bash" id="code-block-8"><span class="token function">npm</span> <span class="token function">install</span> pure-uikit
+</code><p-copy-button class="copy-code-button" from="code-block-8"></p-copy-button></pre>
           <p>
             Next, <a href="/getting-started/themes">include a theme</a> and set the
             <a href="/getting-started/installation#setting-the-base-path">base path</a> for icons and other assets. In
             this example, we’ll import the light theme and use the CDN as a base path.
           </p>
-          <pre><code class="language-jsx" id="code-block-960"><span class="token comment">// App.jsx</span>
+          <pre><code class="language-jsx" id="code-block-9"><span class="token comment">// App.jsx</span>
 <span class="token keyword">import</span> <span class="token string">"pure-uikit/dist/themes/light.css"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/utilities/base-path"</span><span class="token punctuation">;</span>
 
-<span class="token function">setBasePath</span><span class="token punctuation">(</span><span class="token string">"https://cdn.jsdelivr.net/npm/pure-uikit@1.1.12/cdn/"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-960"></p-copy-button></pre>
+<span class="token function">setBasePath</span><span class="token punctuation">(</span><span class="token string">"https://cdn.jsdelivr.net/npm/pure-uikit@1.1.14/cdn/"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code><p-copy-button class="copy-code-button" from="code-block-9"></p-copy-button></pre>
           <div role="alert" class="callout callout--tip">
             <p>
               If you’d rather not use the CDN for assets, you can create a
@@ -468,12 +468,12 @@
             <code>&lt;PButton&gt;</code> <em>React component</em> instead of the <code>&lt;p-button&gt;</code>
             <em>custom element</em> in the example below.
           </p>
-          <pre><code class="language-jsx" id="code-block-961"><span class="token keyword">import</span> PButton <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/react/button"</span><span class="token punctuation">;</span>
+          <pre><code class="language-jsx" id="code-block-10"><span class="token keyword">import</span> PButton <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/react/button"</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">MyComponent</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PButton</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Click me</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PButton</span></span><span class="token punctuation">&gt;</span></span><span class="token punctuation">;</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> MyComponent<span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-961"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-10"></p-copy-button></pre>
           <h4 id="notes-about-tree-shaking" class="anchor-heading">
             Notes about tree shaking<a
               href="#notes-about-tree-shaking"
@@ -481,15 +481,15 @@
             ></a>
           </h4>
           <p>Previously, it was recommended to import from a single entrypoint like so:</p>
-          <pre><code class="language-jsx" id="code-block-962"><span class="token keyword">import</span> <span class="token punctuation">{</span> PButton <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/react"</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-962"></p-copy-button></pre>
+          <pre><code class="language-jsx" id="code-block-11"><span class="token keyword">import</span> <span class="token punctuation">{</span> PButton <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/react"</span><span class="token punctuation">;</span>
+</code><p-copy-button class="copy-code-button" from="code-block-11"></p-copy-button></pre>
           <p>
             However, tree-shaking extra Pure UI components proved to be a challenge. As a result, we now recommend
             cherry-picking components you want to use, rather than importing from a single entrypoint.
           </p>
-          <pre><code class="language-diff" id="code-block-963"><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span><span class="token line"> import { PButton } from 'pure-uikit/dist/react';
+          <pre><code class="language-diff" id="code-block-12"><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span><span class="token line"> import { PButton } from 'pure-uikit/dist/react';
 </span></span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line"> import PButton from 'pure-uikit/dist/react/button';
-</span></span></code><p-copy-button class="copy-code-button" from="code-block-963"></p-copy-button></pre>
+</span></span></code><p-copy-button class="copy-code-button" from="code-block-12"></p-copy-button></pre>
           <p>You can find a copy + paste import for each component in the “importing” section of its documentation.</p>
           <h3 id="event-handling" class="anchor-heading">
             Event Handling<a href="#event-handling" aria-label='Direct link to "Event Handling"'></a>
@@ -506,7 +506,7 @@
             when it receives input. In React, you can listen for the event using <code>onPInput</code>.
           </p>
           <p>Here’s how you can bind the input’s value to a state variable.</p>
-          <pre><code class="language-jsx" id="code-block-964"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+          <pre><code class="language-jsx" id="code-block-13"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PInput <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/react/input"</span><span class="token punctuation">;</span>
 
 <span class="token keyword">function</span> <span class="token function">MyComponent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -516,26 +516,26 @@
 <span class="token punctuation">}</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> MyComponent<span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-964"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-13"></p-copy-button></pre>
           <p>
             If you’re using TypeScript, it’s important to note that <code>event.target</code> will be a reference to the
             underlying custom element. You can use <code>(event.target as any).value</code> as a quick fix, or you can
             strongly type the event target as shown below.
           </p>
-          <pre><code class="language-tsx" id="code-block-965"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+          <pre><code class="language-tsx" id="code-block-14"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PInput <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/react/input"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token keyword">type</span> <span class="token class-name">PInputElement</span> <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/components/input/input"</span><span class="token punctuation">;</span>
 
 <span class="token keyword">function</span> <span class="token function">MyComponent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> <span class="token punctuation">[</span>value<span class="token punctuation">,</span> setValue<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PInput</span></span> <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>value<span class="token punctuation">}</span></span> <span class="token attr-name">onPInput</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token parameter">event</span> <span class="token operator">=&gt;</span> <span class="token function">setValue</span><span class="token punctuation">(</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>target <span class="token keyword">as</span> PInputElement<span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PInput</span></span> <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>value<span class="token punctuation">}</span></span> <span class="token attr-name">onPInput</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>event <span class="token operator">=&gt;</span> <span class="token function">setValue</span><span class="token punctuation">(</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>target <span class="token keyword">as</span> PInputElement<span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> MyComponent<span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-965"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-14"></p-copy-button></pre>
           <p>You can also import the event type for use in your callbacks, shown below.</p>
-          <pre><code class="language-tsx" id="code-block-966"><span class="token keyword">import</span> <span class="token punctuation">{</span> useCallback<span class="token punctuation">,</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+          <pre><code class="language-tsx" id="code-block-15"><span class="token keyword">import</span> <span class="token punctuation">{</span> useCallback<span class="token punctuation">,</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PInput<span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token keyword">type</span> <span class="token class-name">PInputEvent</span> <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/react/input"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token keyword">type</span> <span class="token class-name">PInputElement</span> <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/components/input/input"</span><span class="token punctuation">;</span>
 
@@ -545,11 +545,11 @@
     <span class="token function">setValue</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>detail<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PInput</span></span> <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>value<span class="token punctuation">}</span></span> <span class="token attr-name">onPInput</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token parameter">event</span> <span class="token operator">=&gt;</span> <span class="token function">setValue</span><span class="token punctuation">(</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>target <span class="token keyword">as</span> PInputElement<span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PInput</span></span> <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>value<span class="token punctuation">}</span></span> <span class="token attr-name">onPInput</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>event <span class="token operator">=&gt;</span> <span class="token function">setValue</span><span class="token punctuation">(</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>target <span class="token keyword">as</span> PInputElement<span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> MyComponent<span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-966"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-15"></p-copy-button></pre>
           <h2 id="testing-with-jest" class="anchor-heading">
             Testing with Jest<a href="#testing-with-jest" aria-label='Direct link to "Testing with Jest"'></a>
           </h2>
@@ -605,8 +605,8 @@
               >Create React App</a
             >, you can update <code>react-scripts</code> which will also update Jest.
           </p>
-          <pre><code id="code-block-967">npm install react-scripts@latest
-</code><p-copy-button class="copy-code-button" from="code-block-967"></p-copy-button></pre>
+          <pre><code id="code-block-16">npm install react-scripts@latest
+</code><p-copy-button class="copy-code-button" from="code-block-16"></p-copy-button></pre>
           <h3 id="mock-missing-apis" class="anchor-heading">
             Mock Missing APIs<a href="#mock-missing-apis" aria-label='Direct link to "Mock Missing APIs"'></a>
           </h3>
@@ -615,7 +615,7 @@
             need to mock it yourself.
           </p>
           <p>In <code>src/setupTests.js</code>, add the following.</p>
-          <pre><code class="language-js" id="code-block-968">Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>window<span class="token punctuation">,</span> <span class="token string">"matchMedia"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+          <pre><code class="language-js" id="code-block-17">Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>window<span class="token punctuation">,</span> <span class="token string">"matchMedia"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
   <span class="token literal-property property">writable</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
   <span class="token literal-property property">value</span><span class="token operator">:</span> jest<span class="token punctuation">.</span><span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">mockImplementation</span><span class="token punctuation">(</span><span class="token parameter">query</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
     <span class="token literal-property property">matches</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
@@ -628,7 +628,7 @@
     <span class="token literal-property property">dispatchEvent</span><span class="token operator">:</span> jest<span class="token punctuation">.</span><span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-968"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-17"></p-copy-button></pre>
           <p>
             For more details, refer to Jest’s
             <a
@@ -654,18 +654,18 @@
             >. This is how Pure UI is distributed, but most React apps expect CommonJS. As a result, you’ll probably run
             into the following error.
           </p>
-          <pre><code id="code-block-969">Error: Unable to import outside of a module
-</code><p-copy-button class="copy-code-button" from="code-block-969"></p-copy-button></pre>
+          <pre><code id="code-block-18">Error: Unable to import outside of a module
+</code><p-copy-button class="copy-code-button" from="code-block-18"></p-copy-button></pre>
           <p>
             To fix this, add the following to your <code>package.json</code> which tells the transpiler to process Pure
             UI modules.
           </p>
-          <pre><code class="language-js" id="code-block-970"><span class="token punctuation">{</span>
+          <pre><code class="language-js" id="code-block-19"><span class="token punctuation">{</span>
   <span class="token string-property property">"jest"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token string-property property">"transformIgnorePatterns"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"node_modules/(?!(pure-uikit))"</span><span class="token punctuation">]</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code><p-copy-button class="copy-code-button" from="code-block-970"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-19"></p-copy-button></pre>
           <p>
             These instructions are for apps created via Create React App. If you’re using Jest directly, you can add
             <code>transformIgnorePatterns</code> directly into <code>jest.config.js</code>.

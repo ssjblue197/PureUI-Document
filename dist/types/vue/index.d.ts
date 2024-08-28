@@ -1,16 +1,16 @@
 import type { DefineComponent } from "vue";
 
 import type { PAlert } from "../../components/alert/alert.component.js";
-import type { PAnimation } from "../../components/animation/animation.component.js";
 import type { PAvatar } from "../../components/avatar/avatar.component.js";
 import type { PAnimatedImage } from "../../components/animated-image/animated-image.component.js";
 import type { PBreadcrumb } from "../../components/breadcrumb/breadcrumb.component.js";
-import type { PBreadcrumbItem } from "../../components/breadcrumb-item/breadcrumb-item.component.js";
 import type { PBadge } from "../../components/badge/badge.component.js";
+import type { PAnimation } from "../../components/animation/animation.component.js";
+import type { PBreadcrumbItem } from "../../components/breadcrumb-item/breadcrumb-item.component.js";
 import type { PButton } from "../../components/button/button.component.js";
 import type { PButtonGroup } from "../../components/button-group/button-group.component.js";
-import type { PCard } from "../../components/card/card.component.js";
 import type { PCalendar } from "../../components/calendar/calendar.component.js";
+import type { PCard } from "../../components/card/card.component.js";
 import type { PCarousel } from "../../components/carousel/carousel.component.js";
 import type { PCarouselItem } from "../../components/carousel-item/carousel-item.component.js";
 import type { PCheckbox } from "../../components/checkbox/checkbox.component.js";
@@ -85,48 +85,6 @@ the alert will not close on its own. */
   "onp-after-hide"?: (e: CustomEvent<never>) => void;
 };
 
-type PAnimationProps = {
-  /** The name of the built-in animation to use. For custom animations, use the `keyframes` prop. */
-  name?: PAnimation["name"];
-  /** Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when
-the animation finishes or gets canceled. */
-  play?: PAnimation["play"];
-  /** The number of milliseconds to delay the start of the animation. */
-  delay?: PAnimation["delay"];
-  /** Determines the direction of playback as well as the behavior when reaching the end of an iteration.
-[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction) */
-  direction?: PAnimation["direction"];
-  /** The number of milliseconds each iteration of the animation takes to complete. */
-  duration?: PAnimation["duration"];
-  /** The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function
-such as `cubic-bezier(0, 1, .76, 1.14)`. */
-  easing?: PAnimation["easing"];
-  /** The number of milliseconds to delay after the active period of an animation sequence. */
-  "end-delay"?: PAnimation["endDelay"];
-  /** Sets how the animation applies styles to its target before and after its execution. */
-  fill?: PAnimation["fill"];
-  /** The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops. */
-  iterations?: PAnimation["iterations"];
-  /** The offset at which to start the animation, usually between 0 (start) and 1 (end). */
-  "iteration-start"?: PAnimation["iterationStart"];
-  /** Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this
-to `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This
-value can be changed without causing the animation to restart. */
-  "playback-rate"?: PAnimation["playbackRate"];
-  /**  */
-  defaultPot?: PAnimation["defaultPot"];
-  /** The keyframes to use for the animation. If this is set, `name` will be ignored. */
-  keyframes?: PAnimation["keyframes"];
-  /** Gets and sets the current animation time. */
-  currentTime?: PAnimation["currentTime"];
-  /** Emitted when the animation is canceled. */
-  "onp-cancel"?: (e: CustomEvent<never>) => void;
-  /** Emitted when the animation finishes. */
-  "onp-finish"?: (e: CustomEvent<never>) => void;
-  /** Emitted when the animation starts or restarts. */
-  "onp-start"?: (e: CustomEvent<never>) => void;
-};
-
 type PAvatarProps = {
   /** The image source to use for the avatar. */
   image?: PAvatar["image"];
@@ -172,6 +130,57 @@ screen readers and other assistive devices to provide more context for users. */
   separatorSlot?: PBreadcrumb["separatorSlot"];
 };
 
+type PBadgeProps = {
+  /** The badge's theme variant. */
+  variant?: PBadge["variant"];
+  /** Draws a pill-style badge with rounded edges. */
+  pill?: PBadge["pill"];
+  /** Makes the badge pulsate to draw attention. */
+  pulse?: PBadge["pulse"];
+};
+
+type PAnimationProps = {
+  /** The name of the built-in animation to use. For custom animations, use the `keyframes` prop. */
+  name?: PAnimation["name"];
+  /** Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when
+the animation finishes or gets canceled. */
+  play?: PAnimation["play"];
+  /** The number of milliseconds to delay the start of the animation. */
+  delay?: PAnimation["delay"];
+  /** Determines the direction of playback as well as the behavior when reaching the end of an iteration.
+[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction) */
+  direction?: PAnimation["direction"];
+  /** The number of milliseconds each iteration of the animation takes to complete. */
+  duration?: PAnimation["duration"];
+  /** The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function
+such as `cubic-bezier(0, 1, .76, 1.14)`. */
+  easing?: PAnimation["easing"];
+  /** The number of milliseconds to delay after the active period of an animation sequence. */
+  "end-delay"?: PAnimation["endDelay"];
+  /** Sets how the animation applies styles to its target before and after its execution. */
+  fill?: PAnimation["fill"];
+  /** The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops. */
+  iterations?: PAnimation["iterations"];
+  /** The offset at which to start the animation, usually between 0 (start) and 1 (end). */
+  "iteration-start"?: PAnimation["iterationStart"];
+  /** Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this
+to `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This
+value can be changed without causing the animation to restart. */
+  "playback-rate"?: PAnimation["playbackRate"];
+  /**  */
+  defaultPot?: PAnimation["defaultPot"];
+  /** The keyframes to use for the animation. If this is set, `name` will be ignored. */
+  keyframes?: PAnimation["keyframes"];
+  /** Gets and sets the current animation time. */
+  currentTime?: PAnimation["currentTime"];
+  /** Emitted when the animation is canceled. */
+  "onp-cancel"?: (e: CustomEvent<never>) => void;
+  /** Emitted when the animation finishes. */
+  "onp-finish"?: (e: CustomEvent<never>) => void;
+  /** Emitted when the animation starts or restarts. */
+  "onp-start"?: (e: CustomEvent<never>) => void;
+};
+
 type PBreadcrumbItemProps = {
   /** Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered
 internally. When unset, a button will be rendered instead. */
@@ -180,15 +189,6 @@ internally. When unset, a button will be rendered instead. */
   target?: PBreadcrumbItem["target"];
   /** The `rel` attribute to use on the link. Only used when `href` is set. */
   rel?: PBreadcrumbItem["rel"];
-};
-
-type PBadgeProps = {
-  /** The badge's theme variant. */
-  variant?: PBadge["variant"];
-  /** Draws a pill-style badge with rounded edges. */
-  pill?: PBadge["pill"];
-  /** Makes the badge pulsate to draw attention. */
-  pulse?: PBadge["pulse"];
 };
 
 type PButtonProps = {
@@ -269,8 +269,6 @@ devices when interacting with the control and is strongly recommended. */
   /**  */
   disableRole?: PButtonGroup["disableRole"];
 };
-
-type PCardProps = {};
 
 type PCalendarProps = {
   /** Whether to close the calendar when a date is selected.
@@ -428,6 +426,8 @@ Used when the control is not focused. */
   /** Emitted when the form control has been checked for validity and its constraints aren't satisfied. */
   "onp-invalid"?: (e: CustomEvent<never>) => void;
 };
+
+type PCardProps = {};
 
 type PCarouselProps = {
   /** When set, allows the user to navigate the carousel in the same direction indefinitely. */
@@ -1800,25 +1800,6 @@ export type CustomElements = {
   "p-alert": DefineComponent<PAlertProps>;
 
   /**
-   * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **p-cancel** - Emitted when the animation is canceled.
-   * - **p-finish** - Emitted when the animation finishes.
-   * - **p-start** - Emitted when the animation starts or restarts.
-   *
-   * ### **Methods:**
-   *  - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.
-   * - **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.
-   *
-   * ### **Slots:**
-   *  - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.
-   */
-  "p-animation": DefineComponent<PAnimationProps>;
-
-  /**
    * Avatars are used to represent a person or object.
    * ---
    *
@@ -1877,6 +1858,38 @@ export type CustomElements = {
   "p-breadcrumb": DefineComponent<PBreadcrumbProps>;
 
   /**
+   * Badges are used to draw attention and display statuses or counts.
+   * ---
+   *
+   *
+   * ### **Slots:**
+   *  - _default_ - The badge's content.
+   *
+   * ### **CSS Parts:**
+   *  - **base** - The component's base wrapper.
+   */
+  "p-badge": DefineComponent<PBadgeProps>;
+
+  /**
+   * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **p-cancel** - Emitted when the animation is canceled.
+   * - **p-finish** - Emitted when the animation finishes.
+   * - **p-start** - Emitted when the animation starts or restarts.
+   *
+   * ### **Methods:**
+   *  - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.
+   * - **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.
+   *
+   * ### **Slots:**
+   *  - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.
+   */
+  "p-animation": DefineComponent<PAnimationProps>;
+
+  /**
    * Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.
    * ---
    *
@@ -1895,19 +1908,6 @@ export type CustomElements = {
    * - **separator** - The container that wraps the separator.
    */
   "p-breadcrumb-item": DefineComponent<PBreadcrumbItemProps>;
-
-  /**
-   * Badges are used to draw attention and display statuses or counts.
-   * ---
-   *
-   *
-   * ### **Slots:**
-   *  - _default_ - The badge's content.
-   *
-   * ### **CSS Parts:**
-   *  - **base** - The component's base wrapper.
-   */
-  "p-badge": DefineComponent<PBadgeProps>;
 
   /**
    * Buttons represent actions that are available to the user.
@@ -1955,32 +1955,6 @@ export type CustomElements = {
    *  - **base** - The component's base wrapper.
    */
   "p-button-group": DefineComponent<PButtonGroupProps>;
-
-  /**
-   * Cards can be used to group related subjects in a container.
-   * ---
-   *
-   *
-   * ### **Slots:**
-   *  - _default_ - The card's main content.
-   * - **header** - An optional header for the card.
-   * - **footer** - An optional footer for the card.
-   * - **image** - An optional image to render at the start of the card.
-   *
-   * ### **CSS Properties:**
-   *  - **--border-color** - The card's border color, including borders that occur inside the card. _(default: undefined)_
-   * - **--border-radius** - The border radius for the card's edges. _(default: undefined)_
-   * - **--border-width** - The width of the card's borders. _(default: undefined)_
-   * - **--padding** - The padding to use for the card's sections. _(default: undefined)_
-   *
-   * ### **CSS Parts:**
-   *  - **base** - The component's base wrapper.
-   * - **image** - The container that wraps the card's image.
-   * - **header** - The container that wraps the card's header.
-   * - **body** - The container that wraps the card's main content.
-   * - **footer** - The container that wraps the card's footer.
-   */
-  "p-card": DefineComponent<PCardProps>;
 
   /**
    * Calendar shows a monthly view of the Gregorian calendar, optionally allowing users to interact with dates.
@@ -2045,6 +2019,32 @@ export type CustomElements = {
    * - **tag** - Targets days that selected when use type="multiple".
    */
   "p-calendar": DefineComponent<PCalendarProps>;
+
+  /**
+   * Cards can be used to group related subjects in a container.
+   * ---
+   *
+   *
+   * ### **Slots:**
+   *  - _default_ - The card's main content.
+   * - **header** - An optional header for the card.
+   * - **footer** - An optional footer for the card.
+   * - **image** - An optional image to render at the start of the card.
+   *
+   * ### **CSS Properties:**
+   *  - **--border-color** - The card's border color, including borders that occur inside the card. _(default: undefined)_
+   * - **--border-radius** - The border radius for the card's edges. _(default: undefined)_
+   * - **--border-width** - The width of the card's borders. _(default: undefined)_
+   * - **--padding** - The padding to use for the card's sections. _(default: undefined)_
+   *
+   * ### **CSS Parts:**
+   *  - **base** - The component's base wrapper.
+   * - **image** - The container that wraps the card's image.
+   * - **header** - The container that wraps the card's header.
+   * - **body** - The container that wraps the card's main content.
+   * - **footer** - The container that wraps the card's footer.
+   */
+  "p-card": DefineComponent<PCardProps>;
 
   /**
    * Carousels display an arbitrary number of content slides along a horizontal or vertical axis.
