@@ -58,6 +58,7 @@ export { default as PTooltip } from "./components/tooltip/tooltip.js";
 export { default as PTree } from "./components/tree/tree.js";
 export { default as PTreeItem } from "./components/tree-item/tree-item.js";
 export { default as PVisuallyHidden } from "./components/visually-hidden/visually-hidden.js";
+export { default as PTable } from "./components/table/table.js";
 export * from "./utilities/animation.js";
 export * from "./utilities/base-path.js";
 export * from "./utilities/icon-library.js";

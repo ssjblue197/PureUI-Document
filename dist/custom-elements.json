@@ -264,6 +264,393 @@
     },
     {
       "kind": "javascript-module",
+      "path": "components/animated-image/animated-image.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PAnimatedImage",
+          "cssProperties": [
+            {
+              "description": "The size of the icon box.",
+              "name": "--control-box-size"
+            },
+            {
+              "description": "The size of the play/pause icons.",
+              "name": "--icon-size"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The container that surrounds the pause/play icons and provides their background.",
+              "name": "control-box"
+            }
+          ],
+          "slots": [
+            {
+              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`.",
+              "name": "play-icon"
+            },
+            {
+              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`.",
+              "name": "pause-icon"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "dependencies",
+              "type": {
+                "text": "object"
+              },
+              "static": true,
+              "default": "{ \"p-icon\": PIcon }"
+            },
+            {
+              "kind": "field",
+              "name": "animatedImage",
+              "type": {
+                "text": "HTMLImageElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "frozenFrame",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "isLoaded",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "src",
+              "type": {
+                "text": "string"
+              },
+              "description": "The path to the image to load.",
+              "attribute": "src"
+            },
+            {
+              "kind": "field",
+              "name": "alt",
+              "type": {
+                "text": "string"
+              },
+              "description": "A description of the image used by assistive devices.",
+              "attribute": "alt"
+            },
+            {
+              "kind": "field",
+              "name": "play",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "attribute": "play",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleLoad",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleError",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handlePlayChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleSrcChange"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the image loads successfully.",
+              "name": "p-load",
+              "reactName": "onPLoad",
+              "eventName": "PLoadEvent"
+            },
+            {
+              "description": "Emitted when the image fails to load.",
+              "name": "p-error",
+              "reactName": "onPError",
+              "eventName": "PErrorEvent"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "src",
+              "type": {
+                "text": "string"
+              },
+              "description": "The path to the image to load.",
+              "fieldName": "src"
+            },
+            {
+              "name": "alt",
+              "type": {
+                "text": "string"
+              },
+              "description": "A description of the image used by assistive devices.",
+              "fieldName": "alt"
+            },
+            {
+              "name": "play",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "fieldName": "play"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.",
+          "tagNameWithoutPrefix": "animated-image",
+          "tagName": "p-animated-image",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n * @documentation https://pureui.xyz/components/animated-image\n * @status stable\n * @since 1.0\n *\n * @dependency p-icon\n *\n * @event p-load - Emitted when the image loads successfully.\n * @event p-error - Emitted when the image fails to load.\n *\n * @slot play-icon - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n * @slot pause-icon - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n *\n * @part control-box - The container that surrounds the pause/play icons and provides their background.\n *\n * @cssproperty --control-box-size - The size of the icon box.\n * @cssproperty --icon-size - The size of the play/pause icons.\n */",
+          "documentation": "https://pureui.xyz/components/animated-image",
+          "status": "stable",
+          "since": "1.0",
+          "dependencies": [
+            "p-icon"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PAnimatedImage",
+            "module": "components/animated-image/animated-image.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/avatar/avatar.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PAvatar",
+          "cssProperties": [
+            {
+              "description": "The size of the avatar.",
+              "name": "--size"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The container that wraps the avatar's icon.",
+              "name": "icon"
+            },
+            {
+              "description": "The container that wraps the avatar's initials.",
+              "name": "initials"
+            },
+            {
+              "description": "The avatar image. Only shown when the `image` attribute is set.",
+              "name": "image"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The default icon to use when no image or initials are present. Works best with `<p-icon>`.",
+              "name": "icon"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "dependencies",
+              "type": {
+                "text": "object"
+              },
+              "static": true,
+              "default": "{\n    \"p-icon\": PIcon,\n  }"
+            },
+            {
+              "kind": "field",
+              "name": "hasError",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "image",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The image source to use for the avatar.",
+              "attribute": "image"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "A label to use to describe the avatar to assistive devices.",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "initials",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+              "attribute": "initials"
+            },
+            {
+              "kind": "field",
+              "name": "loading",
+              "type": {
+                "text": "\"eager\" | \"lazy\""
+              },
+              "default": "\"eager\"",
+              "description": "Indicates how the browser should load the image.",
+              "attribute": "loading"
+            },
+            {
+              "kind": "field",
+              "name": "shape",
+              "type": {
+                "text": "\"circle\" | \"square\" | \"rounded\""
+              },
+              "default": "\"circle\"",
+              "description": "The shape of the avatar.",
+              "attribute": "shape",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleImageChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleImageLoadError",
+              "privacy": "private"
+            }
+          ],
+          "events": [
+            {
+              "description": "The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause.",
+              "name": "p-error",
+              "reactName": "onPError",
+              "eventName": "PErrorEvent"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "image",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The image source to use for the avatar.",
+              "fieldName": "image"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "A label to use to describe the avatar to assistive devices.",
+              "fieldName": "label"
+            },
+            {
+              "name": "initials",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+              "fieldName": "initials"
+            },
+            {
+              "name": "loading",
+              "type": {
+                "text": "\"eager\" | \"lazy\""
+              },
+              "default": "\"eager\"",
+              "description": "Indicates how the browser should load the image.",
+              "fieldName": "loading"
+            },
+            {
+              "name": "shape",
+              "type": {
+                "text": "\"circle\" | \"square\" | \"rounded\""
+              },
+              "default": "\"circle\"",
+              "description": "The shape of the avatar.",
+              "fieldName": "shape"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "Avatars are used to represent a person or object.",
+          "tagNameWithoutPrefix": "avatar",
+          "tagName": "p-avatar",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary Avatars are used to represent a person or object.\n * @documentation https://pureui.xyz/components/avatar\n * @status stable\n * @since 1.0\n *\n * @dependency p-icon\n *\n * @event p-error - The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some\n * unknown cause.\n *\n * @slot icon - The default icon to use when no image or initials are present. Works best with `<p-icon>`.\n *\n * @csspart base - The component's base wrapper.\n * @csspart icon - The container that wraps the avatar's icon.\n * @csspart initials - The container that wraps the avatar's initials.\n * @csspart image - The avatar image. Only shown when the `image` attribute is set.\n *\n * @cssproperty --size - The size of the avatar.\n */",
+          "documentation": "https://pureui.xyz/components/avatar",
+          "status": "stable",
+          "since": "1.0",
+          "dependencies": [
+            "p-icon"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PAvatar",
+            "module": "components/avatar/avatar.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "components/animation/animation.js",
       "declarations": [
         {
@@ -741,115 +1128,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/badge/badge.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PBadge",
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The badge's content.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "variant",
-              "type": {
-                "text": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\""
-              },
-              "default": "\"primary\"",
-              "description": "The badge's theme variant.",
-              "attribute": "variant",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "pill",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "attribute": "pill",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "pulse",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the badge pulsate to draw attention.",
-              "attribute": "pulse",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "name": "variant",
-              "type": {
-                "text": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\""
-              },
-              "default": "\"primary\"",
-              "description": "The badge's theme variant.",
-              "fieldName": "variant"
-            },
-            {
-              "name": "pill",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "fieldName": "pill"
-            },
-            {
-              "name": "pulse",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the badge pulsate to draw attention.",
-              "fieldName": "pulse"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "Badges are used to draw attention and display statuses or counts.",
-          "tagNameWithoutPrefix": "badge",
-          "tagName": "p-badge",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary Badges are used to draw attention and display statuses or counts.\n * @documentation https://pureui.xyz/components/badge\n * @status stable\n * @since 1.0\n *\n * @slot - The badge's content.\n *\n * @csspart base - The component's base wrapper.\n */",
-          "documentation": "https://pureui.xyz/components/badge",
-          "status": "stable",
-          "since": "1.0"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PBadge",
-            "module": "components/badge/badge.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/breadcrumb-item/breadcrumb-item.js",
       "declarations": [
         {
@@ -981,393 +1259,6 @@
           "declaration": {
             "name": "PBreadcrumbItem",
             "module": "components/breadcrumb-item/breadcrumb-item.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/avatar/avatar.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PAvatar",
-          "cssProperties": [
-            {
-              "description": "The size of the avatar.",
-              "name": "--size"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The container that wraps the avatar's icon.",
-              "name": "icon"
-            },
-            {
-              "description": "The container that wraps the avatar's initials.",
-              "name": "initials"
-            },
-            {
-              "description": "The avatar image. Only shown when the `image` attribute is set.",
-              "name": "image"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The default icon to use when no image or initials are present. Works best with `<p-icon>`.",
-              "name": "icon"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "dependencies",
-              "type": {
-                "text": "object"
-              },
-              "static": true,
-              "default": "{\n    \"p-icon\": PIcon,\n  }"
-            },
-            {
-              "kind": "field",
-              "name": "hasError",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "image",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "The image source to use for the avatar.",
-              "attribute": "image"
-            },
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "A label to use to describe the avatar to assistive devices.",
-              "attribute": "label"
-            },
-            {
-              "kind": "field",
-              "name": "initials",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-              "attribute": "initials"
-            },
-            {
-              "kind": "field",
-              "name": "loading",
-              "type": {
-                "text": "\"eager\" | \"lazy\""
-              },
-              "default": "\"eager\"",
-              "description": "Indicates how the browser should load the image.",
-              "attribute": "loading"
-            },
-            {
-              "kind": "field",
-              "name": "shape",
-              "type": {
-                "text": "\"circle\" | \"square\" | \"rounded\""
-              },
-              "default": "\"circle\"",
-              "description": "The shape of the avatar.",
-              "attribute": "shape",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleImageChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleImageLoadError",
-              "privacy": "private"
-            }
-          ],
-          "events": [
-            {
-              "description": "The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause.",
-              "name": "p-error",
-              "reactName": "onPError",
-              "eventName": "PErrorEvent"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "image",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "The image source to use for the avatar.",
-              "fieldName": "image"
-            },
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "A label to use to describe the avatar to assistive devices.",
-              "fieldName": "label"
-            },
-            {
-              "name": "initials",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-              "fieldName": "initials"
-            },
-            {
-              "name": "loading",
-              "type": {
-                "text": "\"eager\" | \"lazy\""
-              },
-              "default": "\"eager\"",
-              "description": "Indicates how the browser should load the image.",
-              "fieldName": "loading"
-            },
-            {
-              "name": "shape",
-              "type": {
-                "text": "\"circle\" | \"square\" | \"rounded\""
-              },
-              "default": "\"circle\"",
-              "description": "The shape of the avatar.",
-              "fieldName": "shape"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "Avatars are used to represent a person or object.",
-          "tagNameWithoutPrefix": "avatar",
-          "tagName": "p-avatar",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary Avatars are used to represent a person or object.\n * @documentation https://pureui.xyz/components/avatar\n * @status stable\n * @since 1.0\n *\n * @dependency p-icon\n *\n * @event p-error - The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some\n * unknown cause.\n *\n * @slot icon - The default icon to use when no image or initials are present. Works best with `<p-icon>`.\n *\n * @csspart base - The component's base wrapper.\n * @csspart icon - The container that wraps the avatar's icon.\n * @csspart initials - The container that wraps the avatar's initials.\n * @csspart image - The avatar image. Only shown when the `image` attribute is set.\n *\n * @cssproperty --size - The size of the avatar.\n */",
-          "documentation": "https://pureui.xyz/components/avatar",
-          "status": "stable",
-          "since": "1.0",
-          "dependencies": [
-            "p-icon"
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PAvatar",
-            "module": "components/avatar/avatar.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/animated-image/animated-image.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PAnimatedImage",
-          "cssProperties": [
-            {
-              "description": "The size of the icon box.",
-              "name": "--control-box-size"
-            },
-            {
-              "description": "The size of the play/pause icons.",
-              "name": "--icon-size"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The container that surrounds the pause/play icons and provides their background.",
-              "name": "control-box"
-            }
-          ],
-          "slots": [
-            {
-              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`.",
-              "name": "play-icon"
-            },
-            {
-              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`.",
-              "name": "pause-icon"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "dependencies",
-              "type": {
-                "text": "object"
-              },
-              "static": true,
-              "default": "{ \"p-icon\": PIcon }"
-            },
-            {
-              "kind": "field",
-              "name": "animatedImage",
-              "type": {
-                "text": "HTMLImageElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "frozenFrame",
-              "type": {
-                "text": "string"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "isLoaded",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "src",
-              "type": {
-                "text": "string"
-              },
-              "description": "The path to the image to load.",
-              "attribute": "src"
-            },
-            {
-              "kind": "field",
-              "name": "alt",
-              "type": {
-                "text": "string"
-              },
-              "description": "A description of the image used by assistive devices.",
-              "attribute": "alt"
-            },
-            {
-              "kind": "field",
-              "name": "play",
-              "type": {
-                "text": "boolean"
-              },
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "attribute": "play",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleClick",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleLoad",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleError",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handlePlayChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleSrcChange"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the image loads successfully.",
-              "name": "p-load",
-              "reactName": "onPLoad",
-              "eventName": "PLoadEvent"
-            },
-            {
-              "description": "Emitted when the image fails to load.",
-              "name": "p-error",
-              "reactName": "onPError",
-              "eventName": "PErrorEvent"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "src",
-              "type": {
-                "text": "string"
-              },
-              "description": "The path to the image to load.",
-              "fieldName": "src"
-            },
-            {
-              "name": "alt",
-              "type": {
-                "text": "string"
-              },
-              "description": "A description of the image used by assistive devices.",
-              "fieldName": "alt"
-            },
-            {
-              "name": "play",
-              "type": {
-                "text": "boolean"
-              },
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "fieldName": "play"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.",
-          "tagNameWithoutPrefix": "animated-image",
-          "tagName": "p-animated-image",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n * @documentation https://pureui.xyz/components/animated-image\n * @status stable\n * @since 1.0\n *\n * @dependency p-icon\n *\n * @event p-load - Emitted when the image loads successfully.\n * @event p-error - Emitted when the image fails to load.\n *\n * @slot play-icon - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n * @slot pause-icon - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n *\n * @part control-box - The container that surrounds the pause/play icons and provides their background.\n *\n * @cssproperty --control-box-size - The size of the icon box.\n * @cssproperty --icon-size - The size of the play/pause icons.\n */",
-          "documentation": "https://pureui.xyz/components/animated-image",
-          "status": "stable",
-          "since": "1.0",
-          "dependencies": [
-            "p-icon"
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PAnimatedImage",
-            "module": "components/animated-image/animated-image.js"
           }
         }
       ]
@@ -2042,6 +1933,115 @@
           "declaration": {
             "name": "PButton",
             "module": "components/button/button.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/badge/badge.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PBadge",
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The badge's content.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\""
+              },
+              "default": "\"primary\"",
+              "description": "The badge's theme variant.",
+              "attribute": "variant",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pill",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "attribute": "pill",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pulse",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the badge pulsate to draw attention.",
+              "attribute": "pulse",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "variant",
+              "type": {
+                "text": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\""
+              },
+              "default": "\"primary\"",
+              "description": "The badge's theme variant.",
+              "fieldName": "variant"
+            },
+            {
+              "name": "pill",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "fieldName": "pill"
+            },
+            {
+              "name": "pulse",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the badge pulsate to draw attention.",
+              "fieldName": "pulse"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "Badges are used to draw attention and display statuses or counts.",
+          "tagNameWithoutPrefix": "badge",
+          "tagName": "p-badge",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary Badges are used to draw attention and display statuses or counts.\n * @documentation https://pureui.xyz/components/badge\n * @status stable\n * @since 1.0\n *\n * @slot - The badge's content.\n *\n * @csspart base - The component's base wrapper.\n */",
+          "documentation": "https://pureui.xyz/components/badge",
+          "status": "stable",
+          "since": "1.0"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PBadge",
+            "module": "components/badge/badge.js"
           }
         }
       ]
@@ -11929,6 +11929,193 @@
     },
     {
       "kind": "javascript-module",
+      "path": "components/qr-code/qr-code.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PQrCode",
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "canvas",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The QR code's value.",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The label for assistive devices to announce. If unspecified, the value will be used instead.",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "number"
+              },
+              "default": "128",
+              "description": "The size of the QR code, in pixels.",
+              "attribute": "size"
+            },
+            {
+              "kind": "field",
+              "name": "fill",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"black\"",
+              "description": "The fill color. This can be any valid CSS color, but not a CSS custom property.",
+              "attribute": "fill"
+            },
+            {
+              "kind": "field",
+              "name": "background",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"white\"",
+              "description": "The background color. This can be any valid CSS color or `transparent`. It cannot be a CSS custom property.",
+              "attribute": "background"
+            },
+            {
+              "kind": "field",
+              "name": "radius",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The edge radius of each module. Must be between 0 and 0.5.",
+              "attribute": "radius"
+            },
+            {
+              "kind": "field",
+              "name": "errorCorrection",
+              "type": {
+                "text": "\"L\" | \"M\" | \"Q\" | \"H\""
+              },
+              "default": "\"H\"",
+              "description": "The level of error correction to use. [Learn more](https://www.qrcode.com/en/about/error_correction.html)",
+              "attribute": "error-correction"
+            },
+            {
+              "kind": "method",
+              "name": "generate"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The QR code's value.",
+              "fieldName": "value"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The label for assistive devices to announce. If unspecified, the value will be used instead.",
+              "fieldName": "label"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "number"
+              },
+              "default": "128",
+              "description": "The size of the QR code, in pixels.",
+              "fieldName": "size"
+            },
+            {
+              "name": "fill",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"black\"",
+              "description": "The fill color. This can be any valid CSS color, but not a CSS custom property.",
+              "fieldName": "fill"
+            },
+            {
+              "name": "background",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"white\"",
+              "description": "The background color. This can be any valid CSS color or `transparent`. It cannot be a CSS custom property.",
+              "fieldName": "background"
+            },
+            {
+              "name": "radius",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The edge radius of each module. Must be between 0 and 0.5.",
+              "fieldName": "radius"
+            },
+            {
+              "name": "error-correction",
+              "type": {
+                "text": "\"L\" | \"M\" | \"Q\" | \"H\""
+              },
+              "default": "\"H\"",
+              "description": "The level of error correction to use. [Learn more](https://www.qrcode.com/en/about/error_correction.html)",
+              "fieldName": "errorCorrection"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "Generates a [QR code](https://www.qrcode.com/) and renders it using the [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API).",
+          "tagNameWithoutPrefix": "qr-code",
+          "tagName": "p-qr-code",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary Generates a [QR code](https://www.qrcode.com/) and renders it using the [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API).\n * @documentation https://pureui.xyz/components/qr-code\n * @status stable\n * @since 1.0\n *\n * @csspart base - The component's base wrapper.\n */",
+          "documentation": "https://pureui.xyz/components/qr-code",
+          "status": "stable",
+          "since": "1.0"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PQrCode",
+            "module": "components/qr-code/qr-code.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "components/radio/radio.js",
       "declarations": [
         {
@@ -12116,193 +12303,6 @@
           "declaration": {
             "name": "PRadio",
             "module": "components/radio/radio.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/qr-code/qr-code.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PQrCode",
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "canvas",
-              "type": {
-                "text": "HTMLElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "The QR code's value.",
-              "attribute": "value"
-            },
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "The label for assistive devices to announce. If unspecified, the value will be used instead.",
-              "attribute": "label"
-            },
-            {
-              "kind": "field",
-              "name": "size",
-              "type": {
-                "text": "number"
-              },
-              "default": "128",
-              "description": "The size of the QR code, in pixels.",
-              "attribute": "size"
-            },
-            {
-              "kind": "field",
-              "name": "fill",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"black\"",
-              "description": "The fill color. This can be any valid CSS color, but not a CSS custom property.",
-              "attribute": "fill"
-            },
-            {
-              "kind": "field",
-              "name": "background",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"white\"",
-              "description": "The background color. This can be any valid CSS color or `transparent`. It cannot be a CSS custom property.",
-              "attribute": "background"
-            },
-            {
-              "kind": "field",
-              "name": "radius",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The edge radius of each module. Must be between 0 and 0.5.",
-              "attribute": "radius"
-            },
-            {
-              "kind": "field",
-              "name": "errorCorrection",
-              "type": {
-                "text": "\"L\" | \"M\" | \"Q\" | \"H\""
-              },
-              "default": "\"H\"",
-              "description": "The level of error correction to use. [Learn more](https://www.qrcode.com/en/about/error_correction.html)",
-              "attribute": "error-correction"
-            },
-            {
-              "kind": "method",
-              "name": "generate"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "The QR code's value.",
-              "fieldName": "value"
-            },
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "The label for assistive devices to announce. If unspecified, the value will be used instead.",
-              "fieldName": "label"
-            },
-            {
-              "name": "size",
-              "type": {
-                "text": "number"
-              },
-              "default": "128",
-              "description": "The size of the QR code, in pixels.",
-              "fieldName": "size"
-            },
-            {
-              "name": "fill",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"black\"",
-              "description": "The fill color. This can be any valid CSS color, but not a CSS custom property.",
-              "fieldName": "fill"
-            },
-            {
-              "name": "background",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"white\"",
-              "description": "The background color. This can be any valid CSS color or `transparent`. It cannot be a CSS custom property.",
-              "fieldName": "background"
-            },
-            {
-              "name": "radius",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The edge radius of each module. Must be between 0 and 0.5.",
-              "fieldName": "radius"
-            },
-            {
-              "name": "error-correction",
-              "type": {
-                "text": "\"L\" | \"M\" | \"Q\" | \"H\""
-              },
-              "default": "\"H\"",
-              "description": "The level of error correction to use. [Learn more](https://www.qrcode.com/en/about/error_correction.html)",
-              "fieldName": "errorCorrection"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "Generates a [QR code](https://www.qrcode.com/) and renders it using the [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API).",
-          "tagNameWithoutPrefix": "qr-code",
-          "tagName": "p-qr-code",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary Generates a [QR code](https://www.qrcode.com/) and renders it using the [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API).\n * @documentation https://pureui.xyz/components/qr-code\n * @status stable\n * @since 1.0\n *\n * @csspart base - The component's base wrapper.\n */",
-          "documentation": "https://pureui.xyz/components/qr-code",
-          "status": "stable",
-          "since": "1.0"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PQrCode",
-            "module": "components/qr-code/qr-code.js"
           }
         }
       ]
@@ -16998,6 +16998,186 @@
     },
     {
       "kind": "javascript-module",
+      "path": "components/table/table.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PTable",
+          "cssProperties": [
+            {
+              "description": "An example CSS custom property.",
+              "name": "--example"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The default slot.",
+              "name": ""
+            },
+            {
+              "description": "An example slot.",
+              "name": "example"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "dependencies",
+              "type": {
+                "text": "object"
+              },
+              "static": true,
+              "default": "{\n    \"p-paginate\": PPaginate,\n  }"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Indicates that the element is disabled.",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "options",
+              "type": {
+                "text": "TableOptions<TableRowData>"
+              },
+              "default": "{\n    columns: [],\n    data: [],\n  }",
+              "attribute": "options"
+            },
+            {
+              "kind": "field",
+              "name": "currentPage",
+              "type": {
+                "text": "number"
+              },
+              "default": "1"
+            },
+            {
+              "kind": "field",
+              "name": "pageSize",
+              "type": {
+                "text": "number"
+              },
+              "default": "10"
+            },
+            {
+              "kind": "field",
+              "name": "totalItems",
+              "type": {
+                "text": "number"
+              },
+              "default": "0"
+            },
+            {
+              "kind": "field",
+              "name": "tableWrapper",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "currentItems",
+              "description": "Returns the current page of items based on the current page, page size, and total items.\nIf the table is not local paginated, all items are returned.",
+              "return": {
+                "type": {
+                  "text": "Array"
+                }
+              },
+              "readonly": true
+            },
+            {
+              "kind": "method",
+              "name": "handleApplyOptionsChange"
+            },
+            {
+              "kind": "field",
+              "name": "handleEventDispatch",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleChangePage",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "e",
+                  "type": {
+                    "text": "CustomEvent & { detail: { page: number } }"
+                  }
+                }
+              ]
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted as an example.",
+              "name": "p-change",
+              "reactName": "onPChange",
+              "eventName": "PChangeEvent"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Indicates that the element is disabled.",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "options",
+              "type": {
+                "text": "TableOptions<TableRowData>"
+              },
+              "default": "{\n    columns: [],\n    data: [],\n  }",
+              "fieldName": "options"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "Short summary of the component's intended use.",
+          "tagNameWithoutPrefix": "table",
+          "tagName": "p-table",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary Short summary of the component's intended use.\n * @documentation https://pureui.xyz/components/table\n * @status experimental\n * @since 2.0\n *\n * @dependency p-example\n *\n * @event p-change - Emitted as an example.\n *\n * @slot - The default slot.\n * @slot example - An example slot.\n *\n * @csspart base - The component's base wrapper.\n *\n * @cssproperty --example - An example CSS custom property.\n */",
+          "documentation": "https://pureui.xyz/components/table",
+          "status": "experimental",
+          "since": "2.0",
+          "dependencies": [
+            "p-example"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PTable",
+            "module": "components/table/table.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "components/tag/tag.js",
       "declarations": [
         {
@@ -19069,7 +19249,7 @@
   "package": {
     "name": "pure-uikit",
     "description": "A forward-thinking library of web components.",
-    "version": "1.1.14",
+    "version": "1.1.25",
     "author": "Mr.P",
     "homepage": "https://pureui.xyz",
     "license": "MIT"
