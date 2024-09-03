@@ -1,6 +1,6 @@
 import {
   table_styles_default
-} from "../../chunks/chunk.A7QIROPF.js";
+} from "../../chunks/chunk.UPRPRY2C.js";
 import "../../chunks/chunk.XHSHLALN.js";
 import "../../chunks/chunk.KIILAQWQ.js";
 export {

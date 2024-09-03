@@ -1,13 +1,13 @@
 import type { DefineComponent } from "vue";
 
 import type { PAlert } from "../../components/alert/alert.component.js";
-import type { PAnimatedImage } from "../../components/animated-image/animated-image.component.js";
-import type { PAvatar } from "../../components/avatar/avatar.component.js";
 import type { PAnimation } from "../../components/animation/animation.component.js";
+import type { PAvatar } from "../../components/avatar/avatar.component.js";
+import type { PAnimatedImage } from "../../components/animated-image/animated-image.component.js";
+import type { PBadge } from "../../components/badge/badge.component.js";
 import type { PBreadcrumb } from "../../components/breadcrumb/breadcrumb.component.js";
 import type { PBreadcrumbItem } from "../../components/breadcrumb-item/breadcrumb-item.component.js";
 import type { PButton } from "../../components/button/button.component.js";
-import type { PBadge } from "../../components/badge/badge.component.js";
 import type { PButtonGroup } from "../../components/button-group/button-group.component.js";
 import type { PCalendar } from "../../components/calendar/calendar.component.js";
 import type { PCard } from "../../components/card/card.component.js";
@@ -86,41 +86,6 @@ the alert will not close on its own. */
   "onp-after-hide"?: (e: CustomEvent<never>) => void;
 };
 
-type PAnimatedImageProps = {
-  /** The path to the image to load. */
-  src?: PAnimatedImage["src"];
-  /** A description of the image used by assistive devices. */
-  alt?: PAnimatedImage["alt"];
-  /** Plays the animation. When this attribute is remove, the animation will pause. */
-  play?: PAnimatedImage["play"];
-  /**  */
-  animatedImage?: PAnimatedImage["animatedImage"];
-  /**  */
-  frozenFrame?: PAnimatedImage["frozenFrame"];
-  /**  */
-  isLoaded?: PAnimatedImage["isLoaded"];
-  /** Emitted when the image loads successfully. */
-  "onp-load"?: (e: CustomEvent<never>) => void;
-  /** Emitted when the image fails to load. */
-  "onp-error"?: (e: CustomEvent<never>) => void;
-};
-
-type PAvatarProps = {
-  /** The image source to use for the avatar. */
-  image?: PAvatar["image"];
-  /** A label to use to describe the avatar to assistive devices. */
-  label?: PAvatar["label"];
-  /** Initials to use as a fallback when no image is available (1-2 characters max recommended). */
-  initials?: PAvatar["initials"];
-  /** Indicates how the browser should load the image. */
-  loading?: PAvatar["loading"];
-  /** The shape of the avatar. */
-  shape?: PAvatar["shape"];
-
-  /** The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause. */
-  "onp-error"?: (e: CustomEvent<never>) => void;
-};
-
 type PAnimationProps = {
   /** The name of the built-in animation to use. For custom animations, use the `keyframes` prop. */
   name?: PAnimation["name"];
@@ -161,6 +126,50 @@ value can be changed without causing the animation to restart. */
   "onp-finish"?: (e: CustomEvent<never>) => void;
   /** Emitted when the animation starts or restarts. */
   "onp-start"?: (e: CustomEvent<never>) => void;
+};
+
+type PAvatarProps = {
+  /** The image source to use for the avatar. */
+  image?: PAvatar["image"];
+  /** A label to use to describe the avatar to assistive devices. */
+  label?: PAvatar["label"];
+  /** Initials to use as a fallback when no image is available (1-2 characters max recommended). */
+  initials?: PAvatar["initials"];
+  /** Indicates how the browser should load the image. */
+  loading?: PAvatar["loading"];
+  /** The shape of the avatar. */
+  shape?: PAvatar["shape"];
+
+  /** The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause. */
+  "onp-error"?: (e: CustomEvent<never>) => void;
+};
+
+type PAnimatedImageProps = {
+  /** The path to the image to load. */
+  src?: PAnimatedImage["src"];
+  /** A description of the image used by assistive devices. */
+  alt?: PAnimatedImage["alt"];
+  /** Plays the animation. When this attribute is remove, the animation will pause. */
+  play?: PAnimatedImage["play"];
+  /**  */
+  animatedImage?: PAnimatedImage["animatedImage"];
+  /**  */
+  frozenFrame?: PAnimatedImage["frozenFrame"];
+  /**  */
+  isLoaded?: PAnimatedImage["isLoaded"];
+  /** Emitted when the image loads successfully. */
+  "onp-load"?: (e: CustomEvent<never>) => void;
+  /** Emitted when the image fails to load. */
+  "onp-error"?: (e: CustomEvent<never>) => void;
+};
+
+type PBadgeProps = {
+  /** The badge's theme variant. */
+  variant?: PBadge["variant"];
+  /** Draws a pill-style badge with rounded edges. */
+  pill?: PBadge["pill"];
+  /** Makes the badge pulsate to draw attention. */
+  pulse?: PBadge["pulse"];
 };
 
 type PBreadcrumbProps = {
@@ -250,15 +259,6 @@ value of this attribute must be an id of a form in the same document or shadow r
   "onp-focus"?: (e: CustomEvent<never>) => void;
   /** Emitted when the form control has been checked for validity and its constraints aren't satisfied. */
   "onp-invalid"?: (e: CustomEvent<never>) => void;
-};
-
-type PBadgeProps = {
-  /** The badge's theme variant. */
-  variant?: PBadge["variant"];
-  /** Draws a pill-style badge with rounded edges. */
-  pill?: PBadge["pill"];
-  /** Makes the badge pulsate to draw attention. */
-  pulse?: PBadge["pulse"];
 };
 
 type PButtonGroupProps = {
@@ -1591,20 +1591,31 @@ type PTabPanelProps = {
 type PTableProps = {
   /** Indicates that the element is disabled. */
   disabled?: PTable["disabled"];
-  /**  */
+  /** The options for the table. */
   options?: PTable["options"];
+  /** The data to display in the table.
+
+This property is an array of objects, where each object represents a row
+in the table. The properties of each object will be used to populate the
+columns in the table. The column headers will be determined by the
+`options.columns` property. */
+  data?: PTable["data"];
+  /** Whether the table is currently loading data. */
+  loading?: PTable["loading"];
   /**  */
+  items?: PTable["items"];
+  /** The current page of items based on the current `pageSize` and `totalItems`. */
   currentPage?: PTable["currentPage"];
-  /**  */
+  /** The number of items to display per page. */
   pageSize?: PTable["pageSize"];
-  /**  */
+  /** The total number of items in the table. */
   totalItems?: PTable["totalItems"];
   /**  */
   tableWrapper?: PTable["tableWrapper"];
   /** Returns the current page of items based on the current page, page size, and total items.
 If the table is not local paginated, all items are returned. */
   currentItems?: PTable["currentItems"];
-  /** Emitted as an example. */
+  /** Emitted when the current page value changes. */
   "onp-change"?: (e: CustomEvent<never>) => void;
 };
 
@@ -1821,26 +1832,23 @@ export type CustomElements = {
   "p-alert": DefineComponent<PAlertProps>;
 
   /**
-   * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
+   * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
    * ---
    *
    *
    * ### **Events:**
-   *  - **p-load** - Emitted when the image loads successfully.
-   * - **p-error** - Emitted when the image fails to load.
+   *  - **p-cancel** - Emitted when the animation is canceled.
+   * - **p-finish** - Emitted when the animation finishes.
+   * - **p-start** - Emitted when the animation starts or restarts.
+   *
+   * ### **Methods:**
+   *  - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.
+   * - **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.
    *
    * ### **Slots:**
-   *  - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.
-   * - **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.
-   *
-   * ### **CSS Properties:**
-   *  - **--control-box-size** - The size of the icon box. _(default: undefined)_
-   * - **--icon-size** - The size of the play/pause icons. _(default: undefined)_
-   *
-   * ### **CSS Parts:**
-   *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
+   *  - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.
    */
-  "p-animated-image": DefineComponent<PAnimatedImageProps>;
+  "p-animation": DefineComponent<PAnimationProps>;
 
   /**
    * Avatars are used to represent a person or object.
@@ -1865,23 +1873,39 @@ export type CustomElements = {
   "p-avatar": DefineComponent<PAvatarProps>;
 
   /**
-   * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
+   * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
    * ---
    *
    *
    * ### **Events:**
-   *  - **p-cancel** - Emitted when the animation is canceled.
-   * - **p-finish** - Emitted when the animation finishes.
-   * - **p-start** - Emitted when the animation starts or restarts.
-   *
-   * ### **Methods:**
-   *  - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.
-   * - **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.
+   *  - **p-load** - Emitted when the image loads successfully.
+   * - **p-error** - Emitted when the image fails to load.
    *
    * ### **Slots:**
-   *  - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.
+   *  - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.
+   * - **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.
+   *
+   * ### **CSS Properties:**
+   *  - **--control-box-size** - The size of the icon box. _(default: undefined)_
+   * - **--icon-size** - The size of the play/pause icons. _(default: undefined)_
+   *
+   * ### **CSS Parts:**
+   *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
    */
-  "p-animation": DefineComponent<PAnimationProps>;
+  "p-animated-image": DefineComponent<PAnimatedImageProps>;
+
+  /**
+   * Badges are used to draw attention and display statuses or counts.
+   * ---
+   *
+   *
+   * ### **Slots:**
+   *  - _default_ - The badge's content.
+   *
+   * ### **CSS Parts:**
+   *  - **base** - The component's base wrapper.
+   */
+  "p-badge": DefineComponent<PBadgeProps>;
 
   /**
    * Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.
@@ -1950,19 +1974,6 @@ export type CustomElements = {
    * - **spinner** - The spinner that shows when the button is in the loading state.
    */
   "p-button": DefineComponent<PButtonProps>;
-
-  /**
-   * Badges are used to draw attention and display statuses or counts.
-   * ---
-   *
-   *
-   * ### **Slots:**
-   *  - _default_ - The badge's content.
-   *
-   * ### **CSS Parts:**
-   *  - **base** - The component's base wrapper.
-   */
-  "p-badge": DefineComponent<PBadgeProps>;
 
   /**
    * Button groups can be used to group related buttons into sections.
@@ -3127,22 +3138,46 @@ export type CustomElements = {
   "p-tab-panel": DefineComponent<PTabPanelProps>;
 
   /**
-   * Short summary of the component's intended use.
+   * The Table component is used to display data in a table format.
    * ---
    *
    *
    * ### **Events:**
-   *  - **p-change** - Emitted as an example.
+   *  - **p-change** - Emitted when the current page value changes.
    *
    * ### **Slots:**
    *  - _default_ - The default slot.
-   * - **example** - An example slot.
+   * - **paginate** - An optional slot for paginate element.
    *
    * ### **CSS Properties:**
-   *  - **--example** - An example CSS custom property. _(default: undefined)_
+   *  - **--table-header-cell-padding** - Set padding for header cell. _(default: undefined)_
+   * - **--table-body-cell-padding** - Set padding for body cell. _(default: undefined)_
+   * - **--table-footer-padding** - Set padding for footer cell. _(default: undefined)_
+   * - **--table-border-horizontal-width** - Set border width horizontal. _(default: undefined)_
+   * - **--table-border-horizontal-style** - Set border style horizontal. _(default: undefined)_
+   * - **--table-border-horizontal-color** - Set border color horizontal. _(default: undefined)_
+   * - **--table-border-vertical-width** - Set border width vertical. _(default: undefined)_
+   * - **--table-border-vertical-style** - Set border style vertical. _(default: undefined)_
+   * - **--table-border-vertical-color** - Set border color vertical. _(default: undefined)_
+   * - **--table-border-width** - Set table border width. _(default: undefined)_
+   * - **--table-border-color** - Set table border color. _(default: undefined)_
+   * - **--table-border-style** - Set table border style. _(default: undefined)_
+   * - **--table-border-radius** - Set table border radius. _(default: undefined)_
+   * - **--table-row-hover-background-color** - Set table row hover background color. _(default: undefined)_
+   * - **--table-cell-background-color** - Set table cell background color. _(default: undefined)_
+   * - **--table-cell-hover-background-color** - Set table cell hover background color. _(default: undefined)_
+   * - **--table-cell-min-height** - Set table cell min height. _(default: undefined)_
+   * - **--table-cell-max-height** - Set table cell max height. _(default: undefined)_
+   * - **--table-cell-min-width** - Set table cell min width. _(default: undefined)_
+   * - **--table-cell-max-width** - Set table cell max width. _(default: undefined)_
    *
    * ### **CSS Parts:**
-   *  - **base** - The component's base wrapper.
+   *  - **table-wrapper** - The component's table wrapper.
+   * - **table-header** - The component's table header wrapper.
+   * - **table-body** - The component's table body wrapper.
+   * - **table-loading** - The component's table loading wrapper.
+   * - **table-empty** - The component's table empty wrapper.
+   * - **table-footer** - The component's table footer wrapper.
    */
   "p-table": DefineComponent<PTableProps>;
 

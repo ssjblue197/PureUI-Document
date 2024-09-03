@@ -318,8 +318,8 @@ export default css`
     --p-transition-x-fast: 50ms;
 
     --p-font-mono: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
-    --p-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    --p-font-sans: Arial, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+      Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
       "Segoe UI Symbol";
     --p-font-serif: Georgia, "Times New Roman", serif;
 

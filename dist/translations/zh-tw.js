@@ -1,5 +1,5 @@
-import "../chunks/chunk.55R7PUQN.js";
-import "../chunks/chunk.77U3LXZF.js";
+import "../chunks/chunk.KTCBPWNH.js";
+import "../chunks/chunk.TLC45E5W.js";
 import {
   registerTranslation
 } from "../chunks/chunk.K6K6S6E6.js";

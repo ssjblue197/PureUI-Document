@@ -37,7 +37,6 @@ export interface TableRowData {
 }
 export interface TableOptions<T> {
     columns: ColumnConfig[];
-    data: T[];
     onRowSelected?: (row: T) => void;
     getSelectedRows?: () => T[];
     selectable?: boolean;
@@ -46,8 +45,9 @@ export interface TableOptions<T> {
     hideHeader?: boolean;
     hideFooter?: boolean;
     paginate?: boolean;
-    footerSlot?: () => symbol | HTMLTemplateResult | undefined;
-    headerSlot?: () => symbol | HTMLTemplateResult | undefined;
+    expandable?: boolean;
+    onRowExpand?: (row: T) => symbol | HTMLTemplateResult | undefined;
+    onRowCollapse?: (row: T) => symbol | HTMLTemplateResult | undefined;
 }
 declare global {
     interface HTMLElementTagNameMap {
