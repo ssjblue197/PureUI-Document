@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="component" data-pure-ui-version="1.1.25">
+<html lang="en" data-layout="component" data-pure-ui-version="1.1.29">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -83,7 +83,7 @@
         <a href="/">
           <img src="/assets/images/wordmark.svg" alt="Pure UI" />
         </a>
-        <div class="sidebar-version">1.1.25</div>
+        <div class="sidebar-version">1.1.29</div>
       </header>
 
       <button class="search-box" type="button" title="Press / to search" aria-label="Search" data-plugin="search">
@@ -401,9 +401,6 @@
         <div class="content__toc">
           <ul>
             <li class="top"><a href="#">Pure UI</a></li>
-            <li data-level="2"><a href="#examples">Examples</a></li>
-            <li data-level="3"><a href="#first-example">First Example</a></li>
-            <li data-level="3"><a href="#second-example">Second Example</a></li>
             <li data-level="2"><a href="#importing">Importing</a></li>
             <li data-level="2"><a href="#slots">Slots</a></li>
             <li data-level="2"><a href="#properties">Properties</a></li>
@@ -423,12 +420,12 @@
             </div>
 
             <div class="component-header__info">
-              <p-badge variant="neutral" pill=""> Since 2.0 </p-badge>
-              <p-badge variant="warning" pill="" style="text-transform: capitalize"> experimental </p-badge>
+              <p-badge variant="neutral" pill=""> Since 1.1.15 </p-badge>
+              <p-badge variant="primary" pill="" style="text-transform: capitalize"> stable </p-badge>
             </div>
           </header>
 
-          <p class="component-summary">Short summary of the component’s intended use.</p>
+          <p class="component-summary">The Table component is used to display data in a table format.</p>
 
           <div class="code-preview">
             <div class="code-preview__preview">
@@ -437,14 +434,17 @@
                 (() => {
                   const table = document.querySelector('.table');
 
+                  table.loading = true;
+
                   table.options = {
                     paginate: true,
+                    selectable: true,
                     columns: [
                       {
                         field: 'name',
                         id: 'name',
                         headerName: 'Full name',
-                        minWidth: '300px',
+                        minWidth: '120px',
                         alignItems: 'center',
                         justifyContent: 'flex-start'
                       },
@@ -457,20 +457,14 @@
                         field: 'status',
                         id: 'status',
                         headerName: 'Status',
-                        render: row =>
-                          `<p-tag variant="${row.status ? 'success' : 'danger'}" size="small">${row.status ? 'Active' : 'Inactive'}</p-tag>`
-                      },
-                      {
-                        field: '',
-                        id: 'action',
-                        headerName: 'Action',
-                        render: row => {
-                          `<p-button outline variant="primary" size="small">Support</p-button>`;
-                        },
-                        sticky: 'end'
+                        render: row => `${String(row.status) == '1' ? 'Active' : 'Inactive'}`,
+                        justifyContent: 'center'
                       }
-                    ],
-                    data: [
+                    ]
+                  };
+
+                  setTimeout(() => {
+                    table.data = [
                       {
                         name: 'Alice',
                         age: '28',
@@ -680,12 +674,12 @@
                         },
                         status: 1
                       }
-                    ]
-                  };
+                    ];
 
-                  const test = e => {
-                    console.log(e);
-                  };
+                    table.options = JSON.parse(JSON.stringify(table.options));
+
+                    table.loading = false;
+                  }, 3000);
                 })();
               </script>
 
@@ -704,12 +698,15 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">const</span> table <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.table'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
+  table<span class="token punctuation">.</span>loading <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+
   table<span class="token punctuation">.</span>options <span class="token operator">=</span> <span class="token punctuation">{</span>
     <span class="token literal-property property">paginate</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">selectable</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
     <span class="token literal-property property">columns</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token literal-property property">field</span><span class="token operator">:</span> <span class="token string">'name'</span><span class="token punctuation">,</span>
     <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">'name'</span><span class="token punctuation">,</span>
     <span class="token literal-property property">headerName</span><span class="token operator">:</span> <span class="token string">'Full name'</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">minWidth</span><span class="token operator">:</span> <span class="token string">'300px'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">minWidth</span><span class="token operator">:</span> <span class="token string">'120px'</span><span class="token punctuation">,</span>
     <span class="token literal-property property">alignItems</span><span class="token operator">:</span> <span class="token string">'center'</span><span class="token punctuation">,</span>
     <span class="token literal-property property">justifyContent</span><span class="token operator">:</span> <span class="token string">'flex-start'</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token literal-property property">field</span><span class="token operator">:</span> <span class="token string">'age'</span><span class="token punctuation">,</span>
@@ -731,17 +728,14 @@
   <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token literal-property property">field</span><span class="token operator">:</span> <span class="token string">'status'</span><span class="token punctuation">,</span>
     <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">'status'</span><span class="token punctuation">,</span>
     <span class="token literal-property property">headerName</span><span class="token operator">:</span> <span class="token string">'Status'</span><span class="token punctuation">,</span>
-    <span class="token function-variable function">render</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">row</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;p-tag variant="</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>row<span class="token punctuation">.</span>status <span class="token operator">?</span> <span class="token string">'success'</span> <span class="token operator">:</span> <span class="token string">'danger'</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">" size="small"&gt;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>row<span class="token punctuation">.</span>status <span class="token operator">?</span> <span class="token string">'Active'</span> <span class="token operator">:</span> <span class="token string">'Inactive'</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/p-tag&gt;</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token literal-property property">field</span><span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">'action'</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">headerName</span><span class="token operator">:</span> <span class="token string">'Action'</span><span class="token punctuation">,</span>
-    <span class="token function-variable function">render</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">row</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-      <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;p-button outline variant="primary" size="small"&gt;Support&lt;/p-button&gt;</span><span class="token template-punctuation string">`</span></span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">sticky</span><span class="token operator">:</span> <span class="token string">'end'</span>
+    <span class="token function-variable function">render</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">row</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token function">String</span><span class="token punctuation">(</span>row<span class="token punctuation">.</span>status<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">'1'</span> <span class="token operator">?</span> <span class="token string">'Active'</span> <span class="token operator">:</span> <span class="token string">'Inactive'</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+    <span class="token literal-property property">justifyContent</span><span class="token operator">:</span> <span class="token string">'center'</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span>
-  <span class="token punctuation">]</span><span class="token punctuation">,</span>
-  <span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+  <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    table<span class="token punctuation">.</span>data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
     <span class="token string-property property">"name"</span><span class="token operator">:</span> <span class="token string">"Alice"</span><span class="token punctuation">,</span>
     <span class="token string-property property">"age"</span><span class="token operator">:</span> <span class="token string">"28"</span><span class="token punctuation">,</span>
     <span class="token string-property property">"address"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
@@ -950,11 +944,13 @@
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token string-property property">"status"</span><span class="token operator">:</span> <span class="token number">1</span>
   <span class="token punctuation">}</span><span class="token punctuation">]</span>
-  <span class="token punctuation">}</span>
 
-  <span class="token keyword">const</span> <span class="token function-variable function">test</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
-  <span class="token punctuation">}</span>
+  table<span class="token punctuation">.</span>options <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>table<span class="token punctuation">.</span>options<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  table<span class="token punctuation">.</span>loading <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
 
 
@@ -1001,19 +997,6 @@
             </div>
           </div>
 
-          <h2 id="examples" class="anchor-heading">
-            Examples<a href="#examples" aria-label='Direct link to "Examples"'></a>
-          </h2>
-          <h3 id="first-example" class="anchor-heading">
-            First Example<a href="#first-example" aria-label='Direct link to "First Example"'></a>
-          </h3>
-          <p>TODO</p>
-          <h3 id="second-example" class="anchor-heading">
-            Second Example<a href="#second-example" aria-label='Direct link to "Second Example"'></a>
-          </h3>
-          <p>TODO</p>
-          <p>[component-metadata:p-table]</p>
-
           <h2 id="importing" class="anchor-heading">
             Importing<a href="#importing" aria-label='Direct link to "Importing"'></a>
           </h2>
@@ -1041,7 +1024,7 @@
                 >
                 using a script tag:
               </p>
-              <pre><code class="language-html" id="code-block-1006"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.1.25/cdn/components/table/table.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-1006"></p-copy-button></pre>
+              <pre><code class="language-html" id="code-block-1006"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.1.29/cdn/components/table/table.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-1006"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="import">
@@ -1056,7 +1039,7 @@
                 >
                 using a JavaScript import:
               </p>
-              <pre><code class="language-js" id="code-block-1007"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.1.25/cdn/components/table/table.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1007"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-1007"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.1.29/cdn/components/table/table.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1007"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="bundler">
@@ -1088,9 +1071,9 @@
 
                 <tr>
                   <td class="nowrap">
-                    <code>example</code>
+                    <code>paginate</code>
                   </td>
-                  <td>An example slot.</td>
+                  <td>An optional slot for paginate element.</td>
                 </tr>
               </tbody>
             </table>
@@ -1129,6 +1112,98 @@
                   </td>
                   <td>
                     <code>false</code>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <code class="nowrap">options</code>
+                  </td>
+                  <td>The options for the table.</td>
+                  <td style="text-align: center">
+                    <p-icon label="yes" name="check-lg"></p-icon>
+                  </td>
+                  <td>
+                    <code>TableOptions<tablerowdata></tablerowdata></code>
+                  </td>
+                  <td>
+                    <code>{ columns: [], }</code>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <code class="nowrap">loading</code>
+                  </td>
+                  <td>Whether the table is currently loading data.</td>
+                  <td style="text-align: center">
+                    <p-icon label="yes" name="check-lg"></p-icon>
+                  </td>
+                  <td>
+                    <code>boolean</code>
+                  </td>
+                  <td>
+                    <code>false</code>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <code class="nowrap">currentPage</code>
+                  </td>
+                  <td>
+                    The current page of items based on the current <code>pageSize</code> and <code>totalItems</code>.
+                  </td>
+                  <td style="text-align: center"></td>
+                  <td>
+                    <code>number</code>
+                  </td>
+                  <td>
+                    <code>1</code>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <code class="nowrap">pageSize</code>
+                  </td>
+                  <td>The number of items to display per page.</td>
+                  <td style="text-align: center"></td>
+                  <td>
+                    <code>number</code>
+                  </td>
+                  <td>
+                    <code>10</code>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <code class="nowrap">totalItems</code>
+                  </td>
+                  <td>The total number of items in the table.</td>
+                  <td style="text-align: center"></td>
+                  <td>
+                    <code>number</code>
+                  </td>
+                  <td>
+                    <code>0</code>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <code class="nowrap">items</code>
+                  </td>
+                  <td>The current page of items.</td>
+                  <td style="text-align: center">
+                    <p-icon label="yes" name="check-lg"></p-icon>
+                  </td>
+                  <td>
+                    <code>Array<tablerowdata></tablerowdata></code>
+                  </td>
+                  <td>
+                    <code>[]</code>
                   </td>
                 </tr>
 
@@ -1182,7 +1257,7 @@
                 <tr>
                   <td data-flavor="html"><code class="nowrap">p-change</code></td>
                   <td data-flavor="react"><code class="nowrap">onPChange</code></td>
-                  <td>Emitted as an example.</td>
+                  <td>Emitted when the current page value changes.</td>
                   <td>-</td>
                 </tr>
               </tbody>
@@ -1208,8 +1283,122 @@
               </thead>
               <tbody>
                 <tr>
-                  <td class="nowrap"><code>--example</code></td>
-                  <td>An example CSS custom property.</td>
+                  <td class="nowrap"><code>--table-header-cell-padding</code></td>
+                  <td>Set padding for header cell.</td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td class="nowrap"><code>--table-body-cell-padding</code></td>
+                  <td>Set padding for body cell.</td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td class="nowrap"><code>--table-footer-padding</code></td>
+                  <td>Set padding for footer cell.</td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td class="nowrap"><code>--table-border-horizontal-width</code></td>
+                  <td>Set border width horizontal.</td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td class="nowrap"><code>--table-border-horizontal-style</code></td>
+                  <td>Set border style horizontal.</td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td class="nowrap"><code>--table-border-horizontal-color</code></td>
+                  <td>Set border color horizontal.</td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td class="nowrap"><code>--table-border-vertical-width</code></td>
+                  <td>Set border width vertical.</td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td class="nowrap"><code>--table-border-vertical-style</code></td>
+                  <td>Set border style vertical.</td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td class="nowrap"><code>--table-border-vertical-color</code></td>
+                  <td>Set border color vertical.</td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td class="nowrap"><code>--table-border-width</code></td>
+                  <td>Set table border width.</td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td class="nowrap"><code>--table-border-color</code></td>
+                  <td>Set table border color.</td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td class="nowrap"><code>--table-border-style</code></td>
+                  <td>Set table border style.</td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td class="nowrap"><code>--table-border-radius</code></td>
+                  <td>Set table border radius.</td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td class="nowrap"><code>--table-row-hover-background-color</code></td>
+                  <td>Set table row hover background color.</td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td class="nowrap"><code>--table-cell-background-color</code></td>
+                  <td>Set table cell background color.</td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td class="nowrap"><code>--table-cell-hover-background-color</code></td>
+                  <td>Set table cell hover background color.</td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td class="nowrap"><code>--table-cell-min-height</code></td>
+                  <td>Set table cell min height.</td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td class="nowrap"><code>--table-cell-max-height</code></td>
+                  <td>Set table cell max height.</td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td class="nowrap"><code>--table-cell-min-width</code></td>
+                  <td>Set table cell min width.</td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td class="nowrap"><code>--table-cell-max-width</code></td>
+                  <td>Set table cell max width.</td>
                   <td></td>
                 </tr>
               </tbody>
@@ -1235,8 +1424,33 @@
               </thead>
               <tbody>
                 <tr>
-                  <td class="nowrap"><code>base</code></td>
-                  <td>The component’s base wrapper.</td>
+                  <td class="nowrap"><code>table-wrapper</code></td>
+                  <td>The component’s table wrapper.</td>
+                </tr>
+
+                <tr>
+                  <td class="nowrap"><code>table-header</code></td>
+                  <td>The component’s table header wrapper.</td>
+                </tr>
+
+                <tr>
+                  <td class="nowrap"><code>table-body</code></td>
+                  <td>The component’s table body wrapper.</td>
+                </tr>
+
+                <tr>
+                  <td class="nowrap"><code>table-loading</code></td>
+                  <td>The component’s table loading wrapper.</td>
+                </tr>
+
+                <tr>
+                  <td class="nowrap"><code>table-empty</code></td>
+                  <td>The component’s table empty wrapper.</td>
+                </tr>
+
+                <tr>
+                  <td class="nowrap"><code>table-footer</code></td>
+                  <td>The component’s table footer wrapper.</td>
                 </tr>
               </tbody>
             </table>
@@ -1253,7 +1467,17 @@
           <p>This component automatically imports the following dependencies.</p>
 
           <ul>
-            <li><code>&lt;p-example&gt;</code></li>
+            <li><code>&lt;p-button&gt;</code></li>
+
+            <li><code>&lt;p-icon&gt;</code></li>
+
+            <li><code>&lt;p-icon-button&gt;</code></li>
+
+            <li><code>&lt;p-paginate&gt;</code></li>
+
+            <li><code>&lt;p-spinner&gt;</code></li>
+
+            <li><code>&lt;p-tag&gt;</code></li>
           </ul>
         </div>
       </article>
