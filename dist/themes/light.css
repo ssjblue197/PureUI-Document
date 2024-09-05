@@ -422,8 +422,8 @@
   --p-input-help-text-color: var(--p-color-neutral-500);
 
   --p-toggle-size-small: 1rem;
-  --p-toggle-size-medium: 1.5rem;
-  --p-toggle-size-large: 2rem;
+  --p-toggle-size-medium: 1.25rem;
+  --p-toggle-size-large: 1.5rem;
 
   --p-overlay-background-color: hsl(240 3.8% 46.1% / 33%);
 

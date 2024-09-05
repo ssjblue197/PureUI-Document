@@ -1,6 +1,6 @@
 import {
   checkbox_styles_default
-} from "../../chunks/chunk.EEYMGYUB.js";
+} from "../../chunks/chunk.GS2KJRKO.js";
 import "../../chunks/chunk.XHSHLALN.js";
 import "../../chunks/chunk.KIILAQWQ.js";
 export {

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="component" data-pure-ui-version="1.1.30">
+<html lang="en" data-layout="component" data-pure-ui-version="1.1.32">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -83,7 +83,7 @@
         <a href="/">
           <img src="/assets/images/wordmark.svg" alt="Pure UI" />
         </a>
-        <div class="sidebar-version">1.1.30</div>
+        <div class="sidebar-version">1.1.32</div>
       </header>
 
       <button class="search-box" type="button" title="Press / to search" aria-label="Search" data-plugin="search">
@@ -207,6 +207,14 @@
 
               <li>
                 <a href="/components/dropdown"> Dropdown </a>
+              </li>
+
+              <li>
+                <a href="/components/file-upload"> File Upload </a>
+              </li>
+
+              <li>
+                <a href="/components/file-upload-item"> File Upload Item </a>
               </li>
 
               <li>
@@ -484,9 +492,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-232">
+            <div class="code-preview__source-group" id="code-preview-source-group-273">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-598"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>qr-overview<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-814"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>qr-overview<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-qr-code</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://pureui.xyz/<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Scan this code to visit Pure UI on the web!<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-qr-code</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/&gt;</span></span>
 
@@ -513,11 +521,11 @@
     <span class="token property">margin-top</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-598"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-814"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-599"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-815"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PQrCode <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/qr-code'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PInput <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/input'</span><span class="token punctuation">;</span>
 
@@ -547,7 +555,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-599"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-815"></p-copy-button></pre>
               </div>
             </div>
 
@@ -556,7 +564,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-232"
+                aria-controls="code-preview-source-group-273"
               >
                 Source
                 <svg
@@ -616,17 +624,17 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-233">
+            <div class="code-preview__source-group" id="code-preview-source-group-274">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-600"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-qr-code</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://pureui.xyz/<span class="token punctuation">"</span></span> <span class="token attr-name">fill</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>deeppink<span class="token punctuation">"</span></span> <span class="token attr-name">background</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>white<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-qr-code</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-600"></p-copy-button></pre>
+                <pre><code class="language-html" id="code-block-816"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-qr-code</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://pureui.xyz/<span class="token punctuation">"</span></span> <span class="token attr-name">fill</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>deeppink<span class="token punctuation">"</span></span> <span class="token attr-name">background</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>white<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-qr-code</span><span class="token punctuation">&gt;</span></span>
+</code><p-copy-button class="copy-code-button" from="code-block-816"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-601"><span class="token keyword">import</span> PQrCode <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/qr-code'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-817"><span class="token keyword">import</span> PQrCode <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/qr-code'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PQrCode</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://pureui.xyz/<span class="token punctuation">"</span></span> <span class="token attr-name">fill</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>deeppink<span class="token punctuation">"</span></span> <span class="token attr-name">background</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>white<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-601"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-817"></p-copy-button></pre>
               </div>
             </div>
 
@@ -635,7 +643,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-233"
+                aria-controls="code-preview-source-group-274"
               >
                 Source
                 <svg
@@ -689,17 +697,17 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-234">
+            <div class="code-preview__source-group" id="code-preview-source-group-275">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-602"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-qr-code</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://pureui.xyz/<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>64<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-qr-code</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-602"></p-copy-button></pre>
+                <pre><code class="language-html" id="code-block-818"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-qr-code</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://pureui.xyz/<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>64<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-qr-code</span><span class="token punctuation">&gt;</span></span>
+</code><p-copy-button class="copy-code-button" from="code-block-818"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-603"><span class="token keyword">import</span> PQrCode <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/qr-code'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-819"><span class="token keyword">import</span> PQrCode <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/qr-code'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PQrCode</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://pureui.xyz/<span class="token punctuation">"</span></span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>64<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-603"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-819"></p-copy-button></pre>
               </div>
             </div>
 
@@ -708,7 +716,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-234"
+                aria-controls="code-preview-source-group-275"
               >
                 Source
                 <svg
@@ -762,17 +770,17 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-235">
+            <div class="code-preview__source-group" id="code-preview-source-group-276">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-604"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-qr-code</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://pureui.xyz/<span class="token punctuation">"</span></span> <span class="token attr-name">radius</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0.5<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-qr-code</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-604"></p-copy-button></pre>
+                <pre><code class="language-html" id="code-block-820"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-qr-code</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://pureui.xyz/<span class="token punctuation">"</span></span> <span class="token attr-name">radius</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0.5<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-qr-code</span><span class="token punctuation">&gt;</span></span>
+</code><p-copy-button class="copy-code-button" from="code-block-820"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-605"><span class="token keyword">import</span> PQrCode <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/qr-code'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-821"><span class="token keyword">import</span> PQrCode <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/qr-code'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PQrCode</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://pureui.xyz/<span class="token punctuation">"</span></span> <span class="token attr-name">radius</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0.5<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-605"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-821"></p-copy-button></pre>
               </div>
             </div>
 
@@ -781,7 +789,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-235"
+                aria-controls="code-preview-source-group-276"
               >
                 Source
                 <svg
@@ -861,9 +869,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-236">
+            <div class="code-preview__source-group" id="code-preview-source-group-277">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-606"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>qr-error-correction<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-822"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>qr-error-correction<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-qr-code</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://pureui.xyz/<span class="token punctuation">"</span></span> <span class="token attr-name">error-correction</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>L<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-qr-code</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-qr-code</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://pureui.xyz/<span class="token punctuation">"</span></span> <span class="token attr-name">error-correction</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>M<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-qr-code</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-qr-code</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://pureui.xyz/<span class="token punctuation">"</span></span> <span class="token attr-name">error-correction</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Q<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-qr-code</span><span class="token punctuation">&gt;</span></span>
@@ -877,11 +885,11 @@
     <span class="token property">gap</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-606"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-822"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-607"><span class="token keyword">import</span> PQrCode <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/qr-code'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-823"><span class="token keyword">import</span> PQrCode <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/qr-code'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> css <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
   .qr-error-correction {
@@ -905,7 +913,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-607"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-823"></p-copy-button></pre>
               </div>
             </div>
 
@@ -914,7 +922,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-236"
+                aria-controls="code-preview-source-group-277"
               >
                 Source
                 <svg
@@ -983,7 +991,7 @@
                 >
                 using a script tag:
               </p>
-              <pre><code class="language-html" id="code-block-608"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.1.30/cdn/components/qr-code/qr-code.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-608"></p-copy-button></pre>
+              <pre><code class="language-html" id="code-block-824"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.1.32/cdn/components/qr-code/qr-code.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-824"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="import">
@@ -998,17 +1006,17 @@
                 >
                 using a JavaScript import:
               </p>
-              <pre><code class="language-js" id="code-block-609"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.1.30/cdn/components/qr-code/qr-code.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-609"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-825"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.1.32/cdn/components/qr-code/qr-code.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-825"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="bundler">
               <p>To import this component using <a href="/getting-started/installation#bundling">a bundler</a>:</p>
-              <pre><code class="language-js" id="code-block-610"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/qr-code/qr-code.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-610"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-826"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/qr-code/qr-code.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-826"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="react">
               <p>To import this component as a <a href="/frameworks/react">React component</a>:</p>
-              <pre><code class="language-js" id="code-block-611"><span class="token keyword">import</span> PQrCode <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/qr-code'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-611"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-827"><span class="token keyword">import</span> PQrCode <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/qr-code'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-827"></p-copy-button></pre>
             </p-tab-panel>
           </p-tab-group>
 

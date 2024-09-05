@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="component" data-pure-ui-version="1.1.30">
+<html lang="en" data-layout="component" data-pure-ui-version="1.1.32">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -89,7 +89,7 @@
         <a href="/">
           <img src="/assets/images/wordmark.svg" alt="Pure UI" />
         </a>
-        <div class="sidebar-version">1.1.30</div>
+        <div class="sidebar-version">1.1.32</div>
       </header>
 
       <button class="search-box" type="button" title="Press / to search" aria-label="Search" data-plugin="search">
@@ -213,6 +213,14 @@
 
               <li>
                 <a href="/components/dropdown"> Dropdown </a>
+              </li>
+
+              <li>
+                <a href="/components/file-upload"> File Upload </a>
+              </li>
+
+              <li>
+                <a href="/components/file-upload-item"> File Upload Item </a>
               </li>
 
               <li>
@@ -456,17 +464,17 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-22">
+            <div class="code-preview__source-group" id="code-preview-source-group-14">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-58"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-alert</span> <span class="token attr-name">open</span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-159"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-alert</span> <span class="token attr-name">open</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-icon</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>info-circle<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-icon</span><span class="token punctuation">&gt;</span></span>
   This is a standard alert. You can customize its content and even the icon.
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-alert</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-58"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-159"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-59"><span class="token keyword">import</span> PAlert <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/alert'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-160"><span class="token keyword">import</span> PAlert <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/alert'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PIcon <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/icon'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
@@ -475,7 +483,7 @@
     This is a standard alert. You can customize its content and even the icon.
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PAlert</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-59"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-160"></p-copy-button></pre>
               </div>
             </div>
 
@@ -484,7 +492,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-22"
+                aria-controls="code-preview-source-group-14"
               >
                 Source
                 <svg
@@ -582,9 +590,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-23">
+            <div class="code-preview__source-group" id="code-preview-source-group-15">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-60"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-alert</span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span> <span class="token attr-name">open</span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-161"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-alert</span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span> <span class="token attr-name">open</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-icon</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>info-circle<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-icon</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">&gt;</span></span>This is super informative<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/&gt;</span></span>
   You can tell by how pretty the alert is.
@@ -621,11 +629,11 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">&gt;</span></span>Your account has been deleted<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/&gt;</span></span>
   We're very sorry to see you go!
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-alert</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-60"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-161"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-61"><span class="token keyword">import</span> PAlert <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/alert'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-162"><span class="token keyword">import</span> PAlert <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/alert'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PIcon <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/icon'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
@@ -674,7 +682,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PAlert</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-61"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-162"></p-copy-button></pre>
               </div>
             </div>
 
@@ -683,7 +691,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-23"
+                aria-controls="code-preview-source-group-15"
               >
                 Source
                 <svg
@@ -751,9 +759,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-24">
+            <div class="code-preview__source-group" id="code-preview-source-group-16">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-62"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-alert</span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span> <span class="token attr-name">open</span> <span class="token attr-name">closable</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alert-closable<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-163"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-alert</span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span> <span class="token attr-name">open</span> <span class="token attr-name">closable</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alert-closable<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-icon</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>info-circle<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-icon</span><span class="token punctuation">&gt;</span></span>
   You can close this alert any time!
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-alert</span><span class="token punctuation">&gt;</span></span>
@@ -764,11 +772,11 @@
     <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>alert<span class="token punctuation">.</span>open <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-62"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-163"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-63"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-164"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PAlert <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/alert'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PIcon <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/icon'</span><span class="token punctuation">;</span>
 
@@ -787,7 +795,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PAlert</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-63"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-164"></p-copy-button></pre>
               </div>
             </div>
 
@@ -796,7 +804,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-24"
+                aria-controls="code-preview-source-group-16"
               >
                 Source
                 <svg
@@ -852,21 +860,21 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-25">
+            <div class="code-preview__source-group" id="code-preview-source-group-17">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-64"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-alert</span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span> <span class="token attr-name">open</span><span class="token punctuation">&gt;</span></span> Nothing fancy here, just a simple alert. <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-alert</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-64"></p-copy-button></pre>
+                <pre><code class="language-html" id="code-block-165"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-alert</span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span> <span class="token attr-name">open</span><span class="token punctuation">&gt;</span></span> Nothing fancy here, just a simple alert. <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-alert</span><span class="token punctuation">&gt;</span></span>
+</code><p-copy-button class="copy-code-button" from="code-block-165"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-65"><span class="token keyword">import</span> PAlert <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/alert'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-166"><span class="token keyword">import</span> PAlert <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/alert'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PAlert</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span> <span class="token attr-name">open</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
     Nothing fancy here, just a simple alert.
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PAlert</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-65"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-166"></p-copy-button></pre>
               </div>
             </div>
 
@@ -875,7 +883,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-25"
+                aria-controls="code-preview-source-group-17"
               >
                 Source
                 <svg
@@ -957,9 +965,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-26">
+            <div class="code-preview__source-group" id="code-preview-source-group-18">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-66"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alert-duration<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-167"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alert-duration<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-button</span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Show Alert<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-button</span><span class="token punctuation">&gt;</span></span>
 
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-alert</span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span> <span class="token attr-name">duration</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>3000<span class="token punctuation">"</span></span> <span class="token attr-name">closable</span><span class="token punctuation">&gt;</span></span>
@@ -981,11 +989,11 @@
     <span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--p-spacing-medium<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-66"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-167"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-67"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-168"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PAlert <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/alert'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PButton <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/button'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PIcon <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/icon'</span><span class="token punctuation">;</span>
@@ -1016,7 +1024,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-67"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-168"></p-copy-button></pre>
               </div>
             </div>
 
@@ -1025,7 +1033,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-26"
+                aria-controls="code-preview-source-group-18"
               >
                 Source
                 <svg
@@ -1140,9 +1148,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-27">
+            <div class="code-preview__source-group" id="code-preview-source-group-19">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-68"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alert-toast<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-169"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alert-toast<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-button</span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Primary<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-button</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-button</span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>success<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Success<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-button</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-button</span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>neutral<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Neutral<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-button</span><span class="token punctuation">&gt;</span></span>
@@ -1190,11 +1198,11 @@
     button<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> alert<span class="token punctuation">.</span><span class="token function">toast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-68"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-169"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-69"><span class="token keyword">import</span> <span class="token punctuation">{</span> useRef <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-170"><span class="token keyword">import</span> <span class="token punctuation">{</span> useRef <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PAlert <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/alert'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PButton <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/button'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PIcon <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/icon'</span><span class="token punctuation">;</span>
@@ -1269,7 +1277,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-69"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-170"></p-copy-button></pre>
               </div>
             </div>
 
@@ -1278,7 +1286,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-27"
+                aria-controls="code-preview-source-group-19"
               >
                 Source
                 <svg
@@ -1378,9 +1386,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-28">
+            <div class="code-preview__source-group" id="code-preview-source-group-20">
               <div class="code-preview__source code-preview__source--html">
-                <pre><code class="language-html" id="code-block-70"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alert-toast-wrapper<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-171"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alert-toast-wrapper<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-button</span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Create Toast<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-button</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
 
@@ -1416,7 +1424,7 @@
     <span class="token function">notify</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">This is custom toast #</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token operator">++</span>count<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-70"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-171"></p-copy-button></pre>
               </div>
             </div>
 
@@ -1425,7 +1433,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-28"
+                aria-controls="code-preview-source-group-20"
               >
                 Source
                 <svg
@@ -1472,11 +1480,11 @@
             targeting <code>.p-toast-stack</code> in your stylesheet. To make toasts appear at the top-left of the
             viewport, for example, use the following styles.
           </p>
-          <pre><code class="language-css" id="code-block-71"><span class="token selector">.p-toast-stack</span> <span class="token punctuation">{</span>
+          <pre><code class="language-css" id="code-block-172"><span class="token selector">.p-toast-stack</span> <span class="token punctuation">{</span>
   <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
   <span class="token property">right</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code><p-copy-button class="copy-code-button" from="code-block-71"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-172"></p-copy-button></pre>
           <div role="alert" class="callout callout--tip">
             <p>
               By design, it is not possible to show toasts in more than one stack simultaneously. Such behavior is
@@ -1511,7 +1519,7 @@
                 >
                 using a script tag:
               </p>
-              <pre><code class="language-html" id="code-block-72"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.1.30/cdn/components/alert/alert.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-72"></p-copy-button></pre>
+              <pre><code class="language-html" id="code-block-173"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.1.32/cdn/components/alert/alert.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-173"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="import">
@@ -1526,17 +1534,17 @@
                 >
                 using a JavaScript import:
               </p>
-              <pre><code class="language-js" id="code-block-73"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.1.30/cdn/components/alert/alert.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-73"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-174"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.1.32/cdn/components/alert/alert.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-174"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="bundler">
               <p>To import this component using <a href="/getting-started/installation#bundling">a bundler</a>:</p>
-              <pre><code class="language-js" id="code-block-74"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/alert/alert.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-74"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-175"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/alert/alert.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-175"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="react">
               <p>To import this component as a <a href="/frameworks/react">React component</a>:</p>
-              <pre><code class="language-js" id="code-block-75"><span class="token keyword">import</span> PAlert <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/alert'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-75"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-176"><span class="token keyword">import</span> PAlert <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/alert'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-176"></p-copy-button></pre>
             </p-tab-panel>
           </p-tab-group>
 

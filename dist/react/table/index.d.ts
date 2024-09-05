@@ -1,7 +1,9 @@
 import Component from "../../components/table/table.component.js";
 import { type EventName } from "@lit/react";
 import type { PChangeEvent } from "../../events/events.js";
+import type { PTableRowSelectEvent } from "../../events/events.js";
 export type { PChangeEvent } from "../../events/events.js";
+export type { PTableRowSelectEvent } from "../../events/events.js";
 /**
  * @summary The Table component is used to display data in a table format.
  * @documentation https://pureui.xyz/components/table
@@ -13,6 +15,7 @@ export type { PChangeEvent } from "../../events/events.js";
  * @dependency p-icon
  *
  * @event p-change - Emitted when the current page value changes.
+ * @event p-table-row-select - Emitted when the rows selected changed.
  *
  * @slot - The default slot.
  * @slot paginate - An optional slot for paginate element.
@@ -53,5 +56,6 @@ export type { PChangeEvent } from "../../events/events.js";
  */
 declare const reactWrapper: import("@lit/react").ReactWebComponent<Component, {
     onPChange: EventName<PChangeEvent>;
+    onPTableRowSelect: EventName<PTableRowSelectEvent>;
 }>;
 export default reactWrapper;

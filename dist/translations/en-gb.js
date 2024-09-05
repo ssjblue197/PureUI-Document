@@ -1,7 +1,7 @@
-import "../chunks/chunk.KTCBPWNH.js";
+import "../chunks/chunk.BTMIVMQK.js";
 import {
   en_default
-} from "../chunks/chunk.TLC45E5W.js";
+} from "../chunks/chunk.5SYMINSX.js";
 import {
   registerTranslation
 } from "../chunks/chunk.K6K6S6E6.js";

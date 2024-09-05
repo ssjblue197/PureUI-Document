@@ -1,12 +1,12 @@
 import type { DefineComponent } from "vue";
 
 import type { PAlert } from "../../components/alert/alert.component.js";
-import type { PAnimation } from "../../components/animation/animation.component.js";
 import type { PAvatar } from "../../components/avatar/avatar.component.js";
-import type { PAnimatedImage } from "../../components/animated-image/animated-image.component.js";
 import type { PBadge } from "../../components/badge/badge.component.js";
 import type { PBreadcrumb } from "../../components/breadcrumb/breadcrumb.component.js";
 import type { PBreadcrumbItem } from "../../components/breadcrumb-item/breadcrumb-item.component.js";
+import type { PAnimatedImage } from "../../components/animated-image/animated-image.component.js";
+import type { PAnimation } from "../../components/animation/animation.component.js";
 import type { PButton } from "../../components/button/button.component.js";
 import type { PButtonGroup } from "../../components/button-group/button-group.component.js";
 import type { PCalendar } from "../../components/calendar/calendar.component.js";
@@ -21,6 +21,8 @@ import type { PDialog } from "../../components/dialog/dialog.component.js";
 import type { PDivider } from "../../components/divider/divider.component.js";
 import type { PDrawer } from "../../components/drawer/drawer.component.js";
 import type { PDropdown } from "../../components/dropdown/dropdown.component.js";
+import type { PFileUpload } from "../../components/file-upload/file-upload.component.js";
+import type { PFileUploadItem } from "../../components/file-upload-item/file-upload-item.component.js";
 import type { PFormatBytes } from "../../components/format-bytes/format-bytes.component.js";
 import type { PFormatDate } from "../../components/format-date/format-date.component.js";
 import type { PFormatNumber } from "../../components/format-number/format-number.component.js";
@@ -86,6 +88,70 @@ the alert will not close on its own. */
   "onp-after-hide"?: (e: CustomEvent<never>) => void;
 };
 
+type PAvatarProps = {
+  /** The image source to use for the avatar. */
+  image?: PAvatar["image"];
+  /** A label to use to describe the avatar to assistive devices. */
+  label?: PAvatar["label"];
+  /** Initials to use as a fallback when no image is available (1-2 characters max recommended). */
+  initials?: PAvatar["initials"];
+  /** Indicates how the browser should load the image. */
+  loading?: PAvatar["loading"];
+  /** The shape of the avatar. */
+  shape?: PAvatar["shape"];
+
+  /** The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause. */
+  "onp-error"?: (e: CustomEvent<never>) => void;
+};
+
+type PBadgeProps = {
+  /** The badge's theme variant. */
+  variant?: PBadge["variant"];
+  /** Draws a pill-style badge with rounded edges. */
+  pill?: PBadge["pill"];
+  /** Makes the badge pulsate to draw attention. */
+  pulse?: PBadge["pulse"];
+};
+
+type PBreadcrumbProps = {
+  /** The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by
+screen readers and other assistive devices to provide more context for users. */
+  label?: PBreadcrumb["label"];
+  /**  */
+  defaultSlot?: PBreadcrumb["defaultSlot"];
+  /**  */
+  separatorSlot?: PBreadcrumb["separatorSlot"];
+};
+
+type PBreadcrumbItemProps = {
+  /** Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered
+internally. When unset, a button will be rendered instead. */
+  href?: PBreadcrumbItem["href"];
+  /** Tells the browser where to open the link. Only used when `href` is set. */
+  target?: PBreadcrumbItem["target"];
+  /** The `rel` attribute to use on the link. Only used when `href` is set. */
+  rel?: PBreadcrumbItem["rel"];
+};
+
+type PAnimatedImageProps = {
+  /** The path to the image to load. */
+  src?: PAnimatedImage["src"];
+  /** A description of the image used by assistive devices. */
+  alt?: PAnimatedImage["alt"];
+  /** Plays the animation. When this attribute is remove, the animation will pause. */
+  play?: PAnimatedImage["play"];
+  /**  */
+  animatedImage?: PAnimatedImage["animatedImage"];
+  /**  */
+  frozenFrame?: PAnimatedImage["frozenFrame"];
+  /**  */
+  isLoaded?: PAnimatedImage["isLoaded"];
+  /** Emitted when the image loads successfully. */
+  "onp-load"?: (e: CustomEvent<never>) => void;
+  /** Emitted when the image fails to load. */
+  "onp-error"?: (e: CustomEvent<never>) => void;
+};
+
 type PAnimationProps = {
   /** The name of the built-in animation to use. For custom animations, use the `keyframes` prop. */
   name?: PAnimation["name"];
@@ -126,70 +192,6 @@ value can be changed without causing the animation to restart. */
   "onp-finish"?: (e: CustomEvent<never>) => void;
   /** Emitted when the animation starts or restarts. */
   "onp-start"?: (e: CustomEvent<never>) => void;
-};
-
-type PAvatarProps = {
-  /** The image source to use for the avatar. */
-  image?: PAvatar["image"];
-  /** A label to use to describe the avatar to assistive devices. */
-  label?: PAvatar["label"];
-  /** Initials to use as a fallback when no image is available (1-2 characters max recommended). */
-  initials?: PAvatar["initials"];
-  /** Indicates how the browser should load the image. */
-  loading?: PAvatar["loading"];
-  /** The shape of the avatar. */
-  shape?: PAvatar["shape"];
-
-  /** The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause. */
-  "onp-error"?: (e: CustomEvent<never>) => void;
-};
-
-type PAnimatedImageProps = {
-  /** The path to the image to load. */
-  src?: PAnimatedImage["src"];
-  /** A description of the image used by assistive devices. */
-  alt?: PAnimatedImage["alt"];
-  /** Plays the animation. When this attribute is remove, the animation will pause. */
-  play?: PAnimatedImage["play"];
-  /**  */
-  animatedImage?: PAnimatedImage["animatedImage"];
-  /**  */
-  frozenFrame?: PAnimatedImage["frozenFrame"];
-  /**  */
-  isLoaded?: PAnimatedImage["isLoaded"];
-  /** Emitted when the image loads successfully. */
-  "onp-load"?: (e: CustomEvent<never>) => void;
-  /** Emitted when the image fails to load. */
-  "onp-error"?: (e: CustomEvent<never>) => void;
-};
-
-type PBadgeProps = {
-  /** The badge's theme variant. */
-  variant?: PBadge["variant"];
-  /** Draws a pill-style badge with rounded edges. */
-  pill?: PBadge["pill"];
-  /** Makes the badge pulsate to draw attention. */
-  pulse?: PBadge["pulse"];
-};
-
-type PBreadcrumbProps = {
-  /** The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by
-screen readers and other assistive devices to provide more context for users. */
-  label?: PBreadcrumb["label"];
-  /**  */
-  defaultSlot?: PBreadcrumb["defaultSlot"];
-  /**  */
-  separatorSlot?: PBreadcrumb["separatorSlot"];
-};
-
-type PBreadcrumbItemProps = {
-  /** Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered
-internally. When unset, a button will be rendered instead. */
-  href?: PBreadcrumbItem["href"];
-  /** Tells the browser where to open the link. Only used when `href` is set. */
-  target?: PBreadcrumbItem["target"];
-  /** The `rel` attribute to use on the link. Only used when `href` is set. */
-  rel?: PBreadcrumbItem["rel"];
 };
 
 type PButtonProps = {
@@ -763,6 +765,92 @@ components that use a dropdown internally. */
   /** Emitted when the dropdown closes. */
   "onp-hide"?: (e: CustomEvent<never>) => void;
   /** Emitted after the dropdown closes and all animations are complete. */
+  "onp-after-hide"?: (e: CustomEvent<never>) => void;
+};
+
+type PFileUploadProps = {
+  /**  */
+  files?: PFileUpload["files"];
+  /** The input's name attribute. */
+  name?: PFileUpload["name"];
+  /** Disables the dropzone. */
+  disabled?: PFileUpload["disabled"];
+  /** If true, hides button to open the native file selection dialog */
+  "no-button"?: PFileUpload["noButton"];
+  /** If true, shows only a button as a file input */
+  "button-only"?: PFileUpload["buttonOnly"];
+  /** If true, no file list will be shown */
+  "no-file-list"?: PFileUpload["noFileList"];
+  /** An optional overwrite for the upload label */
+  label?: PFileUpload["label"];
+  /** An optional overwrite for the preview button label */
+  "button-label"?: PFileUpload["buttonLabel"];
+  /** The locale to render the component in. */
+  lang?: PFileUpload["lang"];
+  /** A string that defines the file types the file dropzone should accept. Defaults to '*' */
+  accept?: PFileUpload["accept"];
+  /** An optional maximum size of a file that will be considered valid. */
+  "max-file-size"?: PFileUpload["maxFileSize"];
+  /** The maximum amount of files that are allowed. */
+  "max-files"?: PFileUpload["maxFiles"];
+  /** Indicates if multiple files can be uploaded */
+  multiple?: PFileUpload["multiple"];
+  /** Internal property to show a warning in the dropzone */
+  warning?: PFileUpload["warning"];
+  /** Indicates whether a file is currently dragged over the dropzone */
+  isDragover?: PFileUpload["isDragover"];
+  /**  */
+  fileInput?: PFileUpload["fileInput"];
+  /**  */
+  value?: PFileUpload["value"];
+  /** Gets the validity state object */
+  validity?: PFileUpload["validity"];
+  /** Gets the validation message */
+  validationMessage?: PFileUpload["validationMessage"];
+  /**  */
+  description?: PFileUpload["description"];
+  /** Emitted when dragged files have been dropped on the dropzone area. */
+  "onp-drop"?: (e: CustomEvent<never>) => void;
+  /** Emitted when files have been uploaded via the dropzone or file dialog. */
+  "onp-change"?: (e: CustomEvent<{ fileList: FileList }>) => void;
+  /** Emitted when a file transfer was finished */
+  "onp-load"?: (e: CustomEvent<{ response: unknown }>) => void;
+  /** Emitted when a file transfer threw an error */
+  "onp-error"?: (e: CustomEvent<{ event: ProgressEvent }>) => void;
+  /** Emitted when a file transfer was aborted by the user */
+  "onp-abort"?: (e: CustomEvent<{ event: ProgressEvent }>) => void;
+  /** Emitted when a file was removed */
+  "onp-remove"?: (e: CustomEvent<{ file: FileInfo }>) => void;
+};
+
+type PFileUploadItemProps = {
+  /** Draws the item in a loading state. */
+  loading?: PFileUploadItem["loading"];
+  /** The current progress, 0 to 100. Only respects is loading prop is true. */
+  progress?: PFileUploadItem["progress"];
+  /** A custom label for the progress bar's aria label. Only respects if loading prop is true. */
+  label?: PFileUploadItem["label"];
+  /** The locale to render the component in. */
+  lang?: PFileUploadItem["lang"];
+  /** Draws the item in a warning state. */
+  warning?: PFileUploadItem["warning"];
+  /** Makes the item closable. */
+  closable?: PFileUploadItem["closable"];
+  /** A unique value to store in the menu item. This can be used as a way to identify menu items when selected. */
+  value?: PFileUploadItem["value"];
+  /** The size of the file in bytes as a read-only 64-bit integer. */
+  size?: PFileUploadItem["size"];
+  /** Indicates whether or not the file list item is hidden. */
+  hidden?: PFileUploadItem["hidden"];
+  /**  */
+  base?: PFileUploadItem["base"];
+  /** Emitted when the item opens. */
+  "onp-show"?: (e: CustomEvent<never>) => void;
+  /** Emitted after the item opens and all animations are complete. */
+  "onp-after-show"?: (e: CustomEvent<never>) => void;
+  /** Emitted when the item closes. */
+  "onp-hide"?: (e: CustomEvent<never>) => void;
+  /** Emitted after the item closes and all animations are complete. */
   "onp-after-hide"?: (e: CustomEvent<never>) => void;
 };
 
@@ -1602,14 +1690,18 @@ columns in the table. The column headers will be determined by the
   data?: PTable["data"];
   /** Whether the table is currently loading data. */
   loading?: PTable["loading"];
+  /** The current page of items based on the current `limit` and `total`. */
+  page?: PTable["page"];
+  /** The number of items to display per page. */
+  limit?: PTable["limit"];
+  /** The total number of items in the table. */
+  total?: PTable["total"];
   /**  */
   items?: PTable["items"];
-  /** The current page of items based on the current `pageSize` and `totalItems`. */
-  currentPage?: PTable["currentPage"];
-  /** The number of items to display per page. */
-  pageSize?: PTable["pageSize"];
-  /** The total number of items in the table. */
-  totalItems?: PTable["totalItems"];
+  /**  */
+  selectedRows?: PTable["selectedRows"];
+  /**  */
+  tmpSelectedRows?: PTable["tmpSelectedRows"];
   /**  */
   tableWrapper?: PTable["tableWrapper"];
   /** Returns the current page of items based on the current page, page size, and total items.
@@ -1617,6 +1709,8 @@ If the table is not local paginated, all items are returned. */
   currentItems?: PTable["currentItems"];
   /** Emitted when the current page value changes. */
   "onp-change"?: (e: CustomEvent<never>) => void;
+  /** Emitted when the rows selected changed. */
+  "onp-table-row-select"?: (e: CustomEvent<never>) => void;
 };
 
 type PTagProps = {
@@ -1832,25 +1926,6 @@ export type CustomElements = {
   "p-alert": DefineComponent<PAlertProps>;
 
   /**
-   * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **p-cancel** - Emitted when the animation is canceled.
-   * - **p-finish** - Emitted when the animation finishes.
-   * - **p-start** - Emitted when the animation starts or restarts.
-   *
-   * ### **Methods:**
-   *  - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.
-   * - **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.
-   *
-   * ### **Slots:**
-   *  - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.
-   */
-  "p-animation": DefineComponent<PAnimationProps>;
-
-  /**
    * Avatars are used to represent a person or object.
    * ---
    *
@@ -1871,28 +1946,6 @@ export type CustomElements = {
    * - **image** - The avatar image. Only shown when the `image` attribute is set.
    */
   "p-avatar": DefineComponent<PAvatarProps>;
-
-  /**
-   * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **p-load** - Emitted when the image loads successfully.
-   * - **p-error** - Emitted when the image fails to load.
-   *
-   * ### **Slots:**
-   *  - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.
-   * - **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.
-   *
-   * ### **CSS Properties:**
-   *  - **--control-box-size** - The size of the icon box. _(default: undefined)_
-   * - **--icon-size** - The size of the play/pause icons. _(default: undefined)_
-   *
-   * ### **CSS Parts:**
-   *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
-   */
-  "p-animated-image": DefineComponent<PAnimatedImageProps>;
 
   /**
    * Badges are used to draw attention and display statuses or counts.
@@ -1940,6 +1993,47 @@ export type CustomElements = {
    * - **separator** - The container that wraps the separator.
    */
   "p-breadcrumb-item": DefineComponent<PBreadcrumbItemProps>;
+
+  /**
+   * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **p-load** - Emitted when the image loads successfully.
+   * - **p-error** - Emitted when the image fails to load.
+   *
+   * ### **Slots:**
+   *  - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.
+   * - **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.
+   *
+   * ### **CSS Properties:**
+   *  - **--control-box-size** - The size of the icon box. _(default: undefined)_
+   * - **--icon-size** - The size of the play/pause icons. _(default: undefined)_
+   *
+   * ### **CSS Parts:**
+   *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
+   */
+  "p-animated-image": DefineComponent<PAnimatedImageProps>;
+
+  /**
+   * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **p-cancel** - Emitted when the animation is canceled.
+   * - **p-finish** - Emitted when the animation finishes.
+   * - **p-start** - Emitted when the animation starts or restarts.
+   *
+   * ### **Methods:**
+   *  - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.
+   * - **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.
+   *
+   * ### **Slots:**
+   *  - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.
+   */
+  "p-animation": DefineComponent<PAnimationProps>;
 
   /**
    * Buttons represent actions that are available to the user.
@@ -2413,6 +2507,71 @@ export type CustomElements = {
    * - **panel** - The panel that gets shown when the dropdown is open.
    */
   "p-dropdown": DefineComponent<PDropdownProps>;
+
+  /**
+   *
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **p-drop** - Emitted when dragged files have been dropped on the dropzone area.
+   * - **p-change** - Emitted when files have been uploaded via the dropzone or file dialog.
+   * - **p-load** - Emitted when a file transfer was finished
+   * - **p-error** - Emitted when a file transfer threw an error
+   * - **p-abort** - Emitted when a file transfer was aborted by the user
+   * - **p-remove** - Emitted when a file was removed
+   *
+   * ### **Methods:**
+   *  - **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.
+   * - **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.
+   * - **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.
+   * - **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.
+   *
+   * ### **Slots:**
+   *  - **label** - The dropzone's label. Alternatively, you can use the image slot and label prop.
+   * - **image** - The dropzone's image.
+   * - **button** - The dropzone's button.
+   *
+   * ### **CSS Properties:**
+   *  - **--border-radius** - The border radius of the dropzone borders. _(default: undefined)_
+   * - **--border-width** - The width of the dropzone borders. _(default: undefined)_
+   * - **--border-style** - The style of the dropzone borders. _(default: undefined)_
+   *
+   * ### **CSS Parts:**
+   *  - **base** - The component's internal wrapper.
+   * - **label** - The dropzone container.
+   * - **image** - The dropzone image.
+   * - **button** - The dropzone button.
+   */
+  "p-file-upload": DefineComponent<PFileUploadProps>;
+
+  /**
+   *
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **p-show** - Emitted when the item opens.
+   * - **p-after-show** - Emitted after the item opens and all animations are complete.
+   * - **p-hide** - Emitted when the item closes.
+   * - **p-after-hide** - Emitted after the item closes and all animations are complete.
+   *
+   * ### **Methods:**
+   *  - **show()** - Shows the item.
+   * - **hide()** - Hides the item
+   *
+   * ### **Slots:**
+   *  - _default_ - The file list item's label.
+   * - **image** - The file list item's image.
+   * - **close-button** - The file list item's close button.
+   *
+   * ### **CSS Parts:**
+   *  - **base** - The component's internal wrapper.
+   * - **image** - The file list item's image.
+   * - **label** - The file list item's label.
+   * - **close-button** -  The file list item's close button.
+   */
+  "p-file-upload-item": DefineComponent<PFileUploadItemProps>;
 
   /**
    * Formats a number as a human readable bytes value.
@@ -3144,6 +3303,7 @@ export type CustomElements = {
    *
    * ### **Events:**
    *  - **p-change** - Emitted when the current page value changes.
+   * - **p-table-row-select** - Emitted when the rows selected changed.
    *
    * ### **Slots:**
    *  - _default_ - The default slot.

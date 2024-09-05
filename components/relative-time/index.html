@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="component" data-pure-ui-version="1.1.30">
+<html lang="en" data-layout="component" data-pure-ui-version="1.1.32">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -83,7 +83,7 @@
         <a href="/">
           <img src="/assets/images/wordmark.svg" alt="Pure UI" />
         </a>
-        <div class="sidebar-version">1.1.30</div>
+        <div class="sidebar-version">1.1.32</div>
       </header>
 
       <button class="search-box" type="button" title="Press / to search" aria-label="Search" data-plugin="search">
@@ -207,6 +207,14 @@
 
               <li>
                 <a href="/components/dropdown"> Dropdown </a>
+              </li>
+
+              <li>
+                <a href="/components/file-upload"> File Upload </a>
+              </li>
+
+              <li>
+                <a href="/components/file-upload-item"> File Upload Item </a>
               </li>
 
               <li>
@@ -447,18 +455,18 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-263">
+            <div class="code-preview__source-group" id="code-preview-source-group-307">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-684"><span class="token comment">&lt;!-- Pure UI 2 release date 🎉 --&gt;</span>
+                <pre><code class="language-html" id="code-block-906"><span class="token comment">&lt;!-- Pure UI 2 release date 🎉 --&gt;</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-relative-time</span> <span class="token attr-name">date</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2020-07-15T09:17:00-04:00<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-relative-time</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-684"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-906"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-685"><span class="token keyword">import</span> PRelativeTime <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/relative-time'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-907"><span class="token keyword">import</span> PRelativeTime <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/relative-time'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PRelativeTime</span></span> <span class="token attr-name">date</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2020-07-15T09:17:00-04:00<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-685"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-907"></p-copy-button></pre>
               </div>
             </div>
 
@@ -467,7 +475,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-263"
+                aria-controls="code-preview-source-group-307"
               >
                 Source
                 <svg
@@ -570,9 +578,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-264">
+            <div class="code-preview__source-group" id="code-preview-source-group-308">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-686"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>relative-time-sync<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-908"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>relative-time-sync<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-relative-time</span> <span class="token attr-name">sync</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-relative-time</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
 
@@ -582,16 +590,16 @@
 
   relativeTime<span class="token punctuation">.</span>date <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">60000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-686"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-908"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-687"><span class="token keyword">import</span> PRelativeTime <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/relative-time'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-909"><span class="token keyword">import</span> PRelativeTime <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/relative-time'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> date <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">60000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PRelativeTime</span></span> <span class="token attr-name">date</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>date<span class="token punctuation">}</span></span> <span class="token attr-name">sync</span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-687"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-909"></p-copy-button></pre>
               </div>
             </div>
 
@@ -600,7 +608,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-264"
+                aria-controls="code-preview-source-group-308"
               >
                 Source
                 <svg
@@ -661,16 +669,16 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-265">
+            <div class="code-preview__source-group" id="code-preview-source-group-309">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-688"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-relative-time</span> <span class="token attr-name">date</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2020-07-15T09:17:00-04:00<span class="token punctuation">"</span></span> <span class="token attr-name">format</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>narrow<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-relative-time</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/&gt;</span></span>
+                <pre><code class="language-html" id="code-block-910"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-relative-time</span> <span class="token attr-name">date</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2020-07-15T09:17:00-04:00<span class="token punctuation">"</span></span> <span class="token attr-name">format</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>narrow<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-relative-time</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-relative-time</span> <span class="token attr-name">date</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2020-07-15T09:17:00-04:00<span class="token punctuation">"</span></span> <span class="token attr-name">format</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>short<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-relative-time</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-relative-time</span> <span class="token attr-name">date</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2020-07-15T09:17:00-04:00<span class="token punctuation">"</span></span> <span class="token attr-name">format</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>long<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-relative-time</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-688"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-910"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-689"><span class="token keyword">import</span> PRelativeTime <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/relative-time'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-911"><span class="token keyword">import</span> PRelativeTime <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/relative-time'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
@@ -681,7 +689,7 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PRelativeTime</span></span> <span class="token attr-name">date</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2020-07-15T09:17:00-04:00<span class="token punctuation">"</span></span> <span class="token attr-name">format</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>long<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-689"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-911"></p-copy-button></pre>
               </div>
             </div>
 
@@ -690,7 +698,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-265"
+                aria-controls="code-preview-source-group-309"
               >
                 Source
                 <svg
@@ -750,18 +758,18 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-266">
+            <div class="code-preview__source-group" id="code-preview-source-group-310">
               <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                <pre><code class="language-html" id="code-block-690">English: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-relative-time</span> <span class="token attr-name">date</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2020-07-15T09:17:00-04:00<span class="token punctuation">"</span></span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en-US<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-relative-time</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/&gt;</span></span>
+                <pre><code class="language-html" id="code-block-912">English: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-relative-time</span> <span class="token attr-name">date</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2020-07-15T09:17:00-04:00<span class="token punctuation">"</span></span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en-US<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-relative-time</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/&gt;</span></span>
 Chinese: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-relative-time</span> <span class="token attr-name">date</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2020-07-15T09:17:00-04:00<span class="token punctuation">"</span></span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>zh-CN<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-relative-time</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/&gt;</span></span>
 German: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-relative-time</span> <span class="token attr-name">date</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2020-07-15T09:17:00-04:00<span class="token punctuation">"</span></span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>de<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-relative-time</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/&gt;</span></span>
 Greek: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-relative-time</span> <span class="token attr-name">date</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2020-07-15T09:17:00-04:00<span class="token punctuation">"</span></span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>el<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-relative-time</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/&gt;</span></span>
 Russian: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-relative-time</span> <span class="token attr-name">date</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2020-07-15T09:17:00-04:00<span class="token punctuation">"</span></span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ru<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-relative-time</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-690"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-912"></p-copy-button></pre>
               </div>
 
               <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                <pre><code class="language-jsx" id="code-block-691"><span class="token keyword">import</span> PRelativeTime <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/relative-time'</span><span class="token punctuation">;</span>
+                <pre><code class="language-jsx" id="code-block-913"><span class="token keyword">import</span> PRelativeTime <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/relative-time'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
@@ -776,7 +784,7 @@ Russian: <span class="token tag"><span class="token tag"><span class="token punc
     Russian: </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PRelativeTime</span></span> <span class="token attr-name">date</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2020-07-15T09:17:00-04:00<span class="token punctuation">"</span></span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ru<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-691"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-913"></p-copy-button></pre>
               </div>
             </div>
 
@@ -785,7 +793,7 @@ Russian: <span class="token tag"><span class="token tag"><span class="token punc
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-266"
+                aria-controls="code-preview-source-group-310"
               >
                 Source
                 <svg
@@ -854,7 +862,7 @@ Russian: <span class="token tag"><span class="token tag"><span class="token punc
                 >
                 using a script tag:
               </p>
-              <pre><code class="language-html" id="code-block-692"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.1.30/cdn/components/relative-time/relative-time.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-692"></p-copy-button></pre>
+              <pre><code class="language-html" id="code-block-914"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.1.32/cdn/components/relative-time/relative-time.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-914"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="import">
@@ -869,17 +877,17 @@ Russian: <span class="token tag"><span class="token tag"><span class="token punc
                 >
                 using a JavaScript import:
               </p>
-              <pre><code class="language-js" id="code-block-693"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.1.30/cdn/components/relative-time/relative-time.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-693"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-915"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.1.32/cdn/components/relative-time/relative-time.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-915"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="bundler">
               <p>To import this component using <a href="/getting-started/installation#bundling">a bundler</a>:</p>
-              <pre><code class="language-js" id="code-block-694"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/relative-time/relative-time.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-694"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-916"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/relative-time/relative-time.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-916"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="react">
               <p>To import this component as a <a href="/frameworks/react">React component</a>:</p>
-              <pre><code class="language-js" id="code-block-695"><span class="token keyword">import</span> PRelativeTime <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/relative-time'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-695"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-917"><span class="token keyword">import</span> PRelativeTime <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/relative-time'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-917"></p-copy-button></pre>
             </p-tab-panel>
           </p-tab-group>
 

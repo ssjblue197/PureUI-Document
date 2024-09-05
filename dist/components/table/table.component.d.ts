@@ -1,3 +1,4 @@
+import PCheckbox from "../checkbox/checkbox.component.js";
 import PIcon from "../icon/icon.js";
 import PPaginate from "../paginate/paginate.component.js";
 import PTag from "../tag/tag.component.js";
@@ -15,6 +16,7 @@ import type { TableOptions, TableRowData } from "./table.ts";
  * @dependency p-icon
  *
  * @event p-change - Emitted when the current page value changes.
+ * @event p-table-row-select - Emitted when the rows selected changed.
  *
  * @slot - The default slot.
  * @slot paginate - An optional slot for paginate element.
@@ -55,10 +57,13 @@ import type { TableOptions, TableRowData } from "./table.ts";
  */
 export default class PTable extends PureElement {
     static styles: CSSResultGroup;
+    private resizeObserver;
+    private observedElements;
     static dependencies: {
         "p-paginate": typeof PPaginate;
         "p-tag": typeof PTag;
         "p-icon": typeof PIcon;
+        "p-checkbox": typeof PCheckbox;
     };
     private readonly localize;
     /**
@@ -120,27 +125,29 @@ export default class PTable extends PureElement {
      */
     loading: boolean;
     /**
-     * The current page of items based on the current `pageSize` and `totalItems`.
+     * The current page of items based on the current `limit` and `total`.
      *
      * @type {number}
      * @default 1
      */
-    currentPage: number;
+    page: number;
     /**
      * The number of items to display per page.
      *
      * @type {number}
      * @default 10
      */
-    pageSize: number;
+    limit: number;
     /**
      * The total number of items in the table.
      *
      * @type {number}
      * @default 0
      */
-    totalItems: number;
+    total: number;
     items: TableRowData[];
+    selectedRows: TableRowData[];
+    tmpSelectedRows: TableRowData[];
     tableWrapper: HTMLElement;
     /**
      * Returns the current page of items based on the current page, page size, and total items.
@@ -150,10 +157,17 @@ export default class PTable extends PureElement {
      */
     get currentItems(): TableRowData[];
     handleApplyOptionsChange(): void;
+    handleDisabledChange(): void;
+    private startObserver;
+    private stopObserver;
+    private handleAttachResizeObserved;
     connectedCallback(): void;
     private handleEventDispatch;
     protected firstUpdated(): void;
     disconnectedCallback(): void;
     private handleChangePage;
+    private handleSelectAll;
+    private handleSelectRow;
+    getSelectedRows(): TableRowData[];
     render(): import("lit-html").TemplateResult<1>;
 }

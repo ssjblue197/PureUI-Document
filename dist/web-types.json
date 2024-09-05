@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/JetBrains/web-types/master/schema/web-types.json",
   "name": "pure-uikit",
-  "version": "1.1.30",
+  "version": "1.1.32",
   "description-markup": "markdown",
   "contributions": {
     "html": {
@@ -99,6 +99,310 @@
               {
                 "name": "p-after-hide",
                 "description": "Emitted after the alert closes and all animations are complete."
+              }
+            ]
+          }
+        },
+        {
+          "name": "p-avatar",
+          "description": "Avatars are used to represent a person or object.\n---\n\n\n### **Events:**\n - **p-error** - The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause.\n\n### **Slots:**\n - **icon** - The default icon to use when no image or initials are present. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--size** - The size of the avatar. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the avatar's icon.\n- **initials** - The container that wraps the avatar's initials.\n- **image** - The avatar image. Only shown when the `image` attribute is set.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "image",
+              "description": "The image source to use for the avatar.",
+              "value": { "type": "string", "default": "\"\"" }
+            },
+            {
+              "name": "label",
+              "description": "A label to use to describe the avatar to assistive devices.",
+              "value": { "type": "string", "default": "\"\"" }
+            },
+            {
+              "name": "initials",
+              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+              "value": { "type": "string", "default": "\"\"" }
+            },
+            {
+              "name": "loading",
+              "description": "Indicates how the browser should load the image.",
+              "value": {
+                "type": "\"eager\" | \"lazy\"",
+                "default": "\"eager\""
+              }
+            },
+            {
+              "name": "shape",
+              "description": "The shape of the avatar.",
+              "value": {
+                "type": "\"circle\" | \"square\" | \"rounded\"",
+                "default": "\"circle\""
+              }
+            }
+          ],
+          "slots": [
+            {
+              "name": "icon",
+              "description": "The default icon to use when no image or initials are present. Works best with `<p-icon>`."
+            }
+          ],
+          "events": [
+            {
+              "name": "p-error",
+              "description": "The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause."
+            }
+          ],
+          "js": {
+            "properties": [
+              {
+                "name": "image",
+                "description": "The image source to use for the avatar.",
+                "type": "string"
+              },
+              {
+                "name": "label",
+                "description": "A label to use to describe the avatar to assistive devices.",
+                "type": "string"
+              },
+              {
+                "name": "initials",
+                "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+                "type": "string"
+              },
+              {
+                "name": "loading",
+                "description": "Indicates how the browser should load the image.",
+                "type": "\"eager\" | \"lazy\""
+              },
+              {
+                "name": "shape",
+                "description": "The shape of the avatar.",
+                "type": "\"circle\" | \"square\" | \"rounded\""
+              }
+            ],
+            "events": [
+              {
+                "name": "p-error",
+                "description": "The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause."
+              }
+            ]
+          }
+        },
+        {
+          "name": "p-badge",
+          "description": "Badges are used to draw attention and display statuses or counts.\n---\n\n\n### **Slots:**\n - _default_ - The badge's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "variant",
+              "description": "The badge's theme variant.",
+              "value": {
+                "type": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\"",
+                "default": "\"primary\""
+              }
+            },
+            {
+              "name": "pill",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "pulse",
+              "description": "Makes the badge pulsate to draw attention.",
+              "value": { "type": "boolean", "default": "false" }
+            }
+          ],
+          "slots": [{ "name": "", "description": "The badge's content." }],
+          "events": [],
+          "js": {
+            "properties": [
+              {
+                "name": "variant",
+                "description": "The badge's theme variant.",
+                "type": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\""
+              },
+              {
+                "name": "pill",
+                "description": "Draws a pill-style badge with rounded edges.",
+                "type": "boolean"
+              },
+              {
+                "name": "pulse",
+                "description": "Makes the badge pulsate to draw attention.",
+                "type": "boolean"
+              }
+            ],
+            "events": []
+          }
+        },
+        {
+          "name": "p-breadcrumb",
+          "description": "Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.\n---\n\n\n### **Slots:**\n - _default_ - One or more breadcrumb items to display.\n- **separator** - The separator to use between breadcrumb items. Works best with `<p-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "label",
+              "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
+              "value": { "type": "string", "default": "\"\"" }
+            }
+          ],
+          "slots": [
+            {
+              "name": "",
+              "description": "One or more breadcrumb items to display."
+            },
+            {
+              "name": "separator",
+              "description": "The separator to use between breadcrumb items. Works best with `<p-icon>`."
+            }
+          ],
+          "events": [],
+          "js": {
+            "properties": [
+              { "name": "defaultSlot", "type": "HTMLSlotElement" },
+              { "name": "separatorSlot", "type": "HTMLSlotElement" },
+              {
+                "name": "label",
+                "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
+                "type": "string"
+              }
+            ],
+            "events": []
+          }
+        },
+        {
+          "name": "p-breadcrumb-item",
+          "description": "Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.\n---\n\n\n### **Slots:**\n - _default_ - The breadcrumb item's label.\n- **prefix** - An optional prefix, usually an icon or icon button.\n- **suffix** - An optional suffix, usually an icon or icon button.\n- **separator** - The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<p-breadcrumb>` instead.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **label** - The breadcrumb item's label.\n- **prefix** - The container that wraps the prefix.\n- **suffix** - The container that wraps the suffix.\n- **separator** - The container that wraps the separator.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "href",
+              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
+              "value": { "type": "string | undefined" }
+            },
+            {
+              "name": "target",
+              "description": "Tells the browser where to open the link. Only used when `href` is set.",
+              "value": {
+                "type": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\" | undefined"
+              }
+            },
+            {
+              "name": "rel",
+              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
+              "value": {
+                "type": "string",
+                "default": "\"noreferrer noopener\""
+              }
+            }
+          ],
+          "slots": [
+            { "name": "", "description": "The breadcrumb item's label." },
+            {
+              "name": "prefix",
+              "description": "An optional prefix, usually an icon or icon button."
+            },
+            {
+              "name": "suffix",
+              "description": "An optional suffix, usually an icon or icon button."
+            },
+            {
+              "name": "separator",
+              "description": "The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<p-breadcrumb>` instead."
+            }
+          ],
+          "events": [],
+          "js": {
+            "properties": [
+              {
+                "name": "href",
+                "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
+                "type": "string | undefined"
+              },
+              {
+                "name": "target",
+                "description": "Tells the browser where to open the link. Only used when `href` is set.",
+                "type": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\" | undefined"
+              },
+              {
+                "name": "rel",
+                "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
+                "type": "string"
+              }
+            ],
+            "events": []
+          }
+        },
+        {
+          "name": "p-animated-image",
+          "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "src",
+              "description": "The path to the image to load.",
+              "value": { "type": "string" }
+            },
+            {
+              "name": "alt",
+              "description": "A description of the image used by assistive devices.",
+              "value": { "type": "string" }
+            },
+            {
+              "name": "play",
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "value": { "type": "boolean" }
+            }
+          ],
+          "slots": [
+            {
+              "name": "play-icon",
+              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`."
+            },
+            {
+              "name": "pause-icon",
+              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`."
+            }
+          ],
+          "events": [
+            {
+              "name": "p-load",
+              "description": "Emitted when the image loads successfully."
+            },
+            {
+              "name": "p-error",
+              "description": "Emitted when the image fails to load."
+            }
+          ],
+          "js": {
+            "properties": [
+              { "name": "animatedImage", "type": "HTMLImageElement" },
+              { "name": "frozenFrame", "type": "string" },
+              { "name": "isLoaded", "type": "boolean" },
+              {
+                "name": "src",
+                "description": "The path to the image to load.",
+                "type": "string"
+              },
+              {
+                "name": "alt",
+                "description": "A description of the image used by assistive devices.",
+                "type": "string"
+              },
+              {
+                "name": "play",
+                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+                "type": "boolean"
+              }
+            ],
+            "events": [
+              {
+                "name": "p-load",
+                "description": "Emitted when the image loads successfully."
+              },
+              {
+                "name": "p-error",
+                "description": "Emitted when the image fails to load."
               }
             ]
           }
@@ -266,310 +570,6 @@
                 "description": "Emitted when the animation starts or restarts."
               }
             ]
-          }
-        },
-        {
-          "name": "p-avatar",
-          "description": "Avatars are used to represent a person or object.\n---\n\n\n### **Events:**\n - **p-error** - The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause.\n\n### **Slots:**\n - **icon** - The default icon to use when no image or initials are present. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--size** - The size of the avatar. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **icon** - The container that wraps the avatar's icon.\n- **initials** - The container that wraps the avatar's initials.\n- **image** - The avatar image. Only shown when the `image` attribute is set.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "image",
-              "description": "The image source to use for the avatar.",
-              "value": { "type": "string", "default": "\"\"" }
-            },
-            {
-              "name": "label",
-              "description": "A label to use to describe the avatar to assistive devices.",
-              "value": { "type": "string", "default": "\"\"" }
-            },
-            {
-              "name": "initials",
-              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-              "value": { "type": "string", "default": "\"\"" }
-            },
-            {
-              "name": "loading",
-              "description": "Indicates how the browser should load the image.",
-              "value": {
-                "type": "\"eager\" | \"lazy\"",
-                "default": "\"eager\""
-              }
-            },
-            {
-              "name": "shape",
-              "description": "The shape of the avatar.",
-              "value": {
-                "type": "\"circle\" | \"square\" | \"rounded\"",
-                "default": "\"circle\""
-              }
-            }
-          ],
-          "slots": [
-            {
-              "name": "icon",
-              "description": "The default icon to use when no image or initials are present. Works best with `<p-icon>`."
-            }
-          ],
-          "events": [
-            {
-              "name": "p-error",
-              "description": "The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause."
-            }
-          ],
-          "js": {
-            "properties": [
-              {
-                "name": "image",
-                "description": "The image source to use for the avatar.",
-                "type": "string"
-              },
-              {
-                "name": "label",
-                "description": "A label to use to describe the avatar to assistive devices.",
-                "type": "string"
-              },
-              {
-                "name": "initials",
-                "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-                "type": "string"
-              },
-              {
-                "name": "loading",
-                "description": "Indicates how the browser should load the image.",
-                "type": "\"eager\" | \"lazy\""
-              },
-              {
-                "name": "shape",
-                "description": "The shape of the avatar.",
-                "type": "\"circle\" | \"square\" | \"rounded\""
-              }
-            ],
-            "events": [
-              {
-                "name": "p-error",
-                "description": "The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause."
-              }
-            ]
-          }
-        },
-        {
-          "name": "p-animated-image",
-          "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "src",
-              "description": "The path to the image to load.",
-              "value": { "type": "string" }
-            },
-            {
-              "name": "alt",
-              "description": "A description of the image used by assistive devices.",
-              "value": { "type": "string" }
-            },
-            {
-              "name": "play",
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "value": { "type": "boolean" }
-            }
-          ],
-          "slots": [
-            {
-              "name": "play-icon",
-              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`."
-            },
-            {
-              "name": "pause-icon",
-              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`."
-            }
-          ],
-          "events": [
-            {
-              "name": "p-load",
-              "description": "Emitted when the image loads successfully."
-            },
-            {
-              "name": "p-error",
-              "description": "Emitted when the image fails to load."
-            }
-          ],
-          "js": {
-            "properties": [
-              { "name": "animatedImage", "type": "HTMLImageElement" },
-              { "name": "frozenFrame", "type": "string" },
-              { "name": "isLoaded", "type": "boolean" },
-              {
-                "name": "src",
-                "description": "The path to the image to load.",
-                "type": "string"
-              },
-              {
-                "name": "alt",
-                "description": "A description of the image used by assistive devices.",
-                "type": "string"
-              },
-              {
-                "name": "play",
-                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-                "type": "boolean"
-              }
-            ],
-            "events": [
-              {
-                "name": "p-load",
-                "description": "Emitted when the image loads successfully."
-              },
-              {
-                "name": "p-error",
-                "description": "Emitted when the image fails to load."
-              }
-            ]
-          }
-        },
-        {
-          "name": "p-badge",
-          "description": "Badges are used to draw attention and display statuses or counts.\n---\n\n\n### **Slots:**\n - _default_ - The badge's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "variant",
-              "description": "The badge's theme variant.",
-              "value": {
-                "type": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\"",
-                "default": "\"primary\""
-              }
-            },
-            {
-              "name": "pill",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "value": { "type": "boolean", "default": "false" }
-            },
-            {
-              "name": "pulse",
-              "description": "Makes the badge pulsate to draw attention.",
-              "value": { "type": "boolean", "default": "false" }
-            }
-          ],
-          "slots": [{ "name": "", "description": "The badge's content." }],
-          "events": [],
-          "js": {
-            "properties": [
-              {
-                "name": "variant",
-                "description": "The badge's theme variant.",
-                "type": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\""
-              },
-              {
-                "name": "pill",
-                "description": "Draws a pill-style badge with rounded edges.",
-                "type": "boolean"
-              },
-              {
-                "name": "pulse",
-                "description": "Makes the badge pulsate to draw attention.",
-                "type": "boolean"
-              }
-            ],
-            "events": []
-          }
-        },
-        {
-          "name": "p-breadcrumb",
-          "description": "Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.\n---\n\n\n### **Slots:**\n - _default_ - One or more breadcrumb items to display.\n- **separator** - The separator to use between breadcrumb items. Works best with `<p-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "label",
-              "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
-              "value": { "type": "string", "default": "\"\"" }
-            }
-          ],
-          "slots": [
-            {
-              "name": "",
-              "description": "One or more breadcrumb items to display."
-            },
-            {
-              "name": "separator",
-              "description": "The separator to use between breadcrumb items. Works best with `<p-icon>`."
-            }
-          ],
-          "events": [],
-          "js": {
-            "properties": [
-              { "name": "defaultSlot", "type": "HTMLSlotElement" },
-              { "name": "separatorSlot", "type": "HTMLSlotElement" },
-              {
-                "name": "label",
-                "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
-                "type": "string"
-              }
-            ],
-            "events": []
-          }
-        },
-        {
-          "name": "p-breadcrumb-item",
-          "description": "Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.\n---\n\n\n### **Slots:**\n - _default_ - The breadcrumb item's label.\n- **prefix** - An optional prefix, usually an icon or icon button.\n- **suffix** - An optional suffix, usually an icon or icon button.\n- **separator** - The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<p-breadcrumb>` instead.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **label** - The breadcrumb item's label.\n- **prefix** - The container that wraps the prefix.\n- **suffix** - The container that wraps the suffix.\n- **separator** - The container that wraps the separator.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "href",
-              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
-              "value": { "type": "string | undefined" }
-            },
-            {
-              "name": "target",
-              "description": "Tells the browser where to open the link. Only used when `href` is set.",
-              "value": {
-                "type": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\" | undefined"
-              }
-            },
-            {
-              "name": "rel",
-              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
-              "value": {
-                "type": "string",
-                "default": "\"noreferrer noopener\""
-              }
-            }
-          ],
-          "slots": [
-            { "name": "", "description": "The breadcrumb item's label." },
-            {
-              "name": "prefix",
-              "description": "An optional prefix, usually an icon or icon button."
-            },
-            {
-              "name": "suffix",
-              "description": "An optional suffix, usually an icon or icon button."
-            },
-            {
-              "name": "separator",
-              "description": "The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<p-breadcrumb>` instead."
-            }
-          ],
-          "events": [],
-          "js": {
-            "properties": [
-              {
-                "name": "href",
-                "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
-                "type": "string | undefined"
-              },
-              {
-                "name": "target",
-                "description": "Tells the browser where to open the link. Only used when `href` is set.",
-                "type": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\" | undefined"
-              },
-              {
-                "name": "rel",
-                "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
-                "type": "string"
-              }
-            ],
-            "events": []
           }
         },
         {
@@ -2630,6 +2630,376 @@
               {
                 "name": "p-after-hide",
                 "description": "Emitted after the dropdown closes and all animations are complete."
+              }
+            ]
+          }
+        },
+        {
+          "name": "p-file-upload",
+          "description": "\n---\n\n\n### **Events:**\n - **p-drop** - Emitted when dragged files have been dropped on the dropzone area.\n- **p-change** - Emitted when files have been uploaded via the dropzone or file dialog.\n- **p-load** - Emitted when a file transfer was finished\n- **p-error** - Emitted when a file transfer threw an error\n- **p-abort** - Emitted when a file transfer was aborted by the user\n- **p-remove** - Emitted when a file was removed\n\n### **Methods:**\n - **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n\n### **Slots:**\n - **label** - The dropzone's label. Alternatively, you can use the image slot and label prop.\n- **image** - The dropzone's image.\n- **button** - The dropzone's button.\n\n### **CSS Properties:**\n - **--border-radius** - The border radius of the dropzone borders. _(default: undefined)_\n- **--border-width** - The width of the dropzone borders. _(default: undefined)_\n- **--border-style** - The style of the dropzone borders. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's internal wrapper.\n- **label** - The dropzone container.\n- **image** - The dropzone image.\n- **button** - The dropzone button.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "files",
+              "value": { "type": "FileInfo[]", "default": "[]" }
+            },
+            {
+              "name": "name",
+              "description": "The input's name attribute.",
+              "value": { "type": "string" }
+            },
+            {
+              "name": "disabled",
+              "description": "Disables the dropzone.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "no-button",
+              "description": "If true, hides button to open the native file selection dialog",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "button-only",
+              "description": "If true, shows only a button as a file input",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "no-file-list",
+              "description": "If true, no file list will be shown",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "label",
+              "description": "An optional overwrite for the upload label",
+              "value": { "type": "string | undefined" }
+            },
+            {
+              "name": "button-label",
+              "description": "An optional overwrite for the preview button label",
+              "value": { "type": "string | undefined" }
+            },
+            {
+              "name": "lang",
+              "description": "The locale to render the component in.",
+              "value": { "type": "string" }
+            },
+            {
+              "name": "accept",
+              "description": "A string that defines the file types the file dropzone should accept. Defaults to '*'",
+              "value": { "type": "string", "default": "\"*\"" }
+            },
+            {
+              "name": "max-file-size",
+              "description": "An optional maximum size of a file that will be considered valid.",
+              "value": { "type": "number | undefined" }
+            },
+            {
+              "name": "max-files",
+              "description": "The maximum amount of files that are allowed.",
+              "value": { "type": "number" }
+            },
+            {
+              "name": "multiple",
+              "description": "Indicates if multiple files can be uploaded",
+              "value": { "type": "boolean", "default": "false" }
+            }
+          ],
+          "slots": [
+            {
+              "name": "label",
+              "description": "The dropzone's label. Alternatively, you can use the image slot and label prop."
+            },
+            { "name": "image", "description": "The dropzone's image." },
+            { "name": "button", "description": "The dropzone's button." }
+          ],
+          "events": [
+            {
+              "name": "p-drop",
+              "description": "Emitted when dragged files have been dropped on the dropzone area."
+            },
+            {
+              "name": "p-change",
+              "type": "{ fileList: FileList }",
+              "description": "Emitted when files have been uploaded via the dropzone or file dialog."
+            },
+            {
+              "name": "p-load",
+              "type": "{ response: unknown }",
+              "description": "Emitted when a file transfer was finished"
+            },
+            {
+              "name": "p-error",
+              "type": "{ event: ProgressEvent }",
+              "description": "Emitted when a file transfer threw an error"
+            },
+            {
+              "name": "p-abort",
+              "type": "{ event: ProgressEvent }",
+              "description": "Emitted when a file transfer was aborted by the user"
+            },
+            {
+              "name": "p-remove",
+              "type": "{ file: FileInfo }",
+              "description": "Emitted when a file was removed"
+            }
+          ],
+          "js": {
+            "properties": [
+              {
+                "name": "warning",
+                "description": "Internal property to show a warning in the dropzone",
+                "type": "string | undefined"
+              },
+              {
+                "name": "isDragover",
+                "description": "Indicates whether a file is currently dragged over the dropzone",
+                "type": "boolean"
+              },
+              { "name": "fileInput", "type": "HTMLInputElement" },
+              { "name": "files", "type": "FileInfo[]" },
+              {
+                "name": "name",
+                "description": "The input's name attribute.",
+                "type": "string"
+              },
+              { "name": "value", "type": "string | File" },
+              {
+                "name": "disabled",
+                "description": "Disables the dropzone.",
+                "type": "boolean"
+              },
+              {
+                "name": "noButton",
+                "description": "If true, hides button to open the native file selection dialog",
+                "type": "boolean"
+              },
+              {
+                "name": "buttonOnly",
+                "description": "If true, shows only a button as a file input",
+                "type": "boolean"
+              },
+              {
+                "name": "noFileList",
+                "description": "If true, no file list will be shown",
+                "type": "boolean"
+              },
+              {
+                "name": "label",
+                "description": "An optional overwrite for the upload label",
+                "type": "string | undefined"
+              },
+              {
+                "name": "buttonLabel",
+                "description": "An optional overwrite for the preview button label",
+                "type": "string | undefined"
+              },
+              {
+                "name": "lang",
+                "description": "The locale to render the component in.",
+                "type": "string"
+              },
+              {
+                "name": "accept",
+                "description": "A string that defines the file types the file dropzone should accept. Defaults to '*'",
+                "type": "string"
+              },
+              {
+                "name": "maxFileSize",
+                "description": "An optional maximum size of a file that will be considered valid.",
+                "type": "number | undefined"
+              },
+              {
+                "name": "maxFiles",
+                "description": "The maximum amount of files that are allowed.",
+                "type": "number"
+              },
+              {
+                "name": "multiple",
+                "description": "Indicates if multiple files can be uploaded",
+                "type": "boolean"
+              },
+              {
+                "name": "validity",
+                "description": "Gets the validity state object"
+              },
+              {
+                "name": "validationMessage",
+                "description": "Gets the validation message"
+              },
+              { "name": "description", "type": "string" }
+            ],
+            "events": [
+              {
+                "name": "p-drop",
+                "description": "Emitted when dragged files have been dropped on the dropzone area."
+              },
+              {
+                "name": "p-change",
+                "type": "{ fileList: FileList }",
+                "description": "Emitted when files have been uploaded via the dropzone or file dialog."
+              },
+              {
+                "name": "p-load",
+                "type": "{ response: unknown }",
+                "description": "Emitted when a file transfer was finished"
+              },
+              {
+                "name": "p-error",
+                "type": "{ event: ProgressEvent }",
+                "description": "Emitted when a file transfer threw an error"
+              },
+              {
+                "name": "p-abort",
+                "type": "{ event: ProgressEvent }",
+                "description": "Emitted when a file transfer was aborted by the user"
+              },
+              {
+                "name": "p-remove",
+                "type": "{ file: FileInfo }",
+                "description": "Emitted when a file was removed"
+              }
+            ]
+          }
+        },
+        {
+          "name": "p-file-upload-item",
+          "description": "\n---\n\n\n### **Events:**\n - **p-show** - Emitted when the item opens.\n- **p-after-show** - Emitted after the item opens and all animations are complete.\n- **p-hide** - Emitted when the item closes.\n- **p-after-hide** - Emitted after the item closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the item.\n- **hide()** - Hides the item\n\n### **Slots:**\n - _default_ - The file list item's label.\n- **image** - The file list item's image.\n- **close-button** - The file list item's close button.\n\n### **CSS Parts:**\n - **base** - The component's internal wrapper.\n- **image** - The file list item's image.\n- **label** - The file list item's label.\n- **close-button** -  The file list item's close button.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "loading",
+              "description": "Draws the item in a loading state.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "progress",
+              "description": "The current progress, 0 to 100. Only respects is loading prop is true.",
+              "value": { "type": "number" }
+            },
+            {
+              "name": "label",
+              "description": "A custom label for the progress bar's aria label. Only respects if loading prop is true.",
+              "value": { "type": "string" }
+            },
+            {
+              "name": "lang",
+              "description": "The locale to render the component in.",
+              "value": { "type": "string" }
+            },
+            {
+              "name": "warning",
+              "description": "Draws the item in a warning state.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "closable",
+              "description": "Makes the item closable.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "value",
+              "description": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected.",
+              "value": { "type": "string", "default": "\"\"" }
+            },
+            {
+              "name": "size",
+              "description": "The size of the file in bytes as a read-only 64-bit integer.",
+              "value": { "type": "number" }
+            },
+            {
+              "name": "hidden",
+              "description": "Indicates whether or not the file list item is hidden.",
+              "value": { "type": "boolean", "default": "false" }
+            }
+          ],
+          "slots": [
+            { "name": "", "description": "The file list item's label." },
+            { "name": "image", "description": "The file list item's image." },
+            {
+              "name": "close-button",
+              "description": "The file list item's close button."
+            }
+          ],
+          "events": [
+            { "name": "p-show", "description": "Emitted when the item opens." },
+            {
+              "name": "p-after-show",
+              "description": "Emitted after the item opens and all animations are complete."
+            },
+            {
+              "name": "p-hide",
+              "description": "Emitted when the item closes."
+            },
+            {
+              "name": "p-after-hide",
+              "description": "Emitted after the item closes and all animations are complete."
+            }
+          ],
+          "js": {
+            "properties": [
+              { "name": "base", "type": "HTMLElement" },
+              {
+                "name": "loading",
+                "description": "Draws the item in a loading state.",
+                "type": "boolean"
+              },
+              {
+                "name": "progress",
+                "description": "The current progress, 0 to 100. Only respects is loading prop is true.",
+                "type": "number"
+              },
+              {
+                "name": "label",
+                "description": "A custom label for the progress bar's aria label. Only respects if loading prop is true.",
+                "type": "string"
+              },
+              {
+                "name": "lang",
+                "description": "The locale to render the component in.",
+                "type": "string"
+              },
+              {
+                "name": "warning",
+                "description": "Draws the item in a warning state.",
+                "type": "boolean"
+              },
+              {
+                "name": "closable",
+                "description": "Makes the item closable.",
+                "type": "boolean"
+              },
+              {
+                "name": "value",
+                "description": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected.",
+                "type": "string"
+              },
+              {
+                "name": "size",
+                "description": "The size of the file in bytes as a read-only 64-bit integer.",
+                "type": "number"
+              },
+              {
+                "name": "hidden",
+                "description": "Indicates whether or not the file list item is hidden.",
+                "type": "boolean"
+              }
+            ],
+            "events": [
+              {
+                "name": "p-show",
+                "description": "Emitted when the item opens."
+              },
+              {
+                "name": "p-after-show",
+                "description": "Emitted after the item opens and all animations are complete."
+              },
+              {
+                "name": "p-hide",
+                "description": "Emitted when the item closes."
+              },
+              {
+                "name": "p-after-hide",
+                "description": "Emitted after the item closes and all animations are complete."
               }
             ]
           }
@@ -6061,7 +6431,7 @@
         },
         {
           "name": "p-table",
-          "description": "The Table component is used to display data in a table format.\n---\n\n\n### **Events:**\n - **p-change** - Emitted when the current page value changes.\n\n### **Slots:**\n - _default_ - The default slot.\n- **paginate** - An optional slot for paginate element.\n\n### **CSS Properties:**\n - **--table-header-cell-padding** - Set padding for header cell. _(default: undefined)_\n- **--table-body-cell-padding** - Set padding for body cell. _(default: undefined)_\n- **--table-footer-padding** - Set padding for footer cell. _(default: undefined)_\n- **--table-border-horizontal-width** - Set border width horizontal. _(default: undefined)_\n- **--table-border-horizontal-style** - Set border style horizontal. _(default: undefined)_\n- **--table-border-horizontal-color** - Set border color horizontal. _(default: undefined)_\n- **--table-border-vertical-width** - Set border width vertical. _(default: undefined)_\n- **--table-border-vertical-style** - Set border style vertical. _(default: undefined)_\n- **--table-border-vertical-color** - Set border color vertical. _(default: undefined)_\n- **--table-border-width** - Set table border width. _(default: undefined)_\n- **--table-border-color** - Set table border color. _(default: undefined)_\n- **--table-border-style** - Set table border style. _(default: undefined)_\n- **--table-border-radius** - Set table border radius. _(default: undefined)_\n- **--table-row-hover-background-color** - Set table row hover background color. _(default: undefined)_\n- **--table-cell-background-color** - Set table cell background color. _(default: undefined)_\n- **--table-cell-hover-background-color** - Set table cell hover background color. _(default: undefined)_\n- **--table-cell-min-height** - Set table cell min height. _(default: undefined)_\n- **--table-cell-max-height** - Set table cell max height. _(default: undefined)_\n- **--table-cell-min-width** - Set table cell min width. _(default: undefined)_\n- **--table-cell-max-width** - Set table cell max width. _(default: undefined)_\n\n### **CSS Parts:**\n - **table-wrapper** - The component's table wrapper.\n- **table-header** - The component's table header wrapper.\n- **table-body** - The component's table body wrapper.\n- **table-loading** - The component's table loading wrapper.\n- **table-empty** - The component's table empty wrapper.\n- **table-footer** - The component's table footer wrapper.",
+          "description": "The Table component is used to display data in a table format.\n---\n\n\n### **Events:**\n - **p-change** - Emitted when the current page value changes.\n- **p-table-row-select** - Emitted when the rows selected changed.\n\n### **Slots:**\n - _default_ - The default slot.\n- **paginate** - An optional slot for paginate element.\n\n### **CSS Properties:**\n - **--table-header-cell-padding** - Set padding for header cell. _(default: undefined)_\n- **--table-body-cell-padding** - Set padding for body cell. _(default: undefined)_\n- **--table-footer-padding** - Set padding for footer cell. _(default: undefined)_\n- **--table-border-horizontal-width** - Set border width horizontal. _(default: undefined)_\n- **--table-border-horizontal-style** - Set border style horizontal. _(default: undefined)_\n- **--table-border-horizontal-color** - Set border color horizontal. _(default: undefined)_\n- **--table-border-vertical-width** - Set border width vertical. _(default: undefined)_\n- **--table-border-vertical-style** - Set border style vertical. _(default: undefined)_\n- **--table-border-vertical-color** - Set border color vertical. _(default: undefined)_\n- **--table-border-width** - Set table border width. _(default: undefined)_\n- **--table-border-color** - Set table border color. _(default: undefined)_\n- **--table-border-style** - Set table border style. _(default: undefined)_\n- **--table-border-radius** - Set table border radius. _(default: undefined)_\n- **--table-row-hover-background-color** - Set table row hover background color. _(default: undefined)_\n- **--table-cell-background-color** - Set table cell background color. _(default: undefined)_\n- **--table-cell-hover-background-color** - Set table cell hover background color. _(default: undefined)_\n- **--table-cell-min-height** - Set table cell min height. _(default: undefined)_\n- **--table-cell-max-height** - Set table cell max height. _(default: undefined)_\n- **--table-cell-min-width** - Set table cell min width. _(default: undefined)_\n- **--table-cell-max-width** - Set table cell max width. _(default: undefined)_\n\n### **CSS Parts:**\n - **table-wrapper** - The component's table wrapper.\n- **table-header** - The component's table header wrapper.\n- **table-body** - The component's table body wrapper.\n- **table-loading** - The component's table loading wrapper.\n- **table-empty** - The component's table empty wrapper.\n- **table-footer** - The component's table footer wrapper.",
           "doc-url": "",
           "attributes": [
             {
@@ -6074,7 +6444,7 @@
               "description": "The options for the table.",
               "value": {
                 "type": "TableOptions<TableRowData>",
-                "default": "{\n    columns: [],\n  }"
+                "default": "{\n    columns: [],\n    paginate: true,\n    draggable: false,\n    hideHeader: false,\n    hideFooter: false,\n    expandable: false,\n    selectable: false,\n  }"
               }
             },
             {
@@ -6086,6 +6456,21 @@
               "name": "loading",
               "description": "Whether the table is currently loading data.",
               "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "page",
+              "description": "The current page of items based on the current `limit` and `total`.",
+              "value": { "type": "number", "default": "1" }
+            },
+            {
+              "name": "limit",
+              "description": "The number of items to display per page.",
+              "value": { "type": "number", "default": "10" }
+            },
+            {
+              "name": "total",
+              "description": "The total number of items in the table.",
+              "value": { "type": "number", "default": "0" }
             },
             {
               "name": "items",
@@ -6103,6 +6488,10 @@
             {
               "name": "p-change",
               "description": "Emitted when the current page value changes."
+            },
+            {
+              "name": "p-table-row-select",
+              "description": "Emitted when the rows selected changed."
             }
           ],
           "js": {
@@ -6128,21 +6517,23 @@
                 "type": "boolean"
               },
               {
-                "name": "currentPage",
-                "description": "The current page of items based on the current `pageSize` and `totalItems`.",
+                "name": "page",
+                "description": "The current page of items based on the current `limit` and `total`.",
                 "type": "number"
               },
               {
-                "name": "pageSize",
+                "name": "limit",
                 "description": "The number of items to display per page.",
                 "type": "number"
               },
               {
-                "name": "totalItems",
+                "name": "total",
                 "description": "The total number of items in the table.",
                 "type": "number"
               },
               { "name": "items", "type": "TableRowData[]" },
+              { "name": "selectedRows", "type": "TableRowData[]" },
+              { "name": "tmpSelectedRows", "type": "TableRowData[]" },
               { "name": "tableWrapper", "type": "HTMLElement" },
               {
                 "name": "currentItems",
@@ -6153,6 +6544,10 @@
               {
                 "name": "p-change",
                 "description": "Emitted when the current page value changes."
+              },
+              {
+                "name": "p-table-row-select",
+                "description": "Emitted when the rows selected changed."
               }
             ]
           }

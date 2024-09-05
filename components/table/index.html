@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="component" data-pure-ui-version="1.1.30">
+<html lang="en" data-layout="component" data-pure-ui-version="1.1.32">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -83,7 +83,7 @@
         <a href="/">
           <img src="/assets/images/wordmark.svg" alt="Pure UI" />
         </a>
-        <div class="sidebar-version">1.1.30</div>
+        <div class="sidebar-version">1.1.32</div>
       </header>
 
       <button class="search-box" type="button" title="Press / to search" aria-label="Search" data-plugin="search">
@@ -207,6 +207,14 @@
 
               <li>
                 <a href="/components/dropdown"> Dropdown </a>
+              </li>
+
+              <li>
+                <a href="/components/file-upload"> File Upload </a>
+              </li>
+
+              <li>
+                <a href="/components/file-upload-item"> File Upload Item </a>
               </li>
 
               <li>
@@ -444,9 +452,12 @@
                         field: 'name',
                         id: 'name',
                         headerName: 'Full name',
-                        minWidth: '120px',
                         alignItems: 'center',
-                        justifyContent: 'flex-start'
+                        justifyContent: 'flex-start',
+                        resizable: true,
+                        width: '150px',
+                        minWidth: '120px',
+                        maxWidth: '300px'
                       },
                       { field: 'age', id: 'age', headerName: 'Age' },
                       { field: 'address.street', id: 'street', headerName: 'Street', maxWidth: '400px' },
@@ -688,11 +699,12 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-334">
+            <div class="code-preview__source-group" id="code-preview-source-group-364">
               <div class="code-preview__source code-preview__source--html">
-                <pre><code class="language-html" id="code-block-872"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-table</span>
+                <pre><code class="language-html" id="code-block-1054"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-table</span>
   <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>table-example<span class="token punctuation">"</span></span>
 <span class="token punctuation">&gt;</span></span>
+
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-table</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">const</span> table <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.table-example'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -705,9 +717,12 @@
     <span class="token literal-property property">columns</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token literal-property property">field</span><span class="token operator">:</span> <span class="token string">'name'</span><span class="token punctuation">,</span>
     <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">'name'</span><span class="token punctuation">,</span>
     <span class="token literal-property property">headerName</span><span class="token operator">:</span> <span class="token string">'Full name'</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">minWidth</span><span class="token operator">:</span> <span class="token string">'120px'</span><span class="token punctuation">,</span>
     <span class="token literal-property property">alignItems</span><span class="token operator">:</span> <span class="token string">'center'</span><span class="token punctuation">,</span>
     <span class="token literal-property property">justifyContent</span><span class="token operator">:</span> <span class="token string">'flex-start'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">resizable</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">width</span><span class="token operator">:</span> <span class="token string">'150px'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">minWidth</span><span class="token operator">:</span> <span class="token string">'120px'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">maxWidth</span><span class="token operator">:</span> <span class="token string">'300px'</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token literal-property property">field</span><span class="token operator">:</span> <span class="token string">'age'</span><span class="token punctuation">,</span>
     <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">'age'</span><span class="token punctuation">,</span>
     <span class="token literal-property property">headerName</span><span class="token operator">:</span> <span class="token string">'Age'</span><span class="token punctuation">,</span>
@@ -953,7 +968,7 @@
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
 
 
-</code><p-copy-button class="copy-code-button" from="code-block-872"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1054"></p-copy-button></pre>
               </div>
             </div>
 
@@ -962,7 +977,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-334"
+                aria-controls="code-preview-source-group-364"
               >
                 Source
                 <svg
@@ -1023,7 +1038,7 @@
                 >
                 using a script tag:
               </p>
-              <pre><code class="language-html" id="code-block-873"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.1.30/cdn/components/table/table.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-873"></p-copy-button></pre>
+              <pre><code class="language-html" id="code-block-1055"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.1.32/cdn/components/table/table.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-1055"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="import">
@@ -1038,17 +1053,17 @@
                 >
                 using a JavaScript import:
               </p>
-              <pre><code class="language-js" id="code-block-874"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.1.30/cdn/components/table/table.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-874"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-1056"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.1.32/cdn/components/table/table.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1056"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="bundler">
               <p>To import this component using <a href="/getting-started/installation#bundling">a bundler</a>:</p>
-              <pre><code class="language-js" id="code-block-875"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/table/table.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-875"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-1057"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/table/table.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1057"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="react">
               <p>To import this component as a <a href="/frameworks/react">React component</a>:</p>
-              <pre><code class="language-js" id="code-block-876"><span class="token keyword">import</span> PTable <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/table'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-876"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-1058"><span class="token keyword">import</span> PTable <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/table'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1058"></p-copy-button></pre>
             </p-tab-panel>
           </p-tab-group>
 
@@ -1126,7 +1141,10 @@
                     <code>TableOptions<tablerowdata></tablerowdata></code>
                   </td>
                   <td>
-                    <code>{ columns: [], }</code>
+                    <code
+                      >{ columns: [], paginate: true, draggable: false, hideHeader: false, hideFooter: false,
+                      expandable: false, selectable: false, }</code
+                    >
                   </td>
                 </tr>
 
@@ -1169,12 +1187,12 @@
 
                 <tr>
                   <td>
-                    <code class="nowrap">currentPage</code>
+                    <code class="nowrap">page</code>
                   </td>
-                  <td>
-                    The current page of items based on the current <code>pageSize</code> and <code>totalItems</code>.
+                  <td>The current page of items based on the current <code>limit</code> and <code>total</code>.</td>
+                  <td style="text-align: center">
+                    <p-icon label="yes" name="check-lg"></p-icon>
                   </td>
-                  <td style="text-align: center"></td>
                   <td>
                     <code>number</code>
                   </td>
@@ -1185,10 +1203,12 @@
 
                 <tr>
                   <td>
-                    <code class="nowrap">pageSize</code>
+                    <code class="nowrap">limit</code>
                   </td>
                   <td>The number of items to display per page.</td>
-                  <td style="text-align: center"></td>
+                  <td style="text-align: center">
+                    <p-icon label="yes" name="check-lg"></p-icon>
+                  </td>
                   <td>
                     <code>number</code>
                   </td>
@@ -1199,10 +1219,12 @@
 
                 <tr>
                   <td>
-                    <code class="nowrap">totalItems</code>
+                    <code class="nowrap">total</code>
                   </td>
                   <td>The total number of items in the table.</td>
-                  <td style="text-align: center"></td>
+                  <td style="text-align: center">
+                    <p-icon label="yes" name="check-lg"></p-icon>
+                  </td>
                   <td>
                     <code>number</code>
                   </td>
@@ -1262,6 +1284,13 @@
                   <td data-flavor="html"><code class="nowrap">p-change</code></td>
                   <td data-flavor="react"><code class="nowrap">onPChange</code></td>
                   <td>Emitted when the current page value changes.</td>
+                  <td>-</td>
+                </tr>
+
+                <tr>
+                  <td data-flavor="html"><code class="nowrap">p-table-row-select</code></td>
+                  <td data-flavor="react"><code class="nowrap">onPTableRowSelect</code></td>
+                  <td>Emitted when the rows selected changed.</td>
                   <td>-</td>
                 </tr>
               </tbody>
