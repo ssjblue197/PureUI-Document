@@ -19,7 +19,7 @@ export type { PRemoveEvent } from "../../events/events.js";
  * @dependency p-progress-bar
  * @dependency p-icon
  * @dependency p-icon-button
- * @dependency p-upload-file-item
+ * @dependency p-file-upload-item
  *
  * @slot label - The dropzone's label. Alternatively, you can use the image slot and label prop.
  * @slot image - The dropzone's image.

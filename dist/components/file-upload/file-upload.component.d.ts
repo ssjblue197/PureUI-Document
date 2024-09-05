@@ -13,7 +13,7 @@ import type { PureFormControl } from "../../internal/pure-ui-element.js";
  * @dependency p-progress-bar
  * @dependency p-icon
  * @dependency p-icon-button
- * @dependency p-upload-file-item
+ * @dependency p-file-upload-item
  *
  * @slot label - The dropzone's label. Alternatively, you can use the image slot and label prop.
  * @slot image - The dropzone's image.
@@ -42,7 +42,7 @@ export default class PFileUpload extends PureElement implements PureFormControl 
         "p-icon": typeof PIcon;
         "p-icon-button": typeof PIconButton;
         "p-progress-bar": typeof PProgressBar;
-        "p-upload-file-item": typeof PFileUploadItem;
+        "p-file-upload-item": typeof PFileUploadItem;
     };
     private readonly formControlController;
     private readonly localize;
@@ -54,8 +54,8 @@ export default class PFileUpload extends PureElement implements PureFormControl 
     files: FileInfo[];
     /** The input's name attribute. */
     name: string;
-    get value(): string | File;
-    set value(file: string | File);
+    get value(): File[];
+    set value(file: string | File | File[]);
     /** Disables the dropzone. */
     disabled: boolean;
     /** If true, hides button to open the native file selection dialog */
