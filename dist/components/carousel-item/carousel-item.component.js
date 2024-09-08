@@ -1,8 +1,8 @@
 import {
   PCarouselItem
-} from "../../chunks/chunk.TQNS6YGU.js";
+} from "../../chunks/chunk.K6QZ6RLI.js";
 import "../../chunks/chunk.PIDKCLDC.js";
-import "../../chunks/chunk.WZHWQGQL.js";
+import "../../chunks/chunk.BWFHTNIR.js";
 import "../../chunks/chunk.DNSDK7ZG.js";
 import "../../chunks/chunk.XHSHLALN.js";
 import "../../chunks/chunk.KIILAQWQ.js";

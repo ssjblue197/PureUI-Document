@@ -114,9 +114,9 @@ export default class PCalendar extends PureElement implements PureFormControl {
      * | `ss`  | Second, numeric (00-59) |
      *
      * @type {string}
-     * @default "YYYY-MM-DD"
+     * @default ""
      */
-    formatter: string;
+    format: string;
     /**
      * Indicates whether the calendar is in typing mode.
      * Typing mode means that the calendar accepts user input and emits `p-input` and `p-change` events when the user types a valid date.
@@ -155,7 +155,9 @@ export default class PCalendar extends PureElement implements PureFormControl {
      * value attribute will be a space-delimited list of values based on the dates selected, and the value property will
      * be an array. **For this reason, values must not contain spaces.**
      */
-    value: Date | Date[];
+    _value: Date | Date[];
+    get value(): string | Date | (string | Date)[];
+    set value(value: string | string[]);
     /** The default value of the form control. Primarily used for resetting the form control. */
     defaultValue: Date | Date[];
     /** The select's size. */
@@ -220,7 +222,6 @@ export default class PCalendar extends PureElement implements PureFormControl {
      * The mode of the calendar.
      * - "default": calendar is displayed in a popup.
      * - "inline": calendar is displayed inline.
-     * TODO in future....
      * @attribute mode
      * @type {"default" | "inline"}
      * @default "default"
@@ -260,6 +261,7 @@ export default class PCalendar extends PureElement implements PureFormControl {
     /** Gets the validation message */
     get validationMessage(): string;
     connectedCallback(): void;
+    firstUpdated(): void;
     private addOpenListeners;
     private removeOpenListeners;
     private handleFocus;

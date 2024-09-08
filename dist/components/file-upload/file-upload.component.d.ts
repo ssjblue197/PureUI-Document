@@ -54,7 +54,7 @@ export default class PFileUpload extends PureElement implements PureFormControl 
     files: FileInfo[];
     /** The input's name attribute. */
     name: string;
-    get value(): File[];
+    get value(): string | File[];
     set value(file: string | File | File[]);
     /** Disables the dropzone. */
     disabled: boolean;
