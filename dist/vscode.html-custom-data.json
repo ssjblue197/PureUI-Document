@@ -41,6 +41,73 @@
       ]
     },
     {
+      "name": "p-animation",
+      "description": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n---\n\n\n### **Events:**\n - **p-cancel** - Emitted when the animation is canceled.\n- **p-finish** - Emitted when the animation finishes.\n- **p-start** - Emitted when the animation starts or restarts.\n\n### **Methods:**\n - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.\n- **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.\n\n### **Slots:**\n - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.",
+      "attributes": [
+        {
+          "name": "name",
+          "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
+          "values": []
+        },
+        {
+          "name": "play",
+          "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
+          "values": []
+        },
+        {
+          "name": "delay",
+          "description": "The number of milliseconds to delay the start of the animation.",
+          "values": []
+        },
+        {
+          "name": "direction",
+          "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
+          "values": [{ "name": "PlaybackDirection" }]
+        },
+        {
+          "name": "duration",
+          "description": "The number of milliseconds each iteration of the animation takes to complete.",
+          "values": []
+        },
+        {
+          "name": "easing",
+          "description": "The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
+          "values": []
+        },
+        {
+          "name": "end-delay",
+          "description": "The number of milliseconds to delay after the active period of an animation sequence.",
+          "values": []
+        },
+        {
+          "name": "fill",
+          "description": "Sets how the animation applies styles to its target before and after its execution.",
+          "values": [{ "name": "FillMode" }]
+        },
+        {
+          "name": "iterations",
+          "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops.",
+          "values": []
+        },
+        {
+          "name": "iteration-start",
+          "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
+          "values": []
+        },
+        {
+          "name": "playback-rate",
+          "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
+          "values": []
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://pureui.xyz/components/animation"
+        }
+      ]
+    },
+    {
       "name": "p-animated-image",
       "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
       "attributes": [
@@ -109,6 +176,39 @@
       ]
     },
     {
+      "name": "p-badge",
+      "description": "Badges are used to draw attention and display statuses or counts.\n---\n\n\n### **Slots:**\n - _default_ - The badge's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+      "attributes": [
+        {
+          "name": "variant",
+          "description": "The badge's theme variant.",
+          "values": [
+            { "name": "primary" },
+            { "name": "success" },
+            { "name": "neutral" },
+            { "name": "warning" },
+            { "name": "danger" }
+          ]
+        },
+        {
+          "name": "pill",
+          "description": "Draws a pill-style badge with rounded edges.",
+          "values": []
+        },
+        {
+          "name": "pulse",
+          "description": "Makes the badge pulsate to draw attention.",
+          "values": []
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://pureui.xyz/components/badge"
+        }
+      ]
+    },
+    {
       "name": "p-breadcrumb",
       "description": "Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.\n---\n\n\n### **Slots:**\n - _default_ - One or more breadcrumb items to display.\n- **separator** - The separator to use between breadcrumb items. Works best with `<p-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
       "attributes": [
@@ -154,106 +254,6 @@
         {
           "name": "Documentation",
           "url": "https://pureui.xyz/components/breadcrumb-item"
-        }
-      ]
-    },
-    {
-      "name": "p-animation",
-      "description": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n---\n\n\n### **Events:**\n - **p-cancel** - Emitted when the animation is canceled.\n- **p-finish** - Emitted when the animation finishes.\n- **p-start** - Emitted when the animation starts or restarts.\n\n### **Methods:**\n - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.\n- **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.\n\n### **Slots:**\n - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.",
-      "attributes": [
-        {
-          "name": "name",
-          "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
-          "values": []
-        },
-        {
-          "name": "play",
-          "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
-          "values": []
-        },
-        {
-          "name": "delay",
-          "description": "The number of milliseconds to delay the start of the animation.",
-          "values": []
-        },
-        {
-          "name": "direction",
-          "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
-          "values": [{ "name": "PlaybackDirection" }]
-        },
-        {
-          "name": "duration",
-          "description": "The number of milliseconds each iteration of the animation takes to complete.",
-          "values": []
-        },
-        {
-          "name": "easing",
-          "description": "The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
-          "values": []
-        },
-        {
-          "name": "end-delay",
-          "description": "The number of milliseconds to delay after the active period of an animation sequence.",
-          "values": []
-        },
-        {
-          "name": "fill",
-          "description": "Sets how the animation applies styles to its target before and after its execution.",
-          "values": [{ "name": "FillMode" }]
-        },
-        {
-          "name": "iterations",
-          "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops.",
-          "values": []
-        },
-        {
-          "name": "iteration-start",
-          "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
-          "values": []
-        },
-        {
-          "name": "playback-rate",
-          "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
-          "values": []
-        }
-      ],
-      "references": [
-        {
-          "name": "Documentation",
-          "url": "https://pureui.xyz/components/animation"
-        }
-      ]
-    },
-    {
-      "name": "p-badge",
-      "description": "Badges are used to draw attention and display statuses or counts.\n---\n\n\n### **Slots:**\n - _default_ - The badge's content.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-      "attributes": [
-        {
-          "name": "variant",
-          "description": "The badge's theme variant.",
-          "values": [
-            { "name": "primary" },
-            { "name": "success" },
-            { "name": "neutral" },
-            { "name": "warning" },
-            { "name": "danger" }
-          ]
-        },
-        {
-          "name": "pill",
-          "description": "Draws a pill-style badge with rounded edges.",
-          "values": []
-        },
-        {
-          "name": "pulse",
-          "description": "Makes the badge pulsate to draw attention.",
-          "values": []
-        }
-      ],
-      "references": [
-        {
-          "name": "Documentation",
-          "url": "https://pureui.xyz/components/badge"
         }
       ]
     },
@@ -432,7 +432,7 @@
           "values": []
         },
         {
-          "name": "formatter",
+          "name": "format",
           "description": "The date format to use when formatting the date.\n\nThe format string is a combination of the following tokens:\n\n| Token | Description |\n|-------|-------------|\n| `YY`  | Four-digit year |\n| `YYYY` | Four-digit year |\n| `M`   | Month, numeric (0-11) |\n| `MM`  | Month, numeric (00-11) |\n| `MMM` | Month, abbreviated |\n| `MMMM` | Month, full |\n| `D`   | Day of month, numeric (1-31) |\n| `DD`  | Day of month, numeric (01-31) |\n| `d`   | Day of week, numeric (0-6) |\n| `dd`  | Day of week, numeric (Su-Sa) |\n| `ddd` | Day of week, abbreviated |\n| `dddd` | Day of week, full |\n| `H`   | Hour, numeric, 24-hour (0-23) |\n| `HH`  | Hour, numeric, 24-hour (00-23) |\n| `h`   | Hour, numeric, 12-hour (1-12) |\n| `hh`  | Hour, numeric, 12-hour (01-12) |\n| `m`   | Minute, numeric (0-59) |\n| `mm`  | Minute, numeric (00-59) |\n| `s`   | Second, numeric (0-59) |\n| `ss`  | Second, numeric (00-59) |",
           "values": []
         },
@@ -447,7 +447,7 @@
           "values": []
         },
         {
-          "name": "value",
+          "name": "_value",
           "description": "The current value of the calendar, submitted as a name/value pair with form data. When type is set to`multiple`, the\nvalue attribute will be a space-delimited list of values based on the dates selected, and the value property will\nbe an array. **For this reason, values must not contain spaces.**",
           "values": [{ "name": "Date" }, { "name": "Date[]" }]
         },
@@ -540,7 +540,7 @@
         },
         {
           "name": "mode",
-          "description": "The mode of the calendar.\n- \"default\": calendar is displayed in a popup.\n- \"inline\": calendar is displayed inline.\nTODO in future....",
+          "description": "The mode of the calendar.\n- \"default\": calendar is displayed in a popup.\n- \"inline\": calendar is displayed inline.",
           "values": [{ "name": "default" }, { "name": "inline" }]
         },
         {
@@ -1078,6 +1078,63 @@
       ]
     },
     {
+      "name": "p-file-upload-item",
+      "description": "\n---\n\n\n### **Events:**\n - **p-show** - Emitted when the item opens.\n- **p-after-show** - Emitted after the item opens and all animations are complete.\n- **p-hide** - Emitted when the item closes.\n- **p-after-hide** - Emitted after the item closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the item.\n- **hide()** - Hides the item\n\n### **Slots:**\n - _default_ - The file list item's label.\n- **image** - The file list item's image.\n- **close-button** - The file list item's close button.\n\n### **CSS Parts:**\n - **base** - The component's internal wrapper.\n- **image** - The file list item's image.\n- **label** - The file list item's label.\n- **close-button** -  The file list item's close button.",
+      "attributes": [
+        {
+          "name": "loading",
+          "description": "Draws the item in a loading state.",
+          "values": []
+        },
+        {
+          "name": "progress",
+          "description": "The current progress, 0 to 100. Only respects is loading prop is true.",
+          "values": []
+        },
+        {
+          "name": "label",
+          "description": "A custom label for the progress bar's aria label. Only respects if loading prop is true.",
+          "values": []
+        },
+        {
+          "name": "lang",
+          "description": "The locale to render the component in.",
+          "values": []
+        },
+        {
+          "name": "warning",
+          "description": "Draws the item in a warning state.",
+          "values": []
+        },
+        {
+          "name": "closable",
+          "description": "Makes the item closable.",
+          "values": []
+        },
+        {
+          "name": "value",
+          "description": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected.",
+          "values": []
+        },
+        {
+          "name": "size",
+          "description": "The size of the file in bytes as a read-only 64-bit integer.",
+          "values": []
+        },
+        {
+          "name": "hidden",
+          "description": "Indicates whether or not the file list item is hidden.",
+          "values": []
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://pureui.xyz/components/file-upload-item"
+        }
+      ]
+    },
+    {
       "name": "p-file-upload",
       "description": "\n---\n\n\n### **Events:**\n - **p-drop** - Emitted when dragged files have been dropped on the dropzone area.\n- **p-change** - Emitted when files have been uploaded via the dropzone or file dialog.\n- **p-load** - Emitted when a file transfer was finished\n- **p-error** - Emitted when a file transfer threw an error\n- **p-abort** - Emitted when a file transfer was aborted by the user\n- **p-remove** - Emitted when a file was removed\n\n### **Methods:**\n - **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n\n### **Slots:**\n - **label** - The dropzone's label. Alternatively, you can use the image slot and label prop.\n- **image** - The dropzone's image.\n- **button** - The dropzone's button.\n\n### **CSS Properties:**\n - **--border-radius** - The border radius of the dropzone borders. _(default: undefined)_\n- **--border-width** - The width of the dropzone borders. _(default: undefined)_\n- **--border-style** - The style of the dropzone borders. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's internal wrapper.\n- **label** - The dropzone container.\n- **image** - The dropzone image.\n- **button** - The dropzone button.",
       "attributes": [
@@ -1151,63 +1208,6 @@
       ]
     },
     {
-      "name": "p-file-upload-item",
-      "description": "\n---\n\n\n### **Events:**\n - **p-show** - Emitted when the item opens.\n- **p-after-show** - Emitted after the item opens and all animations are complete.\n- **p-hide** - Emitted when the item closes.\n- **p-after-hide** - Emitted after the item closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the item.\n- **hide()** - Hides the item\n\n### **Slots:**\n - _default_ - The file list item's label.\n- **image** - The file list item's image.\n- **close-button** - The file list item's close button.\n\n### **CSS Parts:**\n - **base** - The component's internal wrapper.\n- **image** - The file list item's image.\n- **label** - The file list item's label.\n- **close-button** -  The file list item's close button.",
-      "attributes": [
-        {
-          "name": "loading",
-          "description": "Draws the item in a loading state.",
-          "values": []
-        },
-        {
-          "name": "progress",
-          "description": "The current progress, 0 to 100. Only respects is loading prop is true.",
-          "values": []
-        },
-        {
-          "name": "label",
-          "description": "A custom label for the progress bar's aria label. Only respects if loading prop is true.",
-          "values": []
-        },
-        {
-          "name": "lang",
-          "description": "The locale to render the component in.",
-          "values": []
-        },
-        {
-          "name": "warning",
-          "description": "Draws the item in a warning state.",
-          "values": []
-        },
-        {
-          "name": "closable",
-          "description": "Makes the item closable.",
-          "values": []
-        },
-        {
-          "name": "value",
-          "description": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected.",
-          "values": []
-        },
-        {
-          "name": "size",
-          "description": "The size of the file in bytes as a read-only 64-bit integer.",
-          "values": []
-        },
-        {
-          "name": "hidden",
-          "description": "Indicates whether or not the file list item is hidden.",
-          "values": []
-        }
-      ],
-      "references": [
-        {
-          "name": "Documentation",
-          "url": "https://pureui.xyz/components/file-upload-item"
-        }
-      ]
-    },
-    {
       "name": "p-format-bytes",
       "description": "Formats a number as a human readable bytes value.\n---\n",
       "attributes": [
@@ -1235,6 +1235,77 @@
         {
           "name": "Documentation",
           "url": "https://pureui.xyz/components/format-bytes"
+        }
+      ]
+    },
+    {
+      "name": "p-format-number",
+      "description": "Formats a number using the specified locale and options.\n---\n",
+      "attributes": [
+        {
+          "name": "value",
+          "description": "The number to format.",
+          "values": []
+        },
+        {
+          "name": "type",
+          "description": "The formatting style to use.",
+          "values": [
+            { "name": "currency" },
+            { "name": "decimal" },
+            { "name": "percent" }
+          ]
+        },
+        {
+          "name": "no-grouping",
+          "description": "Turns off grouping separators.",
+          "values": []
+        },
+        {
+          "name": "currency",
+          "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting.",
+          "values": []
+        },
+        {
+          "name": "currency-display",
+          "description": "How to display the currency.",
+          "values": [
+            { "name": "symbol" },
+            { "name": "narrowSymbol" },
+            { "name": "code" },
+            { "name": "name" }
+          ]
+        },
+        {
+          "name": "minimum-integer-digits",
+          "description": "The minimum number of integer digits to use. Possible values are 1-21.",
+          "values": []
+        },
+        {
+          "name": "minimum-fraction-digits",
+          "description": "The minimum number of fraction digits to use. Possible values are 0-20.",
+          "values": []
+        },
+        {
+          "name": "maximum-fraction-digits",
+          "description": "The maximum number of fraction digits to use. Possible values are 0-0.",
+          "values": []
+        },
+        {
+          "name": "minimum-significant-digits",
+          "description": "The minimum number of significant digits to use. Possible values are 1-21.",
+          "values": []
+        },
+        {
+          "name": "maximum-significant-digits",
+          "description": "The maximum number of significant digits to use,. Possible values are 1-21.",
+          "values": []
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://pureui.xyz/components/format-number"
         }
       ]
     },
@@ -1321,77 +1392,6 @@
         {
           "name": "Documentation",
           "url": "https://pureui.xyz/components/format-date"
-        }
-      ]
-    },
-    {
-      "name": "p-format-number",
-      "description": "Formats a number using the specified locale and options.\n---\n",
-      "attributes": [
-        {
-          "name": "value",
-          "description": "The number to format.",
-          "values": []
-        },
-        {
-          "name": "type",
-          "description": "The formatting style to use.",
-          "values": [
-            { "name": "currency" },
-            { "name": "decimal" },
-            { "name": "percent" }
-          ]
-        },
-        {
-          "name": "no-grouping",
-          "description": "Turns off grouping separators.",
-          "values": []
-        },
-        {
-          "name": "currency",
-          "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting.",
-          "values": []
-        },
-        {
-          "name": "currency-display",
-          "description": "How to display the currency.",
-          "values": [
-            { "name": "symbol" },
-            { "name": "narrowSymbol" },
-            { "name": "code" },
-            { "name": "name" }
-          ]
-        },
-        {
-          "name": "minimum-integer-digits",
-          "description": "The minimum number of integer digits to use. Possible values are 1-21.",
-          "values": []
-        },
-        {
-          "name": "minimum-fraction-digits",
-          "description": "The minimum number of fraction digits to use. Possible values are 0-20.",
-          "values": []
-        },
-        {
-          "name": "maximum-fraction-digits",
-          "description": "The maximum number of fraction digits to use. Possible values are 0-0.",
-          "values": []
-        },
-        {
-          "name": "minimum-significant-digits",
-          "description": "The minimum number of significant digits to use. Possible values are 1-21.",
-          "values": []
-        },
-        {
-          "name": "maximum-significant-digits",
-          "description": "The maximum number of significant digits to use,. Possible values are 1-21.",
-          "values": []
-        }
-      ],
-      "references": [
-        {
-          "name": "Documentation",
-          "url": "https://pureui.xyz/components/format-number"
         }
       ]
     },
@@ -2771,28 +2771,6 @@
       ]
     },
     {
-      "name": "p-tab-panel",
-      "description": "Tab panels are used inside [tab groups](/components/tab-group) to display tabbed content.\n---\n\n\n### **Slots:**\n - _default_ - The tab panel's content.\n\n### **CSS Properties:**\n - **--padding** - The tab panel's padding. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-      "attributes": [
-        {
-          "name": "name",
-          "description": "The tab panel's name.",
-          "values": []
-        },
-        {
-          "name": "active",
-          "description": "When true, the tab panel will be shown.",
-          "values": []
-        }
-      ],
-      "references": [
-        {
-          "name": "Documentation",
-          "url": "https://pureui.xyz/components/tab-panel"
-        }
-      ]
-    },
-    {
       "name": "p-table",
       "description": "The Table component is used to display data in a table format.\n---\n\n\n### **Events:**\n - **p-change** - Emitted when the current page value changes.\n- **p-table-row-select** - Emitted when the rows selected changed.\n\n### **Slots:**\n - _default_ - The default slot.\n- **paginate** - An optional slot for paginate element.\n\n### **CSS Properties:**\n - **--table-header-cell-padding** - Set padding for header cell. _(default: undefined)_\n- **--table-body-cell-padding** - Set padding for body cell. _(default: undefined)_\n- **--table-footer-padding** - Set padding for footer cell. _(default: undefined)_\n- **--table-border-horizontal-width** - Set border width horizontal. _(default: undefined)_\n- **--table-border-horizontal-style** - Set border style horizontal. _(default: undefined)_\n- **--table-border-horizontal-color** - Set border color horizontal. _(default: undefined)_\n- **--table-border-vertical-width** - Set border width vertical. _(default: undefined)_\n- **--table-border-vertical-style** - Set border style vertical. _(default: undefined)_\n- **--table-border-vertical-color** - Set border color vertical. _(default: undefined)_\n- **--table-border-width** - Set table border width. _(default: undefined)_\n- **--table-border-color** - Set table border color. _(default: undefined)_\n- **--table-border-style** - Set table border style. _(default: undefined)_\n- **--table-border-radius** - Set table border radius. _(default: undefined)_\n- **--table-row-hover-background-color** - Set table row hover background color. _(default: undefined)_\n- **--table-cell-background-color** - Set table cell background color. _(default: undefined)_\n- **--table-cell-hover-background-color** - Set table cell hover background color. _(default: undefined)_\n- **--table-cell-min-height** - Set table cell min height. _(default: undefined)_\n- **--table-cell-max-height** - Set table cell max height. _(default: undefined)_\n- **--table-cell-min-width** - Set table cell min width. _(default: undefined)_\n- **--table-cell-max-width** - Set table cell max width. _(default: undefined)_\n\n### **CSS Parts:**\n - **table-wrapper** - The component's table wrapper.\n- **table-header** - The component's table header wrapper.\n- **table-body** - The component's table body wrapper.\n- **table-loading** - The component's table loading wrapper.\n- **table-empty** - The component's table empty wrapper.\n- **table-footer** - The component's table footer wrapper.",
       "attributes": [
@@ -2837,6 +2815,28 @@
         {
           "name": "Documentation",
           "url": "https://pureui.xyz/components/table"
+        }
+      ]
+    },
+    {
+      "name": "p-tab-panel",
+      "description": "Tab panels are used inside [tab groups](/components/tab-group) to display tabbed content.\n---\n\n\n### **Slots:**\n - _default_ - The tab panel's content.\n\n### **CSS Properties:**\n - **--padding** - The tab panel's padding. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+      "attributes": [
+        {
+          "name": "name",
+          "description": "The tab panel's name.",
+          "values": []
+        },
+        {
+          "name": "active",
+          "description": "When true, the tab panel will be shown.",
+          "values": []
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://pureui.xyz/components/tab-panel"
         }
       ]
     },

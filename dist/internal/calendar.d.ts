@@ -28,15 +28,3 @@ export declare function getDayName(date: Date, locale?: string, format?: Intl.Da
 export declare function getMonthName(date: Date, locale?: string, format?: Intl.DateTimeFormatOptions["month"]): string;
 export declare function getDateLabelWithFormat(date: Date, locale?: string, format?: Intl.DateTimeFormatOptions): string;
 export declare function getDateDifferentFrom(date: Date, days: number): Date;
-export declare function padZero(num: number, length?: number): string;
-export declare function getLocalizedNames(locale: string): {
-    dayNames: string[];
-    dayShortNames: string[];
-    dayMinNames: string[];
-    monthNames: string[];
-    monthShortNames: string[];
-};
-export declare function dateFormatter(): {
-    fromDate: (date: Date, format: string, locale?: string) => string;
-    toDate: (dateString: string, format: string, locale?: string) => Date;
-};
