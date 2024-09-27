@@ -264,549 +264,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/animation/animation.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PAnimation",
-          "slots": [
-            {
-              "description": "The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "animation",
-              "type": {
-                "text": "Animation | undefined"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "hasStarted",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "defaultPot",
-              "type": {
-                "text": "Promise<HTMLSlotElement>"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"none\"",
-              "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
-              "attribute": "name"
-            },
-            {
-              "kind": "field",
-              "name": "play",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
-              "attribute": "play",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "delay",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The number of milliseconds to delay the start of the animation.",
-              "attribute": "delay"
-            },
-            {
-              "kind": "field",
-              "name": "direction",
-              "type": {
-                "text": "PlaybackDirection"
-              },
-              "default": "\"normal\"",
-              "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
-              "attribute": "direction"
-            },
-            {
-              "kind": "field",
-              "name": "duration",
-              "type": {
-                "text": "number"
-              },
-              "default": "1000",
-              "description": "The number of milliseconds each iteration of the animation takes to complete.",
-              "attribute": "duration"
-            },
-            {
-              "kind": "field",
-              "name": "easing",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"linear\"",
-              "description": "The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
-              "attribute": "easing"
-            },
-            {
-              "kind": "field",
-              "name": "endDelay",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The number of milliseconds to delay after the active period of an animation sequence.",
-              "attribute": "end-delay"
-            },
-            {
-              "kind": "field",
-              "name": "fill",
-              "type": {
-                "text": "FillMode"
-              },
-              "default": "\"auto\"",
-              "description": "Sets how the animation applies styles to its target before and after its execution.",
-              "attribute": "fill"
-            },
-            {
-              "kind": "field",
-              "name": "iterations",
-              "default": "Infinity",
-              "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops.",
-              "attribute": "iterations"
-            },
-            {
-              "kind": "field",
-              "name": "iterationStart",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
-              "attribute": "iteration-start"
-            },
-            {
-              "kind": "field",
-              "name": "keyframes",
-              "type": {
-                "text": "Keyframe[] | undefined"
-              },
-              "description": "The keyframes to use for the animation. If this is set, `name` will be ignored."
-            },
-            {
-              "kind": "field",
-              "name": "playbackRate",
-              "type": {
-                "text": "number"
-              },
-              "default": "1",
-              "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
-              "attribute": "playback-rate"
-            },
-            {
-              "kind": "field",
-              "name": "currentTime",
-              "type": {
-                "text": "CSSNumberish"
-              },
-              "description": "Gets and sets the current animation time."
-            },
-            {
-              "kind": "field",
-              "name": "handleAnimationFinish",
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "handleAnimationCancel",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handlePotChange",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "createAnimation",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "destroyAnimation",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleAnimationChange"
-            },
-            {
-              "kind": "method",
-              "name": "handlePlayChange"
-            },
-            {
-              "kind": "method",
-              "name": "handlePlaybackRateChange"
-            },
-            {
-              "kind": "method",
-              "name": "cancel",
-              "description": "Clears all keyframe effects caused by this animation and aborts its playback."
-            },
-            {
-              "kind": "method",
-              "name": "finish",
-              "description": "Sets the playback time to the end of the animation corresponding to the current playback direction."
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the animation is canceled.",
-              "name": "p-cancel",
-              "reactName": "onPCancel",
-              "eventName": "PCancelEvent"
-            },
-            {
-              "description": "Emitted when the animation finishes.",
-              "name": "p-finish",
-              "reactName": "onPFinish",
-              "eventName": "PFinishEvent"
-            },
-            {
-              "description": "Emitted when the animation starts or restarts.",
-              "name": "p-start",
-              "reactName": "onPStart",
-              "eventName": "PStartEvent"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"none\"",
-              "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
-              "fieldName": "name"
-            },
-            {
-              "name": "play",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
-              "fieldName": "play"
-            },
-            {
-              "name": "delay",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The number of milliseconds to delay the start of the animation.",
-              "fieldName": "delay"
-            },
-            {
-              "name": "direction",
-              "type": {
-                "text": "PlaybackDirection"
-              },
-              "default": "\"normal\"",
-              "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
-              "fieldName": "direction"
-            },
-            {
-              "name": "duration",
-              "type": {
-                "text": "number"
-              },
-              "default": "1000",
-              "description": "The number of milliseconds each iteration of the animation takes to complete.",
-              "fieldName": "duration"
-            },
-            {
-              "name": "easing",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"linear\"",
-              "description": "The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
-              "fieldName": "easing"
-            },
-            {
-              "name": "end-delay",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The number of milliseconds to delay after the active period of an animation sequence.",
-              "fieldName": "endDelay"
-            },
-            {
-              "name": "fill",
-              "type": {
-                "text": "FillMode"
-              },
-              "default": "\"auto\"",
-              "description": "Sets how the animation applies styles to its target before and after its execution.",
-              "fieldName": "fill"
-            },
-            {
-              "name": "iterations",
-              "default": "Infinity",
-              "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops.",
-              "resolveInitializer": {
-                "module": "src/components/animation/animation.component.ts"
-              },
-              "fieldName": "iterations"
-            },
-            {
-              "name": "iteration-start",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
-              "fieldName": "iterationStart"
-            },
-            {
-              "name": "playback-rate",
-              "type": {
-                "text": "number"
-              },
-              "default": "1",
-              "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
-              "fieldName": "playbackRate"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).",
-          "tagNameWithoutPrefix": "animation",
-          "tagName": "p-animation",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n * @documentation https://pureui.xyz/components/animation\n * @status stable\n * @since 1.0\n *\n * @event p-cancel - Emitted when the animation is canceled.\n * @event p-finish - Emitted when the animation finishes.\n * @event p-start - Emitted when the animation starts or restarts.\n *\n * @slot - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To\n *  animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.\n */",
-          "documentation": "https://pureui.xyz/components/animation",
-          "status": "stable",
-          "since": "1.0"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PAnimation",
-            "module": "components/animation/animation.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/animated-image/animated-image.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PAnimatedImage",
-          "cssProperties": [
-            {
-              "description": "The size of the icon box.",
-              "name": "--control-box-size"
-            },
-            {
-              "description": "The size of the play/pause icons.",
-              "name": "--icon-size"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The container that surrounds the pause/play icons and provides their background.",
-              "name": "control-box"
-            }
-          ],
-          "slots": [
-            {
-              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`.",
-              "name": "play-icon"
-            },
-            {
-              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`.",
-              "name": "pause-icon"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "dependencies",
-              "type": {
-                "text": "object"
-              },
-              "static": true,
-              "default": "{ \"p-icon\": PIcon }"
-            },
-            {
-              "kind": "field",
-              "name": "animatedImage",
-              "type": {
-                "text": "HTMLImageElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "frozenFrame",
-              "type": {
-                "text": "string"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "isLoaded",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "src",
-              "type": {
-                "text": "string"
-              },
-              "description": "The path to the image to load.",
-              "attribute": "src"
-            },
-            {
-              "kind": "field",
-              "name": "alt",
-              "type": {
-                "text": "string"
-              },
-              "description": "A description of the image used by assistive devices.",
-              "attribute": "alt"
-            },
-            {
-              "kind": "field",
-              "name": "play",
-              "type": {
-                "text": "boolean"
-              },
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "attribute": "play",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleClick",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleLoad",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleError",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handlePlayChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleSrcChange"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the image loads successfully.",
-              "name": "p-load",
-              "reactName": "onPLoad",
-              "eventName": "PLoadEvent"
-            },
-            {
-              "description": "Emitted when the image fails to load.",
-              "name": "p-error",
-              "reactName": "onPError",
-              "eventName": "PErrorEvent"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "src",
-              "type": {
-                "text": "string"
-              },
-              "description": "The path to the image to load.",
-              "fieldName": "src"
-            },
-            {
-              "name": "alt",
-              "type": {
-                "text": "string"
-              },
-              "description": "A description of the image used by assistive devices.",
-              "fieldName": "alt"
-            },
-            {
-              "name": "play",
-              "type": {
-                "text": "boolean"
-              },
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "fieldName": "play"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.",
-          "tagNameWithoutPrefix": "animated-image",
-          "tagName": "p-animated-image",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n * @documentation https://pureui.xyz/components/animated-image\n * @status stable\n * @since 1.0\n *\n * @dependency p-icon\n *\n * @event p-load - Emitted when the image loads successfully.\n * @event p-error - Emitted when the image fails to load.\n *\n * @slot play-icon - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n * @slot pause-icon - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n *\n * @part control-box - The container that surrounds the pause/play icons and provides their background.\n *\n * @cssproperty --control-box-size - The size of the icon box.\n * @cssproperty --icon-size - The size of the play/pause icons.\n */",
-          "documentation": "https://pureui.xyz/components/animated-image",
-          "status": "stable",
-          "since": "1.0",
-          "dependencies": [
-            "p-icon"
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PAnimatedImage",
-            "module": "components/animated-image/animated-image.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/avatar/avatar.js",
       "declarations": [
         {
@@ -1237,6 +694,192 @@
     },
     {
       "kind": "javascript-module",
+      "path": "components/animated-image/animated-image.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PAnimatedImage",
+          "cssProperties": [
+            {
+              "description": "The size of the icon box.",
+              "name": "--control-box-size"
+            },
+            {
+              "description": "The size of the play/pause icons.",
+              "name": "--icon-size"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The container that surrounds the pause/play icons and provides their background.",
+              "name": "control-box"
+            }
+          ],
+          "slots": [
+            {
+              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`.",
+              "name": "play-icon"
+            },
+            {
+              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`.",
+              "name": "pause-icon"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "dependencies",
+              "type": {
+                "text": "object"
+              },
+              "static": true,
+              "default": "{ \"p-icon\": PIcon }"
+            },
+            {
+              "kind": "field",
+              "name": "animatedImage",
+              "type": {
+                "text": "HTMLImageElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "frozenFrame",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "isLoaded",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "src",
+              "type": {
+                "text": "string"
+              },
+              "description": "The path to the image to load.",
+              "attribute": "src"
+            },
+            {
+              "kind": "field",
+              "name": "alt",
+              "type": {
+                "text": "string"
+              },
+              "description": "A description of the image used by assistive devices.",
+              "attribute": "alt"
+            },
+            {
+              "kind": "field",
+              "name": "play",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "attribute": "play",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleLoad",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleError",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handlePlayChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleSrcChange"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the image loads successfully.",
+              "name": "p-load",
+              "reactName": "onPLoad",
+              "eventName": "PLoadEvent"
+            },
+            {
+              "description": "Emitted when the image fails to load.",
+              "name": "p-error",
+              "reactName": "onPError",
+              "eventName": "PErrorEvent"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "src",
+              "type": {
+                "text": "string"
+              },
+              "description": "The path to the image to load.",
+              "fieldName": "src"
+            },
+            {
+              "name": "alt",
+              "type": {
+                "text": "string"
+              },
+              "description": "A description of the image used by assistive devices.",
+              "fieldName": "alt"
+            },
+            {
+              "name": "play",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "fieldName": "play"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.",
+          "tagNameWithoutPrefix": "animated-image",
+          "tagName": "p-animated-image",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n * @documentation https://pureui.xyz/components/animated-image\n * @status stable\n * @since 1.0\n *\n * @dependency p-icon\n *\n * @event p-load - Emitted when the image loads successfully.\n * @event p-error - Emitted when the image fails to load.\n *\n * @slot play-icon - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n * @slot pause-icon - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n *\n * @part control-box - The container that surrounds the pause/play icons and provides their background.\n *\n * @cssproperty --control-box-size - The size of the icon box.\n * @cssproperty --icon-size - The size of the play/pause icons.\n */",
+          "documentation": "https://pureui.xyz/components/animated-image",
+          "status": "stable",
+          "since": "1.0",
+          "dependencies": [
+            "p-icon"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PAnimatedImage",
+            "module": "components/animated-image/animated-image.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "components/breadcrumb-item/breadcrumb-item.js",
       "declarations": [
         {
@@ -1368,6 +1011,363 @@
           "declaration": {
             "name": "PBreadcrumbItem",
             "module": "components/breadcrumb-item/breadcrumb-item.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/animation/animation.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PAnimation",
+          "slots": [
+            {
+              "description": "The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "animation",
+              "type": {
+                "text": "Animation | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "hasStarted",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "defaultPot",
+              "type": {
+                "text": "Promise<HTMLSlotElement>"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"none\"",
+              "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
+              "attribute": "name"
+            },
+            {
+              "kind": "field",
+              "name": "play",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
+              "attribute": "play",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "delay",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The number of milliseconds to delay the start of the animation.",
+              "attribute": "delay"
+            },
+            {
+              "kind": "field",
+              "name": "direction",
+              "type": {
+                "text": "PlaybackDirection"
+              },
+              "default": "\"normal\"",
+              "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
+              "attribute": "direction"
+            },
+            {
+              "kind": "field",
+              "name": "duration",
+              "type": {
+                "text": "number"
+              },
+              "default": "1000",
+              "description": "The number of milliseconds each iteration of the animation takes to complete.",
+              "attribute": "duration"
+            },
+            {
+              "kind": "field",
+              "name": "easing",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"linear\"",
+              "description": "The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
+              "attribute": "easing"
+            },
+            {
+              "kind": "field",
+              "name": "endDelay",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The number of milliseconds to delay after the active period of an animation sequence.",
+              "attribute": "end-delay"
+            },
+            {
+              "kind": "field",
+              "name": "fill",
+              "type": {
+                "text": "FillMode"
+              },
+              "default": "\"auto\"",
+              "description": "Sets how the animation applies styles to its target before and after its execution.",
+              "attribute": "fill"
+            },
+            {
+              "kind": "field",
+              "name": "iterations",
+              "default": "Infinity",
+              "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops.",
+              "attribute": "iterations"
+            },
+            {
+              "kind": "field",
+              "name": "iterationStart",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
+              "attribute": "iteration-start"
+            },
+            {
+              "kind": "field",
+              "name": "keyframes",
+              "type": {
+                "text": "Keyframe[] | undefined"
+              },
+              "description": "The keyframes to use for the animation. If this is set, `name` will be ignored."
+            },
+            {
+              "kind": "field",
+              "name": "playbackRate",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
+              "attribute": "playback-rate"
+            },
+            {
+              "kind": "field",
+              "name": "currentTime",
+              "type": {
+                "text": "CSSNumberish"
+              },
+              "description": "Gets and sets the current animation time."
+            },
+            {
+              "kind": "field",
+              "name": "handleAnimationFinish",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "handleAnimationCancel",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handlePotChange",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "createAnimation",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "destroyAnimation",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleAnimationChange"
+            },
+            {
+              "kind": "method",
+              "name": "handlePlayChange"
+            },
+            {
+              "kind": "method",
+              "name": "handlePlaybackRateChange"
+            },
+            {
+              "kind": "method",
+              "name": "cancel",
+              "description": "Clears all keyframe effects caused by this animation and aborts its playback."
+            },
+            {
+              "kind": "method",
+              "name": "finish",
+              "description": "Sets the playback time to the end of the animation corresponding to the current playback direction."
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the animation is canceled.",
+              "name": "p-cancel",
+              "reactName": "onPCancel",
+              "eventName": "PCancelEvent"
+            },
+            {
+              "description": "Emitted when the animation finishes.",
+              "name": "p-finish",
+              "reactName": "onPFinish",
+              "eventName": "PFinishEvent"
+            },
+            {
+              "description": "Emitted when the animation starts or restarts.",
+              "name": "p-start",
+              "reactName": "onPStart",
+              "eventName": "PStartEvent"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"none\"",
+              "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
+              "fieldName": "name"
+            },
+            {
+              "name": "play",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
+              "fieldName": "play"
+            },
+            {
+              "name": "delay",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The number of milliseconds to delay the start of the animation.",
+              "fieldName": "delay"
+            },
+            {
+              "name": "direction",
+              "type": {
+                "text": "PlaybackDirection"
+              },
+              "default": "\"normal\"",
+              "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
+              "fieldName": "direction"
+            },
+            {
+              "name": "duration",
+              "type": {
+                "text": "number"
+              },
+              "default": "1000",
+              "description": "The number of milliseconds each iteration of the animation takes to complete.",
+              "fieldName": "duration"
+            },
+            {
+              "name": "easing",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"linear\"",
+              "description": "The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
+              "fieldName": "easing"
+            },
+            {
+              "name": "end-delay",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The number of milliseconds to delay after the active period of an animation sequence.",
+              "fieldName": "endDelay"
+            },
+            {
+              "name": "fill",
+              "type": {
+                "text": "FillMode"
+              },
+              "default": "\"auto\"",
+              "description": "Sets how the animation applies styles to its target before and after its execution.",
+              "fieldName": "fill"
+            },
+            {
+              "name": "iterations",
+              "default": "Infinity",
+              "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops.",
+              "resolveInitializer": {
+                "module": "src/components/animation/animation.component.ts"
+              },
+              "fieldName": "iterations"
+            },
+            {
+              "name": "iteration-start",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
+              "fieldName": "iterationStart"
+            },
+            {
+              "name": "playback-rate",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
+              "fieldName": "playbackRate"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).",
+          "tagNameWithoutPrefix": "animation",
+          "tagName": "p-animation",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n * @documentation https://pureui.xyz/components/animation\n * @status stable\n * @since 1.0\n *\n * @event p-cancel - Emitted when the animation is canceled.\n * @event p-finish - Emitted when the animation finishes.\n * @event p-start - Emitted when the animation starts or restarts.\n *\n * @slot - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To\n *  animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.\n */",
+          "documentation": "https://pureui.xyz/components/animation",
+          "status": "stable",
+          "since": "1.0"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PAnimation",
+            "module": "components/animation/animation.js"
           }
         }
       ]
@@ -2479,10 +2479,11 @@
             {
               "kind": "field",
               "name": "value",
+              "privacy": "public",
               "type": {
                 "text": "string | Date | (string | Date)[]"
               },
-              "privacy": "public"
+              "attribute": "value"
             },
             {
               "kind": "field",
@@ -2681,6 +2682,17 @@
               "default": "\"single\"",
               "description": "The type of selection the calendar allows.\n- \"single\": allows selecting a single date.\n- \"multiple\": allows selecting multiple dates.\n- \"range\": allows selecting a range of dates.",
               "attribute": "type",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "interface",
+              "type": {
+                "text": "\"day\" | \"month\" | \"year\""
+              },
+              "default": "\"day\"",
+              "description": "The interface of the calendar.\n- \"day\": a regular calendar for selecting day according to Calendar type .\n- \"month\": a calendar for selecting a month and year according to Calendar type .\n- \"year\": a calendar for selecting a year according to Calendar type .",
+              "attribute": "interface",
               "reflects": true
             },
             {
@@ -3106,10 +3118,6 @@
                 }
               ],
               "description": "Moves the calendar to the next year."
-            },
-            {
-              "kind": "method",
-              "name": "handleMonthChange"
             }
           ],
           "events": [
@@ -3382,6 +3390,15 @@
               "fieldName": "type"
             },
             {
+              "name": "interface",
+              "type": {
+                "text": "\"day\" | \"month\" | \"year\""
+              },
+              "default": "\"day\"",
+              "description": "The interface of the calendar.\n- \"day\": a regular calendar for selecting day according to Calendar type .\n- \"month\": a calendar for selecting a month and year according to Calendar type .\n- \"year\": a calendar for selecting a year according to Calendar type .",
+              "fieldName": "interface"
+            },
+            {
               "name": "autofocus",
               "type": {
                 "text": "boolean"
@@ -3440,6 +3457,13 @@
               "default": "false",
               "description": "When true, dates from the previous and next month will also be shown to fill out the grid.",
               "fieldName": "showAdjacentDates"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "string | Date | (string | Date)[]"
+              },
+              "fieldName": "value"
             }
           ],
           "superclass": {
@@ -7584,323 +7608,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/file-upload-item/file-upload-item.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PFileUploadItem",
-          "cssParts": [
-            {
-              "description": "The component's internal wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The file list item's image.",
-              "name": "image"
-            },
-            {
-              "description": "The file list item's label.",
-              "name": "label"
-            },
-            {
-              "description": " The file list item's close button.",
-              "name": "close-button"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The file list item's label.",
-              "name": ""
-            },
-            {
-              "description": "The file list item's image.",
-              "name": "image"
-            },
-            {
-              "description": "The file list item's close button.",
-              "name": "close-button"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "hasSlotController",
-              "privacy": "private",
-              "readonly": true,
-              "default": "new HasSlotController(this, \"image\", \"suffix\")"
-            },
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "readonly": true,
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "base",
-              "type": {
-                "text": "HTMLElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "loading",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws the item in a loading state.",
-              "attribute": "loading",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "progress",
-              "type": {
-                "text": "number"
-              },
-              "description": "The current progress, 0 to 100. Only respects is loading prop is true.",
-              "attribute": "progress",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "description": "A custom label for the progress bar's aria label. Only respects if loading prop is true.",
-              "attribute": "label"
-            },
-            {
-              "kind": "field",
-              "name": "lang",
-              "type": {
-                "text": "string"
-              },
-              "description": "The locale to render the component in.",
-              "attribute": "lang"
-            },
-            {
-              "kind": "field",
-              "name": "warning",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws the item in a warning state.",
-              "attribute": "warning",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "closable",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the item closable.",
-              "attribute": "closable",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected.",
-              "attribute": "value"
-            },
-            {
-              "kind": "field",
-              "name": "size",
-              "type": {
-                "text": "number"
-              },
-              "description": "The size of the file in bytes as a read-only 64-bit integer.",
-              "attribute": "size",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "hidden",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Indicates whether or not the file list item is hidden.",
-              "attribute": "hidden",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleHiddenChange"
-            },
-            {
-              "kind": "method",
-              "name": "show",
-              "description": "Shows the item."
-            },
-            {
-              "kind": "method",
-              "name": "hide",
-              "description": "Hides the item"
-            },
-            {
-              "kind": "method",
-              "name": "handleCloseClick"
-            },
-            {
-              "kind": "method",
-              "name": "handleTriggerKeyUp",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ]
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the item opens.",
-              "name": "p-show",
-              "reactName": "onPShow",
-              "eventName": "PShowEvent"
-            },
-            {
-              "description": "Emitted after the item opens and all animations are complete.",
-              "name": "p-after-show",
-              "reactName": "onPAfterShow",
-              "eventName": "PAfterShowEvent"
-            },
-            {
-              "description": "Emitted when the item closes.",
-              "name": "p-hide",
-              "reactName": "onPHide",
-              "eventName": "PHideEvent"
-            },
-            {
-              "description": "Emitted after the item closes and all animations are complete.",
-              "name": "p-after-hide",
-              "reactName": "onPAfterHide",
-              "eventName": "PAfterHideEvent"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "loading",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws the item in a loading state.",
-              "fieldName": "loading"
-            },
-            {
-              "name": "progress",
-              "type": {
-                "text": "number"
-              },
-              "description": "The current progress, 0 to 100. Only respects is loading prop is true.",
-              "fieldName": "progress"
-            },
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "description": "A custom label for the progress bar's aria label. Only respects if loading prop is true.",
-              "fieldName": "label"
-            },
-            {
-              "name": "lang",
-              "type": {
-                "text": "string"
-              },
-              "description": "The locale to render the component in.",
-              "fieldName": "lang"
-            },
-            {
-              "name": "warning",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws the item in a warning state.",
-              "fieldName": "warning"
-            },
-            {
-              "name": "closable",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the item closable.",
-              "fieldName": "closable"
-            },
-            {
-              "name": "value",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected.",
-              "fieldName": "value"
-            },
-            {
-              "name": "size",
-              "type": {
-                "text": "number"
-              },
-              "description": "The size of the file in bytes as a read-only 64-bit integer.",
-              "fieldName": "size"
-            },
-            {
-              "name": "hidden",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Indicates whether or not the file list item is hidden.",
-              "fieldName": "hidden"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "tagNameWithoutPrefix": "file-upload-item",
-          "tagName": "p-file-upload-item",
-          "customElement": true,
-          "jsDoc": "/**\n * @since 2.0\n * @status experimental\n *\n * @dependency p-icon-button\n * @dependency p-progress-bar\n *\n * @event p-show - Emitted when the item opens.\n * @event p-after-show - Emitted after the item opens and all animations are complete.\n * @event p-hide - Emitted when the item closes.\n * @event p-after-hide - Emitted after the item closes and all animations are complete.\n *\n * @slot - The file list item's label.\n * @slot image - The file list item's image.\n * @slot close-button - The file list item's close button.\n *\n * @csspart base - The component's internal wrapper.\n * @csspart image - The file list item's image.\n * @csspart label - The file list item's label.\n * @csspart close-button -  The file list item's close button.\n */",
-          "since": "2.0",
-          "status": "experimental",
-          "dependencies": [
-            "p-icon-button",
-            "p-progress-bar"
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PFileUploadItem",
-            "module": "components/file-upload-item/file-upload-item.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/file-upload/file-upload.js",
       "declarations": [
         {
@@ -8470,6 +8177,323 @@
     },
     {
       "kind": "javascript-module",
+      "path": "components/file-upload-item/file-upload-item.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PFileUploadItem",
+          "cssParts": [
+            {
+              "description": "The component's internal wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The file list item's image.",
+              "name": "image"
+            },
+            {
+              "description": "The file list item's label.",
+              "name": "label"
+            },
+            {
+              "description": " The file list item's close button.",
+              "name": "close-button"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The file list item's label.",
+              "name": ""
+            },
+            {
+              "description": "The file list item's image.",
+              "name": "image"
+            },
+            {
+              "description": "The file list item's close button.",
+              "name": "close-button"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "hasSlotController",
+              "privacy": "private",
+              "readonly": true,
+              "default": "new HasSlotController(this, \"image\", \"suffix\")"
+            },
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "readonly": true,
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "base",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "loading",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws the item in a loading state.",
+              "attribute": "loading",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "progress",
+              "type": {
+                "text": "number"
+              },
+              "description": "The current progress, 0 to 100. Only respects is loading prop is true.",
+              "attribute": "progress",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "description": "A custom label for the progress bar's aria label. Only respects if loading prop is true.",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "lang",
+              "type": {
+                "text": "string"
+              },
+              "description": "The locale to render the component in.",
+              "attribute": "lang"
+            },
+            {
+              "kind": "field",
+              "name": "warning",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws the item in a warning state.",
+              "attribute": "warning",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "closable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the item closable.",
+              "attribute": "closable",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected.",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "number"
+              },
+              "description": "The size of the file in bytes as a read-only 64-bit integer.",
+              "attribute": "size",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "hidden",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Indicates whether or not the file list item is hidden.",
+              "attribute": "hidden",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleHiddenChange"
+            },
+            {
+              "kind": "method",
+              "name": "show",
+              "description": "Shows the item."
+            },
+            {
+              "kind": "method",
+              "name": "hide",
+              "description": "Hides the item"
+            },
+            {
+              "kind": "method",
+              "name": "handleCloseClick"
+            },
+            {
+              "kind": "method",
+              "name": "handleTriggerKeyUp",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the item opens.",
+              "name": "p-show",
+              "reactName": "onPShow",
+              "eventName": "PShowEvent"
+            },
+            {
+              "description": "Emitted after the item opens and all animations are complete.",
+              "name": "p-after-show",
+              "reactName": "onPAfterShow",
+              "eventName": "PAfterShowEvent"
+            },
+            {
+              "description": "Emitted when the item closes.",
+              "name": "p-hide",
+              "reactName": "onPHide",
+              "eventName": "PHideEvent"
+            },
+            {
+              "description": "Emitted after the item closes and all animations are complete.",
+              "name": "p-after-hide",
+              "reactName": "onPAfterHide",
+              "eventName": "PAfterHideEvent"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "loading",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws the item in a loading state.",
+              "fieldName": "loading"
+            },
+            {
+              "name": "progress",
+              "type": {
+                "text": "number"
+              },
+              "description": "The current progress, 0 to 100. Only respects is loading prop is true.",
+              "fieldName": "progress"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "description": "A custom label for the progress bar's aria label. Only respects if loading prop is true.",
+              "fieldName": "label"
+            },
+            {
+              "name": "lang",
+              "type": {
+                "text": "string"
+              },
+              "description": "The locale to render the component in.",
+              "fieldName": "lang"
+            },
+            {
+              "name": "warning",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws the item in a warning state.",
+              "fieldName": "warning"
+            },
+            {
+              "name": "closable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the item closable.",
+              "fieldName": "closable"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected.",
+              "fieldName": "value"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "number"
+              },
+              "description": "The size of the file in bytes as a read-only 64-bit integer.",
+              "fieldName": "size"
+            },
+            {
+              "name": "hidden",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Indicates whether or not the file list item is hidden.",
+              "fieldName": "hidden"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "tagNameWithoutPrefix": "file-upload-item",
+          "tagName": "p-file-upload-item",
+          "customElement": true,
+          "jsDoc": "/**\n * @since 2.0\n * @status experimental\n *\n * @dependency p-icon-button\n * @dependency p-progress-bar\n *\n * @event p-show - Emitted when the item opens.\n * @event p-after-show - Emitted after the item opens and all animations are complete.\n * @event p-hide - Emitted when the item closes.\n * @event p-after-hide - Emitted after the item closes and all animations are complete.\n *\n * @slot - The file list item's label.\n * @slot image - The file list item's image.\n * @slot close-button - The file list item's close button.\n *\n * @csspart base - The component's internal wrapper.\n * @csspart image - The file list item's image.\n * @csspart label - The file list item's label.\n * @csspart close-button -  The file list item's close button.\n */",
+          "since": "2.0",
+          "status": "experimental",
+          "dependencies": [
+            "p-icon-button",
+            "p-progress-bar"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PFileUploadItem",
+            "module": "components/file-upload-item/file-upload-item.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "components/format-bytes/format-bytes.js",
       "declarations": [
         {
@@ -8565,230 +8589,6 @@
           "declaration": {
             "name": "PFormatBytes",
             "module": "components/format-bytes/format-bytes.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/format-number/format-number.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PFormatNumber",
-          "members": [
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "readonly": true,
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The number to format.",
-              "attribute": "value"
-            },
-            {
-              "kind": "field",
-              "name": "type",
-              "type": {
-                "text": "\"currency\" | \"decimal\" | \"percent\""
-              },
-              "default": "\"decimal\"",
-              "description": "The formatting style to use.",
-              "attribute": "type"
-            },
-            {
-              "kind": "field",
-              "name": "noGrouping",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Turns off grouping separators.",
-              "attribute": "no-grouping"
-            },
-            {
-              "kind": "field",
-              "name": "currency",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"USD\"",
-              "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting.",
-              "attribute": "currency"
-            },
-            {
-              "kind": "field",
-              "name": "currencyDisplay",
-              "type": {
-                "text": "\"symbol\" | \"narrowSymbol\" | \"code\" | \"name\""
-              },
-              "default": "\"symbol\"",
-              "description": "How to display the currency.",
-              "attribute": "currency-display"
-            },
-            {
-              "kind": "field",
-              "name": "minimumIntegerDigits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The minimum number of integer digits to use. Possible values are 1-21.",
-              "attribute": "minimum-integer-digits"
-            },
-            {
-              "kind": "field",
-              "name": "minimumFractionDigits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The minimum number of fraction digits to use. Possible values are 0-20.",
-              "attribute": "minimum-fraction-digits"
-            },
-            {
-              "kind": "field",
-              "name": "maximumFractionDigits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The maximum number of fraction digits to use. Possible values are 0-0.",
-              "attribute": "maximum-fraction-digits"
-            },
-            {
-              "kind": "field",
-              "name": "minimumSignificantDigits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The minimum number of significant digits to use. Possible values are 1-21.",
-              "attribute": "minimum-significant-digits"
-            },
-            {
-              "kind": "field",
-              "name": "maximumSignificantDigits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The maximum number of significant digits to use,. Possible values are 1-21.",
-              "attribute": "maximum-significant-digits"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "value",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The number to format.",
-              "fieldName": "value"
-            },
-            {
-              "name": "type",
-              "type": {
-                "text": "\"currency\" | \"decimal\" | \"percent\""
-              },
-              "default": "\"decimal\"",
-              "description": "The formatting style to use.",
-              "fieldName": "type"
-            },
-            {
-              "name": "no-grouping",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Turns off grouping separators.",
-              "fieldName": "noGrouping"
-            },
-            {
-              "name": "currency",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"USD\"",
-              "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting.",
-              "fieldName": "currency"
-            },
-            {
-              "name": "currency-display",
-              "type": {
-                "text": "\"symbol\" | \"narrowSymbol\" | \"code\" | \"name\""
-              },
-              "default": "\"symbol\"",
-              "description": "How to display the currency.",
-              "fieldName": "currencyDisplay"
-            },
-            {
-              "name": "minimum-integer-digits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The minimum number of integer digits to use. Possible values are 1-21.",
-              "fieldName": "minimumIntegerDigits"
-            },
-            {
-              "name": "minimum-fraction-digits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The minimum number of fraction digits to use. Possible values are 0-20.",
-              "fieldName": "minimumFractionDigits"
-            },
-            {
-              "name": "maximum-fraction-digits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The maximum number of fraction digits to use. Possible values are 0-0.",
-              "fieldName": "maximumFractionDigits"
-            },
-            {
-              "name": "minimum-significant-digits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The minimum number of significant digits to use. Possible values are 1-21.",
-              "fieldName": "minimumSignificantDigits"
-            },
-            {
-              "name": "maximum-significant-digits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The maximum number of significant digits to use,. Possible values are 1-21.",
-              "fieldName": "maximumSignificantDigits"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "Formats a number using the specified locale and options.",
-          "tagNameWithoutPrefix": "format-number",
-          "tagName": "p-format-number",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary Formats a number using the specified locale and options.\n * @documentation https://pureui.xyz/components/format-number\n * @status stable\n * @since 1.0\n */",
-          "documentation": "https://pureui.xyz/components/format-number",
-          "status": "stable",
-          "since": "1.0"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PFormatNumber",
-            "module": "components/format-number/format-number.js"
           }
         }
       ]
@@ -9041,6 +8841,230 @@
           "declaration": {
             "name": "PFormatDate",
             "module": "components/format-date/format-date.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/format-number/format-number.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PFormatNumber",
+          "members": [
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "readonly": true,
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The number to format.",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "type",
+              "type": {
+                "text": "\"currency\" | \"decimal\" | \"percent\""
+              },
+              "default": "\"decimal\"",
+              "description": "The formatting style to use.",
+              "attribute": "type"
+            },
+            {
+              "kind": "field",
+              "name": "noGrouping",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Turns off grouping separators.",
+              "attribute": "no-grouping"
+            },
+            {
+              "kind": "field",
+              "name": "currency",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"USD\"",
+              "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting.",
+              "attribute": "currency"
+            },
+            {
+              "kind": "field",
+              "name": "currencyDisplay",
+              "type": {
+                "text": "\"symbol\" | \"narrowSymbol\" | \"code\" | \"name\""
+              },
+              "default": "\"symbol\"",
+              "description": "How to display the currency.",
+              "attribute": "currency-display"
+            },
+            {
+              "kind": "field",
+              "name": "minimumIntegerDigits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The minimum number of integer digits to use. Possible values are 1-21.",
+              "attribute": "minimum-integer-digits"
+            },
+            {
+              "kind": "field",
+              "name": "minimumFractionDigits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The minimum number of fraction digits to use. Possible values are 0-20.",
+              "attribute": "minimum-fraction-digits"
+            },
+            {
+              "kind": "field",
+              "name": "maximumFractionDigits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The maximum number of fraction digits to use. Possible values are 0-0.",
+              "attribute": "maximum-fraction-digits"
+            },
+            {
+              "kind": "field",
+              "name": "minimumSignificantDigits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The minimum number of significant digits to use. Possible values are 1-21.",
+              "attribute": "minimum-significant-digits"
+            },
+            {
+              "kind": "field",
+              "name": "maximumSignificantDigits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The maximum number of significant digits to use,. Possible values are 1-21.",
+              "attribute": "maximum-significant-digits"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The number to format.",
+              "fieldName": "value"
+            },
+            {
+              "name": "type",
+              "type": {
+                "text": "\"currency\" | \"decimal\" | \"percent\""
+              },
+              "default": "\"decimal\"",
+              "description": "The formatting style to use.",
+              "fieldName": "type"
+            },
+            {
+              "name": "no-grouping",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Turns off grouping separators.",
+              "fieldName": "noGrouping"
+            },
+            {
+              "name": "currency",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"USD\"",
+              "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting.",
+              "fieldName": "currency"
+            },
+            {
+              "name": "currency-display",
+              "type": {
+                "text": "\"symbol\" | \"narrowSymbol\" | \"code\" | \"name\""
+              },
+              "default": "\"symbol\"",
+              "description": "How to display the currency.",
+              "fieldName": "currencyDisplay"
+            },
+            {
+              "name": "minimum-integer-digits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The minimum number of integer digits to use. Possible values are 1-21.",
+              "fieldName": "minimumIntegerDigits"
+            },
+            {
+              "name": "minimum-fraction-digits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The minimum number of fraction digits to use. Possible values are 0-20.",
+              "fieldName": "minimumFractionDigits"
+            },
+            {
+              "name": "maximum-fraction-digits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The maximum number of fraction digits to use. Possible values are 0-0.",
+              "fieldName": "maximumFractionDigits"
+            },
+            {
+              "name": "minimum-significant-digits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The minimum number of significant digits to use. Possible values are 1-21.",
+              "fieldName": "minimumSignificantDigits"
+            },
+            {
+              "name": "maximum-significant-digits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The maximum number of significant digits to use,. Possible values are 1-21.",
+              "fieldName": "maximumSignificantDigits"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "Formats a number using the specified locale and options.",
+          "tagNameWithoutPrefix": "format-number",
+          "tagName": "p-format-number",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary Formats a number using the specified locale and options.\n * @documentation https://pureui.xyz/components/format-number\n * @status stable\n * @since 1.0\n */",
+          "documentation": "https://pureui.xyz/components/format-number",
+          "status": "stable",
+          "since": "1.0"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PFormatNumber",
+            "module": "components/format-number/format-number.js"
           }
         }
       ]
@@ -17776,6 +17800,122 @@
     },
     {
       "kind": "javascript-module",
+      "path": "components/tab-panel/tab-panel.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PTabPanel",
+          "cssProperties": [
+            {
+              "description": "The tab panel's padding.",
+              "name": "--padding"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The tab panel's content.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "attrId",
+              "type": {
+                "text": "number"
+              },
+              "privacy": "private",
+              "readonly": true,
+              "default": "++id"
+            },
+            {
+              "kind": "field",
+              "name": "componentId",
+              "privacy": "private",
+              "readonly": true,
+              "default": "`p-tab-panel-${this.attrId}`"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The tab panel's name.",
+              "attribute": "name",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "active",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "When true, the tab panel will be shown.",
+              "attribute": "active",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleActiveChange"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The tab panel's name.",
+              "fieldName": "name"
+            },
+            {
+              "name": "active",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "When true, the tab panel will be shown.",
+              "fieldName": "active"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "Tab panels are used inside [tab groups](/components/tab-group) to display tabbed content.",
+          "tagNameWithoutPrefix": "tab-panel",
+          "tagName": "p-tab-panel",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary Tab panels are used inside [tab groups](/components/tab-group) to display tabbed content.\n * @documentation https://pureui.xyz/components/tab-panel\n * @status stable\n * @since 1.0\n *\n * @slot - The tab panel's content.\n *\n * @csspart base - The component's base wrapper.\n *\n * @cssproperty --padding - The tab panel's padding.\n */",
+          "documentation": "https://pureui.xyz/components/tab-panel",
+          "status": "stable",
+          "since": "1.0"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PTabPanel",
+            "module": "components/tab-panel/tab-panel.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "components/table/table.js",
       "declarations": [
         {
@@ -18246,122 +18386,6 @@
           "declaration": {
             "name": "PTable",
             "module": "components/table/table.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/tab-panel/tab-panel.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PTabPanel",
-          "cssProperties": [
-            {
-              "description": "The tab panel's padding.",
-              "name": "--padding"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The tab panel's content.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "attrId",
-              "type": {
-                "text": "number"
-              },
-              "privacy": "private",
-              "readonly": true,
-              "default": "++id"
-            },
-            {
-              "kind": "field",
-              "name": "componentId",
-              "privacy": "private",
-              "readonly": true,
-              "default": "`p-tab-panel-${this.attrId}`"
-            },
-            {
-              "kind": "field",
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "The tab panel's name.",
-              "attribute": "name",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "active",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "When true, the tab panel will be shown.",
-              "attribute": "active",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleActiveChange"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "The tab panel's name.",
-              "fieldName": "name"
-            },
-            {
-              "name": "active",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "When true, the tab panel will be shown.",
-              "fieldName": "active"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "Tab panels are used inside [tab groups](/components/tab-group) to display tabbed content.",
-          "tagNameWithoutPrefix": "tab-panel",
-          "tagName": "p-tab-panel",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary Tab panels are used inside [tab groups](/components/tab-group) to display tabbed content.\n * @documentation https://pureui.xyz/components/tab-panel\n * @status stable\n * @since 1.0\n *\n * @slot - The tab panel's content.\n *\n * @csspart base - The component's base wrapper.\n *\n * @cssproperty --padding - The tab panel's padding.\n */",
-          "documentation": "https://pureui.xyz/components/tab-panel",
-          "status": "stable",
-          "since": "1.0"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PTabPanel",
-            "module": "components/tab-panel/tab-panel.js"
           }
         }
       ]
@@ -20439,7 +20463,7 @@
   "package": {
     "name": "pure-uikit",
     "description": "A forward-thinking library of web components.",
-    "version": "1.2.0",
+    "version": "1.2.16",
     "author": "Mr.P",
     "homepage": "https://pureui.xyz",
     "license": "MIT"

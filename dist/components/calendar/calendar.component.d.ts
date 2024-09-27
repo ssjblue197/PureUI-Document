@@ -2,6 +2,7 @@ import PIcon from "../icon/icon.component.js";
 import PPopup from "../popup/popup.component.js";
 import PTag from "../tag/tag.component.js";
 import PureElement from "../../internal/pure-ui-element.js";
+import type { CalendarInterface } from "../../internal/calendar.js";
 import type { CSSResultGroup, TemplateResult } from "lit";
 import type { PureFormControl } from "../../internal/pure-ui-element.js";
 export interface RenderDayOptions {
@@ -156,6 +157,11 @@ export default class PCalendar extends PureElement implements PureFormControl {
      * be an array. **For this reason, values must not contain spaces.**
      */
     _value: Date | Date[];
+    static get properties(): {
+        value: {
+            type: ObjectConstructor;
+        };
+    };
     get value(): string | Date | (string | Date)[];
     set value(value: string | string[]);
     /** The default value of the form control. Primarily used for resetting the form control. */
@@ -239,6 +245,17 @@ export default class PCalendar extends PureElement implements PureFormControl {
      */
     type: "single" | "multiple" | "range";
     /**
+     * The interface of the calendar.
+     * - "day": a regular calendar for selecting day according to Calendar type .
+     * - "month": a calendar for selecting a month and year according to Calendar type .
+     * - "year": a calendar for selecting a year according to Calendar type .
+     *
+     * @attribute interface
+     * @type {"day" | "month" | "year"}
+     * @default "day"
+     */
+    interface: CalendarInterface;
+    /**
      * If `true`, the calendar will automatically receive focus when it open.
      * This can be useful when using the calendar in a dialog or other scenario where it should
      * receive focus without requiring the user to click on it.
@@ -314,6 +331,5 @@ export default class PCalendar extends PureElement implements PureFormControl {
     goToPreviousYear(event: MouseEvent): void;
     /** Moves the calendar to the next year. */
     goToNextYear(event: MouseEvent): void;
-    handleMonthChange(): void;
     render(): TemplateResult<1>;
 }

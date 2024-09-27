@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="default" data-pure-ui-version="1.2.15">
+<html lang="en" data-layout="default" data-pure-ui-version="1.2.16">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -83,7 +83,7 @@
         <a href="/">
           <img src="/assets/images/wordmark.svg" alt="Pure UI" />
         </a>
-        <div class="sidebar-version">1.2.15</div>
+        <div class="sidebar-version">1.2.16</div>
       </header>
 
       <button class="search-box" type="button" title="Press / to search" aria-label="Search" data-plugin="search">
@@ -468,13 +468,13 @@
             <li>Pure UI: 2.15.1</li>
           </ul>
           <p>To get started using Pure UI with Astro, the following packages must be installed.</p>
-          <pre><code class="language-bash" id="code-block-96"><span class="token function">npm</span> <span class="token function">install</span> pure-uikit rollup-plugin-copy
-</code><p-copy-button class="copy-code-button" from="code-block-96"></p-copy-button></pre>
+          <pre><code class="language-bash" id="code-block-1126"><span class="token function">npm</span> <span class="token function">install</span> pure-uikit rollup-plugin-copy
+</code><p-copy-button class="copy-code-button" from="code-block-1126"></p-copy-button></pre>
           <h3 id="importing-components" class="anchor-heading">
             Importing components<a href="#importing-components" aria-label='Direct link to "Importing components"'></a>
           </h3>
           <p>In <code>/src/pages/index.astro</code>, set the base path and import Pure UI.</p>
-          <pre><code class="language-html" id="code-block-97">---
+          <pre><code class="language-html" id="code-block-1127">---
 // import default stylesheet
 import "pure-uikit/dist/themes/light.css";
 ---
@@ -493,7 +493,7 @@ import "pure-uikit/dist/themes/light.css";
   <span class="token comment">// Load all components.</span>
   <span class="token keyword">import</span> <span class="token string">"pure-uikit"</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-97"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1127"></p-copy-button></pre>
           <div role="alert" class="callout callout--tip">
             <p>
               If you want to cherry pick components, replace the main Pure UI import with ‘import
@@ -511,7 +511,7 @@ import "pure-uikit/dist/themes/light.css";
             ></a>
           </h3>
           <p>In <code>/src/pages/index.astro</code>, set custom animations after the Pure UI import.</p>
-          <pre><code class="language-html" id="code-block-98">---
+          <pre><code class="language-html" id="code-block-1128">---
 import { setBasePath } from "pure-uikit/dist/utilities/base-path.js";
 setBasePath("dist/assets");
 ---
@@ -543,7 +543,7 @@ setBasePath("dist/assets");
     <span class="token literal-property property">options</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">duration</span><span class="token operator">:</span> duration<span class="token punctuation">,</span> <span class="token literal-property property">easing</span><span class="token operator">:</span> <span class="token string">"ease"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-98"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1128"></p-copy-button></pre>
           <h2 id="modifying-astro-config" class="anchor-heading">
             Modifying Astro Config<a
               href="#modifying-astro-config"
@@ -555,7 +555,7 @@ setBasePath("dist/assets");
             we can install <code>rollup-plugin-copy</code> to copy Pure UI’s assets into your public directory.
           </p>
           <p>Here’s what your Astro config should look like:</p>
-          <pre><code class="language-js" id="code-block-99"><span class="token comment">// astro.config.mjs</span>
+          <pre><code class="language-js" id="code-block-1129"><span class="token comment">// astro.config.mjs</span>
 
 <span class="token keyword">import</span> <span class="token punctuation">{</span> defineConfig <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"astro/config"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> copy <span class="token keyword">from</span> <span class="token string">"rollup-plugin-copy"</span><span class="token punctuation">;</span>
@@ -578,7 +578,7 @@ setBasePath("dist/assets");
     <span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-99"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1129"></p-copy-button></pre>
         </div>
       </article>
     </main>

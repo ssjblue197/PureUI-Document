@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="component" data-pure-ui-version="1.2.15">
+<html lang="en" data-layout="component" data-pure-ui-version="1.2.16">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -83,7 +83,7 @@
         <a href="/">
           <img src="/assets/images/wordmark.svg" alt="Pure UI" />
         </a>
-        <div class="sidebar-version">1.2.15</div>
+        <div class="sidebar-version">1.2.16</div>
       </header>
 
       <button class="search-box" type="button" title="Press / to search" aria-label="Search" data-plugin="search">
@@ -437,7 +437,7 @@
 
           <div class="code-preview">
             <div class="code-preview__preview">
-              <p-table class="table-example"> </p-table>
+              <p-table class="table-example" limit="2"> </p-table>
               <script>
                 (() => {
                   const table = document.querySelector('.table-example');
@@ -699,10 +699,11 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-365">
+            <div class="code-preview__source-group" id="code-preview-source-group-357">
               <div class="code-preview__source code-preview__source--html">
-                <pre><code class="language-html" id="code-block-1059"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-table</span>
+                <pre><code class="language-html" id="code-block-914"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-table</span>
   <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>table-example<span class="token punctuation">"</span></span>
+  <span class="token attr-name">limit</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2<span class="token punctuation">"</span></span>
 <span class="token punctuation">&gt;</span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-table</span><span class="token punctuation">&gt;</span></span>
@@ -968,7 +969,7 @@
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
 
 
-</code><p-copy-button class="copy-code-button" from="code-block-1059"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-914"></p-copy-button></pre>
               </div>
             </div>
 
@@ -977,7 +978,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-365"
+                aria-controls="code-preview-source-group-357"
               >
                 Source
                 <svg
@@ -1038,7 +1039,7 @@
                 >
                 using a script tag:
               </p>
-              <pre><code class="language-html" id="code-block-1060"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.2.15/cdn/components/table/table.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-1060"></p-copy-button></pre>
+              <pre><code class="language-html" id="code-block-915"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.2.16/cdn/components/table/table.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-915"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="import">
@@ -1053,17 +1054,17 @@
                 >
                 using a JavaScript import:
               </p>
-              <pre><code class="language-js" id="code-block-1061"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.2.15/cdn/components/table/table.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1061"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-916"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.2.16/cdn/components/table/table.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-916"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="bundler">
               <p>To import this component using <a href="/getting-started/installation#bundling">a bundler</a>:</p>
-              <pre><code class="language-js" id="code-block-1062"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/table/table.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1062"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-917"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/table/table.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-917"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="react">
               <p>To import this component as a <a href="/frameworks/react">React component</a>:</p>
-              <pre><code class="language-js" id="code-block-1063"><span class="token keyword">import</span> PTable <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/table'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1063"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-918"><span class="token keyword">import</span> PTable <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/table'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-918"></p-copy-button></pre>
             </p-tab-panel>
           </p-tab-group>
 

@@ -1,12 +1,12 @@
 import type { DefineComponent } from "vue";
 
 import type { PAlert } from "../../components/alert/alert.component.js";
-import type { PAnimation } from "../../components/animation/animation.component.js";
-import type { PAnimatedImage } from "../../components/animated-image/animated-image.component.js";
 import type { PAvatar } from "../../components/avatar/avatar.component.js";
 import type { PBadge } from "../../components/badge/badge.component.js";
 import type { PBreadcrumb } from "../../components/breadcrumb/breadcrumb.component.js";
+import type { PAnimatedImage } from "../../components/animated-image/animated-image.component.js";
 import type { PBreadcrumbItem } from "../../components/breadcrumb-item/breadcrumb-item.component.js";
+import type { PAnimation } from "../../components/animation/animation.component.js";
 import type { PButton } from "../../components/button/button.component.js";
 import type { PButtonGroup } from "../../components/button-group/button-group.component.js";
 import type { PCalendar } from "../../components/calendar/calendar.component.js";
@@ -88,6 +88,70 @@ the alert will not close on its own. */
   "onp-after-hide"?: (e: CustomEvent<never>) => void;
 };
 
+type PAvatarProps = {
+  /** The image source to use for the avatar. */
+  image?: PAvatar["image"];
+  /** A label to use to describe the avatar to assistive devices. */
+  label?: PAvatar["label"];
+  /** Initials to use as a fallback when no image is available (1-2 characters max recommended). */
+  initials?: PAvatar["initials"];
+  /** Indicates how the browser should load the image. */
+  loading?: PAvatar["loading"];
+  /** The shape of the avatar. */
+  shape?: PAvatar["shape"];
+
+  /** The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause. */
+  "onp-error"?: (e: CustomEvent<never>) => void;
+};
+
+type PBadgeProps = {
+  /** The badge's theme variant. */
+  variant?: PBadge["variant"];
+  /** Draws a pill-style badge with rounded edges. */
+  pill?: PBadge["pill"];
+  /** Makes the badge pulsate to draw attention. */
+  pulse?: PBadge["pulse"];
+};
+
+type PBreadcrumbProps = {
+  /** The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by
+screen readers and other assistive devices to provide more context for users. */
+  label?: PBreadcrumb["label"];
+  /**  */
+  defaultSlot?: PBreadcrumb["defaultSlot"];
+  /**  */
+  separatorSlot?: PBreadcrumb["separatorSlot"];
+};
+
+type PAnimatedImageProps = {
+  /** The path to the image to load. */
+  src?: PAnimatedImage["src"];
+  /** A description of the image used by assistive devices. */
+  alt?: PAnimatedImage["alt"];
+  /** Plays the animation. When this attribute is remove, the animation will pause. */
+  play?: PAnimatedImage["play"];
+  /**  */
+  animatedImage?: PAnimatedImage["animatedImage"];
+  /**  */
+  frozenFrame?: PAnimatedImage["frozenFrame"];
+  /**  */
+  isLoaded?: PAnimatedImage["isLoaded"];
+  /** Emitted when the image loads successfully. */
+  "onp-load"?: (e: CustomEvent<never>) => void;
+  /** Emitted when the image fails to load. */
+  "onp-error"?: (e: CustomEvent<never>) => void;
+};
+
+type PBreadcrumbItemProps = {
+  /** Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered
+internally. When unset, a button will be rendered instead. */
+  href?: PBreadcrumbItem["href"];
+  /** Tells the browser where to open the link. Only used when `href` is set. */
+  target?: PBreadcrumbItem["target"];
+  /** The `rel` attribute to use on the link. Only used when `href` is set. */
+  rel?: PBreadcrumbItem["rel"];
+};
+
 type PAnimationProps = {
   /** The name of the built-in animation to use. For custom animations, use the `keyframes` prop. */
   name?: PAnimation["name"];
@@ -128,70 +192,6 @@ value can be changed without causing the animation to restart. */
   "onp-finish"?: (e: CustomEvent<never>) => void;
   /** Emitted when the animation starts or restarts. */
   "onp-start"?: (e: CustomEvent<never>) => void;
-};
-
-type PAnimatedImageProps = {
-  /** The path to the image to load. */
-  src?: PAnimatedImage["src"];
-  /** A description of the image used by assistive devices. */
-  alt?: PAnimatedImage["alt"];
-  /** Plays the animation. When this attribute is remove, the animation will pause. */
-  play?: PAnimatedImage["play"];
-  /**  */
-  animatedImage?: PAnimatedImage["animatedImage"];
-  /**  */
-  frozenFrame?: PAnimatedImage["frozenFrame"];
-  /**  */
-  isLoaded?: PAnimatedImage["isLoaded"];
-  /** Emitted when the image loads successfully. */
-  "onp-load"?: (e: CustomEvent<never>) => void;
-  /** Emitted when the image fails to load. */
-  "onp-error"?: (e: CustomEvent<never>) => void;
-};
-
-type PAvatarProps = {
-  /** The image source to use for the avatar. */
-  image?: PAvatar["image"];
-  /** A label to use to describe the avatar to assistive devices. */
-  label?: PAvatar["label"];
-  /** Initials to use as a fallback when no image is available (1-2 characters max recommended). */
-  initials?: PAvatar["initials"];
-  /** Indicates how the browser should load the image. */
-  loading?: PAvatar["loading"];
-  /** The shape of the avatar. */
-  shape?: PAvatar["shape"];
-
-  /** The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause. */
-  "onp-error"?: (e: CustomEvent<never>) => void;
-};
-
-type PBadgeProps = {
-  /** The badge's theme variant. */
-  variant?: PBadge["variant"];
-  /** Draws a pill-style badge with rounded edges. */
-  pill?: PBadge["pill"];
-  /** Makes the badge pulsate to draw attention. */
-  pulse?: PBadge["pulse"];
-};
-
-type PBreadcrumbProps = {
-  /** The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by
-screen readers and other assistive devices to provide more context for users. */
-  label?: PBreadcrumb["label"];
-  /**  */
-  defaultSlot?: PBreadcrumb["defaultSlot"];
-  /**  */
-  separatorSlot?: PBreadcrumb["separatorSlot"];
-};
-
-type PBreadcrumbItemProps = {
-  /** Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered
-internally. When unset, a button will be rendered instead. */
-  href?: PBreadcrumbItem["href"];
-  /** Tells the browser where to open the link. Only used when `href` is set. */
-  target?: PBreadcrumbItem["target"];
-  /** The `rel` attribute to use on the link. Only used when `href` is set. */
-  rel?: PBreadcrumbItem["rel"];
 };
 
 type PButtonProps = {
@@ -366,6 +366,11 @@ the specified value. */
 - "multiple": allows selecting multiple dates.
 - "range": allows selecting a range of dates. */
   type?: PCalendar["type"];
+  /** The interface of the calendar.
+- "day": a regular calendar for selecting day according to Calendar type .
+- "month": a calendar for selecting a month and year according to Calendar type .
+- "year": a calendar for selecting a year according to Calendar type . */
+  interface?: PCalendar["interface"];
   /** If `true`, the calendar will automatically receive focus when it open.
 This can be useful when using the calendar in a dialog or other scenario where it should
 receive focus without requiring the user to click on it. */
@@ -382,6 +387,8 @@ receive focus without requiring the user to click on it. */
   "month-labels"?: PCalendar["monthLabels"];
   /** When true, dates from the previous and next month will also be shown to fill out the grid. */
   "show-adjacent-dates"?: PCalendar["showAdjacentDates"];
+  /**  */
+  value?: PCalendar["value"];
   /**  */
   popup?: PCalendar["popup"];
   /**  */
@@ -401,8 +408,6 @@ Used when the control is not focused. */
   selectedOptions?: PCalendar["selectedOptions"];
   /**  */
   temporalEndDate?: PCalendar["temporalEndDate"];
-  /**  */
-  value?: PCalendar["value"];
   /** The default value of the form control. Primarily used for resetting the form control. */
   defaultValue?: PCalendar["defaultValue"];
   /** Gets the validity state object */
@@ -1927,47 +1932,6 @@ export type CustomElements = {
   "p-alert": DefineComponent<PAlertProps>;
 
   /**
-   * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **p-cancel** - Emitted when the animation is canceled.
-   * - **p-finish** - Emitted when the animation finishes.
-   * - **p-start** - Emitted when the animation starts or restarts.
-   *
-   * ### **Methods:**
-   *  - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.
-   * - **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.
-   *
-   * ### **Slots:**
-   *  - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.
-   */
-  "p-animation": DefineComponent<PAnimationProps>;
-
-  /**
-   * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **p-load** - Emitted when the image loads successfully.
-   * - **p-error** - Emitted when the image fails to load.
-   *
-   * ### **Slots:**
-   *  - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.
-   * - **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.
-   *
-   * ### **CSS Properties:**
-   *  - **--control-box-size** - The size of the icon box. _(default: undefined)_
-   * - **--icon-size** - The size of the play/pause icons. _(default: undefined)_
-   *
-   * ### **CSS Parts:**
-   *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
-   */
-  "p-animated-image": DefineComponent<PAnimatedImageProps>;
-
-  /**
    * Avatars are used to represent a person or object.
    * ---
    *
@@ -2017,6 +1981,28 @@ export type CustomElements = {
   "p-breadcrumb": DefineComponent<PBreadcrumbProps>;
 
   /**
+   * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **p-load** - Emitted when the image loads successfully.
+   * - **p-error** - Emitted when the image fails to load.
+   *
+   * ### **Slots:**
+   *  - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.
+   * - **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.
+   *
+   * ### **CSS Properties:**
+   *  - **--control-box-size** - The size of the icon box. _(default: undefined)_
+   * - **--icon-size** - The size of the play/pause icons. _(default: undefined)_
+   *
+   * ### **CSS Parts:**
+   *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
+   */
+  "p-animated-image": DefineComponent<PAnimatedImageProps>;
+
+  /**
    * Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.
    * ---
    *
@@ -2035,6 +2021,25 @@ export type CustomElements = {
    * - **separator** - The container that wraps the separator.
    */
   "p-breadcrumb-item": DefineComponent<PBreadcrumbItemProps>;
+
+  /**
+   * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **p-cancel** - Emitted when the animation is canceled.
+   * - **p-finish** - Emitted when the animation finishes.
+   * - **p-start** - Emitted when the animation starts or restarts.
+   *
+   * ### **Methods:**
+   *  - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.
+   * - **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.
+   *
+   * ### **Slots:**
+   *  - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.
+   */
+  "p-animation": DefineComponent<PAnimationProps>;
 
   /**
    * Buttons represent actions that are available to the user.

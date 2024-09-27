@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/JetBrains/web-types/master/schema/web-types.json",
   "name": "pure-uikit",
-  "version": "1.2.0",
+  "version": "1.2.16",
   "description-markup": "markdown",
   "contributions": {
     "html": {
@@ -99,245 +99,6 @@
               {
                 "name": "p-after-hide",
                 "description": "Emitted after the alert closes and all animations are complete."
-              }
-            ]
-          }
-        },
-        {
-          "name": "p-animation",
-          "description": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n---\n\n\n### **Events:**\n - **p-cancel** - Emitted when the animation is canceled.\n- **p-finish** - Emitted when the animation finishes.\n- **p-start** - Emitted when the animation starts or restarts.\n\n### **Methods:**\n - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.\n- **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.\n\n### **Slots:**\n - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "name",
-              "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
-              "value": { "type": "string", "default": "\"none\"" }
-            },
-            {
-              "name": "play",
-              "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
-              "value": { "type": "boolean", "default": "false" }
-            },
-            {
-              "name": "delay",
-              "description": "The number of milliseconds to delay the start of the animation.",
-              "value": { "type": "number", "default": "0" }
-            },
-            {
-              "name": "direction",
-              "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
-              "value": { "type": "PlaybackDirection", "default": "\"normal\"" }
-            },
-            {
-              "name": "duration",
-              "description": "The number of milliseconds each iteration of the animation takes to complete.",
-              "value": { "type": "number", "default": "1000" }
-            },
-            {
-              "name": "easing",
-              "description": "The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
-              "value": { "type": "string", "default": "\"linear\"" }
-            },
-            {
-              "name": "end-delay",
-              "description": "The number of milliseconds to delay after the active period of an animation sequence.",
-              "value": { "type": "number", "default": "0" }
-            },
-            {
-              "name": "fill",
-              "description": "Sets how the animation applies styles to its target before and after its execution.",
-              "value": { "type": "FillMode", "default": "\"auto\"" }
-            },
-            {
-              "name": "iterations",
-              "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops.",
-              "value": { "type": "string", "default": "Infinity" }
-            },
-            {
-              "name": "iteration-start",
-              "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
-              "value": { "type": "number", "default": "0" }
-            },
-            {
-              "name": "playback-rate",
-              "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
-              "value": { "type": "number", "default": "1" }
-            }
-          ],
-          "slots": [
-            {
-              "name": "",
-              "description": "The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements."
-            }
-          ],
-          "events": [
-            {
-              "name": "p-cancel",
-              "description": "Emitted when the animation is canceled."
-            },
-            {
-              "name": "p-finish",
-              "description": "Emitted when the animation finishes."
-            },
-            {
-              "name": "p-start",
-              "description": "Emitted when the animation starts or restarts."
-            }
-          ],
-          "js": {
-            "properties": [
-              { "name": "defaultPot", "type": "Promise<HTMLSlotElement>" },
-              {
-                "name": "name",
-                "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
-                "type": "string"
-              },
-              {
-                "name": "play",
-                "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
-                "type": "boolean"
-              },
-              {
-                "name": "delay",
-                "description": "The number of milliseconds to delay the start of the animation.",
-                "type": "number"
-              },
-              {
-                "name": "direction",
-                "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
-                "type": "PlaybackDirection"
-              },
-              {
-                "name": "duration",
-                "description": "The number of milliseconds each iteration of the animation takes to complete.",
-                "type": "number"
-              },
-              {
-                "name": "easing",
-                "description": "The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
-                "type": "string"
-              },
-              {
-                "name": "endDelay",
-                "description": "The number of milliseconds to delay after the active period of an animation sequence.",
-                "type": "number"
-              },
-              {
-                "name": "fill",
-                "description": "Sets how the animation applies styles to its target before and after its execution.",
-                "type": "FillMode"
-              },
-              {
-                "name": "iterations",
-                "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops."
-              },
-              {
-                "name": "iterationStart",
-                "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
-                "type": "number"
-              },
-              {
-                "name": "keyframes",
-                "description": "The keyframes to use for the animation. If this is set, `name` will be ignored.",
-                "type": "Keyframe[] | undefined"
-              },
-              {
-                "name": "playbackRate",
-                "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
-                "type": "number"
-              },
-              {
-                "name": "currentTime",
-                "description": "Gets and sets the current animation time.",
-                "type": "CSSNumberish"
-              }
-            ],
-            "events": [
-              {
-                "name": "p-cancel",
-                "description": "Emitted when the animation is canceled."
-              },
-              {
-                "name": "p-finish",
-                "description": "Emitted when the animation finishes."
-              },
-              {
-                "name": "p-start",
-                "description": "Emitted when the animation starts or restarts."
-              }
-            ]
-          }
-        },
-        {
-          "name": "p-animated-image",
-          "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
-          "doc-url": "",
-          "attributes": [
-            {
-              "name": "src",
-              "description": "The path to the image to load.",
-              "value": { "type": "string" }
-            },
-            {
-              "name": "alt",
-              "description": "A description of the image used by assistive devices.",
-              "value": { "type": "string" }
-            },
-            {
-              "name": "play",
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "value": { "type": "boolean" }
-            }
-          ],
-          "slots": [
-            {
-              "name": "play-icon",
-              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`."
-            },
-            {
-              "name": "pause-icon",
-              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`."
-            }
-          ],
-          "events": [
-            {
-              "name": "p-load",
-              "description": "Emitted when the image loads successfully."
-            },
-            {
-              "name": "p-error",
-              "description": "Emitted when the image fails to load."
-            }
-          ],
-          "js": {
-            "properties": [
-              { "name": "animatedImage", "type": "HTMLImageElement" },
-              { "name": "frozenFrame", "type": "string" },
-              { "name": "isLoaded", "type": "boolean" },
-              {
-                "name": "src",
-                "description": "The path to the image to load.",
-                "type": "string"
-              },
-              {
-                "name": "alt",
-                "description": "A description of the image used by assistive devices.",
-                "type": "string"
-              },
-              {
-                "name": "play",
-                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-                "type": "boolean"
-              }
-            ],
-            "events": [
-              {
-                "name": "p-load",
-                "description": "Emitted when the image loads successfully."
-              },
-              {
-                "name": "p-error",
-                "description": "Emitted when the image fails to load."
               }
             ]
           }
@@ -510,6 +271,80 @@
           }
         },
         {
+          "name": "p-animated-image",
+          "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "src",
+              "description": "The path to the image to load.",
+              "value": { "type": "string" }
+            },
+            {
+              "name": "alt",
+              "description": "A description of the image used by assistive devices.",
+              "value": { "type": "string" }
+            },
+            {
+              "name": "play",
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "value": { "type": "boolean" }
+            }
+          ],
+          "slots": [
+            {
+              "name": "play-icon",
+              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`."
+            },
+            {
+              "name": "pause-icon",
+              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`."
+            }
+          ],
+          "events": [
+            {
+              "name": "p-load",
+              "description": "Emitted when the image loads successfully."
+            },
+            {
+              "name": "p-error",
+              "description": "Emitted when the image fails to load."
+            }
+          ],
+          "js": {
+            "properties": [
+              { "name": "animatedImage", "type": "HTMLImageElement" },
+              { "name": "frozenFrame", "type": "string" },
+              { "name": "isLoaded", "type": "boolean" },
+              {
+                "name": "src",
+                "description": "The path to the image to load.",
+                "type": "string"
+              },
+              {
+                "name": "alt",
+                "description": "A description of the image used by assistive devices.",
+                "type": "string"
+              },
+              {
+                "name": "play",
+                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+                "type": "boolean"
+              }
+            ],
+            "events": [
+              {
+                "name": "p-load",
+                "description": "Emitted when the image loads successfully."
+              },
+              {
+                "name": "p-error",
+                "description": "Emitted when the image fails to load."
+              }
+            ]
+          }
+        },
+        {
           "name": "p-breadcrumb-item",
           "description": "Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.\n---\n\n\n### **Slots:**\n - _default_ - The breadcrumb item's label.\n- **prefix** - An optional prefix, usually an icon or icon button.\n- **suffix** - An optional suffix, usually an icon or icon button.\n- **separator** - The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<p-breadcrumb>` instead.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **label** - The breadcrumb item's label.\n- **prefix** - The container that wraps the prefix.\n- **suffix** - The container that wraps the suffix.\n- **separator** - The container that wraps the separator.",
           "doc-url": "",
@@ -570,6 +405,171 @@
               }
             ],
             "events": []
+          }
+        },
+        {
+          "name": "p-animation",
+          "description": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n---\n\n\n### **Events:**\n - **p-cancel** - Emitted when the animation is canceled.\n- **p-finish** - Emitted when the animation finishes.\n- **p-start** - Emitted when the animation starts or restarts.\n\n### **Methods:**\n - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.\n- **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.\n\n### **Slots:**\n - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.",
+          "doc-url": "",
+          "attributes": [
+            {
+              "name": "name",
+              "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
+              "value": { "type": "string", "default": "\"none\"" }
+            },
+            {
+              "name": "play",
+              "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
+              "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "delay",
+              "description": "The number of milliseconds to delay the start of the animation.",
+              "value": { "type": "number", "default": "0" }
+            },
+            {
+              "name": "direction",
+              "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
+              "value": { "type": "PlaybackDirection", "default": "\"normal\"" }
+            },
+            {
+              "name": "duration",
+              "description": "The number of milliseconds each iteration of the animation takes to complete.",
+              "value": { "type": "number", "default": "1000" }
+            },
+            {
+              "name": "easing",
+              "description": "The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
+              "value": { "type": "string", "default": "\"linear\"" }
+            },
+            {
+              "name": "end-delay",
+              "description": "The number of milliseconds to delay after the active period of an animation sequence.",
+              "value": { "type": "number", "default": "0" }
+            },
+            {
+              "name": "fill",
+              "description": "Sets how the animation applies styles to its target before and after its execution.",
+              "value": { "type": "FillMode", "default": "\"auto\"" }
+            },
+            {
+              "name": "iterations",
+              "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops.",
+              "value": { "type": "string", "default": "Infinity" }
+            },
+            {
+              "name": "iteration-start",
+              "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
+              "value": { "type": "number", "default": "0" }
+            },
+            {
+              "name": "playback-rate",
+              "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
+              "value": { "type": "number", "default": "1" }
+            }
+          ],
+          "slots": [
+            {
+              "name": "",
+              "description": "The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements."
+            }
+          ],
+          "events": [
+            {
+              "name": "p-cancel",
+              "description": "Emitted when the animation is canceled."
+            },
+            {
+              "name": "p-finish",
+              "description": "Emitted when the animation finishes."
+            },
+            {
+              "name": "p-start",
+              "description": "Emitted when the animation starts or restarts."
+            }
+          ],
+          "js": {
+            "properties": [
+              { "name": "defaultPot", "type": "Promise<HTMLSlotElement>" },
+              {
+                "name": "name",
+                "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
+                "type": "string"
+              },
+              {
+                "name": "play",
+                "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
+                "type": "boolean"
+              },
+              {
+                "name": "delay",
+                "description": "The number of milliseconds to delay the start of the animation.",
+                "type": "number"
+              },
+              {
+                "name": "direction",
+                "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
+                "type": "PlaybackDirection"
+              },
+              {
+                "name": "duration",
+                "description": "The number of milliseconds each iteration of the animation takes to complete.",
+                "type": "number"
+              },
+              {
+                "name": "easing",
+                "description": "The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
+                "type": "string"
+              },
+              {
+                "name": "endDelay",
+                "description": "The number of milliseconds to delay after the active period of an animation sequence.",
+                "type": "number"
+              },
+              {
+                "name": "fill",
+                "description": "Sets how the animation applies styles to its target before and after its execution.",
+                "type": "FillMode"
+              },
+              {
+                "name": "iterations",
+                "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops."
+              },
+              {
+                "name": "iterationStart",
+                "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
+                "type": "number"
+              },
+              {
+                "name": "keyframes",
+                "description": "The keyframes to use for the animation. If this is set, `name` will be ignored.",
+                "type": "Keyframe[] | undefined"
+              },
+              {
+                "name": "playbackRate",
+                "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
+                "type": "number"
+              },
+              {
+                "name": "currentTime",
+                "description": "Gets and sets the current animation time.",
+                "type": "CSSNumberish"
+              }
+            ],
+            "events": [
+              {
+                "name": "p-cancel",
+                "description": "Emitted when the animation is canceled."
+              },
+              {
+                "name": "p-finish",
+                "description": "Emitted when the animation finishes."
+              },
+              {
+                "name": "p-start",
+                "description": "Emitted when the animation starts or restarts."
+              }
+            ]
           }
         },
         {
@@ -1034,6 +1034,14 @@
               }
             },
             {
+              "name": "interface",
+              "description": "The interface of the calendar.\n- \"day\": a regular calendar for selecting day according to Calendar type .\n- \"month\": a calendar for selecting a month and year according to Calendar type .\n- \"year\": a calendar for selecting a year according to Calendar type .",
+              "value": {
+                "type": "\"day\" | \"month\" | \"year\"",
+                "default": "\"day\""
+              }
+            },
+            {
               "name": "autofocus",
               "description": "If `true`, the calendar will automatically receive focus when it open.\nThis can be useful when using the calendar in a dialog or other scenario where it should\nreceive focus without requiring the user to click on it.",
               "value": { "type": "boolean", "default": "false" }
@@ -1073,6 +1081,10 @@
               "name": "show-adjacent-dates",
               "description": "When true, dates from the previous and next month will also be shown to fill out the grid.",
               "value": { "type": "boolean", "default": "false" }
+            },
+            {
+              "name": "value",
+              "value": { "type": "string | Date | (string | Date)[]" }
             }
           ],
           "slots": [
@@ -1286,6 +1298,11 @@
                 "name": "type",
                 "description": "The type of selection the calendar allows.\n- \"single\": allows selecting a single date.\n- \"multiple\": allows selecting multiple dates.\n- \"range\": allows selecting a range of dates.",
                 "type": "\"single\" | \"multiple\" | \"range\""
+              },
+              {
+                "name": "interface",
+                "description": "The interface of the calendar.\n- \"day\": a regular calendar for selecting day according to Calendar type .\n- \"month\": a calendar for selecting a month and year according to Calendar type .\n- \"year\": a calendar for selecting a year according to Calendar type .",
+                "type": "\"day\" | \"month\" | \"year\""
               },
               {
                 "name": "autofocus",

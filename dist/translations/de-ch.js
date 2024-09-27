@@ -1,8 +1,8 @@
 import {
   de_default
 } from "../chunks/chunk.IZPPD32R.js";
-import "../chunks/chunk.BTMIVMQK.js";
-import "../chunks/chunk.5SYMINSX.js";
+import "../chunks/chunk.3C33BQBP.js";
+import "../chunks/chunk.4AVCUYNK.js";
 import {
   registerTranslation
 } from "../chunks/chunk.K6K6S6E6.js";

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="default" data-pure-ui-version="1.2.15">
+<html lang="en" data-layout="default" data-pure-ui-version="1.2.16">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -83,7 +83,7 @@
         <a href="/">
           <img src="/assets/images/wordmark.svg" alt="Pure UI" />
         </a>
-        <div class="sidebar-version">1.2.15</div>
+        <div class="sidebar-version">1.2.16</div>
       </header>
 
       <button class="search-box" type="button" title="Press / to search" aria-label="Search" data-plugin="search">
@@ -480,17 +480,17 @@
             After you’ve created your app, the first step to using Pure UI is modifying your
             <code>package.json</code> to have <code>"type": "module"</code> in it since Pure UI ships ES Modules.
           </p>
-          <pre><code class="language-json" id="code-block-109"><span class="token comment">// package.json</span>
+          <pre><code class="language-json" id="code-block-1139"><span class="token comment">// package.json</span>
 <span class="token punctuation">{</span>
   <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"module"</span>
 <span class="token punctuation">}</span>
-</code><p-copy-button class="copy-code-button" from="code-block-109"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1139"></p-copy-button></pre>
           <h3 id="installing-packages" class="anchor-heading">
             Installing packages<a href="#installing-packages" aria-label='Direct link to "Installing packages"'></a>
           </h3>
           <p>To get started using Pure UI with NextJS, the following packages must be installed.</p>
-          <pre><code class="language-bash" id="code-block-110"><span class="token function">npm</span> <span class="token function">install</span> pure-uikit copy-webpack-plugin
-</code><p-copy-button class="copy-code-button" from="code-block-110"></p-copy-button></pre>
+          <pre><code class="language-bash" id="code-block-1140"><span class="token function">npm</span> <span class="token function">install</span> pure-uikit copy-webpack-plugin
+</code><p-copy-button class="copy-code-button" from="code-block-1140"></p-copy-button></pre>
           <p>
             Pure UI for obvious reasons, and the <code>copy-webpack-plugin</code> will be used later for adding our
             icons to our <code>public/</code> folder.
@@ -516,7 +516,7 @@
             In order to add Pure UI’s assets to the final build output, we need to modify <code>next.config.js</code> to
             look like this.
           </p>
-          <pre><code class="language-javascript" id="code-block-111"><span class="token comment">// next.config.js</span>
+          <pre><code class="language-javascript" id="code-block-1141"><span class="token comment">// next.config.js</span>
 
 <span class="token keyword">import</span> <span class="token punctuation">{</span> dirname<span class="token punctuation">,</span> resolve <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"path"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> fileURLToPath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"url"</span><span class="token punctuation">;</span>
@@ -543,7 +543,7 @@
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> nextConfig<span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-111"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1141"></p-copy-button></pre>
           <div role="alert" class="callout callout--tip">
             <p>
               This will copy the files from <code>node_modules/pure-uikit/dist/assets</code> into your
@@ -562,12 +562,12 @@
             Once we’ve got our webpack config / next config setup, lets modify our <code>app/layout.tsx</code> to
             include Pure UI’s default theme.
           </p>
-          <pre><code class="language-javascript" id="code-block-112"><span class="token comment">// app/layout.tsx</span>
+          <pre><code class="language-javascript" id="code-block-1142"><span class="token comment">// app/layout.tsx</span>
 <span class="token keyword">import</span> <span class="token string">"./globals.css"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token string">"pure-uikit/dist/themes/light.css"</span><span class="token punctuation">;</span>
 <span class="token comment">// We can also import the dark theme here as well.</span>
 <span class="token comment">// import "pure-uikit/dist/themes/dark.css";</span>
-</code><p-copy-button class="copy-code-button" from="code-block-112"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1142"></p-copy-button></pre>
           <h3 id="writing-a-setup-component" class="anchor-heading">
             Writing a “setup” component<a
               href="#writing-a-setup-component"
@@ -579,7 +579,7 @@
             setting the <code>basePath</code> for our assets / icons.
           </p>
           <p>To do so, create a file called <code>app/pure-ui-setup.tsx</code></p>
-          <pre><code class="language-typescript" id="code-block-113"><span class="token string">'use client'</span><span class="token punctuation">;</span>
+          <pre><code class="language-typescript" id="code-block-1143"><span class="token string">'use client'</span><span class="token punctuation">;</span>
 <span class="token comment">// ^ Make sure to have 'use client'; because `setBasePath()` requires access to `document`.</span>
 
 <span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/utilities/base-path.js"</span>
@@ -592,13 +592,13 @@
   <span class="token function">setBasePath</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/pure-ui-assets/</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> <span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>children<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span><span class="token operator">&gt;</span>
 <span class="token punctuation">}</span>
-</code><p-copy-button class="copy-code-button" from="code-block-113"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1143"></p-copy-button></pre>
           <div role="alert" class="callout callout--warning">
             <p>Don’t forget to mark your Pure UI components and Pure UI setup with ‘use client’.</p>
           </div>
           <p>Then we’ll add this setup component into <code>app/layout.tsx</code></p>
           <p>Our <code>layout.tsx</code> Should now look something like this:</p>
-          <pre><code class="language-diff" id="code-block-114">import type { Metadata } from "next";
+          <pre><code class="language-diff" id="code-block-1144">import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 <span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line"> import "pure-uikit/dist/themes/light.css";
@@ -627,7 +627,7 @@ export default function RootLayout({
 </span><span class="token prefix unchanged"> </span><span class="token line">   &lt;/html&gt;
 </span><span class="token prefix unchanged"> </span><span class="token line"> );
 </span></span>}
-</code><p-copy-button class="copy-code-button" from="code-block-114"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1144"></p-copy-button></pre>
           <h3 id="writing-components-that-use-pure-ui" class="anchor-heading">
             Writing components that use Pure UI<a
               href="#writing-components-that-use-pure-ui"
@@ -642,7 +642,7 @@ export default function RootLayout({
             Here’s what that would look like, do note the <code>"use client";</code> at the top of the component is
             required.
           </p>
-          <pre><code class="language-typescript" id="code-block-115"><span class="token comment">// app/page.tsx</span>
+          <pre><code class="language-typescript" id="code-block-1145"><span class="token comment">// app/page.tsx</span>
 <span class="token string">'use client'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
@@ -673,7 +673,7 @@ export default function RootLayout({
     <span class="token operator">&lt;</span><span class="token operator">/</span>main<span class="token operator">&gt;</span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code><p-copy-button class="copy-code-button" from="code-block-115"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1145"></p-copy-button></pre>
           <p>Now you should be up and running with NextJS + Pure UI!</p>
           <p>
             If you’re stuck, there’s an
@@ -698,8 +698,8 @@ export default function RootLayout({
             <li>Pure UI: 2.0.0-beta.74</li>
           </ul>
           <p>To get started using Pure UI with NextJS, the following packages must be installed.</p>
-          <pre><code class="language-bash" id="code-block-116"><span class="token function">yarn</span> <span class="token function">add</span> pure-uikit copy-webpack-plugin next-compose-plugins next-transpile-modules
-</code><p-copy-button class="copy-code-button" from="code-block-116"></p-copy-button></pre>
+          <pre><code class="language-bash" id="code-block-1146"><span class="token function">yarn</span> <span class="token function">add</span> pure-uikit copy-webpack-plugin next-compose-plugins next-transpile-modules
+</code><p-copy-button class="copy-code-button" from="code-block-1146"></p-copy-button></pre>
           <h3 id="enabling-esm" class="anchor-heading">
             Enabling ESM<a href="#enabling-esm" aria-label='Direct link to "Enabling ESM"'></a>
           </h3>
@@ -707,8 +707,8 @@ export default function RootLayout({
             Because Pure UI utilizes ESM, we need to modify our <code>package.json</code> to support ESM packages.
             Simply add the following to your root of <code>package.json</code>:
           </p>
-          <pre><code id="code-block-117">"type": "module"
-</code><p-copy-button class="copy-code-button" from="code-block-117"></p-copy-button></pre>
+          <pre><code id="code-block-1147">"type": "module"
+</code><p-copy-button class="copy-code-button" from="code-block-1147"></p-copy-button></pre>
           <p>
             There’s one more step to enable ESM in NextJS, but we’ll tackle that in our Next configuration modification.
           </p>
@@ -719,8 +719,8 @@ export default function RootLayout({
             ></a>
           </h3>
           <p>The next step is to import Pure UI’s default theme (stylesheet) in your <code>_app.js</code> file:</p>
-          <pre><code class="language-css" id="code-block-118">import <span class="token string">'pure-uikit/dist/themes/light.css'</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-118"></p-copy-button></pre>
+          <pre><code class="language-css" id="code-block-1148">import <span class="token string">'pure-uikit/dist/themes/light.css'</span><span class="token punctuation">;</span>
+</code><p-copy-button class="copy-code-button" from="code-block-1148"></p-copy-button></pre>
           <h3 id="defining-custom-elements" class="anchor-heading">
             Defining Custom Elements<a
               href="#defining-custom-elements"
@@ -743,7 +743,7 @@ export default function RootLayout({
             >
             to add in the custom components before the first render:
           </p>
-          <pre><code class="language-javascript" id="code-block-119"><span class="token keyword">function</span> <span class="token function">CustomEls</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> <span class="token constant">URL</span> <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <pre><code class="language-javascript" id="code-block-1149"><span class="token keyword">function</span> <span class="token function">CustomEls</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> <span class="token constant">URL</span> <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token comment">// useRef to avoid re-renders</span>
   <span class="token keyword">const</span> customEls <span class="token operator">=</span> <span class="token function">useRef</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -766,7 +766,7 @@ export default function RootLayout({
 
   <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code><p-copy-button class="copy-code-button" from="code-block-119"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1149"></p-copy-button></pre>
           <div role="alert" class="callout callout--tip">
             <p>
               If we use <code>useEffect</code> instead of <code>useLayoutEffect</code>, the initial render will occur
@@ -796,7 +796,7 @@ export default function RootLayout({
             for trying to use <code>useLayoutEffect</code> in SSR, which is disallowed. To fix this problem, we’ll
             conditionally render the <code>CustomEls</code> component to only render in the browser
           </p>
-          <pre><code class="language-javascript" id="code-block-120"><span class="token keyword">function</span> <span class="token function">MyApp</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> Component<span class="token punctuation">,</span> pageProps<span class="token punctuation">,</span> <span class="token constant">URL</span> <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <pre><code class="language-javascript" id="code-block-1150"><span class="token keyword">function</span> <span class="token function">MyApp</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> Component<span class="token punctuation">,</span> pageProps<span class="token punctuation">,</span> <span class="token constant">URL</span> <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> isBrowser <span class="token operator">=</span> <span class="token keyword">typeof</span> window <span class="token operator">!==</span> <span class="token string">"undefined"</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> <span class="token punctuation">(</span>
     <span class="token operator">&lt;</span><span class="token operator">&gt;</span>
@@ -805,7 +805,7 @@ export default function RootLayout({
     <span class="token operator">&lt;</span><span class="token operator">/</span><span class="token operator">&gt;</span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code><p-copy-button class="copy-code-button" from="code-block-120"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1150"></p-copy-button></pre>
           <h2 id="additional-resources" class="anchor-heading">
             Additional Resources<a href="#additional-resources" aria-label='Direct link to "Additional Resources"'></a>
           </h2>

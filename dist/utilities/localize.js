@@ -1,7 +1,7 @@
 import {
   LocalizeController
-} from "../chunks/chunk.BTMIVMQK.js";
-import "../chunks/chunk.5SYMINSX.js";
+} from "../chunks/chunk.3C33BQBP.js";
+import "../chunks/chunk.4AVCUYNK.js";
 import {
   registerTranslation
 } from "../chunks/chunk.K6K6S6E6.js";

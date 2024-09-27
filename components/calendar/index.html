@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="component" data-pure-ui-version="1.2.15">
+<html lang="en" data-layout="component" data-pure-ui-version="1.2.16">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -89,7 +89,7 @@
         <a href="/">
           <img src="/assets/images/wordmark.svg" alt="Pure UI" />
         </a>
-        <div class="sidebar-version">1.2.15</div>
+        <div class="sidebar-version">1.2.16</div>
       </header>
 
       <button class="search-box" type="button" title="Press / to search" aria-label="Search" data-plugin="search">
@@ -455,7 +455,7 @@
 
           <div class="code-preview">
             <div class="code-preview__preview">
-              <p-calendar type="multiple" class="calendar-preview" format="YYYY-MM-DD" show-adjacent-dates="">
+              <p-calendar type="range" interface="month" class="calendar-preview" format="YYYY-MM">
                 <div slot="footer"></div>
               </p-calendar>
 
@@ -464,7 +464,11 @@
                   const calendar = document.querySelector('.calendar-preview');
                   const today = new Date();
 
-                  calendar.value = ['2024-09-11', '2024-10-11'];
+                  calendar.value = ['2024-09', '2024-10'];
+
+                  calendar.addEventListener('p-change', e => {
+                    calendar.value = e.target.value;
+                  });
                 })();
               </script>
 
@@ -473,11 +477,10 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-464">
+            <div class="code-preview__source-group" id="code-preview-source-group-58">
               <div class="code-preview__source code-preview__source--html">
-                <pre><code class="language-html" id="code-block-1247"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-calendar</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>multiple<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>calendar-preview<span class="token punctuation">"</span></span>
-  <span class="token attr-name">format</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>YYYY-MM-DD<span class="token punctuation">"</span></span>
-  <span class="token attr-name">show-adjacent-dates</span>
+                <pre><code class="language-html" id="code-block-149"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-calendar</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>range<span class="token punctuation">"</span></span> <span class="token attr-name">interface</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>month<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>calendar-preview<span class="token punctuation">"</span></span>
+  <span class="token attr-name">format</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>YYYY-MM<span class="token punctuation">"</span></span>
 <span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>footer<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-calendar</span><span class="token punctuation">&gt;</span></span>
@@ -488,14 +491,17 @@
   <span class="token keyword">const</span> today <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
   calendar<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token punctuation">[</span>
-    <span class="token string">'2024-09-11'</span><span class="token punctuation">,</span>
-    <span class="token string">'2024-10-11'</span><span class="token punctuation">,</span>
+    <span class="token string">'2024-09'</span><span class="token punctuation">,</span>
+    <span class="token string">'2024-10'</span><span class="token punctuation">,</span>
   <span class="token punctuation">]</span><span class="token punctuation">;</span>
 
+  calendar<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'p-change'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    calendar<span class="token punctuation">.</span>value <span class="token operator">=</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
 
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-1247"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-149"></p-copy-button></pre>
               </div>
             </div>
 
@@ -504,7 +510,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-464"
+                aria-controls="code-preview-source-group-58"
               >
                 Source
                 <svg
@@ -562,13 +568,13 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-465">
+            <div class="code-preview__source-group" id="code-preview-source-group-59">
               <div class="code-preview__source code-preview__source--html">
-                <pre><code class="language-html" id="code-block-1248"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-calendar</span> <span class="token attr-name">month-labels</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>short<span class="token punctuation">"</span></span> <span class="token attr-name">day-labels</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>narrow<span class="token punctuation">"</span></span>
+                <pre><code class="language-html" id="code-block-150"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-calendar</span> <span class="token attr-name">month-labels</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>short<span class="token punctuation">"</span></span> <span class="token attr-name">day-labels</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>narrow<span class="token punctuation">"</span></span>
   <span class="token attr-name">format</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>YYYY-MM-DD<span class="token punctuation">"</span></span>
 <span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-calendar</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-1248"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-150"></p-copy-button></pre>
               </div>
             </div>
 
@@ -577,7 +583,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-465"
+                aria-controls="code-preview-source-group-59"
               >
                 Source
                 <svg
@@ -631,10 +637,10 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-466">
+            <div class="code-preview__source-group" id="code-preview-source-group-60">
               <div class="code-preview__source code-preview__source--html">
-                <pre><code class="language-html" id="code-block-1249"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-calendar</span> <span class="token attr-name">show-adjacent-dates</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-calendar</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-1249"></p-copy-button></pre>
+                <pre><code class="language-html" id="code-block-151"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-calendar</span> <span class="token attr-name">show-adjacent-dates</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-calendar</span><span class="token punctuation">&gt;</span></span>
+</code><p-copy-button class="copy-code-button" from="code-block-151"></p-copy-button></pre>
               </div>
             </div>
 
@@ -643,7 +649,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-466"
+                aria-controls="code-preview-source-group-60"
               >
                 Source
                 <svg
@@ -708,9 +714,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-467">
+            <div class="code-preview__source-group" id="code-preview-source-group-61">
               <div class="code-preview__source code-preview__source--html">
-                <pre><code class="language-html" id="code-block-1250"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-calendar</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>calendar-multiple-selection<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>multiple<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-calendar</span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-152"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-calendar</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>calendar-multiple-selection<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>multiple<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-calendar</span><span class="token punctuation">&gt;</span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">const</span> calendar <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.calendar-multiple-selection'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -723,7 +729,7 @@
     <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>today<span class="token punctuation">.</span><span class="token function">getFullYear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> today<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">19</span><span class="token punctuation">)</span>
   <span class="token punctuation">]</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-1250"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-152"></p-copy-button></pre>
               </div>
             </div>
 
@@ -732,7 +738,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-467"
+                aria-controls="code-preview-source-group-61"
               >
                 Source
                 <svg
@@ -796,9 +802,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-468">
+            <div class="code-preview__source-group" id="code-preview-source-group-62">
               <div class="code-preview__source code-preview__source--html">
-                <pre><code class="language-html" id="code-block-1251"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-calendar</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>calendar-range-selection<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>range<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-calendar</span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-153"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-calendar</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>calendar-range-selection<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>range<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-calendar</span><span class="token punctuation">&gt;</span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">const</span> calendar <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.calendar-range-selection'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -809,7 +815,7 @@
     <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>today<span class="token punctuation">.</span><span class="token function">getFullYear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> today<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">19</span><span class="token punctuation">)</span>
   <span class="token punctuation">]</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-1251"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-153"></p-copy-button></pre>
               </div>
             </div>
 
@@ -818,7 +824,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-468"
+                aria-controls="code-preview-source-group-62"
               >
                 Source
                 <svg
@@ -891,9 +897,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-469">
+            <div class="code-preview__source-group" id="code-preview-source-group-63">
               <div class="code-preview__source code-preview__source--html">
-                <pre><code class="language-html" id="code-block-1252"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-calendar</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>range<span class="token punctuation">"</span></span> <span class="token attr-name">interface</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>month<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>calendar-interface<span class="token punctuation">"</span></span>
+                <pre><code class="language-html" id="code-block-154"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-calendar</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>range<span class="token punctuation">"</span></span> <span class="token attr-name">interface</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>month<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>calendar-interface<span class="token punctuation">"</span></span>
   <span class="token attr-name">format</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>YYYY-MM<span class="token punctuation">"</span></span>
 <span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>footer<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
@@ -911,7 +917,7 @@
 
 
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-1252"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-154"></p-copy-button></pre>
               </div>
             </div>
 
@@ -920,7 +926,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-469"
+                aria-controls="code-preview-source-group-63"
               >
                 Source
                 <svg
@@ -983,9 +989,9 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-470">
+            <div class="code-preview__source-group" id="code-preview-source-group-64">
               <div class="code-preview__source code-preview__source--html">
-                <pre><code class="language-html" id="code-block-1253"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-calendar</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>calendar-mode-inline<span class="token punctuation">"</span></span> <span class="token attr-name">mode</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>inline<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-calendar</span><span class="token punctuation">&gt;</span></span>
+                <pre><code class="language-html" id="code-block-155"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-calendar</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>calendar-mode-inline<span class="token punctuation">"</span></span> <span class="token attr-name">mode</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>inline<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-calendar</span><span class="token punctuation">&gt;</span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">const</span> calendar <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.calendar-mode-inline'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -996,7 +1002,7 @@
     <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>today<span class="token punctuation">.</span><span class="token function">getFullYear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> today<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">19</span><span class="token punctuation">)</span>
   <span class="token punctuation">]</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-1253"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-155"></p-copy-button></pre>
               </div>
             </div>
 
@@ -1005,7 +1011,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-470"
+                aria-controls="code-preview-source-group-64"
               >
                 Source
                 <svg
@@ -1056,10 +1062,10 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-471">
+            <div class="code-preview__source-group" id="code-preview-source-group-65">
               <div class="code-preview__source code-preview__source--html">
-                <pre><code class="language-html" id="code-block-1254"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-calendar</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">--border-width</span><span class="token punctuation">:</span> 1px<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-calendar</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-1254"></p-copy-button></pre>
+                <pre><code class="language-html" id="code-block-156"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-calendar</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">--border-width</span><span class="token punctuation">:</span> 1px<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-calendar</span><span class="token punctuation">&gt;</span></span>
+</code><p-copy-button class="copy-code-button" from="code-block-156"></p-copy-button></pre>
               </div>
             </div>
 
@@ -1068,7 +1074,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-471"
+                aria-controls="code-preview-source-group-65"
               >
                 Source
                 <svg
@@ -1122,10 +1128,10 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-472">
+            <div class="code-preview__source-group" id="code-preview-source-group-66">
               <div class="code-preview__source code-preview__source--html">
-                <pre><code class="language-html" id="code-block-1255"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-calendar</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>es<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-calendar</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-1255"></p-copy-button></pre>
+                <pre><code class="language-html" id="code-block-157"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-calendar</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>es<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-calendar</span><span class="token punctuation">&gt;</span></span>
+</code><p-copy-button class="copy-code-button" from="code-block-157"></p-copy-button></pre>
               </div>
             </div>
 
@@ -1134,7 +1140,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-472"
+                aria-controls="code-preview-source-group-66"
               >
                 Source
                 <svg
@@ -1197,7 +1203,7 @@
                 >
                 using a script tag:
               </p>
-              <pre><code class="language-html" id="code-block-1256"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.2.15/cdn/components/calendar/calendar.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-1256"></p-copy-button></pre>
+              <pre><code class="language-html" id="code-block-158"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.2.16/cdn/components/calendar/calendar.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-158"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="import">
@@ -1212,17 +1218,17 @@
                 >
                 using a JavaScript import:
               </p>
-              <pre><code class="language-js" id="code-block-1257"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.2.15/cdn/components/calendar/calendar.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1257"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-159"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.2.16/cdn/components/calendar/calendar.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-159"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="bundler">
               <p>To import this component using <a href="/getting-started/installation#bundling">a bundler</a>:</p>
-              <pre><code class="language-js" id="code-block-1258"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/calendar/calendar.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1258"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-160"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/calendar/calendar.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-160"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="react">
               <p>To import this component as a <a href="/frameworks/react">React component</a>:</p>
-              <pre><code class="language-js" id="code-block-1259"><span class="token keyword">import</span> PCalendar <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/calendar'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1259"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-161"><span class="token keyword">import</span> PCalendar <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/calendar'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-161"></p-copy-button></pre>
             </p-tab-panel>
           </p-tab-group>
 
