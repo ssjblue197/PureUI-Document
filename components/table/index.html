@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="component" data-pure-ui-version="1.2.0">
+<html lang="en" data-layout="component" data-pure-ui-version="1.3.1">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -83,7 +83,7 @@
         <a href="/">
           <img src="/assets/images/wordmark.svg" alt="Pure UI" />
         </a>
-        <div class="sidebar-version">1.2.0</div>
+        <div class="sidebar-version">1.3.1</div>
       </header>
 
       <button class="search-box" type="button" title="Press / to search" aria-label="Search" data-plugin="search">
@@ -326,6 +326,10 @@
               </li>
 
               <li>
+                <a href="/components/smart-container"> Smart Container </a>
+              </li>
+
+              <li>
                 <a href="/components/spinner"> Spinner </a>
               </li>
 
@@ -409,6 +413,31 @@
         <div class="content__toc">
           <ul>
             <li class="top"><a href="#">Pure UI</a></li>
+            <li data-level="2"><a href="#tableoptions-interface">TableOptions Interface</a></li>
+            <li data-level="3"><a href="#columns">columns</a></li>
+            <li data-level="3"><a href="#getselectedrows">getSelectedRows</a></li>
+            <li data-level="3"><a href="#minheight">minHeight</a></li>
+            <li data-level="3"><a href="#maxheight">maxHeight</a></li>
+            <li data-level="3"><a href="#selectable">selectable</a></li>
+            <li data-level="3"><a href="#hideheader">hideHeader</a></li>
+            <li data-level="3"><a href="#hidefooter">hideFooter</a></li>
+            <li data-level="3"><a href="#paginate">paginate</a></li>
+            <li data-level="2"><a href="#columnconfig-properties">ColumnConfig Properties</a></li>
+            <li data-level="3"><a href="#field">field</a></li>
+            <li data-level="3"><a href="#hide">hide</a></li>
+            <li data-level="3"><a href="#resizable">resizable</a></li>
+            <li data-level="3"><a href="#headername">headerName</a></li>
+            <li data-level="3"><a href="#width">width</a></li>
+            <li data-level="3"><a href="#minwidth">minWidth</a></li>
+            <li data-level="3"><a href="#maxwidth">maxWidth</a></li>
+            <li data-level="3"><a href="#render">render</a></li>
+            <li data-level="3"><a href="#alignitems">alignItems</a></li>
+            <li data-level="3"><a href="#justifycontent">justifyContent</a></li>
+            <li data-level="3"><a href="#justifyitems">justifyItems</a></li>
+            <li data-level="3"><a href="#classes">classes</a></li>
+            <li data-level="3"><a href="#truncate">truncate</a></li>
+            <li data-level="3"><a href="#sticky">sticky</a></li>
+            <li data-level="3"><a href="#stickyoffset">stickyOffset</a></li>
             <li data-level="2"><a href="#importing">Importing</a></li>
             <li data-level="2"><a href="#slots">Slots</a></li>
             <li data-level="2"><a href="#properties">Properties</a></li>
@@ -437,7 +466,7 @@
 
           <div class="code-preview">
             <div class="code-preview__preview">
-              <p-table class="table-example"> </p-table>
+              <p-table class="table-example" limit="2"> </p-table>
               <script>
                 (() => {
                   const table = document.querySelector('.table-example');
@@ -699,10 +728,11 @@
               </div>
             </div>
 
-            <div class="code-preview__source-group" id="code-preview-source-group-364">
+            <div class="code-preview__source-group" id="code-preview-source-group-359">
               <div class="code-preview__source code-preview__source--html">
-                <pre><code class="language-html" id="code-block-1058"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-table</span>
+                <pre><code class="language-html" id="code-block-1046"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-table</span>
   <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>table-example<span class="token punctuation">"</span></span>
+  <span class="token attr-name">limit</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2<span class="token punctuation">"</span></span>
 <span class="token punctuation">&gt;</span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-table</span><span class="token punctuation">&gt;</span></span>
@@ -968,7 +998,7 @@
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
 
 
-</code><p-copy-button class="copy-code-button" from="code-block-1058"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1046"></p-copy-button></pre>
               </div>
             </div>
 
@@ -977,7 +1007,7 @@
                 type="button"
                 class="code-preview__button code-preview__toggle"
                 aria-expanded="false"
-                aria-controls="code-preview-source-group-364"
+                aria-controls="code-preview-source-group-359"
               >
                 Source
                 <svg
@@ -1011,6 +1041,307 @@
             </div>
           </div>
 
+          <h2 id="tableoptions-interface" class="anchor-heading">
+            TableOptions Interface<a
+              href="#tableoptions-interface"
+              aria-label='Direct link to "TableOptions Interface"'
+            ></a>
+          </h2>
+          <p>
+            The <code>TableOptions&lt;T&gt;</code> interface defines the configuration options for the table component.
+            Below is a breakdown of each property:
+          </p>
+          <pre><code class="language-typescript" id="code-block-1047"><span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">TableOptions<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span> <span class="token punctuation">{</span>
+  columns<span class="token operator">:</span> ColumnConfig<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  minHeight<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  maxHeight<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  selectable<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">;</span>
+  hideHeader<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">;</span>
+  hideFooter<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">;</span>
+  paginate<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code><p-copy-button class="copy-code-button" from="code-block-1047"></p-copy-button></pre>
+          <h3 id="columns" class="anchor-heading">
+            <code>columns</code><a href="#columns" aria-label='Direct link to "columns"'></a>
+          </h3>
+          <ul>
+            <li><strong>Type</strong>: <code>ColumnConfig[]</code></li>
+            <li><strong>Required</strong>: Yes</li>
+            <li>
+              <strong>Description</strong>: Defines the structure of columns in the table. The
+              <code>ColumnConfig</code> array specifies how each column should be displayed, including options like the
+              <code>field</code> (the data property associated with the column), <code>headerName</code> (the display
+              name of the column), and other layout-related properties like <code>width</code>.
+            </li>
+          </ul>
+          <h3 id="getselectedrows" class="anchor-heading">
+            <code>getSelectedRows</code><a href="#getselectedrows" aria-label='Direct link to "getSelectedRows"'></a>
+          </h3>
+          <ul>
+            <li><strong>Type</strong>: <code>() =&gt; T[]</code></li>
+            <li><strong>Required</strong>: No</li>
+            <li>
+              <strong>Description</strong>: A callback function that returns an array of selected rows. This is useful
+              when the table has the <code>selectable</code> option enabled, allowing you to retrieve the selected rows
+              programmatically.
+            </li>
+          </ul>
+          <h3 id="minheight" class="anchor-heading">
+            <code>minHeight</code><a href="#minheight" aria-label='Direct link to "minHeight"'></a>
+          </h3>
+          <ul>
+            <li><strong>Type</strong>: <code>string</code></li>
+            <li><strong>Required</strong>: No</li>
+            <li>
+              <strong>Description</strong>: Sets a minimum height for the table. The value can be provided in any valid
+              CSS unit such as <code>px</code>, <code>%</code>, <code>em</code>, <code>rem</code>, etc. Ensures that the
+              table will not shrink smaller than this height even if it contains little content.
+            </li>
+          </ul>
+          <h3 id="maxheight" class="anchor-heading">
+            <code>maxHeight</code><a href="#maxheight" aria-label='Direct link to "maxHeight"'></a>
+          </h3>
+          <ul>
+            <li><strong>Type</strong>: <code>string</code></li>
+            <li><strong>Required</strong>: No</li>
+            <li>
+              <strong>Description</strong>: Sets a maximum height for the table. When the table’s content exceeds this
+              height, a scrollbar will appear to allow vertical scrolling. The value can be defined using any CSS height
+              unit.
+            </li>
+          </ul>
+          <h3 id="selectable" class="anchor-heading">
+            <code>selectable</code><a href="#selectable" aria-label='Direct link to "selectable"'></a>
+          </h3>
+          <ul>
+            <li><strong>Type</strong>: <code>boolean</code></li>
+            <li><strong>Required</strong>: No</li>
+            <li><strong>Default</strong>: <code>false</code></li>
+            <li>
+              <strong>Description</strong>: When set to <code>true</code>, rows in the table become selectable. This
+              allows users to select one or multiple rows, which can later be retrieved using the
+              <code>getSelectedRows</code> method.
+            </li>
+          </ul>
+          <h3 id="hideheader" class="anchor-heading">
+            <code>hideHeader</code><a href="#hideheader" aria-label='Direct link to "hideHeader"'></a>
+          </h3>
+          <ul>
+            <li><strong>Type</strong>: <code>boolean</code></li>
+            <li><strong>Required</strong>: No</li>
+            <li><strong>Default</strong>: <code>false</code></li>
+            <li>
+              <strong>Description</strong>: When set to <code>true</code>, the header row (the row that displays column
+              titles) is hidden from view. This can be useful when displaying minimalistic tables or when the header
+              information is not required.
+            </li>
+          </ul>
+          <h3 id="hidefooter" class="anchor-heading">
+            <code>hideFooter</code><a href="#hidefooter" aria-label='Direct link to "hideFooter"'></a>
+          </h3>
+          <ul>
+            <li><strong>Type</strong>: <code>boolean</code></li>
+            <li><strong>Required</strong>: No</li>
+            <li><strong>Default</strong>: <code>false</code></li>
+            <li>
+              <strong>Description</strong>: When set to <code>true</code>, the footer row is hidden from view. This is
+              useful for tables that do not require a footer for pagination or summary information.
+            </li>
+          </ul>
+          <h3 id="paginate" class="anchor-heading">
+            <code>paginate</code><a href="#paginate" aria-label='Direct link to "paginate"'></a>
+          </h3>
+          <ul>
+            <li><strong>Type</strong>: <code>boolean</code></li>
+            <li><strong>Required</strong>: No</li>
+            <li><strong>Default</strong>: <code>false</code></li>
+            <li>
+              <strong>Description</strong>: Enables pagination in the table. When set to <code>true</code>, the table
+              will only display a limited number of rows per page, and users can navigate between different pages of
+              data.
+            </li>
+          </ul>
+          <h2 id="columnconfig-properties" class="anchor-heading">
+            ColumnConfig Properties<a
+              href="#columnconfig-properties"
+              aria-label='Direct link to "ColumnConfig Properties"'
+            ></a>
+          </h2>
+          <p>
+            The <code>TableOptions&lt;T&gt;</code> interface defines the configuration options for the table component.
+            Below is a breakdown of each property:
+          </p>
+          <pre><code class="language-typescript" id="code-block-1048"><span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">ColumnConfig</span> <span class="token punctuation">{</span>
+  field<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  hide<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">;</span>
+  resizable<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">;</span>
+  headerName<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  width<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  minWidth<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  maxWidth<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  render<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token constant">T</span><span class="token operator">:</span> <span class="token builtin">unknown</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  alignItems<span class="token operator">?</span><span class="token operator">:</span> <span class="token string">"flex-start"</span> <span class="token operator">|</span> <span class="token string">"flex-end"</span> <span class="token operator">|</span> <span class="token string">"center"</span><span class="token punctuation">;</span>
+  justifyContent<span class="token operator">?</span><span class="token operator">:</span> <span class="token string">"flex-start"</span> <span class="token operator">|</span> <span class="token string">"flex-end"</span> <span class="token operator">|</span> <span class="token string">"center"</span><span class="token punctuation">;</span>
+  justifyItems<span class="token operator">?</span><span class="token operator">:</span> <span class="token string">"flex-start"</span> <span class="token operator">|</span> <span class="token string">"flex-end"</span> <span class="token operator">|</span> <span class="token string">"center"</span><span class="token punctuation">;</span>
+  classes<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  truncate<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">;</span>
+  sticky<span class="token operator">?</span><span class="token operator">:</span> <span class="token string">"start"</span> <span class="token operator">|</span> <span class="token string">"end"</span><span class="token punctuation">;</span>
+  stickyOffset<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code><p-copy-button class="copy-code-button" from="code-block-1048"></p-copy-button></pre>
+          <h3 id="field" class="anchor-heading">
+            <code>field</code><a href="#field" aria-label='Direct link to "field"'></a>
+          </h3>
+          <ul>
+            <li><strong>Type</strong>: <code>string</code></li>
+            <li><strong>Required</strong>: No</li>
+            <li>
+              <strong>Description</strong>: The key in the data object that corresponds to the column’s value. This maps
+              the column to the specific field in the data.
+            </li>
+          </ul>
+          <h3 id="hide" class="anchor-heading">
+            <code>hide</code><a href="#hide" aria-label='Direct link to "hide"'></a>
+          </h3>
+          <ul>
+            <li><strong>Type</strong>: <code>boolean</code></li>
+            <li><strong>Required</strong>: No</li>
+            <li>
+              <strong>Description</strong>: When set to <code>true</code>, this column will be hidden from the table.
+            </li>
+          </ul>
+          <h3 id="resizable" class="anchor-heading">
+            <code>resizable</code><a href="#resizable" aria-label='Direct link to "resizable"'></a>
+          </h3>
+          <ul>
+            <li><strong>Type</strong>: <code>boolean</code></li>
+            <li><strong>Required</strong>: No</li>
+            <li>
+              <strong>Description</strong>: Makes the column resizable, allowing users to adjust the width of the column
+              by dragging.
+            </li>
+          </ul>
+          <h3 id="headername" class="anchor-heading">
+            <code>headerName</code><a href="#headername" aria-label='Direct link to "headerName"'></a>
+          </h3>
+          <ul>
+            <li><strong>Type</strong>: <code>string</code></li>
+            <li><strong>Required</strong>: No</li>
+            <li><strong>Description</strong>: The display name of the column in the header.</li>
+          </ul>
+          <h3 id="width" class="anchor-heading">
+            <code>width</code><a href="#width" aria-label='Direct link to "width"'></a>
+          </h3>
+          <ul>
+            <li><strong>Type</strong>: <code>string</code></li>
+            <li><strong>Required</strong>: No</li>
+            <li>
+              <strong>Description</strong>: Defines the width of the column. Can be set in any valid CSS unit like
+              <code>px</code>, <code>em</code>, <code>%</code>, etc.
+            </li>
+          </ul>
+          <h3 id="minwidth" class="anchor-heading">
+            <code>minWidth</code><a href="#minwidth" aria-label='Direct link to "minWidth"'></a>
+          </h3>
+          <ul>
+            <li><strong>Type</strong>: <code>string</code></li>
+            <li><strong>Required</strong>: No</li>
+            <li><strong>Description</strong>: Sets the minimum width of the column in any valid CSS unit.</li>
+          </ul>
+          <h3 id="maxwidth" class="anchor-heading">
+            <code>maxWidth</code><a href="#maxwidth" aria-label='Direct link to "maxWidth"'></a>
+          </h3>
+          <ul>
+            <li><strong>Type</strong>: <code>string</code></li>
+            <li><strong>Required</strong>: No</li>
+            <li><strong>Description</strong>: Sets the maximum width of the column in any valid CSS unit.</li>
+          </ul>
+          <h3 id="render" class="anchor-heading">
+            <code>render</code><a href="#render" aria-label='Direct link to "render"'></a>
+          </h3>
+          <ul>
+            <li><strong>Type</strong>: <code>(T: unknown) =&gt; string</code></li>
+            <li><strong>Required</strong>: No</li>
+            <li>
+              <strong>Description</strong>: A custom render function that returns the HTML content as a string for each
+              cell in the column.
+            </li>
+          </ul>
+          <h3 id="alignitems" class="anchor-heading">
+            <code>alignItems</code><a href="#alignitems" aria-label='Direct link to "alignItems"'></a>
+          </h3>
+          <ul>
+            <li><strong>Type</strong>: <code>"flex-start" | "flex-end" | "center"</code></li>
+            <li><strong>Required</strong>: No</li>
+            <li>
+              <strong>Description</strong>: Controls how the column content is aligned along the cross-axis (vertical)
+              inside the column. Aligns to start, end, or center.
+            </li>
+          </ul>
+          <h3 id="justifycontent" class="anchor-heading">
+            <code>justifyContent</code><a href="#justifycontent" aria-label='Direct link to "justifyContent"'></a>
+          </h3>
+          <ul>
+            <li><strong>Type</strong>: <code>"flex-start" | "flex-end" | "center"</code></li>
+            <li><strong>Required</strong>: No</li>
+            <li>
+              <strong>Description</strong>: Defines how the column content is aligned along the main axis (horizontal)
+              inside the column.
+            </li>
+          </ul>
+          <h3 id="justifyitems" class="anchor-heading">
+            <code>justifyItems</code><a href="#justifyitems" aria-label='Direct link to "justifyItems"'></a>
+          </h3>
+          <ul>
+            <li><strong>Type</strong>: <code>"flex-start" | "flex-end" | "center"</code></li>
+            <li><strong>Required</strong>: No</li>
+            <li>
+              <strong>Description</strong>: Defines the alignment of items inside the cell, aligning the content within
+              the cell based on the specified value.
+            </li>
+          </ul>
+          <h3 id="classes" class="anchor-heading">
+            <code>classes</code><a href="#classes" aria-label='Direct link to "classes"'></a>
+          </h3>
+          <ul>
+            <li><strong>Type</strong>: <code>string</code></li>
+            <li><strong>Required</strong>: No</li>
+            <li><strong>Description</strong>: Additional CSS classes to apply to the column cells.</li>
+          </ul>
+          <h3 id="truncate" class="anchor-heading">
+            <code>truncate</code><a href="#truncate" aria-label='Direct link to "truncate"'></a>
+          </h3>
+          <ul>
+            <li><strong>Type</strong>: <code>boolean</code></li>
+            <li><strong>Required</strong>: No</li>
+            <li>
+              <strong>Description</strong>: If set to <code>true</code>, cell content that overflows will be truncated
+              with ellipsis (<code>...</code>). This is useful for managing long content in limited column width.
+            </li>
+          </ul>
+          <h3 id="sticky" class="anchor-heading">
+            <code>sticky</code><a href="#sticky" aria-label='Direct link to "sticky"'></a>
+          </h3>
+          <ul>
+            <li><strong>Type</strong>: <code>"start" | "end"</code></li>
+            <li><strong>Required</strong>: No</li>
+            <li>
+              <strong>Description</strong>: Makes the column sticky, so it stays in place when scrolling.
+              <code>start</code> sticks the column to the left, and <code>end</code> sticks the column to the right.
+            </li>
+          </ul>
+          <h3 id="stickyoffset" class="anchor-heading">
+            <code>stickyOffset</code><a href="#stickyoffset" aria-label='Direct link to "stickyOffset"'></a>
+          </h3>
+          <ul>
+            <li><strong>Type</strong>: <code>number</code></li>
+            <li><strong>Required</strong>: No</li>
+            <li>
+              <strong>Description</strong>: Defines the offset (in pixels) for the sticky column from the edge (left or
+              right) when the <code>sticky</code> option is used.
+            </li>
+          </ul>
+
           <h2 id="importing" class="anchor-heading">
             Importing<a href="#importing" aria-label='Direct link to "Importing"'></a>
           </h2>
@@ -1038,7 +1369,7 @@
                 >
                 using a script tag:
               </p>
-              <pre><code class="language-html" id="code-block-1059"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.2.0/cdn/components/table/table.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-1059"></p-copy-button></pre>
+              <pre><code class="language-html" id="code-block-1049"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.3.1/cdn/components/table/table.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-1049"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="import">
@@ -1053,17 +1384,17 @@
                 >
                 using a JavaScript import:
               </p>
-              <pre><code class="language-js" id="code-block-1060"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.2.0/cdn/components/table/table.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1060"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-1050"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.3.1/cdn/components/table/table.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1050"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="bundler">
               <p>To import this component using <a href="/getting-started/installation#bundling">a bundler</a>:</p>
-              <pre><code class="language-js" id="code-block-1061"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/table/table.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1061"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-1051"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/table/table.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1051"></p-copy-button></pre>
             </p-tab-panel>
 
             <p-tab-panel name="react">
               <p>To import this component as a <a href="/frameworks/react">React component</a>:</p>
-              <pre><code class="language-js" id="code-block-1062"><span class="token keyword">import</span> PTable <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/table'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1062"></p-copy-button></pre>
+              <pre><code class="language-js" id="code-block-1052"><span class="token keyword">import</span> PTable <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/table'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1052"></p-copy-button></pre>
             </p-tab-panel>
           </p-tab-group>
 
@@ -1158,9 +1489,7 @@
                     The column headers will be determined by the
                     <code>options.columns</code> property.
                   </td>
-                  <td style="text-align: center">
-                    <p-icon label="yes" name="check-lg"></p-icon>
-                  </td>
+                  <td style="text-align: center"></td>
                   <td>
                     <code>TableRowData[]</code>
                   </td>

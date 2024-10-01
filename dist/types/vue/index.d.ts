@@ -1,8 +1,8 @@
 import type { DefineComponent } from "vue";
 
 import type { PAlert } from "../../components/alert/alert.component.js";
-import type { PAnimation } from "../../components/animation/animation.component.js";
 import type { PAnimatedImage } from "../../components/animated-image/animated-image.component.js";
+import type { PAnimation } from "../../components/animation/animation.component.js";
 import type { PAvatar } from "../../components/avatar/avatar.component.js";
 import type { PBadge } from "../../components/badge/badge.component.js";
 import type { PBreadcrumb } from "../../components/breadcrumb/breadcrumb.component.js";
@@ -24,8 +24,8 @@ import type { PDropdown } from "../../components/dropdown/dropdown.component.js"
 import type { PFileUpload } from "../../components/file-upload/file-upload.component.js";
 import type { PFileUploadItem } from "../../components/file-upload-item/file-upload-item.component.js";
 import type { PFormatBytes } from "../../components/format-bytes/format-bytes.component.js";
-import type { PFormatDate } from "../../components/format-date/format-date.component.js";
 import type { PFormatNumber } from "../../components/format-number/format-number.component.js";
+import type { PFormatDate } from "../../components/format-date/format-date.component.js";
 import type { PIcon } from "../../components/icon/icon.component.js";
 import type { PIconButton } from "../../components/icon-button/icon-button.component.js";
 import type { PImageComparer } from "../../components/image-comparer/image-comparer.component.js";
@@ -50,6 +50,7 @@ import type { PRelativeTime } from "../../components/relative-time/relative-time
 import type { PResizeObserver } from "../../components/resize-observer/resize-observer.component.js";
 import type { PSelect } from "../../components/select/select.component.js";
 import type { PSkeleton } from "../../components/skeleton/skeleton.component.js";
+import type { PSmartContainer } from "../../components/smart-container/smart-container.component.js";
 import type { PSpinner } from "../../components/spinner/spinner.component.js";
 import type { PSplitPanel } from "../../components/split-panel/split-panel.component.js";
 import type { PSwitch } from "../../components/switch/switch.component.js";
@@ -61,8 +62,8 @@ import type { PTag } from "../../components/tag/tag.component.js";
 import type { PTextarea } from "../../components/textarea/textarea.component.js";
 import type { PTooltip } from "../../components/tooltip/tooltip.component.js";
 import type { PTree } from "../../components/tree/tree.component.js";
-import type { PTreeItem } from "../../components/tree-item/tree-item.component.js";
 import type { PVisuallyHidden } from "../../components/visually-hidden/visually-hidden.component.js";
+import type { PTreeItem } from "../../components/tree-item/tree-item.component.js";
 
 type PAlertProps = {
   /** Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can
@@ -86,6 +87,25 @@ the alert will not close on its own. */
   "onp-hide"?: (e: CustomEvent<never>) => void;
   /** Emitted after the alert closes and all animations are complete. */
   "onp-after-hide"?: (e: CustomEvent<never>) => void;
+};
+
+type PAnimatedImageProps = {
+  /** The path to the image to load. */
+  src?: PAnimatedImage["src"];
+  /** A description of the image used by assistive devices. */
+  alt?: PAnimatedImage["alt"];
+  /** Plays the animation. When this attribute is remove, the animation will pause. */
+  play?: PAnimatedImage["play"];
+  /**  */
+  animatedImage?: PAnimatedImage["animatedImage"];
+  /**  */
+  frozenFrame?: PAnimatedImage["frozenFrame"];
+  /**  */
+  isLoaded?: PAnimatedImage["isLoaded"];
+  /** Emitted when the image loads successfully. */
+  "onp-load"?: (e: CustomEvent<never>) => void;
+  /** Emitted when the image fails to load. */
+  "onp-error"?: (e: CustomEvent<never>) => void;
 };
 
 type PAnimationProps = {
@@ -128,25 +148,6 @@ value can be changed without causing the animation to restart. */
   "onp-finish"?: (e: CustomEvent<never>) => void;
   /** Emitted when the animation starts or restarts. */
   "onp-start"?: (e: CustomEvent<never>) => void;
-};
-
-type PAnimatedImageProps = {
-  /** The path to the image to load. */
-  src?: PAnimatedImage["src"];
-  /** A description of the image used by assistive devices. */
-  alt?: PAnimatedImage["alt"];
-  /** Plays the animation. When this attribute is remove, the animation will pause. */
-  play?: PAnimatedImage["play"];
-  /**  */
-  animatedImage?: PAnimatedImage["animatedImage"];
-  /**  */
-  frozenFrame?: PAnimatedImage["frozenFrame"];
-  /**  */
-  isLoaded?: PAnimatedImage["isLoaded"];
-  /** Emitted when the image loads successfully. */
-  "onp-load"?: (e: CustomEvent<never>) => void;
-  /** Emitted when the image fails to load. */
-  "onp-error"?: (e: CustomEvent<never>) => void;
 };
 
 type PAvatarProps = {
@@ -366,6 +367,11 @@ the specified value. */
 - "multiple": allows selecting multiple dates.
 - "range": allows selecting a range of dates. */
   type?: PCalendar["type"];
+  /** The interface of the calendar.
+- "day": a regular calendar for selecting day according to Calendar type .
+- "month": a calendar for selecting a month and year according to Calendar type .
+- "year": a calendar for selecting a year according to Calendar type . */
+  interface?: PCalendar["interface"];
   /** If `true`, the calendar will automatically receive focus when it open.
 This can be useful when using the calendar in a dialog or other scenario where it should
 receive focus without requiring the user to click on it. */
@@ -382,6 +388,8 @@ receive focus without requiring the user to click on it. */
   "month-labels"?: PCalendar["monthLabels"];
   /** When true, dates from the previous and next month will also be shown to fill out the grid. */
   "show-adjacent-dates"?: PCalendar["showAdjacentDates"];
+  /**  */
+  value?: PCalendar["value"];
   /**  */
   popup?: PCalendar["popup"];
   /**  */
@@ -401,8 +409,6 @@ Used when the control is not focused. */
   selectedOptions?: PCalendar["selectedOptions"];
   /**  */
   temporalEndDate?: PCalendar["temporalEndDate"];
-  /**  */
-  value?: PCalendar["value"];
   /** The default value of the form control. Primarily used for resetting the form control. */
   defaultValue?: PCalendar["defaultValue"];
   /** Gets the validity state object */
@@ -864,6 +870,29 @@ type PFormatBytesProps = {
   display?: PFormatBytes["display"];
 };
 
+type PFormatNumberProps = {
+  /** The number to format. */
+  value?: PFormatNumber["value"];
+  /** The formatting style to use. */
+  type?: PFormatNumber["type"];
+  /** Turns off grouping separators. */
+  "no-grouping"?: PFormatNumber["noGrouping"];
+  /** The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting. */
+  currency?: PFormatNumber["currency"];
+  /** How to display the currency. */
+  "currency-display"?: PFormatNumber["currencyDisplay"];
+  /** The minimum number of integer digits to use. Possible values are 1-21. */
+  "minimum-integer-digits"?: PFormatNumber["minimumIntegerDigits"];
+  /** The minimum number of fraction digits to use. Possible values are 0-20. */
+  "minimum-fraction-digits"?: PFormatNumber["minimumFractionDigits"];
+  /** The maximum number of fraction digits to use. Possible values are 0-0. */
+  "maximum-fraction-digits"?: PFormatNumber["maximumFractionDigits"];
+  /** The minimum number of significant digits to use. Possible values are 1-21. */
+  "minimum-significant-digits"?: PFormatNumber["minimumSignificantDigits"];
+  /** The maximum number of significant digits to use,. Possible values are 1-21. */
+  "maximum-significant-digits"?: PFormatNumber["maximumSignificantDigits"];
+};
+
 type PFormatDateProps = {
   /** The date/time to format. If not set, the current date and time will be used. When passing a string, it's strongly
 recommended to use the ISO 8601 format to ensure timezones are handled correctly. To convert a date to this format
@@ -891,29 +920,6 @@ in JavaScript, use [`date.toISOString()`](https://developer.mozilla.org/en-US/do
   "time-zone"?: PFormatDate["timeZone"];
   /** The format for displaying the hour. */
   "hour-format"?: PFormatDate["hourFormat"];
-};
-
-type PFormatNumberProps = {
-  /** The number to format. */
-  value?: PFormatNumber["value"];
-  /** The formatting style to use. */
-  type?: PFormatNumber["type"];
-  /** Turns off grouping separators. */
-  "no-grouping"?: PFormatNumber["noGrouping"];
-  /** The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting. */
-  currency?: PFormatNumber["currency"];
-  /** How to display the currency. */
-  "currency-display"?: PFormatNumber["currencyDisplay"];
-  /** The minimum number of integer digits to use. Possible values are 1-21. */
-  "minimum-integer-digits"?: PFormatNumber["minimumIntegerDigits"];
-  /** The minimum number of fraction digits to use. Possible values are 0-20. */
-  "minimum-fraction-digits"?: PFormatNumber["minimumFractionDigits"];
-  /** The maximum number of fraction digits to use. Possible values are 0-0. */
-  "maximum-fraction-digits"?: PFormatNumber["maximumFractionDigits"];
-  /** The minimum number of significant digits to use. Possible values are 1-21. */
-  "minimum-significant-digits"?: PFormatNumber["minimumSignificantDigits"];
-  /** The maximum number of significant digits to use,. Possible values are 1-21. */
-  "maximum-significant-digits"?: PFormatNumber["maximumSignificantDigits"];
 };
 
 type PIconProps = {
@@ -1565,6 +1571,15 @@ type PSkeletonProps = {
   effect?: PSkeleton["effect"];
 };
 
+type PSmartContainerProps = {
+  /** An example attribute. */
+  attr?: PSmartContainer["attr"];
+  /**  */
+  smartContainer?: PSmartContainer["smartContainer"];
+  /**  */
+  dropdownMenu?: PSmartContainer["dropdownMenu"];
+};
+
 type PSpinnerProps = {};
 
 type PSplitPanelProps = {
@@ -1851,6 +1866,8 @@ displays checkboxes and allows more than one node to be selected. Leaf allows on
   "onp-selection-change"?: (e: CustomEvent<{ selection: PTreeItem[] }>) => void;
 };
 
+type PVisuallyHiddenProps = {};
+
 type PTreeItemProps = {
   /** Expands the tree item. */
   expanded?: PTreeItem["expanded"];
@@ -1892,8 +1909,6 @@ type PTreeItemProps = {
   "onp-lazy-load"?: (e: CustomEvent<never>) => void;
 };
 
-type PVisuallyHiddenProps = {};
-
 export type CustomElements = {
   /**
    * Alerts are used to display important messages inline or as toast notifications.
@@ -1927,25 +1942,6 @@ export type CustomElements = {
   "p-alert": DefineComponent<PAlertProps>;
 
   /**
-   * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **p-cancel** - Emitted when the animation is canceled.
-   * - **p-finish** - Emitted when the animation finishes.
-   * - **p-start** - Emitted when the animation starts or restarts.
-   *
-   * ### **Methods:**
-   *  - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.
-   * - **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.
-   *
-   * ### **Slots:**
-   *  - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.
-   */
-  "p-animation": DefineComponent<PAnimationProps>;
-
-  /**
    * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
    * ---
    *
@@ -1966,6 +1962,25 @@ export type CustomElements = {
    *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
    */
   "p-animated-image": DefineComponent<PAnimatedImageProps>;
+
+  /**
+   * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **p-cancel** - Emitted when the animation is canceled.
+   * - **p-finish** - Emitted when the animation finishes.
+   * - **p-start** - Emitted when the animation starts or restarts.
+   *
+   * ### **Methods:**
+   *  - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.
+   * - **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.
+   *
+   * ### **Slots:**
+   *  - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.
+   */
+  "p-animation": DefineComponent<PAnimationProps>;
 
   /**
    * Avatars are used to represent a person or object.
@@ -2582,18 +2597,18 @@ export type CustomElements = {
   "p-format-bytes": DefineComponent<PFormatBytesProps>;
 
   /**
-   * Formats a date/time using the specified locale and options.
-   * ---
-   *
-   */
-  "p-format-date": DefineComponent<PFormatDateProps>;
-
-  /**
    * Formats a number using the specified locale and options.
    * ---
    *
    */
   "p-format-number": DefineComponent<PFormatNumberProps>;
+
+  /**
+   * Formats a date/time using the specified locale and options.
+   * ---
+   *
+   */
+  "p-format-date": DefineComponent<PFormatDateProps>;
 
   /**
    * Icons are symbols that can be used to represent various options within an application.
@@ -3148,6 +3163,21 @@ export type CustomElements = {
   "p-skeleton": DefineComponent<PSkeletonProps>;
 
   /**
+   * This is a responsive container component that handles dynamic content overflow and provides an interactive dropdown menu for hidden items. It observes and manages content inside its slots, automatically adjusting the layout to handle overflow situations..
+   * ---
+   *
+   *
+   * ### **Slots:**
+   *  - _default_ - The default slot.
+   * - **icon** - The icon slot.
+   *
+   * ### **CSS Parts:**
+   *  - **base** - The component's base wrapper.
+   * - **dropdown-menu** - The dropdown menu.
+   */
+  "p-smart-container": DefineComponent<PSmartContainerProps>;
+
+  /**
    * Spinners are used to show the progress of an indeterminate operation.
    * ---
    *
@@ -3457,6 +3487,16 @@ export type CustomElements = {
   "p-tree": DefineComponent<PTreeProps>;
 
   /**
+   * The visually hidden utility makes content accessible to assistive devices without displaying it on the screen.
+   * ---
+   *
+   *
+   * ### **Slots:**
+   *  - _default_ - The content to be visually hidden.
+   */
+  "p-visually-hidden": DefineComponent<PVisuallyHiddenProps>;
+
+  /**
    * A tree item serves as a hierarchical node that lives inside a [tree](/components/tree).
    * ---
    *
@@ -3500,16 +3540,6 @@ export type CustomElements = {
    * - **checkbox__label** - The checkbox's exported `label` part.
    */
   "p-tree-item": DefineComponent<PTreeItemProps>;
-
-  /**
-   * The visually hidden utility makes content accessible to assistive devices without displaying it on the screen.
-   * ---
-   *
-   *
-   * ### **Slots:**
-   *  - _default_ - The content to be visually hidden.
-   */
-  "p-visually-hidden": DefineComponent<PVisuallyHiddenProps>;
 };
 
 declare module "vue" {

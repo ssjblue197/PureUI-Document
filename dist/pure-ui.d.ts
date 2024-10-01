@@ -61,6 +61,7 @@ export { default as PVisuallyHidden } from "./components/visually-hidden/visuall
 export { default as PTable } from "./components/table/table.js";
 export { default as PFileUpload } from "./components/file-upload/file-upload.js";
 export { default as PFileUploadItem } from "./components/file-upload-item/file-upload-item.js";
+export { default as PSmartContainer } from "./components/smart-container/smart-container.js";
 export * from "./utilities/animation.js";
 export * from "./utilities/base-path.js";
 export * from "./utilities/icon-library.js";

@@ -41,6 +41,33 @@
       ]
     },
     {
+      "name": "p-animated-image",
+      "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
+      "attributes": [
+        {
+          "name": "src",
+          "description": "The path to the image to load.",
+          "values": []
+        },
+        {
+          "name": "alt",
+          "description": "A description of the image used by assistive devices.",
+          "values": []
+        },
+        {
+          "name": "play",
+          "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+          "values": []
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://pureui.xyz/components/animated-image"
+        }
+      ]
+    },
+    {
       "name": "p-animation",
       "description": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n---\n\n\n### **Events:**\n - **p-cancel** - Emitted when the animation is canceled.\n- **p-finish** - Emitted when the animation finishes.\n- **p-start** - Emitted when the animation starts or restarts.\n\n### **Methods:**\n - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.\n- **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.\n\n### **Slots:**\n - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.",
       "attributes": [
@@ -104,33 +131,6 @@
         {
           "name": "Documentation",
           "url": "https://pureui.xyz/components/animation"
-        }
-      ]
-    },
-    {
-      "name": "p-animated-image",
-      "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
-      "attributes": [
-        {
-          "name": "src",
-          "description": "The path to the image to load.",
-          "values": []
-        },
-        {
-          "name": "alt",
-          "description": "A description of the image used by assistive devices.",
-          "values": []
-        },
-        {
-          "name": "play",
-          "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-          "values": []
-        }
-      ],
-      "references": [
-        {
-          "name": "Documentation",
-          "url": "https://pureui.xyz/components/animated-image"
         }
       ]
     },
@@ -553,6 +553,11 @@
           ]
         },
         {
+          "name": "interface",
+          "description": "The interface of the calendar.\n- \"day\": a regular calendar for selecting day according to Calendar type .\n- \"month\": a calendar for selecting a month and year according to Calendar type .\n- \"year\": a calendar for selecting a year according to Calendar type .",
+          "values": [{ "name": "day" }, { "name": "month" }, { "name": "year" }]
+        },
+        {
           "name": "autofocus",
           "description": "If `true`, the calendar will automatically receive focus when it open.\nThis can be useful when using the calendar in a dialog or other scenario where it should\nreceive focus without requiring the user to click on it.",
           "values": []
@@ -588,6 +593,14 @@
           "name": "show-adjacent-dates",
           "description": "When true, dates from the previous and next month will also be shown to fill out the grid.",
           "values": []
+        },
+        {
+          "name": "value",
+          "values": [
+            { "name": "Date" },
+            { "name": "(string" },
+            { "name": "Date)[]" }
+          ]
         }
       ],
       "references": [
@@ -1078,63 +1091,6 @@
       ]
     },
     {
-      "name": "p-file-upload-item",
-      "description": "\n---\n\n\n### **Events:**\n - **p-show** - Emitted when the item opens.\n- **p-after-show** - Emitted after the item opens and all animations are complete.\n- **p-hide** - Emitted when the item closes.\n- **p-after-hide** - Emitted after the item closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the item.\n- **hide()** - Hides the item\n\n### **Slots:**\n - _default_ - The file list item's label.\n- **image** - The file list item's image.\n- **close-button** - The file list item's close button.\n\n### **CSS Parts:**\n - **base** - The component's internal wrapper.\n- **image** - The file list item's image.\n- **label** - The file list item's label.\n- **close-button** -  The file list item's close button.",
-      "attributes": [
-        {
-          "name": "loading",
-          "description": "Draws the item in a loading state.",
-          "values": []
-        },
-        {
-          "name": "progress",
-          "description": "The current progress, 0 to 100. Only respects is loading prop is true.",
-          "values": []
-        },
-        {
-          "name": "label",
-          "description": "A custom label for the progress bar's aria label. Only respects if loading prop is true.",
-          "values": []
-        },
-        {
-          "name": "lang",
-          "description": "The locale to render the component in.",
-          "values": []
-        },
-        {
-          "name": "warning",
-          "description": "Draws the item in a warning state.",
-          "values": []
-        },
-        {
-          "name": "closable",
-          "description": "Makes the item closable.",
-          "values": []
-        },
-        {
-          "name": "value",
-          "description": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected.",
-          "values": []
-        },
-        {
-          "name": "size",
-          "description": "The size of the file in bytes as a read-only 64-bit integer.",
-          "values": []
-        },
-        {
-          "name": "hidden",
-          "description": "Indicates whether or not the file list item is hidden.",
-          "values": []
-        }
-      ],
-      "references": [
-        {
-          "name": "Documentation",
-          "url": "https://pureui.xyz/components/file-upload-item"
-        }
-      ]
-    },
-    {
       "name": "p-file-upload",
       "description": "\n---\n\n\n### **Events:**\n - **p-drop** - Emitted when dragged files have been dropped on the dropzone area.\n- **p-change** - Emitted when files have been uploaded via the dropzone or file dialog.\n- **p-load** - Emitted when a file transfer was finished\n- **p-error** - Emitted when a file transfer threw an error\n- **p-abort** - Emitted when a file transfer was aborted by the user\n- **p-remove** - Emitted when a file was removed\n\n### **Methods:**\n - **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n\n### **Slots:**\n - **label** - The dropzone's label. Alternatively, you can use the image slot and label prop.\n- **image** - The dropzone's image.\n- **button** - The dropzone's button.\n\n### **CSS Properties:**\n - **--border-radius** - The border radius of the dropzone borders. _(default: undefined)_\n- **--border-width** - The width of the dropzone borders. _(default: undefined)_\n- **--border-style** - The style of the dropzone borders. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's internal wrapper.\n- **label** - The dropzone container.\n- **image** - The dropzone image.\n- **button** - The dropzone button.",
       "attributes": [
@@ -1204,6 +1160,63 @@
         {
           "name": "Documentation",
           "url": "https://pureui.xyz/components/file-upload"
+        }
+      ]
+    },
+    {
+      "name": "p-file-upload-item",
+      "description": "\n---\n\n\n### **Events:**\n - **p-show** - Emitted when the item opens.\n- **p-after-show** - Emitted after the item opens and all animations are complete.\n- **p-hide** - Emitted when the item closes.\n- **p-after-hide** - Emitted after the item closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the item.\n- **hide()** - Hides the item\n\n### **Slots:**\n - _default_ - The file list item's label.\n- **image** - The file list item's image.\n- **close-button** - The file list item's close button.\n\n### **CSS Parts:**\n - **base** - The component's internal wrapper.\n- **image** - The file list item's image.\n- **label** - The file list item's label.\n- **close-button** -  The file list item's close button.",
+      "attributes": [
+        {
+          "name": "loading",
+          "description": "Draws the item in a loading state.",
+          "values": []
+        },
+        {
+          "name": "progress",
+          "description": "The current progress, 0 to 100. Only respects is loading prop is true.",
+          "values": []
+        },
+        {
+          "name": "label",
+          "description": "A custom label for the progress bar's aria label. Only respects if loading prop is true.",
+          "values": []
+        },
+        {
+          "name": "lang",
+          "description": "The locale to render the component in.",
+          "values": []
+        },
+        {
+          "name": "warning",
+          "description": "Draws the item in a warning state.",
+          "values": []
+        },
+        {
+          "name": "closable",
+          "description": "Makes the item closable.",
+          "values": []
+        },
+        {
+          "name": "value",
+          "description": "A unique value to store in the menu item. This can be used as a way to identify menu items when selected.",
+          "values": []
+        },
+        {
+          "name": "size",
+          "description": "The size of the file in bytes as a read-only 64-bit integer.",
+          "values": []
+        },
+        {
+          "name": "hidden",
+          "description": "Indicates whether or not the file list item is hidden.",
+          "values": []
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://pureui.xyz/components/file-upload-item"
         }
       ]
     },
@@ -2595,6 +2608,19 @@
       ]
     },
     {
+      "name": "p-smart-container",
+      "description": "This is a responsive container component that handles dynamic content overflow and provides an interactive dropdown menu for hidden items. It observes and manages content inside its slots, automatically adjusting the layout to handle overflow situations..\n---\n\n\n### **Slots:**\n - _default_ - The default slot.\n- **icon** - The icon slot.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **dropdown-menu** - The dropdown menu.",
+      "attributes": [
+        { "name": "attr", "description": "An example attribute.", "values": [] }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://pureui.xyz/components/smart-container"
+        }
+      ]
+    },
+    {
       "name": "p-spinner",
       "description": "Spinners are used to show the progress of an indeterminate operation.\n---\n\n\n### **CSS Properties:**\n - **--track-width** - The width of the track. _(default: undefined)_\n- **--track-color** - The color of the track. _(default: undefined)_\n- **--indicator-color** - The color of the spinner's indicator. _(default: undefined)_\n- **--speed** - The time it takes for the spinner to complete one animation cycle. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
       "attributes": [],
@@ -2771,6 +2797,28 @@
       ]
     },
     {
+      "name": "p-tab-panel",
+      "description": "Tab panels are used inside [tab groups](/components/tab-group) to display tabbed content.\n---\n\n\n### **Slots:**\n - _default_ - The tab panel's content.\n\n### **CSS Properties:**\n - **--padding** - The tab panel's padding. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+      "attributes": [
+        {
+          "name": "name",
+          "description": "The tab panel's name.",
+          "values": []
+        },
+        {
+          "name": "active",
+          "description": "When true, the tab panel will be shown.",
+          "values": []
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://pureui.xyz/components/tab-panel"
+        }
+      ]
+    },
+    {
       "name": "p-table",
       "description": "The Table component is used to display data in a table format.\n---\n\n\n### **Events:**\n - **p-change** - Emitted when the current page value changes.\n- **p-table-row-select** - Emitted when the rows selected changed.\n\n### **Slots:**\n - _default_ - The default slot.\n- **paginate** - An optional slot for paginate element.\n\n### **CSS Properties:**\n - **--table-header-cell-padding** - Set padding for header cell. _(default: undefined)_\n- **--table-body-cell-padding** - Set padding for body cell. _(default: undefined)_\n- **--table-footer-padding** - Set padding for footer cell. _(default: undefined)_\n- **--table-border-horizontal-width** - Set border width horizontal. _(default: undefined)_\n- **--table-border-horizontal-style** - Set border style horizontal. _(default: undefined)_\n- **--table-border-horizontal-color** - Set border color horizontal. _(default: undefined)_\n- **--table-border-vertical-width** - Set border width vertical. _(default: undefined)_\n- **--table-border-vertical-style** - Set border style vertical. _(default: undefined)_\n- **--table-border-vertical-color** - Set border color vertical. _(default: undefined)_\n- **--table-border-width** - Set table border width. _(default: undefined)_\n- **--table-border-color** - Set table border color. _(default: undefined)_\n- **--table-border-style** - Set table border style. _(default: undefined)_\n- **--table-border-radius** - Set table border radius. _(default: undefined)_\n- **--table-row-hover-background-color** - Set table row hover background color. _(default: undefined)_\n- **--table-cell-background-color** - Set table cell background color. _(default: undefined)_\n- **--table-cell-hover-background-color** - Set table cell hover background color. _(default: undefined)_\n- **--table-cell-min-height** - Set table cell min height. _(default: undefined)_\n- **--table-cell-max-height** - Set table cell max height. _(default: undefined)_\n- **--table-cell-min-width** - Set table cell min width. _(default: undefined)_\n- **--table-cell-max-width** - Set table cell max width. _(default: undefined)_\n\n### **CSS Parts:**\n - **table-wrapper** - The component's table wrapper.\n- **table-header** - The component's table header wrapper.\n- **table-body** - The component's table body wrapper.\n- **table-loading** - The component's table loading wrapper.\n- **table-empty** - The component's table empty wrapper.\n- **table-footer** - The component's table footer wrapper.",
       "attributes": [
@@ -2815,28 +2863,6 @@
         {
           "name": "Documentation",
           "url": "https://pureui.xyz/components/table"
-        }
-      ]
-    },
-    {
-      "name": "p-tab-panel",
-      "description": "Tab panels are used inside [tab groups](/components/tab-group) to display tabbed content.\n---\n\n\n### **Slots:**\n - _default_ - The tab panel's content.\n\n### **CSS Properties:**\n - **--padding** - The tab panel's padding. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
-      "attributes": [
-        {
-          "name": "name",
-          "description": "The tab panel's name.",
-          "values": []
-        },
-        {
-          "name": "active",
-          "description": "When true, the tab panel will be shown.",
-          "values": []
-        }
-      ],
-      "references": [
-        {
-          "name": "Documentation",
-          "url": "https://pureui.xyz/components/tab-panel"
         }
       ]
     },
@@ -3120,6 +3146,17 @@
       ]
     },
     {
+      "name": "p-visually-hidden",
+      "description": "The visually hidden utility makes content accessible to assistive devices without displaying it on the screen.\n---\n\n\n### **Slots:**\n - _default_ - The content to be visually hidden.",
+      "attributes": [],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://pureui.xyz/components/visually-hidden"
+        }
+      ]
+    },
+    {
       "name": "p-tree-item",
       "description": "A tree item serves as a hierarchical node that lives inside a [tree](/components/tree).\n---\n\n\n### **Events:**\n - **p-expand** - Emitted when the tree item expands.\n- **p-after-expand** - Emitted after the tree item expands and all animations are complete.\n- **p-collapse** - Emitted when the tree item collapses.\n- **p-after-collapse** - Emitted after the tree item collapses and all animations are complete.\n- **p-lazy-change** - Emitted when the tree item's lazy state changes.\n- **p-lazy-load** - Emitted when a lazy item is selected. Use this event to asynchronously load data and append items to the tree before expanding. After appending new items, remove the `lazy` attribute to remove the loading state and update the tree.\n\n### **Methods:**\n - **getChildrenItems({ includeDisabled = true }: _{ includeDisabled?: boolean }_): _PTreeItem[]_** - Gets all the nested tree items in this node.\n\n### **Slots:**\n - _default_ - The default slot.\n- **expand-icon** - The icon to show when the tree item is expanded.\n- **collapse-icon** - The icon to show when the tree item is collapsed.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **item** - The tree item's container. This element wraps everything except slotted tree item children.\n- **item--disabled** - Applied when the tree item is disabled.\n- **item--expanded** - Applied when the tree item is expanded.\n- **item--indeterminate** - Applied when the selection is indeterminate.\n- **item--selected** - Applied when the tree item is selected.\n- **indentation** - The tree item's indentation container.\n- **expand-button** - The container that wraps the tree item's expand button and spinner.\n- **spinner** - The spinner that shows when a lazy tree item is in the loading state.\n- **spinner__base** - The spinner's base part.\n- **label** - The tree item's label.\n- **children** - The container that wraps the tree item's nested children.\n- **checkbox** - The checkbox that shows when using multiselect.\n- **checkbox__base** - The checkbox's exported `base` part.\n- **checkbox__control** - The checkbox's exported `control` part.\n- **checkbox__control--checked** - The checkbox's exported `control--checked` part.\n- **checkbox__control--indeterminate** - The checkbox's exported `control--indeterminate` part.\n- **checkbox__checked-icon** - The checkbox's exported `checked-icon` part.\n- **checkbox__indeterminate-icon** - The checkbox's exported `indeterminate-icon` part.\n- **checkbox__label** - The checkbox's exported `label` part.",
       "attributes": [
@@ -3148,17 +3185,6 @@
         {
           "name": "Documentation",
           "url": "https://pureui.xyz/components/tree-item"
-        }
-      ]
-    },
-    {
-      "name": "p-visually-hidden",
-      "description": "The visually hidden utility makes content accessible to assistive devices without displaying it on the screen.\n---\n\n\n### **Slots:**\n - _default_ - The content to be visually hidden.",
-      "attributes": [],
-      "references": [
-        {
-          "name": "Documentation",
-          "url": "https://pureui.xyz/components/visually-hidden"
         }
       ]
     }
