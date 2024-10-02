@@ -264,6 +264,316 @@
     },
     {
       "kind": "javascript-module",
+      "path": "components/avatar/avatar.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PAvatar",
+          "cssProperties": [
+            {
+              "description": "The size of the avatar.",
+              "name": "--size"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The container that wraps the avatar's icon.",
+              "name": "icon"
+            },
+            {
+              "description": "The container that wraps the avatar's initials.",
+              "name": "initials"
+            },
+            {
+              "description": "The avatar image. Only shown when the `image` attribute is set.",
+              "name": "image"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The default icon to use when no image or initials are present. Works best with `<p-icon>`.",
+              "name": "icon"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "dependencies",
+              "type": {
+                "text": "object"
+              },
+              "static": true,
+              "default": "{\n    \"p-icon\": PIcon,\n  }"
+            },
+            {
+              "kind": "field",
+              "name": "hasError",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "image",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The image source to use for the avatar.",
+              "attribute": "image"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "A label to use to describe the avatar to assistive devices.",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "initials",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+              "attribute": "initials"
+            },
+            {
+              "kind": "field",
+              "name": "loading",
+              "type": {
+                "text": "\"eager\" | \"lazy\""
+              },
+              "default": "\"eager\"",
+              "description": "Indicates how the browser should load the image.",
+              "attribute": "loading"
+            },
+            {
+              "kind": "field",
+              "name": "shape",
+              "type": {
+                "text": "\"circle\" | \"square\" | \"rounded\""
+              },
+              "default": "\"circle\"",
+              "description": "The shape of the avatar.",
+              "attribute": "shape",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleImageChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleImageLoadError",
+              "privacy": "private"
+            }
+          ],
+          "events": [
+            {
+              "description": "The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause.",
+              "name": "p-error",
+              "reactName": "onPError",
+              "eventName": "PErrorEvent"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "image",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The image source to use for the avatar.",
+              "fieldName": "image"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "A label to use to describe the avatar to assistive devices.",
+              "fieldName": "label"
+            },
+            {
+              "name": "initials",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+              "fieldName": "initials"
+            },
+            {
+              "name": "loading",
+              "type": {
+                "text": "\"eager\" | \"lazy\""
+              },
+              "default": "\"eager\"",
+              "description": "Indicates how the browser should load the image.",
+              "fieldName": "loading"
+            },
+            {
+              "name": "shape",
+              "type": {
+                "text": "\"circle\" | \"square\" | \"rounded\""
+              },
+              "default": "\"circle\"",
+              "description": "The shape of the avatar.",
+              "fieldName": "shape"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "Avatars are used to represent a person or object.",
+          "tagNameWithoutPrefix": "avatar",
+          "tagName": "p-avatar",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary Avatars are used to represent a person or object.\n * @documentation https://pureui.xyz/components/avatar\n * @status stable\n * @since 1.0\n *\n * @dependency p-icon\n *\n * @event p-error - The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some\n * unknown cause.\n *\n * @slot icon - The default icon to use when no image or initials are present. Works best with `<p-icon>`.\n *\n * @csspart base - The component's base wrapper.\n * @csspart icon - The container that wraps the avatar's icon.\n * @csspart initials - The container that wraps the avatar's initials.\n * @csspart image - The avatar image. Only shown when the `image` attribute is set.\n *\n * @cssproperty --size - The size of the avatar.\n */",
+          "documentation": "https://pureui.xyz/components/avatar",
+          "status": "stable",
+          "since": "1.0",
+          "dependencies": [
+            "p-icon"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PAvatar",
+            "module": "components/avatar/avatar.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/badge/badge.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PBadge",
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The badge's content.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\""
+              },
+              "default": "\"primary\"",
+              "description": "The badge's theme variant.",
+              "attribute": "variant",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pill",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "attribute": "pill",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pulse",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the badge pulsate to draw attention.",
+              "attribute": "pulse",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "variant",
+              "type": {
+                "text": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\""
+              },
+              "default": "\"primary\"",
+              "description": "The badge's theme variant.",
+              "fieldName": "variant"
+            },
+            {
+              "name": "pill",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "fieldName": "pill"
+            },
+            {
+              "name": "pulse",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the badge pulsate to draw attention.",
+              "fieldName": "pulse"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "Badges are used to draw attention and display statuses or counts.",
+          "tagNameWithoutPrefix": "badge",
+          "tagName": "p-badge",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary Badges are used to draw attention and display statuses or counts.\n * @documentation https://pureui.xyz/components/badge\n * @status stable\n * @since 1.0\n *\n * @slot - The badge's content.\n *\n * @csspart base - The component's base wrapper.\n */",
+          "documentation": "https://pureui.xyz/components/badge",
+          "status": "stable",
+          "since": "1.0"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PBadge",
+            "module": "components/badge/badge.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "components/animated-image/animated-image.js",
       "declarations": [
         {
@@ -444,6 +754,143 @@
           "declaration": {
             "name": "PAnimatedImage",
             "module": "components/animated-image/animated-image.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/breadcrumb-item/breadcrumb-item.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PBreadcrumbItem",
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The breadcrumb item's label.",
+              "name": "label"
+            },
+            {
+              "description": "The container that wraps the prefix.",
+              "name": "prefix"
+            },
+            {
+              "description": "The container that wraps the suffix.",
+              "name": "suffix"
+            },
+            {
+              "description": "The container that wraps the separator.",
+              "name": "separator"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The breadcrumb item's label.",
+              "name": ""
+            },
+            {
+              "description": "An optional prefix, usually an icon or icon button.",
+              "name": "prefix"
+            },
+            {
+              "description": "An optional suffix, usually an icon or icon button.",
+              "name": "suffix"
+            },
+            {
+              "description": "The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<p-breadcrumb>` instead.",
+              "name": "separator"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "hasSlotController",
+              "privacy": "private",
+              "readonly": true,
+              "default": "new HasSlotController(this, \"prefix\", \"suffix\")"
+            },
+            {
+              "kind": "field",
+              "name": "href",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
+              "attribute": "href"
+            },
+            {
+              "kind": "field",
+              "name": "target",
+              "type": {
+                "text": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\" | undefined"
+              },
+              "description": "Tells the browser where to open the link. Only used when `href` is set.",
+              "attribute": "target"
+            },
+            {
+              "kind": "field",
+              "name": "rel",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"noreferrer noopener\"",
+              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
+              "attribute": "rel"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "href",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
+              "fieldName": "href"
+            },
+            {
+              "name": "target",
+              "type": {
+                "text": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\" | undefined"
+              },
+              "description": "Tells the browser where to open the link. Only used when `href` is set.",
+              "fieldName": "target"
+            },
+            {
+              "name": "rel",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"noreferrer noopener\"",
+              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
+              "fieldName": "rel"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.",
+          "tagNameWithoutPrefix": "breadcrumb-item",
+          "tagName": "p-breadcrumb-item",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.\n * @documentation https://pureui.xyz/components/breadcrumb-item\n * @status stable\n * @since 1.0\n *\n * @slot - The breadcrumb item's label.\n * @slot prefix - An optional prefix, usually an icon or icon button.\n * @slot suffix - An optional suffix, usually an icon or icon button.\n * @slot separator - The separator to use for the breadcrumb item. This will only change the separator for this item. If\n * you want to change it for all items in the group, set the separator on `<p-breadcrumb>` instead.\n *\n * @csspart base - The component's base wrapper.\n * @csspart label - The breadcrumb item's label.\n * @csspart prefix - The container that wraps the prefix.\n * @csspart suffix - The container that wraps the suffix.\n * @csspart separator - The container that wraps the separator.\n */",
+          "documentation": "https://pureui.xyz/components/breadcrumb-item",
+          "status": "stable",
+          "since": "1.0"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PBreadcrumbItem",
+            "module": "components/breadcrumb-item/breadcrumb-item.js"
           }
         }
       ]
@@ -807,316 +1254,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/avatar/avatar.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PAvatar",
-          "cssProperties": [
-            {
-              "description": "The size of the avatar.",
-              "name": "--size"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The container that wraps the avatar's icon.",
-              "name": "icon"
-            },
-            {
-              "description": "The container that wraps the avatar's initials.",
-              "name": "initials"
-            },
-            {
-              "description": "The avatar image. Only shown when the `image` attribute is set.",
-              "name": "image"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The default icon to use when no image or initials are present. Works best with `<p-icon>`.",
-              "name": "icon"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "dependencies",
-              "type": {
-                "text": "object"
-              },
-              "static": true,
-              "default": "{\n    \"p-icon\": PIcon,\n  }"
-            },
-            {
-              "kind": "field",
-              "name": "hasError",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "image",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "The image source to use for the avatar.",
-              "attribute": "image"
-            },
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "A label to use to describe the avatar to assistive devices.",
-              "attribute": "label"
-            },
-            {
-              "kind": "field",
-              "name": "initials",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-              "attribute": "initials"
-            },
-            {
-              "kind": "field",
-              "name": "loading",
-              "type": {
-                "text": "\"eager\" | \"lazy\""
-              },
-              "default": "\"eager\"",
-              "description": "Indicates how the browser should load the image.",
-              "attribute": "loading"
-            },
-            {
-              "kind": "field",
-              "name": "shape",
-              "type": {
-                "text": "\"circle\" | \"square\" | \"rounded\""
-              },
-              "default": "\"circle\"",
-              "description": "The shape of the avatar.",
-              "attribute": "shape",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleImageChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleImageLoadError",
-              "privacy": "private"
-            }
-          ],
-          "events": [
-            {
-              "description": "The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause.",
-              "name": "p-error",
-              "reactName": "onPError",
-              "eventName": "PErrorEvent"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "image",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "The image source to use for the avatar.",
-              "fieldName": "image"
-            },
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "A label to use to describe the avatar to assistive devices.",
-              "fieldName": "label"
-            },
-            {
-              "name": "initials",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-              "fieldName": "initials"
-            },
-            {
-              "name": "loading",
-              "type": {
-                "text": "\"eager\" | \"lazy\""
-              },
-              "default": "\"eager\"",
-              "description": "Indicates how the browser should load the image.",
-              "fieldName": "loading"
-            },
-            {
-              "name": "shape",
-              "type": {
-                "text": "\"circle\" | \"square\" | \"rounded\""
-              },
-              "default": "\"circle\"",
-              "description": "The shape of the avatar.",
-              "fieldName": "shape"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "Avatars are used to represent a person or object.",
-          "tagNameWithoutPrefix": "avatar",
-          "tagName": "p-avatar",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary Avatars are used to represent a person or object.\n * @documentation https://pureui.xyz/components/avatar\n * @status stable\n * @since 1.0\n *\n * @dependency p-icon\n *\n * @event p-error - The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some\n * unknown cause.\n *\n * @slot icon - The default icon to use when no image or initials are present. Works best with `<p-icon>`.\n *\n * @csspart base - The component's base wrapper.\n * @csspart icon - The container that wraps the avatar's icon.\n * @csspart initials - The container that wraps the avatar's initials.\n * @csspart image - The avatar image. Only shown when the `image` attribute is set.\n *\n * @cssproperty --size - The size of the avatar.\n */",
-          "documentation": "https://pureui.xyz/components/avatar",
-          "status": "stable",
-          "since": "1.0",
-          "dependencies": [
-            "p-icon"
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PAvatar",
-            "module": "components/avatar/avatar.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/badge/badge.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PBadge",
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The badge's content.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "variant",
-              "type": {
-                "text": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\""
-              },
-              "default": "\"primary\"",
-              "description": "The badge's theme variant.",
-              "attribute": "variant",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "pill",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "attribute": "pill",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "pulse",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the badge pulsate to draw attention.",
-              "attribute": "pulse",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "name": "variant",
-              "type": {
-                "text": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\""
-              },
-              "default": "\"primary\"",
-              "description": "The badge's theme variant.",
-              "fieldName": "variant"
-            },
-            {
-              "name": "pill",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "fieldName": "pill"
-            },
-            {
-              "name": "pulse",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the badge pulsate to draw attention.",
-              "fieldName": "pulse"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "Badges are used to draw attention and display statuses or counts.",
-          "tagNameWithoutPrefix": "badge",
-          "tagName": "p-badge",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary Badges are used to draw attention and display statuses or counts.\n * @documentation https://pureui.xyz/components/badge\n * @status stable\n * @since 1.0\n *\n * @slot - The badge's content.\n *\n * @csspart base - The component's base wrapper.\n */",
-          "documentation": "https://pureui.xyz/components/badge",
-          "status": "stable",
-          "since": "1.0"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PBadge",
-            "module": "components/badge/badge.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/breadcrumb/breadcrumb.js",
       "declarations": [
         {
@@ -1231,143 +1368,6 @@
           "declaration": {
             "name": "PBreadcrumb",
             "module": "components/breadcrumb/breadcrumb.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/breadcrumb-item/breadcrumb-item.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PBreadcrumbItem",
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The breadcrumb item's label.",
-              "name": "label"
-            },
-            {
-              "description": "The container that wraps the prefix.",
-              "name": "prefix"
-            },
-            {
-              "description": "The container that wraps the suffix.",
-              "name": "suffix"
-            },
-            {
-              "description": "The container that wraps the separator.",
-              "name": "separator"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The breadcrumb item's label.",
-              "name": ""
-            },
-            {
-              "description": "An optional prefix, usually an icon or icon button.",
-              "name": "prefix"
-            },
-            {
-              "description": "An optional suffix, usually an icon or icon button.",
-              "name": "suffix"
-            },
-            {
-              "description": "The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<p-breadcrumb>` instead.",
-              "name": "separator"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "hasSlotController",
-              "privacy": "private",
-              "readonly": true,
-              "default": "new HasSlotController(this, \"prefix\", \"suffix\")"
-            },
-            {
-              "kind": "field",
-              "name": "href",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
-              "attribute": "href"
-            },
-            {
-              "kind": "field",
-              "name": "target",
-              "type": {
-                "text": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\" | undefined"
-              },
-              "description": "Tells the browser where to open the link. Only used when `href` is set.",
-              "attribute": "target"
-            },
-            {
-              "kind": "field",
-              "name": "rel",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"noreferrer noopener\"",
-              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
-              "attribute": "rel"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "href",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
-              "fieldName": "href"
-            },
-            {
-              "name": "target",
-              "type": {
-                "text": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\" | undefined"
-              },
-              "description": "Tells the browser where to open the link. Only used when `href` is set.",
-              "fieldName": "target"
-            },
-            {
-              "name": "rel",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"noreferrer noopener\"",
-              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
-              "fieldName": "rel"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.",
-          "tagNameWithoutPrefix": "breadcrumb-item",
-          "tagName": "p-breadcrumb-item",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.\n * @documentation https://pureui.xyz/components/breadcrumb-item\n * @status stable\n * @since 1.0\n *\n * @slot - The breadcrumb item's label.\n * @slot prefix - An optional prefix, usually an icon or icon button.\n * @slot suffix - An optional suffix, usually an icon or icon button.\n * @slot separator - The separator to use for the breadcrumb item. This will only change the separator for this item. If\n * you want to change it for all items in the group, set the separator on `<p-breadcrumb>` instead.\n *\n * @csspart base - The component's base wrapper.\n * @csspart label - The breadcrumb item's label.\n * @csspart prefix - The container that wraps the prefix.\n * @csspart suffix - The container that wraps the suffix.\n * @csspart separator - The container that wraps the separator.\n */",
-          "documentation": "https://pureui.xyz/components/breadcrumb-item",
-          "status": "stable",
-          "since": "1.0"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PBreadcrumbItem",
-            "module": "components/breadcrumb-item/breadcrumb-item.js"
           }
         }
       ]
@@ -8595,230 +8595,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/format-number/format-number.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PFormatNumber",
-          "members": [
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "readonly": true,
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "value",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The number to format.",
-              "attribute": "value"
-            },
-            {
-              "kind": "field",
-              "name": "type",
-              "type": {
-                "text": "\"currency\" | \"decimal\" | \"percent\""
-              },
-              "default": "\"decimal\"",
-              "description": "The formatting style to use.",
-              "attribute": "type"
-            },
-            {
-              "kind": "field",
-              "name": "noGrouping",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Turns off grouping separators.",
-              "attribute": "no-grouping"
-            },
-            {
-              "kind": "field",
-              "name": "currency",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"USD\"",
-              "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting.",
-              "attribute": "currency"
-            },
-            {
-              "kind": "field",
-              "name": "currencyDisplay",
-              "type": {
-                "text": "\"symbol\" | \"narrowSymbol\" | \"code\" | \"name\""
-              },
-              "default": "\"symbol\"",
-              "description": "How to display the currency.",
-              "attribute": "currency-display"
-            },
-            {
-              "kind": "field",
-              "name": "minimumIntegerDigits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The minimum number of integer digits to use. Possible values are 1-21.",
-              "attribute": "minimum-integer-digits"
-            },
-            {
-              "kind": "field",
-              "name": "minimumFractionDigits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The minimum number of fraction digits to use. Possible values are 0-20.",
-              "attribute": "minimum-fraction-digits"
-            },
-            {
-              "kind": "field",
-              "name": "maximumFractionDigits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The maximum number of fraction digits to use. Possible values are 0-0.",
-              "attribute": "maximum-fraction-digits"
-            },
-            {
-              "kind": "field",
-              "name": "minimumSignificantDigits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The minimum number of significant digits to use. Possible values are 1-21.",
-              "attribute": "minimum-significant-digits"
-            },
-            {
-              "kind": "field",
-              "name": "maximumSignificantDigits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The maximum number of significant digits to use,. Possible values are 1-21.",
-              "attribute": "maximum-significant-digits"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "value",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The number to format.",
-              "fieldName": "value"
-            },
-            {
-              "name": "type",
-              "type": {
-                "text": "\"currency\" | \"decimal\" | \"percent\""
-              },
-              "default": "\"decimal\"",
-              "description": "The formatting style to use.",
-              "fieldName": "type"
-            },
-            {
-              "name": "no-grouping",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Turns off grouping separators.",
-              "fieldName": "noGrouping"
-            },
-            {
-              "name": "currency",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"USD\"",
-              "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting.",
-              "fieldName": "currency"
-            },
-            {
-              "name": "currency-display",
-              "type": {
-                "text": "\"symbol\" | \"narrowSymbol\" | \"code\" | \"name\""
-              },
-              "default": "\"symbol\"",
-              "description": "How to display the currency.",
-              "fieldName": "currencyDisplay"
-            },
-            {
-              "name": "minimum-integer-digits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The minimum number of integer digits to use. Possible values are 1-21.",
-              "fieldName": "minimumIntegerDigits"
-            },
-            {
-              "name": "minimum-fraction-digits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The minimum number of fraction digits to use. Possible values are 0-20.",
-              "fieldName": "minimumFractionDigits"
-            },
-            {
-              "name": "maximum-fraction-digits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The maximum number of fraction digits to use. Possible values are 0-0.",
-              "fieldName": "maximumFractionDigits"
-            },
-            {
-              "name": "minimum-significant-digits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The minimum number of significant digits to use. Possible values are 1-21.",
-              "fieldName": "minimumSignificantDigits"
-            },
-            {
-              "name": "maximum-significant-digits",
-              "type": {
-                "text": "number"
-              },
-              "description": "The maximum number of significant digits to use,. Possible values are 1-21.",
-              "fieldName": "maximumSignificantDigits"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "Formats a number using the specified locale and options.",
-          "tagNameWithoutPrefix": "format-number",
-          "tagName": "p-format-number",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary Formats a number using the specified locale and options.\n * @documentation https://pureui.xyz/components/format-number\n * @status stable\n * @since 1.0\n */",
-          "documentation": "https://pureui.xyz/components/format-number",
-          "status": "stable",
-          "since": "1.0"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PFormatNumber",
-            "module": "components/format-number/format-number.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/format-date/format-date.js",
       "declarations": [
         {
@@ -9065,6 +8841,230 @@
           "declaration": {
             "name": "PFormatDate",
             "module": "components/format-date/format-date.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/format-number/format-number.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PFormatNumber",
+          "members": [
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "readonly": true,
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The number to format.",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "type",
+              "type": {
+                "text": "\"currency\" | \"decimal\" | \"percent\""
+              },
+              "default": "\"decimal\"",
+              "description": "The formatting style to use.",
+              "attribute": "type"
+            },
+            {
+              "kind": "field",
+              "name": "noGrouping",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Turns off grouping separators.",
+              "attribute": "no-grouping"
+            },
+            {
+              "kind": "field",
+              "name": "currency",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"USD\"",
+              "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting.",
+              "attribute": "currency"
+            },
+            {
+              "kind": "field",
+              "name": "currencyDisplay",
+              "type": {
+                "text": "\"symbol\" | \"narrowSymbol\" | \"code\" | \"name\""
+              },
+              "default": "\"symbol\"",
+              "description": "How to display the currency.",
+              "attribute": "currency-display"
+            },
+            {
+              "kind": "field",
+              "name": "minimumIntegerDigits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The minimum number of integer digits to use. Possible values are 1-21.",
+              "attribute": "minimum-integer-digits"
+            },
+            {
+              "kind": "field",
+              "name": "minimumFractionDigits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The minimum number of fraction digits to use. Possible values are 0-20.",
+              "attribute": "minimum-fraction-digits"
+            },
+            {
+              "kind": "field",
+              "name": "maximumFractionDigits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The maximum number of fraction digits to use. Possible values are 0-0.",
+              "attribute": "maximum-fraction-digits"
+            },
+            {
+              "kind": "field",
+              "name": "minimumSignificantDigits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The minimum number of significant digits to use. Possible values are 1-21.",
+              "attribute": "minimum-significant-digits"
+            },
+            {
+              "kind": "field",
+              "name": "maximumSignificantDigits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The maximum number of significant digits to use,. Possible values are 1-21.",
+              "attribute": "maximum-significant-digits"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The number to format.",
+              "fieldName": "value"
+            },
+            {
+              "name": "type",
+              "type": {
+                "text": "\"currency\" | \"decimal\" | \"percent\""
+              },
+              "default": "\"decimal\"",
+              "description": "The formatting style to use.",
+              "fieldName": "type"
+            },
+            {
+              "name": "no-grouping",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Turns off grouping separators.",
+              "fieldName": "noGrouping"
+            },
+            {
+              "name": "currency",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"USD\"",
+              "description": "The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting.",
+              "fieldName": "currency"
+            },
+            {
+              "name": "currency-display",
+              "type": {
+                "text": "\"symbol\" | \"narrowSymbol\" | \"code\" | \"name\""
+              },
+              "default": "\"symbol\"",
+              "description": "How to display the currency.",
+              "fieldName": "currencyDisplay"
+            },
+            {
+              "name": "minimum-integer-digits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The minimum number of integer digits to use. Possible values are 1-21.",
+              "fieldName": "minimumIntegerDigits"
+            },
+            {
+              "name": "minimum-fraction-digits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The minimum number of fraction digits to use. Possible values are 0-20.",
+              "fieldName": "minimumFractionDigits"
+            },
+            {
+              "name": "maximum-fraction-digits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The maximum number of fraction digits to use. Possible values are 0-0.",
+              "fieldName": "maximumFractionDigits"
+            },
+            {
+              "name": "minimum-significant-digits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The minimum number of significant digits to use. Possible values are 1-21.",
+              "fieldName": "minimumSignificantDigits"
+            },
+            {
+              "name": "maximum-significant-digits",
+              "type": {
+                "text": "number"
+              },
+              "description": "The maximum number of significant digits to use,. Possible values are 1-21.",
+              "fieldName": "maximumSignificantDigits"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "Formats a number using the specified locale and options.",
+          "tagNameWithoutPrefix": "format-number",
+          "tagName": "p-format-number",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary Formats a number using the specified locale and options.\n * @documentation https://pureui.xyz/components/format-number\n * @status stable\n * @since 1.0\n */",
+          "documentation": "https://pureui.xyz/components/format-number",
+          "status": "stable",
+          "since": "1.0"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PFormatNumber",
+            "module": "components/format-number/format-number.js"
           }
         }
       ]
@@ -20141,46 +20141,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/visually-hidden/visually-hidden.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PVisuallyHidden",
-          "slots": [
-            {
-              "description": "The content to be visually hidden.",
-              "name": ""
-            }
-          ],
-          "members": [],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "The visually hidden utility makes content accessible to assistive devices without displaying it on the screen.",
-          "tagNameWithoutPrefix": "visually-hidden",
-          "tagName": "p-visually-hidden",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary The visually hidden utility makes content accessible to assistive devices without displaying it on the screen.\n * @documentation https://pureui.xyz/components/visually-hidden\n * @status stable\n * @since 1.0\n *\n * @slot - The content to be visually hidden.\n */",
-          "documentation": "https://pureui.xyz/components/visually-hidden",
-          "status": "stable",
-          "since": "1.0"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PVisuallyHidden",
-            "module": "components/visually-hidden/visually-hidden.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/tree-item/tree-item.js",
       "declarations": [
         {
@@ -20598,12 +20558,52 @@
           }
         }
       ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/visually-hidden/visually-hidden.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PVisuallyHidden",
+          "slots": [
+            {
+              "description": "The content to be visually hidden.",
+              "name": ""
+            }
+          ],
+          "members": [],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "The visually hidden utility makes content accessible to assistive devices without displaying it on the screen.",
+          "tagNameWithoutPrefix": "visually-hidden",
+          "tagName": "p-visually-hidden",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary The visually hidden utility makes content accessible to assistive devices without displaying it on the screen.\n * @documentation https://pureui.xyz/components/visually-hidden\n * @status stable\n * @since 1.0\n *\n * @slot - The content to be visually hidden.\n */",
+          "documentation": "https://pureui.xyz/components/visually-hidden",
+          "status": "stable",
+          "since": "1.0"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PVisuallyHidden",
+            "module": "components/visually-hidden/visually-hidden.js"
+          }
+        }
+      ]
     }
   ],
   "package": {
     "name": "pure-uikit",
     "description": "A forward-thinking library of web components.",
-    "version": "1.3.1",
+    "version": "1.3.3",
     "author": "Mr.P",
     "homepage": "https://pureui.xyz",
     "license": "MIT"

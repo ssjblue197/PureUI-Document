@@ -1,12 +1,12 @@
 import type { DefineComponent } from "vue";
 
 import type { PAlert } from "../../components/alert/alert.component.js";
-import type { PAnimatedImage } from "../../components/animated-image/animated-image.component.js";
-import type { PAnimation } from "../../components/animation/animation.component.js";
 import type { PAvatar } from "../../components/avatar/avatar.component.js";
 import type { PBadge } from "../../components/badge/badge.component.js";
-import type { PBreadcrumb } from "../../components/breadcrumb/breadcrumb.component.js";
+import type { PAnimatedImage } from "../../components/animated-image/animated-image.component.js";
 import type { PBreadcrumbItem } from "../../components/breadcrumb-item/breadcrumb-item.component.js";
+import type { PAnimation } from "../../components/animation/animation.component.js";
+import type { PBreadcrumb } from "../../components/breadcrumb/breadcrumb.component.js";
 import type { PButton } from "../../components/button/button.component.js";
 import type { PButtonGroup } from "../../components/button-group/button-group.component.js";
 import type { PCalendar } from "../../components/calendar/calendar.component.js";
@@ -24,8 +24,8 @@ import type { PDropdown } from "../../components/dropdown/dropdown.component.js"
 import type { PFileUpload } from "../../components/file-upload/file-upload.component.js";
 import type { PFileUploadItem } from "../../components/file-upload-item/file-upload-item.component.js";
 import type { PFormatBytes } from "../../components/format-bytes/format-bytes.component.js";
-import type { PFormatNumber } from "../../components/format-number/format-number.component.js";
 import type { PFormatDate } from "../../components/format-date/format-date.component.js";
+import type { PFormatNumber } from "../../components/format-number/format-number.component.js";
 import type { PIcon } from "../../components/icon/icon.component.js";
 import type { PIconButton } from "../../components/icon-button/icon-button.component.js";
 import type { PImageComparer } from "../../components/image-comparer/image-comparer.component.js";
@@ -62,8 +62,8 @@ import type { PTag } from "../../components/tag/tag.component.js";
 import type { PTextarea } from "../../components/textarea/textarea.component.js";
 import type { PTooltip } from "../../components/tooltip/tooltip.component.js";
 import type { PTree } from "../../components/tree/tree.component.js";
-import type { PVisuallyHidden } from "../../components/visually-hidden/visually-hidden.component.js";
 import type { PTreeItem } from "../../components/tree-item/tree-item.component.js";
+import type { PVisuallyHidden } from "../../components/visually-hidden/visually-hidden.component.js";
 
 type PAlertProps = {
   /** Indicates whether or not the alert is open. You can toggle this attribute to show and hide the alert, or you can
@@ -89,6 +89,31 @@ the alert will not close on its own. */
   "onp-after-hide"?: (e: CustomEvent<never>) => void;
 };
 
+type PAvatarProps = {
+  /** The image source to use for the avatar. */
+  image?: PAvatar["image"];
+  /** A label to use to describe the avatar to assistive devices. */
+  label?: PAvatar["label"];
+  /** Initials to use as a fallback when no image is available (1-2 characters max recommended). */
+  initials?: PAvatar["initials"];
+  /** Indicates how the browser should load the image. */
+  loading?: PAvatar["loading"];
+  /** The shape of the avatar. */
+  shape?: PAvatar["shape"];
+
+  /** The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause. */
+  "onp-error"?: (e: CustomEvent<never>) => void;
+};
+
+type PBadgeProps = {
+  /** The badge's theme variant. */
+  variant?: PBadge["variant"];
+  /** Draws a pill-style badge with rounded edges. */
+  pill?: PBadge["pill"];
+  /** Makes the badge pulsate to draw attention. */
+  pulse?: PBadge["pulse"];
+};
+
 type PAnimatedImageProps = {
   /** The path to the image to load. */
   src?: PAnimatedImage["src"];
@@ -106,6 +131,16 @@ type PAnimatedImageProps = {
   "onp-load"?: (e: CustomEvent<never>) => void;
   /** Emitted when the image fails to load. */
   "onp-error"?: (e: CustomEvent<never>) => void;
+};
+
+type PBreadcrumbItemProps = {
+  /** Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered
+internally. When unset, a button will be rendered instead. */
+  href?: PBreadcrumbItem["href"];
+  /** Tells the browser where to open the link. Only used when `href` is set. */
+  target?: PBreadcrumbItem["target"];
+  /** The `rel` attribute to use on the link. Only used when `href` is set. */
+  rel?: PBreadcrumbItem["rel"];
 };
 
 type PAnimationProps = {
@@ -150,31 +185,6 @@ value can be changed without causing the animation to restart. */
   "onp-start"?: (e: CustomEvent<never>) => void;
 };
 
-type PAvatarProps = {
-  /** The image source to use for the avatar. */
-  image?: PAvatar["image"];
-  /** A label to use to describe the avatar to assistive devices. */
-  label?: PAvatar["label"];
-  /** Initials to use as a fallback when no image is available (1-2 characters max recommended). */
-  initials?: PAvatar["initials"];
-  /** Indicates how the browser should load the image. */
-  loading?: PAvatar["loading"];
-  /** The shape of the avatar. */
-  shape?: PAvatar["shape"];
-
-  /** The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause. */
-  "onp-error"?: (e: CustomEvent<never>) => void;
-};
-
-type PBadgeProps = {
-  /** The badge's theme variant. */
-  variant?: PBadge["variant"];
-  /** Draws a pill-style badge with rounded edges. */
-  pill?: PBadge["pill"];
-  /** Makes the badge pulsate to draw attention. */
-  pulse?: PBadge["pulse"];
-};
-
 type PBreadcrumbProps = {
   /** The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by
 screen readers and other assistive devices to provide more context for users. */
@@ -183,16 +193,6 @@ screen readers and other assistive devices to provide more context for users. */
   defaultSlot?: PBreadcrumb["defaultSlot"];
   /**  */
   separatorSlot?: PBreadcrumb["separatorSlot"];
-};
-
-type PBreadcrumbItemProps = {
-  /** Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered
-internally. When unset, a button will be rendered instead. */
-  href?: PBreadcrumbItem["href"];
-  /** Tells the browser where to open the link. Only used when `href` is set. */
-  target?: PBreadcrumbItem["target"];
-  /** The `rel` attribute to use on the link. Only used when `href` is set. */
-  rel?: PBreadcrumbItem["rel"];
 };
 
 type PButtonProps = {
@@ -870,29 +870,6 @@ type PFormatBytesProps = {
   display?: PFormatBytes["display"];
 };
 
-type PFormatNumberProps = {
-  /** The number to format. */
-  value?: PFormatNumber["value"];
-  /** The formatting style to use. */
-  type?: PFormatNumber["type"];
-  /** Turns off grouping separators. */
-  "no-grouping"?: PFormatNumber["noGrouping"];
-  /** The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting. */
-  currency?: PFormatNumber["currency"];
-  /** How to display the currency. */
-  "currency-display"?: PFormatNumber["currencyDisplay"];
-  /** The minimum number of integer digits to use. Possible values are 1-21. */
-  "minimum-integer-digits"?: PFormatNumber["minimumIntegerDigits"];
-  /** The minimum number of fraction digits to use. Possible values are 0-20. */
-  "minimum-fraction-digits"?: PFormatNumber["minimumFractionDigits"];
-  /** The maximum number of fraction digits to use. Possible values are 0-0. */
-  "maximum-fraction-digits"?: PFormatNumber["maximumFractionDigits"];
-  /** The minimum number of significant digits to use. Possible values are 1-21. */
-  "minimum-significant-digits"?: PFormatNumber["minimumSignificantDigits"];
-  /** The maximum number of significant digits to use,. Possible values are 1-21. */
-  "maximum-significant-digits"?: PFormatNumber["maximumSignificantDigits"];
-};
-
 type PFormatDateProps = {
   /** The date/time to format. If not set, the current date and time will be used. When passing a string, it's strongly
 recommended to use the ISO 8601 format to ensure timezones are handled correctly. To convert a date to this format
@@ -920,6 +897,29 @@ in JavaScript, use [`date.toISOString()`](https://developer.mozilla.org/en-US/do
   "time-zone"?: PFormatDate["timeZone"];
   /** The format for displaying the hour. */
   "hour-format"?: PFormatDate["hourFormat"];
+};
+
+type PFormatNumberProps = {
+  /** The number to format. */
+  value?: PFormatNumber["value"];
+  /** The formatting style to use. */
+  type?: PFormatNumber["type"];
+  /** Turns off grouping separators. */
+  "no-grouping"?: PFormatNumber["noGrouping"];
+  /** The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) currency code to use when formatting. */
+  currency?: PFormatNumber["currency"];
+  /** How to display the currency. */
+  "currency-display"?: PFormatNumber["currencyDisplay"];
+  /** The minimum number of integer digits to use. Possible values are 1-21. */
+  "minimum-integer-digits"?: PFormatNumber["minimumIntegerDigits"];
+  /** The minimum number of fraction digits to use. Possible values are 0-20. */
+  "minimum-fraction-digits"?: PFormatNumber["minimumFractionDigits"];
+  /** The maximum number of fraction digits to use. Possible values are 0-0. */
+  "maximum-fraction-digits"?: PFormatNumber["maximumFractionDigits"];
+  /** The minimum number of significant digits to use. Possible values are 1-21. */
+  "minimum-significant-digits"?: PFormatNumber["minimumSignificantDigits"];
+  /** The maximum number of significant digits to use,. Possible values are 1-21. */
+  "maximum-significant-digits"?: PFormatNumber["maximumSignificantDigits"];
 };
 
 type PIconProps = {
@@ -1866,8 +1866,6 @@ displays checkboxes and allows more than one node to be selected. Leaf allows on
   "onp-selection-change"?: (e: CustomEvent<{ selection: PTreeItem[] }>) => void;
 };
 
-type PVisuallyHiddenProps = {};
-
 type PTreeItemProps = {
   /** Expands the tree item. */
   expanded?: PTreeItem["expanded"];
@@ -1909,6 +1907,8 @@ type PTreeItemProps = {
   "onp-lazy-load"?: (e: CustomEvent<never>) => void;
 };
 
+type PVisuallyHiddenProps = {};
+
 export type CustomElements = {
   /**
    * Alerts are used to display important messages inline or as toast notifications.
@@ -1940,47 +1940,6 @@ export type CustomElements = {
    * - **close-button__base** - The close button's exported `base` part.
    */
   "p-alert": DefineComponent<PAlertProps>;
-
-  /**
-   * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **p-load** - Emitted when the image loads successfully.
-   * - **p-error** - Emitted when the image fails to load.
-   *
-   * ### **Slots:**
-   *  - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.
-   * - **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.
-   *
-   * ### **CSS Properties:**
-   *  - **--control-box-size** - The size of the icon box. _(default: undefined)_
-   * - **--icon-size** - The size of the play/pause icons. _(default: undefined)_
-   *
-   * ### **CSS Parts:**
-   *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
-   */
-  "p-animated-image": DefineComponent<PAnimatedImageProps>;
-
-  /**
-   * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
-   * ---
-   *
-   *
-   * ### **Events:**
-   *  - **p-cancel** - Emitted when the animation is canceled.
-   * - **p-finish** - Emitted when the animation finishes.
-   * - **p-start** - Emitted when the animation starts or restarts.
-   *
-   * ### **Methods:**
-   *  - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.
-   * - **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.
-   *
-   * ### **Slots:**
-   *  - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.
-   */
-  "p-animation": DefineComponent<PAnimationProps>;
 
   /**
    * Avatars are used to represent a person or object.
@@ -2018,18 +1977,26 @@ export type CustomElements = {
   "p-badge": DefineComponent<PBadgeProps>;
 
   /**
-   * Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.
+   * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
    * ---
    *
    *
+   * ### **Events:**
+   *  - **p-load** - Emitted when the image loads successfully.
+   * - **p-error** - Emitted when the image fails to load.
+   *
    * ### **Slots:**
-   *  - _default_ - One or more breadcrumb items to display.
-   * - **separator** - The separator to use between breadcrumb items. Works best with `<p-icon>`.
+   *  - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.
+   * - **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.
+   *
+   * ### **CSS Properties:**
+   *  - **--control-box-size** - The size of the icon box. _(default: undefined)_
+   * - **--icon-size** - The size of the play/pause icons. _(default: undefined)_
    *
    * ### **CSS Parts:**
-   *  - **base** - The component's base wrapper.
+   *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
    */
-  "p-breadcrumb": DefineComponent<PBreadcrumbProps>;
+  "p-animated-image": DefineComponent<PAnimatedImageProps>;
 
   /**
    * Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.
@@ -2050,6 +2017,39 @@ export type CustomElements = {
    * - **separator** - The container that wraps the separator.
    */
   "p-breadcrumb-item": DefineComponent<PBreadcrumbItemProps>;
+
+  /**
+   * Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
+   * ---
+   *
+   *
+   * ### **Events:**
+   *  - **p-cancel** - Emitted when the animation is canceled.
+   * - **p-finish** - Emitted when the animation finishes.
+   * - **p-start** - Emitted when the animation starts or restarts.
+   *
+   * ### **Methods:**
+   *  - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.
+   * - **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.
+   *
+   * ### **Slots:**
+   *  - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.
+   */
+  "p-animation": DefineComponent<PAnimationProps>;
+
+  /**
+   * Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.
+   * ---
+   *
+   *
+   * ### **Slots:**
+   *  - _default_ - One or more breadcrumb items to display.
+   * - **separator** - The separator to use between breadcrumb items. Works best with `<p-icon>`.
+   *
+   * ### **CSS Parts:**
+   *  - **base** - The component's base wrapper.
+   */
+  "p-breadcrumb": DefineComponent<PBreadcrumbProps>;
 
   /**
    * Buttons represent actions that are available to the user.
@@ -2597,18 +2597,18 @@ export type CustomElements = {
   "p-format-bytes": DefineComponent<PFormatBytesProps>;
 
   /**
-   * Formats a number using the specified locale and options.
-   * ---
-   *
-   */
-  "p-format-number": DefineComponent<PFormatNumberProps>;
-
-  /**
    * Formats a date/time using the specified locale and options.
    * ---
    *
    */
   "p-format-date": DefineComponent<PFormatDateProps>;
+
+  /**
+   * Formats a number using the specified locale and options.
+   * ---
+   *
+   */
+  "p-format-number": DefineComponent<PFormatNumberProps>;
 
   /**
    * Icons are symbols that can be used to represent various options within an application.
@@ -3487,16 +3487,6 @@ export type CustomElements = {
   "p-tree": DefineComponent<PTreeProps>;
 
   /**
-   * The visually hidden utility makes content accessible to assistive devices without displaying it on the screen.
-   * ---
-   *
-   *
-   * ### **Slots:**
-   *  - _default_ - The content to be visually hidden.
-   */
-  "p-visually-hidden": DefineComponent<PVisuallyHiddenProps>;
-
-  /**
    * A tree item serves as a hierarchical node that lives inside a [tree](/components/tree).
    * ---
    *
@@ -3540,6 +3530,16 @@ export type CustomElements = {
    * - **checkbox__label** - The checkbox's exported `label` part.
    */
   "p-tree-item": DefineComponent<PTreeItemProps>;
+
+  /**
+   * The visually hidden utility makes content accessible to assistive devices without displaying it on the screen.
+   * ---
+   *
+   *
+   * ### **Slots:**
+   *  - _default_ - The content to be visually hidden.
+   */
+  "p-visually-hidden": DefineComponent<PVisuallyHiddenProps>;
 };
 
 declare module "vue" {
