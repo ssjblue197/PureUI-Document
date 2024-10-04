@@ -3,10 +3,10 @@ import type { DefineComponent } from "vue";
 import type { PAlert } from "../../components/alert/alert.component.js";
 import type { PAvatar } from "../../components/avatar/avatar.component.js";
 import type { PBadge } from "../../components/badge/badge.component.js";
-import type { PAnimatedImage } from "../../components/animated-image/animated-image.component.js";
+import type { PBreadcrumb } from "../../components/breadcrumb/breadcrumb.component.js";
 import type { PBreadcrumbItem } from "../../components/breadcrumb-item/breadcrumb-item.component.js";
 import type { PAnimation } from "../../components/animation/animation.component.js";
-import type { PBreadcrumb } from "../../components/breadcrumb/breadcrumb.component.js";
+import type { PAnimatedImage } from "../../components/animated-image/animated-image.component.js";
 import type { PButton } from "../../components/button/button.component.js";
 import type { PButtonGroup } from "../../components/button-group/button-group.component.js";
 import type { PCalendar } from "../../components/calendar/calendar.component.js";
@@ -114,23 +114,14 @@ type PBadgeProps = {
   pulse?: PBadge["pulse"];
 };
 
-type PAnimatedImageProps = {
-  /** The path to the image to load. */
-  src?: PAnimatedImage["src"];
-  /** A description of the image used by assistive devices. */
-  alt?: PAnimatedImage["alt"];
-  /** Plays the animation. When this attribute is remove, the animation will pause. */
-  play?: PAnimatedImage["play"];
+type PBreadcrumbProps = {
+  /** The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by
+screen readers and other assistive devices to provide more context for users. */
+  label?: PBreadcrumb["label"];
   /**  */
-  animatedImage?: PAnimatedImage["animatedImage"];
+  defaultSlot?: PBreadcrumb["defaultSlot"];
   /**  */
-  frozenFrame?: PAnimatedImage["frozenFrame"];
-  /**  */
-  isLoaded?: PAnimatedImage["isLoaded"];
-  /** Emitted when the image loads successfully. */
-  "onp-load"?: (e: CustomEvent<never>) => void;
-  /** Emitted when the image fails to load. */
-  "onp-error"?: (e: CustomEvent<never>) => void;
+  separatorSlot?: PBreadcrumb["separatorSlot"];
 };
 
 type PBreadcrumbItemProps = {
@@ -185,14 +176,23 @@ value can be changed without causing the animation to restart. */
   "onp-start"?: (e: CustomEvent<never>) => void;
 };
 
-type PBreadcrumbProps = {
-  /** The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by
-screen readers and other assistive devices to provide more context for users. */
-  label?: PBreadcrumb["label"];
+type PAnimatedImageProps = {
+  /** The path to the image to load. */
+  src?: PAnimatedImage["src"];
+  /** A description of the image used by assistive devices. */
+  alt?: PAnimatedImage["alt"];
+  /** Plays the animation. When this attribute is remove, the animation will pause. */
+  play?: PAnimatedImage["play"];
   /**  */
-  defaultSlot?: PBreadcrumb["defaultSlot"];
+  animatedImage?: PAnimatedImage["animatedImage"];
   /**  */
-  separatorSlot?: PBreadcrumb["separatorSlot"];
+  frozenFrame?: PAnimatedImage["frozenFrame"];
+  /**  */
+  isLoaded?: PAnimatedImage["isLoaded"];
+  /** Emitted when the image loads successfully. */
+  "onp-load"?: (e: CustomEvent<never>) => void;
+  /** Emitted when the image fails to load. */
+  "onp-error"?: (e: CustomEvent<never>) => void;
 };
 
 type PButtonProps = {
@@ -1577,7 +1577,9 @@ type PSmartContainerProps = {
   /**  */
   smartContainer?: PSmartContainer["smartContainer"];
   /**  */
-  dropdownMenu?: PSmartContainer["dropdownMenu"];
+  dropdown?: PSmartContainer["dropdown"];
+  /**  */
+  dropdownContent?: PSmartContainer["dropdownContent"];
 };
 
 type PSpinnerProps = {};
@@ -1977,26 +1979,18 @@ export type CustomElements = {
   "p-badge": DefineComponent<PBadgeProps>;
 
   /**
-   * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
+   * Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.
    * ---
    *
    *
-   * ### **Events:**
-   *  - **p-load** - Emitted when the image loads successfully.
-   * - **p-error** - Emitted when the image fails to load.
-   *
    * ### **Slots:**
-   *  - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.
-   * - **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.
-   *
-   * ### **CSS Properties:**
-   *  - **--control-box-size** - The size of the icon box. _(default: undefined)_
-   * - **--icon-size** - The size of the play/pause icons. _(default: undefined)_
+   *  - _default_ - One or more breadcrumb items to display.
+   * - **separator** - The separator to use between breadcrumb items. Works best with `<p-icon>`.
    *
    * ### **CSS Parts:**
-   *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
+   *  - **base** - The component's base wrapper.
    */
-  "p-animated-image": DefineComponent<PAnimatedImageProps>;
+  "p-breadcrumb": DefineComponent<PBreadcrumbProps>;
 
   /**
    * Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.
@@ -2038,18 +2032,26 @@ export type CustomElements = {
   "p-animation": DefineComponent<PAnimationProps>;
 
   /**
-   * Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.
+   * A component for displaying animated GIFs and WEBPs that play and pause on interaction.
    * ---
    *
    *
+   * ### **Events:**
+   *  - **p-load** - Emitted when the image loads successfully.
+   * - **p-error** - Emitted when the image fails to load.
+   *
    * ### **Slots:**
-   *  - _default_ - One or more breadcrumb items to display.
-   * - **separator** - The separator to use between breadcrumb items. Works best with `<p-icon>`.
+   *  - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.
+   * - **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.
+   *
+   * ### **CSS Properties:**
+   *  - **--control-box-size** - The size of the icon box. _(default: undefined)_
+   * - **--icon-size** - The size of the play/pause icons. _(default: undefined)_
    *
    * ### **CSS Parts:**
-   *  - **base** - The component's base wrapper.
+   *  - **control-box** - The container that surrounds the pause/play icons and provides their background.
    */
-  "p-breadcrumb": DefineComponent<PBreadcrumbProps>;
+  "p-animated-image": DefineComponent<PAnimatedImageProps>;
 
   /**
    * Buttons represent actions that are available to the user.

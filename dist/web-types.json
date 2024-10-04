@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/JetBrains/web-types/master/schema/web-types.json",
   "name": "pure-uikit",
-  "version": "1.3.3",
+  "version": "1.3.9",
   "description-markup": "markdown",
   "contributions": {
     "html": {
@@ -236,77 +236,38 @@
           }
         },
         {
-          "name": "p-animated-image",
-          "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
+          "name": "p-breadcrumb",
+          "description": "Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.\n---\n\n\n### **Slots:**\n - _default_ - One or more breadcrumb items to display.\n- **separator** - The separator to use between breadcrumb items. Works best with `<p-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
           "doc-url": "",
           "attributes": [
             {
-              "name": "src",
-              "description": "The path to the image to load.",
-              "value": { "type": "string" }
-            },
-            {
-              "name": "alt",
-              "description": "A description of the image used by assistive devices.",
-              "value": { "type": "string" }
-            },
-            {
-              "name": "play",
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "value": { "type": "boolean" }
+              "name": "label",
+              "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
+              "value": { "type": "string", "default": "\"\"" }
             }
           ],
           "slots": [
             {
-              "name": "play-icon",
-              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`."
+              "name": "",
+              "description": "One or more breadcrumb items to display."
             },
             {
-              "name": "pause-icon",
-              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`."
+              "name": "separator",
+              "description": "The separator to use between breadcrumb items. Works best with `<p-icon>`."
             }
           ],
-          "events": [
-            {
-              "name": "p-load",
-              "description": "Emitted when the image loads successfully."
-            },
-            {
-              "name": "p-error",
-              "description": "Emitted when the image fails to load."
-            }
-          ],
+          "events": [],
           "js": {
             "properties": [
-              { "name": "animatedImage", "type": "HTMLImageElement" },
-              { "name": "frozenFrame", "type": "string" },
-              { "name": "isLoaded", "type": "boolean" },
+              { "name": "defaultSlot", "type": "HTMLSlotElement" },
+              { "name": "separatorSlot", "type": "HTMLSlotElement" },
               {
-                "name": "src",
-                "description": "The path to the image to load.",
+                "name": "label",
+                "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
                 "type": "string"
-              },
-              {
-                "name": "alt",
-                "description": "A description of the image used by assistive devices.",
-                "type": "string"
-              },
-              {
-                "name": "play",
-                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-                "type": "boolean"
               }
             ],
-            "events": [
-              {
-                "name": "p-load",
-                "description": "Emitted when the image loads successfully."
-              },
-              {
-                "name": "p-error",
-                "description": "Emitted when the image fails to load."
-              }
-            ]
+            "events": []
           }
         },
         {
@@ -538,38 +499,77 @@
           }
         },
         {
-          "name": "p-breadcrumb",
-          "description": "Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.\n---\n\n\n### **Slots:**\n - _default_ - One or more breadcrumb items to display.\n- **separator** - The separator to use between breadcrumb items. Works best with `<p-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
+          "name": "p-animated-image",
+          "description": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the image loads successfully.\n- **p-error** - Emitted when the image fails to load.\n\n### **Slots:**\n - **play-icon** - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n- **pause-icon** - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--control-box-size** - The size of the icon box. _(default: undefined)_\n- **--icon-size** - The size of the play/pause icons. _(default: undefined)_\n\n### **CSS Parts:**\n - **control-box** - The container that surrounds the pause/play icons and provides their background.",
           "doc-url": "",
           "attributes": [
             {
-              "name": "label",
-              "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
-              "value": { "type": "string", "default": "\"\"" }
+              "name": "src",
+              "description": "The path to the image to load.",
+              "value": { "type": "string" }
+            },
+            {
+              "name": "alt",
+              "description": "A description of the image used by assistive devices.",
+              "value": { "type": "string" }
+            },
+            {
+              "name": "play",
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "value": { "type": "boolean" }
             }
           ],
           "slots": [
             {
-              "name": "",
-              "description": "One or more breadcrumb items to display."
+              "name": "play-icon",
+              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`."
             },
             {
-              "name": "separator",
-              "description": "The separator to use between breadcrumb items. Works best with `<p-icon>`."
+              "name": "pause-icon",
+              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`."
             }
           ],
-          "events": [],
+          "events": [
+            {
+              "name": "p-load",
+              "description": "Emitted when the image loads successfully."
+            },
+            {
+              "name": "p-error",
+              "description": "Emitted when the image fails to load."
+            }
+          ],
           "js": {
             "properties": [
-              { "name": "defaultSlot", "type": "HTMLSlotElement" },
-              { "name": "separatorSlot", "type": "HTMLSlotElement" },
+              { "name": "animatedImage", "type": "HTMLImageElement" },
+              { "name": "frozenFrame", "type": "string" },
+              { "name": "isLoaded", "type": "boolean" },
               {
-                "name": "label",
-                "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
+                "name": "src",
+                "description": "The path to the image to load.",
                 "type": "string"
+              },
+              {
+                "name": "alt",
+                "description": "A description of the image used by assistive devices.",
+                "type": "string"
+              },
+              {
+                "name": "play",
+                "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+                "type": "boolean"
               }
             ],
-            "events": []
+            "events": [
+              {
+                "name": "p-load",
+                "description": "Emitted when the image loads successfully."
+              },
+              {
+                "name": "p-error",
+                "description": "Emitted when the image fails to load."
+              }
+            ]
           }
         },
         {
@@ -6007,7 +6007,8 @@
                 "type": "string"
               },
               { "name": "smartContainer", "type": "HTMLElement" },
-              { "name": "dropdownMenu", "type": "HTMLElement" }
+              { "name": "dropdown", "type": "PDropdown" },
+              { "name": "dropdownContent", "type": "HTMLElement" }
             ],
             "events": []
           }
