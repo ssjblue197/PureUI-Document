@@ -264,639 +264,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/avatar/avatar.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PAvatar",
-          "cssProperties": [
-            {
-              "description": "The size of the avatar.",
-              "name": "--size"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The container that wraps the avatar's icon.",
-              "name": "icon"
-            },
-            {
-              "description": "The container that wraps the avatar's initials.",
-              "name": "initials"
-            },
-            {
-              "description": "The avatar image. Only shown when the `image` attribute is set.",
-              "name": "image"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The default icon to use when no image or initials are present. Works best with `<p-icon>`.",
-              "name": "icon"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "dependencies",
-              "type": {
-                "text": "object"
-              },
-              "static": true,
-              "default": "{\n    \"p-icon\": PIcon,\n  }"
-            },
-            {
-              "kind": "field",
-              "name": "hasError",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "image",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "The image source to use for the avatar.",
-              "attribute": "image"
-            },
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "A label to use to describe the avatar to assistive devices.",
-              "attribute": "label"
-            },
-            {
-              "kind": "field",
-              "name": "initials",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-              "attribute": "initials"
-            },
-            {
-              "kind": "field",
-              "name": "loading",
-              "type": {
-                "text": "\"eager\" | \"lazy\""
-              },
-              "default": "\"eager\"",
-              "description": "Indicates how the browser should load the image.",
-              "attribute": "loading"
-            },
-            {
-              "kind": "field",
-              "name": "shape",
-              "type": {
-                "text": "\"circle\" | \"square\" | \"rounded\""
-              },
-              "default": "\"circle\"",
-              "description": "The shape of the avatar.",
-              "attribute": "shape",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleImageChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleImageLoadError",
-              "privacy": "private"
-            }
-          ],
-          "events": [
-            {
-              "description": "The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause.",
-              "name": "p-error",
-              "reactName": "onPError",
-              "eventName": "PErrorEvent"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "image",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "The image source to use for the avatar.",
-              "fieldName": "image"
-            },
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "A label to use to describe the avatar to assistive devices.",
-              "fieldName": "label"
-            },
-            {
-              "name": "initials",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
-              "fieldName": "initials"
-            },
-            {
-              "name": "loading",
-              "type": {
-                "text": "\"eager\" | \"lazy\""
-              },
-              "default": "\"eager\"",
-              "description": "Indicates how the browser should load the image.",
-              "fieldName": "loading"
-            },
-            {
-              "name": "shape",
-              "type": {
-                "text": "\"circle\" | \"square\" | \"rounded\""
-              },
-              "default": "\"circle\"",
-              "description": "The shape of the avatar.",
-              "fieldName": "shape"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "Avatars are used to represent a person or object.",
-          "tagNameWithoutPrefix": "avatar",
-          "tagName": "p-avatar",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary Avatars are used to represent a person or object.\n * @documentation https://pureui.xyz/components/avatar\n * @status stable\n * @since 1.0\n *\n * @dependency p-icon\n *\n * @event p-error - The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some\n * unknown cause.\n *\n * @slot icon - The default icon to use when no image or initials are present. Works best with `<p-icon>`.\n *\n * @csspart base - The component's base wrapper.\n * @csspart icon - The container that wraps the avatar's icon.\n * @csspart initials - The container that wraps the avatar's initials.\n * @csspart image - The avatar image. Only shown when the `image` attribute is set.\n *\n * @cssproperty --size - The size of the avatar.\n */",
-          "documentation": "https://pureui.xyz/components/avatar",
-          "status": "stable",
-          "since": "1.0",
-          "dependencies": [
-            "p-icon"
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PAvatar",
-            "module": "components/avatar/avatar.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/badge/badge.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PBadge",
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The badge's content.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "variant",
-              "type": {
-                "text": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\""
-              },
-              "default": "\"primary\"",
-              "description": "The badge's theme variant.",
-              "attribute": "variant",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "pill",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "attribute": "pill",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "pulse",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the badge pulsate to draw attention.",
-              "attribute": "pulse",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "name": "variant",
-              "type": {
-                "text": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\""
-              },
-              "default": "\"primary\"",
-              "description": "The badge's theme variant.",
-              "fieldName": "variant"
-            },
-            {
-              "name": "pill",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Draws a pill-style badge with rounded edges.",
-              "fieldName": "pill"
-            },
-            {
-              "name": "pulse",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Makes the badge pulsate to draw attention.",
-              "fieldName": "pulse"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "Badges are used to draw attention and display statuses or counts.",
-          "tagNameWithoutPrefix": "badge",
-          "tagName": "p-badge",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary Badges are used to draw attention and display statuses or counts.\n * @documentation https://pureui.xyz/components/badge\n * @status stable\n * @since 1.0\n *\n * @slot - The badge's content.\n *\n * @csspart base - The component's base wrapper.\n */",
-          "documentation": "https://pureui.xyz/components/badge",
-          "status": "stable",
-          "since": "1.0"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PBadge",
-            "module": "components/badge/badge.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/animated-image/animated-image.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PAnimatedImage",
-          "cssProperties": [
-            {
-              "description": "The size of the icon box.",
-              "name": "--control-box-size"
-            },
-            {
-              "description": "The size of the play/pause icons.",
-              "name": "--icon-size"
-            }
-          ],
-          "cssParts": [
-            {
-              "description": "The container that surrounds the pause/play icons and provides their background.",
-              "name": "control-box"
-            }
-          ],
-          "slots": [
-            {
-              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`.",
-              "name": "play-icon"
-            },
-            {
-              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`.",
-              "name": "pause-icon"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "dependencies",
-              "type": {
-                "text": "object"
-              },
-              "static": true,
-              "default": "{ \"p-icon\": PIcon }"
-            },
-            {
-              "kind": "field",
-              "name": "animatedImage",
-              "type": {
-                "text": "HTMLImageElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "frozenFrame",
-              "type": {
-                "text": "string"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "isLoaded",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "src",
-              "type": {
-                "text": "string"
-              },
-              "description": "The path to the image to load.",
-              "attribute": "src"
-            },
-            {
-              "kind": "field",
-              "name": "alt",
-              "type": {
-                "text": "string"
-              },
-              "description": "A description of the image used by assistive devices.",
-              "attribute": "alt"
-            },
-            {
-              "kind": "field",
-              "name": "play",
-              "type": {
-                "text": "boolean"
-              },
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "attribute": "play",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleClick",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleLoad",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleError",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handlePlayChange"
-            },
-            {
-              "kind": "method",
-              "name": "handleSrcChange"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the image loads successfully.",
-              "name": "p-load",
-              "reactName": "onPLoad",
-              "eventName": "PLoadEvent"
-            },
-            {
-              "description": "Emitted when the image fails to load.",
-              "name": "p-error",
-              "reactName": "onPError",
-              "eventName": "PErrorEvent"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "src",
-              "type": {
-                "text": "string"
-              },
-              "description": "The path to the image to load.",
-              "fieldName": "src"
-            },
-            {
-              "name": "alt",
-              "type": {
-                "text": "string"
-              },
-              "description": "A description of the image used by assistive devices.",
-              "fieldName": "alt"
-            },
-            {
-              "name": "play",
-              "type": {
-                "text": "boolean"
-              },
-              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
-              "fieldName": "play"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.",
-          "tagNameWithoutPrefix": "animated-image",
-          "tagName": "p-animated-image",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n * @documentation https://pureui.xyz/components/animated-image\n * @status stable\n * @since 1.0\n *\n * @dependency p-icon\n *\n * @event p-load - Emitted when the image loads successfully.\n * @event p-error - Emitted when the image fails to load.\n *\n * @slot play-icon - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n * @slot pause-icon - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n *\n * @part control-box - The container that surrounds the pause/play icons and provides their background.\n *\n * @cssproperty --control-box-size - The size of the icon box.\n * @cssproperty --icon-size - The size of the play/pause icons.\n */",
-          "documentation": "https://pureui.xyz/components/animated-image",
-          "status": "stable",
-          "since": "1.0",
-          "dependencies": [
-            "p-icon"
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PAnimatedImage",
-            "module": "components/animated-image/animated-image.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/breadcrumb-item/breadcrumb-item.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PBreadcrumbItem",
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The breadcrumb item's label.",
-              "name": "label"
-            },
-            {
-              "description": "The container that wraps the prefix.",
-              "name": "prefix"
-            },
-            {
-              "description": "The container that wraps the suffix.",
-              "name": "suffix"
-            },
-            {
-              "description": "The container that wraps the separator.",
-              "name": "separator"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The breadcrumb item's label.",
-              "name": ""
-            },
-            {
-              "description": "An optional prefix, usually an icon or icon button.",
-              "name": "prefix"
-            },
-            {
-              "description": "An optional suffix, usually an icon or icon button.",
-              "name": "suffix"
-            },
-            {
-              "description": "The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<p-breadcrumb>` instead.",
-              "name": "separator"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "hasSlotController",
-              "privacy": "private",
-              "readonly": true,
-              "default": "new HasSlotController(this, \"prefix\", \"suffix\")"
-            },
-            {
-              "kind": "field",
-              "name": "href",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
-              "attribute": "href"
-            },
-            {
-              "kind": "field",
-              "name": "target",
-              "type": {
-                "text": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\" | undefined"
-              },
-              "description": "Tells the browser where to open the link. Only used when `href` is set.",
-              "attribute": "target"
-            },
-            {
-              "kind": "field",
-              "name": "rel",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"noreferrer noopener\"",
-              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
-              "attribute": "rel"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "href",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
-              "fieldName": "href"
-            },
-            {
-              "name": "target",
-              "type": {
-                "text": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\" | undefined"
-              },
-              "description": "Tells the browser where to open the link. Only used when `href` is set.",
-              "fieldName": "target"
-            },
-            {
-              "name": "rel",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"noreferrer noopener\"",
-              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
-              "fieldName": "rel"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.",
-          "tagNameWithoutPrefix": "breadcrumb-item",
-          "tagName": "p-breadcrumb-item",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.\n * @documentation https://pureui.xyz/components/breadcrumb-item\n * @status stable\n * @since 1.0\n *\n * @slot - The breadcrumb item's label.\n * @slot prefix - An optional prefix, usually an icon or icon button.\n * @slot suffix - An optional suffix, usually an icon or icon button.\n * @slot separator - The separator to use for the breadcrumb item. This will only change the separator for this item. If\n * you want to change it for all items in the group, set the separator on `<p-breadcrumb>` instead.\n *\n * @csspart base - The component's base wrapper.\n * @csspart label - The breadcrumb item's label.\n * @csspart prefix - The container that wraps the prefix.\n * @csspart suffix - The container that wraps the suffix.\n * @csspart separator - The container that wraps the separator.\n */",
-          "documentation": "https://pureui.xyz/components/breadcrumb-item",
-          "status": "stable",
-          "since": "1.0"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PBreadcrumbItem",
-            "module": "components/breadcrumb-item/breadcrumb-item.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/animation/animation.js",
       "declarations": [
         {
@@ -1254,26 +621,36 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/breadcrumb/breadcrumb.js",
+      "path": "components/animated-image/animated-image.js",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "PBreadcrumb",
+          "name": "PAnimatedImage",
+          "cssProperties": [
+            {
+              "description": "The size of the icon box.",
+              "name": "--control-box-size"
+            },
+            {
+              "description": "The size of the play/pause icons.",
+              "name": "--icon-size"
+            }
+          ],
           "cssParts": [
             {
-              "description": "The component's base wrapper.",
-              "name": "base"
+              "description": "The container that surrounds the pause/play icons and provides their background.",
+              "name": "control-box"
             }
           ],
           "slots": [
             {
-              "description": "One or more breadcrumb items to display.",
-              "name": ""
+              "description": "Optional play icon to use instead of the default. Works best with `<p-icon>`.",
+              "name": "play-icon"
             },
             {
-              "description": "The separator to use between breadcrumb items. Works best with `<p-icon>`.",
-              "name": "separator"
+              "description": "Optional pause icon to use instead of the default. Works best with `<p-icon>`.",
+              "name": "pause-icon"
             }
           ],
           "members": [
@@ -1288,72 +665,128 @@
             },
             {
               "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "readonly": true,
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "separatorDir",
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "defaultSlot",
+              "name": "animatedImage",
               "type": {
-                "text": "HTMLSlotElement"
+                "text": "HTMLImageElement"
               }
             },
             {
               "kind": "field",
-              "name": "separatorSlot",
+              "name": "frozenFrame",
               "type": {
-                "text": "HTMLSlotElement"
+                "text": "string"
               }
             },
             {
               "kind": "field",
-              "name": "label",
+              "name": "isLoaded",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "src",
               "type": {
                 "text": "string"
               },
-              "default": "\"\"",
-              "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
-              "attribute": "label"
+              "description": "The path to the image to load.",
+              "attribute": "src"
+            },
+            {
+              "kind": "field",
+              "name": "alt",
+              "type": {
+                "text": "string"
+              },
+              "description": "A description of the image used by assistive devices.",
+              "attribute": "alt"
+            },
+            {
+              "kind": "field",
+              "name": "play",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "attribute": "play",
+              "reflects": true
             },
             {
               "kind": "method",
-              "name": "getSeparator",
+              "name": "handleClick",
               "privacy": "private"
             },
             {
               "kind": "method",
-              "name": "handleSlotChange",
+              "name": "handleLoad",
               "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleError",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handlePlayChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleSrcChange"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the image loads successfully.",
+              "name": "p-load",
+              "reactName": "onPLoad",
+              "eventName": "PLoadEvent"
+            },
+            {
+              "description": "Emitted when the image fails to load.",
+              "name": "p-error",
+              "reactName": "onPError",
+              "eventName": "PErrorEvent"
             }
           ],
           "attributes": [
             {
-              "name": "label",
+              "name": "src",
               "type": {
                 "text": "string"
               },
-              "default": "\"\"",
-              "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
-              "fieldName": "label"
+              "description": "The path to the image to load.",
+              "fieldName": "src"
+            },
+            {
+              "name": "alt",
+              "type": {
+                "text": "string"
+              },
+              "description": "A description of the image used by assistive devices.",
+              "fieldName": "alt"
+            },
+            {
+              "name": "play",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Plays the animation. When this attribute is remove, the animation will pause.",
+              "fieldName": "play"
             }
           ],
           "superclass": {
             "name": "PureElement",
             "module": "/src/internal/pure-ui-element.js"
           },
-          "summary": "Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.",
-          "tagNameWithoutPrefix": "breadcrumb",
-          "tagName": "p-breadcrumb",
+          "summary": "A component for displaying animated GIFs and WEBPs that play and pause on interaction.",
+          "tagNameWithoutPrefix": "animated-image",
+          "tagName": "p-animated-image",
           "customElement": true,
-          "jsDoc": "/**\n * @summary Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.\n * @documentation https://pureui.xyz/components/breadcrumb\n * @status stable\n * @since 1.0\n *\n * @slot - One or more breadcrumb items to display.\n * @slot separator - The separator to use between breadcrumb items. Works best with `<p-icon>`.\n *\n * @dependency p-icon\n *\n * @csspart base - The component's base wrapper.\n */",
-          "documentation": "https://pureui.xyz/components/breadcrumb",
+          "jsDoc": "/**\n * @summary A component for displaying animated GIFs and WEBPs that play and pause on interaction.\n * @documentation https://pureui.xyz/components/animated-image\n * @status stable\n * @since 1.0\n *\n * @dependency p-icon\n *\n * @event p-load - Emitted when the image loads successfully.\n * @event p-error - Emitted when the image fails to load.\n *\n * @slot play-icon - Optional play icon to use instead of the default. Works best with `<p-icon>`.\n * @slot pause-icon - Optional pause icon to use instead of the default. Works best with `<p-icon>`.\n *\n * @part control-box - The container that surrounds the pause/play icons and provides their background.\n *\n * @cssproperty --control-box-size - The size of the icon box.\n * @cssproperty --icon-size - The size of the play/pause icons.\n */",
+          "documentation": "https://pureui.xyz/components/animated-image",
           "status": "stable",
           "since": "1.0",
           "dependencies": [
@@ -1366,8 +799,455 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "PBreadcrumb",
-            "module": "components/breadcrumb/breadcrumb.js"
+            "name": "PAnimatedImage",
+            "module": "components/animated-image/animated-image.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/avatar/avatar.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PAvatar",
+          "cssProperties": [
+            {
+              "description": "The size of the avatar.",
+              "name": "--size"
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The container that wraps the avatar's icon.",
+              "name": "icon"
+            },
+            {
+              "description": "The container that wraps the avatar's initials.",
+              "name": "initials"
+            },
+            {
+              "description": "The avatar image. Only shown when the `image` attribute is set.",
+              "name": "image"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The default icon to use when no image or initials are present. Works best with `<p-icon>`.",
+              "name": "icon"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "dependencies",
+              "type": {
+                "text": "object"
+              },
+              "static": true,
+              "default": "{\n    \"p-icon\": PIcon,\n  }"
+            },
+            {
+              "kind": "field",
+              "name": "hasError",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "image",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The image source to use for the avatar.",
+              "attribute": "image"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "A label to use to describe the avatar to assistive devices.",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "initials",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+              "attribute": "initials"
+            },
+            {
+              "kind": "field",
+              "name": "loading",
+              "type": {
+                "text": "\"eager\" | \"lazy\""
+              },
+              "default": "\"eager\"",
+              "description": "Indicates how the browser should load the image.",
+              "attribute": "loading"
+            },
+            {
+              "kind": "field",
+              "name": "shape",
+              "type": {
+                "text": "\"circle\" | \"square\" | \"rounded\""
+              },
+              "default": "\"circle\"",
+              "description": "The shape of the avatar.",
+              "attribute": "shape",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleImageChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleImageLoadError",
+              "privacy": "private"
+            }
+          ],
+          "events": [
+            {
+              "description": "The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause.",
+              "name": "p-error",
+              "reactName": "onPError",
+              "eventName": "PErrorEvent"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "image",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The image source to use for the avatar.",
+              "fieldName": "image"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "A label to use to describe the avatar to assistive devices.",
+              "fieldName": "label"
+            },
+            {
+              "name": "initials",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "Initials to use as a fallback when no image is available (1-2 characters max recommended).",
+              "fieldName": "initials"
+            },
+            {
+              "name": "loading",
+              "type": {
+                "text": "\"eager\" | \"lazy\""
+              },
+              "default": "\"eager\"",
+              "description": "Indicates how the browser should load the image.",
+              "fieldName": "loading"
+            },
+            {
+              "name": "shape",
+              "type": {
+                "text": "\"circle\" | \"square\" | \"rounded\""
+              },
+              "default": "\"circle\"",
+              "description": "The shape of the avatar.",
+              "fieldName": "shape"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "Avatars are used to represent a person or object.",
+          "tagNameWithoutPrefix": "avatar",
+          "tagName": "p-avatar",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary Avatars are used to represent a person or object.\n * @documentation https://pureui.xyz/components/avatar\n * @status stable\n * @since 1.0\n *\n * @dependency p-icon\n *\n * @event p-error - The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some\n * unknown cause.\n *\n * @slot icon - The default icon to use when no image or initials are present. Works best with `<p-icon>`.\n *\n * @csspart base - The component's base wrapper.\n * @csspart icon - The container that wraps the avatar's icon.\n * @csspart initials - The container that wraps the avatar's initials.\n * @csspart image - The avatar image. Only shown when the `image` attribute is set.\n *\n * @cssproperty --size - The size of the avatar.\n */",
+          "documentation": "https://pureui.xyz/components/avatar",
+          "status": "stable",
+          "since": "1.0",
+          "dependencies": [
+            "p-icon"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PAvatar",
+            "module": "components/avatar/avatar.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/badge/badge.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PBadge",
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The badge's content.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\""
+              },
+              "default": "\"primary\"",
+              "description": "The badge's theme variant.",
+              "attribute": "variant",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pill",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "attribute": "pill",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pulse",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the badge pulsate to draw attention.",
+              "attribute": "pulse",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "variant",
+              "type": {
+                "text": "\"primary\" | \"success\" | \"neutral\" | \"warning\" | \"danger\""
+              },
+              "default": "\"primary\"",
+              "description": "The badge's theme variant.",
+              "fieldName": "variant"
+            },
+            {
+              "name": "pill",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Draws a pill-style badge with rounded edges.",
+              "fieldName": "pill"
+            },
+            {
+              "name": "pulse",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Makes the badge pulsate to draw attention.",
+              "fieldName": "pulse"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "Badges are used to draw attention and display statuses or counts.",
+          "tagNameWithoutPrefix": "badge",
+          "tagName": "p-badge",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary Badges are used to draw attention and display statuses or counts.\n * @documentation https://pureui.xyz/components/badge\n * @status stable\n * @since 1.0\n *\n * @slot - The badge's content.\n *\n * @csspart base - The component's base wrapper.\n */",
+          "documentation": "https://pureui.xyz/components/badge",
+          "status": "stable",
+          "since": "1.0"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PBadge",
+            "module": "components/badge/badge.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/breadcrumb-item/breadcrumb-item.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PBreadcrumbItem",
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The breadcrumb item's label.",
+              "name": "label"
+            },
+            {
+              "description": "The container that wraps the prefix.",
+              "name": "prefix"
+            },
+            {
+              "description": "The container that wraps the suffix.",
+              "name": "suffix"
+            },
+            {
+              "description": "The container that wraps the separator.",
+              "name": "separator"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The breadcrumb item's label.",
+              "name": ""
+            },
+            {
+              "description": "An optional prefix, usually an icon or icon button.",
+              "name": "prefix"
+            },
+            {
+              "description": "An optional suffix, usually an icon or icon button.",
+              "name": "suffix"
+            },
+            {
+              "description": "The separator to use for the breadcrumb item. This will only change the separator for this item. If you want to change it for all items in the group, set the separator on `<p-breadcrumb>` instead.",
+              "name": "separator"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "hasSlotController",
+              "privacy": "private",
+              "readonly": true,
+              "default": "new HasSlotController(this, \"prefix\", \"suffix\")"
+            },
+            {
+              "kind": "field",
+              "name": "href",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
+              "attribute": "href"
+            },
+            {
+              "kind": "field",
+              "name": "target",
+              "type": {
+                "text": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\" | undefined"
+              },
+              "description": "Tells the browser where to open the link. Only used when `href` is set.",
+              "attribute": "target"
+            },
+            {
+              "kind": "field",
+              "name": "rel",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"noreferrer noopener\"",
+              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
+              "attribute": "rel"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "href",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "Optional URL to direct the user to when the breadcrumb item is activated. When set, a link will be rendered\ninternally. When unset, a button will be rendered instead.",
+              "fieldName": "href"
+            },
+            {
+              "name": "target",
+              "type": {
+                "text": "\"_blank\" | \"_parent\" | \"_self\" | \"_top\" | undefined"
+              },
+              "description": "Tells the browser where to open the link. Only used when `href` is set.",
+              "fieldName": "target"
+            },
+            {
+              "name": "rel",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"noreferrer noopener\"",
+              "description": "The `rel` attribute to use on the link. Only used when `href` is set.",
+              "fieldName": "rel"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.",
+          "tagNameWithoutPrefix": "breadcrumb-item",
+          "tagName": "p-breadcrumb-item",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.\n * @documentation https://pureui.xyz/components/breadcrumb-item\n * @status stable\n * @since 1.0\n *\n * @slot - The breadcrumb item's label.\n * @slot prefix - An optional prefix, usually an icon or icon button.\n * @slot suffix - An optional suffix, usually an icon or icon button.\n * @slot separator - The separator to use for the breadcrumb item. This will only change the separator for this item. If\n * you want to change it for all items in the group, set the separator on `<p-breadcrumb>` instead.\n *\n * @csspart base - The component's base wrapper.\n * @csspart label - The breadcrumb item's label.\n * @csspart prefix - The container that wraps the prefix.\n * @csspart suffix - The container that wraps the suffix.\n * @csspart separator - The container that wraps the separator.\n */",
+          "documentation": "https://pureui.xyz/components/breadcrumb-item",
+          "status": "stable",
+          "since": "1.0"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PBreadcrumbItem",
+            "module": "components/breadcrumb-item/breadcrumb-item.js"
           }
         }
       ]
@@ -2042,6 +1922,126 @@
           "declaration": {
             "name": "PButton",
             "module": "components/button/button.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/breadcrumb/breadcrumb.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PBreadcrumb",
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            }
+          ],
+          "slots": [
+            {
+              "description": "One or more breadcrumb items to display.",
+              "name": ""
+            },
+            {
+              "description": "The separator to use between breadcrumb items. Works best with `<p-icon>`.",
+              "name": "separator"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "dependencies",
+              "type": {
+                "text": "object"
+              },
+              "static": true,
+              "default": "{ \"p-icon\": PIcon }"
+            },
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "readonly": true,
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "separatorDir",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "defaultSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "separatorSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
+              "attribute": "label"
+            },
+            {
+              "kind": "method",
+              "name": "getSeparator",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleSlotChange",
+              "privacy": "private"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "The label to use for the breadcrumb control. This will not be shown on the screen, but it will be announced by\nscreen readers and other assistive devices to provide more context for users.",
+              "fieldName": "label"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.",
+          "tagNameWithoutPrefix": "breadcrumb",
+          "tagName": "p-breadcrumb",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.\n * @documentation https://pureui.xyz/components/breadcrumb\n * @status stable\n * @since 1.0\n *\n * @slot - One or more breadcrumb items to display.\n * @slot separator - The separator to use between breadcrumb items. Works best with `<p-icon>`.\n *\n * @dependency p-icon\n *\n * @csspart base - The component's base wrapper.\n */",
+          "documentation": "https://pureui.xyz/components/breadcrumb",
+          "status": "stable",
+          "since": "1.0",
+          "dependencies": [
+            "p-icon"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PBreadcrumb",
+            "module": "components/breadcrumb/breadcrumb.js"
           }
         }
       ]
@@ -16364,12 +16364,12 @@
             },
             {
               "kind": "field",
-              "name": "overlapElements",
+              "name": "backupContainerWidth",
               "type": {
-                "text": "number[]"
+                "text": "number"
               },
               "privacy": "private",
-              "default": "[]"
+              "default": "0"
             },
             {
               "kind": "field",
@@ -16399,7 +16399,14 @@
             },
             {
               "kind": "field",
-              "name": "dropdownMenu",
+              "name": "dropdown",
+              "type": {
+                "text": "PDropdown"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "dropdownContent",
               "type": {
                 "text": "HTMLElement"
               }
@@ -16407,6 +16414,19 @@
             {
               "kind": "method",
               "name": "handleExampleChange"
+            },
+            {
+              "kind": "method",
+              "name": "handleResize",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "entries",
+                  "type": {
+                    "text": "ResizeObserverEntry[]"
+                  }
+                }
+              ]
             },
             {
               "kind": "method",
@@ -20603,7 +20623,7 @@
   "package": {
     "name": "pure-uikit",
     "description": "A forward-thinking library of web components.",
-    "version": "1.3.3",
+    "version": "1.3.9",
     "author": "Mr.P",
     "homepage": "https://pureui.xyz",
     "license": "MIT"

@@ -21,7 +21,7 @@ export default class PSmartContainer extends PureElement {
     static styles: CSSResultGroup;
     private resizeObserver;
     private observedElements;
-    private overlapElements;
+    private backupContainerWidth;
     static dependencies: {
         "p-dropdown": typeof PDropdown;
         "p-icon": typeof PIcon;
@@ -30,8 +30,10 @@ export default class PSmartContainer extends PureElement {
     /** An example attribute. */
     attr: string;
     smartContainer: HTMLElement;
-    dropdownMenu: HTMLElement;
+    dropdown: PDropdown;
+    dropdownContent: HTMLElement;
     handleExampleChange(): void;
+    private handleResize;
     private startObserver;
     private stopObserver;
     protected firstUpdated(): void;
