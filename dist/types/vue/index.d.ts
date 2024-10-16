@@ -1,8 +1,8 @@
 import type { DefineComponent } from "vue";
 
 import type { PAlert } from "../../components/alert/alert.component.js";
-import type { PAvatar } from "../../components/avatar/avatar.component.js";
 import type { PBadge } from "../../components/badge/badge.component.js";
+import type { PAvatar } from "../../components/avatar/avatar.component.js";
 import type { PBreadcrumb } from "../../components/breadcrumb/breadcrumb.component.js";
 import type { PBreadcrumbItem } from "../../components/breadcrumb-item/breadcrumb-item.component.js";
 import type { PAnimation } from "../../components/animation/animation.component.js";
@@ -89,6 +89,15 @@ the alert will not close on its own. */
   "onp-after-hide"?: (e: CustomEvent<never>) => void;
 };
 
+type PBadgeProps = {
+  /** The badge's theme variant. */
+  variant?: PBadge["variant"];
+  /** Draws a pill-style badge with rounded edges. */
+  pill?: PBadge["pill"];
+  /** Makes the badge pulsate to draw attention. */
+  pulse?: PBadge["pulse"];
+};
+
 type PAvatarProps = {
   /** The image source to use for the avatar. */
   image?: PAvatar["image"];
@@ -103,15 +112,6 @@ type PAvatarProps = {
 
   /** The image could not be loaded. This may because of an invalid URL, a temporary network condition, or some unknown cause. */
   "onp-error"?: (e: CustomEvent<never>) => void;
-};
-
-type PBadgeProps = {
-  /** The badge's theme variant. */
-  variant?: PBadge["variant"];
-  /** Draws a pill-style badge with rounded edges. */
-  pill?: PBadge["pill"];
-  /** Makes the badge pulsate to draw attention. */
-  pulse?: PBadge["pulse"];
 };
 
 type PBreadcrumbProps = {
@@ -1944,6 +1944,19 @@ export type CustomElements = {
   "p-alert": DefineComponent<PAlertProps>;
 
   /**
+   * Badges are used to draw attention and display statuses or counts.
+   * ---
+   *
+   *
+   * ### **Slots:**
+   *  - _default_ - The badge's content.
+   *
+   * ### **CSS Parts:**
+   *  - **base** - The component's base wrapper.
+   */
+  "p-badge": DefineComponent<PBadgeProps>;
+
+  /**
    * Avatars are used to represent a person or object.
    * ---
    *
@@ -1964,19 +1977,6 @@ export type CustomElements = {
    * - **image** - The avatar image. Only shown when the `image` attribute is set.
    */
   "p-avatar": DefineComponent<PAvatarProps>;
-
-  /**
-   * Badges are used to draw attention and display statuses or counts.
-   * ---
-   *
-   *
-   * ### **Slots:**
-   *  - _default_ - The badge's content.
-   *
-   * ### **CSS Parts:**
-   *  - **base** - The component's base wrapper.
-   */
-  "p-badge": DefineComponent<PBadgeProps>;
 
   /**
    * Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.
