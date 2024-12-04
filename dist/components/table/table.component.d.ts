@@ -166,6 +166,7 @@ export default class PTable extends PureElement {
     protected firstUpdated(): void;
     disconnectedCallback(): void;
     private handleChangePage;
+    private handleChangeLimit;
     private handleSelectAll;
     private handleSelectRow;
     getSelectedRows(): TableRowData[];

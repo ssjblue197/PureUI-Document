@@ -27,8 +27,12 @@ export default class PSmartContainer extends PureElement {
         "p-icon": typeof PIcon;
         "p-button": typeof PButton;
     };
-    /** An example attribute. */
-    attr: string;
+    /**
+     * Whether the component is in a right-to-left context. This property is
+     * automatically set when the component is rendered in a context with a
+     * `dir="rtl"` attribute on a parent element.
+     */
+    rtl: boolean;
     smartContainer: HTMLElement;
     dropdown: PDropdown;
     dropdownContent: HTMLElement;

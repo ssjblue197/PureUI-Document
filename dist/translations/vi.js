@@ -18,6 +18,7 @@ var translation = {
   goToSlide: (slide, count) => `Chuy\u1EC3n \u0111\u1EBFn trang ${slide} trong ${count}`,
   hidePassword: "\u1EA8n m\u1EADt kh\u1EA9u",
   loading: "\u0110ang t\u1EA3i",
+  nextPage: "Trang sau",
   nextMonth: "Th\xE1ng sau",
   nextYear: "N\u0103m sau",
   nextSlide: "Trang ti\u1EBFp theo",
@@ -28,6 +29,7 @@ var translation = {
       return "1 l\u1EF1a ch\u1ECDn \u0111\xE3 \u0111\u01B0\u1EE3c ch\u1ECDn";
     return `${num} l\u1EF1a ch\u1ECDn \u0111\xE3 \u0111\u01B0\u1EE3c ch\u1ECDn`;
   },
+  previousPage: "Trang tr\u01B0\u1EDBc",
   previousMonth: "Th\xE1ng tr\u01B0\u1EDBc",
   previousYear: "N\u0103m tr\u01B0\u1EDBc",
   previousSlide: "Trang tr\u01B0\u1EDBc",

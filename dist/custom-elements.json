@@ -1017,6 +1017,363 @@
     },
     {
       "kind": "javascript-module",
+      "path": "components/animation/animation.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PAnimation",
+          "slots": [
+            {
+              "description": "The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "animation",
+              "type": {
+                "text": "Animation | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "hasStarted",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "defaultPot",
+              "type": {
+                "text": "Promise<HTMLSlotElement>"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"none\"",
+              "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
+              "attribute": "name"
+            },
+            {
+              "kind": "field",
+              "name": "play",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
+              "attribute": "play",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "delay",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The number of milliseconds to delay the start of the animation.",
+              "attribute": "delay"
+            },
+            {
+              "kind": "field",
+              "name": "direction",
+              "type": {
+                "text": "PlaybackDirection"
+              },
+              "default": "\"normal\"",
+              "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
+              "attribute": "direction"
+            },
+            {
+              "kind": "field",
+              "name": "duration",
+              "type": {
+                "text": "number"
+              },
+              "default": "1000",
+              "description": "The number of milliseconds each iteration of the animation takes to complete.",
+              "attribute": "duration"
+            },
+            {
+              "kind": "field",
+              "name": "easing",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"linear\"",
+              "description": "The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
+              "attribute": "easing"
+            },
+            {
+              "kind": "field",
+              "name": "endDelay",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The number of milliseconds to delay after the active period of an animation sequence.",
+              "attribute": "end-delay"
+            },
+            {
+              "kind": "field",
+              "name": "fill",
+              "type": {
+                "text": "FillMode"
+              },
+              "default": "\"auto\"",
+              "description": "Sets how the animation applies styles to its target before and after its execution.",
+              "attribute": "fill"
+            },
+            {
+              "kind": "field",
+              "name": "iterations",
+              "default": "Infinity",
+              "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops.",
+              "attribute": "iterations"
+            },
+            {
+              "kind": "field",
+              "name": "iterationStart",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
+              "attribute": "iteration-start"
+            },
+            {
+              "kind": "field",
+              "name": "keyframes",
+              "type": {
+                "text": "Keyframe[] | undefined"
+              },
+              "description": "The keyframes to use for the animation. If this is set, `name` will be ignored."
+            },
+            {
+              "kind": "field",
+              "name": "playbackRate",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
+              "attribute": "playback-rate"
+            },
+            {
+              "kind": "field",
+              "name": "currentTime",
+              "type": {
+                "text": "CSSNumberish"
+              },
+              "description": "Gets and sets the current animation time."
+            },
+            {
+              "kind": "field",
+              "name": "handleAnimationFinish",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "handleAnimationCancel",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handlePotChange",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "createAnimation",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "destroyAnimation",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleAnimationChange"
+            },
+            {
+              "kind": "method",
+              "name": "handlePlayChange"
+            },
+            {
+              "kind": "method",
+              "name": "handlePlaybackRateChange"
+            },
+            {
+              "kind": "method",
+              "name": "cancel",
+              "description": "Clears all keyframe effects caused by this animation and aborts its playback."
+            },
+            {
+              "kind": "method",
+              "name": "finish",
+              "description": "Sets the playback time to the end of the animation corresponding to the current playback direction."
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the animation is canceled.",
+              "name": "p-cancel",
+              "reactName": "onPCancel",
+              "eventName": "PCancelEvent"
+            },
+            {
+              "description": "Emitted when the animation finishes.",
+              "name": "p-finish",
+              "reactName": "onPFinish",
+              "eventName": "PFinishEvent"
+            },
+            {
+              "description": "Emitted when the animation starts or restarts.",
+              "name": "p-start",
+              "reactName": "onPStart",
+              "eventName": "PStartEvent"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"none\"",
+              "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
+              "fieldName": "name"
+            },
+            {
+              "name": "play",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
+              "fieldName": "play"
+            },
+            {
+              "name": "delay",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The number of milliseconds to delay the start of the animation.",
+              "fieldName": "delay"
+            },
+            {
+              "name": "direction",
+              "type": {
+                "text": "PlaybackDirection"
+              },
+              "default": "\"normal\"",
+              "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
+              "fieldName": "direction"
+            },
+            {
+              "name": "duration",
+              "type": {
+                "text": "number"
+              },
+              "default": "1000",
+              "description": "The number of milliseconds each iteration of the animation takes to complete.",
+              "fieldName": "duration"
+            },
+            {
+              "name": "easing",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"linear\"",
+              "description": "The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
+              "fieldName": "easing"
+            },
+            {
+              "name": "end-delay",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The number of milliseconds to delay after the active period of an animation sequence.",
+              "fieldName": "endDelay"
+            },
+            {
+              "name": "fill",
+              "type": {
+                "text": "FillMode"
+              },
+              "default": "\"auto\"",
+              "description": "Sets how the animation applies styles to its target before and after its execution.",
+              "fieldName": "fill"
+            },
+            {
+              "name": "iterations",
+              "default": "Infinity",
+              "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops.",
+              "resolveInitializer": {
+                "module": "src/components/animation/animation.component.ts"
+              },
+              "fieldName": "iterations"
+            },
+            {
+              "name": "iteration-start",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
+              "fieldName": "iterationStart"
+            },
+            {
+              "name": "playback-rate",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
+              "fieldName": "playbackRate"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).",
+          "tagNameWithoutPrefix": "animation",
+          "tagName": "p-animation",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n * @documentation https://pureui.xyz/components/animation\n * @status stable\n * @since 1.0\n *\n * @event p-cancel - Emitted when the animation is canceled.\n * @event p-finish - Emitted when the animation finishes.\n * @event p-start - Emitted when the animation starts or restarts.\n *\n * @slot - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To\n *  animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.\n */",
+          "documentation": "https://pureui.xyz/components/animation",
+          "status": "stable",
+          "since": "1.0"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PAnimation",
+            "module": "components/animation/animation.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "components/button/button.js",
       "declarations": [
         {
@@ -1685,363 +2042,6 @@
           "declaration": {
             "name": "PButton",
             "module": "components/button/button.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/animation/animation.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PAnimation",
-          "slots": [
-            {
-              "description": "The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "animation",
-              "type": {
-                "text": "Animation | undefined"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "hasStarted",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "field",
-              "name": "defaultPot",
-              "type": {
-                "text": "Promise<HTMLSlotElement>"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"none\"",
-              "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
-              "attribute": "name"
-            },
-            {
-              "kind": "field",
-              "name": "play",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
-              "attribute": "play",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "delay",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The number of milliseconds to delay the start of the animation.",
-              "attribute": "delay"
-            },
-            {
-              "kind": "field",
-              "name": "direction",
-              "type": {
-                "text": "PlaybackDirection"
-              },
-              "default": "\"normal\"",
-              "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
-              "attribute": "direction"
-            },
-            {
-              "kind": "field",
-              "name": "duration",
-              "type": {
-                "text": "number"
-              },
-              "default": "1000",
-              "description": "The number of milliseconds each iteration of the animation takes to complete.",
-              "attribute": "duration"
-            },
-            {
-              "kind": "field",
-              "name": "easing",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"linear\"",
-              "description": "The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
-              "attribute": "easing"
-            },
-            {
-              "kind": "field",
-              "name": "endDelay",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The number of milliseconds to delay after the active period of an animation sequence.",
-              "attribute": "end-delay"
-            },
-            {
-              "kind": "field",
-              "name": "fill",
-              "type": {
-                "text": "FillMode"
-              },
-              "default": "\"auto\"",
-              "description": "Sets how the animation applies styles to its target before and after its execution.",
-              "attribute": "fill"
-            },
-            {
-              "kind": "field",
-              "name": "iterations",
-              "default": "Infinity",
-              "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops.",
-              "attribute": "iterations"
-            },
-            {
-              "kind": "field",
-              "name": "iterationStart",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
-              "attribute": "iteration-start"
-            },
-            {
-              "kind": "field",
-              "name": "keyframes",
-              "type": {
-                "text": "Keyframe[] | undefined"
-              },
-              "description": "The keyframes to use for the animation. If this is set, `name` will be ignored."
-            },
-            {
-              "kind": "field",
-              "name": "playbackRate",
-              "type": {
-                "text": "number"
-              },
-              "default": "1",
-              "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
-              "attribute": "playback-rate"
-            },
-            {
-              "kind": "field",
-              "name": "currentTime",
-              "type": {
-                "text": "CSSNumberish"
-              },
-              "description": "Gets and sets the current animation time."
-            },
-            {
-              "kind": "field",
-              "name": "handleAnimationFinish",
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "handleAnimationCancel",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handlePotChange",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "createAnimation",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "destroyAnimation",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleAnimationChange"
-            },
-            {
-              "kind": "method",
-              "name": "handlePlayChange"
-            },
-            {
-              "kind": "method",
-              "name": "handlePlaybackRateChange"
-            },
-            {
-              "kind": "method",
-              "name": "cancel",
-              "description": "Clears all keyframe effects caused by this animation and aborts its playback."
-            },
-            {
-              "kind": "method",
-              "name": "finish",
-              "description": "Sets the playback time to the end of the animation corresponding to the current playback direction."
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the animation is canceled.",
-              "name": "p-cancel",
-              "reactName": "onPCancel",
-              "eventName": "PCancelEvent"
-            },
-            {
-              "description": "Emitted when the animation finishes.",
-              "name": "p-finish",
-              "reactName": "onPFinish",
-              "eventName": "PFinishEvent"
-            },
-            {
-              "description": "Emitted when the animation starts or restarts.",
-              "name": "p-start",
-              "reactName": "onPStart",
-              "eventName": "PStartEvent"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "name",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"none\"",
-              "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
-              "fieldName": "name"
-            },
-            {
-              "name": "play",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
-              "fieldName": "play"
-            },
-            {
-              "name": "delay",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The number of milliseconds to delay the start of the animation.",
-              "fieldName": "delay"
-            },
-            {
-              "name": "direction",
-              "type": {
-                "text": "PlaybackDirection"
-              },
-              "default": "\"normal\"",
-              "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
-              "fieldName": "direction"
-            },
-            {
-              "name": "duration",
-              "type": {
-                "text": "number"
-              },
-              "default": "1000",
-              "description": "The number of milliseconds each iteration of the animation takes to complete.",
-              "fieldName": "duration"
-            },
-            {
-              "name": "easing",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"linear\"",
-              "description": "The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
-              "fieldName": "easing"
-            },
-            {
-              "name": "end-delay",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The number of milliseconds to delay after the active period of an animation sequence.",
-              "fieldName": "endDelay"
-            },
-            {
-              "name": "fill",
-              "type": {
-                "text": "FillMode"
-              },
-              "default": "\"auto\"",
-              "description": "Sets how the animation applies styles to its target before and after its execution.",
-              "fieldName": "fill"
-            },
-            {
-              "name": "iterations",
-              "default": "Infinity",
-              "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops.",
-              "resolveInitializer": {
-                "module": "src/components/animation/animation.component.ts"
-              },
-              "fieldName": "iterations"
-            },
-            {
-              "name": "iteration-start",
-              "type": {
-                "text": "number"
-              },
-              "default": "0",
-              "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
-              "fieldName": "iterationStart"
-            },
-            {
-              "name": "playback-rate",
-              "type": {
-                "text": "number"
-              },
-              "default": "1",
-              "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
-              "fieldName": "playbackRate"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).",
-          "tagNameWithoutPrefix": "animation",
-          "tagName": "p-animation",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n * @documentation https://pureui.xyz/components/animation\n * @status stable\n * @since 1.0\n *\n * @event p-cancel - Emitted when the animation is canceled.\n * @event p-finish - Emitted when the animation finishes.\n * @event p-start - Emitted when the animation starts or restarts.\n *\n * @slot - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To\n *  animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.\n */",
-          "documentation": "https://pureui.xyz/components/animation",
-          "status": "stable",
-          "since": "1.0"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PAnimation",
-            "module": "components/animation/animation.js"
           }
         }
       ]
@@ -5672,6 +5672,270 @@
     },
     {
       "kind": "javascript-module",
+      "path": "components/details/details.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PDetails",
+          "cssParts": [
+            {
+              "description": "The component's base wrapper.",
+              "name": "base"
+            },
+            {
+              "description": "The header that wraps both the summary and the expand/collapse icon.",
+              "name": "header"
+            },
+            {
+              "description": "The container that wraps the summary.",
+              "name": "summary"
+            },
+            {
+              "description": "The container that wraps the expand/collapse icons.",
+              "name": "summary-icon"
+            },
+            {
+              "description": "The details content.",
+              "name": "content"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The details' main content.",
+              "name": ""
+            },
+            {
+              "description": "The details' summary. Alternatively, you can use the `summary` attribute.",
+              "name": "summary"
+            },
+            {
+              "description": "Optional expand icon to use instead of the default. Works best with `<p-icon>`.",
+              "name": "expand-icon"
+            },
+            {
+              "description": "Optional collapse icon to use instead of the default. Works best with `<p-icon>`.",
+              "name": "collapse-icon"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "dependencies",
+              "type": {
+                "text": "object"
+              },
+              "static": true,
+              "default": "{\n    \"p-icon\": PIcon,\n  }"
+            },
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "private",
+              "readonly": true,
+              "default": "new LocalizeController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "details",
+              "type": {
+                "text": "HTMLDetailsElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "header",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "body",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "expandIconSlot",
+              "type": {
+                "text": "HTMLSlotElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "detailsObserver",
+              "type": {
+                "text": "MutationObserver"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Indicates whether or not the details is open. You can toggle this attribute to show and hide the details, or you\ncan use the `show()` and `hide()` methods and this attribute will reflect the details' open state.",
+              "attribute": "open",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "summary",
+              "type": {
+                "text": "string"
+              },
+              "description": "The summary to show in the header. If you need to display HTML, use the `summary` slot instead.",
+              "attribute": "summary"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the details so it can't be toggled.",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleSummaryClick",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleSummaryKeyDown",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleOpenChange"
+            },
+            {
+              "kind": "method",
+              "name": "show",
+              "description": "Shows the details."
+            },
+            {
+              "kind": "method",
+              "name": "hide",
+              "description": "Hides the details"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the details opens.",
+              "name": "p-show",
+              "reactName": "onPShow",
+              "eventName": "PShowEvent"
+            },
+            {
+              "description": "Emitted after the details opens and all animations are complete.",
+              "name": "p-after-show",
+              "reactName": "onPAfterShow",
+              "eventName": "PAfterShowEvent"
+            },
+            {
+              "description": "Emitted when the details closes.",
+              "name": "p-hide",
+              "reactName": "onPHide",
+              "eventName": "PHideEvent"
+            },
+            {
+              "description": "Emitted after the details closes and all animations are complete.",
+              "name": "p-after-hide",
+              "reactName": "onPAfterHide",
+              "eventName": "PAfterHideEvent"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Indicates whether or not the details is open. You can toggle this attribute to show and hide the details, or you\ncan use the `show()` and `hide()` methods and this attribute will reflect the details' open state.",
+              "fieldName": "open"
+            },
+            {
+              "name": "summary",
+              "type": {
+                "text": "string"
+              },
+              "description": "The summary to show in the header. If you need to display HTML, use the `summary` slot instead.",
+              "fieldName": "summary"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the details so it can't be toggled.",
+              "fieldName": "disabled"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "Details show a brief summary and expand to show additional content.",
+          "tagNameWithoutPrefix": "details",
+          "tagName": "p-details",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary Details show a brief summary and expand to show additional content.\n * @documentation https://pureui.xyz/components/details\n * @status stable\n * @since 1.0\n *\n * @dependency p-icon\n *\n * @slot - The details' main content.\n * @slot summary - The details' summary. Alternatively, you can use the `summary` attribute.\n * @slot expand-icon - Optional expand icon to use instead of the default. Works best with `<p-icon>`.\n * @slot collapse-icon - Optional collapse icon to use instead of the default. Works best with `<p-icon>`.\n *\n * @event p-show - Emitted when the details opens.\n * @event p-after-show - Emitted after the details opens and all animations are complete.\n * @event p-hide - Emitted when the details closes.\n * @event p-after-hide - Emitted after the details closes and all animations are complete.\n *\n * @csspart base - The component's base wrapper.\n * @csspart header - The header that wraps both the summary and the expand/collapse icon.\n * @csspart summary - The container that wraps the summary.\n * @csspart summary-icon - The container that wraps the expand/collapse icons.\n * @csspart content - The details content.\n *\n * @animation details.show - The animation to use when showing details. You can use `height: auto` with this animation.\n * @animation details.hide - The animation to use when hiding details. You can use `height: auto` with this animation.\n */",
+          "documentation": "https://pureui.xyz/components/details",
+          "status": "stable",
+          "since": "1.0",
+          "dependencies": [
+            "p-icon"
+          ],
+          "animations": [
+            {
+              "name": "details.show",
+              "description": "The animation to use when showing details. You can use `height: auto` with this animation."
+            },
+            {
+              "name": "details.hide",
+              "description": "The animation to use when hiding details. You can use `height: auto` with this animation."
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PDetails",
+            "module": "components/details/details.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "components/copy-button/copy-button.js",
       "declarations": [
         {
@@ -6039,270 +6303,6 @@
           "declaration": {
             "name": "PCopyButton",
             "module": "components/copy-button/copy-button.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "components/details/details.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PDetails",
-          "cssParts": [
-            {
-              "description": "The component's base wrapper.",
-              "name": "base"
-            },
-            {
-              "description": "The header that wraps both the summary and the expand/collapse icon.",
-              "name": "header"
-            },
-            {
-              "description": "The container that wraps the summary.",
-              "name": "summary"
-            },
-            {
-              "description": "The container that wraps the expand/collapse icons.",
-              "name": "summary-icon"
-            },
-            {
-              "description": "The details content.",
-              "name": "content"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The details' main content.",
-              "name": ""
-            },
-            {
-              "description": "The details' summary. Alternatively, you can use the `summary` attribute.",
-              "name": "summary"
-            },
-            {
-              "description": "Optional expand icon to use instead of the default. Works best with `<p-icon>`.",
-              "name": "expand-icon"
-            },
-            {
-              "description": "Optional collapse icon to use instead of the default. Works best with `<p-icon>`.",
-              "name": "collapse-icon"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "dependencies",
-              "type": {
-                "text": "object"
-              },
-              "static": true,
-              "default": "{\n    \"p-icon\": PIcon,\n  }"
-            },
-            {
-              "kind": "field",
-              "name": "localize",
-              "privacy": "private",
-              "readonly": true,
-              "default": "new LocalizeController(this)"
-            },
-            {
-              "kind": "field",
-              "name": "details",
-              "type": {
-                "text": "HTMLDetailsElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "header",
-              "type": {
-                "text": "HTMLElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "body",
-              "type": {
-                "text": "HTMLElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "expandIconSlot",
-              "type": {
-                "text": "HTMLSlotElement"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "detailsObserver",
-              "type": {
-                "text": "MutationObserver"
-              }
-            },
-            {
-              "kind": "field",
-              "name": "open",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Indicates whether or not the details is open. You can toggle this attribute to show and hide the details, or you\ncan use the `show()` and `hide()` methods and this attribute will reflect the details' open state.",
-              "attribute": "open",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "summary",
-              "type": {
-                "text": "string"
-              },
-              "description": "The summary to show in the header. If you need to display HTML, use the `summary` slot instead.",
-              "attribute": "summary"
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the details so it can't be toggled.",
-              "attribute": "disabled",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleSummaryClick",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "MouseEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleSummaryKeyDown",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "event",
-                  "type": {
-                    "text": "KeyboardEvent"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "handleOpenChange"
-            },
-            {
-              "kind": "method",
-              "name": "show",
-              "description": "Shows the details."
-            },
-            {
-              "kind": "method",
-              "name": "hide",
-              "description": "Hides the details"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the details opens.",
-              "name": "p-show",
-              "reactName": "onPShow",
-              "eventName": "PShowEvent"
-            },
-            {
-              "description": "Emitted after the details opens and all animations are complete.",
-              "name": "p-after-show",
-              "reactName": "onPAfterShow",
-              "eventName": "PAfterShowEvent"
-            },
-            {
-              "description": "Emitted when the details closes.",
-              "name": "p-hide",
-              "reactName": "onPHide",
-              "eventName": "PHideEvent"
-            },
-            {
-              "description": "Emitted after the details closes and all animations are complete.",
-              "name": "p-after-hide",
-              "reactName": "onPAfterHide",
-              "eventName": "PAfterHideEvent"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "open",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Indicates whether or not the details is open. You can toggle this attribute to show and hide the details, or you\ncan use the `show()` and `hide()` methods and this attribute will reflect the details' open state.",
-              "fieldName": "open"
-            },
-            {
-              "name": "summary",
-              "type": {
-                "text": "string"
-              },
-              "description": "The summary to show in the header. If you need to display HTML, use the `summary` slot instead.",
-              "fieldName": "summary"
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the details so it can't be toggled.",
-              "fieldName": "disabled"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "Details show a brief summary and expand to show additional content.",
-          "tagNameWithoutPrefix": "details",
-          "tagName": "p-details",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary Details show a brief summary and expand to show additional content.\n * @documentation https://pureui.xyz/components/details\n * @status stable\n * @since 1.0\n *\n * @dependency p-icon\n *\n * @slot - The details' main content.\n * @slot summary - The details' summary. Alternatively, you can use the `summary` attribute.\n * @slot expand-icon - Optional expand icon to use instead of the default. Works best with `<p-icon>`.\n * @slot collapse-icon - Optional collapse icon to use instead of the default. Works best with `<p-icon>`.\n *\n * @event p-show - Emitted when the details opens.\n * @event p-after-show - Emitted after the details opens and all animations are complete.\n * @event p-hide - Emitted when the details closes.\n * @event p-after-hide - Emitted after the details closes and all animations are complete.\n *\n * @csspart base - The component's base wrapper.\n * @csspart header - The header that wraps both the summary and the expand/collapse icon.\n * @csspart summary - The container that wraps the summary.\n * @csspart summary-icon - The container that wraps the expand/collapse icons.\n * @csspart content - The details content.\n *\n * @animation details.show - The animation to use when showing details. You can use `height: auto` with this animation.\n * @animation details.hide - The animation to use when hiding details. You can use `height: auto` with this animation.\n */",
-          "documentation": "https://pureui.xyz/components/details",
-          "status": "stable",
-          "since": "1.0",
-          "dependencies": [
-            "p-icon"
-          ],
-          "animations": [
-            {
-              "name": "details.show",
-              "description": "The animation to use when showing details. You can use `height: auto` with this animation."
-            },
-            {
-              "name": "details.hide",
-              "description": "The animation to use when hiding details. You can use `height: auto` with this animation."
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PDetails",
-            "module": "components/details/details.js"
           }
         }
       ]
@@ -9071,203 +9071,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/icon/icon.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PIcon",
-          "cssParts": [
-            {
-              "description": "The internal SVG element.",
-              "name": "svg"
-            },
-            {
-              "description": "The <use> element generated when using `spriteSheet: true`",
-              "name": "use"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "initialRender",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
-              "kind": "method",
-              "name": "resolveIcon",
-              "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "Promise<SVGResult>"
-                }
-              },
-              "parameters": [
-                {
-                  "name": "url",
-                  "type": {
-                    "text": "string"
-                  }
-                },
-                {
-                  "name": "library",
-                  "optional": true,
-                  "type": {
-                    "text": "IconLibrary"
-                  }
-                }
-              ],
-              "description": "Given a URL, this function returns the resulting SVG element or an appropriate error symbol."
-            },
-            {
-              "kind": "field",
-              "name": "svg",
-              "type": {
-                "text": "SVGElement | HTMLTemplateResult | null"
-              },
-              "privacy": "private",
-              "default": "null"
-            },
-            {
-              "kind": "field",
-              "name": "name",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "The name of the icon to draw. Available names depend on the icon library being used.",
-              "attribute": "name",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "src",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "An external URL of an SVG file. Be sure you trust the content you are including, as it will be executed as code and\ncan result in XSS attacks.",
-              "attribute": "src"
-            },
-            {
-              "kind": "field",
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "An alternate description to use for assistive devices. If omitted, the icon will be considered presentational and\nignored by assistive devices.",
-              "attribute": "label"
-            },
-            {
-              "kind": "field",
-              "name": "library",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"default\"",
-              "description": "The name of a registered custom icon library.",
-              "attribute": "library",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "getIconSource",
-              "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "IconSource"
-                }
-              }
-            },
-            {
-              "kind": "method",
-              "name": "handleLabelChange"
-            },
-            {
-              "kind": "method",
-              "name": "setIcon"
-            }
-          ],
-          "events": [
-            {
-              "description": "Emitted when the icon has loaded. When using `spriteSheet: true` this will not emit.",
-              "name": "p-load",
-              "reactName": "onPLoad",
-              "eventName": "PLoadEvent"
-            },
-            {
-              "description": "Emitted when the icon fails to load due to an error. When using `spriteSheet: true` this will not emit.",
-              "name": "p-error",
-              "reactName": "onPError",
-              "eventName": "PErrorEvent"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "name",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "The name of the icon to draw. Available names depend on the icon library being used.",
-              "fieldName": "name"
-            },
-            {
-              "name": "src",
-              "type": {
-                "text": "string | undefined"
-              },
-              "description": "An external URL of an SVG file. Be sure you trust the content you are including, as it will be executed as code and\ncan result in XSS attacks.",
-              "fieldName": "src"
-            },
-            {
-              "name": "label",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"\"",
-              "description": "An alternate description to use for assistive devices. If omitted, the icon will be considered presentational and\nignored by assistive devices.",
-              "fieldName": "label"
-            },
-            {
-              "name": "library",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"default\"",
-              "description": "The name of a registered custom icon library.",
-              "fieldName": "library"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "Icons are symbols that can be used to represent various options within an application.",
-          "tagNameWithoutPrefix": "icon",
-          "tagName": "p-icon",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary Icons are symbols that can be used to represent various options within an application.\n * @documentation https://pureui.xyz/components/icon\n * @status stable\n * @since 1.0\n *\n * @event p-load - Emitted when the icon has loaded. When using `spriteSheet: true` this will not emit.\n * @event p-error - Emitted when the icon fails to load due to an error. When using `spriteSheet: true` this will not emit.\n *\n * @csspart svg - The internal SVG element.\n * @csspart use - The <use> element generated when using `spriteSheet: true`\n */",
-          "documentation": "https://pureui.xyz/components/icon",
-          "status": "stable",
-          "since": "1.0"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PIcon",
-            "module": "components/icon/icon.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/icon-button/icon-button.js",
       "declarations": [
         {
@@ -9535,6 +9338,203 @@
           "declaration": {
             "name": "PIconButton",
             "module": "components/icon-button/icon-button.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "components/icon/icon.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PIcon",
+          "cssParts": [
+            {
+              "description": "The internal SVG element.",
+              "name": "svg"
+            },
+            {
+              "description": "The <use> element generated when using `spriteSheet: true`",
+              "name": "use"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "initialRender",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "method",
+              "name": "resolveIcon",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "Promise<SVGResult>"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "url",
+                  "type": {
+                    "text": "string"
+                  }
+                },
+                {
+                  "name": "library",
+                  "optional": true,
+                  "type": {
+                    "text": "IconLibrary"
+                  }
+                }
+              ],
+              "description": "Given a URL, this function returns the resulting SVG element or an appropriate error symbol."
+            },
+            {
+              "kind": "field",
+              "name": "svg",
+              "type": {
+                "text": "SVGElement | HTMLTemplateResult | null"
+              },
+              "privacy": "private",
+              "default": "null"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "The name of the icon to draw. Available names depend on the icon library being used.",
+              "attribute": "name",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "src",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "An external URL of an SVG file. Be sure you trust the content you are including, as it will be executed as code and\ncan result in XSS attacks.",
+              "attribute": "src"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "An alternate description to use for assistive devices. If omitted, the icon will be considered presentational and\nignored by assistive devices.",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "library",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"default\"",
+              "description": "The name of a registered custom icon library.",
+              "attribute": "library",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "getIconSource",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "IconSource"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "handleLabelChange"
+            },
+            {
+              "kind": "method",
+              "name": "setIcon"
+            }
+          ],
+          "events": [
+            {
+              "description": "Emitted when the icon has loaded. When using `spriteSheet: true` this will not emit.",
+              "name": "p-load",
+              "reactName": "onPLoad",
+              "eventName": "PLoadEvent"
+            },
+            {
+              "description": "Emitted when the icon fails to load due to an error. When using `spriteSheet: true` this will not emit.",
+              "name": "p-error",
+              "reactName": "onPError",
+              "eventName": "PErrorEvent"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "name",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "The name of the icon to draw. Available names depend on the icon library being used.",
+              "fieldName": "name"
+            },
+            {
+              "name": "src",
+              "type": {
+                "text": "string | undefined"
+              },
+              "description": "An external URL of an SVG file. Be sure you trust the content you are including, as it will be executed as code and\ncan result in XSS attacks.",
+              "fieldName": "src"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "description": "An alternate description to use for assistive devices. If omitted, the icon will be considered presentational and\nignored by assistive devices.",
+              "fieldName": "label"
+            },
+            {
+              "name": "library",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"default\"",
+              "description": "The name of a registered custom icon library.",
+              "fieldName": "library"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "Icons are symbols that can be used to represent various options within an application.",
+          "tagNameWithoutPrefix": "icon",
+          "tagName": "p-icon",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary Icons are symbols that can be used to represent various options within an application.\n * @documentation https://pureui.xyz/components/icon\n * @status stable\n * @since 1.0\n *\n * @event p-load - Emitted when the icon has loaded. When using `spriteSheet: true` this will not emit.\n * @event p-error - Emitted when the icon fails to load due to an error. When using `spriteSheet: true` this will not emit.\n *\n * @csspart svg - The internal SVG element.\n * @csspart use - The <use> element generated when using `spriteSheet: true`\n */",
+          "documentation": "https://pureui.xyz/components/icon",
+          "status": "stable",
+          "since": "1.0"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PIcon",
+            "module": "components/icon/icon.js"
           }
         }
       ]
@@ -11754,7 +11754,7 @@
                 "text": "object"
               },
               "static": true,
-              "default": "{\n    \"p-icon\": PIcon,\n  }"
+              "default": "{\n    \"p-icon\": PIcon,\n    \"p-select\": PSelect,\n    \"p-option\": POption,\n    \"p-format-number\": PFormatNumber,\n    \"p-button\": PButton,\n    \"p-button-group\": PButtonGroup,\n  }"
             },
             {
               "kind": "field",
@@ -11822,7 +11822,7 @@
               "type": {
                 "text": "number"
               },
-              "default": "119",
+              "default": "0",
               "description": "The total items to paginate.",
               "attribute": "total",
               "reflects": true
@@ -11844,7 +11844,7 @@
               "type": {
                 "text": "number"
               },
-              "default": "12",
+              "default": "10",
               "description": "The limit items in a page.",
               "attribute": "limit",
               "reflects": true
@@ -11861,9 +11861,42 @@
               "reflects": true
             },
             {
+              "kind": "field",
+              "name": "pageList",
+              "type": {
+                "text": "number[]"
+              },
+              "default": "[10, 20, 30, 40, 50]",
+              "attribute": "page-list"
+            },
+            {
               "kind": "method",
               "name": "getPages",
               "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleChangeLimit",
+              "parameters": [
+                {
+                  "name": "e",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "changeLimit",
+              "parameters": [
+                {
+                  "name": "newLimit",
+                  "type": {
+                    "text": "number"
+                  }
+                }
+              ]
             },
             {
               "kind": "method",
@@ -11892,6 +11925,12 @@
               "name": "p-change",
               "reactName": "onPChange",
               "eventName": "PChangeEvent"
+            },
+            {
+              "description": "Emitted when the page limit changed.",
+              "name": "p-change-limit",
+              "reactName": "onPChangeLimit",
+              "eventName": "PChangeLimitEvent"
             }
           ],
           "attributes": [
@@ -11944,7 +11983,7 @@
               "type": {
                 "text": "number"
               },
-              "default": "119",
+              "default": "0",
               "description": "The total items to paginate.",
               "fieldName": "total"
             },
@@ -11962,7 +12001,7 @@
               "type": {
                 "text": "number"
               },
-              "default": "12",
+              "default": "10",
               "description": "The limit items in a page.",
               "fieldName": "limit"
             },
@@ -11974,6 +12013,14 @@
               "default": "3",
               "description": "The limit visible pages to show.",
               "fieldName": "maxVisiblePages"
+            },
+            {
+              "name": "page-list",
+              "type": {
+                "text": "number[]"
+              },
+              "default": "[10, 20, 30, 40, 50]",
+              "fieldName": "pageList"
             }
           ],
           "superclass": {
@@ -11984,7 +12031,7 @@
           "tagNameWithoutPrefix": "paginate",
           "tagName": "p-paginate",
           "customElement": true,
-          "jsDoc": "/**\n * @summary Paginate represent actions that are available to the user.\n * @documentation https://pureui.xyz/components/button\n * @status stable\n * @since 1.0\n *\n * @dependency p-icon\n * @dependency p-button\n *\n * @event p-change - Emitted when the page changed.\n *\n * @slot prefix - A presentational prefix icon or similar element.\n * @slot suffix - A presentational suffix icon or similar element.\n *\n * @csspart prefix - The container that wraps the prefix.\n * @csspart suffix - The container that wraps the suffix.\n */",
+          "jsDoc": "/**\n * @summary Paginate represent actions that are available to the user.\n * @documentation https://pureui.xyz/components/button\n * @status stable\n * @since 1.0\n *\n * @dependency p-icon\n * @dependency p-button\n *\n * @event p-change - Emitted when the page changed.\n * @event p-change-limit - Emitted when the page limit changed.\n *\n * @slot prefix - A presentational prefix icon or similar element.\n * @slot suffix - A presentational suffix icon or similar element.\n *\n * @csspart prefix - The container that wraps the prefix.\n * @csspart suffix - The container that wraps the suffix.\n */",
           "documentation": "https://pureui.xyz/components/button",
           "status": "stable",
           "since": "1.0",
@@ -15071,116 +15118,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "components/resize-observer/resize-observer.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PResizeObserver",
-          "slots": [
-            {
-              "description": "One or more elements to watch for resizing.",
-              "name": ""
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "resizeObserver",
-              "type": {
-                "text": "ResizeObserver"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "observedElements",
-              "type": {
-                "text": "HTMLElement[]"
-              },
-              "privacy": "private",
-              "default": "[]"
-            },
-            {
-              "kind": "field",
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the observer.",
-              "attribute": "disabled",
-              "reflects": true
-            },
-            {
-              "kind": "method",
-              "name": "handleSlotChange",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "startObserver",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "stopObserver",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "handleDisabledChange"
-            }
-          ],
-          "events": [
-            {
-              "type": {
-                "text": "{ entries: ResizeObserverEntry[] }"
-              },
-              "description": "Emitted when the element is resized.",
-              "name": "p-resize",
-              "reactName": "onPResize",
-              "eventName": "PResizeEvent"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "description": "Disables the observer.",
-              "fieldName": "disabled"
-            }
-          ],
-          "superclass": {
-            "name": "PureElement",
-            "module": "/src/internal/pure-ui-element.js"
-          },
-          "summary": "The Resize Observer component offers a thin, declarative interface to the [`ResizeObserver API`](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver).",
-          "tagNameWithoutPrefix": "resize-observer",
-          "tagName": "p-resize-observer",
-          "customElement": true,
-          "jsDoc": "/**\n * @summary The Resize Observer component offers a thin, declarative interface to the [`ResizeObserver API`](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver).\n * @documentation https://pureui.xyz/components/resize-observer\n * @status stable\n * @since 1.0\n *\n * @slot - One or more elements to watch for resizing.\n *\n * @event {{ entries: ResizeObserverEntry[] }} p-resize - Emitted when the element is resized.\n */",
-          "documentation": "https://pureui.xyz/components/resize-observer",
-          "status": "stable",
-          "since": "1.0"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "name": "PResizeObserver",
-            "module": "components/resize-observer/resize-observer.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "components/select/select.js",
       "declarations": [
         {
@@ -16238,6 +16175,116 @@
     },
     {
       "kind": "javascript-module",
+      "path": "components/resize-observer/resize-observer.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PResizeObserver",
+          "slots": [
+            {
+              "description": "One or more elements to watch for resizing.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "resizeObserver",
+              "type": {
+                "text": "ResizeObserver"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "observedElements",
+              "type": {
+                "text": "HTMLElement[]"
+              },
+              "privacy": "private",
+              "default": "[]"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the observer.",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "handleSlotChange",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "startObserver",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "stopObserver",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleDisabledChange"
+            }
+          ],
+          "events": [
+            {
+              "type": {
+                "text": "{ entries: ResizeObserverEntry[] }"
+              },
+              "description": "Emitted when the element is resized.",
+              "name": "p-resize",
+              "reactName": "onPResize",
+              "eventName": "PResizeEvent"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disables the observer.",
+              "fieldName": "disabled"
+            }
+          ],
+          "superclass": {
+            "name": "PureElement",
+            "module": "/src/internal/pure-ui-element.js"
+          },
+          "summary": "The Resize Observer component offers a thin, declarative interface to the [`ResizeObserver API`](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver).",
+          "tagNameWithoutPrefix": "resize-observer",
+          "tagName": "p-resize-observer",
+          "customElement": true,
+          "jsDoc": "/**\n * @summary The Resize Observer component offers a thin, declarative interface to the [`ResizeObserver API`](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver).\n * @documentation https://pureui.xyz/components/resize-observer\n * @status stable\n * @since 1.0\n *\n * @slot - One or more elements to watch for resizing.\n *\n * @event {{ entries: ResizeObserverEntry[] }} p-resize - Emitted when the element is resized.\n */",
+          "documentation": "https://pureui.xyz/components/resize-observer",
+          "status": "stable",
+          "since": "1.0"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "PResizeObserver",
+            "module": "components/resize-observer/resize-observer.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "components/skeleton/skeleton.js",
       "declarations": [
         {
@@ -16382,13 +16429,14 @@
             },
             {
               "kind": "field",
-              "name": "attr",
+              "name": "rtl",
               "type": {
-                "text": "string"
+                "text": "boolean"
               },
-              "default": "\"example\"",
-              "description": "An example attribute.",
-              "attribute": "attr"
+              "default": "false",
+              "description": "Whether the component is in a right-to-left context. This property is\nautomatically set when the component is rendered in a context with a\n`dir=\"rtl\"` attribute on a parent element.",
+              "attribute": "rtl",
+              "reflects": true
             },
             {
               "kind": "field",
@@ -16441,13 +16489,13 @@
           ],
           "attributes": [
             {
-              "name": "attr",
+              "name": "rtl",
               "type": {
-                "text": "string"
+                "text": "boolean"
               },
-              "default": "\"example\"",
-              "description": "An example attribute.",
-              "fieldName": "attr"
+              "default": "false",
+              "description": "Whether the component is in a right-to-left context. This property is\nautomatically set when the component is rendered in a context with a\n`dir=\"rtl\"` attribute on a parent element.",
+              "fieldName": "rtl"
             }
           ],
           "superclass": {
@@ -18392,6 +18440,19 @@
                   "name": "e",
                   "type": {
                     "text": "CustomEvent & { detail: { page: number } }"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleChangeLimit",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "e",
+                  "type": {
+                    "text": "CustomEvent & { detail: { limit: number } }"
                   }
                 }
               ]
@@ -20623,7 +20684,7 @@
   "package": {
     "name": "pure-uikit",
     "description": "A forward-thinking library of web components.",
-    "version": "1.3.13",
+    "version": "1.5.11",
     "author": "Mr.P",
     "homepage": "https://pureui.xyz",
     "license": "MIT"

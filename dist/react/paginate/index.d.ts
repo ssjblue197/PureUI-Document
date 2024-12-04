@@ -1,7 +1,9 @@
 import Component from "../../components/paginate/paginate.component.js";
 import { type EventName } from "@lit/react";
 import type { PChangeEvent } from "../../events/events.js";
+import type { PChangeLimitEvent } from "../../events/events.js";
 export type { PChangeEvent } from "../../events/events.js";
+export type { PChangeLimitEvent } from "../../events/events.js";
 /**
  * @summary Paginate represent actions that are available to the user.
  * @documentation https://pureui.xyz/components/button
@@ -12,6 +14,7 @@ export type { PChangeEvent } from "../../events/events.js";
  * @dependency p-button
  *
  * @event p-change - Emitted when the page changed.
+ * @event p-change-limit - Emitted when the page limit changed.
  *
  * @slot prefix - A presentational prefix icon or similar element.
  * @slot suffix - A presentational suffix icon or similar element.
@@ -21,5 +24,6 @@ export type { PChangeEvent } from "../../events/events.js";
  */
 declare const reactWrapper: import("@lit/react").ReactWebComponent<Component, {
     onPChange: EventName<PChangeEvent>;
+    onPChangeLimit: EventName<PChangeLimitEvent>;
 }>;
 export default reactWrapper;

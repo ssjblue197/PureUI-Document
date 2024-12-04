@@ -1,4 +1,9 @@
+import PButton from "../button/button.component.js";
+import PButtonGroup from "../button-group/button-group.component.js";
+import PFormatNumber from "../format-number/format-number.component.js";
 import PIcon from "../icon/icon.component.js";
+import POption from "../option/option.component.js";
+import PSelect from "../select/select.component.js";
 import PureElement from "../../internal/pure-ui-element.js";
 import type { CSSResultGroup } from "lit";
 /**
@@ -11,6 +16,7 @@ import type { CSSResultGroup } from "lit";
  * @dependency p-button
  *
  * @event p-change - Emitted when the page changed.
+ * @event p-change-limit - Emitted when the page limit changed.
  *
  * @slot prefix - A presentational prefix icon or similar element.
  * @slot suffix - A presentational suffix icon or similar element.
@@ -22,6 +28,11 @@ export default class PPaginate extends PureElement {
     static styles: CSSResultGroup;
     static dependencies: {
         "p-icon": typeof PIcon;
+        "p-select": typeof PSelect;
+        "p-option": typeof POption;
+        "p-format-number": typeof PFormatNumber;
+        "p-button": typeof PButton;
+        "p-button-group": typeof PButtonGroup;
     };
     private readonly localize;
     title: string;
@@ -41,7 +52,10 @@ export default class PPaginate extends PureElement {
     limit: number;
     /** The limit visible pages to show. */
     maxVisiblePages: number;
+    pageList: number[];
     private getPages;
+    handleChangeLimit(e: Event): void;
+    changeLimit(newLimit: number): void;
     changePage(newPage: number | string): void;
     prevPage(): void;
     nextPage(): void;

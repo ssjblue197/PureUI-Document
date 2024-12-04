@@ -191,6 +191,73 @@
       ]
     },
     {
+      "name": "p-animation",
+      "description": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n---\n\n\n### **Events:**\n - **p-cancel** - Emitted when the animation is canceled.\n- **p-finish** - Emitted when the animation finishes.\n- **p-start** - Emitted when the animation starts or restarts.\n\n### **Methods:**\n - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.\n- **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.\n\n### **Slots:**\n - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.",
+      "attributes": [
+        {
+          "name": "name",
+          "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
+          "values": []
+        },
+        {
+          "name": "play",
+          "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
+          "values": []
+        },
+        {
+          "name": "delay",
+          "description": "The number of milliseconds to delay the start of the animation.",
+          "values": []
+        },
+        {
+          "name": "direction",
+          "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
+          "values": [{ "name": "PlaybackDirection" }]
+        },
+        {
+          "name": "duration",
+          "description": "The number of milliseconds each iteration of the animation takes to complete.",
+          "values": []
+        },
+        {
+          "name": "easing",
+          "description": "The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
+          "values": []
+        },
+        {
+          "name": "end-delay",
+          "description": "The number of milliseconds to delay after the active period of an animation sequence.",
+          "values": []
+        },
+        {
+          "name": "fill",
+          "description": "Sets how the animation applies styles to its target before and after its execution.",
+          "values": [{ "name": "FillMode" }]
+        },
+        {
+          "name": "iterations",
+          "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops.",
+          "values": []
+        },
+        {
+          "name": "iteration-start",
+          "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
+          "values": []
+        },
+        {
+          "name": "playback-rate",
+          "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
+          "values": []
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://pureui.xyz/components/animation"
+        }
+      ]
+    },
+    {
       "name": "p-button",
       "description": "Buttons represent actions that are available to the user.\n---\n\n\n### **Events:**\n - **p-blur** - Emitted when the button loses focus.\n- **p-focus** - Emitted when the button gains focus.\n- **p-invalid** - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n\n### **Methods:**\n - **click()** - Simulates a click on the button.\n- **focus(options: _FocusOptions_)** - Sets focus on the button.\n- **blur()** - Removes focus from the button.\n- **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n\n### **Slots:**\n - _default_ - The button's label.\n- **prefix** - A presentational prefix icon or similar element.\n- **suffix** - A presentational suffix icon or similar element.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **prefix** - The container that wraps the prefix.\n- **label** - The button's label.\n- **suffix** - The container that wraps the suffix.\n- **caret** - The button's caret icon, an `<p-icon>` element.\n- **spinner** - The spinner that shows when the button is in the loading state.",
       "attributes": [
@@ -335,73 +402,6 @@
         {
           "name": "Documentation",
           "url": "https://pureui.xyz/components/button"
-        }
-      ]
-    },
-    {
-      "name": "p-animation",
-      "description": "Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes. Powered by the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).\n---\n\n\n### **Events:**\n - **p-cancel** - Emitted when the animation is canceled.\n- **p-finish** - Emitted when the animation finishes.\n- **p-start** - Emitted when the animation starts or restarts.\n\n### **Methods:**\n - **cancel()** - Clears all keyframe effects caused by this animation and aborts its playback.\n- **finish()** - Sets the playback time to the end of the animation corresponding to the current playback direction.\n\n### **Slots:**\n - _default_ - The element to animate. Avoid slotting in more than one element, as subsequent ones will be ignored. To animate multiple elements, either wrap them in a single container or use multiple `<p-animation>` elements.",
-      "attributes": [
-        {
-          "name": "name",
-          "description": "The name of the built-in animation to use. For custom animations, use the `keyframes` prop.",
-          "values": []
-        },
-        {
-          "name": "play",
-          "description": "Plays the animation. When omitted, the animation will be paused. This attribute will be automatically removed when\nthe animation finishes or gets canceled.",
-          "values": []
-        },
-        {
-          "name": "delay",
-          "description": "The number of milliseconds to delay the start of the animation.",
-          "values": []
-        },
-        {
-          "name": "direction",
-          "description": "Determines the direction of playback as well as the behavior when reaching the end of an iteration.\n[Learn more](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction)",
-          "values": [{ "name": "PlaybackDirection" }]
-        },
-        {
-          "name": "duration",
-          "description": "The number of milliseconds each iteration of the animation takes to complete.",
-          "values": []
-        },
-        {
-          "name": "easing",
-          "description": "The easing function to use for the animation. This can be a Pure UI easing function or a custom easing function\nsuch as `cubic-bezier(0, 1, .76, 1.14)`.",
-          "values": []
-        },
-        {
-          "name": "end-delay",
-          "description": "The number of milliseconds to delay after the active period of an animation sequence.",
-          "values": []
-        },
-        {
-          "name": "fill",
-          "description": "Sets how the animation applies styles to its target before and after its execution.",
-          "values": [{ "name": "FillMode" }]
-        },
-        {
-          "name": "iterations",
-          "description": "The number of iterations to run before the animation completes. Defaults to `Infinity`, which loops.",
-          "values": []
-        },
-        {
-          "name": "iteration-start",
-          "description": "The offset at which to start the animation, usually between 0 (start) and 1 (end).",
-          "values": []
-        },
-        {
-          "name": "playback-rate",
-          "description": "Sets the animation's playback rate. The default is `1`, which plays the animation at a normal speed. Setting this\nto `2`, for example, will double the animation's speed. A negative value can be used to reverse the animation. This\nvalue can be changed without causing the animation to restart.",
-          "values": []
-        }
-      ],
-      "references": [
-        {
-          "name": "Documentation",
-          "url": "https://pureui.xyz/components/animation"
         }
       ]
     },
@@ -840,6 +840,33 @@
       ]
     },
     {
+      "name": "p-details",
+      "description": "Details show a brief summary and expand to show additional content.\n---\n\n\n### **Events:**\n - **p-show** - Emitted when the details opens.\n- **p-after-show** - Emitted after the details opens and all animations are complete.\n- **p-hide** - Emitted when the details closes.\n- **p-after-hide** - Emitted after the details closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the details.\n- **hide()** - Hides the details\n\n### **Slots:**\n - _default_ - The details' main content.\n- **summary** - The details' summary. Alternatively, you can use the `summary` attribute.\n- **expand-icon** - Optional expand icon to use instead of the default. Works best with `<p-icon>`.\n- **collapse-icon** - Optional collapse icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **header** - The header that wraps both the summary and the expand/collapse icon.\n- **summary** - The container that wraps the summary.\n- **summary-icon** - The container that wraps the expand/collapse icons.\n- **content** - The details content.",
+      "attributes": [
+        {
+          "name": "open",
+          "description": "Indicates whether or not the details is open. You can toggle this attribute to show and hide the details, or you\ncan use the `show()` and `hide()` methods and this attribute will reflect the details' open state.",
+          "values": []
+        },
+        {
+          "name": "summary",
+          "description": "The summary to show in the header. If you need to display HTML, use the `summary` slot instead.",
+          "values": []
+        },
+        {
+          "name": "disabled",
+          "description": "Disables the details so it can't be toggled.",
+          "values": []
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://pureui.xyz/components/details"
+        }
+      ]
+    },
+    {
       "name": "p-copy-button",
       "description": "Copies text data to the clipboard when the user clicks the trigger.\n---\n\n\n### **Events:**\n - **p-copy** - Emitted when the data has been copied.\n- **p-error** - Emitted when the data could not be copied.\n\n### **Slots:**\n - **copy-icon** - The icon to show in the default copy state. Works best with `<p-icon>`.\n- **success-icon** - The icon to show when the content is copied. Works best with `<p-icon>`.\n- **error-icon** - The icon to show when a copy error occurs. Works best with `<p-icon>`.\n\n### **CSS Properties:**\n - **--success-color** - The color to use for success feedback. _(default: undefined)_\n- **--error-color** - The color to use for error feedback. _(default: undefined)_\n\n### **CSS Parts:**\n - **button** - The internal `<button>` element.\n- **copy-icon** - The container that holds the copy icon.\n- **success-icon** - The container that holds the success icon.\n- **error-icon** - The container that holds the error icon.\n- **tooltip__base** - The tooltip's exported `base` part.\n- **tooltip__base__popup** - The tooltip's exported `popup` part.\n- **tooltip__base__arrow** - The tooltip's exported `arrow` part.\n- **tooltip__body** - The tooltip's exported `body` part.",
       "attributes": [
@@ -898,33 +925,6 @@
         {
           "name": "Documentation",
           "url": "https://pureui.xyz/components/copy-button"
-        }
-      ]
-    },
-    {
-      "name": "p-details",
-      "description": "Details show a brief summary and expand to show additional content.\n---\n\n\n### **Events:**\n - **p-show** - Emitted when the details opens.\n- **p-after-show** - Emitted after the details opens and all animations are complete.\n- **p-hide** - Emitted when the details closes.\n- **p-after-hide** - Emitted after the details closes and all animations are complete.\n\n### **Methods:**\n - **show()** - Shows the details.\n- **hide()** - Hides the details\n\n### **Slots:**\n - _default_ - The details' main content.\n- **summary** - The details' summary. Alternatively, you can use the `summary` attribute.\n- **expand-icon** - Optional expand icon to use instead of the default. Works best with `<p-icon>`.\n- **collapse-icon** - Optional collapse icon to use instead of the default. Works best with `<p-icon>`.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **header** - The header that wraps both the summary and the expand/collapse icon.\n- **summary** - The container that wraps the summary.\n- **summary-icon** - The container that wraps the expand/collapse icons.\n- **content** - The details content.",
-      "attributes": [
-        {
-          "name": "open",
-          "description": "Indicates whether or not the details is open. You can toggle this attribute to show and hide the details, or you\ncan use the `show()` and `hide()` methods and this attribute will reflect the details' open state.",
-          "values": []
-        },
-        {
-          "name": "summary",
-          "description": "The summary to show in the header. If you need to display HTML, use the `summary` slot instead.",
-          "values": []
-        },
-        {
-          "name": "disabled",
-          "description": "Disables the details so it can't be toggled.",
-          "values": []
-        }
-      ],
-      "references": [
-        {
-          "name": "Documentation",
-          "url": "https://pureui.xyz/components/details"
         }
       ]
     },
@@ -1409,35 +1409,6 @@
       ]
     },
     {
-      "name": "p-icon",
-      "description": "Icons are symbols that can be used to represent various options within an application.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the icon has loaded. When using `spriteSheet: true` this will not emit.\n- **p-error** - Emitted when the icon fails to load due to an error. When using `spriteSheet: true` this will not emit.\n\n### **CSS Parts:**\n - **svg** - The internal SVG element.\n- **use** - The <use> element generated when using `spriteSheet: true`",
-      "attributes": [
-        {
-          "name": "name",
-          "description": "The name of the icon to draw. Available names depend on the icon library being used.",
-          "values": []
-        },
-        {
-          "name": "src",
-          "description": "An external URL of an SVG file. Be sure you trust the content you are including, as it will be executed as code and\ncan result in XSS attacks.",
-          "values": []
-        },
-        {
-          "name": "label",
-          "description": "An alternate description to use for assistive devices. If omitted, the icon will be considered presentational and\nignored by assistive devices.",
-          "values": []
-        },
-        {
-          "name": "library",
-          "description": "The name of a registered custom icon library.",
-          "values": []
-        }
-      ],
-      "references": [
-        { "name": "Documentation", "url": "https://pureui.xyz/components/icon" }
-      ]
-    },
-    {
       "name": "p-icon-button",
       "description": "Icons buttons are simple, icon-only buttons that can be used for actions and in toolbars.\n---\n\n\n### **Events:**\n - **p-blur** - Emitted when the icon button loses focus.\n- **p-focus** - Emitted when the icon button gains focus.\n\n### **Methods:**\n - **click()** - Simulates a click on the icon button.\n- **focus(options: _FocusOptions_)** - Sets focus on the icon button.\n- **blur()** - Removes focus from the icon button.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.",
       "attributes": [
@@ -1492,6 +1463,35 @@
           "name": "Documentation",
           "url": "https://pureui.xyz/components/icon-button"
         }
+      ]
+    },
+    {
+      "name": "p-icon",
+      "description": "Icons are symbols that can be used to represent various options within an application.\n---\n\n\n### **Events:**\n - **p-load** - Emitted when the icon has loaded. When using `spriteSheet: true` this will not emit.\n- **p-error** - Emitted when the icon fails to load due to an error. When using `spriteSheet: true` this will not emit.\n\n### **CSS Parts:**\n - **svg** - The internal SVG element.\n- **use** - The <use> element generated when using `spriteSheet: true`",
+      "attributes": [
+        {
+          "name": "name",
+          "description": "The name of the icon to draw. Available names depend on the icon library being used.",
+          "values": []
+        },
+        {
+          "name": "src",
+          "description": "An external URL of an SVG file. Be sure you trust the content you are including, as it will be executed as code and\ncan result in XSS attacks.",
+          "values": []
+        },
+        {
+          "name": "label",
+          "description": "An alternate description to use for assistive devices. If omitted, the icon will be considered presentational and\nignored by assistive devices.",
+          "values": []
+        },
+        {
+          "name": "library",
+          "description": "The name of a registered custom icon library.",
+          "values": []
+        }
+      ],
+      "references": [
+        { "name": "Documentation", "url": "https://pureui.xyz/components/icon" }
       ]
     },
     {
@@ -1872,7 +1872,7 @@
     },
     {
       "name": "p-paginate",
-      "description": "Paginate represent actions that are available to the user.\n---\n\n\n### **Events:**\n - **p-change** - Emitted when the page changed.\n\n### **Slots:**\n - **prefix** - A presentational prefix icon or similar element.\n- **suffix** - A presentational suffix icon or similar element.\n\n### **CSS Parts:**\n - **prefix** - The container that wraps the prefix.\n- **suffix** - The container that wraps the suffix.",
+      "description": "Paginate represent actions that are available to the user.\n---\n\n\n### **Events:**\n - **p-change** - Emitted when the page changed.\n- **p-change-limit** - Emitted when the page limit changed.\n\n### **Slots:**\n - **prefix** - A presentational prefix icon or similar element.\n- **suffix** - A presentational suffix icon or similar element.\n\n### **CSS Parts:**\n - **prefix** - The container that wraps the prefix.\n- **suffix** - The container that wraps the suffix.",
       "attributes": [
         { "name": "title", "values": [] },
         {
@@ -1922,7 +1922,8 @@
           "name": "max-visible-pages",
           "description": "The limit visible pages to show.",
           "values": []
-        }
+        },
+        { "name": "page-list", "values": [{ "name": "number[]" }] }
       ],
       "references": [
         {
@@ -2446,23 +2447,6 @@
       ]
     },
     {
-      "name": "p-resize-observer",
-      "description": "The Resize Observer component offers a thin, declarative interface to the [`ResizeObserver API`](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver).\n---\n\n\n### **Events:**\n - **p-resize** - Emitted when the element is resized.\n\n### **Slots:**\n - _default_ - One or more elements to watch for resizing.",
-      "attributes": [
-        {
-          "name": "disabled",
-          "description": "Disables the observer.",
-          "values": []
-        }
-      ],
-      "references": [
-        {
-          "name": "Documentation",
-          "url": "https://pureui.xyz/components/resize-observer"
-        }
-      ]
-    },
-    {
       "name": "p-select",
       "description": "Selects allow you to choose items from a menu of predefined options.\n---\n\n\n### **Events:**\n - **p-change** - Emitted when the control's value changes.\n- **p-clear** - Emitted when the control's value is cleared.\n- **p-input** - Emitted when the control receives input.\n- **p-focus** - Emitted when the control gains focus.\n- **p-blur** - Emitted when the control loses focus.\n- **p-show** - Emitted when the select's menu opens.\n- **p-after-show** - Emitted after the select's menu opens and all animations are complete.\n- **p-hide** - Emitted when the select's menu closes.\n- **p-after-hide** - Emitted after the select's menu closes and all animations are complete.\n- **p-invalid** - Emitted when the form control has been checked for validity and its constraints aren't satisfied.\n\n### **Methods:**\n - **show()** - Shows the listbox.\n- **hide()** - Hides the listbox.\n- **checkValidity()** - Checks for validity but does not show a validation message. Returns `true` when valid and `false` when invalid.\n- **getForm(): _HTMLFormElement | null_** - Gets the associated form, if one exists.\n- **reportValidity()** - Checks for validity and shows the browser's validation message if the control is invalid.\n- **setCustomValidity(message: _string_)** - Sets a custom validation message. Pass an empty string to restore validity.\n- **focus(options: _FocusOptions_)** - Sets focus on the control.\n- **blur()** - Removes focus from the control.\n\n### **Slots:**\n - _default_ - The listbox options. Must be `<p-option>` elements. You can use `<p-divider>` to group items visually.\n- **label** - The input's label. Alternatively, you can use the `label` attribute.\n- **prefix** - Used to prepend a presentational icon or similar element to the combobox.\n- **suffix** - Used to append a presentational icon or similar element to the combobox.\n- **clear-icon** - An icon to use in lieu of the default clear icon.\n- **expand-icon** - The icon to show when the control is expanded and collapsed. Rotates on open and close.\n- **help-text** - Text that describes how to use the input. Alternatively, you can use the `help-text` attribute.\n\n### **CSS Parts:**\n - **form-control** - The form control that wraps the label, input, and help text.\n- **form-control-label** - The label's wrapper.\n- **form-control-input** - The select's wrapper.\n- **form-control-help-text** - The help text's wrapper.\n- **combobox** - The container the wraps the prefix, suffix, combobox, clear icon, and expand button.\n- **prefix** - The container that wraps the prefix slot.\n- **suffix** - The container that wraps the suffix slot.\n- **display-input** - The element that displays the selected option's label, an `<input>` element.\n- **listbox** - The listbox container where options are slotted.\n- **tags** - The container that houses option tags when `multiselect` is used.\n- **tag** - The individual tags that represent each multiselect option.\n- **tag__base** - The tag's base part.\n- **tag__content** - The tag's content part.\n- **tag__remove-button** - The tag's remove button.\n- **tag__remove-button__base** - The tag's remove button base part.\n- **clear-button** - The clear button.\n- **expand-icon** - The container that wraps the expand icon.",
       "attributes": [
@@ -2587,6 +2571,23 @@
       ]
     },
     {
+      "name": "p-resize-observer",
+      "description": "The Resize Observer component offers a thin, declarative interface to the [`ResizeObserver API`](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver).\n---\n\n\n### **Events:**\n - **p-resize** - Emitted when the element is resized.\n\n### **Slots:**\n - _default_ - One or more elements to watch for resizing.",
+      "attributes": [
+        {
+          "name": "disabled",
+          "description": "Disables the observer.",
+          "values": []
+        }
+      ],
+      "references": [
+        {
+          "name": "Documentation",
+          "url": "https://pureui.xyz/components/resize-observer"
+        }
+      ]
+    },
+    {
       "name": "p-skeleton",
       "description": "Skeletons are used to provide a visual representation of where content will eventually be drawn.\n---\n\n\n### **CSS Properties:**\n - **--border-radius** - The skeleton's border radius. _(default: undefined)_\n- **--color** - The color of the skeleton. _(default: undefined)_\n- **--sheen-color** - The sheen color when the skeleton is in its loading state. _(default: undefined)_\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **indicator** - The skeleton's indicator which is responsible for its color and animation.",
       "attributes": [
@@ -2611,7 +2612,11 @@
       "name": "p-smart-container",
       "description": "This is a responsive container component that handles dynamic content overflow and provides an interactive dropdown menu for hidden items. It observes and manages content inside its slots, automatically adjusting the layout to handle overflow situations..\n---\n\n\n### **Slots:**\n - _default_ - The default slot.\n- **icon** - The icon slot.\n\n### **CSS Parts:**\n - **base** - The component's base wrapper.\n- **dropdown-menu** - The dropdown menu.",
       "attributes": [
-        { "name": "attr", "description": "An example attribute.", "values": [] }
+        {
+          "name": "rtl",
+          "description": "Whether the component is in a right-to-left context. This property is\nautomatically set when the component is rendered in a context with a\n`dir=\"rtl\"` attribute on a parent element.",
+          "values": []
+        }
       ],
       "references": [
         {

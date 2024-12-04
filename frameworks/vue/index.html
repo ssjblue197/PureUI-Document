@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="default" data-pure-ui-version="1.3.13">
+<html lang="en" data-layout="default" data-pure-ui-version="1.5.11">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -53,459 +53,446 @@
       </svg>
     </button>
 
-    <div id="icon-toolbar">
-      <a
-        href="https://github.com/ssjblue197/Pure-UI-Document"
-        title="View Pure UI on GitHub"
-        class="external-link"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <p-icon name="github"></p-icon>
-      </a>
-
-      <p-dropdown id="theme-selector" placement="bottom-end" distance="3">
-        <p-button slot="trigger" size="small" variant="text" caret="" title="Press \ to toggle">
-          <p-icon class="only-light" name="sun-fill"></p-icon>
-          <p-icon class="only-dark" name="moon-fill"></p-icon>
-        </p-button>
-        <p-menu>
-          <p-menu-item type="checkbox" value="light">Light</p-menu-item>
-          <p-menu-item type="checkbox" value="dark">Dark</p-menu-item>
-          <p-divider></p-divider>
-          <p-menu-item type="checkbox" value="auto">System</p-menu-item>
-        </p-menu>
-      </p-dropdown>
-    </div>
-
-    <aside id="sidebar" data-preserve-scroll="">
-      <header>
-        <a href="/">
-          <img src="/assets/images/wordmark.svg" alt="Pure UI" />
-        </a>
-        <div class="sidebar-version">1.3.13</div>
-      </header>
-
-      <button class="search-box" type="button" title="Press / to search" aria-label="Search" data-plugin="search">
-        <p-icon name="search"></p-icon>
-        <span>Search</span>
-      </button>
-
-      <nav>
-        <ul>
-          <li>
-            <h2>Getting Started</h2>
-            <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/getting-started/installation">Installation</a></li>
-              <li><a href="/getting-started/usage">Usage</a></li>
-              <li><a href="/getting-started/themes">Themes</a></li>
-              <li><a href="/getting-started/customizing">Customizing</a></li>
-              <li><a href="/getting-started/form-controls">Form Controls</a></li>
-              <li><a href="/getting-started/localization">Localization</a></li>
-            </ul>
-          </li>
-          <li>
-            <h2>Frameworks</h2>
-            <ul>
-              <li><a href="/frameworks/react">React</a></li>
-              <li><a href="/frameworks/vue" class="active-link">Vue</a></li>
-              <li><a href="/frameworks/angular">Angular</a></li>
-            </ul>
-          </li>
-          <li>
-            <h2>Resources</h2>
-            <ul>
-              <li><a href="/resources/community">Community</a></li>
-              <li><a href="/resources/accessibility">Accessibility</a></li>
-              <li><a href="/resources/contributing">Contributing</a></li>
-              <li><a href="/resources/changelog">Changelog</a></li>
-            </ul>
-          </li>
-          <li>
-            <h2>Components</h2>
-            <ul>
-              <li>
-                <a href="/components/alert"> Alert </a>
-              </li>
-
-              <li>
-                <a href="/components/animated-image"> Animated Image </a>
-              </li>
-
-              <li>
-                <a href="/components/animation"> Animation </a>
-              </li>
-
-              <li>
-                <a href="/components/avatar"> Avatar </a>
-              </li>
-
-              <li>
-                <a href="/components/badge"> Badge </a>
-              </li>
-
-              <li>
-                <a href="/components/breadcrumb"> Breadcrumb </a>
-              </li>
-
-              <li>
-                <a href="/components/breadcrumb-item"> Breadcrumb Item </a>
-              </li>
-
-              <li>
-                <a href="/components/button"> Button </a>
-              </li>
-
-              <li>
-                <a href="/components/button-group"> Button Group </a>
-              </li>
-
-              <li>
-                <a href="/components/calendar"> Calendar </a>
-              </li>
-
-              <li>
-                <a href="/components/card"> Card </a>
-              </li>
-
-              <li>
-                <a href="/components/carousel"> Carousel </a>
-              </li>
-
-              <li>
-                <a href="/components/carousel-item"> Carousel Item </a>
-              </li>
-
-              <li>
-                <a href="/components/checkbox"> Checkbox </a>
-              </li>
-
-              <li>
-                <a href="/components/color-picker"> Color Picker </a>
-              </li>
-
-              <li>
-                <a href="/components/copy-button"> Copy Button </a>
-              </li>
-
-              <li>
-                <a href="/components/details"> Details </a>
-              </li>
-
-              <li>
-                <a href="/components/dialog"> Dialog </a>
-              </li>
-
-              <li>
-                <a href="/components/divider"> Divider </a>
-              </li>
-
-              <li>
-                <a href="/components/drawer"> Drawer </a>
-              </li>
-
-              <li>
-                <a href="/components/dropdown"> Dropdown </a>
-              </li>
-
-              <li>
-                <a href="/components/file-upload"> File Upload </a>
-              </li>
-
-              <li>
-                <a href="/components/file-upload-item"> File Upload Item </a>
-              </li>
-
-              <li>
-                <a href="/components/format-bytes"> Format Bytes </a>
-              </li>
-
-              <li>
-                <a href="/components/format-date"> Format Date </a>
-              </li>
-
-              <li>
-                <a href="/components/format-number"> Format Number </a>
-              </li>
-
-              <li>
-                <a href="/components/icon"> Icon </a>
-              </li>
-
-              <li>
-                <a href="/components/icon-button"> Icon Button </a>
-              </li>
-
-              <li>
-                <a href="/components/image-comparer"> Image Comparer </a>
-              </li>
-
-              <li>
-                <a href="/components/include"> Include </a>
-              </li>
-
-              <li>
-                <a href="/components/input"> Input </a>
-              </li>
-
-              <li>
-                <a href="/components/menu"> Menu </a>
-              </li>
-
-              <li>
-                <a href="/components/menu-item"> Menu Item </a>
-              </li>
-
-              <li>
-                <a href="/components/menu-label"> Menu Label </a>
-              </li>
-
-              <li>
-                <a href="/components/mutation-observer"> Mutation Observer </a>
-              </li>
-
-              <li>
-                <a href="/components/option"> Option </a>
-              </li>
-
-              <li>
-                <a href="/components/paginate"> Paginate </a>
-              </li>
-
-              <li>
-                <a href="/components/popup"> Popup </a>
-              </li>
-
-              <li>
-                <a href="/components/progress-bar"> Progress Bar </a>
-              </li>
-
-              <li>
-                <a href="/components/progress-ring"> Progress Ring </a>
-              </li>
-
-              <li>
-                <a href="/components/qr-code"> QR Code </a>
-              </li>
-
-              <li>
-                <a href="/components/radio"> Radio </a>
-              </li>
-
-              <li>
-                <a href="/components/radio-button"> Radio Button </a>
-              </li>
-
-              <li>
-                <a href="/components/radio-group"> Radio Group </a>
-              </li>
-
-              <li>
-                <a href="/components/range"> Range </a>
-              </li>
-
-              <li>
-                <a href="/components/rating"> Rating </a>
-              </li>
-
-              <li>
-                <a href="/components/relative-time"> Relative Time </a>
-              </li>
-
-              <li>
-                <a href="/components/resize-observer"> Resize Observer </a>
-              </li>
-
-              <li>
-                <a href="/components/select"> Select </a>
-              </li>
-
-              <li>
-                <a href="/components/skeleton"> Skeleton </a>
-              </li>
-
-              <li>
-                <a href="/components/smart-container"> Smart Container </a>
-              </li>
-
-              <li>
-                <a href="/components/spinner"> Spinner </a>
-              </li>
-
-              <li>
-                <a href="/components/split-panel"> Split Panel </a>
-              </li>
-
-              <li>
-                <a href="/components/switch"> Switch </a>
-              </li>
-
-              <li>
-                <a href="/components/tab"> Tab </a>
-              </li>
-
-              <li>
-                <a href="/components/tab-group"> Tab Group </a>
-              </li>
-
-              <li>
-                <a href="/components/tab-panel"> Tab Panel </a>
-              </li>
-
-              <li>
-                <a href="/components/table"> Table </a>
-              </li>
-
-              <li>
-                <a href="/components/tag"> Tag </a>
-              </li>
-
-              <li>
-                <a href="/components/textarea"> Textarea </a>
-              </li>
-
-              <li>
-                <a href="/components/tooltip"> Tooltip </a>
-              </li>
-
-              <li>
-                <a href="/components/tree"> Tree </a>
-              </li>
-
-              <li>
-                <a href="/components/tree-item"> Tree Item </a>
-              </li>
-
-              <li>
-                <a href="/components/visually-hidden"> Visually Hidden </a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <h2>Design Tokens</h2>
-            <ul>
-              <li><a href="/tokens/typography">Typography</a></li>
-              <li><a href="/tokens/color">Color</a></li>
-              <li><a href="/tokens/spacing">Spacing</a></li>
-              <li><a href="/tokens/elevation">Elevation</a></li>
-              <li><a href="/tokens/border-radius">Border Radius</a></li>
-              <li><a href="/tokens/transition">Transition</a></li>
-              <li><a href="/tokens/z-index">Z-index</a></li>
-              <li><a href="/tokens/more">More Tokens</a></li>
-            </ul>
-          </li>
-          <li>
-            <h2>Tutorials</h2>
-            <ul>
-              <li><a href="/tutorials/integrating-with-astro">Integrating with Astro</a></li>
-              <li><a href="/tutorials/integrating-with-laravel">Integrating with Laravel</a></li>
-              <li><a href="/tutorials/integrating-with-nextjs">Integrating with NextJS</a></li>
-              <li><a href="/tutorials/integrating-with-rails">Integrating with Rails</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </aside>
-
-    <main>
-      <article id="content" class="content content--with-toc">
-        <div class="content__toc">
-          <ul>
-            <li class="top"><a href="#">Vue</a></li>
-            <li data-level="2"><a href="#installation">Installation</a></li>
-            <li data-level="2"><a href="#configuration">Configuration</a></li>
-            <li data-level="2"><a href="#types">Types</a></li>
-            <li data-level="2"><a href="#usage">Usage</a></li>
-            <li data-level="3"><a href="#qr-code-generator-example">QR code generator example</a></li>
-            <li data-level="3"><a href="#binding-complex-data">Binding Complex Data</a></li>
-            <li data-level="3"><a href="#two-way-binding">Two-way Binding</a></li>
-            <li data-level="3"><a href="#slots">Slots</a></li>
-            <li data-level="2"><a href="#boilerplate">Boilerplate</a></li>
-          </ul>
+    <div id="container">
+      <div id="header">
+        <div class="left-header">
+          <img src="/assets/images/logo.png" alt="Pure UI" id="logo" />
+          <span class="version">v1.5.11</span>
         </div>
+        <span id="slogan"> PureUI: Simplify, Customize, Innovate. </span>
+        <div class="right-header">
+          <button class="search-box" type="button" title="Press / to search" aria-label="Search" data-plugin="search">
+            <p-icon name="search"></p-icon>
+            <span>Search</span>
+          </button>
 
-        <div class="content__body">
-          <h1>Vue</h1>
-          <p>
-            Vue
+          <div id="icon-toolbar">
             <a
-              href="https://custom-elements-everywhere.com/#vue"
+              href="https://github.com/ssjblue197/Pure-UI-Document"
+              title="View Pure UI on GitHub"
               class="external-link"
               rel="noopener noreferrer"
               target="_blank"
-              >plays nice</a
             >
-            with custom elements, so you can use Pure UI in your Vue apps with ease.
-          </p>
-          <div role="alert" class="callout callout--tip">
-            <p>
-              These instructions are for Vue 3 and above. If you’re using Vue 2, please see the
-              <a href="/frameworks/vue-2">Vue 2 instructions</a>.
-            </p>
+              <p-icon name="github"></p-icon>
+            </a>
+
+            <p-dropdown id="theme-selector" placement="bottom-end" distance="3">
+              <p-button slot="trigger" size="small" variant="text" caret="" title="Press \ to toggle">
+                <p-icon class="only-light" name="sun-fill"></p-icon>
+                <p-icon class="only-dark" name="moon-fill"></p-icon>
+              </p-button>
+              <p-menu>
+                <p-menu-item type="checkbox" value="light">Light</p-menu-item>
+                <p-menu-item type="checkbox" value="dark">Dark</p-menu-item>
+                <p-divider></p-divider>
+                <p-menu-item type="checkbox" value="auto">System</p-menu-item>
+              </p-menu>
+            </p-dropdown>
           </div>
-          <h2 id="installation" class="anchor-heading">
-            Installation<a href="#installation" aria-label='Direct link to "Installation"'></a>
-          </h2>
-          <p>To add Pure UI to your Vue app, install the package from npm.</p>
-          <pre><code class="language-bash" id="code-block-35"><span class="token function">npm</span> <span class="token function">install</span> pure-uikit
-</code><p-copy-button class="copy-code-button" from="code-block-35"></p-copy-button></pre>
-          <p>
-            Next, <a href="/getting-started/themes">include a theme</a> and set the
-            <a href="/getting-started/installation#setting-the-base-path">base path</a> for icons and other assets. In
-            this example, we’ll import the light theme and use the CDN as a base path.
-          </p>
-          <pre><code class="language-jsx" id="code-block-36"><span class="token comment">// main.js or main.ts</span>
+        </div>
+      </div>
+      <div id="page-content">
+        <aside id="sidebar" data-preserve-scroll="">
+          <nav>
+            <ul>
+              <li>
+                <h2>Getting Started</h2>
+                <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/getting-started/installation">Installation</a></li>
+                  <li><a href="/getting-started/usage">Usage</a></li>
+                  <li><a href="/getting-started/themes">Themes</a></li>
+                  <li><a href="/getting-started/customizing">Customizing</a></li>
+                  <li><a href="/getting-started/form-controls">Form Controls</a></li>
+                  <li><a href="/getting-started/localization">Localization</a></li>
+                </ul>
+              </li>
+              <li>
+                <h2>Design Tokens</h2>
+                <ul>
+                  <li><a href="/tokens/typography">Typography</a></li>
+                  <li><a href="/tokens/color">Color</a></li>
+                  <li><a href="/tokens/spacing">Spacing</a></li>
+                  <li><a href="/tokens/elevation">Elevation</a></li>
+                  <li><a href="/tokens/border-radius">Border Radius</a></li>
+                  <li><a href="/tokens/transition">Transition</a></li>
+                  <li><a href="/tokens/z-index">Z-index</a></li>
+                  <li><a href="/tokens/more">More Tokens</a></li>
+                </ul>
+              </li>
+              <li>
+                <h2>Components</h2>
+                <ul>
+                  <li>
+                    <a href="/components/alert"> Alert </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/animated-image"> Animated Image </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/animation"> Animation </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/avatar"> Avatar </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/badge"> Badge </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/breadcrumb"> Breadcrumb </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/breadcrumb-item"> Breadcrumb Item </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/button"> Button </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/button-group"> Button Group </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/calendar"> Calendar </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/card"> Card </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/carousel"> Carousel </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/carousel-item"> Carousel Item </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/checkbox"> Checkbox </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/color-picker"> Color Picker </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/copy-button"> Copy Button </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/details"> Details </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/dialog"> Dialog </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/divider"> Divider </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/drawer"> Drawer </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/dropdown"> Dropdown </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/file-upload"> File Upload </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/file-upload-item"> File Upload Item </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/format-bytes"> Format Bytes </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/format-date"> Format Date </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/format-number"> Format Number </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/icon"> Icon </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/icon-button"> Icon Button </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/image-comparer"> Image Comparer </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/include"> Include </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/input"> Input </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/menu"> Menu </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/menu-item"> Menu Item </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/menu-label"> Menu Label </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/mutation-observer"> Mutation Observer </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/option"> Option </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/paginate"> Paginate </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/popup"> Popup </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/progress-bar"> Progress Bar </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/progress-ring"> Progress Ring </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/qr-code"> QR Code </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/radio"> Radio </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/radio-button"> Radio Button </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/radio-group"> Radio Group </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/range"> Range </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/rating"> Rating </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/relative-time"> Relative Time </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/resize-observer"> Resize Observer </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/select"> Select </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/skeleton"> Skeleton </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/smart-container"> Smart Container </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/spinner"> Spinner </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/split-panel"> Split Panel </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/switch"> Switch </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/tab"> Tab </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/tab-group"> Tab Group </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/tab-panel"> Tab Panel </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/table"> Table </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/tag"> Tag </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/textarea"> Textarea </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/tooltip"> Tooltip </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/tree"> Tree </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/tree-item"> Tree Item </a>
+                  </li>
+
+                  <li>
+                    <a href="/components/visually-hidden"> Visually Hidden </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h2>Tutorials</h2>
+                <ul>
+                  <li><a href="/tutorials/integrating-with-astro">Integrating with Astro</a></li>
+                  <li><a href="/tutorials/integrating-with-laravel">Integrating with Laravel</a></li>
+                  <li><a href="/tutorials/integrating-with-nextjs">Integrating with NextJS</a></li>
+                  <li><a href="/tutorials/integrating-with-rails">Integrating with Rails</a></li>
+                </ul>
+              </li>
+              <li>
+                <h2>Frameworks</h2>
+                <ul>
+                  <li><a href="/frameworks/react">React</a></li>
+                  <li><a href="/frameworks/vue" class="active-link">Vue</a></li>
+                  <li><a href="/frameworks/angular">Angular</a></li>
+                </ul>
+              </li>
+              <li>
+                <h2>Resources</h2>
+                <ul>
+                  <li><a href="/resources/community">Community</a></li>
+                  <li><a href="/resources/accessibility">Accessibility</a></li>
+                  <li><a href="/resources/contributing">Contributing</a></li>
+                  <li><a href="/resources/changelog">Changelog</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <div id="content">
+          <div class="content__body">
+            <h1>Vue</h1>
+            <p>
+              Vue
+              <a
+                href="https://custom-elements-everywhere.com/#vue"
+                class="external-link"
+                rel="noopener noreferrer"
+                target="_blank"
+                >plays nice</a
+              >
+              with custom elements, so you can use Pure UI in your Vue apps with ease.
+            </p>
+            <div role="alert" class="callout callout--tip">
+              <p>
+                These instructions are for Vue 3 and above. If you’re using Vue 2, please see the
+                <a href="/frameworks/vue-2">Vue 2 instructions</a>.
+              </p>
+            </div>
+            <h2 id="installation" class="anchor-heading">
+              Installation<a href="#installation" aria-label='Direct link to "Installation"'></a>
+            </h2>
+            <p>To add Pure UI to your Vue app, install the package from npm.</p>
+            <pre><code class="language-bash" id="code-block-89"><span class="token function">npm</span> <span class="token function">install</span> pure-uikit
+</code><p-copy-button class="copy-code-button" from="code-block-89"></p-copy-button></pre>
+            <p>
+              Next, <a href="/getting-started/themes">include a theme</a> and set the
+              <a href="/getting-started/installation#setting-the-base-path">base path</a> for icons and other assets. In
+              this example, we’ll import the light theme and use the CDN as a base path.
+            </p>
+            <pre><code class="language-jsx" id="code-block-90"><span class="token comment">// main.js or main.ts</span>
 <span class="token keyword">import</span> <span class="token string">"pure-uikit/dist/themes/light.css"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/utilities/base-path"</span><span class="token punctuation">;</span>
 
-<span class="token function">setBasePath</span><span class="token punctuation">(</span><span class="token string">"https://cdn.jsdelivr.net/npm/pure-uikit@1.3.13/cdn/"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-36"></p-copy-button></pre>
-          <div role="alert" class="callout callout--tip">
+<span class="token function">setBasePath</span><span class="token punctuation">(</span><span class="token string">"https://cdn.jsdelivr.net/npm/pure-uikit@1.5.11/cdn/"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code><p-copy-button class="copy-code-button" from="code-block-90"></p-copy-button></pre>
+            <div role="alert" class="callout callout--tip">
+              <p>
+                If you’d rather not use the CDN for assets, you can create a build task that copies
+                <code>node_modules/pure-uikit/dist/assets</code> into a public folder in your app. Then you can point
+                the base path to that folder instead.
+              </p>
+            </div>
+            <h2 id="configuration" class="anchor-heading">
+              Configuration<a href="#configuration" aria-label='Direct link to "Configuration"'></a>
+            </h2>
             <p>
-              If you’d rather not use the CDN for assets, you can create a build task that copies
-              <code>node_modules/pure-uikit/dist/assets</code> into a public folder in your app. Then you can point the
-              base path to that folder instead.
+              If you haven’t configured your Vue.js project to work with custom elements/web components, follow
+              <a
+                href="https://vuejs.org/guide/extras/web-components.html#using-custom-elements-in-vue"
+                class="external-link"
+                rel="noopener noreferrer"
+                target="_blank"
+                >the instructions here</a
+              >
+              based on your project type to ensure your project will not throw an error when it encounters a custom
+              element.
             </p>
-          </div>
-          <h2 id="configuration" class="anchor-heading">
-            Configuration<a href="#configuration" aria-label='Direct link to "Configuration"'></a>
-          </h2>
-          <p>
-            If you haven’t configured your Vue.js project to work with custom elements/web components, follow
-            <a
-              href="https://vuejs.org/guide/extras/web-components.html#using-custom-elements-in-vue"
-              class="external-link"
-              rel="noopener noreferrer"
-              target="_blank"
-              >the instructions here</a
-            >
-            based on your project type to ensure your project will not throw an error when it encounters a custom
-            element.
-          </p>
-          <p>Now you can start using Pure UI components in your app!</p>
-          <h2 id="types" class="anchor-heading">Types<a href="#types" aria-label='Direct link to "Types"'></a></h2>
-          <p>
-            Once you have configured your application for custom elements, you should be able to use Pure UI in your
-            application without it causing any errors. Unfortunately, this doesn’t register the custom elements to
-            behave like components built using Vue. To provide autocomplete information and type safety for your
-            components, you can import the Pure UI Vue types into your <code>tsconfig.json</code> to get better
-            integration in your standard Vue and JSX templates.
-          </p>
-          <pre><code class="language-json" id="code-block-37"><span class="token punctuation">{</span>
+            <p>Now you can start using Pure UI components in your app!</p>
+            <h2 id="types" class="anchor-heading">Types<a href="#types" aria-label='Direct link to "Types"'></a></h2>
+            <p>
+              Once you have configured your application for custom elements, you should be able to use Pure UI in your
+              application without it causing any errors. Unfortunately, this doesn’t register the custom elements to
+              behave like components built using Vue. To provide autocomplete information and type safety for your
+              components, you can import the Pure UI Vue types into your <code>tsconfig.json</code> to get better
+              integration in your standard Vue and JSX templates.
+            </p>
+            <pre><code class="language-json" id="code-block-91"><span class="token punctuation">{</span>
   <span class="token property">"compilerOptions"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"types"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"pure-uikit/dist/types/vue"</span><span class="token punctuation">]</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code><p-copy-button class="copy-code-button" from="code-block-37"></p-copy-button></pre>
-          <h2 id="usage" class="anchor-heading">Usage<a href="#usage" aria-label='Direct link to "Usage"'></a></h2>
-          <h3 id="qr-code-generator-example" class="anchor-heading">
-            QR code generator example<a
-              href="#qr-code-generator-example"
-              aria-label='Direct link to "QR code generator example"'
-            ></a>
-          </h3>
-          <pre><code class="language-html" id="code-block-38"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+</code><p-copy-button class="copy-code-button" from="code-block-91"></p-copy-button></pre>
+            <h2 id="usage" class="anchor-heading">Usage<a href="#usage" aria-label='Direct link to "Usage"'></a></h2>
+            <h3 id="qr-code-generator-example" class="anchor-heading">
+              QR code generator example<a
+                href="#qr-code-generator-example"
+                aria-label='Direct link to "QR code generator example"'
+              ></a>
+            </h3>
+            <pre><code class="language-html" id="code-block-92"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>QR code generator<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
 
@@ -533,97 +520,101 @@
     <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--p-spacing-large<span class="token punctuation">)</span> 0<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-38"></p-copy-button></pre>
-          <h3 id="binding-complex-data" class="anchor-heading">
-            Binding Complex Data<a href="#binding-complex-data" aria-label='Direct link to "Binding Complex Data"'></a>
-          </h3>
-          <p>
-            When binding complex data such as objects and arrays, use the <code>.prop</code> modifier to make Vue bind
-            them as a property instead of an attribute.
-          </p>
-          <pre><code class="language-html" id="code-block-39"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-color-picker</span> <span class="token attr-name">:swatches.prop</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mySwatches<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-39"></p-copy-button></pre>
-          <h3 id="two-way-binding" class="anchor-heading">
-            Two-way Binding<a href="#two-way-binding" aria-label='Direct link to "Two-way Binding"'></a>
-          </h3>
-          <p>
-            One caveat is there’s currently
-            <a
-              href="https://github.com/vuejs/vue/issues/7830"
-              class="external-link"
-              rel="noopener noreferrer"
-              target="_blank"
-              >no support for v-model on custom elements</a
-            >, but you can still achieve two-way binding manually.
-          </p>
-          <pre><code class="language-html" id="code-block-40"><span class="token comment">&lt;!-- This doesn't work --&gt;</span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-input</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-input</span><span class="token punctuation">&gt;</span></span>
-<span class="token comment">&lt;!-- This works, but it's a bit longer --&gt;</span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-input</span> <span class="token attr-name">:value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span> <span class="token attr-name">@input</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name = $event.target.value<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-input</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-40"></p-copy-button></pre>
-          <p>
-            If that’s too verbose for your liking, you can use a custom directive instead.
-            <a
-              href="https://www.npmjs.com/package/pure-v-model"
-              class="external-link"
-              rel="noopener noreferrer"
-              target="_blank"
-              >This utility</a
-            >
-            adds a custom directive that will work just like <code>v-model</code> but for Pure UI components.
-          </p>
-          <div role="alert" class="callout callout--tip">
+</code><p-copy-button class="copy-code-button" from="code-block-92"></p-copy-button></pre>
+            <h3 id="binding-complex-data" class="anchor-heading">
+              Binding Complex Data<a
+                href="#binding-complex-data"
+                aria-label='Direct link to "Binding Complex Data"'
+              ></a>
+            </h3>
             <p>
-              Are you using Pure UI with Vue?
+              When binding complex data such as objects and arrays, use the <code>.prop</code> modifier to make Vue bind
+              them as a property instead of an attribute.
+            </p>
+            <pre><code class="language-html" id="code-block-93"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-color-picker</span> <span class="token attr-name">:swatches.prop</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>mySwatches<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+</code><p-copy-button class="copy-code-button" from="code-block-93"></p-copy-button></pre>
+            <h3 id="two-way-binding" class="anchor-heading">
+              Two-way Binding<a href="#two-way-binding" aria-label='Direct link to "Two-way Binding"'></a>
+            </h3>
+            <p>
+              One caveat is there’s currently
               <a
-                href="https://github.com/ssjblue197/pure-ui/blob/next/docs/frameworks/vue.md"
+                href="https://github.com/vuejs/vue/issues/7830"
                 class="external-link"
                 rel="noopener noreferrer"
                 target="_blank"
-                >Help us improve this page!</a
-              >
+                >no support for v-model on custom elements</a
+              >, but you can still achieve two-way binding manually.
             </p>
-          </div>
-          <h3 id="slots" class="anchor-heading">Slots<a href="#slots" aria-label='Direct link to "Slots"'></a></h3>
-          <p>
-            Slots in Pure UI/web components are functionally the same as basic slots in Vue. Slots can be assigned to
-            elements using the <code>slot</code> attribute followed by the name of the slot it is being assigned to.
-          </p>
-          <p>Here is an example:</p>
-          <pre><code class="language-html" id="code-block-41"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-drawer</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Drawer<span class="token punctuation">"</span></span> <span class="token attr-name">placement</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>start<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>drawer-placement-start<span class="token punctuation">"</span></span> <span class="token attr-name">:open</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>drawerIsOpen<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+            <pre><code class="language-html" id="code-block-94"><span class="token comment">&lt;!-- This doesn't work --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-input</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-input</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!-- This works, but it's a bit longer --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-input</span> <span class="token attr-name">:value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span> <span class="token attr-name">@input</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name = $event.target.value<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-input</span><span class="token punctuation">&gt;</span></span>
+</code><p-copy-button class="copy-code-button" from="code-block-94"></p-copy-button></pre>
+            <p>
+              If that’s too verbose for your liking, you can use a custom directive instead.
+              <a
+                href="https://www.npmjs.com/package/pure-v-model"
+                class="external-link"
+                rel="noopener noreferrer"
+                target="_blank"
+                >This utility</a
+              >
+              adds a custom directive that will work just like <code>v-model</code> but for Pure UI components.
+            </p>
+            <div role="alert" class="callout callout--tip">
+              <p>
+                Are you using Pure UI with Vue?
+                <a
+                  href="https://github.com/ssjblue197/pure-ui/blob/next/docs/frameworks/vue.md"
+                  class="external-link"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >Help us improve this page!</a
+                >
+              </p>
+            </div>
+            <h3 id="slots" class="anchor-heading">Slots<a href="#slots" aria-label='Direct link to "Slots"'></a></h3>
+            <p>
+              Slots in Pure UI/web components are functionally the same as basic slots in Vue. Slots can be assigned to
+              elements using the <code>slot</code> attribute followed by the name of the slot it is being assigned to.
+            </p>
+            <p>Here is an example:</p>
+            <pre><code class="language-html" id="code-block-95"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-drawer</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Drawer<span class="token punctuation">"</span></span> <span class="token attr-name">placement</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>start<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>drawer-placement-start<span class="token punctuation">"</span></span> <span class="token attr-name">:open</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>drawerIsOpen<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   This drawer slides in from the start.
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>footer<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-button</span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span> drawerIsOpen = false<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Close<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-button</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-drawer</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-41"></p-copy-button></pre>
-          <h2 id="boilerplate" class="anchor-heading">
-            Boilerplate<a href="#boilerplate" aria-label='Direct link to "Boilerplate"'></a>
-          </h2>
-          <p>
-            To add Pure UI to your Vue 3 app quickly, you can use the
-            <a
-              href="https://github.com/ssjblue197/PureUI-Vue-Boilerplate"
-              class="external-link"
-              rel="noopener noreferrer"
-              target="_blank"
-              >Pure UI Vue Boilerplate</a
-            >, which has already been configured to work with Pure UI.
-          </p>
-          <div role="alert" class="callout callout--tip">
+</code><p-copy-button class="copy-code-button" from="code-block-95"></p-copy-button></pre>
+            <h2 id="boilerplate" class="anchor-heading">
+              Boilerplate<a href="#boilerplate" aria-label='Direct link to "Boilerplate"'></a>
+            </h2>
             <p>
-              Try out Boilerplate for Vue 3?
+              To add Pure UI to your Vue 3 app quickly, you can use the
               <a
                 href="https://github.com/ssjblue197/PureUI-Vue-Boilerplate"
                 class="external-link"
                 rel="noopener noreferrer"
                 target="_blank"
-                >Pure UI Vue Boilerplate!</a
-              >
+                >Pure UI Vue Boilerplate</a
+              >, which has already been configured to work with Pure UI.
             </p>
+            <div role="alert" class="callout callout--tip">
+              <p>
+                Try out Boilerplate for Vue 3?
+                <a
+                  href="https://github.com/ssjblue197/PureUI-Vue-Boilerplate"
+                  class="external-link"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >Pure UI Vue Boilerplate!</a
+                >
+              </p>
+            </div>
           </div>
         </div>
-      </article>
-    </main>
+      </div>
+    </div>
   </body>
 </html>
