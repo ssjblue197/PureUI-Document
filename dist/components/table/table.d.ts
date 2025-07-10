@@ -14,6 +14,7 @@ export interface ColumnConfig {
     comparator?: (T: unknown) => void;
     filter?: boolean;
     headerName?: string;
+    headerRender?: (T: unknown) => string;
     width?: string;
     minWidth?: string;
     maxWidth?: string;
@@ -46,6 +47,8 @@ export interface TableOptions<T> {
     hideFooter?: boolean;
     paginate?: boolean;
     expandable?: boolean;
+    rowExpandable?: (T: unknown) => boolean;
+    rowExpandRender?: (T: unknown) => string;
     onRowExpand?: (row: T) => symbol | HTMLTemplateResult | undefined;
     onRowCollapse?: (row: T) => symbol | HTMLTemplateResult | undefined;
 }

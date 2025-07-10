@@ -9,7 +9,7 @@ export interface CalendarDay {
 }
 export type CalendarInterface = "day" | "month" | "year";
 export interface CalendarGridOptions {
-    weekStartsWith: "sunday" | "monday";
+    weekStartsWith: string;
     interface: CalendarInterface;
 }
 /** Generates a calendar grid. Month should be 1-12, not 0-11. */

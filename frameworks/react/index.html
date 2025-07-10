@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="default" data-pure-ui-version="1.5.11">
+<html lang="en" data-layout="default" data-pure-ui-version="1.6.29">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -57,7 +57,7 @@
       <div id="header">
         <div class="left-header">
           <img src="/assets/images/logo.png" alt="Pure UI" id="logo" />
-          <span class="version">v1.5.11</span>
+          <span class="version">v1.6.29</span>
         </div>
         <span id="slogan"> PureUI: Simplify, Customize, Innovate. </span>
         <div class="right-header">
@@ -402,8 +402,6 @@
                 <h2>Resources</h2>
                 <ul>
                   <li><a href="/resources/community">Community</a></li>
-                  <li><a href="/resources/accessibility">Accessibility</a></li>
-                  <li><a href="/resources/contributing">Contributing</a></li>
                   <li><a href="/resources/changelog">Changelog</a></li>
                 </ul>
               </li>
@@ -411,112 +409,113 @@
           </nav>
         </aside>
 
-        <div id="content">
-          <div class="content__body">
-            <h1>React</h1>
-            <p>
-              Pure UI offers a React version of every component to provide an idiomatic experience for React users. You
-              can easily toggle between HTML and React examples throughout the documentation.
-            </p>
-            <h2 id="installation" class="anchor-heading">
-              Installation<a href="#installation" aria-label='Direct link to "Installation"'></a>
-            </h2>
-            <p>To add Pure UI to your React app, install the package from npm.</p>
-            <pre><code class="language-bash" id="code-block-69"><span class="token function">npm</span> <span class="token function">install</span> pure-uikit
-</code><p-copy-button class="copy-code-button" from="code-block-69"></p-copy-button></pre>
-            <p>
-              Next, <a href="/getting-started/themes">include a theme</a> and set the
-              <a href="/getting-started/installation#setting-the-base-path">base path</a> for icons and other assets. In
-              this example, we’ll import the light theme and use the CDN as a base path.
-            </p>
-            <pre><code class="language-jsx" id="code-block-70"><span class="token comment">// App.jsx</span>
+        <div id="content" class="content--with-toc">
+          <div class="content--wrapper">
+            <div class="content__body">
+              <h1>React</h1>
+              <p>
+                Pure UI offers a React version of every component to provide an idiomatic experience for React users.
+                You can easily toggle between HTML and React examples throughout the documentation.
+              </p>
+              <h2 id="installation" class="anchor-heading">
+                Installation<a href="#installation" aria-label='Direct link to "Installation"'></a>
+              </h2>
+              <p>To add Pure UI to your React app, install the package from npm.</p>
+              <pre><code class="language-bash" id="code-block-16"><span class="token function">npm</span> <span class="token function">install</span> pure-uikit
+</code><p-copy-button class="copy-code-button" from="code-block-16"></p-copy-button></pre>
+              <p>
+                Next, <a href="/getting-started/themes">include a theme</a> and set the
+                <a href="/getting-started/installation#setting-the-base-path">base path</a> for icons and other assets.
+                In this example, we’ll import the light theme and use the CDN as a base path.
+              </p>
+              <pre><code class="language-jsx" id="code-block-17"><span class="token comment">// App.jsx</span>
 <span class="token keyword">import</span> <span class="token string">"pure-uikit/dist/themes/light.css"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/utilities/base-path"</span><span class="token punctuation">;</span>
 
-<span class="token function">setBasePath</span><span class="token punctuation">(</span><span class="token string">"https://cdn.jsdelivr.net/npm/pure-uikit@1.5.11/cdn/"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-70"></p-copy-button></pre>
-            <div role="alert" class="callout callout--tip">
+<span class="token function">setBasePath</span><span class="token punctuation">(</span><span class="token string">"https://cdn.jsdelivr.net/npm/pure-uikit@1.6.29/cdn/"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code><p-copy-button class="copy-code-button" from="code-block-17"></p-copy-button></pre>
+              <div role="alert" class="callout callout--tip">
+                <p>
+                  If you’d rather not use the CDN for assets, you can create a
+                  <a
+                    href="https://webpack.js.org/plugins/copy-webpack-plugin/"
+                    class="external-link"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >build task</a
+                  >
+                  that copies <code>node_modules/pure-uikit/dist/assets</code> into your app’s
+                  <code>public</code> directory. Then you can point the base path to that folder instead.
+                </p>
+              </div>
+              <p>Now you can start using components!</p>
+              <h3 id="preact" class="anchor-heading">
+                Preact<a href="#preact" aria-label='Direct link to "Preact"'></a>
+              </h3>
               <p>
-                If you’d rather not use the CDN for assets, you can create a
+                Preact users facing type errors using components may benefit from setting “paths” in their tsconfig.json
+                so that react types will instead resolve to preact/compat as described in
                 <a
-                  href="https://webpack.js.org/plugins/copy-webpack-plugin/"
+                  href="https://preactjs.com/guide/v10/typescript/#typescript-preactcompat-configuration"
                   class="external-link"
                   rel="noopener noreferrer"
                   target="_blank"
-                  >build task</a
-                >
-                that copies <code>node_modules/pure-uikit/dist/assets</code> into your app’s
-                <code>public</code> directory. Then you can point the base path to that folder instead.
+                  >Preact’s typescript documentation</a
+                >.
               </p>
-            </div>
-            <p>Now you can start using components!</p>
-            <h3 id="preact" class="anchor-heading">
-              Preact<a href="#preact" aria-label='Direct link to "Preact"'></a>
-            </h3>
-            <p>
-              Preact users facing type errors using components may benefit from setting “paths” in their tsconfig.json
-              so that react types will instead resolve to preact/compat as described in
-              <a
-                href="https://preactjs.com/guide/v10/typescript/#typescript-preactcompat-configuration"
-                class="external-link"
-                rel="noopener noreferrer"
-                target="_blank"
-                >Preact’s typescript documentation</a
-              >.
-            </p>
-            <h2 id="usage" class="anchor-heading">Usage<a href="#usage" aria-label='Direct link to "Usage"'></a></h2>
-            <h3 id="importing-components" class="anchor-heading">
-              Importing Components<a
-                href="#importing-components"
-                aria-label='Direct link to "Importing Components"'
-              ></a>
-            </h3>
-            <p>
-              Every Pure UI component is available to import as a React component. Note that we’re importing the
-              <code>&lt;PButton&gt;</code> <em>React component</em> instead of the <code>&lt;p-button&gt;</code>
-              <em>custom element</em> in the example below.
-            </p>
-            <pre><code class="language-jsx" id="code-block-71"><span class="token keyword">import</span> PButton <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/react/button"</span><span class="token punctuation">;</span>
+              <h2 id="usage" class="anchor-heading">Usage<a href="#usage" aria-label='Direct link to "Usage"'></a></h2>
+              <h3 id="importing-components" class="anchor-heading">
+                Importing Components<a
+                  href="#importing-components"
+                  aria-label='Direct link to "Importing Components"'
+                ></a>
+              </h3>
+              <p>
+                Every Pure UI component is available to import as a React component. Note that we’re importing the
+                <code>&lt;PButton&gt;</code> <em>React component</em> instead of the <code>&lt;p-button&gt;</code>
+                <em>custom element</em> in the example below.
+              </p>
+              <pre><code class="language-jsx" id="code-block-18"><span class="token keyword">import</span> PButton <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/react/button"</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">MyComponent</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PButton</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Click me</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PButton</span></span><span class="token punctuation">&gt;</span></span><span class="token punctuation">;</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> MyComponent<span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-71"></p-copy-button></pre>
-            <h4 id="notes-about-tree-shaking" class="anchor-heading">
-              Notes about tree shaking<a
-                href="#notes-about-tree-shaking"
-                aria-label='Direct link to "Notes about tree shaking"'
-              ></a>
-            </h4>
-            <p>Previously, it was recommended to import from a single entrypoint like so:</p>
-            <pre><code class="language-jsx" id="code-block-72"><span class="token keyword">import</span> <span class="token punctuation">{</span> PButton <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/react"</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-72"></p-copy-button></pre>
-            <p>
-              However, tree-shaking extra Pure UI components proved to be a challenge. As a result, we now recommend
-              cherry-picking components you want to use, rather than importing from a single entrypoint.
-            </p>
-            <pre><code class="language-diff" id="code-block-73"><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span><span class="token line"> import { PButton } from 'pure-uikit/dist/react';
+</code><p-copy-button class="copy-code-button" from="code-block-18"></p-copy-button></pre>
+              <h4 id="notes-about-tree-shaking" class="anchor-heading">
+                Notes about tree shaking<a
+                  href="#notes-about-tree-shaking"
+                  aria-label='Direct link to "Notes about tree shaking"'
+                ></a>
+              </h4>
+              <p>Previously, it was recommended to import from a single entrypoint like so:</p>
+              <pre><code class="language-jsx" id="code-block-19"><span class="token keyword">import</span> <span class="token punctuation">{</span> PButton <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/react"</span><span class="token punctuation">;</span>
+</code><p-copy-button class="copy-code-button" from="code-block-19"></p-copy-button></pre>
+              <p>
+                However, tree-shaking extra Pure UI components proved to be a challenge. As a result, we now recommend
+                cherry-picking components you want to use, rather than importing from a single entrypoint.
+              </p>
+              <pre><code class="language-diff" id="code-block-20"><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span><span class="token line"> import { PButton } from 'pure-uikit/dist/react';
 </span></span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line"> import PButton from 'pure-uikit/dist/react/button';
-</span></span></code><p-copy-button class="copy-code-button" from="code-block-73"></p-copy-button></pre>
-            <p>
-              You can find a copy + paste import for each component in the “importing” section of its documentation.
-            </p>
-            <h3 id="event-handling" class="anchor-heading">
-              Event Handling<a href="#event-handling" aria-label='Direct link to "Event Handling"'></a>
-            </h3>
-            <p>
-              Many Pure UI components emit
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent"
-                class="external-link"
-                rel="noopener noreferrer"
-                target="_blank"
-                >custom events</a
-              >. For example, the <a href="/components/input">input component</a> emits the <code>p-input</code> event
-              when it receives input. In React, you can listen for the event using <code>onPInput</code>.
-            </p>
-            <p>Here’s how you can bind the input’s value to a state variable.</p>
-            <pre><code class="language-jsx" id="code-block-74"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+</span></span></code><p-copy-button class="copy-code-button" from="code-block-20"></p-copy-button></pre>
+              <p>
+                You can find a copy + paste import for each component in the “importing” section of its documentation.
+              </p>
+              <h3 id="event-handling" class="anchor-heading">
+                Event Handling<a href="#event-handling" aria-label='Direct link to "Event Handling"'></a>
+              </h3>
+              <p>
+                Many Pure UI components emit
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent"
+                  class="external-link"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >custom events</a
+                >. For example, the <a href="/components/input">input component</a> emits the <code>p-input</code> event
+                when it receives input. In React, you can listen for the event using <code>onPInput</code>.
+              </p>
+              <p>Here’s how you can bind the input’s value to a state variable.</p>
+              <pre><code class="language-jsx" id="code-block-21"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PInput <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/react/input"</span><span class="token punctuation">;</span>
 
 <span class="token keyword">function</span> <span class="token function">MyComponent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -526,13 +525,13 @@
 <span class="token punctuation">}</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> MyComponent<span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-74"></p-copy-button></pre>
-            <p>
-              If you’re using TypeScript, it’s important to note that <code>event.target</code> will be a reference to
-              the underlying custom element. You can use <code>(event.target as any).value</code> as a quick fix, or you
-              can strongly type the event target as shown below.
-            </p>
-            <pre><code class="language-tsx" id="code-block-75"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+</code><p-copy-button class="copy-code-button" from="code-block-21"></p-copy-button></pre>
+              <p>
+                If you’re using TypeScript, it’s important to note that <code>event.target</code> will be a reference to
+                the underlying custom element. You can use <code>(event.target as any).value</code> as a quick fix, or
+                you can strongly type the event target as shown below.
+              </p>
+              <pre><code class="language-tsx" id="code-block-22"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PInput <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/react/input"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token keyword">type</span> <span class="token class-name">PInputElement</span> <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/components/input/input"</span><span class="token punctuation">;</span>
 
@@ -543,9 +542,9 @@
 <span class="token punctuation">}</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> MyComponent<span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-75"></p-copy-button></pre>
-            <p>You can also import the event type for use in your callbacks, shown below.</p>
-            <pre><code class="language-tsx" id="code-block-76"><span class="token keyword">import</span> <span class="token punctuation">{</span> useCallback<span class="token punctuation">,</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+</code><p-copy-button class="copy-code-button" from="code-block-22"></p-copy-button></pre>
+              <p>You can also import the event type for use in your callbacks, shown below.</p>
+              <pre><code class="language-tsx" id="code-block-23"><span class="token keyword">import</span> <span class="token punctuation">{</span> useCallback<span class="token punctuation">,</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PInput<span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token keyword">type</span> <span class="token class-name">PInputEvent</span> <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/react/input"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token keyword">type</span> <span class="token class-name">PInputElement</span> <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/components/input/input"</span><span class="token punctuation">;</span>
 
@@ -559,73 +558,73 @@
 <span class="token punctuation">}</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> MyComponent<span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-76"></p-copy-button></pre>
-            <h2 id="testing-with-jest" class="anchor-heading">
-              Testing with Jest<a href="#testing-with-jest" aria-label='Direct link to "Testing with Jest"'></a>
-            </h2>
-            <p>
-              Testing with web components can be challenging if your test environment runs in a Node environment (i.e.
-              it doesn’t run in a real browser). Fortunately,
-              <a href="https://jestjs.io/" class="external-link" rel="noopener noreferrer" target="_blank">Jest</a> has
-              made a number of strides to support web components and provide additional browser APIs. However, it’s
-              still not a complete replication of a browser environment.
-            </p>
-            <p>Here are some tips that will help smooth things over if you’re having trouble with Jest + Pure UI.</p>
-            <div role="alert" class="callout callout--tip">
+</code><p-copy-button class="copy-code-button" from="code-block-23"></p-copy-button></pre>
+              <h2 id="testing-with-jest" class="anchor-heading">
+                Testing with Jest<a href="#testing-with-jest" aria-label='Direct link to "Testing with Jest"'></a>
+              </h2>
               <p>
-                If you’re looking for a fast, modern testing alternative, consider
+                Testing with web components can be challenging if your test environment runs in a Node environment (i.e.
+                it doesn’t run in a real browser). Fortunately,
+                <a href="https://jestjs.io/" class="external-link" rel="noopener noreferrer" target="_blank">Jest</a>
+                has made a number of strides to support web components and provide additional browser APIs. However,
+                it’s still not a complete replication of a browser environment.
+              </p>
+              <p>Here are some tips that will help smooth things over if you’re having trouble with Jest + Pure UI.</p>
+              <div role="alert" class="callout callout--tip">
+                <p>
+                  If you’re looking for a fast, modern testing alternative, consider
+                  <a
+                    href="https://modern-web.dev/docs/test-runner/overview/"
+                    class="external-link"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >Web Test Runner</a
+                  >.
+                </p>
+              </div>
+              <h3 id="upgrade-jest" class="anchor-heading">
+                Upgrade Jest<a href="#upgrade-jest" aria-label='Direct link to "Upgrade Jest"'></a>
+              </h3>
+              <p>
+                Jest underwent a major revamp and received support for web components in
                 <a
-                  href="https://modern-web.dev/docs/test-runner/overview/"
+                  href="https://github.com/facebook/jest/blob/main/CHANGELOG.md#2650"
                   class="external-link"
                   rel="noopener noreferrer"
                   target="_blank"
-                  >Web Test Runner</a
-                >.
+                  >version 26.5.0</a
+                >
+                when it introduced
+                <a
+                  href="https://github.com/jsdom/jsdom/blob/master/Changelog.md#1620"
+                  class="external-link"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >JSDOM 16.2.0</a
+                >. This release also included a number of mocks for built-in browser functions such as
+                <code>MutationObserver</code>, <code>document.createRange</code>, and others.
               </p>
-            </div>
-            <h3 id="upgrade-jest" class="anchor-heading">
-              Upgrade Jest<a href="#upgrade-jest" aria-label='Direct link to "Upgrade Jest"'></a>
-            </h3>
-            <p>
-              Jest underwent a major revamp and received support for web components in
-              <a
-                href="https://github.com/facebook/jest/blob/main/CHANGELOG.md#2650"
-                class="external-link"
-                rel="noopener noreferrer"
-                target="_blank"
-                >version 26.5.0</a
-              >
-              when it introduced
-              <a
-                href="https://github.com/jsdom/jsdom/blob/master/Changelog.md#1620"
-                class="external-link"
-                rel="noopener noreferrer"
-                target="_blank"
-                >JSDOM 16.2.0</a
-              >. This release also included a number of mocks for built-in browser functions such as
-              <code>MutationObserver</code>, <code>document.createRange</code>, and others.
-            </p>
-            <p>
-              If you’re using
-              <a
-                href="https://reactjs.org/docs/create-a-new-react-app.html#create-react-app"
-                class="external-link"
-                rel="noopener noreferrer"
-                target="_blank"
-                >Create React App</a
-              >, you can update <code>react-scripts</code> which will also update Jest.
-            </p>
-            <pre><code id="code-block-77">npm install react-scripts@latest
-</code><p-copy-button class="copy-code-button" from="code-block-77"></p-copy-button></pre>
-            <h3 id="mock-missing-apis" class="anchor-heading">
-              Mock Missing APIs<a href="#mock-missing-apis" aria-label='Direct link to "Mock Missing APIs"'></a>
-            </h3>
-            <p>
-              Some components use <code>window.matchMedia</code>, but this function isn’t supported by JSDOM so you’ll
-              need to mock it yourself.
-            </p>
-            <p>In <code>src/setupTests.js</code>, add the following.</p>
-            <pre><code class="language-js" id="code-block-78">Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>window<span class="token punctuation">,</span> <span class="token string">"matchMedia"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+              <p>
+                If you’re using
+                <a
+                  href="https://reactjs.org/docs/create-a-new-react-app.html#create-react-app"
+                  class="external-link"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >Create React App</a
+                >, you can update <code>react-scripts</code> which will also update Jest.
+              </p>
+              <pre><code id="code-block-24">npm install react-scripts@latest
+</code><p-copy-button class="copy-code-button" from="code-block-24"></p-copy-button></pre>
+              <h3 id="mock-missing-apis" class="anchor-heading">
+                Mock Missing APIs<a href="#mock-missing-apis" aria-label='Direct link to "Mock Missing APIs"'></a>
+              </h3>
+              <p>
+                Some components use <code>window.matchMedia</code>, but this function isn’t supported by JSDOM so you’ll
+                need to mock it yourself.
+              </p>
+              <p>In <code>src/setupTests.js</code>, add the following.</p>
+              <pre><code class="language-js" id="code-block-25">Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>window<span class="token punctuation">,</span> <span class="token string">"matchMedia"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
   <span class="token literal-property property">writable</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
   <span class="token literal-property property">value</span><span class="token operator">:</span> jest<span class="token punctuation">.</span><span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">mockImplementation</span><span class="token punctuation">(</span><span class="token parameter">query</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
     <span class="token literal-property property">matches</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
@@ -638,73 +637,89 @@
     <span class="token literal-property property">dispatchEvent</span><span class="token operator">:</span> jest<span class="token punctuation">.</span><span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-78"></p-copy-button></pre>
-            <p>
-              For more details, refer to Jest’s
-              <a
-                href="https://jestjs.io/docs/manual-mocks#mocking-methods-which-are-not-implemented-in-jsdom"
-                class="external-link"
-                rel="noopener noreferrer"
-                target="_blank"
-                >manual mocking</a
-              >
-              documentation.
-            </p>
-            <h3 id="transform-es-modules" class="anchor-heading">
-              Transform ES Modules<a
-                href="#transform-es-modules"
-                aria-label='Direct link to "Transform ES Modules"'
-              ></a>
-            </h3>
-            <p>
-              ES Modules are a
-              <a
-                href="https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/"
-                class="external-link"
-                rel="noopener noreferrer"
-                target="_blank"
-                >well-supported browser standard</a
-              >. This is how Pure UI is distributed, but most React apps expect CommonJS. As a result, you’ll probably
-              run into the following error.
-            </p>
-            <pre><code id="code-block-79">Error: Unable to import outside of a module
-</code><p-copy-button class="copy-code-button" from="code-block-79"></p-copy-button></pre>
-            <p>
-              To fix this, add the following to your <code>package.json</code> which tells the transpiler to process
-              Pure UI modules.
-            </p>
-            <pre><code class="language-js" id="code-block-80"><span class="token punctuation">{</span>
+</code><p-copy-button class="copy-code-button" from="code-block-25"></p-copy-button></pre>
+              <p>
+                For more details, refer to Jest’s
+                <a
+                  href="https://jestjs.io/docs/manual-mocks#mocking-methods-which-are-not-implemented-in-jsdom"
+                  class="external-link"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >manual mocking</a
+                >
+                documentation.
+              </p>
+              <h3 id="transform-es-modules" class="anchor-heading">
+                Transform ES Modules<a
+                  href="#transform-es-modules"
+                  aria-label='Direct link to "Transform ES Modules"'
+                ></a>
+              </h3>
+              <p>
+                ES Modules are a
+                <a
+                  href="https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/"
+                  class="external-link"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >well-supported browser standard</a
+                >. This is how Pure UI is distributed, but most React apps expect CommonJS. As a result, you’ll probably
+                run into the following error.
+              </p>
+              <pre><code id="code-block-26">Error: Unable to import outside of a module
+</code><p-copy-button class="copy-code-button" from="code-block-26"></p-copy-button></pre>
+              <p>
+                To fix this, add the following to your <code>package.json</code> which tells the transpiler to process
+                Pure UI modules.
+              </p>
+              <pre><code class="language-js" id="code-block-27"><span class="token punctuation">{</span>
   <span class="token string-property property">"jest"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token string-property property">"transformIgnorePatterns"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"node_modules/(?!(pure-uikit))"</span><span class="token punctuation">]</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code><p-copy-button class="copy-code-button" from="code-block-80"></p-copy-button></pre>
-            <p>
-              These instructions are for apps created via Create React App. If you’re using Jest directly, you can add
-              <code>transformIgnorePatterns</code> directly into <code>jest.config.js</code>.
-            </p>
-            <p>
-              For more details, refer to Jest’s
-              <a
-                href="https://jestjs.io/docs/tutorial-react-native#transformignorepatterns-customization"
-                class="external-link"
-                rel="noopener noreferrer"
-                target="_blank"
-                ><code>transformIgnorePatterns</code> customization</a
-              >
-              documentation.
-            </p>
-            <div role="alert" class="callout callout--tip">
+</code><p-copy-button class="copy-code-button" from="code-block-27"></p-copy-button></pre>
               <p>
-                Are you using Pure UI with React?
+                These instructions are for apps created via Create React App. If you’re using Jest directly, you can add
+                <code>transformIgnorePatterns</code> directly into <code>jest.config.js</code>.
+              </p>
+              <p>
+                For more details, refer to Jest’s
                 <a
-                  href="https://github.com/ssjblue197/pure-ui/blob/next/docs/frameworks/react.md"
+                  href="https://jestjs.io/docs/tutorial-react-native#transformignorepatterns-customization"
                   class="external-link"
                   rel="noopener noreferrer"
                   target="_blank"
-                  >Help us improve this page!</a
+                  ><code>transformIgnorePatterns</code> customization</a
                 >
+                documentation.
               </p>
+              <div role="alert" class="callout callout--tip">
+                <p>
+                  Are you using Pure UI with React?
+                  <a
+                    href="https://github.com/ssjblue197/pure-ui/blob/next/docs/frameworks/react.md"
+                    class="external-link"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >Help us improve this page!</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="content__toc">
+              <ul>
+                <li class="top"><a href="#">React</a></li>
+                <li data-level="2"><a href="#installation">Installation</a></li>
+                <li data-level="3"><a href="#preact">Preact</a></li>
+                <li data-level="2"><a href="#usage">Usage</a></li>
+                <li data-level="3"><a href="#importing-components">Importing Components</a></li>
+                <li data-level="3"><a href="#event-handling">Event Handling</a></li>
+                <li data-level="2"><a href="#testing-with-jest">Testing with Jest</a></li>
+                <li data-level="3"><a href="#upgrade-jest">Upgrade Jest</a></li>
+                <li data-level="3"><a href="#mock-missing-apis">Mock Missing APIs</a></li>
+                <li data-level="3"><a href="#transform-es-modules">Transform ES Modules</a></li>
+              </ul>
             </div>
           </div>
         </div>

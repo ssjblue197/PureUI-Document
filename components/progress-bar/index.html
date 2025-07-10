@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="component" data-pure-ui-version="1.5.11">
+<html lang="en" data-layout="component" data-pure-ui-version="1.6.29">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -57,7 +57,7 @@
       <div id="header">
         <div class="left-header">
           <img src="/assets/images/logo.png" alt="Pure UI" id="logo" />
-          <span class="version">v1.5.11</span>
+          <span class="version">v1.6.29</span>
         </div>
         <span id="slogan"> PureUI: Simplify, Customize, Innovate. </span>
         <div class="right-header">
@@ -402,8 +402,6 @@
                 <h2>Resources</h2>
                 <ul>
                   <li><a href="/resources/community">Community</a></li>
-                  <li><a href="/resources/accessibility">Accessibility</a></li>
-                  <li><a href="/resources/contributing">Contributing</a></li>
                   <li><a href="/resources/changelog">Changelog</a></li>
                 </ul>
               </li>
@@ -411,303 +409,316 @@
           </nav>
         </aside>
 
-        <div id="content">
-          <div class="content__body">
-            <header class="component-header">
-              <h1>Progress Bar</h1>
+        <div id="content" class="content--with-toc">
+          <div class="content--wrapper">
+            <div class="content__body">
+              <header class="component-header">
+                <h1>Progress Bar</h1>
 
-              <div class="component-header__tag">
-                <code>&lt;p-progress-bar&gt; | PProgressBar</code>
-              </div>
-
-              <div class="component-header__info">
-                <p-badge variant="neutral" pill=""> Since 1.0 </p-badge>
-                <p-badge variant="primary" pill="" style="text-transform: capitalize"> stable </p-badge>
-              </div>
-            </header>
-
-            <p class="component-summary">Progress bars are used to show the status of an ongoing operation.</p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <p-progress-bar value="50"></p-progress-bar>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
-                </div>
-              </div>
-
-              <div class="code-preview__source-group" id="code-preview-source-group-241">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-731"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-progress-bar</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>50<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-progress-bar</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-731"></p-copy-button></pre>
+                <div class="component-header__tag">
+                  <code>&lt;p-progress-bar&gt; | PProgressBar</code>
                 </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-732"><span class="token keyword">import</span> PProgressBar <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/progress-bar'</span><span class="token punctuation">;</span>
+                <div class="component-header__info">
+                  <p-badge variant="neutral" pill=""> Since 1.0 </p-badge>
+                  <p-badge variant="primary" pill="" style="text-transform: capitalize"> stable </p-badge>
+                </div>
+              </header>
+
+              <p class="component-summary">Progress bars are used to show the status of an ongoing operation.</p>
+
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <p-progress-bar value="50"></p-progress-bar>
+
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
+                </div>
+
+                <div class="code-preview__source-group" id="code-preview-source-group-233">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-723"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-progress-bar</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>50<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-progress-bar</span><span class="token punctuation">&gt;</span></span>
+</code><p-copy-button class="copy-code-button" from="code-block-723"></p-copy-button></pre>
+                  </div>
+
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-724"><span class="token keyword">import</span> PProgressBar <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/progress-bar'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PProgressBar</span></span> <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">50</span><span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-732"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-724"></p-copy-button></pre>
+                  </div>
                 </div>
-              </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-241"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-233"
                   >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
-
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
                   >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
+                    React
+                  </button>
 
-            <h2 id="examples" class="anchor-heading">
-              Examples<a href="#examples" aria-label='Direct link to "Examples"'></a>
-            </h2>
-            <h3 id="labels" class="anchor-heading">
-              Labels<a href="#labels" aria-label='Direct link to "Labels"'></a>
-            </h3>
-            <p>
-              Use the <code>label</code> attribute to label the progress bar and tell assistive devices how to announce
-              it.
-            </p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <p-progress-bar value="50" label="Upload progress"></p-progress-bar>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-242">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-733"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-progress-bar</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>50<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Upload progress<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-progress-bar</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-733"></p-copy-button></pre>
+              <h2 id="examples" class="anchor-heading">
+                Examples<a href="#examples" aria-label='Direct link to "Examples"'></a>
+              </h2>
+              <h3 id="labels" class="anchor-heading">
+                Labels<a href="#labels" aria-label='Direct link to "Labels"'></a>
+              </h3>
+              <p>
+                Use the <code>label</code> attribute to label the progress bar and tell assistive devices how to
+                announce it.
+              </p>
+
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <p-progress-bar value="50" label="Upload progress"></p-progress-bar>
+
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
                 </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-734"><span class="token keyword">import</span> PProgressBar <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/progress-bar'</span><span class="token punctuation">;</span>
+                <div class="code-preview__source-group" id="code-preview-source-group-234">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-725"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-progress-bar</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>50<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Upload progress<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-progress-bar</span><span class="token punctuation">&gt;</span></span>
+</code><p-copy-button class="copy-code-button" from="code-block-725"></p-copy-button></pre>
+                  </div>
+
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-726"><span class="token keyword">import</span> PProgressBar <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/progress-bar'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PProgressBar</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>50<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Upload progress<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-734"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-726"></p-copy-button></pre>
+                  </div>
                 </div>
-              </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-242"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-234"
                   >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
-
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
                   >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
+                    React
+                  </button>
 
-            <h3 id="custom-height" class="anchor-heading">
-              Custom Height<a href="#custom-height" aria-label='Direct link to "Custom Height"'></a>
-            </h3>
-            <p>Use the <code>--height</code> custom property to set the progress bar’s height.</p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <p-progress-bar value="50" style="--height: 6px"></p-progress-bar>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-243">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-735"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-progress-bar</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>50<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">--height</span><span class="token punctuation">:</span> 6px<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-progress-bar</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-735"></p-copy-button></pre>
+              <h3 id="custom-height" class="anchor-heading">
+                Custom Height<a href="#custom-height" aria-label='Direct link to "Custom Height"'></a>
+              </h3>
+              <p>Use the <code>--height</code> custom property to set the progress bar’s height.</p>
+
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <p-progress-bar value="50" style="--height: 6px"></p-progress-bar>
+
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
                 </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-736"><span class="token keyword">import</span> PProgressBar <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/progress-bar'</span><span class="token punctuation">;</span>
+                <div class="code-preview__source-group" id="code-preview-source-group-235">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-727"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-progress-bar</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>50<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">--height</span><span class="token punctuation">:</span> 6px<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-progress-bar</span><span class="token punctuation">&gt;</span></span>
+</code><p-copy-button class="copy-code-button" from="code-block-727"></p-copy-button></pre>
+                  </div>
+
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-728"><span class="token keyword">import</span> PProgressBar <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/progress-bar'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PProgressBar</span></span> <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">50</span><span class="token punctuation">}</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token string-property property">'--height'</span><span class="token operator">:</span> <span class="token string">'6px'</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-736"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-728"></p-copy-button></pre>
+                  </div>
+                </div>
+
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-235"
+                  >
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
+
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
+                  >
+                    React
+                  </button>
+
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-243"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+              <h3 id="showing-values" class="anchor-heading">
+                Showing Values<a href="#showing-values" aria-label='Direct link to "Showing Values"'></a>
+              </h3>
+              <p>Use the default slot to show a value.</p>
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <p-progress-bar value="50" class="progress-bar-values">50%</p-progress-bar>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
+                  <br />
 
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
+                  <p-button circle=""><p-icon name="dash" label="Decrease"></p-icon></p-button>
+                  <p-button circle=""><p-icon name="plus" label="Increase"></p-icon></p-button>
 
-            <h3 id="showing-values" class="anchor-heading">
-              Showing Values<a href="#showing-values" aria-label='Direct link to "Showing Values"'></a>
-            </h3>
-            <p>Use the default slot to show a value.</p>
+                  <script>
+                    (() => {
+                      const progressBar = document.querySelector('.progress-bar-values');
+                      const subtractButton = progressBar.nextElementSibling.nextElementSibling;
+                      const addButton = subtractButton.nextElementSibling;
 
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <p-progress-bar value="50" class="progress-bar-values">50%</p-progress-bar>
+                      addButton.addEventListener('click', () => {
+                        const value = Math.min(100, progressBar.value + 10);
+                        progressBar.value = value;
+                        progressBar.textContent = `${value}%`;
+                      });
 
-                <br />
+                      subtractButton.addEventListener('click', () => {
+                        const value = Math.max(0, progressBar.value - 10);
+                        progressBar.value = value;
+                        progressBar.textContent = `${value}%`;
+                      });
+                    })();
+                  </script>
 
-                <p-button circle=""><p-icon name="dash" label="Decrease"></p-icon></p-button>
-                <p-button circle=""><p-icon name="plus" label="Increase"></p-icon></p-button>
-
-                <script>
-                  (() => {
-                    const progressBar = document.querySelector('.progress-bar-values');
-                    const subtractButton = progressBar.nextElementSibling.nextElementSibling;
-                    const addButton = subtractButton.nextElementSibling;
-
-                    addButton.addEventListener('click', () => {
-                      const value = Math.min(100, progressBar.value + 10);
-                      progressBar.value = value;
-                      progressBar.textContent = `${value}%`;
-                    });
-
-                    subtractButton.addEventListener('click', () => {
-                      const value = Math.max(0, progressBar.value - 10);
-                      progressBar.value = value;
-                      progressBar.textContent = `${value}%`;
-                    });
-                  })();
-                </script>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
                 </div>
-              </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-244">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-737"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-progress-bar</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>50<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>progress-bar-values<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>50%<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-progress-bar</span><span class="token punctuation">&gt;</span></span>
+                <div class="code-preview__source-group" id="code-preview-source-group-236">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-729"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-progress-bar</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>50<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>progress-bar-values<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>50%<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-progress-bar</span><span class="token punctuation">&gt;</span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/&gt;</span></span>
 
@@ -731,11 +742,11 @@
     progressBar<span class="token punctuation">.</span>textContent <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>value<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">%</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-737"></p-copy-button></pre>
-                </div>
+</code><p-copy-button class="copy-code-button" from="code-block-729"></p-copy-button></pre>
+                  </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-738"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-730"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PButton <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/button'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PIcon <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/icon'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PProgressBar <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/progress-bar'</span><span class="token punctuation">;</span>
@@ -766,389 +777,414 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-738"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-730"></p-copy-button></pre>
+                  </div>
                 </div>
-              </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-244"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-236"
                   >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
-
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
                   >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
+                    React
+                  </button>
 
-            <h3 id="indeterminate" class="anchor-heading">
-              Indeterminate<a href="#indeterminate" aria-label='Direct link to "Indeterminate"'></a>
-            </h3>
-            <p>
-              The <code>indeterminate</code> attribute can be used to inform the user that the operation is pending, but
-              its status cannot currently be determined. In this state, <code>value</code> is ignored and the label, if
-              present, will not be shown.
-            </p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <p-progress-bar indeterminate=""></p-progress-bar>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-245">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-739"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-progress-bar</span> <span class="token attr-name">indeterminate</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-progress-bar</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-739"></p-copy-button></pre>
+              <h3 id="indeterminate" class="anchor-heading">
+                Indeterminate<a href="#indeterminate" aria-label='Direct link to "Indeterminate"'></a>
+              </h3>
+              <p>
+                The <code>indeterminate</code> attribute can be used to inform the user that the operation is pending,
+                but its status cannot currently be determined. In this state, <code>value</code> is ignored and the
+                label, if present, will not be shown.
+              </p>
+
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <p-progress-bar indeterminate=""></p-progress-bar>
+
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
                 </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-740"><span class="token keyword">import</span> PProgressBar <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/progress-bar'</span><span class="token punctuation">;</span>
+                <div class="code-preview__source-group" id="code-preview-source-group-237">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-731"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-progress-bar</span> <span class="token attr-name">indeterminate</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-progress-bar</span><span class="token punctuation">&gt;</span></span>
+</code><p-copy-button class="copy-code-button" from="code-block-731"></p-copy-button></pre>
+                  </div>
+
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-732"><span class="token keyword">import</span> PProgressBar <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/progress-bar'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PProgressBar</span></span> <span class="token attr-name">indeterminate</span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-740"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-732"></p-copy-button></pre>
+                  </div>
+                </div>
+
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-237"
+                  >
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
+
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
+                  >
+                    React
+                  </button>
+
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-245"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+              <h2 id="importing" class="anchor-heading">
+                Importing<a href="#importing" aria-label='Direct link to "Importing"'></a>
+              </h2>
+              <p>
+                If you’re using the autoloader or the traditional loader, you can ignore this section. Otherwise, feel
+                free to use any of the following snippets to
+                <a href="/getting-started/installation#cherry-picking">cherry pick</a> this component.
+              </p>
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+              <p-tab-group>
+                <p-tab slot="nav" panel="script">Script</p-tab>
+                <p-tab slot="nav" panel="import">Import</p-tab>
+                <p-tab slot="nav" panel="bundler">Bundler</p-tab>
+                <p-tab slot="nav" panel="react">React</p-tab>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
+                <p-tab-panel name="script">
+                  <p>
+                    To import this component from
+                    <a
+                      href="https://www.jsdelivr.com/package/npm/pure-uikit"
+                      class="external-link"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      >the CDN</a
+                    >
+                    using a script tag:
+                  </p>
+                  <pre><code class="language-html" id="code-block-733"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.6.29/cdn/components/progress-bar/progress-bar.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-733"></p-copy-button></pre>
+                </p-tab-panel>
 
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
+                <p-tab-panel name="import">
+                  <p>
+                    To import this component from
+                    <a
+                      href="https://www.jsdelivr.com/package/npm/pure-uikit"
+                      class="external-link"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      >the CDN</a
+                    >
+                    using a JavaScript import:
+                  </p>
+                  <pre><code class="language-js" id="code-block-734"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.6.29/cdn/components/progress-bar/progress-bar.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-734"></p-copy-button></pre>
+                </p-tab-panel>
+
+                <p-tab-panel name="bundler">
+                  <p>To import this component using <a href="/getting-started/installation#bundling">a bundler</a>:</p>
+                  <pre><code class="language-js" id="code-block-735"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/progress-bar/progress-bar.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-735"></p-copy-button></pre>
+                </p-tab-panel>
+
+                <p-tab-panel name="react">
+                  <p>To import this component as a <a href="/frameworks/react">React component</a>:</p>
+                  <pre><code class="language-js" id="code-block-736"><span class="token keyword">import</span> PProgressBar <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/progress-bar'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-736"></p-copy-button></pre>
+                </p-tab-panel>
+              </p-tab-group>
+
+              <h2 id="slots" class="anchor-heading">Slots<a href="#slots" aria-label='Direct link to "Slots"'></a></h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name">Name</th>
+                      <th class="table-description">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nowrap">(default)</td>
+                      <td>A label to show inside the progress indicator.</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
+
+              <p>
+                <em>Learn more about <a href="/getting-started/usage#slots">using slots</a>.</em>
+              </p>
+
+              <h2 id="properties" class="anchor-heading">
+                Properties<a href="#properties" aria-label='Direct link to "Properties"'></a>
+              </h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name">Name</th>
+                      <th class="table-description">Description</th>
+                      <th class="table-reflects">Reflects</th>
+                      <th class="table-type">Type</th>
+                      <th class="table-default">Default</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <code class="nowrap">value</code>
+                      </td>
+                      <td>The current progress as a percentage, 0 to 100.</td>
+                      <td style="text-align: center">
+                        <p-icon label="yes" name="check-lg"></p-icon>
+                      </td>
+                      <td>
+                        <code>number</code>
+                      </td>
+                      <td>
+                        <code>0</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code class="nowrap">indeterminate</code>
+                      </td>
+                      <td>
+                        When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an
+                        indeterminate state.
+                      </td>
+                      <td style="text-align: center">
+                        <p-icon label="yes" name="check-lg"></p-icon>
+                      </td>
+                      <td>
+                        <code>boolean</code>
+                      </td>
+                      <td>
+                        <code>false</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code class="nowrap">label</code>
+                      </td>
+                      <td>A custom label for assistive devices.</td>
+                      <td style="text-align: center"></td>
+                      <td>
+                        <code>string</code>
+                      </td>
+                      <td>
+                        <code>""</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap"><code>updateComplete</code></td>
+                      <td>
+                        A read-only promise that resolves when the component has
+                        <a href="/getting-started/usage?#component-rendering-and-updating">finished updating</a>.
+                      </td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                <em
+                  >Learn more about
+                  <a href="/getting-started/usage#attributes-and-properties">attributes and properties</a>.</em
+                >
+              </p>
+
+              <h2 id="custom-properties" class="anchor-heading">
+                Custom Properties<a href="#custom-properties" aria-label='Direct link to "Custom Properties"'></a>
+              </h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name">Name</th>
+                      <th class="table-description">Description</th>
+                      <th class="table-default">Default</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nowrap"><code>--height</code></td>
+                      <td>The progress bar’s height.</td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap"><code>--track-color</code></td>
+                      <td>The color of the track.</td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap"><code>--indicator-color</code></td>
+                      <td>The color of the indicator.</td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap"><code>--label-color</code></td>
+                      <td>The color of the label.</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                <em
+                  >Learn more about
+                  <a href="/getting-started/usage#custom-properties">customizing CSS custom properties</a>.</em
+                >
+              </p>
+
+              <h2 id="parts" class="anchor-heading">Parts<a href="#parts" aria-label='Direct link to "Parts"'></a></h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name">Name</th>
+                      <th class="table-description">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nowrap"><code>base</code></td>
+                      <td>The component’s base wrapper.</td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap"><code>indicator</code></td>
+                      <td>The progress bar’s indicator.</td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap"><code>label</code></td>
+                      <td>The progress bar’s label.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                <em>Learn more about <a href="/getting-started/customizing/#css-parts">customizing CSS parts</a>.</em>
+              </p>
             </div>
 
-            <h2 id="importing" class="anchor-heading">
-              Importing<a href="#importing" aria-label='Direct link to "Importing"'></a>
-            </h2>
-            <p>
-              If you’re using the autoloader or the traditional loader, you can ignore this section. Otherwise, feel
-              free to use any of the following snippets to
-              <a href="/getting-started/installation#cherry-picking">cherry pick</a> this component.
-            </p>
-
-            <p-tab-group>
-              <p-tab slot="nav" panel="script">Script</p-tab>
-              <p-tab slot="nav" panel="import">Import</p-tab>
-              <p-tab slot="nav" panel="bundler">Bundler</p-tab>
-              <p-tab slot="nav" panel="react">React</p-tab>
-
-              <p-tab-panel name="script">
-                <p>
-                  To import this component from
-                  <a
-                    href="https://www.jsdelivr.com/package/npm/pure-uikit"
-                    class="external-link"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    >the CDN</a
-                  >
-                  using a script tag:
-                </p>
-                <pre><code class="language-html" id="code-block-741"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.5.11/cdn/components/progress-bar/progress-bar.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-741"></p-copy-button></pre>
-              </p-tab-panel>
-
-              <p-tab-panel name="import">
-                <p>
-                  To import this component from
-                  <a
-                    href="https://www.jsdelivr.com/package/npm/pure-uikit"
-                    class="external-link"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    >the CDN</a
-                  >
-                  using a JavaScript import:
-                </p>
-                <pre><code class="language-js" id="code-block-742"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.5.11/cdn/components/progress-bar/progress-bar.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-742"></p-copy-button></pre>
-              </p-tab-panel>
-
-              <p-tab-panel name="bundler">
-                <p>To import this component using <a href="/getting-started/installation#bundling">a bundler</a>:</p>
-                <pre><code class="language-js" id="code-block-743"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/progress-bar/progress-bar.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-743"></p-copy-button></pre>
-              </p-tab-panel>
-
-              <p-tab-panel name="react">
-                <p>To import this component as a <a href="/frameworks/react">React component</a>:</p>
-                <pre><code class="language-js" id="code-block-744"><span class="token keyword">import</span> PProgressBar <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/progress-bar'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-744"></p-copy-button></pre>
-              </p-tab-panel>
-            </p-tab-group>
-
-            <h2 id="slots" class="anchor-heading">Slots<a href="#slots" aria-label='Direct link to "Slots"'></a></h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name">Name</th>
-                    <th class="table-description">Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="nowrap">(default)</td>
-                    <td>A label to show inside the progress indicator.</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="content__toc">
+              <ul>
+                <li class="top"><a href="#">Progress Bar</a></li>
+                <li data-level="2"><a href="#examples">Examples</a></li>
+                <li data-level="3"><a href="#labels">Labels</a></li>
+                <li data-level="3"><a href="#custom-height">Custom Height</a></li>
+                <li data-level="3"><a href="#showing-values">Showing Values</a></li>
+                <li data-level="3"><a href="#indeterminate">Indeterminate</a></li>
+                <li data-level="2"><a href="#importing">Importing</a></li>
+                <li data-level="2"><a href="#slots">Slots</a></li>
+                <li data-level="2"><a href="#properties">Properties</a></li>
+                <li data-level="2"><a href="#custom-properties">Custom Properties</a></li>
+                <li data-level="2"><a href="#parts">Parts</a></li>
+              </ul>
             </div>
-
-            <p>
-              <em>Learn more about <a href="/getting-started/usage#slots">using slots</a>.</em>
-            </p>
-
-            <h2 id="properties" class="anchor-heading">
-              Properties<a href="#properties" aria-label='Direct link to "Properties"'></a>
-            </h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name">Name</th>
-                    <th class="table-description">Description</th>
-                    <th class="table-reflects">Reflects</th>
-                    <th class="table-type">Type</th>
-                    <th class="table-default">Default</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <code class="nowrap">value</code>
-                    </td>
-                    <td>The current progress as a percentage, 0 to 100.</td>
-                    <td style="text-align: center">
-                      <p-icon label="yes" name="check-lg"></p-icon>
-                    </td>
-                    <td>
-                      <code>number</code>
-                    </td>
-                    <td>
-                      <code>0</code>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <code class="nowrap">indeterminate</code>
-                    </td>
-                    <td>
-                      When true, percentage is ignored, the label is hidden, and the progress bar is drawn in an
-                      indeterminate state.
-                    </td>
-                    <td style="text-align: center">
-                      <p-icon label="yes" name="check-lg"></p-icon>
-                    </td>
-                    <td>
-                      <code>boolean</code>
-                    </td>
-                    <td>
-                      <code>false</code>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <code class="nowrap">label</code>
-                    </td>
-                    <td>A custom label for assistive devices.</td>
-                    <td style="text-align: center"></td>
-                    <td>
-                      <code>string</code>
-                    </td>
-                    <td>
-                      <code>""</code>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap"><code>updateComplete</code></td>
-                    <td>
-                      A read-only promise that resolves when the component has
-                      <a href="/getting-started/usage?#component-rendering-and-updating">finished updating</a>.
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <p>
-              <em
-                >Learn more about
-                <a href="/getting-started/usage#attributes-and-properties">attributes and properties</a>.</em
-              >
-            </p>
-
-            <h2 id="custom-properties" class="anchor-heading">
-              Custom Properties<a href="#custom-properties" aria-label='Direct link to "Custom Properties"'></a>
-            </h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name">Name</th>
-                    <th class="table-description">Description</th>
-                    <th class="table-default">Default</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="nowrap"><code>--height</code></td>
-                    <td>The progress bar’s height.</td>
-                    <td></td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap"><code>--track-color</code></td>
-                    <td>The color of the track.</td>
-                    <td></td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap"><code>--indicator-color</code></td>
-                    <td>The color of the indicator.</td>
-                    <td></td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap"><code>--label-color</code></td>
-                    <td>The color of the label.</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <p>
-              <em
-                >Learn more about
-                <a href="/getting-started/usage#custom-properties">customizing CSS custom properties</a>.</em
-              >
-            </p>
-
-            <h2 id="parts" class="anchor-heading">Parts<a href="#parts" aria-label='Direct link to "Parts"'></a></h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name">Name</th>
-                    <th class="table-description">Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="nowrap"><code>base</code></td>
-                    <td>The component’s base wrapper.</td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap"><code>indicator</code></td>
-                    <td>The progress bar’s indicator.</td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap"><code>label</code></td>
-                    <td>The progress bar’s label.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <p>
-              <em>Learn more about <a href="/getting-started/customizing/#css-parts">customizing CSS parts</a>.</em>
-            </p>
           </div>
         </div>
       </div>

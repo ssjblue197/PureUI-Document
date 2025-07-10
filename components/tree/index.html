@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="component" data-pure-ui-version="1.5.11">
+<html lang="en" data-layout="component" data-pure-ui-version="1.6.29">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -63,7 +63,7 @@
       <div id="header">
         <div class="left-header">
           <img src="/assets/images/logo.png" alt="Pure UI" id="logo" />
-          <span class="version">v1.5.11</span>
+          <span class="version">v1.6.29</span>
         </div>
         <span id="slogan"> PureUI: Simplify, Customize, Innovate. </span>
         <div class="right-header">
@@ -408,8 +408,6 @@
                 <h2>Resources</h2>
                 <ul>
                   <li><a href="/resources/community">Community</a></li>
-                  <li><a href="/resources/accessibility">Accessibility</a></li>
-                  <li><a href="/resources/contributing">Contributing</a></li>
                   <li><a href="/resources/changelog">Changelog</a></li>
                 </ul>
               </li>
@@ -417,65 +415,66 @@
           </nav>
         </aside>
 
-        <div id="content">
-          <div class="content__body">
-            <header class="component-header">
-              <h1>Tree</h1>
+        <div id="content" class="content--with-toc">
+          <div class="content--wrapper">
+            <div class="content__body">
+              <header class="component-header">
+                <h1>Tree</h1>
 
-              <div class="component-header__tag">
-                <code>&lt;p-tree&gt; | PTree</code>
-              </div>
-
-              <div class="component-header__info">
-                <p-badge variant="neutral" pill=""> Since 1.0 </p-badge>
-                <p-badge variant="primary" pill="" style="text-transform: capitalize"> stable </p-badge>
-              </div>
-            </header>
-
-            <p class="component-summary">
-              Trees allow you to display a hierarchical list of selectable
-              <a href="/components/tree-item">tree items</a>. Items with children can be expanded and collapsed as
-              desired by the user.
-            </p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <p-tree>
-                  <p-tree-item>
-                    Deciduous
-                    <p-tree-item>Birch</p-tree-item>
-                    <p-tree-item>
-                      Maple
-                      <p-tree-item>Field maple</p-tree-item>
-                      <p-tree-item>Red maple</p-tree-item>
-                      <p-tree-item>Sugar maple</p-tree-item>
-                    </p-tree-item>
-                    <p-tree-item>Oak</p-tree-item>
-                  </p-tree-item>
-
-                  <p-tree-item>
-                    Coniferous
-                    <p-tree-item>Cedar</p-tree-item>
-                    <p-tree-item>Pine</p-tree-item>
-                    <p-tree-item>Spruce</p-tree-item>
-                  </p-tree-item>
-
-                  <p-tree-item>
-                    Non-trees
-                    <p-tree-item>Bamboo</p-tree-item>
-                    <p-tree-item>Cactus</p-tree-item>
-                    <p-tree-item>Fern</p-tree-item>
-                  </p-tree-item>
-                </p-tree>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                <div class="component-header__tag">
+                  <code>&lt;p-tree&gt; | PTree</code>
                 </div>
-              </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-393">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-1140"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree</span><span class="token punctuation">&gt;</span></span>
+                <div class="component-header__info">
+                  <p-badge variant="neutral" pill=""> Since 1.0 </p-badge>
+                  <p-badge variant="primary" pill="" style="text-transform: capitalize"> stable </p-badge>
+                </div>
+              </header>
+
+              <p class="component-summary">
+                Trees allow you to display a hierarchical list of selectable
+                <a href="/components/tree-item">tree items</a>. Items with children can be expanded and collapsed as
+                desired by the user.
+              </p>
+
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <p-tree>
+                    <p-tree-item>
+                      Deciduous
+                      <p-tree-item>Birch</p-tree-item>
+                      <p-tree-item>
+                        Maple
+                        <p-tree-item>Field maple</p-tree-item>
+                        <p-tree-item>Red maple</p-tree-item>
+                        <p-tree-item>Sugar maple</p-tree-item>
+                      </p-tree-item>
+                      <p-tree-item>Oak</p-tree-item>
+                    </p-tree-item>
+
+                    <p-tree-item>
+                      Coniferous
+                      <p-tree-item>Cedar</p-tree-item>
+                      <p-tree-item>Pine</p-tree-item>
+                      <p-tree-item>Spruce</p-tree-item>
+                    </p-tree-item>
+
+                    <p-tree-item>
+                      Non-trees
+                      <p-tree-item>Bamboo</p-tree-item>
+                      <p-tree-item>Cactus</p-tree-item>
+                      <p-tree-item>Fern</p-tree-item>
+                    </p-tree-item>
+                  </p-tree>
+
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
+                </div>
+
+                <div class="code-preview__source-group" id="code-preview-source-group-388">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-1139"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree-item</span><span class="token punctuation">&gt;</span></span>
     Deciduous
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree-item</span><span class="token punctuation">&gt;</span></span>Birch<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tree-item</span><span class="token punctuation">&gt;</span></span>
@@ -502,11 +501,11 @@
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree-item</span><span class="token punctuation">&gt;</span></span>Fern<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tree-item</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tree-item</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tree</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-1140"></p-copy-button></pre>
-                </div>
+</code><p-copy-button class="copy-code-button" from="code-block-1139"></p-copy-button></pre>
+                  </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-1141"><span class="token keyword">import</span> PTree <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree'</span><span class="token punctuation">;</span>
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-1140"><span class="token keyword">import</span> PTree <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PTreeItem <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree-item'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
@@ -538,120 +537,124 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTreeItem</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTree</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-1141"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1140"></p-copy-button></pre>
+                  </div>
+                </div>
+
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-388"
+                  >
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
+
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
+                  >
+                    React
+                  </button>
+
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-393"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+              <!-- prettier-ignore -->
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+              <h2 id="examples" class="anchor-heading">Examples<a href="#examples" aria-label="Direct link to &quot;Examples&quot;"></a></h2>
+              <h3 id="selection-modes" class="anchor-heading">
+                Selection Modes<a href="#selection-modes" aria-label='Direct link to "Selection Modes"'></a>
+              </h3>
+              <p>The <code>selection</code> attribute lets you change the selection behavior of the tree.</p>
+              <ul>
+                <li>Use <code>single</code> to allow the selection of a single item (default).</li>
+                <li>Use <code>multiple</code> to allow the selection of multiple items.</li>
+                <li>Use <code>leaf</code> to only allow leaf nodes to be selected.</li>
+              </ul>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <p-select id="selection-mode" value="single" label="Selection">
+                    <p-option value="single">Single</p-option>
+                    <p-option value="multiple">Multiple</p-option>
+                    <p-option value="leaf">Leaf</p-option>
+                  </p-select>
 
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
+                  <br />
 
-            <!-- prettier-ignore -->
-
-            <h2 id="examples" class="anchor-heading">Examples<a href="#examples" aria-label="Direct link to &quot;Examples&quot;"></a></h2>
-            <h3 id="selection-modes" class="anchor-heading">
-              Selection Modes<a href="#selection-modes" aria-label='Direct link to "Selection Modes"'></a>
-            </h3>
-            <p>The <code>selection</code> attribute lets you change the selection behavior of the tree.</p>
-            <ul>
-              <li>Use <code>single</code> to allow the selection of a single item (default).</li>
-              <li>Use <code>multiple</code> to allow the selection of multiple items.</li>
-              <li>Use <code>leaf</code> to only allow leaf nodes to be selected.</li>
-            </ul>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <p-select id="selection-mode" value="single" label="Selection">
-                  <p-option value="single">Single</p-option>
-                  <p-option value="multiple">Multiple</p-option>
-                  <p-option value="leaf">Leaf</p-option>
-                </p-select>
-
-                <br />
-
-                <p-tree class="tree-selectable">
-                  <p-tree-item>
-                    Item 1
+                  <p-tree class="tree-selectable">
                     <p-tree-item>
-                      Item A
-                      <p-tree-item>Item Z</p-tree-item>
-                      <p-tree-item>Item Y</p-tree-item>
-                      <p-tree-item>Item X</p-tree-item>
+                      Item 1
+                      <p-tree-item>
+                        Item A
+                        <p-tree-item>Item Z</p-tree-item>
+                        <p-tree-item>Item Y</p-tree-item>
+                        <p-tree-item>Item X</p-tree-item>
+                      </p-tree-item>
+                      <p-tree-item>Item B</p-tree-item>
+                      <p-tree-item>Item C</p-tree-item>
                     </p-tree-item>
-                    <p-tree-item>Item B</p-tree-item>
-                    <p-tree-item>Item C</p-tree-item>
-                  </p-tree-item>
-                  <p-tree-item>Item 2</p-tree-item>
-                  <p-tree-item>Item 3</p-tree-item>
-                </p-tree>
+                    <p-tree-item>Item 2</p-tree-item>
+                    <p-tree-item>Item 3</p-tree-item>
+                  </p-tree>
 
-                <script>
-                  (() => {
-                    const selectionMode = document.querySelector('#selection-mode');
-                    const tree = document.querySelector('.tree-selectable');
+                  <script>
+                    (() => {
+                      const selectionMode = document.querySelector('#selection-mode');
+                      const tree = document.querySelector('.tree-selectable');
 
-                    selectionMode.addEventListener('p-change', () => {
-                      tree.querySelectorAll('p-tree-item').forEach(item => (item.selected = false));
-                      tree.selection = selectionMode.value;
-                    });
-                  })();
-                </script>
+                      selectionMode.addEventListener('p-change', () => {
+                        tree.querySelectorAll('p-tree-item').forEach(item => (item.selected = false));
+                        tree.selection = selectionMode.value;
+                      });
+                    })();
+                  </script>
 
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
                 </div>
-              </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-394">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-1142"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-select</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>selection-mode<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>single<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Selection<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <div class="code-preview__source-group" id="code-preview-source-group-389">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-1141"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-select</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>selection-mode<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>single<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Selection<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>single<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Single<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-option</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>multiple<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Multiple<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-option</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>leaf<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Leaf<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-option</span><span class="token punctuation">&gt;</span></span>
@@ -684,11 +687,11 @@
     tree<span class="token punctuation">.</span>selection <span class="token operator">=</span> selectionMode<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-1142"></p-copy-button></pre>
-                </div>
+</code><p-copy-button class="copy-code-button" from="code-block-1141"></p-copy-button></pre>
+                  </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-1143"><span class="token keyword">import</span> PTree <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree'</span><span class="token punctuation">;</span>
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-1142"><span class="token keyword">import</span> PTree <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PTreeItem <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree-item'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
@@ -722,114 +725,118 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-1143"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1142"></p-copy-button></pre>
+                  </div>
+                </div>
+
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-389"
+                  >
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
+
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
+                  >
+                    React
+                  </button>
+
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-394"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+              <!-- prettier-ignore -->
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+              <h3 id="showing-indent-guides" class="anchor-heading">Showing Indent Guides<a href="#showing-indent-guides" aria-label="Direct link to &quot;Showing Indent Guides&quot;"></a></h3>
+              <p>
+                Indent guides can be drawn by setting <code>--indent-guide-width</code>. You can also change the color,
+                offset, and style, using <code>--indent-guide-color</code>, <code>--indent-guide-style</code>, and
+                <code>--indent-guide-offset</code>, respectively.
+              </p>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
-
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <!-- prettier-ignore -->
-
-            <h3 id="showing-indent-guides" class="anchor-heading">Showing Indent Guides<a href="#showing-indent-guides" aria-label="Direct link to &quot;Showing Indent Guides&quot;"></a></h3>
-            <p>
-              Indent guides can be drawn by setting <code>--indent-guide-width</code>. You can also change the color,
-              offset, and style, using <code>--indent-guide-color</code>, <code>--indent-guide-style</code>, and
-              <code>--indent-guide-offset</code>, respectively.
-            </p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <p-tree class="tree-with-lines">
-                  <p-tree-item expanded="">
-                    Deciduous
-                    <p-tree-item>Birch</p-tree-item>
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <p-tree class="tree-with-lines">
                     <p-tree-item expanded="">
-                      Maple
-                      <p-tree-item>Field maple</p-tree-item>
-                      <p-tree-item>Red maple</p-tree-item>
-                      <p-tree-item>Sugar maple</p-tree-item>
+                      Deciduous
+                      <p-tree-item>Birch</p-tree-item>
+                      <p-tree-item expanded="">
+                        Maple
+                        <p-tree-item>Field maple</p-tree-item>
+                        <p-tree-item>Red maple</p-tree-item>
+                        <p-tree-item>Sugar maple</p-tree-item>
+                      </p-tree-item>
+                      <p-tree-item>Oak</p-tree-item>
                     </p-tree-item>
-                    <p-tree-item>Oak</p-tree-item>
-                  </p-tree-item>
 
-                  <p-tree-item>
-                    Coniferous
-                    <p-tree-item>Cedar</p-tree-item>
-                    <p-tree-item>Pine</p-tree-item>
-                    <p-tree-item>Spruce</p-tree-item>
-                  </p-tree-item>
+                    <p-tree-item>
+                      Coniferous
+                      <p-tree-item>Cedar</p-tree-item>
+                      <p-tree-item>Pine</p-tree-item>
+                      <p-tree-item>Spruce</p-tree-item>
+                    </p-tree-item>
 
-                  <p-tree-item>
-                    Non-trees
-                    <p-tree-item>Bamboo</p-tree-item>
-                    <p-tree-item>Cactus</p-tree-item>
-                    <p-tree-item>Fern</p-tree-item>
-                  </p-tree-item>
-                </p-tree>
+                    <p-tree-item>
+                      Non-trees
+                      <p-tree-item>Bamboo</p-tree-item>
+                      <p-tree-item>Cactus</p-tree-item>
+                      <p-tree-item>Fern</p-tree-item>
+                    </p-tree-item>
+                  </p-tree>
 
-                <style>
-                  .tree-with-lines {
-                    --indent-guide-width: 1px;
-                  }
-                </style>
+                  <style>
+                    .tree-with-lines {
+                      --indent-guide-width: 1px;
+                    }
+                  </style>
 
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
                 </div>
-              </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-395">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-1144"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tree-with-lines<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <div class="code-preview__source-group" id="code-preview-source-group-390">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-1143"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tree-with-lines<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree-item</span> <span class="token attr-name">expanded</span><span class="token punctuation">&gt;</span></span>
     Deciduous
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree-item</span><span class="token punctuation">&gt;</span></span>Birch<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tree-item</span><span class="token punctuation">&gt;</span></span>
@@ -862,11 +869,11 @@
     <span class="token property">--indent-guide-width</span><span class="token punctuation">:</span> 1px<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-1144"></p-copy-button></pre>
-                </div>
+</code><p-copy-button class="copy-code-button" from="code-block-1143"></p-copy-button></pre>
+                  </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-1145"><span class="token keyword">import</span> PTree <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree'</span><span class="token punctuation">;</span>
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-1144"><span class="token keyword">import</span> PTree <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PTreeItem <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree-item'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
@@ -898,109 +905,113 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTreeItem</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTree</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-1145"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1144"></p-copy-button></pre>
+                  </div>
+                </div>
+
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-390"
+                  >
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
+
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
+                  >
+                    React
+                  </button>
+
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-395"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+              <!-- prettier-ignore -->
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+              <h3 id="lazy-loading" class="anchor-heading">Lazy Loading<a href="#lazy-loading" aria-label="Direct link to &quot;Lazy Loading&quot;"></a></h3>
+              <p>
+                Use the <code>lazy</code> attribute on a tree item to indicate that the content is not yet present and
+                will be loaded later. When the user tries to expand the node, the <code>loading</code> state is set to
+                <code>true</code> and the <code>p-lazy-load</code> event will be emitted to allow you to load data
+                asynchronously. The item will remain in a loading state until its content is changed.
+              </p>
+              <p>
+                If you want to disable this behavior after the first load, simply remove the <code>lazy</code> attribute
+                and, on the next expand, the existing content will be shown instead.
+              </p>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <p-tree>
+                    <p-tree-item lazy="">Available Trees</p-tree-item>
+                  </p-tree>
 
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
+                  <script type="module">
+                    const lazyItem = document.querySelector('p-tree-item[lazy]');
 
-            <!-- prettier-ignore -->
+                    lazyItem.addEventListener('p-lazy-load', () => {
+                      // Simulate asynchronous loading
+                      setTimeout(() => {
+                        const subItems = ['Birch', 'Cedar', 'Maple', 'Pine'];
 
-            <h3 id="lazy-loading" class="anchor-heading">Lazy Loading<a href="#lazy-loading" aria-label="Direct link to &quot;Lazy Loading&quot;"></a></h3>
-            <p>
-              Use the <code>lazy</code> attribute on a tree item to indicate that the content is not yet present and
-              will be loaded later. When the user tries to expand the node, the <code>loading</code> state is set to
-              <code>true</code> and the <code>p-lazy-load</code> event will be emitted to allow you to load data
-              asynchronously. The item will remain in a loading state until its content is changed.
-            </p>
-            <p>
-              If you want to disable this behavior after the first load, simply remove the <code>lazy</code> attribute
-              and, on the next expand, the existing content will be shown instead.
-            </p>
+                        for (const item of subItems) {
+                          const treeItem = document.createElement('p-tree-item');
+                          treeItem.innerText = item;
+                          lazyItem.append(treeItem);
+                        }
 
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <p-tree>
-                  <p-tree-item lazy="">Available Trees</p-tree-item>
-                </p-tree>
+                        // Disable lazy mode once the content has been loaded
+                        lazyItem.lazy = false;
+                      }, 1000);
+                    });
+                  </script>
 
-                <script type="module">
-                  const lazyItem = document.querySelector('p-tree-item[lazy]');
-
-                  lazyItem.addEventListener('p-lazy-load', () => {
-                    // Simulate asynchronous loading
-                    setTimeout(() => {
-                      const subItems = ['Birch', 'Cedar', 'Maple', 'Pine'];
-
-                      for (const item of subItems) {
-                        const treeItem = document.createElement('p-tree-item');
-                        treeItem.innerText = item;
-                        lazyItem.append(treeItem);
-                      }
-
-                      // Disable lazy mode once the content has been loaded
-                      lazyItem.lazy = false;
-                    }, 1000);
-                  });
-                </script>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
                 </div>
-              </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-396">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-1146"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree</span><span class="token punctuation">&gt;</span></span>
+                <div class="code-preview__source-group" id="code-preview-source-group-391">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-1145"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree-item</span> <span class="token attr-name">lazy</span><span class="token punctuation">&gt;</span></span>Available Trees<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tree-item</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tree</span><span class="token punctuation">&gt;</span></span>
 
@@ -1023,11 +1034,11 @@
     <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-1146"></p-copy-button></pre>
-                </div>
+</code><p-copy-button class="copy-code-button" from="code-block-1145"></p-copy-button></pre>
+                  </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-1147"><span class="token keyword">import</span> PTree <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree'</span><span class="token punctuation">;</span>
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-1146"><span class="token keyword">import</span> PTree <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PTreeItem <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree-item'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
@@ -1055,121 +1066,125 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTree</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-1147"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1146"></p-copy-button></pre>
+                  </div>
+                </div>
+
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-391"
+                  >
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
+
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
+                  >
+                    React
+                  </button>
+
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-396"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+              <h3 id="customizing-the-expand-and-collapse-icons" class="anchor-heading">
+                Customizing the Expand and Collapse Icons<a
+                  href="#customizing-the-expand-and-collapse-icons"
+                  aria-label='Direct link to "Customizing the Expand and Collapse Icons"'
+                ></a>
+              </h3>
+              <p>
+                Use the <code>expand-icon</code> and <code>collapse-icon</code> slots to change the expand and collapse
+                icons, respectively. To disable the animation, override the <code>rotate</code> property on the
+                <code>expand-button</code> part as shown below.
+              </p>
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <p-tree class="custom-icons">
+                    <p-icon name="plus-square" slot="expand-icon"></p-icon>
+                    <p-icon name="dash-square" slot="collapse-icon"></p-icon>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
-
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <h3 id="customizing-the-expand-and-collapse-icons" class="anchor-heading">
-              Customizing the Expand and Collapse Icons<a
-                href="#customizing-the-expand-and-collapse-icons"
-                aria-label='Direct link to "Customizing the Expand and Collapse Icons"'
-              ></a>
-            </h3>
-            <p>
-              Use the <code>expand-icon</code> and <code>collapse-icon</code> slots to change the expand and collapse
-              icons, respectively. To disable the animation, override the <code>rotate</code> property on the
-              <code>expand-button</code> part as shown below.
-            </p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <p-tree class="custom-icons">
-                  <p-icon name="plus-square" slot="expand-icon"></p-icon>
-                  <p-icon name="dash-square" slot="collapse-icon"></p-icon>
-
-                  <p-tree-item>
-                    Deciduous
-                    <p-tree-item>Birch</p-tree-item>
                     <p-tree-item>
-                      Maple
-                      <p-tree-item>Field maple</p-tree-item>
-                      <p-tree-item>Red maple</p-tree-item>
-                      <p-tree-item>Sugar maple</p-tree-item>
+                      Deciduous
+                      <p-tree-item>Birch</p-tree-item>
+                      <p-tree-item>
+                        Maple
+                        <p-tree-item>Field maple</p-tree-item>
+                        <p-tree-item>Red maple</p-tree-item>
+                        <p-tree-item>Sugar maple</p-tree-item>
+                      </p-tree-item>
+                      <p-tree-item>Oak</p-tree-item>
                     </p-tree-item>
-                    <p-tree-item>Oak</p-tree-item>
-                  </p-tree-item>
 
-                  <p-tree-item>
-                    Coniferous
-                    <p-tree-item>Cedar</p-tree-item>
-                    <p-tree-item>Pine</p-tree-item>
-                    <p-tree-item>Spruce</p-tree-item>
-                  </p-tree-item>
+                    <p-tree-item>
+                      Coniferous
+                      <p-tree-item>Cedar</p-tree-item>
+                      <p-tree-item>Pine</p-tree-item>
+                      <p-tree-item>Spruce</p-tree-item>
+                    </p-tree-item>
 
-                  <p-tree-item>
-                    Non-trees
-                    <p-tree-item>Bamboo</p-tree-item>
-                    <p-tree-item>Cactus</p-tree-item>
-                    <p-tree-item>Fern</p-tree-item>
-                  </p-tree-item>
-                </p-tree>
+                    <p-tree-item>
+                      Non-trees
+                      <p-tree-item>Bamboo</p-tree-item>
+                      <p-tree-item>Cactus</p-tree-item>
+                      <p-tree-item>Fern</p-tree-item>
+                    </p-tree-item>
+                  </p-tree>
 
-                <style>
-                  .custom-icons p-tree-item::part(expand-button) {
-                    /* Disable the expand/collapse animation */
-                    rotate: none;
-                  }
-                </style>
+                  <style>
+                    .custom-icons p-tree-item::part(expand-button) {
+                      /* Disable the expand/collapse animation */
+                      rotate: none;
+                    }
+                  </style>
 
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
                 </div>
-              </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-397">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-1148"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>custom-icons<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <div class="code-preview__source-group" id="code-preview-source-group-392">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-1147"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>custom-icons<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-icon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>plus-square<span class="token punctuation">"</span></span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>expand-icon<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-icon</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-icon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dash-square<span class="token punctuation">"</span></span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>collapse-icon<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-icon</span><span class="token punctuation">&gt;</span></span>
 
@@ -1206,11 +1221,11 @@
     <span class="token property">rotate</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-1148"></p-copy-button></pre>
-                </div>
+</code><p-copy-button class="copy-code-button" from="code-block-1147"></p-copy-button></pre>
+                  </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-1149"><span class="token keyword">import</span> PTree <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree'</span><span class="token punctuation">;</span>
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-1148"><span class="token keyword">import</span> PTree <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PTreeItem <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree-item'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
@@ -1245,117 +1260,121 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTreeItem</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTree</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-1149"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1148"></p-copy-button></pre>
+                  </div>
+                </div>
+
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-392"
+                  >
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
+
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
+                  >
+                    React
+                  </button>
+
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-397"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+              <!-- prettier-ignore -->
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+              <h3 id="with-icons" class="anchor-heading">With Icons<a href="#with-icons" aria-label="Direct link to &quot;With Icons&quot;"></a></h3>
+              <p>Decorative icons can be used before labels to provide hints for each node.</p>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
-
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <!-- prettier-ignore -->
-
-            <h3 id="with-icons" class="anchor-heading">With Icons<a href="#with-icons" aria-label="Direct link to &quot;With Icons&quot;"></a></h3>
-            <p>Decorative icons can be used before labels to provide hints for each node.</p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <p-tree class="tree-with-icons">
-                  <p-tree-item expanded="">
-                    <p-icon name="folder"></p-icon>
-                    Documents
-
-                    <p-tree-item>
-                      <p-icon name="folder"> </p-icon>
-                      Photos
-                      <p-tree-item>
-                        <p-icon name="image"></p-icon>
-                        birds.jpg
-                      </p-tree-item>
-                      <p-tree-item>
-                        <p-icon name="image"></p-icon>
-                        kitten.jpg
-                      </p-tree-item>
-                      <p-tree-item>
-                        <p-icon name="image"></p-icon>
-                        puppy.jpg
-                      </p-tree-item>
-                    </p-tree-item>
-
-                    <p-tree-item>
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <p-tree class="tree-with-icons">
+                    <p-tree-item expanded="">
                       <p-icon name="folder"></p-icon>
-                      Writing
+                      Documents
+
                       <p-tree-item>
-                        <p-icon name="file"></p-icon>
-                        draft.txt
+                        <p-icon name="folder"> </p-icon>
+                        Photos
+                        <p-tree-item>
+                          <p-icon name="image"></p-icon>
+                          birds.jpg
+                        </p-tree-item>
+                        <p-tree-item>
+                          <p-icon name="image"></p-icon>
+                          kitten.jpg
+                        </p-tree-item>
+                        <p-tree-item>
+                          <p-icon name="image"></p-icon>
+                          puppy.jpg
+                        </p-tree-item>
                       </p-tree-item>
+
                       <p-tree-item>
-                        <p-icon name="file-pdf"></p-icon>
-                        final.pdf
-                      </p-tree-item>
-                      <p-tree-item>
-                        <p-icon name="file-bar-graph"></p-icon>
-                        sales.xls
+                        <p-icon name="folder"></p-icon>
+                        Writing
+                        <p-tree-item>
+                          <p-icon name="file"></p-icon>
+                          draft.txt
+                        </p-tree-item>
+                        <p-tree-item>
+                          <p-icon name="file-pdf"></p-icon>
+                          final.pdf
+                        </p-tree-item>
+                        <p-tree-item>
+                          <p-icon name="file-bar-graph"></p-icon>
+                          sales.xls
+                        </p-tree-item>
                       </p-tree-item>
                     </p-tree-item>
-                  </p-tree-item>
-                </p-tree>
+                  </p-tree>
 
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
                 </div>
-              </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-398">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-1150"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tree-with-icons<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <div class="code-preview__source-group" id="code-preview-source-group-393">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-1149"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tree-with-icons<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-tree-item</span> <span class="token attr-name">expanded</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-icon</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>folder<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-icon</span><span class="token punctuation">&gt;</span></span>
     Documents
@@ -1395,11 +1414,11 @@
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tree-item</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tree-item</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-tree</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-1150"></p-copy-button></pre>
-                </div>
+</code><p-copy-button class="copy-code-button" from="code-block-1149"></p-copy-button></pre>
+                  </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-1151"><span class="token keyword">import</span> PIcon <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/icon'</span><span class="token punctuation">;</span>
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-1150"><span class="token keyword">import</span> PIcon <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/icon'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PTree <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PTreeItem <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree-item'</span><span class="token punctuation">;</span>
 
@@ -1443,323 +1462,348 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PTree</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-1151"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1150"></p-copy-button></pre>
+                  </div>
+                </div>
+
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-393"
+                  >
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
+
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
+                  >
+                    React
+                  </button>
+
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-398"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+              <h2 id="importing" class="anchor-heading">
+                Importing<a href="#importing" aria-label='Direct link to "Importing"'></a>
+              </h2>
+              <p>
+                If you’re using the autoloader or the traditional loader, you can ignore this section. Otherwise, feel
+                free to use any of the following snippets to
+                <a href="/getting-started/installation#cherry-picking">cherry pick</a> this component.
+              </p>
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+              <p-tab-group>
+                <p-tab slot="nav" panel="script">Script</p-tab>
+                <p-tab slot="nav" panel="import">Import</p-tab>
+                <p-tab slot="nav" panel="bundler">Bundler</p-tab>
+                <p-tab slot="nav" panel="react">React</p-tab>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
+                <p-tab-panel name="script">
+                  <p>
+                    To import this component from
+                    <a
+                      href="https://www.jsdelivr.com/package/npm/pure-uikit"
+                      class="external-link"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      >the CDN</a
+                    >
+                    using a script tag:
+                  </p>
+                  <pre><code class="language-html" id="code-block-1151"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.6.29/cdn/components/tree/tree.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-1151"></p-copy-button></pre>
+                </p-tab-panel>
 
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
+                <p-tab-panel name="import">
+                  <p>
+                    To import this component from
+                    <a
+                      href="https://www.jsdelivr.com/package/npm/pure-uikit"
+                      class="external-link"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      >the CDN</a
+                    >
+                    using a JavaScript import:
+                  </p>
+                  <pre><code class="language-js" id="code-block-1152"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.6.29/cdn/components/tree/tree.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1152"></p-copy-button></pre>
+                </p-tab-panel>
+
+                <p-tab-panel name="bundler">
+                  <p>To import this component using <a href="/getting-started/installation#bundling">a bundler</a>:</p>
+                  <pre><code class="language-js" id="code-block-1153"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/tree/tree.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1153"></p-copy-button></pre>
+                </p-tab-panel>
+
+                <p-tab-panel name="react">
+                  <p>To import this component as a <a href="/frameworks/react">React component</a>:</p>
+                  <pre><code class="language-js" id="code-block-1154"><span class="token keyword">import</span> PTree <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1154"></p-copy-button></pre>
+                </p-tab-panel>
+              </p-tab-group>
+
+              <h2 id="slots" class="anchor-heading">Slots<a href="#slots" aria-label='Direct link to "Slots"'></a></h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name">Name</th>
+                      <th class="table-description">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nowrap">(default)</td>
+                      <td>The default slot.</td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap">
+                        <code>expand-icon</code>
+                      </td>
+                      <td>
+                        The icon to show when the tree item is expanded. Works best with <code>&lt;p-icon&gt;</code>.
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap">
+                        <code>collapse-icon</code>
+                      </td>
+                      <td>
+                        The icon to show when the tree item is collapsed. Works best with <code>&lt;p-icon&gt;</code>.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
+
+              <p>
+                <em>Learn more about <a href="/getting-started/usage#slots">using slots</a>.</em>
+              </p>
+
+              <h2 id="properties" class="anchor-heading">
+                Properties<a href="#properties" aria-label='Direct link to "Properties"'></a>
+              </h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name">Name</th>
+                      <th class="table-description">Description</th>
+                      <th class="table-reflects">Reflects</th>
+                      <th class="table-type">Type</th>
+                      <th class="table-default">Default</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <code class="nowrap">selection</code>
+                      </td>
+                      <td>
+                        The selection behavior of the tree. Single selection allows only one node to be selected at a
+                        time. Multiple displays checkboxes and allows more than one node to be selected. Leaf allows
+                        only leaf nodes to be selected.
+                      </td>
+                      <td style="text-align: center"></td>
+                      <td>
+                        <code>"single" | "multiple" | "leaf"</code>
+                      </td>
+                      <td>
+                        <code>"single"</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap"><code>updateComplete</code></td>
+                      <td>
+                        A read-only promise that resolves when the component has
+                        <a href="/getting-started/usage?#component-rendering-and-updating">finished updating</a>.
+                      </td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                <em
+                  >Learn more about
+                  <a href="/getting-started/usage#attributes-and-properties">attributes and properties</a>.</em
+                >
+              </p>
+
+              <h2 id="events" class="anchor-heading">
+                Events<a href="#events" aria-label='Direct link to "Events"'></a>
+              </h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name" data-flavor="html">Name</th>
+                      <th class="table-name" data-flavor="react">React Event</th>
+                      <th class="table-description">Description</th>
+                      <th class="table-event-detail">Event Detail</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-flavor="html"><code class="nowrap">p-selection-change</code></td>
+                      <td data-flavor="react"><code class="nowrap">onPSelectionChange</code></td>
+                      <td>Emitted when a tree item is selected or deselected.</td>
+                      <td>
+                        <code>{ selection: PTreeItem[] }</code>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                <em>Learn more about <a href="/getting-started/usage#events">events</a>.</em>
+              </p>
+
+              <h2 id="custom-properties" class="anchor-heading">
+                Custom Properties<a href="#custom-properties" aria-label='Direct link to "Custom Properties"'></a>
+              </h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name">Name</th>
+                      <th class="table-description">Description</th>
+                      <th class="table-default">Default</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nowrap"><code>--indent-size</code></td>
+                      <td>The size of the indentation for nested items.</td>
+                      <td>var(–p-spacing-medium)</td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap"><code>--indent-guide-color</code></td>
+                      <td>The color of the indentation line.</td>
+                      <td>var(–p-color-neutral-200)</td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap"><code>--indent-guide-offset</code></td>
+                      <td>
+                        The amount of vertical spacing to leave between the top and bottom of the indentation line’s
+                        starting position.
+                      </td>
+                      <td>0</td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap"><code>--indent-guide-style</code></td>
+                      <td>The style of the indentation line, e.g. solid, dotted, dashed.</td>
+                      <td>solid</td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap"><code>--indent-guide-width</code></td>
+                      <td>The width of the indentation line.</td>
+                      <td>0</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                <em
+                  >Learn more about
+                  <a href="/getting-started/usage#custom-properties">customizing CSS custom properties</a>.</em
+                >
+              </p>
+
+              <h2 id="parts" class="anchor-heading">Parts<a href="#parts" aria-label='Direct link to "Parts"'></a></h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name">Name</th>
+                      <th class="table-description">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nowrap"><code>base</code></td>
+                      <td>The component’s base wrapper.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                <em>Learn more about <a href="/getting-started/customizing/#css-parts">customizing CSS parts</a>.</em>
+              </p>
             </div>
 
-            <h2 id="importing" class="anchor-heading">
-              Importing<a href="#importing" aria-label='Direct link to "Importing"'></a>
-            </h2>
-            <p>
-              If you’re using the autoloader or the traditional loader, you can ignore this section. Otherwise, feel
-              free to use any of the following snippets to
-              <a href="/getting-started/installation#cherry-picking">cherry pick</a> this component.
-            </p>
-
-            <p-tab-group>
-              <p-tab slot="nav" panel="script">Script</p-tab>
-              <p-tab slot="nav" panel="import">Import</p-tab>
-              <p-tab slot="nav" panel="bundler">Bundler</p-tab>
-              <p-tab slot="nav" panel="react">React</p-tab>
-
-              <p-tab-panel name="script">
-                <p>
-                  To import this component from
-                  <a
-                    href="https://www.jsdelivr.com/package/npm/pure-uikit"
-                    class="external-link"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    >the CDN</a
-                  >
-                  using a script tag:
-                </p>
-                <pre><code class="language-html" id="code-block-1152"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.5.11/cdn/components/tree/tree.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-1152"></p-copy-button></pre>
-              </p-tab-panel>
-
-              <p-tab-panel name="import">
-                <p>
-                  To import this component from
-                  <a
-                    href="https://www.jsdelivr.com/package/npm/pure-uikit"
-                    class="external-link"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    >the CDN</a
-                  >
-                  using a JavaScript import:
-                </p>
-                <pre><code class="language-js" id="code-block-1153"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.5.11/cdn/components/tree/tree.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1153"></p-copy-button></pre>
-              </p-tab-panel>
-
-              <p-tab-panel name="bundler">
-                <p>To import this component using <a href="/getting-started/installation#bundling">a bundler</a>:</p>
-                <pre><code class="language-js" id="code-block-1154"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/tree/tree.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1154"></p-copy-button></pre>
-              </p-tab-panel>
-
-              <p-tab-panel name="react">
-                <p>To import this component as a <a href="/frameworks/react">React component</a>:</p>
-                <pre><code class="language-js" id="code-block-1155"><span class="token keyword">import</span> PTree <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/tree'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1155"></p-copy-button></pre>
-              </p-tab-panel>
-            </p-tab-group>
-
-            <h2 id="slots" class="anchor-heading">Slots<a href="#slots" aria-label='Direct link to "Slots"'></a></h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name">Name</th>
-                    <th class="table-description">Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="nowrap">(default)</td>
-                    <td>The default slot.</td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap">
-                      <code>expand-icon</code>
-                    </td>
-                    <td>
-                      The icon to show when the tree item is expanded. Works best with <code>&lt;p-icon&gt;</code>.
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap">
-                      <code>collapse-icon</code>
-                    </td>
-                    <td>
-                      The icon to show when the tree item is collapsed. Works best with <code>&lt;p-icon&gt;</code>.
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="content__toc">
+              <ul>
+                <li class="top"><a href="#">Tree</a></li>
+                <li data-level="2"><a href="#examples">Examples</a></li>
+                <li data-level="3"><a href="#selection-modes">Selection Modes</a></li>
+                <li data-level="3"><a href="#showing-indent-guides">Showing Indent Guides</a></li>
+                <li data-level="3"><a href="#lazy-loading">Lazy Loading</a></li>
+                <li data-level="3">
+                  <a href="#customizing-the-expand-and-collapse-icons">Customizing the Expand and Collapse Icons</a>
+                </li>
+                <li data-level="3"><a href="#with-icons">With Icons</a></li>
+                <li data-level="2"><a href="#importing">Importing</a></li>
+                <li data-level="2"><a href="#slots">Slots</a></li>
+                <li data-level="2"><a href="#properties">Properties</a></li>
+                <li data-level="2"><a href="#events">Events</a></li>
+                <li data-level="2"><a href="#custom-properties">Custom Properties</a></li>
+                <li data-level="2"><a href="#parts">Parts</a></li>
+              </ul>
             </div>
-
-            <p>
-              <em>Learn more about <a href="/getting-started/usage#slots">using slots</a>.</em>
-            </p>
-
-            <h2 id="properties" class="anchor-heading">
-              Properties<a href="#properties" aria-label='Direct link to "Properties"'></a>
-            </h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name">Name</th>
-                    <th class="table-description">Description</th>
-                    <th class="table-reflects">Reflects</th>
-                    <th class="table-type">Type</th>
-                    <th class="table-default">Default</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <code class="nowrap">selection</code>
-                    </td>
-                    <td>
-                      The selection behavior of the tree. Single selection allows only one node to be selected at a
-                      time. Multiple displays checkboxes and allows more than one node to be selected. Leaf allows only
-                      leaf nodes to be selected.
-                    </td>
-                    <td style="text-align: center"></td>
-                    <td>
-                      <code>"single" | "multiple" | "leaf"</code>
-                    </td>
-                    <td>
-                      <code>"single"</code>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap"><code>updateComplete</code></td>
-                    <td>
-                      A read-only promise that resolves when the component has
-                      <a href="/getting-started/usage?#component-rendering-and-updating">finished updating</a>.
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <p>
-              <em
-                >Learn more about
-                <a href="/getting-started/usage#attributes-and-properties">attributes and properties</a>.</em
-              >
-            </p>
-
-            <h2 id="events" class="anchor-heading">
-              Events<a href="#events" aria-label='Direct link to "Events"'></a>
-            </h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name" data-flavor="html">Name</th>
-                    <th class="table-name" data-flavor="react">React Event</th>
-                    <th class="table-description">Description</th>
-                    <th class="table-event-detail">Event Detail</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td data-flavor="html"><code class="nowrap">p-selection-change</code></td>
-                    <td data-flavor="react"><code class="nowrap">onPSelectionChange</code></td>
-                    <td>Emitted when a tree item is selected or deselected.</td>
-                    <td>
-                      <code>{ selection: PTreeItem[] }</code>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <p>
-              <em>Learn more about <a href="/getting-started/usage#events">events</a>.</em>
-            </p>
-
-            <h2 id="custom-properties" class="anchor-heading">
-              Custom Properties<a href="#custom-properties" aria-label='Direct link to "Custom Properties"'></a>
-            </h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name">Name</th>
-                    <th class="table-description">Description</th>
-                    <th class="table-default">Default</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="nowrap"><code>--indent-size</code></td>
-                    <td>The size of the indentation for nested items.</td>
-                    <td>var(–p-spacing-medium)</td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap"><code>--indent-guide-color</code></td>
-                    <td>The color of the indentation line.</td>
-                    <td>var(–p-color-neutral-200)</td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap"><code>--indent-guide-offset</code></td>
-                    <td>
-                      The amount of vertical spacing to leave between the top and bottom of the indentation line’s
-                      starting position.
-                    </td>
-                    <td>0</td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap"><code>--indent-guide-style</code></td>
-                    <td>The style of the indentation line, e.g. solid, dotted, dashed.</td>
-                    <td>solid</td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap"><code>--indent-guide-width</code></td>
-                    <td>The width of the indentation line.</td>
-                    <td>0</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <p>
-              <em
-                >Learn more about
-                <a href="/getting-started/usage#custom-properties">customizing CSS custom properties</a>.</em
-              >
-            </p>
-
-            <h2 id="parts" class="anchor-heading">Parts<a href="#parts" aria-label='Direct link to "Parts"'></a></h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name">Name</th>
-                    <th class="table-description">Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="nowrap"><code>base</code></td>
-                    <td>The component’s base wrapper.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <p>
-              <em>Learn more about <a href="/getting-started/customizing/#css-parts">customizing CSS parts</a>.</em>
-            </p>
           </div>
         </div>
       </div>

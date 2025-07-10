@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="default" data-pure-ui-version="1.5.11">
+<html lang="en" data-layout="default" data-pure-ui-version="1.6.29">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -63,7 +63,7 @@
       <div id="header">
         <div class="left-header">
           <img src="/assets/images/logo.png" alt="Pure UI" id="logo" />
-          <span class="version">v1.5.11</span>
+          <span class="version">v1.6.29</span>
         </div>
         <span id="slogan"> PureUI: Simplify, Customize, Innovate. </span>
         <div class="right-header">
@@ -408,8 +408,6 @@
                 <h2>Resources</h2>
                 <ul>
                   <li><a href="/resources/community">Community</a></li>
-                  <li><a href="/resources/accessibility" class="active-link">Accessibility</a></li>
-                  <li><a href="/resources/contributing">Contributing</a></li>
                   <li><a href="/resources/changelog">Changelog</a></li>
                 </ul>
               </li>
@@ -417,74 +415,86 @@
           </nav>
         </aside>
 
-        <div id="content">
-          <div class="content__body">
-            <h1>Accessibility Commitment</h1>
-            <p>
-              Pure UI recognizes the need for all users, regardless of ability and device, to have undeterred access to
-              the websites and applications that are created with it. This is an important goal of the project.
-            </p>
-            <p>
-              Oftentimes, people will ask “is Pure UI accessible?” I’m reluctant to answer because accessibility isn’t
-              binary — there’s no simple “yes” or “no” response to provide. What seems accessible to a sighted user
-              might be completely inaccessible to a non-sighted user. And even if you optimize for various screen
-              readers, you still have to account for low-level vision, color blindness, hearing impairments, mobility
-              impairments, and more.
-            </p>
-            <p>
-              Accessibility is something you have to continuously strive for. No individual contributor — or perhaps
-              even an entire team — can claim their software is 100% accessible because of the sheer diversity of
-              abilities, devices, assistive technologies, and individual use cases.
-            </p>
-            <p>
-              Furthermore, accessibility doesn’t stop at the component level. Using accessible building blocks doesn’t
-              magically make the rest of your webpage or application compliant. There is no library or overlay that will
-              make your software “fully accessible” without putting in the effort. It’s also worth noting that web
-              components are still somewhat bleeding edge, so browsers, assistive devices, and
-              <a href="https://wicg.github.io/aom/spec/" class="external-link" rel="noopener noreferrer" target="_blank"
-                >even specifications</a
-              >
-              are still evolving to help improve accessibility on the web platform.
-            </p>
-            <p>
-              My commitment to Pure UI users is this: Everything I develop will be built with accessibility in mind. I
-              will test and improve every component to the best of my ability and knowledge. I will work around upstream
-              issues, such as browser bugs and limitations, to the best of my ability and within reason.
-            </p>
-            <p>
-              I’m fully aware that I may not get it right every time for every user, so I invite the community to
-              participate in this ongoing effort by submitting
-              <a
-                href="https://github.com/ssjblue197/pure-ui/issues?q=is%3Aissue+is%3Aopen+label%3Aa11y"
-                class="external-link"
-                rel="noopener noreferrer"
-                target="_blank"
-                >issues</a
-              >,
-              <a
-                href="https://github.com/ssjblue197/pure-ui/pulls?q=is%3Aopen+is%3Apr+label%3Aa11y"
-                class="external-link"
-                rel="noopener noreferrer"
-                target="_blank"
-                >pull requests</a
-              >, and
-              <a
-                href="https://github.com/ssjblue197/pure-ui/discussions"
-                class="external-link"
-                rel="noopener noreferrer"
-                target="_blank"
-                >discussions</a
-              >. Many accessibility improvements have already been made thanks to contributors submitting code,
-              feedback, and suggestions.
-            </p>
-            <p>
-              This is the path forward. Together, we will continue to make Pure UI accessible to as many users as
-              possible.
-            </p>
-            <p>
-              — Mr.P —<br />
-              <em>Creator of Pure UI</em>
-            </p>
+        <div id="content" class="content--with-toc">
+          <div class="content--wrapper">
+            <div class="content__body">
+              <h1>Accessibility Commitment</h1>
+              <p>
+                Pure UI recognizes the need for all users, regardless of ability and device, to have undeterred access
+                to the websites and applications that are created with it. This is an important goal of the project.
+              </p>
+              <p>
+                Oftentimes, people will ask “is Pure UI accessible?” I’m reluctant to answer because accessibility isn’t
+                binary — there’s no simple “yes” or “no” response to provide. What seems accessible to a sighted user
+                might be completely inaccessible to a non-sighted user. And even if you optimize for various screen
+                readers, you still have to account for low-level vision, color blindness, hearing impairments, mobility
+                impairments, and more.
+              </p>
+              <p>
+                Accessibility is something you have to continuously strive for. No individual contributor — or perhaps
+                even an entire team — can claim their software is 100% accessible because of the sheer diversity of
+                abilities, devices, assistive technologies, and individual use cases.
+              </p>
+              <p>
+                Furthermore, accessibility doesn’t stop at the component level. Using accessible building blocks doesn’t
+                magically make the rest of your webpage or application compliant. There is no library or overlay that
+                will make your software “fully accessible” without putting in the effort. It’s also worth noting that
+                web components are still somewhat bleeding edge, so browsers, assistive devices, and
+                <a
+                  href="https://wicg.github.io/aom/spec/"
+                  class="external-link"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >even specifications</a
+                >
+                are still evolving to help improve accessibility on the web platform.
+              </p>
+              <p>
+                My commitment to Pure UI users is this: Everything I develop will be built with accessibility in mind. I
+                will test and improve every component to the best of my ability and knowledge. I will work around
+                upstream issues, such as browser bugs and limitations, to the best of my ability and within reason.
+              </p>
+              <p>
+                I’m fully aware that I may not get it right every time for every user, so I invite the community to
+                participate in this ongoing effort by submitting
+                <a
+                  href="https://github.com/ssjblue197/pure-ui/issues?q=is%3Aissue+is%3Aopen+label%3Aa11y"
+                  class="external-link"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >issues</a
+                >,
+                <a
+                  href="https://github.com/ssjblue197/pure-ui/pulls?q=is%3Aopen+is%3Apr+label%3Aa11y"
+                  class="external-link"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >pull requests</a
+                >, and
+                <a
+                  href="https://github.com/ssjblue197/pure-ui/discussions"
+                  class="external-link"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >discussions</a
+                >. Many accessibility improvements have already been made thanks to contributors submitting code,
+                feedback, and suggestions.
+              </p>
+              <p>
+                This is the path forward. Together, we will continue to make Pure UI accessible to as many users as
+                possible.
+              </p>
+              <p>
+                — Mr.P —<br />
+                <em>Creator of Pure UI</em>
+              </p>
+            </div>
+
+            <div class="content__toc">
+              <ul>
+                <li class="top"><a href="#">Accessibility Commitment</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

@@ -127,6 +127,7 @@
 (() => {
   // This will be stale if its not a function.
   const getLinks = () => [...document.querySelectorAll(".content__toc a")];
+  console.log("getLinks()", getLinks());
   const linkTargets = new WeakMap();
   const visibleTargets = new WeakSet();
   const observer = new IntersectionObserver(handleIntersect, {

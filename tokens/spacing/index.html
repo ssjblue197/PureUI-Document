@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="default" data-pure-ui-version="1.5.11">
+<html lang="en" data-layout="default" data-pure-ui-version="1.6.29">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -63,7 +63,7 @@
       <div id="header">
         <div class="left-header">
           <img src="/assets/images/logo.png" alt="Pure UI" id="logo" />
-          <span class="version">v1.5.11</span>
+          <span class="version">v1.6.29</span>
         </div>
         <span id="slogan"> PureUI: Simplify, Customize, Innovate. </span>
         <div class="right-header">
@@ -408,8 +408,6 @@
                 <h2>Resources</h2>
                 <ul>
                   <li><a href="/resources/community">Community</a></li>
-                  <li><a href="/resources/accessibility">Accessibility</a></li>
-                  <li><a href="/resources/contributing">Contributing</a></li>
                   <li><a href="/resources/changelog">Changelog</a></li>
                 </ul>
               </li>
@@ -417,122 +415,130 @@
           </nav>
         </aside>
 
-        <div id="content">
-          <div class="content__body">
-            <h1>Spacing Tokens</h1>
-            <p>Spacing tokens are used to provide consistent spacing between content in your app.</p>
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Token</th>
-                    <th>Value</th>
-                    <th>Example</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><code>--p-spacing-3x-small</code></td>
-                    <td>0.125rem (2px)</td>
-                    <td>
-                      <div
-                        class="spacing-demo"
-                        style="width: var(--p-spacing-3x-small); height: var(--p-spacing-3x-small)"
-                      ></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-spacing-2x-small</code></td>
-                    <td>0.25rem (4px)</td>
-                    <td>
-                      <div
-                        class="spacing-demo"
-                        style="width: var(--p-spacing-2x-small); height: var(--p-spacing-2x-small)"
-                      ></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-spacing-x-small</code></td>
-                    <td>0.5rem (8px)</td>
-                    <td>
-                      <div
-                        class="spacing-demo"
-                        style="width: var(--p-spacing-x-small); height: var(--p-spacing-x-small)"
-                      ></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-spacing-small</code></td>
-                    <td>0.75rem (12px)</td>
-                    <td>
-                      <div
-                        class="spacing-demo"
-                        style="width: var(--p-spacing-small); height: var(--p-spacing-small)"
-                      ></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-spacing-medium</code></td>
-                    <td>1rem (16px)</td>
-                    <td>
-                      <div
-                        class="spacing-demo"
-                        style="width: var(--p-spacing-medium); height: var(--p-spacing-medium)"
-                      ></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-spacing-large</code></td>
-                    <td>1.25rem (20px)</td>
-                    <td>
-                      <div
-                        class="spacing-demo"
-                        style="width: var(--p-spacing-large); height: var(--p-spacing-large)"
-                      ></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-spacing-x-large</code></td>
-                    <td>1.75rem (28px)</td>
-                    <td>
-                      <div
-                        class="spacing-demo"
-                        style="width: var(--p-spacing-x-large); height: var(--p-spacing-x-large)"
-                      ></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-spacing-2x-large</code></td>
-                    <td>2.25rem (36px)</td>
-                    <td>
-                      <div
-                        class="spacing-demo"
-                        style="width: var(--p-spacing-2x-large); height: var(--p-spacing-2x-large)"
-                      ></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-spacing-3x-large</code></td>
-                    <td>3rem (48px)</td>
-                    <td>
-                      <div
-                        class="spacing-demo"
-                        style="width: var(--p-spacing-3x-large); height: var(--p-spacing-3x-large)"
-                      ></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-spacing-4x-large</code></td>
-                    <td>4.5rem (72px)</td>
-                    <td>
-                      <div
-                        class="spacing-demo"
-                        style="width: var(--p-spacing-4x-large); height: var(--p-spacing-4x-large)"
-                      ></div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+        <div id="content" class="content--with-toc">
+          <div class="content--wrapper">
+            <div class="content__body">
+              <h1>Spacing Tokens</h1>
+              <p>Spacing tokens are used to provide consistent spacing between content in your app.</p>
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Token</th>
+                      <th>Value</th>
+                      <th>Example</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>--p-spacing-3x-small</code></td>
+                      <td>0.125rem (2px)</td>
+                      <td>
+                        <div
+                          class="spacing-demo"
+                          style="width: var(--p-spacing-3x-small); height: var(--p-spacing-3x-small)"
+                        ></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-spacing-2x-small</code></td>
+                      <td>0.25rem (4px)</td>
+                      <td>
+                        <div
+                          class="spacing-demo"
+                          style="width: var(--p-spacing-2x-small); height: var(--p-spacing-2x-small)"
+                        ></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-spacing-x-small</code></td>
+                      <td>0.5rem (8px)</td>
+                      <td>
+                        <div
+                          class="spacing-demo"
+                          style="width: var(--p-spacing-x-small); height: var(--p-spacing-x-small)"
+                        ></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-spacing-small</code></td>
+                      <td>0.75rem (12px)</td>
+                      <td>
+                        <div
+                          class="spacing-demo"
+                          style="width: var(--p-spacing-small); height: var(--p-spacing-small)"
+                        ></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-spacing-medium</code></td>
+                      <td>1rem (16px)</td>
+                      <td>
+                        <div
+                          class="spacing-demo"
+                          style="width: var(--p-spacing-medium); height: var(--p-spacing-medium)"
+                        ></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-spacing-large</code></td>
+                      <td>1.25rem (20px)</td>
+                      <td>
+                        <div
+                          class="spacing-demo"
+                          style="width: var(--p-spacing-large); height: var(--p-spacing-large)"
+                        ></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-spacing-x-large</code></td>
+                      <td>1.75rem (28px)</td>
+                      <td>
+                        <div
+                          class="spacing-demo"
+                          style="width: var(--p-spacing-x-large); height: var(--p-spacing-x-large)"
+                        ></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-spacing-2x-large</code></td>
+                      <td>2.25rem (36px)</td>
+                      <td>
+                        <div
+                          class="spacing-demo"
+                          style="width: var(--p-spacing-2x-large); height: var(--p-spacing-2x-large)"
+                        ></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-spacing-3x-large</code></td>
+                      <td>3rem (48px)</td>
+                      <td>
+                        <div
+                          class="spacing-demo"
+                          style="width: var(--p-spacing-3x-large); height: var(--p-spacing-3x-large)"
+                        ></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-spacing-4x-large</code></td>
+                      <td>4.5rem (72px)</td>
+                      <td>
+                        <div
+                          class="spacing-demo"
+                          style="width: var(--p-spacing-4x-large); height: var(--p-spacing-4x-large)"
+                        ></div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="content__toc">
+              <ul>
+                <li class="top"><a href="#">Spacing Tokens</a></li>
+              </ul>
             </div>
           </div>
         </div>

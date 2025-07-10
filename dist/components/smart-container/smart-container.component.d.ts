@@ -22,6 +22,7 @@ export default class PSmartContainer extends PureElement {
     private resizeObserver;
     private observedElements;
     private backupContainerWidth;
+    private readonly hasSlotController;
     static dependencies: {
         "p-dropdown": typeof PDropdown;
         "p-icon": typeof PIcon;

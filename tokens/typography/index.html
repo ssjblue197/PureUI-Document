@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="default" data-pure-ui-version="1.5.11">
+<html lang="en" data-layout="default" data-pure-ui-version="1.6.29">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -63,7 +63,7 @@
       <div id="header">
         <div class="left-header">
           <img src="/assets/images/logo.png" alt="Pure UI" id="logo" />
-          <span class="version">v1.5.11</span>
+          <span class="version">v1.6.29</span>
         </div>
         <span id="slogan"> PureUI: Simplify, Customize, Innovate. </span>
         <div class="right-header">
@@ -408,8 +408,6 @@
                 <h2>Resources</h2>
                 <ul>
                   <li><a href="/resources/community">Community</a></li>
-                  <li><a href="/resources/accessibility">Accessibility</a></li>
-                  <li><a href="/resources/contributing">Contributing</a></li>
                   <li><a href="/resources/changelog">Changelog</a></li>
                 </ul>
               </li>
@@ -417,305 +415,324 @@
           </nav>
         </aside>
 
-        <div id="content">
-          <div class="content__body">
-            <h1>Typography Tokens</h1>
-            <p>Typography tokens are used to maintain a consistent set of font styles throughout your app.</p>
-            <h2 id="font-family" class="anchor-heading">
-              Font Family<a href="#font-family" aria-label='Direct link to "Font Family"'></a>
-            </h2>
-            <p>The default font stack is designed to be simple and highly available on as many devices as possible.</p>
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Token</th>
-                    <th>Value</th>
-                    <th>Example</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><code>--p-font-sans</code></td>
-                    <td>
-                      -apple-system, BlinkMacSystemFont, ‘Segoe UI’, Roboto, Helvetica, Arial, sans-serif, ‘Apple Color
-                      Emoji’, ‘Segoe UI Emoji’, ‘Segoe UI Symbol’
-                    </td>
-                    <td>
-                      <span style="font-family: var(--p-font-sans)">The quick brown fox jumped over the lazy dog.</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-font-serif</code></td>
-                    <td>Georgia, ‘Times New Roman’, serif</td>
-                    <td>
-                      <span style="font-family: var(--p-font-serif)"
-                        >The quick brown fox jumped over the lazy dog.</span
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-font-mono</code></td>
-                    <td>SFMono-Regular, Consolas, ‘Liberation Mono’, Menlo, monospace;</td>
-                    <td>
-                      <span style="font-family: var(--p-font-mono)">The quick brown fox jumped over the lazy dog.</span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+        <div id="content" class="content--with-toc">
+          <div class="content--wrapper">
+            <div class="content__body">
+              <h1>Typography Tokens</h1>
+              <p>Typography tokens are used to maintain a consistent set of font styles throughout your app.</p>
+              <h2 id="font-family" class="anchor-heading">
+                Font Family<a href="#font-family" aria-label='Direct link to "Font Family"'></a>
+              </h2>
+              <p>
+                The default font stack is designed to be simple and highly available on as many devices as possible.
+              </p>
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Token</th>
+                      <th>Value</th>
+                      <th>Example</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>--p-font-sans</code></td>
+                      <td>
+                        -apple-system, BlinkMacSystemFont, ‘Segoe UI’, Roboto, Helvetica, Arial, sans-serif, ‘Apple
+                        Color Emoji’, ‘Segoe UI Emoji’, ‘Segoe UI Symbol’
+                      </td>
+                      <td>
+                        <span style="font-family: var(--p-font-sans)"
+                          >The quick brown fox jumped over the lazy dog.</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-font-serif</code></td>
+                      <td>Georgia, ‘Times New Roman’, serif</td>
+                      <td>
+                        <span style="font-family: var(--p-font-serif)"
+                          >The quick brown fox jumped over the lazy dog.</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-font-mono</code></td>
+                      <td>SFMono-Regular, Consolas, ‘Liberation Mono’, Menlo, monospace;</td>
+                      <td>
+                        <span style="font-family: var(--p-font-mono)"
+                          >The quick brown fox jumped over the lazy dog.</span
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h2 id="font-size" class="anchor-heading">
+                Font Size<a href="#font-size" aria-label='Direct link to "Font Size"'></a>
+              </h2>
+              <p>
+                Font sizes use <code>rem</code> units so they scale with the base font size. The pixel values displayed
+                are based on a 16px font size.
+              </p>
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Token</th>
+                      <th>Value</th>
+                      <th>Example</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>--p-font-size-2x-small</code></td>
+                      <td>0.625rem (10px)</td>
+                      <td><span style="font-size: var(--p-font-size-2x-small)">Aa</span></td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-font-size-x-small</code></td>
+                      <td>0.75rem (12px)</td>
+                      <td><span style="font-size: var(--p-font-size-x-small)">Aa</span></td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-font-size-small</code></td>
+                      <td>0.875rem (14px)</td>
+                      <td><span style="font-size: var(--p-font-size-small)">Aa</span></td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-font-size-medium</code></td>
+                      <td>1rem (16px)</td>
+                      <td><span style="font-size: var(--p-font-size-medium)">Aa</span></td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-font-size-large</code></td>
+                      <td>1.25rem (20px)</td>
+                      <td><span style="font-size: var(--p-font-size-large)">Aa</span></td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-font-size-x-large</code></td>
+                      <td>1.5rem (24px)</td>
+                      <td><span style="font-size: var(--p-font-size-x-large)">Aa</span></td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-font-size-2x-large</code></td>
+                      <td>2.25rem (36px)</td>
+                      <td><span style="font-size: var(--p-font-size-2x-large)">Aa</span></td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-font-size-3x-large</code></td>
+                      <td>3rem (48px)</td>
+                      <td><span style="font-size: var(--p-font-size-3x-large)">Aa</span></td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-font-size-4x-large</code></td>
+                      <td>4.5rem (72px)</td>
+                      <td><span style="font-size: var(--p-font-size-4x-large)">Aa</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h2 id="font-weight" class="anchor-heading">
+                Font Weight<a href="#font-weight" aria-label='Direct link to "Font Weight"'></a>
+              </h2>
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Token</th>
+                      <th>Value</th>
+                      <th>Example</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>--p-font-weight-light</code></td>
+                      <td>300</td>
+                      <td>
+                        <span style="font-weight: var(--p-font-weight-light)"
+                          >The quick brown fox jumped over the lazy dog.</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-font-weight-normal</code></td>
+                      <td>400</td>
+                      <td>
+                        <span style="font-weight: var(--p-font-weight-normal)"
+                          >The quick brown fox jumped over the lazy dog.</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-font-weight-medium</code></td>
+                      <td>500</td>
+                      <td>
+                        <span style="font-weight: var(--p-font-weight-medium)"
+                          >The quick brown fox jumped over the lazy dog.</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-font-weight-semibold</code></td>
+                      <td>600</td>
+                      <td>
+                        <span style="font-weight: var(--p-font-weight-semibold)"
+                          >The quick brown fox jumped over the lazy dog.</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-font-weight-bold</code></td>
+                      <td>700</td>
+                      <td>
+                        <span style="font-weight: var(--p-font-weight-bold)"
+                          >The quick brown fox jumped over the lazy dog.</span
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h2 id="letter-spacing" class="anchor-heading">
+                Letter Spacing<a href="#letter-spacing" aria-label='Direct link to "Letter Spacing"'></a>
+              </h2>
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Token</th>
+                      <th>Value</th>
+                      <th>Example</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>--p-letter-spacing-denser</code></td>
+                      <td>-0.03em</td>
+                      <td>
+                        <span style="letter-spacing: var(--p-letter-spacing-denser)"
+                          >The quick brown fox jumped over the lazy dog.</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-letter-spacing-dense</code></td>
+                      <td>-0.015em</td>
+                      <td>
+                        <span style="letter-spacing: var(--p-letter-spacing-dense)"
+                          >The quick brown fox jumped over the lazy dog.</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-letter-spacing-normal</code></td>
+                      <td>normal</td>
+                      <td>
+                        <span style="letter-spacing: var(--p-letter-spacing-normal)"
+                          >The quick brown fox jumped over the lazy dog.</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-letter-spacing-loose</code></td>
+                      <td>0.075em</td>
+                      <td>
+                        <span style="letter-spacing: var(--p-letter-spacing-loose)"
+                          >The quick brown fox jumped over the lazy dog.</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-letter-spacing-looser</code></td>
+                      <td>0.15em</td>
+                      <td>
+                        <span style="letter-spacing: var(--p-letter-spacing-looser)"
+                          >The quick brown fox jumped over the lazy dog.</span
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h2 id="line-height" class="anchor-heading">
+                Line Height<a href="#line-height" aria-label='Direct link to "Line Height"'></a>
+              </h2>
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Token</th>
+                      <th>Value</th>
+                      <th>Example</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>--p-line-height-denser</code></td>
+                      <td>1</td>
+                      <td>
+                        <div style="line-height: var(--p-line-height-denser)">
+                          The quick brown fox jumped over the lazy dog.<br />The quick brown fox jumped over the lazy
+                          dog.<br />The quick brown fox jumped over the lazy dog.
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-line-height-dense</code></td>
+                      <td>1.4</td>
+                      <td>
+                        <div style="line-height: var(--p-line-height-dense)">
+                          The quick brown fox jumped over the lazy dog.<br />The quick brown fox jumped over the lazy
+                          dog.<br />The quick brown fox jumped over the lazy dog.
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-line-height-normal</code></td>
+                      <td>1.8</td>
+                      <td>
+                        <div style="line-height: var(--p-line-height-normal)">
+                          The quick brown fox jumped over the lazy dog.<br />The quick brown fox jumped over the lazy
+                          dog.<br />The quick brown fox jumped over the lazy dog.
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-line-height-loose</code></td>
+                      <td>2.2</td>
+                      <td>
+                        <div style="line-height: var(--p-line-height-loose)">
+                          The quick brown fox jumped over the lazy dog.<br />The quick brown fox jumped over the lazy
+                          dog.<br />The quick brown fox jumped over the lazy dog.
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-line-height-looser</code></td>
+                      <td>2.6</td>
+                      <td>
+                        <div style="line-height: var(--p-line-height-looser)">
+                          The quick brown fox jumped over the lazy dog.<br />The quick brown fox jumped over the lazy
+                          dog.<br />The quick brown fox jumped over the lazy dog.
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <h2 id="font-size" class="anchor-heading">
-              Font Size<a href="#font-size" aria-label='Direct link to "Font Size"'></a>
-            </h2>
-            <p>
-              Font sizes use <code>rem</code> units so they scale with the base font size. The pixel values displayed
-              are based on a 16px font size.
-            </p>
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Token</th>
-                    <th>Value</th>
-                    <th>Example</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><code>--p-font-size-2x-small</code></td>
-                    <td>0.625rem (10px)</td>
-                    <td><span style="font-size: var(--p-font-size-2x-small)">Aa</span></td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-font-size-x-small</code></td>
-                    <td>0.75rem (12px)</td>
-                    <td><span style="font-size: var(--p-font-size-x-small)">Aa</span></td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-font-size-small</code></td>
-                    <td>0.875rem (14px)</td>
-                    <td><span style="font-size: var(--p-font-size-small)">Aa</span></td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-font-size-medium</code></td>
-                    <td>1rem (16px)</td>
-                    <td><span style="font-size: var(--p-font-size-medium)">Aa</span></td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-font-size-large</code></td>
-                    <td>1.25rem (20px)</td>
-                    <td><span style="font-size: var(--p-font-size-large)">Aa</span></td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-font-size-x-large</code></td>
-                    <td>1.5rem (24px)</td>
-                    <td><span style="font-size: var(--p-font-size-x-large)">Aa</span></td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-font-size-2x-large</code></td>
-                    <td>2.25rem (36px)</td>
-                    <td><span style="font-size: var(--p-font-size-2x-large)">Aa</span></td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-font-size-3x-large</code></td>
-                    <td>3rem (48px)</td>
-                    <td><span style="font-size: var(--p-font-size-3x-large)">Aa</span></td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-font-size-4x-large</code></td>
-                    <td>4.5rem (72px)</td>
-                    <td><span style="font-size: var(--p-font-size-4x-large)">Aa</span></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <h2 id="font-weight" class="anchor-heading">
-              Font Weight<a href="#font-weight" aria-label='Direct link to "Font Weight"'></a>
-            </h2>
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Token</th>
-                    <th>Value</th>
-                    <th>Example</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><code>--p-font-weight-light</code></td>
-                    <td>300</td>
-                    <td>
-                      <span style="font-weight: var(--p-font-weight-light)"
-                        >The quick brown fox jumped over the lazy dog.</span
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-font-weight-normal</code></td>
-                    <td>400</td>
-                    <td>
-                      <span style="font-weight: var(--p-font-weight-normal)"
-                        >The quick brown fox jumped over the lazy dog.</span
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-font-weight-medium</code></td>
-                    <td>500</td>
-                    <td>
-                      <span style="font-weight: var(--p-font-weight-medium)"
-                        >The quick brown fox jumped over the lazy dog.</span
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-font-weight-semibold</code></td>
-                    <td>600</td>
-                    <td>
-                      <span style="font-weight: var(--p-font-weight-semibold)"
-                        >The quick brown fox jumped over the lazy dog.</span
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-font-weight-bold</code></td>
-                    <td>700</td>
-                    <td>
-                      <span style="font-weight: var(--p-font-weight-bold)"
-                        >The quick brown fox jumped over the lazy dog.</span
-                      >
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <h2 id="letter-spacing" class="anchor-heading">
-              Letter Spacing<a href="#letter-spacing" aria-label='Direct link to "Letter Spacing"'></a>
-            </h2>
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Token</th>
-                    <th>Value</th>
-                    <th>Example</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><code>--p-letter-spacing-denser</code></td>
-                    <td>-0.03em</td>
-                    <td>
-                      <span style="letter-spacing: var(--p-letter-spacing-denser)"
-                        >The quick brown fox jumped over the lazy dog.</span
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-letter-spacing-dense</code></td>
-                    <td>-0.015em</td>
-                    <td>
-                      <span style="letter-spacing: var(--p-letter-spacing-dense)"
-                        >The quick brown fox jumped over the lazy dog.</span
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-letter-spacing-normal</code></td>
-                    <td>normal</td>
-                    <td>
-                      <span style="letter-spacing: var(--p-letter-spacing-normal)"
-                        >The quick brown fox jumped over the lazy dog.</span
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-letter-spacing-loose</code></td>
-                    <td>0.075em</td>
-                    <td>
-                      <span style="letter-spacing: var(--p-letter-spacing-loose)"
-                        >The quick brown fox jumped over the lazy dog.</span
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-letter-spacing-looser</code></td>
-                    <td>0.15em</td>
-                    <td>
-                      <span style="letter-spacing: var(--p-letter-spacing-looser)"
-                        >The quick brown fox jumped over the lazy dog.</span
-                      >
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <h2 id="line-height" class="anchor-heading">
-              Line Height<a href="#line-height" aria-label='Direct link to "Line Height"'></a>
-            </h2>
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Token</th>
-                    <th>Value</th>
-                    <th>Example</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><code>--p-line-height-denser</code></td>
-                    <td>1</td>
-                    <td>
-                      <div style="line-height: var(--p-line-height-denser)">
-                        The quick brown fox jumped over the lazy dog.<br />The quick brown fox jumped over the lazy
-                        dog.<br />The quick brown fox jumped over the lazy dog.
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-line-height-dense</code></td>
-                    <td>1.4</td>
-                    <td>
-                      <div style="line-height: var(--p-line-height-dense)">
-                        The quick brown fox jumped over the lazy dog.<br />The quick brown fox jumped over the lazy
-                        dog.<br />The quick brown fox jumped over the lazy dog.
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-line-height-normal</code></td>
-                    <td>1.8</td>
-                    <td>
-                      <div style="line-height: var(--p-line-height-normal)">
-                        The quick brown fox jumped over the lazy dog.<br />The quick brown fox jumped over the lazy
-                        dog.<br />The quick brown fox jumped over the lazy dog.
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-line-height-loose</code></td>
-                    <td>2.2</td>
-                    <td>
-                      <div style="line-height: var(--p-line-height-loose)">
-                        The quick brown fox jumped over the lazy dog.<br />The quick brown fox jumped over the lazy
-                        dog.<br />The quick brown fox jumped over the lazy dog.
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-line-height-looser</code></td>
-                    <td>2.6</td>
-                    <td>
-                      <div style="line-height: var(--p-line-height-looser)">
-                        The quick brown fox jumped over the lazy dog.<br />The quick brown fox jumped over the lazy
-                        dog.<br />The quick brown fox jumped over the lazy dog.
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+
+            <div class="content__toc">
+              <ul>
+                <li class="top"><a href="#">Typography</a></li>
+                <li data-level="2"><a href="#font-family">Font Family</a></li>
+                <li data-level="2"><a href="#font-size">Font Size</a></li>
+                <li data-level="2"><a href="#font-weight">Font Weight</a></li>
+                <li data-level="2"><a href="#letter-spacing">Letter Spacing</a></li>
+                <li data-level="2"><a href="#line-height">Line Height</a></li>
+              </ul>
             </div>
           </div>
         </div>

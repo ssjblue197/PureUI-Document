@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="component" data-pure-ui-version="1.5.11">
+<html lang="en" data-layout="component" data-pure-ui-version="1.6.29">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -57,7 +57,7 @@
       <div id="header">
         <div class="left-header">
           <img src="/assets/images/logo.png" alt="Pure UI" id="logo" />
-          <span class="version">v1.5.11</span>
+          <span class="version">v1.6.29</span>
         </div>
         <span id="slogan"> PureUI: Simplify, Customize, Innovate. </span>
         <div class="right-header">
@@ -402,8 +402,6 @@
                 <h2>Resources</h2>
                 <ul>
                   <li><a href="/resources/community">Community</a></li>
-                  <li><a href="/resources/accessibility">Accessibility</a></li>
-                  <li><a href="/resources/contributing">Contributing</a></li>
                   <li><a href="/resources/changelog">Changelog</a></li>
                 </ul>
               </li>
@@ -411,52 +409,53 @@
           </nav>
         </aside>
 
-        <div id="content">
-          <div class="content__body">
-            <header class="component-header">
-              <h1>Image Comparer</h1>
+        <div id="content" class="content--with-toc">
+          <div class="content--wrapper">
+            <div class="content__body">
+              <header class="component-header">
+                <h1>Image Comparer</h1>
 
-              <div class="component-header__tag">
-                <code>&lt;p-image-comparer&gt; | PImageComparer</code>
-              </div>
-
-              <div class="component-header__info">
-                <p-badge variant="neutral" pill=""> Since 1.0 </p-badge>
-                <p-badge variant="primary" pill="" style="text-transform: capitalize"> stable </p-badge>
-              </div>
-            </header>
-
-            <p class="component-summary">Compare visual differences between similar photos with a sliding panel.</p>
-
-            <p>
-              For best results, use images that share the same dimensions. The slider can be controlled by dragging or
-              pressing the left and right arrow keys. (Tip: press shift + arrows to move the slider in larger intervals,
-              or home + end to jump to the beginning or end.)
-            </p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <p-image-comparer>
-                  <img
-                    slot="before"
-                    src="https://images.unsplash.com/photo-1517331156700-3c241d2b4d83?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80&amp;sat=-100&amp;bri=-5"
-                    alt="Grayscale version of kittens in a basket looking around."
-                  />
-                  <img
-                    slot="after"
-                    src="https://images.unsplash.com/photo-1517331156700-3c241d2b4d83?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80"
-                    alt="Color version of kittens in a basket looking around."
-                  />
-                </p-image-comparer>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                <div class="component-header__tag">
+                  <code>&lt;p-image-comparer&gt; | PImageComparer</code>
                 </div>
-              </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-209">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-632"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-image-comparer</span><span class="token punctuation">&gt;</span></span>
+                <div class="component-header__info">
+                  <p-badge variant="neutral" pill=""> Since 1.0 </p-badge>
+                  <p-badge variant="primary" pill="" style="text-transform: capitalize"> stable </p-badge>
+                </div>
+              </header>
+
+              <p class="component-summary">Compare visual differences between similar photos with a sliding panel.</p>
+
+              <p>
+                For best results, use images that share the same dimensions. The slider can be controlled by dragging or
+                pressing the left and right arrow keys. (Tip: press shift + arrows to move the slider in larger
+                intervals, or home + end to jump to the beginning or end.)
+              </p>
+
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <p-image-comparer>
+                    <img
+                      slot="before"
+                      src="https://images.unsplash.com/photo-1517331156700-3c241d2b4d83?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80&amp;sat=-100&amp;bri=-5"
+                      alt="Grayscale version of kittens in a basket looking around."
+                    />
+                    <img
+                      slot="after"
+                      src="https://images.unsplash.com/photo-1517331156700-3c241d2b4d83?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                      alt="Color version of kittens in a basket looking around."
+                    />
+                  </p-image-comparer>
+
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
+                </div>
+
+                <div class="code-preview__source-group" id="code-preview-source-group-179">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-579"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-image-comparer</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span>
     <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>before<span class="token punctuation">"</span></span>
     <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://images.unsplash.com/photo-1517331156700-3c241d2b4d83?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80&amp;sat=-100&amp;bri=-5<span class="token punctuation">"</span></span>
@@ -468,11 +467,11 @@
     <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Color version of kittens in a basket looking around.<span class="token punctuation">"</span></span>
   <span class="token punctuation">/&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-image-comparer</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-632"></p-copy-button></pre>
-                </div>
+</code><p-copy-button class="copy-code-button" from="code-block-579"></p-copy-button></pre>
+                  </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-633"><span class="token keyword">import</span> PImageComparer <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/image-comparer'</span><span class="token punctuation">;</span>
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-580"><span class="token keyword">import</span> PImageComparer <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/image-comparer'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PImageComparer</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
@@ -488,95 +487,99 @@
     <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PImageComparer</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-633"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-580"></p-copy-button></pre>
+                  </div>
+                </div>
+
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-179"
+                  >
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
+
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
+                  >
+                    React
+                  </button>
+
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-209"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+              <h2 id="examples" class="anchor-heading">
+                Examples<a href="#examples" aria-label='Direct link to "Examples"'></a>
+              </h2>
+              <h3 id="initial-position" class="anchor-heading">
+                Initial Position<a href="#initial-position" aria-label='Direct link to "Initial Position"'></a>
+              </h3>
+              <p>
+                Use the <code>position</code> attribute to set the initial position of the slider. This is a percentage
+                from <code>0</code> to <code>100</code>.
+              </p>
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <p-image-comparer position="25">
+                    <img
+                      slot="before"
+                      src="https://images.unsplash.com/photo-1520903074185-8eca362b3dce?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
+                      alt="A person sitting on bricks wearing untied boots."
+                    />
+                    <img
+                      slot="after"
+                      src="https://images.unsplash.com/photo-1520640023173-50a135e35804?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2250&amp;q=80"
+                      alt="A person sitting on a yellow curb tying pure ui on a boot."
+                    />
+                  </p-image-comparer>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
-
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <h2 id="examples" class="anchor-heading">
-              Examples<a href="#examples" aria-label='Direct link to "Examples"'></a>
-            </h2>
-            <h3 id="initial-position" class="anchor-heading">
-              Initial Position<a href="#initial-position" aria-label='Direct link to "Initial Position"'></a>
-            </h3>
-            <p>
-              Use the <code>position</code> attribute to set the initial position of the slider. This is a percentage
-              from <code>0</code> to <code>100</code>.
-            </p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <p-image-comparer position="25">
-                  <img
-                    slot="before"
-                    src="https://images.unsplash.com/photo-1520903074185-8eca362b3dce?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
-                    alt="A person sitting on bricks wearing untied boots."
-                  />
-                  <img
-                    slot="after"
-                    src="https://images.unsplash.com/photo-1520640023173-50a135e35804?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2250&amp;q=80"
-                    alt="A person sitting on a yellow curb tying pure ui on a boot."
-                  />
-                </p-image-comparer>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
                 </div>
-              </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-210">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-634"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-image-comparer</span> <span class="token attr-name">position</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>25<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <div class="code-preview__source-group" id="code-preview-source-group-180">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-581"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-image-comparer</span> <span class="token attr-name">position</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>25<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span>
     <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>before<span class="token punctuation">"</span></span>
     <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://images.unsplash.com/photo-1520903074185-8eca362b3dce?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80<span class="token punctuation">"</span></span>
@@ -588,11 +591,11 @@
     <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A person sitting on a yellow curb tying pure ui on a boot.<span class="token punctuation">"</span></span>
   <span class="token punctuation">/&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-image-comparer</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-634"></p-copy-button></pre>
-                </div>
+</code><p-copy-button class="copy-code-button" from="code-block-581"></p-copy-button></pre>
+                  </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-635"><span class="token keyword">import</span> PImageComparer <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/image-comparer'</span><span class="token punctuation">;</span>
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-582"><span class="token keyword">import</span> PImageComparer <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/image-comparer'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PImageComparer</span></span> <span class="token attr-name">position</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">25</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
@@ -608,326 +611,346 @@
     <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PImageComparer</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-635"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-582"></p-copy-button></pre>
+                  </div>
+                </div>
+
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-180"
+                  >
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
+
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
+                  >
+                    React
+                  </button>
+
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-210"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+              <h2 id="importing" class="anchor-heading">
+                Importing<a href="#importing" aria-label='Direct link to "Importing"'></a>
+              </h2>
+              <p>
+                If you’re using the autoloader or the traditional loader, you can ignore this section. Otherwise, feel
+                free to use any of the following snippets to
+                <a href="/getting-started/installation#cherry-picking">cherry pick</a> this component.
+              </p>
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+              <p-tab-group>
+                <p-tab slot="nav" panel="script">Script</p-tab>
+                <p-tab slot="nav" panel="import">Import</p-tab>
+                <p-tab slot="nav" panel="bundler">Bundler</p-tab>
+                <p-tab slot="nav" panel="react">React</p-tab>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
+                <p-tab-panel name="script">
+                  <p>
+                    To import this component from
+                    <a
+                      href="https://www.jsdelivr.com/package/npm/pure-uikit"
+                      class="external-link"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      >the CDN</a
+                    >
+                    using a script tag:
+                  </p>
+                  <pre><code class="language-html" id="code-block-583"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.6.29/cdn/components/image-comparer/image-comparer.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-583"></p-copy-button></pre>
+                </p-tab-panel>
 
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
+                <p-tab-panel name="import">
+                  <p>
+                    To import this component from
+                    <a
+                      href="https://www.jsdelivr.com/package/npm/pure-uikit"
+                      class="external-link"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      >the CDN</a
+                    >
+                    using a JavaScript import:
+                  </p>
+                  <pre><code class="language-js" id="code-block-584"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.6.29/cdn/components/image-comparer/image-comparer.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-584"></p-copy-button></pre>
+                </p-tab-panel>
+
+                <p-tab-panel name="bundler">
+                  <p>To import this component using <a href="/getting-started/installation#bundling">a bundler</a>:</p>
+                  <pre><code class="language-js" id="code-block-585"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/image-comparer/image-comparer.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-585"></p-copy-button></pre>
+                </p-tab-panel>
+
+                <p-tab-panel name="react">
+                  <p>To import this component as a <a href="/frameworks/react">React component</a>:</p>
+                  <pre><code class="language-js" id="code-block-586"><span class="token keyword">import</span> PImageComparer <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/image-comparer'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-586"></p-copy-button></pre>
+                </p-tab-panel>
+              </p-tab-group>
+
+              <h2 id="slots" class="anchor-heading">Slots<a href="#slots" aria-label='Direct link to "Slots"'></a></h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name">Name</th>
+                      <th class="table-description">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nowrap">
+                        <code>before</code>
+                      </td>
+                      <td>The before image, an <code>&lt;img&gt;</code> or <code>&lt;svg&gt;</code> element.</td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap">
+                        <code>after</code>
+                      </td>
+                      <td>The after image, an <code>&lt;img&gt;</code> or <code>&lt;svg&gt;</code> element.</td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap">
+                        <code>handle</code>
+                      </td>
+                      <td>The icon used inside the handle.</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
+
+              <p>
+                <em>Learn more about <a href="/getting-started/usage#slots">using slots</a>.</em>
+              </p>
+
+              <h2 id="properties" class="anchor-heading">
+                Properties<a href="#properties" aria-label='Direct link to "Properties"'></a>
+              </h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name">Name</th>
+                      <th class="table-description">Description</th>
+                      <th class="table-reflects">Reflects</th>
+                      <th class="table-type">Type</th>
+                      <th class="table-default">Default</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <code class="nowrap">position</code>
+                      </td>
+                      <td>The position of the divider as a percentage.</td>
+                      <td style="text-align: center">
+                        <p-icon label="yes" name="check-lg"></p-icon>
+                      </td>
+                      <td>
+                        <code>number</code>
+                      </td>
+                      <td>
+                        <code>50</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap"><code>updateComplete</code></td>
+                      <td>
+                        A read-only promise that resolves when the component has
+                        <a href="/getting-started/usage?#component-rendering-and-updating">finished updating</a>.
+                      </td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                <em
+                  >Learn more about
+                  <a href="/getting-started/usage#attributes-and-properties">attributes and properties</a>.</em
+                >
+              </p>
+
+              <h2 id="events" class="anchor-heading">
+                Events<a href="#events" aria-label='Direct link to "Events"'></a>
+              </h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name" data-flavor="html">Name</th>
+                      <th class="table-name" data-flavor="react">React Event</th>
+                      <th class="table-description">Description</th>
+                      <th class="table-event-detail">Event Detail</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-flavor="html"><code class="nowrap">p-change</code></td>
+                      <td data-flavor="react"><code class="nowrap">onPChange</code></td>
+                      <td>Emitted when the position changes.</td>
+                      <td>-</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                <em>Learn more about <a href="/getting-started/usage#events">events</a>.</em>
+              </p>
+
+              <h2 id="custom-properties" class="anchor-heading">
+                Custom Properties<a href="#custom-properties" aria-label='Direct link to "Custom Properties"'></a>
+              </h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name">Name</th>
+                      <th class="table-description">Description</th>
+                      <th class="table-default">Default</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nowrap"><code>--divider-width</code></td>
+                      <td>The width of the dividing line.</td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap"><code>--handle-size</code></td>
+                      <td>The size of the compare handle.</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                <em
+                  >Learn more about
+                  <a href="/getting-started/usage#custom-properties">customizing CSS custom properties</a>.</em
+                >
+              </p>
+
+              <h2 id="parts" class="anchor-heading">Parts<a href="#parts" aria-label='Direct link to "Parts"'></a></h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name">Name</th>
+                      <th class="table-description">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nowrap"><code>base</code></td>
+                      <td>The component’s base wrapper.</td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap"><code>before</code></td>
+                      <td>The container that wraps the before image.</td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap"><code>after</code></td>
+                      <td>The container that wraps the after image.</td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap"><code>divider</code></td>
+                      <td>The divider that separates the images.</td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap"><code>handle</code></td>
+                      <td>The handle that the user drags to expose the after image.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                <em>Learn more about <a href="/getting-started/customizing/#css-parts">customizing CSS parts</a>.</em>
+              </p>
+
+              <h2 id="dependencies" class="anchor-heading">
+                Dependencies<a href="#dependencies" aria-label='Direct link to "Dependencies"'></a>
+              </h2>
+
+              <p>This component automatically imports the following dependencies.</p>
+
+              <ul>
+                <li><code>&lt;p-icon&gt;</code></li>
+              </ul>
             </div>
 
-            <h2 id="importing" class="anchor-heading">
-              Importing<a href="#importing" aria-label='Direct link to "Importing"'></a>
-            </h2>
-            <p>
-              If you’re using the autoloader or the traditional loader, you can ignore this section. Otherwise, feel
-              free to use any of the following snippets to
-              <a href="/getting-started/installation#cherry-picking">cherry pick</a> this component.
-            </p>
-
-            <p-tab-group>
-              <p-tab slot="nav" panel="script">Script</p-tab>
-              <p-tab slot="nav" panel="import">Import</p-tab>
-              <p-tab slot="nav" panel="bundler">Bundler</p-tab>
-              <p-tab slot="nav" panel="react">React</p-tab>
-
-              <p-tab-panel name="script">
-                <p>
-                  To import this component from
-                  <a
-                    href="https://www.jsdelivr.com/package/npm/pure-uikit"
-                    class="external-link"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    >the CDN</a
-                  >
-                  using a script tag:
-                </p>
-                <pre><code class="language-html" id="code-block-636"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.5.11/cdn/components/image-comparer/image-comparer.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-636"></p-copy-button></pre>
-              </p-tab-panel>
-
-              <p-tab-panel name="import">
-                <p>
-                  To import this component from
-                  <a
-                    href="https://www.jsdelivr.com/package/npm/pure-uikit"
-                    class="external-link"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    >the CDN</a
-                  >
-                  using a JavaScript import:
-                </p>
-                <pre><code class="language-js" id="code-block-637"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.5.11/cdn/components/image-comparer/image-comparer.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-637"></p-copy-button></pre>
-              </p-tab-panel>
-
-              <p-tab-panel name="bundler">
-                <p>To import this component using <a href="/getting-started/installation#bundling">a bundler</a>:</p>
-                <pre><code class="language-js" id="code-block-638"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/image-comparer/image-comparer.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-638"></p-copy-button></pre>
-              </p-tab-panel>
-
-              <p-tab-panel name="react">
-                <p>To import this component as a <a href="/frameworks/react">React component</a>:</p>
-                <pre><code class="language-js" id="code-block-639"><span class="token keyword">import</span> PImageComparer <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/image-comparer'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-639"></p-copy-button></pre>
-              </p-tab-panel>
-            </p-tab-group>
-
-            <h2 id="slots" class="anchor-heading">Slots<a href="#slots" aria-label='Direct link to "Slots"'></a></h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name">Name</th>
-                    <th class="table-description">Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="nowrap">
-                      <code>before</code>
-                    </td>
-                    <td>The before image, an <code>&lt;img&gt;</code> or <code>&lt;svg&gt;</code> element.</td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap">
-                      <code>after</code>
-                    </td>
-                    <td>The after image, an <code>&lt;img&gt;</code> or <code>&lt;svg&gt;</code> element.</td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap">
-                      <code>handle</code>
-                    </td>
-                    <td>The icon used inside the handle.</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="content__toc">
+              <ul>
+                <li class="top"><a href="#">Image Comparer</a></li>
+                <li data-level="2"><a href="#examples">Examples</a></li>
+                <li data-level="3"><a href="#initial-position">Initial Position</a></li>
+                <li data-level="2"><a href="#importing">Importing</a></li>
+                <li data-level="2"><a href="#slots">Slots</a></li>
+                <li data-level="2"><a href="#properties">Properties</a></li>
+                <li data-level="2"><a href="#events">Events</a></li>
+                <li data-level="2"><a href="#custom-properties">Custom Properties</a></li>
+                <li data-level="2"><a href="#parts">Parts</a></li>
+                <li data-level="2"><a href="#dependencies">Dependencies</a></li>
+              </ul>
             </div>
-
-            <p>
-              <em>Learn more about <a href="/getting-started/usage#slots">using slots</a>.</em>
-            </p>
-
-            <h2 id="properties" class="anchor-heading">
-              Properties<a href="#properties" aria-label='Direct link to "Properties"'></a>
-            </h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name">Name</th>
-                    <th class="table-description">Description</th>
-                    <th class="table-reflects">Reflects</th>
-                    <th class="table-type">Type</th>
-                    <th class="table-default">Default</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <code class="nowrap">position</code>
-                    </td>
-                    <td>The position of the divider as a percentage.</td>
-                    <td style="text-align: center">
-                      <p-icon label="yes" name="check-lg"></p-icon>
-                    </td>
-                    <td>
-                      <code>number</code>
-                    </td>
-                    <td>
-                      <code>50</code>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap"><code>updateComplete</code></td>
-                    <td>
-                      A read-only promise that resolves when the component has
-                      <a href="/getting-started/usage?#component-rendering-and-updating">finished updating</a>.
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <p>
-              <em
-                >Learn more about
-                <a href="/getting-started/usage#attributes-and-properties">attributes and properties</a>.</em
-              >
-            </p>
-
-            <h2 id="events" class="anchor-heading">
-              Events<a href="#events" aria-label='Direct link to "Events"'></a>
-            </h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name" data-flavor="html">Name</th>
-                    <th class="table-name" data-flavor="react">React Event</th>
-                    <th class="table-description">Description</th>
-                    <th class="table-event-detail">Event Detail</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td data-flavor="html"><code class="nowrap">p-change</code></td>
-                    <td data-flavor="react"><code class="nowrap">onPChange</code></td>
-                    <td>Emitted when the position changes.</td>
-                    <td>-</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <p>
-              <em>Learn more about <a href="/getting-started/usage#events">events</a>.</em>
-            </p>
-
-            <h2 id="custom-properties" class="anchor-heading">
-              Custom Properties<a href="#custom-properties" aria-label='Direct link to "Custom Properties"'></a>
-            </h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name">Name</th>
-                    <th class="table-description">Description</th>
-                    <th class="table-default">Default</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="nowrap"><code>--divider-width</code></td>
-                    <td>The width of the dividing line.</td>
-                    <td></td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap"><code>--handle-size</code></td>
-                    <td>The size of the compare handle.</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <p>
-              <em
-                >Learn more about
-                <a href="/getting-started/usage#custom-properties">customizing CSS custom properties</a>.</em
-              >
-            </p>
-
-            <h2 id="parts" class="anchor-heading">Parts<a href="#parts" aria-label='Direct link to "Parts"'></a></h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name">Name</th>
-                    <th class="table-description">Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="nowrap"><code>base</code></td>
-                    <td>The component’s base wrapper.</td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap"><code>before</code></td>
-                    <td>The container that wraps the before image.</td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap"><code>after</code></td>
-                    <td>The container that wraps the after image.</td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap"><code>divider</code></td>
-                    <td>The divider that separates the images.</td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap"><code>handle</code></td>
-                    <td>The handle that the user drags to expose the after image.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <p>
-              <em>Learn more about <a href="/getting-started/customizing/#css-parts">customizing CSS parts</a>.</em>
-            </p>
-
-            <h2 id="dependencies" class="anchor-heading">
-              Dependencies<a href="#dependencies" aria-label='Direct link to "Dependencies"'></a>
-            </h2>
-
-            <p>This component automatically imports the following dependencies.</p>
-
-            <ul>
-              <li><code>&lt;p-icon&gt;</code></li>
-            </ul>
           </div>
         </div>
       </div>

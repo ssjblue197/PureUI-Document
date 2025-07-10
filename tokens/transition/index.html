@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="default" data-pure-ui-version="1.5.11">
+<html lang="en" data-layout="default" data-pure-ui-version="1.6.29">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -63,7 +63,7 @@
       <div id="header">
         <div class="left-header">
           <img src="/assets/images/logo.png" alt="Pure UI" id="logo" />
-          <span class="version">v1.5.11</span>
+          <span class="version">v1.6.29</span>
         </div>
         <span id="slogan"> PureUI: Simplify, Customize, Innovate. </span>
         <div class="right-header">
@@ -408,8 +408,6 @@
                 <h2>Resources</h2>
                 <ul>
                   <li><a href="/resources/community">Community</a></li>
-                  <li><a href="/resources/accessibility">Accessibility</a></li>
-                  <li><a href="/resources/contributing">Contributing</a></li>
                   <li><a href="/resources/changelog">Changelog</a></li>
                 </ul>
               </li>
@@ -417,47 +415,61 @@
           </nav>
         </aside>
 
-        <div id="content">
-          <div class="content__body">
-            <h1>Transition Tokens</h1>
-            <p>Transition tokens are used to provide consistent transitions throughout your app.</p>
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Token</th>
-                    <th>Value</th>
-                    <th>Example</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><code>--p-transition-x-slow</code></td>
-                    <td>1000ms</td>
-                    <td><div class="transition-demo" style="transition-duration: var(--p-transition-x-slow)"></div></td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-transition-slow</code></td>
-                    <td>500ms</td>
-                    <td><div class="transition-demo" style="transition-duration: var(--p-transition-slow)"></div></td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-transition-medium</code></td>
-                    <td>250ms</td>
-                    <td><div class="transition-demo" style="transition-duration: var(--p-transition-medium)"></div></td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-transition-fast</code></td>
-                    <td>150ms</td>
-                    <td><div class="transition-demo" style="transition-duration: var(--p-transition-fast)"></div></td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-transition-x-fast</code></td>
-                    <td>50ms</td>
-                    <td><div class="transition-demo" style="transition-duration: var(--p-transition-x-fast)"></div></td>
-                  </tr>
-                </tbody>
-              </table>
+        <div id="content" class="content--with-toc">
+          <div class="content--wrapper">
+            <div class="content__body">
+              <h1>Transition Tokens</h1>
+              <p>Transition tokens are used to provide consistent transitions throughout your app.</p>
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Token</th>
+                      <th>Value</th>
+                      <th>Example</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>--p-transition-x-slow</code></td>
+                      <td>1000ms</td>
+                      <td>
+                        <div class="transition-demo" style="transition-duration: var(--p-transition-x-slow)"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-transition-slow</code></td>
+                      <td>500ms</td>
+                      <td><div class="transition-demo" style="transition-duration: var(--p-transition-slow)"></div></td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-transition-medium</code></td>
+                      <td>250ms</td>
+                      <td>
+                        <div class="transition-demo" style="transition-duration: var(--p-transition-medium)"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-transition-fast</code></td>
+                      <td>150ms</td>
+                      <td><div class="transition-demo" style="transition-duration: var(--p-transition-fast)"></div></td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-transition-x-fast</code></td>
+                      <td>50ms</td>
+                      <td>
+                        <div class="transition-demo" style="transition-duration: var(--p-transition-x-fast)"></div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="content__toc">
+              <ul>
+                <li class="top"><a href="#">Transition Tokens</a></li>
+              </ul>
             </div>
           </div>
         </div>

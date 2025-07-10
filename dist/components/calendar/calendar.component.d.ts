@@ -157,6 +157,7 @@ export default class PCalendar extends PureElement implements PureFormControl {
      * be an array. **For this reason, values must not contain spaces.**
      */
     _value: Date | Date[];
+    weekStartsWith: string;
     static get properties(): {
         value: {
             type: ObjectConstructor;

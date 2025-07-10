@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="component" data-pure-ui-version="1.5.11">
+<html lang="en" data-layout="component" data-pure-ui-version="1.6.29">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -57,7 +57,7 @@
       <div id="header">
         <div class="left-header">
           <img src="/assets/images/logo.png" alt="Pure UI" id="logo" />
-          <span class="version">v1.5.11</span>
+          <span class="version">v1.6.29</span>
         </div>
         <span id="slogan"> PureUI: Simplify, Customize, Innovate. </span>
         <div class="right-header">
@@ -402,8 +402,6 @@
                 <h2>Resources</h2>
                 <ul>
                   <li><a href="/resources/community">Community</a></li>
-                  <li><a href="/resources/accessibility">Accessibility</a></li>
-                  <li><a href="/resources/contributing">Contributing</a></li>
                   <li><a href="/resources/changelog">Changelog</a></li>
                 </ul>
               </li>
@@ -411,127 +409,132 @@
           </nav>
         </aside>
 
-        <div id="content">
-          <div class="content__body">
-            <header class="component-header">
-              <h1>Spinner</h1>
+        <div id="content" class="content--with-toc">
+          <div class="content--wrapper">
+            <div class="content__body">
+              <header class="component-header">
+                <h1>Spinner</h1>
 
-              <div class="component-header__tag">
-                <code>&lt;p-spinner&gt; | PSpinner</code>
-              </div>
-
-              <div class="component-header__info">
-                <p-badge variant="neutral" pill=""> Since 1.0 </p-badge>
-                <p-badge variant="primary" pill="" style="text-transform: capitalize"> stable </p-badge>
-              </div>
-            </header>
-
-            <p class="component-summary">Spinners are used to show the progress of an indeterminate operation.</p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <p-spinner></p-spinner>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
-                </div>
-              </div>
-
-              <div class="code-preview__source-group" id="code-preview-source-group-337">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-983"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-spinner</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-spinner</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-983"></p-copy-button></pre>
+                <div class="component-header__tag">
+                  <code>&lt;p-spinner&gt; | PSpinner</code>
                 </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-984"><span class="token keyword">import</span> PSpinner <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/spinner'</span><span class="token punctuation">;</span>
+                <div class="component-header__info">
+                  <p-badge variant="neutral" pill=""> Since 1.0 </p-badge>
+                  <p-badge variant="primary" pill="" style="text-transform: capitalize"> stable </p-badge>
+                </div>
+              </header>
+
+              <p class="component-summary">Spinners are used to show the progress of an indeterminate operation.</p>
+
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <p-spinner></p-spinner>
+
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
+                </div>
+
+                <div class="code-preview__source-group" id="code-preview-source-group-346">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-1016"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-spinner</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-spinner</span><span class="token punctuation">&gt;</span></span>
+</code><p-copy-button class="copy-code-button" from="code-block-1016"></p-copy-button></pre>
+                  </div>
+
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-1017"><span class="token keyword">import</span> PSpinner <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/spinner'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PSpinner</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-984"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1017"></p-copy-button></pre>
+                  </div>
+                </div>
+
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-346"
+                  >
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
+
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
+                  >
+                    React
+                  </button>
+
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-337"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+              <h2 id="examples" class="anchor-heading">
+                Examples<a href="#examples" aria-label='Direct link to "Examples"'></a>
+              </h2>
+              <h3 id="size" class="anchor-heading">Size<a href="#size" aria-label='Direct link to "Size"'></a></h3>
+              <p>
+                Spinners are sized based on the current font size. To change their size, set the
+                <code>font-size</code> property on the spinner itself or on a parent element as shown below.
+              </p>
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <p-spinner></p-spinner>
+                  <p-spinner style="font-size: 2rem"></p-spinner>
+                  <p-spinner style="font-size: 3rem"></p-spinner>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
-
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <h2 id="examples" class="anchor-heading">
-              Examples<a href="#examples" aria-label='Direct link to "Examples"'></a>
-            </h2>
-            <h3 id="size" class="anchor-heading">Size<a href="#size" aria-label='Direct link to "Size"'></a></h3>
-            <p>
-              Spinners are sized based on the current font size. To change their size, set the
-              <code>font-size</code> property on the spinner itself or on a parent element as shown below.
-            </p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <p-spinner></p-spinner>
-                <p-spinner style="font-size: 2rem"></p-spinner>
-                <p-spinner style="font-size: 3rem"></p-spinner>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
                 </div>
-              </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-338">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-985"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-spinner</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-spinner</span><span class="token punctuation">&gt;</span></span>
+                <div class="code-preview__source-group" id="code-preview-source-group-347">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-1018"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-spinner</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-spinner</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-spinner</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">font-size</span><span class="token punctuation">:</span> 2rem<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-spinner</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-spinner</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">font-size</span><span class="token punctuation">:</span> 3rem<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-spinner</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-985"></p-copy-button></pre>
-                </div>
+</code><p-copy-button class="copy-code-button" from="code-block-1018"></p-copy-button></pre>
+                  </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-986"><span class="token keyword">import</span> PSpinner <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/spinner'</span><span class="token punctuation">;</span>
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-1019"><span class="token keyword">import</span> PSpinner <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/spinner'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
@@ -540,85 +543,90 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PSpinner</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token literal-property property">fontSize</span><span class="token operator">:</span> <span class="token string">'3rem'</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-986"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1019"></p-copy-button></pre>
+                  </div>
                 </div>
-              </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-338"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-347"
                   >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
-
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
                   >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
+                    React
+                  </button>
 
-            <h3 id="track-width" class="anchor-heading">
-              Track Width<a href="#track-width" aria-label='Direct link to "Track Width"'></a>
-            </h3>
-            <p>
-              The width of the spinner’s track can be changed by setting the <code>--track-width</code> custom property.
-            </p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <p-spinner style="font-size: 50px; --track-width: 10px"></p-spinner>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-339">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-987"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-spinner</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">font-size</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span> <span class="token property">--track-width</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-spinner</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-987"></p-copy-button></pre>
+              <h3 id="track-width" class="anchor-heading">
+                Track Width<a href="#track-width" aria-label='Direct link to "Track Width"'></a>
+              </h3>
+              <p>
+                The width of the spinner’s track can be changed by setting the <code>--track-width</code> custom
+                property.
+              </p>
+
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <p-spinner style="font-size: 50px; --track-width: 10px"></p-spinner>
+
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
                 </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-988"><span class="token keyword">import</span> PSpinner <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/spinner'</span><span class="token punctuation">;</span>
+                <div class="code-preview__source-group" id="code-preview-source-group-348">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-1020"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-spinner</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">font-size</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span> <span class="token property">--track-width</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-spinner</span><span class="token punctuation">&gt;</span></span>
+</code><p-copy-button class="copy-code-button" from="code-block-1020"></p-copy-button></pre>
+                  </div>
+
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-1021"><span class="token keyword">import</span> PSpinner <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/spinner'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PSpinner</span></span>
@@ -628,84 +636,88 @@
     <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
   <span class="token punctuation">/&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-988"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1021"></p-copy-button></pre>
+                  </div>
                 </div>
-              </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-339"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-348"
                   >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
-
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
                   >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
+                    React
+                  </button>
 
-            <h3 id="color" class="anchor-heading">Color<a href="#color" aria-label='Direct link to "Color"'></a></h3>
-            <p>
-              The spinner’s colors can be changed by setting the <code>--indicator-color</code> and
-              <code>--track-color</code> custom properties.
-            </p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <p-spinner style="font-size: 3rem; --indicator-color: deeppink; --track-color: pink"></p-spinner>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-340">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-989"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-spinner</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">font-size</span><span class="token punctuation">:</span> 3rem<span class="token punctuation">;</span> <span class="token property">--indicator-color</span><span class="token punctuation">:</span> deeppink<span class="token punctuation">;</span> <span class="token property">--track-color</span><span class="token punctuation">:</span> pink<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-spinner</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-989"></p-copy-button></pre>
+              <h3 id="color" class="anchor-heading">Color<a href="#color" aria-label='Direct link to "Color"'></a></h3>
+              <p>
+                The spinner’s colors can be changed by setting the <code>--indicator-color</code> and
+                <code>--track-color</code> custom properties.
+              </p>
+
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <p-spinner style="font-size: 3rem; --indicator-color: deeppink; --track-color: pink"></p-spinner>
+
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
                 </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-990"><span class="token keyword">import</span> PSpinner <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/spinner'</span><span class="token punctuation">;</span>
+                <div class="code-preview__source-group" id="code-preview-source-group-349">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-1022"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-spinner</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">font-size</span><span class="token punctuation">:</span> 3rem<span class="token punctuation">;</span> <span class="token property">--indicator-color</span><span class="token punctuation">:</span> deeppink<span class="token punctuation">;</span> <span class="token property">--track-color</span><span class="token punctuation">:</span> pink<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-spinner</span><span class="token punctuation">&gt;</span></span>
+</code><p-copy-button class="copy-code-button" from="code-block-1022"></p-copy-button></pre>
+                  </div>
+
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-1023"><span class="token keyword">import</span> PSpinner <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/spinner'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PSpinner</span></span>
@@ -716,187 +728,205 @@
     <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
   <span class="token punctuation">/&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-990"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1023"></p-copy-button></pre>
+                  </div>
+                </div>
+
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-349"
+                  >
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
+
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
+                  >
+                    React
+                  </button>
+
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-340"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+              <h2 id="importing" class="anchor-heading">
+                Importing<a href="#importing" aria-label='Direct link to "Importing"'></a>
+              </h2>
+              <p>
+                If you’re using the autoloader or the traditional loader, you can ignore this section. Otherwise, feel
+                free to use any of the following snippets to
+                <a href="/getting-started/installation#cherry-picking">cherry pick</a> this component.
+              </p>
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+              <p-tab-group>
+                <p-tab slot="nav" panel="script">Script</p-tab>
+                <p-tab slot="nav" panel="import">Import</p-tab>
+                <p-tab slot="nav" panel="bundler">Bundler</p-tab>
+                <p-tab slot="nav" panel="react">React</p-tab>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
+                <p-tab-panel name="script">
+                  <p>
+                    To import this component from
+                    <a
+                      href="https://www.jsdelivr.com/package/npm/pure-uikit"
+                      class="external-link"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      >the CDN</a
+                    >
+                    using a script tag:
+                  </p>
+                  <pre><code class="language-html" id="code-block-1024"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.6.29/cdn/components/spinner/spinner.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-1024"></p-copy-button></pre>
+                </p-tab-panel>
 
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
+                <p-tab-panel name="import">
+                  <p>
+                    To import this component from
+                    <a
+                      href="https://www.jsdelivr.com/package/npm/pure-uikit"
+                      class="external-link"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      >the CDN</a
+                    >
+                    using a JavaScript import:
+                  </p>
+                  <pre><code class="language-js" id="code-block-1025"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.6.29/cdn/components/spinner/spinner.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1025"></p-copy-button></pre>
+                </p-tab-panel>
+
+                <p-tab-panel name="bundler">
+                  <p>To import this component using <a href="/getting-started/installation#bundling">a bundler</a>:</p>
+                  <pre><code class="language-js" id="code-block-1026"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/spinner/spinner.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1026"></p-copy-button></pre>
+                </p-tab-panel>
+
+                <p-tab-panel name="react">
+                  <p>To import this component as a <a href="/frameworks/react">React component</a>:</p>
+                  <pre><code class="language-js" id="code-block-1027"><span class="token keyword">import</span> PSpinner <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/spinner'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-1027"></p-copy-button></pre>
+                </p-tab-panel>
+              </p-tab-group>
+
+              <h2 id="custom-properties" class="anchor-heading">
+                Custom Properties<a href="#custom-properties" aria-label='Direct link to "Custom Properties"'></a>
+              </h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name">Name</th>
+                      <th class="table-description">Description</th>
+                      <th class="table-default">Default</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nowrap"><code>--track-width</code></td>
+                      <td>The width of the track.</td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap"><code>--track-color</code></td>
+                      <td>The color of the track.</td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap"><code>--indicator-color</code></td>
+                      <td>The color of the spinner’s indicator.</td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap"><code>--speed</code></td>
+                      <td>The time it takes for the spinner to complete one animation cycle.</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
+
+              <p>
+                <em
+                  >Learn more about
+                  <a href="/getting-started/usage#custom-properties">customizing CSS custom properties</a>.</em
+                >
+              </p>
+
+              <h2 id="parts" class="anchor-heading">Parts<a href="#parts" aria-label='Direct link to "Parts"'></a></h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name">Name</th>
+                      <th class="table-description">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nowrap"><code>base</code></td>
+                      <td>The component’s base wrapper.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                <em>Learn more about <a href="/getting-started/customizing/#css-parts">customizing CSS parts</a>.</em>
+              </p>
             </div>
 
-            <h2 id="importing" class="anchor-heading">
-              Importing<a href="#importing" aria-label='Direct link to "Importing"'></a>
-            </h2>
-            <p>
-              If you’re using the autoloader or the traditional loader, you can ignore this section. Otherwise, feel
-              free to use any of the following snippets to
-              <a href="/getting-started/installation#cherry-picking">cherry pick</a> this component.
-            </p>
-
-            <p-tab-group>
-              <p-tab slot="nav" panel="script">Script</p-tab>
-              <p-tab slot="nav" panel="import">Import</p-tab>
-              <p-tab slot="nav" panel="bundler">Bundler</p-tab>
-              <p-tab slot="nav" panel="react">React</p-tab>
-
-              <p-tab-panel name="script">
-                <p>
-                  To import this component from
-                  <a
-                    href="https://www.jsdelivr.com/package/npm/pure-uikit"
-                    class="external-link"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    >the CDN</a
-                  >
-                  using a script tag:
-                </p>
-                <pre><code class="language-html" id="code-block-991"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.5.11/cdn/components/spinner/spinner.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-991"></p-copy-button></pre>
-              </p-tab-panel>
-
-              <p-tab-panel name="import">
-                <p>
-                  To import this component from
-                  <a
-                    href="https://www.jsdelivr.com/package/npm/pure-uikit"
-                    class="external-link"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    >the CDN</a
-                  >
-                  using a JavaScript import:
-                </p>
-                <pre><code class="language-js" id="code-block-992"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.5.11/cdn/components/spinner/spinner.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-992"></p-copy-button></pre>
-              </p-tab-panel>
-
-              <p-tab-panel name="bundler">
-                <p>To import this component using <a href="/getting-started/installation#bundling">a bundler</a>:</p>
-                <pre><code class="language-js" id="code-block-993"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/spinner/spinner.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-993"></p-copy-button></pre>
-              </p-tab-panel>
-
-              <p-tab-panel name="react">
-                <p>To import this component as a <a href="/frameworks/react">React component</a>:</p>
-                <pre><code class="language-js" id="code-block-994"><span class="token keyword">import</span> PSpinner <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/spinner'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-994"></p-copy-button></pre>
-              </p-tab-panel>
-            </p-tab-group>
-
-            <h2 id="custom-properties" class="anchor-heading">
-              Custom Properties<a href="#custom-properties" aria-label='Direct link to "Custom Properties"'></a>
-            </h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name">Name</th>
-                    <th class="table-description">Description</th>
-                    <th class="table-default">Default</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="nowrap"><code>--track-width</code></td>
-                    <td>The width of the track.</td>
-                    <td></td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap"><code>--track-color</code></td>
-                    <td>The color of the track.</td>
-                    <td></td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap"><code>--indicator-color</code></td>
-                    <td>The color of the spinner’s indicator.</td>
-                    <td></td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap"><code>--speed</code></td>
-                    <td>The time it takes for the spinner to complete one animation cycle.</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="content__toc">
+              <ul>
+                <li class="top"><a href="#">Spinner</a></li>
+                <li data-level="2"><a href="#examples">Examples</a></li>
+                <li data-level="3"><a href="#size">Size</a></li>
+                <li data-level="3"><a href="#track-width">Track Width</a></li>
+                <li data-level="3"><a href="#color">Color</a></li>
+                <li data-level="2"><a href="#importing">Importing</a></li>
+                <li data-level="2"><a href="#custom-properties">Custom Properties</a></li>
+                <li data-level="2"><a href="#parts">Parts</a></li>
+              </ul>
             </div>
-
-            <p>
-              <em
-                >Learn more about
-                <a href="/getting-started/usage#custom-properties">customizing CSS custom properties</a>.</em
-              >
-            </p>
-
-            <h2 id="parts" class="anchor-heading">Parts<a href="#parts" aria-label='Direct link to "Parts"'></a></h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name">Name</th>
-                    <th class="table-description">Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="nowrap"><code>base</code></td>
-                    <td>The component’s base wrapper.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <p>
-              <em>Learn more about <a href="/getting-started/customizing/#css-parts">customizing CSS parts</a>.</em>
-            </p>
           </div>
         </div>
       </div>

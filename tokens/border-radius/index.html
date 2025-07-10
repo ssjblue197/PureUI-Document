@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="default" data-pure-ui-version="1.5.11">
+<html lang="en" data-layout="default" data-pure-ui-version="1.6.29">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -63,7 +63,7 @@
       <div id="header">
         <div class="left-header">
           <img src="/assets/images/logo.png" alt="Pure UI" id="logo" />
-          <span class="version">v1.5.11</span>
+          <span class="version">v1.6.29</span>
         </div>
         <span id="slogan"> PureUI: Simplify, Customize, Innovate. </span>
         <div class="right-header">
@@ -408,8 +408,6 @@
                 <h2>Resources</h2>
                 <ul>
                   <li><a href="/resources/community">Community</a></li>
-                  <li><a href="/resources/accessibility">Accessibility</a></li>
-                  <li><a href="/resources/contributing">Contributing</a></li>
                   <li><a href="/resources/changelog">Changelog</a></li>
                 </ul>
               </li>
@@ -417,69 +415,85 @@
           </nav>
         </aside>
 
-        <div id="content">
-          <div class="content__body">
-            <h1>Border Radius Tokens</h1>
-            <p>
-              Border radius tokens are used to give sharp edges a more subtle, rounded effect. They use rem units so
-              they scale with the base font size. The pixel values displayed are based on a 16px font size.
-            </p>
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Token</th>
-                    <th>Value</th>
-                    <th>Example</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><code>--p-border-radius-small</code></td>
-                    <td>0.1875rem (3px)</td>
-                    <td><div class="border-radius-demo" style="border-radius: var(--p-border-radius-small)"></div></td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-border-radius-medium</code></td>
-                    <td>0.25rem (4px)</td>
-                    <td><div class="border-radius-demo" style="border-radius: var(--p-border-radius-medium)"></div></td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-border-radius-large</code></td>
-                    <td>0.5rem (8px)</td>
-                    <td><div class="border-radius-demo" style="border-radius: var(--p-border-radius-large)"></div></td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-border-radius-x-large</code></td>
-                    <td>0.75rem (12px)</td>
-                    <td>
-                      <div class="border-radius-demo" style="border-radius: var(--p-border-radius-x-large)"></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-border-radius-2x-large</code></td>
-                    <td>1rem (16px)</td>
-                    <td>
-                      <div class="border-radius-demo" style="border-radius: var(--p-border-radius-2x-large)"></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-border-radius-circle</code></td>
-                    <td>50%</td>
-                    <td><div class="border-radius-demo" style="border-radius: var(--p-border-radius-circle)"></div></td>
-                  </tr>
-                  <tr>
-                    <td><code>--p-border-radius-pill</code></td>
-                    <td>9999px</td>
-                    <td>
-                      <div
-                        class="border-radius-demo"
-                        style="border-radius: var(--p-border-radius-pill); width: 6rem"
-                      ></div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+        <div id="content" class="content--with-toc">
+          <div class="content--wrapper">
+            <div class="content__body">
+              <h1>Border Radius Tokens</h1>
+              <p>
+                Border radius tokens are used to give sharp edges a more subtle, rounded effect. They use rem units so
+                they scale with the base font size. The pixel values displayed are based on a 16px font size.
+              </p>
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Token</th>
+                      <th>Value</th>
+                      <th>Example</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>--p-border-radius-small</code></td>
+                      <td>0.1875rem (3px)</td>
+                      <td>
+                        <div class="border-radius-demo" style="border-radius: var(--p-border-radius-small)"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-border-radius-medium</code></td>
+                      <td>0.25rem (4px)</td>
+                      <td>
+                        <div class="border-radius-demo" style="border-radius: var(--p-border-radius-medium)"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-border-radius-large</code></td>
+                      <td>0.5rem (8px)</td>
+                      <td>
+                        <div class="border-radius-demo" style="border-radius: var(--p-border-radius-large)"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-border-radius-x-large</code></td>
+                      <td>0.75rem (12px)</td>
+                      <td>
+                        <div class="border-radius-demo" style="border-radius: var(--p-border-radius-x-large)"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-border-radius-2x-large</code></td>
+                      <td>1rem (16px)</td>
+                      <td>
+                        <div class="border-radius-demo" style="border-radius: var(--p-border-radius-2x-large)"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-border-radius-circle</code></td>
+                      <td>50%</td>
+                      <td>
+                        <div class="border-radius-demo" style="border-radius: var(--p-border-radius-circle)"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>--p-border-radius-pill</code></td>
+                      <td>9999px</td>
+                      <td>
+                        <div
+                          class="border-radius-demo"
+                          style="border-radius: var(--p-border-radius-pill); width: 6rem"
+                        ></div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="content__toc">
+              <ul>
+                <li class="top"><a href="#">Border Radius</a></li>
+              </ul>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="default" data-pure-ui-version="1.5.11">
+<html lang="en" data-layout="default" data-pure-ui-version="1.6.29">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -57,7 +57,7 @@
       <div id="header">
         <div class="left-header">
           <img src="/assets/images/logo.png" alt="Pure UI" id="logo" />
-          <span class="version">v1.5.11</span>
+          <span class="version">v1.6.29</span>
         </div>
         <span id="slogan"> PureUI: Simplify, Customize, Innovate. </span>
         <div class="right-header">
@@ -402,8 +402,6 @@
                 <h2>Resources</h2>
                 <ul>
                   <li><a href="/resources/community">Community</a></li>
-                  <li><a href="/resources/accessibility">Accessibility</a></li>
-                  <li><a href="/resources/contributing">Contributing</a></li>
                   <li><a href="/resources/changelog">Changelog</a></li>
                 </ul>
               </li>
@@ -411,281 +409,287 @@
           </nav>
         </aside>
 
-        <div id="content">
-          <div class="content__body">
-            <div class="splash">
-              <div class="splash-start">
-                <img class="splash-logo" src="/assets/images/wordmark.svg" alt="Pure UI" />
-                <h1><p-visually-hidden>Pure UI:</p-visually-hidden> Elevate Your Web Development Experience 🌟</h1>
-                <ul>
-                  <li>Lightweight, fully customizable 🎨, scalable, and built on modern web standards.</li>
-                  <li>Compatible with all frameworks 🧩</li>
-                  <li>Support a light/dark theme 🌛</li>
-                  <li>Builtin localization 💬</li>
-                  <li>
-                    Included more advance components: Calendar, Data Table, Form, Smart Container, Combobox and more!
-                  </li>
-                </ul>
+        <div id="content" class="">
+          <div class="content--wrapper">
+            <div class="content__body">
+              <div class="splash">
+                <div class="splash-start">
+                  <img class="splash-logo" src="/assets/images/wordmark.svg" alt="Pure UI" />
+                  <h1><p-visually-hidden>Pure UI:</p-visually-hidden> Elevate Your Web Development Experience 🌟</h1>
+                  <ul>
+                    <li>Lightweight, fully customizable 🎨, scalable, and built on modern web standards.</li>
+                    <li>Compatible with all frameworks 🧩</li>
+                    <li>Support a light/dark theme 🌛</li>
+                    <li>Builtin localization 💬</li>
+                    <li>
+                      Included more advance components: Calendar, Data Table, Form, Smart Container, Combobox and more!
+                    </li>
+                  </ul>
+                </div>
+                <div class="splash-end">
+                  <img
+                    class="splash-image"
+                    src="/assets/images/undraw-content-team.svg"
+                    alt="Cartoon of people assembling components while standing on a giant laptop."
+                  />
+                </div>
               </div>
-              <div class="splash-end">
-                <img
-                  class="splash-image"
-                  src="/assets/images/undraw-content-team.svg"
-                  alt="Cartoon of people assembling components while standing on a giant laptop."
-                />
-              </div>
-            </div>
-            <h2 id="quick-start" class="anchor-heading">
-              Quick Start<a href="#quick-start" aria-label='Direct link to "Quick Start"'></a>
-            </h2>
-            <p>Add the following code to your page.</p>
-            <!-- prettier-ignore -->
-            <pre><code class="language-html" id="code-block-1"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.5.11/cdn/themes/light.css<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.5.11/cdn/pure-ui-autoloader.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+              <h2 id="quick-start" class="anchor-heading">
+                Quick Start<a href="#quick-start" aria-label='Direct link to "Quick Start"'></a>
+              </h2>
+              <p>Add the following code to your page.</p>
+              <!-- prettier-ignore -->
+              <pre><code class="language-html" id="code-block-1"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.6.29/cdn/themes/light.css<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.6.29/cdn/pure-ui-autoloader.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
 </code><p-copy-button class="copy-code-button" from="code-block-1"></p-copy-button></pre>
-            <p>Now you have access to all of Pure UI’s components! Try adding a button:</p>
+              <p>Now you have access to all of Pure UI’s components! Try adding a button:</p>
 
-            <div class="code-preview code-preview--expanded">
-              <div class="code-preview__preview">
-                <p-button>Click me</p-button>
+              <div class="code-preview code-preview--expanded">
+                <div class="code-preview__preview">
+                  <p-button>Click me</p-button>
 
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
                 </div>
-              </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-1">
-                <div class="code-preview__source code-preview__source--html">
-                  <pre><code class="language-html" id="code-block-2"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-button</span><span class="token punctuation">&gt;</span></span>Click me<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-button</span><span class="token punctuation">&gt;</span></span>
+                <div class="code-preview__source-group" id="code-preview-source-group-1">
+                  <div class="code-preview__source code-preview__source--html">
+                    <pre><code class="language-html" id="code-block-2"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-button</span><span class="token punctuation">&gt;</span></span>Click me<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-button</span><span class="token punctuation">&gt;</span></span>
 </code><p-copy-button class="copy-code-button" from="code-block-2"></p-copy-button></pre>
+                  </div>
+                </div>
+
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="true"
+                    aria-controls="code-preview-source-group-1"
+                  >
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="true"
-                  aria-controls="code-preview-source-group-1"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+              <div role="alert" class="callout callout--tip">
+                <p>
+                  This will activate Pure UI’s experimental autoloader, which registers components on the fly as you use
+                  them. To learn more about it, or for other ways to install Pure UI, refer to the
+                  <a href="getting-started/installation">installation instructions</a>.
+                </p>
               </div>
-            </div>
-
-            <div role="alert" class="callout callout--tip">
+              <h2 id="new-to-web-components" class="anchor-heading">
+                New to Web Components?<a
+                  href="#new-to-web-components"
+                  aria-label='Direct link to "New to Web Components?"'
+                ></a>
+              </h2>
               <p>
-                This will activate Pure UI’s experimental autoloader, which registers components on the fly as you use
-                them. To learn more about it, or for other ways to install Pure UI, refer to the
-                <a href="getting-started/installation">installation instructions</a>.
-              </p>
-            </div>
-            <h2 id="new-to-web-components" class="anchor-heading">
-              New to Web Components?<a
-                href="#new-to-web-components"
-                aria-label='Direct link to "New to Web Components?"'
-              ></a>
-            </h2>
-            <p>
-              <strong>TL;DR</strong> –&nbsp;we finally have a way to create
-              <a
-                href="https://html.spec.whatwg.org/multipage/custom-elements.html"
-                class="external-link"
-                rel="noopener noreferrer"
-                target="_blank"
-                >our own HTML elements</a
-              >
-              and use them in any framework we want!
-            </p>
-            <p>
-              Thanks to the popularity of frameworks such as Angular, Vue, and React, component-driven development has
-              become a part of our every day lives. Components help us encapsulate styles and behaviors into reusable
-              building blocks. They make a lot of sense in terms of design, development, and testing.
-            </p>
-            <p>Unfortunately, <em>framework-specific</em> components fail us in a number of ways:</p>
-            <ul>
-              <li>You can only use them in the framework they’re designed for 🔒</li>
-              <li>Their lifespan is limited to that of the framework’s ⏳</li>
-              <li>
-                New frameworks/versions can lead to breaking changes, requiring substantial effort to update components
-                😭
-              </li>
-            </ul>
-            <p>
-              Web components solve these problems. They’re
-              <a
-                href="https://caniuse.com/#feat=custom-elementsv1"
-                class="active-link external-link"
-                rel="noopener noreferrer"
-                target="_blank"
-                >supported by all modern browsers</a
-              >, they’re framework-agnostic, and they’re
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/Web_Components"
-                class="external-link"
-                rel="noopener noreferrer"
-                target="_blank"
-                >part of the standard</a
-              >, so we know they’ll be supported for many years to come.
-            </p>
-            <p>This is the technology that Pure UI is built on.</p>
-            <h2 id="what-problem-does-this-solve" class="anchor-heading">
-              What Problem Does This Solve?<a
-                href="#what-problem-does-this-solve"
-                aria-label='Direct link to "What Problem Does This Solve?"'
-              ></a>
-            </h2>
-            <p>
-              Pure UI provides a collection of professionally designed, highly customizable UI components built on a
-              framework agnostic technology. Why spend hundreds of hours (or more) building a design system from
-              scratch? Why make a component library that only works with one framework?
-            </p>
-            <p>With Pure UI, you can:</p>
-            <ul>
-              <li>Start building things faster (no need to roll your own buttons)</li>
-              <li>Build multiple apps with different frameworks that all share the same UI components</li>
-              <li>Fully customize components to match your existing designs</li>
-              <li>Incrementally adopt components as needed (no need to ditch your framework)</li>
-              <li>Upgrade or switch frameworks without rebuilding foundational components</li>
-            </ul>
-            <p>
-              If your organization is looking to build a design system,
-              <a
-                href="https://medium.com/eightshapes-llc/and-you-thought-buttons-were-easy-26eb5b5c1871"
-                class="external-link"
-                rel="noopener noreferrer"
-                target="_blank"
-                >Pure UI will save you thousands of dollars</a
-              >. All the foundational components you need are right here, ready to be customized for your brand. And
-              since it’s built on web standards, browsers will continue to support it for many years to come.
-            </p>
-            <p>
-              Whether you use Pure UI as a starting point for your organization’s design system or for a fun personal
-              project, there’s no limit to what you can do with it.
-            </p>
-            <h2 id="browser-support" class="anchor-heading">
-              Browser Support<a href="#browser-support" aria-label='Direct link to "Browser Support"'></a>
-            </h2>
-            <p>Pure UI is tested in the latest two versions of the following browsers.</p>
-            <img src="/assets/images/chrome.png" alt="Chrome" width="64" height="64" />
-            <img src="/assets/images/edge.png" alt="Edge" width="64" height="64" />
-            <img src="/assets/images/firefox.png" alt="Firefox" width="64" height="64" />
-            <img src="/assets/images/opera.png" alt="Opera" width="64" height="64" />
-            <img src="/assets/images/safari.png" alt="Safari" width="64" height="64" />
-            <p>Critical bug fixes in earlier versions will be addressed based on their severity and impact.</p>
-            <p>
-              If you need to support IE11 or pre-Chromium Edge, this library isn’t for you. Although web components can
-              (to some degree) be polyfilled for legacy browsers, supporting them is outside the scope of this project.
-              If you’re using Pure UI in such a browser, you’re gonna have a bad time. ⛷
-            </p>
-            <h2 id="attribution" class="anchor-heading">
-              Attribution<a href="#attribution" aria-label='Direct link to "Attribution"'></a>
-            </h2>
-            <p>Special thanks to the following projects and individuals that help make Pure UI possible.</p>
-            <ul>
-              <li>
-                Components are built with
-                <a href="https://lit.dev/" class="active-link external-link" rel="noopener noreferrer" target="_blank"
-                  >Lit</a
-                >
-              </li>
-              <li>
-                Component metadata is generated by the
+                <strong>TL;DR</strong> –&nbsp;we finally have a way to create
                 <a
-                  href="https://github.com/open-wc/custom-elements-manifest"
+                  href="https://html.spec.whatwg.org/multipage/custom-elements.html"
                   class="external-link"
                   rel="noopener noreferrer"
                   target="_blank"
-                  >Custom Elements Manifest Analyzer</a
+                  >our own HTML elements</a
                 >
-              </li>
-              <li>
-                Documentation is powered by
+                and use them in any framework we want!
+              </p>
+              <p>
+                Thanks to the popularity of frameworks such as Angular, Vue, and React, component-driven development has
+                become a part of our every day lives. Components help us encapsulate styles and behaviors into reusable
+                building blocks. They make a lot of sense in terms of design, development, and testing.
+              </p>
+              <p>Unfortunately, <em>framework-specific</em> components fail us in a number of ways:</p>
+              <ul>
+                <li>You can only use them in the framework they’re designed for 🔒</li>
+                <li>Their lifespan is limited to that of the framework’s ⏳</li>
+                <li>
+                  New frameworks/versions can lead to breaking changes, requiring substantial effort to update
+                  components 😭
+                </li>
+              </ul>
+              <p>
+                Web components solve these problems. They’re
                 <a
-                  href="https://www.11ty.dev/"
+                  href="https://caniuse.com/#feat=custom-elementsv1"
                   class="active-link external-link"
                   rel="noopener noreferrer"
                   target="_blank"
-                  >11ty</a
-                >
-              </li>
-              <li>
-                CDN services are provided by
+                  >supported by all modern browsers</a
+                >, they’re framework-agnostic, and they’re
                 <a
-                  href="https://www.jsdelivr.com/"
-                  class="active-link external-link"
+                  href="https://developer.mozilla.org/en-US/docs/Web/Web_Components"
+                  class="external-link"
                   rel="noopener noreferrer"
                   target="_blank"
-                  >jsDelivr</a
-                >
-              </li>
-              <li>
-                Color primitives are inspired by
+                  >part of the standard</a
+                >, so we know they’ll be supported for many years to come.
+              </p>
+              <p>This is the technology that Pure UI is built on.</p>
+              <h2 id="what-problem-does-this-solve" class="anchor-heading">
+                What Problem Does This Solve?<a
+                  href="#what-problem-does-this-solve"
+                  aria-label='Direct link to "What Problem Does This Solve?"'
+                ></a>
+              </h2>
+              <p>
+                Pure UI provides a collection of professionally designed, highly customizable UI components built on a
+                framework agnostic technology. Why spend hundreds of hours (or more) building a design system from
+                scratch? Why make a component library that only works with one framework?
+              </p>
+              <p>With Pure UI, you can:</p>
+              <ul>
+                <li>Start building things faster (no need to roll your own buttons)</li>
+                <li>Build multiple apps with different frameworks that all share the same UI components</li>
+                <li>Fully customize components to match your existing designs</li>
+                <li>Incrementally adopt components as needed (no need to ditch your framework)</li>
+                <li>Upgrade or switch frameworks without rebuilding foundational components</li>
+              </ul>
+              <p>
+                If your organization is looking to build a design system,
                 <a
-                  href="https://tailwindcss.com/"
-                  class="active-link external-link"
+                  href="https://medium.com/eightshapes-llc/and-you-thought-buttons-were-easy-26eb5b5c1871"
+                  class="external-link"
                   rel="noopener noreferrer"
                   target="_blank"
-                  >Tailwind</a
-                >
-              </li>
-              <li>
-                Icons are courtesy of
-                <a
-                  href="https://icons.getbootstrap.com/"
-                  class="active-link external-link"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  >Bootstrap Icons</a
-                >
-              </li>
-              <li>
-                The homepage illustration is courtesy of
-                <a href="https://undraw.co/" class="active-link external-link" rel="noopener noreferrer" target="_blank"
-                  >unDraw</a
-                >
-              </li>
-              <li>
-                Positioning of dropdowns, tooltips, et al is handled by
-                <a
-                  href="https://floating-ui.com/"
-                  class="active-link external-link"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  >Floating UI</a
-                >
-              </li>
-              <li>
-                Animations are courtesy of
-                <a
-                  href="https://animate.style/"
-                  class="active-link external-link"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  >animate.css</a
-                >
-              </li>
-              <li>
-                Search is powered by
-                <a
-                  href="https://lunrjs.com/"
-                  class="active-link external-link"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  >Lunr</a
-                >
-              </li>
-            </ul>
+                  >Pure UI will save you thousands of dollars</a
+                >. All the foundational components you need are right here, ready to be customized for your brand. And
+                since it’s built on web standards, browsers will continue to support it for many years to come.
+              </p>
+              <p>
+                Whether you use Pure UI as a starting point for your organization’s design system or for a fun personal
+                project, there’s no limit to what you can do with it.
+              </p>
+              <h2 id="browser-support" class="anchor-heading">
+                Browser Support<a href="#browser-support" aria-label='Direct link to "Browser Support"'></a>
+              </h2>
+              <p>Pure UI is tested in the latest two versions of the following browsers.</p>
+              <img src="/assets/images/chrome.png" alt="Chrome" width="64" height="64" />
+              <img src="/assets/images/edge.png" alt="Edge" width="64" height="64" />
+              <img src="/assets/images/firefox.png" alt="Firefox" width="64" height="64" />
+              <img src="/assets/images/opera.png" alt="Opera" width="64" height="64" />
+              <img src="/assets/images/safari.png" alt="Safari" width="64" height="64" />
+              <p>Critical bug fixes in earlier versions will be addressed based on their severity and impact.</p>
+              <p>
+                If you need to support IE11 or pre-Chromium Edge, this library isn’t for you. Although web components
+                can (to some degree) be polyfilled for legacy browsers, supporting them is outside the scope of this
+                project. If you’re using Pure UI in such a browser, you’re gonna have a bad time. ⛷
+              </p>
+              <h2 id="attribution" class="anchor-heading">
+                Attribution<a href="#attribution" aria-label='Direct link to "Attribution"'></a>
+              </h2>
+              <p>Special thanks to the following projects and individuals that help make Pure UI possible.</p>
+              <ul>
+                <li>
+                  Components are built with
+                  <a href="https://lit.dev/" class="active-link external-link" rel="noopener noreferrer" target="_blank"
+                    >Lit</a
+                  >
+                </li>
+                <li>
+                  Component metadata is generated by the
+                  <a
+                    href="https://github.com/open-wc/custom-elements-manifest"
+                    class="external-link"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >Custom Elements Manifest Analyzer</a
+                  >
+                </li>
+                <li>
+                  Documentation is powered by
+                  <a
+                    href="https://www.11ty.dev/"
+                    class="active-link external-link"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >11ty</a
+                  >
+                </li>
+                <li>
+                  CDN services are provided by
+                  <a
+                    href="https://www.jsdelivr.com/"
+                    class="active-link external-link"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >jsDelivr</a
+                  >
+                </li>
+                <li>
+                  Color primitives are inspired by
+                  <a
+                    href="https://tailwindcss.com/"
+                    class="active-link external-link"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >Tailwind</a
+                  >
+                </li>
+                <li>
+                  Icons are courtesy of
+                  <a
+                    href="https://icons.getbootstrap.com/"
+                    class="active-link external-link"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >Bootstrap Icons</a
+                  >
+                </li>
+                <li>
+                  The homepage illustration is courtesy of
+                  <a
+                    href="https://undraw.co/"
+                    class="active-link external-link"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >unDraw</a
+                  >
+                </li>
+                <li>
+                  Positioning of dropdowns, tooltips, et al is handled by
+                  <a
+                    href="https://floating-ui.com/"
+                    class="active-link external-link"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >Floating UI</a
+                  >
+                </li>
+                <li>
+                  Animations are courtesy of
+                  <a
+                    href="https://animate.style/"
+                    class="active-link external-link"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >animate.css</a
+                  >
+                </li>
+                <li>
+                  Search is powered by
+                  <a
+                    href="https://lunrjs.com/"
+                    class="active-link external-link"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >Lunr</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

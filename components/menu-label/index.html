@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="component" data-pure-ui-version="1.5.11">
+<html lang="en" data-layout="component" data-pure-ui-version="1.6.29">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -57,7 +57,7 @@
       <div id="header">
         <div class="left-header">
           <img src="/assets/images/logo.png" alt="Pure UI" id="logo" />
-          <span class="version">v1.5.11</span>
+          <span class="version">v1.6.29</span>
         </div>
         <span id="slogan"> PureUI: Simplify, Customize, Innovate. </span>
         <div class="right-header">
@@ -402,8 +402,6 @@
                 <h2>Resources</h2>
                 <ul>
                   <li><a href="/resources/community">Community</a></li>
-                  <li><a href="/resources/accessibility">Accessibility</a></li>
-                  <li><a href="/resources/contributing">Contributing</a></li>
                   <li><a href="/resources/changelog">Changelog</a></li>
                 </ul>
               </li>
@@ -411,45 +409,46 @@
           </nav>
         </aside>
 
-        <div id="content">
-          <div class="content__body">
-            <header class="component-header">
-              <h1>Menu Label</h1>
+        <div id="content" class="content--with-toc">
+          <div class="content--wrapper">
+            <div class="content__body">
+              <header class="component-header">
+                <h1>Menu Label</h1>
 
-              <div class="component-header__tag">
-                <code>&lt;p-menu-label&gt; | PMenuLabel</code>
-              </div>
-
-              <div class="component-header__info">
-                <p-badge variant="neutral" pill=""> Since 1.0 </p-badge>
-                <p-badge variant="primary" pill="" style="text-transform: capitalize"> stable </p-badge>
-              </div>
-            </header>
-
-            <p class="component-summary">Menu labels are used to describe a group of menu items.</p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <p-menu style="max-width: 200px">
-                  <p-menu-label>Fruits</p-menu-label>
-                  <p-menu-item value="apple">Apple</p-menu-item>
-                  <p-menu-item value="banana">Banana</p-menu-item>
-                  <p-menu-item value="orange">Orange</p-menu-item>
-                  <p-divider></p-divider>
-                  <p-menu-label>Vegetables</p-menu-label>
-                  <p-menu-item value="broccoli">Broccoli</p-menu-item>
-                  <p-menu-item value="carrot">Carrot</p-menu-item>
-                  <p-menu-item value="zucchini">Zucchini</p-menu-item>
-                </p-menu>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                <div class="component-header__tag">
+                  <code>&lt;p-menu-label&gt; | PMenuLabel</code>
                 </div>
-              </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-231">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-692"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-menu</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">max-width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span>
+                <div class="component-header__info">
+                  <p-badge variant="neutral" pill=""> Since 1.0 </p-badge>
+                  <p-badge variant="primary" pill="" style="text-transform: capitalize"> stable </p-badge>
+                </div>
+              </header>
+
+              <p class="component-summary">Menu labels are used to describe a group of menu items.</p>
+
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <p-menu style="max-width: 200px">
+                    <p-menu-label>Fruits</p-menu-label>
+                    <p-menu-item value="apple">Apple</p-menu-item>
+                    <p-menu-item value="banana">Banana</p-menu-item>
+                    <p-menu-item value="orange">Orange</p-menu-item>
+                    <p-divider></p-divider>
+                    <p-menu-label>Vegetables</p-menu-label>
+                    <p-menu-item value="broccoli">Broccoli</p-menu-item>
+                    <p-menu-item value="carrot">Carrot</p-menu-item>
+                    <p-menu-item value="zucchini">Zucchini</p-menu-item>
+                  </p-menu>
+
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
+                </div>
+
+                <div class="code-preview__source-group" id="code-preview-source-group-187">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-603"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-menu</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">max-width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-menu-label</span><span class="token punctuation">&gt;</span></span>Fruits<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-menu-label</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-menu-item</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>apple<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Apple<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-menu-item</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-menu-item</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>banana<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Banana<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-menu-item</span><span class="token punctuation">&gt;</span></span>
@@ -460,11 +459,11 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-menu-item</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>carrot<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Carrot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-menu-item</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-menu-item</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>zucchini<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Zucchini<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-menu-item</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-menu</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-692"></p-copy-button></pre>
-                </div>
+</code><p-copy-button class="copy-code-button" from="code-block-603"></p-copy-button></pre>
+                  </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-693"><span class="token keyword">import</span> PDivider <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/divider'</span><span class="token punctuation">;</span>
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-604"><span class="token keyword">import</span> PDivider <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/divider'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PMenu <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/menu'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PMenuLabel <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/menu-label'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PMenuItem <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/menu-item'</span><span class="token punctuation">;</span>
@@ -482,162 +481,176 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PMenuItem</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>zucchini<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Zucchini</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PMenuItem</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PMenu</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-693"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-604"></p-copy-button></pre>
+                  </div>
+                </div>
+
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-187"
+                  >
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
+
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
+                  >
+                    React
+                  </button>
+
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-231"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+              <h2 id="importing" class="anchor-heading">
+                Importing<a href="#importing" aria-label='Direct link to "Importing"'></a>
+              </h2>
+              <p>
+                If you’re using the autoloader or the traditional loader, you can ignore this section. Otherwise, feel
+                free to use any of the following snippets to
+                <a href="/getting-started/installation#cherry-picking">cherry pick</a> this component.
+              </p>
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+              <p-tab-group>
+                <p-tab slot="nav" panel="script">Script</p-tab>
+                <p-tab slot="nav" panel="import">Import</p-tab>
+                <p-tab slot="nav" panel="bundler">Bundler</p-tab>
+                <p-tab slot="nav" panel="react">React</p-tab>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
+                <p-tab-panel name="script">
+                  <p>
+                    To import this component from
+                    <a
+                      href="https://www.jsdelivr.com/package/npm/pure-uikit"
+                      class="external-link"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      >the CDN</a
+                    >
+                    using a script tag:
+                  </p>
+                  <pre><code class="language-html" id="code-block-605"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.6.29/cdn/components/menu-label/menu-label.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-605"></p-copy-button></pre>
+                </p-tab-panel>
 
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
+                <p-tab-panel name="import">
+                  <p>
+                    To import this component from
+                    <a
+                      href="https://www.jsdelivr.com/package/npm/pure-uikit"
+                      class="external-link"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      >the CDN</a
+                    >
+                    using a JavaScript import:
+                  </p>
+                  <pre><code class="language-js" id="code-block-606"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.6.29/cdn/components/menu-label/menu-label.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-606"></p-copy-button></pre>
+                </p-tab-panel>
+
+                <p-tab-panel name="bundler">
+                  <p>To import this component using <a href="/getting-started/installation#bundling">a bundler</a>:</p>
+                  <pre><code class="language-js" id="code-block-607"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/menu-label/menu-label.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-607"></p-copy-button></pre>
+                </p-tab-panel>
+
+                <p-tab-panel name="react">
+                  <p>To import this component as a <a href="/frameworks/react">React component</a>:</p>
+                  <pre><code class="language-js" id="code-block-608"><span class="token keyword">import</span> PMenuLabel <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/menu-label'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-608"></p-copy-button></pre>
+                </p-tab-panel>
+              </p-tab-group>
+
+              <h2 id="slots" class="anchor-heading">Slots<a href="#slots" aria-label='Direct link to "Slots"'></a></h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name">Name</th>
+                      <th class="table-description">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nowrap">(default)</td>
+                      <td>The menu label’s content.</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
+
+              <p>
+                <em>Learn more about <a href="/getting-started/usage#slots">using slots</a>.</em>
+              </p>
+
+              <h2 id="parts" class="anchor-heading">Parts<a href="#parts" aria-label='Direct link to "Parts"'></a></h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name">Name</th>
+                      <th class="table-description">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nowrap"><code>base</code></td>
+                      <td>The component’s base wrapper.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                <em>Learn more about <a href="/getting-started/customizing/#css-parts">customizing CSS parts</a>.</em>
+              </p>
             </div>
 
-            <h2 id="importing" class="anchor-heading">
-              Importing<a href="#importing" aria-label='Direct link to "Importing"'></a>
-            </h2>
-            <p>
-              If you’re using the autoloader or the traditional loader, you can ignore this section. Otherwise, feel
-              free to use any of the following snippets to
-              <a href="/getting-started/installation#cherry-picking">cherry pick</a> this component.
-            </p>
-
-            <p-tab-group>
-              <p-tab slot="nav" panel="script">Script</p-tab>
-              <p-tab slot="nav" panel="import">Import</p-tab>
-              <p-tab slot="nav" panel="bundler">Bundler</p-tab>
-              <p-tab slot="nav" panel="react">React</p-tab>
-
-              <p-tab-panel name="script">
-                <p>
-                  To import this component from
-                  <a
-                    href="https://www.jsdelivr.com/package/npm/pure-uikit"
-                    class="external-link"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    >the CDN</a
-                  >
-                  using a script tag:
-                </p>
-                <pre><code class="language-html" id="code-block-694"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.5.11/cdn/components/menu-label/menu-label.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-694"></p-copy-button></pre>
-              </p-tab-panel>
-
-              <p-tab-panel name="import">
-                <p>
-                  To import this component from
-                  <a
-                    href="https://www.jsdelivr.com/package/npm/pure-uikit"
-                    class="external-link"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    >the CDN</a
-                  >
-                  using a JavaScript import:
-                </p>
-                <pre><code class="language-js" id="code-block-695"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.5.11/cdn/components/menu-label/menu-label.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-695"></p-copy-button></pre>
-              </p-tab-panel>
-
-              <p-tab-panel name="bundler">
-                <p>To import this component using <a href="/getting-started/installation#bundling">a bundler</a>:</p>
-                <pre><code class="language-js" id="code-block-696"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/menu-label/menu-label.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-696"></p-copy-button></pre>
-              </p-tab-panel>
-
-              <p-tab-panel name="react">
-                <p>To import this component as a <a href="/frameworks/react">React component</a>:</p>
-                <pre><code class="language-js" id="code-block-697"><span class="token keyword">import</span> PMenuLabel <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/menu-label'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-697"></p-copy-button></pre>
-              </p-tab-panel>
-            </p-tab-group>
-
-            <h2 id="slots" class="anchor-heading">Slots<a href="#slots" aria-label='Direct link to "Slots"'></a></h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name">Name</th>
-                    <th class="table-description">Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="nowrap">(default)</td>
-                    <td>The menu label’s content.</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="content__toc">
+              <ul>
+                <li class="top"><a href="#">Menu Label</a></li>
+                <li data-level="2"><a href="#importing">Importing</a></li>
+                <li data-level="2"><a href="#slots">Slots</a></li>
+                <li data-level="2"><a href="#parts">Parts</a></li>
+              </ul>
             </div>
-
-            <p>
-              <em>Learn more about <a href="/getting-started/usage#slots">using slots</a>.</em>
-            </p>
-
-            <h2 id="parts" class="anchor-heading">Parts<a href="#parts" aria-label='Direct link to "Parts"'></a></h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name">Name</th>
-                    <th class="table-description">Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="nowrap"><code>base</code></td>
-                    <td>The component’s base wrapper.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <p>
-              <em>Learn more about <a href="/getting-started/customizing/#css-parts">customizing CSS parts</a>.</em>
-            </p>
           </div>
         </div>
       </div>

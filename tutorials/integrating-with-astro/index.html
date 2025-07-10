@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="default" data-pure-ui-version="1.5.11">
+<html lang="en" data-layout="default" data-pure-ui-version="1.6.29">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -57,7 +57,7 @@
       <div id="header">
         <div class="left-header">
           <img src="/assets/images/logo.png" alt="Pure UI" id="logo" />
-          <span class="version">v1.5.11</span>
+          <span class="version">v1.6.29</span>
         </div>
         <span id="slogan"> PureUI: Simplify, Customize, Innovate. </span>
         <div class="right-header">
@@ -402,8 +402,6 @@
                 <h2>Resources</h2>
                 <ul>
                   <li><a href="/resources/community">Community</a></li>
-                  <li><a href="/resources/accessibility">Accessibility</a></li>
-                  <li><a href="/resources/contributing">Contributing</a></li>
                   <li><a href="/resources/changelog">Changelog</a></li>
                 </ul>
               </li>
@@ -411,68 +409,70 @@
           </nav>
         </aside>
 
-        <div id="content">
-          <div class="content__body">
-            <h1>Integrating with Astro</h1>
-            <p>This page explains how to integrate Pure UI with an Astro app.</p>
-            <div role="alert" class="callout callout--tip">
+        <div id="content" class="content--with-toc">
+          <div class="content--wrapper">
+            <div class="content__body">
+              <h1>Integrating with Astro</h1>
+              <p>This page explains how to integrate Pure UI with an Astro app.</p>
+              <div role="alert" class="callout callout--tip">
+                <p>
+                  This is a community-maintained document. Please
+                  <a href="/resources/community">ask the community</a> if you have questions about this integration. You
+                  can also
+                  <a
+                    href="https://github.com/ssjblue197/pure-ui/blob/next/docs/tutorials/integrating-with-astro.md"
+                    class="external-link"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >suggest improvements</a
+                  >
+                  to make it better.
+                </p>
+              </div>
+              <h2 id="ssr-and-client-scripts" class="anchor-heading">
+                SSR and client scripts<a
+                  href="#ssr-and-client-scripts"
+                  aria-label='Direct link to "SSR and client scripts"'
+                ></a>
+              </h2>
               <p>
-                This is a community-maintained document. Please <a href="/resources/community">ask the community</a> if
-                you have questions about this integration. You can also
+                In the following tutorial you will notice that Pure UI cannot be imported in the frontmatter of Astro
+                files. This is because Pure UI relies on globals from the DOM to be present.
+              </p>
+              <p>
+                There is a
                 <a
-                  href="https://github.com/ssjblue197/pure-ui/blob/next/docs/tutorials/integrating-with-astro.md"
+                  href="https://docs.astro.build/en/guides/integrations-guide/lit/"
                   class="external-link"
                   rel="noopener noreferrer"
                   target="_blank"
-                  >suggest improvements</a
+                  >Lit + Astro integration for SSR</a
                 >
-                to make it better.
+                , however it will not work with Pure UI in its current state due to some reliance on DOM APIs that
+                aren’t shimmed. We are working to resolve this.
               </p>
-            </div>
-            <h2 id="ssr-and-client-scripts" class="anchor-heading">
-              SSR and client scripts<a
-                href="#ssr-and-client-scripts"
-                aria-label='Direct link to "SSR and client scripts"'
-              ></a>
-            </h2>
-            <p>
-              In the following tutorial you will notice that Pure UI cannot be imported in the frontmatter of Astro
-              files. This is because Pure UI relies on globals from the DOM to be present.
-            </p>
-            <p>
-              There is a
-              <a
-                href="https://docs.astro.build/en/guides/integrations-guide/lit/"
-                class="external-link"
-                rel="noopener noreferrer"
-                target="_blank"
-                >Lit + Astro integration for SSR</a
-              >
-              , however it will not work with Pure UI in its current state due to some reliance on DOM APIs that aren’t
-              shimmed. We are working to resolve this.
-            </p>
-            <h2 id="instructions-astro-4_11_3" class="anchor-heading">
-              Instructions - Astro 4.11.3<a
-                href="#instructions-astro-4_11_3"
-                aria-label='Direct link to "Instructions - Astro 4.11.3"'
-              ></a>
-            </h2>
-            <ul>
-              <li>Node: v18.17.1 or v20.3.0 or higher. ( v19 is not supported.)</li>
-              <li>Astro: 4.11.3</li>
-              <li>Pure UI: 2.15.1</li>
-            </ul>
-            <p>To get started using Pure UI with Astro, the following packages must be installed.</p>
-            <pre><code class="language-bash" id="code-block-96"><span class="token function">npm</span> <span class="token function">install</span> pure-uikit rollup-plugin-copy
+              <h2 id="instructions-astro-4_11_3" class="anchor-heading">
+                Instructions - Astro 4.11.3<a
+                  href="#instructions-astro-4_11_3"
+                  aria-label='Direct link to "Instructions - Astro 4.11.3"'
+                ></a>
+              </h2>
+              <ul>
+                <li>Node: v18.17.1 or v20.3.0 or higher. ( v19 is not supported.)</li>
+                <li>Astro: 4.11.3</li>
+                <li>Pure UI: 2.15.1</li>
+              </ul>
+              <p>To get started using Pure UI with Astro, the following packages must be installed.</p>
+              <pre><code class="language-bash" id="code-block-96"><span class="token function">npm</span> <span class="token function">install</span> pure-uikit rollup-plugin-copy
 </code><p-copy-button class="copy-code-button" from="code-block-96"></p-copy-button></pre>
-            <h3 id="importing-components" class="anchor-heading">
-              Importing components<a
-                href="#importing-components"
-                aria-label='Direct link to "Importing components"'
-              ></a>
-            </h3>
-            <p>In <code>/src/pages/index.astro</code>, set the base path and import Pure UI.</p>
-            <pre><code class="language-html" id="code-block-97">---
+              <h3 id="importing-components" class="anchor-heading">
+                Importing components<a
+                  href="#importing-components"
+                  aria-label='Direct link to "Importing components"'
+                ></a>
+              </h3>
+              <p>In <code>/src/pages/index.astro</code>, set the base path and import Pure UI.</p>
+              <pre><code class="language-html" id="code-block-97">---
 // import default stylesheet
 import "pure-uikit/dist/themes/light.css";
 ---
@@ -492,24 +492,24 @@ import "pure-uikit/dist/themes/light.css";
   <span class="token keyword">import</span> <span class="token string">"pure-uikit"</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
 </code><p-copy-button class="copy-code-button" from="code-block-97"></p-copy-button></pre>
-            <div role="alert" class="callout callout--tip">
+              <div role="alert" class="callout callout--tip">
+                <p>
+                  If you want to cherry pick components, replace the main Pure UI import with ‘import
+                  “pure-uikit/dist/components/button/button.js”;’ for whichever component you would like.
+                </p>
+              </div>
               <p>
-                If you want to cherry pick components, replace the main Pure UI import with ‘import
-                “pure-uikit/dist/components/button/button.js”;’ for whichever component you would like.
+                You only have to import in the main <code>index.astro</code> file. The components can be used anywhere
+                throughout the project.
               </p>
-            </div>
-            <p>
-              You only have to import in the main <code>index.astro</code> file. The components can be used anywhere
-              throughout the project.
-            </p>
-            <h3 id="customizing-animations" class="anchor-heading">
-              Customizing animations<a
-                href="#customizing-animations"
-                aria-label='Direct link to "Customizing animations"'
-              ></a>
-            </h3>
-            <p>In <code>/src/pages/index.astro</code>, set custom animations after the Pure UI import.</p>
-            <pre><code class="language-html" id="code-block-98">---
+              <h3 id="customizing-animations" class="anchor-heading">
+                Customizing animations<a
+                  href="#customizing-animations"
+                  aria-label='Direct link to "Customizing animations"'
+                ></a>
+              </h3>
+              <p>In <code>/src/pages/index.astro</code>, set custom animations after the Pure UI import.</p>
+              <pre><code class="language-html" id="code-block-98">---
 import { setBasePath } from "pure-uikit/dist/utilities/base-path.js";
 setBasePath("dist/assets");
 ---
@@ -542,18 +542,19 @@ setBasePath("dist/assets");
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
 </code><p-copy-button class="copy-code-button" from="code-block-98"></p-copy-button></pre>
-            <h2 id="modifying-astro-config" class="anchor-heading">
-              Modifying Astro Config<a
-                href="#modifying-astro-config"
-                aria-label='Direct link to "Modifying Astro Config"'
-              ></a>
-            </h2>
-            <p>
-              You’ll notice the above steps never added our icons into our <code>/public</code> directory. To solve
-              this, we can install <code>rollup-plugin-copy</code> to copy Pure UI’s assets into your public directory.
-            </p>
-            <p>Here’s what your Astro config should look like:</p>
-            <pre><code class="language-js" id="code-block-99"><span class="token comment">// astro.config.mjs</span>
+              <h2 id="modifying-astro-config" class="anchor-heading">
+                Modifying Astro Config<a
+                  href="#modifying-astro-config"
+                  aria-label='Direct link to "Modifying Astro Config"'
+                ></a>
+              </h2>
+              <p>
+                You’ll notice the above steps never added our icons into our <code>/public</code> directory. To solve
+                this, we can install <code>rollup-plugin-copy</code> to copy Pure UI’s assets into your public
+                directory.
+              </p>
+              <p>Here’s what your Astro config should look like:</p>
+              <pre><code class="language-js" id="code-block-99"><span class="token comment">// astro.config.mjs</span>
 
 <span class="token keyword">import</span> <span class="token punctuation">{</span> defineConfig <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"astro/config"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> copy <span class="token keyword">from</span> <span class="token string">"rollup-plugin-copy"</span><span class="token punctuation">;</span>
@@ -577,6 +578,18 @@ setBasePath("dist/assets");
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code><p-copy-button class="copy-code-button" from="code-block-99"></p-copy-button></pre>
+            </div>
+
+            <div class="content__toc">
+              <ul>
+                <li class="top"><a href="#">Integrating with Astro</a></li>
+                <li data-level="2"><a href="#ssr-and-client-scripts">SSR and client scripts</a></li>
+                <li data-level="2"><a href="#instructions-astro-4_11_3">Instructions - Astro 4.11.3</a></li>
+                <li data-level="3"><a href="#importing-components">Importing components</a></li>
+                <li data-level="3"><a href="#customizing-animations">Customizing animations</a></li>
+                <li data-level="2"><a href="#modifying-astro-config">Modifying Astro Config</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

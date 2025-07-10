@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="default" data-pure-ui-version="1.5.11">
+<html lang="en" data-layout="default" data-pure-ui-version="1.6.29">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -63,7 +63,7 @@
       <div id="header">
         <div class="left-header">
           <img src="/assets/images/logo.png" alt="Pure UI" id="logo" />
-          <span class="version">v1.5.11</span>
+          <span class="version">v1.6.29</span>
         </div>
         <span id="slogan"> PureUI: Simplify, Customize, Innovate. </span>
         <div class="right-header">
@@ -408,8 +408,6 @@
                 <h2>Resources</h2>
                 <ul>
                   <li><a href="/resources/community" class="active-link">Community</a></li>
-                  <li><a href="/resources/accessibility">Accessibility</a></li>
-                  <li><a href="/resources/contributing">Contributing</a></li>
                   <li><a href="/resources/changelog">Changelog</a></li>
                 </ul>
               </li>
@@ -417,43 +415,44 @@
           </nav>
         </aside>
 
-        <div id="content">
-          <div class="content__body">
-            <h1>Community</h1>
-            <p>
-              Pure UI has a growing community of designers and developers that are building amazing things with web
-              components. We’d love for you to become a part of it!
-            </p>
-            <p>
-              Please be respectful of other users and remember that Pure UI is an open source project. We’ll try to help
-              when we can, but there’s no guarantee we’ll be able solve your problem. Please manage your expectations
-              and don’t forget to contribute back to the conversation when you can!
-            </p>
-            <h2 id="discussion-forum" class="anchor-heading">
-              Discussion Forum<a href="#discussion-forum" aria-label='Direct link to "Discussion Forum"'></a>
-            </h2>
-            <p>
-              The
-              <a
-                href="https://github.com/ssjblue197/pure-ui/discussions"
-                class="external-link"
-                rel="noopener noreferrer"
-                target="_blank"
-                >discussion forum</a
-              >
-              is open to anyone with a GitHub account. This is the best place to:
-            </p>
-            <ul>
-              <li>Ask for help</li>
-              <li>Share ideas and get feedback</li>
-              <li>Show the community what you’re working on</li>
-              <li>Learn more about the project, its values, and its roadmap</li>
-            </ul>
-            <p-button variant="primary" href="https://github.com/ssjblue197/pure-ui/discussions" target="_blank">
-              <p-icon name="github" slot="prefix"></p-icon>
-              Join the Discussion
-            </p-button>
-            <!-- ## Community Chat
+        <div id="content" class="content--with-toc">
+          <div class="content--wrapper">
+            <div class="content__body">
+              <h1>Community</h1>
+              <p>
+                Pure UI has a growing community of designers and developers that are building amazing things with web
+                components. We’d love for you to become a part of it!
+              </p>
+              <p>
+                Please be respectful of other users and remember that Pure UI is an open source project. We’ll try to
+                help when we can, but there’s no guarantee we’ll be able solve your problem. Please manage your
+                expectations and don’t forget to contribute back to the conversation when you can!
+              </p>
+              <h2 id="discussion-forum" class="anchor-heading">
+                Discussion Forum<a href="#discussion-forum" aria-label='Direct link to "Discussion Forum"'></a>
+              </h2>
+              <p>
+                The
+                <a
+                  href="https://github.com/ssjblue197/pure-ui/discussions"
+                  class="external-link"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >discussion forum</a
+                >
+                is open to anyone with a GitHub account. This is the best place to:
+              </p>
+              <ul>
+                <li>Ask for help</li>
+                <li>Share ideas and get feedback</li>
+                <li>Show the community what you’re working on</li>
+                <li>Learn more about the project, its values, and its roadmap</li>
+              </ul>
+              <p-button variant="primary" href="https://github.com/ssjblue197/pure-ui/discussions" target="_blank">
+                <p-icon name="github" slot="prefix"></p-icon>
+                Join the Discussion
+              </p-button>
+              <!-- ## Community Chat
 
 The [community chat](https://discord.gg/mg8f26C) is open to the public and powered by [Discord](https://discord.com/). This is a good place to:
 
@@ -466,24 +465,33 @@ The [community chat](https://discord.gg/mg8f26C) is open to the public and power
   <p-icon name="discord" slot="prefix"></p-icon>
   Join the Chat
 </p-button> -->
-            <h2 id="stack-overflow" class="anchor-heading">
-              Stack Overflow<a href="#stack-overflow" aria-label='Direct link to "Stack Overflow"'></a>
-            </h2>
-            <p>
-              You can post questions on Stack Overflow using
-              <a
-                href="https://stackoverflow.com/questions/tagged/pure-ui"
-                class="external-link"
-                rel="noopener noreferrer"
-                target="_blank"
-                >the “pure-ui” tag</a
-              >. This is a public forum where talented developers answer questions. It’s a great way to get help, but it
-              is not maintained by the Pure UI author.
-            </p>
-            <p-button variant="primary" href="https://stackoverflow.com/questions/ask?tags=pure-ui" target="_blank">
-              <p-icon name="stack-overflow" slot="prefix"></p-icon>
-              Ask for Help
-            </p-button>
+              <h2 id="stack-overflow" class="anchor-heading">
+                Stack Overflow<a href="#stack-overflow" aria-label='Direct link to "Stack Overflow"'></a>
+              </h2>
+              <p>
+                You can post questions on Stack Overflow using
+                <a
+                  href="https://stackoverflow.com/questions/tagged/pure-ui"
+                  class="external-link"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >the “pure-ui” tag</a
+                >. This is a public forum where talented developers answer questions. It’s a great way to get help, but
+                it is not maintained by the Pure UI author.
+              </p>
+              <p-button variant="primary" href="https://stackoverflow.com/questions/ask?tags=pure-ui" target="_blank">
+                <p-icon name="stack-overflow" slot="prefix"></p-icon>
+                Ask for Help
+              </p-button>
+            </div>
+
+            <div class="content__toc">
+              <ul>
+                <li class="top"><a href="#">Community</a></li>
+                <li data-level="2"><a href="#discussion-forum">Discussion Forum</a></li>
+                <li data-level="2"><a href="#stack-overflow">Stack Overflow</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

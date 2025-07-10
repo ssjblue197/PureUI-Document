@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="component" data-pure-ui-version="1.5.11">
+<html lang="en" data-layout="component" data-pure-ui-version="1.6.29">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -63,7 +63,7 @@
       <div id="header">
         <div class="left-header">
           <img src="/assets/images/logo.png" alt="Pure UI" id="logo" />
-          <span class="version">v1.5.11</span>
+          <span class="version">v1.6.29</span>
         </div>
         <span id="slogan"> PureUI: Simplify, Customize, Innovate. </span>
         <div class="right-header">
@@ -408,8 +408,6 @@
                 <h2>Resources</h2>
                 <ul>
                   <li><a href="/resources/community">Community</a></li>
-                  <li><a href="/resources/accessibility">Accessibility</a></li>
-                  <li><a href="/resources/contributing">Contributing</a></li>
                   <li><a href="/resources/changelog">Changelog</a></li>
                 </ul>
               </li>
@@ -417,66 +415,67 @@
           </nav>
         </aside>
 
-        <div id="content">
-          <div class="content__body">
-            <header class="component-header">
-              <h1>Animation</h1>
+        <div id="content" class="content--with-toc">
+          <div class="content--wrapper">
+            <div class="content__body">
+              <header class="component-header">
+                <h1>Animation</h1>
 
-              <div class="component-header__tag">
-                <code>&lt;p-animation&gt; | PAnimation</code>
-              </div>
-
-              <div class="component-header__info">
-                <p-badge variant="neutral" pill=""> Since 1.0 </p-badge>
-                <p-badge variant="primary" pill="" style="text-transform: capitalize"> stable </p-badge>
-              </div>
-            </header>
-
-            <p class="component-summary">
-              Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes.
-              Powered by the
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API"
-                class="external-link"
-                rel="noopener noreferrer"
-                target="_blank"
-                >Web Animations API</a
-              >.
-            </p>
-
-            <p>
-              To animate an element, wrap it in <code>&lt;p-animation&gt;</code> and set an animation <code>name</code>.
-              The animation will not start until you add the <code>play</code> attribute. Refer to the
-              <a href="#properties">properties table</a> for a list of all animation options.
-            </p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <div class="animation-overview">
-                  <p-animation name="bounce" duration="2000" play=""><div class="box"></div></p-animation>
-                  <p-animation name="jello" duration="2000" play=""><div class="box"></div></p-animation>
-                  <p-animation name="heartBeat" duration="2000" play=""><div class="box"></div></p-animation>
-                  <p-animation name="flip" duration="2000" play=""><div class="box"></div></p-animation>
+                <div class="component-header__tag">
+                  <code>&lt;p-animation&gt; | PAnimation</code>
                 </div>
 
-                <style>
-                  .animation-overview .box {
-                    display: inline-block;
-                    width: 100px;
-                    height: 100px;
-                    background-color: var(--p-color-primary-600);
-                    margin: 1.5rem;
-                  }
-                </style>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                <div class="component-header__info">
+                  <p-badge variant="neutral" pill=""> Since 1.0 </p-badge>
+                  <p-badge variant="primary" pill="" style="text-transform: capitalize"> stable </p-badge>
                 </div>
-              </div>
+              </header>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-20">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-176"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>animation-overview<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+              <p class="component-summary">
+                Animate elements declaratively with nearly 100 baked-in presets, or roll your own with custom keyframes.
+                Powered by the
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API"
+                  class="external-link"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >Web Animations API</a
+                >.
+              </p>
+
+              <p>
+                To animate an element, wrap it in <code>&lt;p-animation&gt;</code> and set an animation
+                <code>name</code>. The animation will not start until you add the <code>play</code> attribute. Refer to
+                the <a href="#properties">properties table</a> for a list of all animation options.
+              </p>
+
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <div class="animation-overview">
+                    <p-animation name="bounce" duration="2000" play=""><div class="box"></div></p-animation>
+                    <p-animation name="jello" duration="2000" play=""><div class="box"></div></p-animation>
+                    <p-animation name="heartBeat" duration="2000" play=""><div class="box"></div></p-animation>
+                    <p-animation name="flip" duration="2000" play=""><div class="box"></div></p-animation>
+                  </div>
+
+                  <style>
+                    .animation-overview .box {
+                      display: inline-block;
+                      width: 100px;
+                      height: 100px;
+                      background-color: var(--p-color-primary-600);
+                      margin: 1.5rem;
+                    }
+                  </style>
+
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
+                </div>
+
+                <div class="code-preview__source-group" id="code-preview-source-group-21">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-182"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>animation-overview<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-animation</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bounce<span class="token punctuation">"</span></span> <span class="token attr-name">duration</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2000<span class="token punctuation">"</span></span> <span class="token attr-name">play</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-animation</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-animation</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>jello<span class="token punctuation">"</span></span> <span class="token attr-name">duration</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2000<span class="token punctuation">"</span></span> <span class="token attr-name">play</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-animation</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-animation</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>heartBeat<span class="token punctuation">"</span></span> <span class="token attr-name">duration</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2000<span class="token punctuation">"</span></span> <span class="token attr-name">play</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-animation</span><span class="token punctuation">&gt;</span></span>
@@ -492,11 +491,11 @@
     <span class="token property">margin</span><span class="token punctuation">:</span> 1.5rem<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-176"></p-copy-button></pre>
-                </div>
+</code><p-copy-button class="copy-code-button" from="code-block-182"></p-copy-button></pre>
+                  </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-177"><span class="token keyword">import</span> PAnimation <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/animation'</span><span class="token punctuation">;</span>
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-183"><span class="token keyword">import</span> PAnimation <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/animation'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> css <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
   .animation-overview .box {
@@ -528,155 +527,160 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">{css}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-177"></p-copy-button></pre>
-                </div>
-              </div>
-
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-20"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
-
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
-
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
-
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <div role="alert" class="callout callout--tip">
-              <p>
-                The animation will only be applied to the first child element found in <code>&lt;p-animation&gt;</code>.
-              </p>
-            </div>
-            <h2 id="examples" class="anchor-heading">
-              Examples<a href="#examples" aria-label='Direct link to "Examples"'></a>
-            </h2>
-            <h3 id="animations-and-easings" class="anchor-heading">
-              Animations &amp; Easings<a
-                href="#animations-and-easings"
-                aria-label='Direct link to "Animations &amp; Easings"'
-              ></a>
-            </h3>
-            <p>
-              This example demonstrates all of the baked-in animations and easings. Animations are based on those found
-              in the popular
-              <a href="https://animate.style/" class="external-link" rel="noopener noreferrer" target="_blank"
-                >Animate.css</a
-              >
-              library.
-            </p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <div class="animation-sandbox">
-                  <p-animation name="bounce" easing="ease-in-out" duration="2000" play="">
-                    <div class="box"></div>
-                  </p-animation>
-
-                  <div class="controls">
-                    <p-select label="Animation" value="bounce"></p-select>
-                    <p-select label="Easing" value="linear"></p-select>
-                    <p-input label="Playback Rate" type="number" min="0" max="2" step=".25" value="1"></p-input>
+</code><p-copy-button class="copy-code-button" from="code-block-183"></p-copy-button></pre>
                   </div>
                 </div>
 
-                <script type="module">
-                  import { getAnimationNames, getEasingNames } from '/dist/utilities/animation.js';
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-21"
+                  >
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
 
-                  const container = document.querySelector('.animation-sandbox');
-                  const animation = container.querySelector('p-animation');
-                  const animationName = container.querySelector('.controls p-select:nth-child(1)');
-                  const easingName = container.querySelector('.controls p-select:nth-child(2)');
-                  const playbackRate = container.querySelector('p-input[type="number"]');
-                  const animations = getAnimationNames();
-                  const easings = getEasingNames();
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
 
-                  animations.map(name => {
-                    const option = Object.assign(document.createElement('p-option'), {
-                      textContent: name,
-                      value: name
-                    });
-                    animationName.appendChild(option);
-                  });
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
+                  >
+                    React
+                  </button>
 
-                  easings.map(name => {
-                    const option = Object.assign(document.createElement('p-option'), {
-                      textContent: name,
-                      value: name
-                    });
-                    easingName.appendChild(option);
-                  });
-
-                  animationName.addEventListener('p-change', () => (animation.name = animationName.value));
-                  easingName.addEventListener('p-change', () => (animation.easing = easingName.value));
-                  playbackRate.addEventListener('p-input', () => (animation.playbackRate = playbackRate.value));
-                </script>
-
-                <style>
-                  .animation-sandbox .box {
-                    width: 100px;
-                    height: 100px;
-                    background-color: var(--p-color-primary-600);
-                  }
-
-                  .animation-sandbox .controls {
-                    max-width: 300px;
-                    margin-top: 2rem;
-                  }
-
-                  .animation-sandbox .controls p-select {
-                    margin-bottom: 1rem;
-                  }
-                </style>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-21">
-                <div class="code-preview__source code-preview__source--html">
-                  <pre><code class="language-html" id="code-block-178"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>animation-sandbox<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+              <div role="alert" class="callout callout--tip">
+                <p>
+                  The animation will only be applied to the first child element found in
+                  <code>&lt;p-animation&gt;</code>.
+                </p>
+              </div>
+              <h2 id="examples" class="anchor-heading">
+                Examples<a href="#examples" aria-label='Direct link to "Examples"'></a>
+              </h2>
+              <h3 id="animations-and-easings" class="anchor-heading">
+                Animations &amp; Easings<a
+                  href="#animations-and-easings"
+                  aria-label='Direct link to "Animations &amp; Easings"'
+                ></a>
+              </h3>
+              <p>
+                This example demonstrates all of the baked-in animations and easings. Animations are based on those
+                found in the popular
+                <a href="https://animate.style/" class="external-link" rel="noopener noreferrer" target="_blank"
+                  >Animate.css</a
+                >
+                library.
+              </p>
+
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <div class="animation-sandbox">
+                    <p-animation name="bounce" easing="ease-in-out" duration="2000" play="">
+                      <div class="box"></div>
+                    </p-animation>
+
+                    <div class="controls">
+                      <p-select label="Animation" value="bounce"></p-select>
+                      <p-select label="Easing" value="linear"></p-select>
+                      <p-input label="Playback Rate" type="number" min="0" max="2" step=".25" value="1"></p-input>
+                    </div>
+                  </div>
+
+                  <script type="module">
+                    import { getAnimationNames, getEasingNames } from '/dist/utilities/animation.js';
+
+                    const container = document.querySelector('.animation-sandbox');
+                    const animation = container.querySelector('p-animation');
+                    const animationName = container.querySelector('.controls p-select:nth-child(1)');
+                    const easingName = container.querySelector('.controls p-select:nth-child(2)');
+                    const playbackRate = container.querySelector('p-input[type="number"]');
+                    const animations = getAnimationNames();
+                    const easings = getEasingNames();
+
+                    animations.map(name => {
+                      const option = Object.assign(document.createElement('p-option'), {
+                        textContent: name,
+                        value: name
+                      });
+                      animationName.appendChild(option);
+                    });
+
+                    easings.map(name => {
+                      const option = Object.assign(document.createElement('p-option'), {
+                        textContent: name,
+                        value: name
+                      });
+                      easingName.appendChild(option);
+                    });
+
+                    animationName.addEventListener('p-change', () => (animation.name = animationName.value));
+                    easingName.addEventListener('p-change', () => (animation.easing = easingName.value));
+                    playbackRate.addEventListener('p-input', () => (animation.playbackRate = playbackRate.value));
+                  </script>
+
+                  <style>
+                    .animation-sandbox .box {
+                      width: 100px;
+                      height: 100px;
+                      background-color: var(--p-color-primary-600);
+                    }
+
+                    .animation-sandbox .controls {
+                      max-width: 300px;
+                      margin-top: 2rem;
+                    }
+
+                    .animation-sandbox .controls p-select {
+                      margin-bottom: 1rem;
+                    }
+                  </style>
+
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
+                </div>
+
+                <div class="code-preview__source-group" id="code-preview-source-group-22">
+                  <div class="code-preview__source code-preview__source--html">
+                    <pre><code class="language-html" id="code-block-184"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>animation-sandbox<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-animation</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bounce<span class="token punctuation">"</span></span> <span class="token attr-name">easing</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ease-in-out<span class="token punctuation">"</span></span> <span class="token attr-name">duration</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2000<span class="token punctuation">"</span></span> <span class="token attr-name">play</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-animation</span><span class="token punctuation">&gt;</span></span>
@@ -736,116 +740,118 @@
     <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-178"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-184"></p-copy-button></pre>
+                  </div>
                 </div>
-              </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-21"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-22"
                   >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
 
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
                   >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <h3 id="using-intersection-observer" class="anchor-heading">
-              Using Intersection Observer<a
-                href="#using-intersection-observer"
-                aria-label='Direct link to "Using Intersection Observer"'
-              ></a>
-            </h3>
-            <p>
-              Use an
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API"
-                class="external-link"
-                rel="noopener noreferrer"
-                target="_blank"
-                >Intersection Observer</a
-              >
-              to control the animation when an element enters or exits the viewport. For example, scroll the box below
-              in and out of your screen. The animation stops when the box exits the viewport and restarts each time it
-              enters the viewport.
-            </p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <div class="animation-scroll">
-                  <p-animation name="jackInTheBox" duration="2000" iterations="1"><div class="box"></div></p-animation>
-                </div>
-
-                <script>
-                  (() => {
-                    const container = document.querySelector('.animation-scroll');
-                    const animation = container.querySelector('p-animation');
-                    const box = animation.querySelector('.box');
-
-                    // Watch for the box to enter and exit the viewport. Note that we're observing the box, not the animation element!
-                    const observer = new IntersectionObserver(entries => {
-                      if (entries[0].isIntersecting) {
-                        // Start the animation when the box enters the viewport
-                        animation.play = true;
-                      } else {
-                        animation.play = false;
-                        animation.currentTime = 0;
-                      }
-                    });
-                    observer.observe(box);
-                  })();
-                </script>
-
-                <style>
-                  .animation-scroll .box {
-                    display: inline-block;
-                    width: 100px;
-                    height: 100px;
-                    background-color: var(--p-color-primary-600);
-                  }
-                </style>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-22">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-179"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>animation-scroll<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+              <h3 id="using-intersection-observer" class="anchor-heading">
+                Using Intersection Observer<a
+                  href="#using-intersection-observer"
+                  aria-label='Direct link to "Using Intersection Observer"'
+                ></a>
+              </h3>
+              <p>
+                Use an
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API"
+                  class="external-link"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >Intersection Observer</a
+                >
+                to control the animation when an element enters or exits the viewport. For example, scroll the box below
+                in and out of your screen. The animation stops when the box exits the viewport and restarts each time it
+                enters the viewport.
+              </p>
+
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <div class="animation-scroll">
+                    <p-animation name="jackInTheBox" duration="2000" iterations="1"
+                      ><div class="box"></div
+                    ></p-animation>
+                  </div>
+
+                  <script>
+                    (() => {
+                      const container = document.querySelector('.animation-scroll');
+                      const animation = container.querySelector('p-animation');
+                      const box = animation.querySelector('.box');
+
+                      // Watch for the box to enter and exit the viewport. Note that we're observing the box, not the animation element!
+                      const observer = new IntersectionObserver(entries => {
+                        if (entries[0].isIntersecting) {
+                          // Start the animation when the box enters the viewport
+                          animation.play = true;
+                        } else {
+                          animation.play = false;
+                          animation.currentTime = 0;
+                        }
+                      });
+                      observer.observe(box);
+                    })();
+                  </script>
+
+                  <style>
+                    .animation-scroll .box {
+                      display: inline-block;
+                      width: 100px;
+                      height: 100px;
+                      background-color: var(--p-color-primary-600);
+                    }
+                  </style>
+
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
+                </div>
+
+                <div class="code-preview__source-group" id="code-preview-source-group-23">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-185"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>animation-scroll<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-animation</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>jackInTheBox<span class="token punctuation">"</span></span> <span class="token attr-name">duration</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2000<span class="token punctuation">"</span></span> <span class="token attr-name">iterations</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-animation</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
 
@@ -875,11 +881,11 @@
     <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--p-color-primary-600<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-179"></p-copy-button></pre>
-                </div>
+</code><p-copy-button class="copy-code-button" from="code-block-185"></p-copy-button></pre>
+                  </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-180"><span class="token keyword">import</span> <span class="token punctuation">{</span> useEffect<span class="token punctuation">,</span> useRef<span class="token punctuation">,</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-186"><span class="token keyword">import</span> <span class="token punctuation">{</span> useEffect<span class="token punctuation">,</span> useRef<span class="token punctuation">,</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PAnimation <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/animation'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> css <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
@@ -926,125 +932,129 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-180"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-186"></p-copy-button></pre>
+                  </div>
                 </div>
-              </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-22"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-23"
                   >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
-
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
                   >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
+                    React
+                  </button>
 
-            <h3 id="custom-keyframe-formats" class="anchor-heading">
-              Custom Keyframe Formats<a
-                href="#custom-keyframe-formats"
-                aria-label='Direct link to "Custom Keyframe Formats"'
-              ></a>
-            </h3>
-            <p>
-              Supply your own
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats"
-                class="external-link"
-                rel="noopener noreferrer"
-                target="_blank"
-                >keyframe formats</a
-              >
-              to build custom animations.
-            </p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <div class="animation-keyframes">
-                  <p-animation easing="ease-in-out" duration="2000" play="">
-                    <div class="box"></div>
-                  </p-animation>
-                </div>
-
-                <script>
-                  (() => {
-                    const animation = document.querySelector('.animation-keyframes p-animation');
-                    animation.keyframes = [
-                      {
-                        offset: 0,
-                        easing: 'cubic-bezier(0.250, 0.460, 0.450, 0.940)',
-                        fillMode: 'both',
-                        transformOrigin: 'center center',
-                        transform: 'rotate(0)'
-                      },
-                      {
-                        offset: 1,
-                        easing: 'cubic-bezier(0.250, 0.460, 0.450, 0.940)',
-                        fillMode: 'both',
-                        transformOrigin: 'center center',
-                        transform: 'rotate(90deg)'
-                      }
-                    ];
-                  })();
-                </script>
-
-                <style>
-                  .animation-keyframes .box {
-                    width: 100px;
-                    height: 100px;
-                    background-color: var(--p-color-primary-600);
-                  }
-                </style>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-23">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-181"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>animation-keyframes<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+              <h3 id="custom-keyframe-formats" class="anchor-heading">
+                Custom Keyframe Formats<a
+                  href="#custom-keyframe-formats"
+                  aria-label='Direct link to "Custom Keyframe Formats"'
+                ></a>
+              </h3>
+              <p>
+                Supply your own
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats"
+                  class="external-link"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >keyframe formats</a
+                >
+                to build custom animations.
+              </p>
+
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <div class="animation-keyframes">
+                    <p-animation easing="ease-in-out" duration="2000" play="">
+                      <div class="box"></div>
+                    </p-animation>
+                  </div>
+
+                  <script>
+                    (() => {
+                      const animation = document.querySelector('.animation-keyframes p-animation');
+                      animation.keyframes = [
+                        {
+                          offset: 0,
+                          easing: 'cubic-bezier(0.250, 0.460, 0.450, 0.940)',
+                          fillMode: 'both',
+                          transformOrigin: 'center center',
+                          transform: 'rotate(0)'
+                        },
+                        {
+                          offset: 1,
+                          easing: 'cubic-bezier(0.250, 0.460, 0.450, 0.940)',
+                          fillMode: 'both',
+                          transformOrigin: 'center center',
+                          transform: 'rotate(90deg)'
+                        }
+                      ];
+                    })();
+                  </script>
+
+                  <style>
+                    .animation-keyframes .box {
+                      width: 100px;
+                      height: 100px;
+                      background-color: var(--p-color-primary-600);
+                    }
+                  </style>
+
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
+                </div>
+
+                <div class="code-preview__source-group" id="code-preview-source-group-24">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-187"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>animation-keyframes<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-animation</span> <span class="token attr-name">easing</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ease-in-out<span class="token punctuation">"</span></span> <span class="token attr-name">duration</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2000<span class="token punctuation">"</span></span> <span class="token attr-name">play</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-animation</span><span class="token punctuation">&gt;</span></span>
@@ -1077,11 +1087,11 @@
     <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--p-color-primary-600<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-181"></p-copy-button></pre>
-                </div>
+</code><p-copy-button class="copy-code-button" from="code-block-187"></p-copy-button></pre>
+                  </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-182"><span class="token keyword">import</span> PAnimation <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/animation'</span><span class="token punctuation">;</span>
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-188"><span class="token keyword">import</span> PAnimation <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/animation'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> css <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
   .animation-keyframes .box {
@@ -1122,101 +1132,105 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">{css}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-182"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-188"></p-copy-button></pre>
+                  </div>
                 </div>
-              </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-23"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-24"
                   >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
-
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
                   >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
+                    React
+                  </button>
 
-            <h3 id="playing-animations-on-demand" class="anchor-heading">
-              Playing Animations on Demand<a
-                href="#playing-animations-on-demand"
-                aria-label='Direct link to "Playing Animations on Demand"'
-              ></a>
-            </h3>
-            <p>
-              Animations won’t play until you apply the <code>play</code> attribute. You can omit it initially, then
-              apply it on demand such as after a user interaction. In this example, the button will animate once every
-              time the button is clicked.
-            </p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <div class="animation-form">
-                  <p-animation name="rubberBand" duration="1000" iterations="1">
-                    <p-button variant="primary">Click me</p-button>
-                  </p-animation>
-                </div>
-
-                <script>
-                  (() => {
-                    const container = document.querySelector('.animation-form');
-                    const animation = container.querySelector('p-animation');
-                    const button = container.querySelector('p-button');
-
-                    button.addEventListener('click', () => {
-                      animation.play = true;
-                    });
-                  })();
-                </script>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-24">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-183"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>animation-form<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+              <h3 id="playing-animations-on-demand" class="anchor-heading">
+                Playing Animations on Demand<a
+                  href="#playing-animations-on-demand"
+                  aria-label='Direct link to "Playing Animations on Demand"'
+                ></a>
+              </h3>
+              <p>
+                Animations won’t play until you apply the <code>play</code> attribute. You can omit it initially, then
+                apply it on demand such as after a user interaction. In this example, the button will animate once every
+                time the button is clicked.
+              </p>
+
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <div class="animation-form">
+                    <p-animation name="rubberBand" duration="1000" iterations="1">
+                      <p-button variant="primary">Click me</p-button>
+                    </p-animation>
+                  </div>
+
+                  <script>
+                    (() => {
+                      const container = document.querySelector('.animation-form');
+                      const animation = container.querySelector('p-animation');
+                      const button = container.querySelector('p-button');
+
+                      button.addEventListener('click', () => {
+                        animation.play = true;
+                      });
+                    })();
+                  </script>
+
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
+                </div>
+
+                <div class="code-preview__source-group" id="code-preview-source-group-25">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-189"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>animation-form<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-animation</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>rubberBand<span class="token punctuation">"</span></span> <span class="token attr-name">duration</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1000<span class="token punctuation">"</span></span> <span class="token attr-name">iterations</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-button</span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Click me<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-button</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-animation</span><span class="token punctuation">&gt;</span></span>
@@ -1231,11 +1245,11 @@
     animation<span class="token punctuation">.</span>play <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-183"></p-copy-button></pre>
-                </div>
+</code><p-copy-button class="copy-code-button" from="code-block-189"></p-copy-button></pre>
+                  </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-184"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-190"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PAnimation <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/animation'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> PButton <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/button'</span><span class="token punctuation">;</span>
 
@@ -1252,485 +1266,508 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-184"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-190"></p-copy-button></pre>
+                  </div>
+                </div>
+
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-25"
+                  >
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
+
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
+                  >
+                    React
+                  </button>
+
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-24"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+              <h2 id="importing" class="anchor-heading">
+                Importing<a href="#importing" aria-label='Direct link to "Importing"'></a>
+              </h2>
+              <p>
+                If you’re using the autoloader or the traditional loader, you can ignore this section. Otherwise, feel
+                free to use any of the following snippets to
+                <a href="/getting-started/installation#cherry-picking">cherry pick</a> this component.
+              </p>
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+              <p-tab-group>
+                <p-tab slot="nav" panel="script">Script</p-tab>
+                <p-tab slot="nav" panel="import">Import</p-tab>
+                <p-tab slot="nav" panel="bundler">Bundler</p-tab>
+                <p-tab slot="nav" panel="react">React</p-tab>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
+                <p-tab-panel name="script">
+                  <p>
+                    To import this component from
+                    <a
+                      href="https://www.jsdelivr.com/package/npm/pure-uikit"
+                      class="external-link"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      >the CDN</a
+                    >
+                    using a script tag:
+                  </p>
+                  <pre><code class="language-html" id="code-block-191"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.6.29/cdn/components/animation/animation.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-191"></p-copy-button></pre>
+                </p-tab-panel>
 
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
+                <p-tab-panel name="import">
+                  <p>
+                    To import this component from
+                    <a
+                      href="https://www.jsdelivr.com/package/npm/pure-uikit"
+                      class="external-link"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      >the CDN</a
+                    >
+                    using a JavaScript import:
+                  </p>
+                  <pre><code class="language-js" id="code-block-192"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.6.29/cdn/components/animation/animation.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-192"></p-copy-button></pre>
+                </p-tab-panel>
+
+                <p-tab-panel name="bundler">
+                  <p>To import this component using <a href="/getting-started/installation#bundling">a bundler</a>:</p>
+                  <pre><code class="language-js" id="code-block-193"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/animation/animation.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-193"></p-copy-button></pre>
+                </p-tab-panel>
+
+                <p-tab-panel name="react">
+                  <p>To import this component as a <a href="/frameworks/react">React component</a>:</p>
+                  <pre><code class="language-js" id="code-block-194"><span class="token keyword">import</span> PAnimation <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/animation'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-194"></p-copy-button></pre>
+                </p-tab-panel>
+              </p-tab-group>
+
+              <h2 id="slots" class="anchor-heading">Slots<a href="#slots" aria-label='Direct link to "Slots"'></a></h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name">Name</th>
+                      <th class="table-description">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nowrap">(default)</td>
+                      <td>
+                        The element to animate. Avoid slotting in more than one element, as subsequent ones will be
+                        ignored. To animate multiple elements, either wrap them in a single container or use multiple
+                        <code>&lt;p-animation&gt;</code> elements.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
+
+              <p>
+                <em>Learn more about <a href="/getting-started/usage#slots">using slots</a>.</em>
+              </p>
+
+              <h2 id="properties" class="anchor-heading">
+                Properties<a href="#properties" aria-label='Direct link to "Properties"'></a>
+              </h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name">Name</th>
+                      <th class="table-description">Description</th>
+                      <th class="table-reflects">Reflects</th>
+                      <th class="table-type">Type</th>
+                      <th class="table-default">Default</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <code class="nowrap">name</code>
+                      </td>
+                      <td>
+                        The name of the built-in animation to use. For custom animations, use the
+                        <code>keyframes</code> prop.
+                      </td>
+                      <td style="text-align: center"></td>
+                      <td>
+                        <code>string</code>
+                      </td>
+                      <td>
+                        <code>"none"</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code class="nowrap">play</code>
+                      </td>
+                      <td>
+                        Plays the animation. When omitted, the animation will be paused. This attribute will be
+                        automatically removed when the animation finishes or gets canceled.
+                      </td>
+                      <td style="text-align: center">
+                        <p-icon label="yes" name="check-lg"></p-icon>
+                      </td>
+                      <td>
+                        <code>boolean</code>
+                      </td>
+                      <td>
+                        <code>false</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code class="nowrap">delay</code>
+                      </td>
+                      <td>The number of milliseconds to delay the start of the animation.</td>
+                      <td style="text-align: center"></td>
+                      <td>
+                        <code>number</code>
+                      </td>
+                      <td>
+                        <code>0</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code class="nowrap">direction</code>
+                      </td>
+                      <td>
+                        Determines the direction of playback as well as the behavior when reaching the end of an
+                        iteration.
+                        <a
+                          href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction"
+                          class="external-link"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                          >Learn more</a
+                        >
+                      </td>
+                      <td style="text-align: center"></td>
+                      <td>
+                        <code>PlaybackDirection</code>
+                      </td>
+                      <td>
+                        <code>"normal"</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code class="nowrap">duration</code>
+                      </td>
+                      <td>The number of milliseconds each iteration of the animation takes to complete.</td>
+                      <td style="text-align: center"></td>
+                      <td>
+                        <code>number</code>
+                      </td>
+                      <td>
+                        <code>1000</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code class="nowrap">easing</code>
+                      </td>
+                      <td>
+                        The easing function to use for the animation. This can be a Pure UI easing function or a custom
+                        easing function such as <code>cubic-bezier(0, 1, .76, 1.14)</code>.
+                      </td>
+                      <td style="text-align: center"></td>
+                      <td>
+                        <code>string</code>
+                      </td>
+                      <td>
+                        <code>"linear"</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code class="nowrap">endDelay</code>
+
+                        <br />
+                        <p-tooltip content="This attribute is different from its property">
+                          <small>
+                            <code class="nowrap"> end-delay </code>
+                          </small>
+                        </p-tooltip>
+                      </td>
+                      <td>The number of milliseconds to delay after the active period of an animation sequence.</td>
+                      <td style="text-align: center"></td>
+                      <td>
+                        <code>number</code>
+                      </td>
+                      <td>
+                        <code>0</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code class="nowrap">fill</code>
+                      </td>
+                      <td>Sets how the animation applies styles to its target before and after its execution.</td>
+                      <td style="text-align: center"></td>
+                      <td>
+                        <code>FillMode</code>
+                      </td>
+                      <td>
+                        <code>"auto"</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code class="nowrap">iterations</code>
+                      </td>
+                      <td>
+                        The number of iterations to run before the animation completes. Defaults to
+                        <code>Infinity</code>, which loops.
+                      </td>
+                      <td style="text-align: center"></td>
+                      <td>-</td>
+                      <td>
+                        <code>Infinity</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code class="nowrap">iterationStart</code>
+
+                        <br />
+                        <p-tooltip content="This attribute is different from its property">
+                          <small>
+                            <code class="nowrap"> iteration-start </code>
+                          </small>
+                        </p-tooltip>
+                      </td>
+                      <td>The offset at which to start the animation, usually between 0 (start) and 1 (end).</td>
+                      <td style="text-align: center"></td>
+                      <td>
+                        <code>number</code>
+                      </td>
+                      <td>
+                        <code>0</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code class="nowrap">keyframes</code>
+                      </td>
+                      <td>
+                        The keyframes to use for the animation. If this is set, <code>name</code> will be ignored.
+                      </td>
+                      <td style="text-align: center"></td>
+                      <td>
+                        <code>Keyframe[] | undefined</code>
+                      </td>
+                      <td>-</td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code class="nowrap">playbackRate</code>
+
+                        <br />
+                        <p-tooltip content="This attribute is different from its property">
+                          <small>
+                            <code class="nowrap"> playback-rate </code>
+                          </small>
+                        </p-tooltip>
+                      </td>
+                      <td>
+                        Sets the animation’s playback rate. The default is <code>1</code>, which plays the animation at
+                        a normal speed. Setting this to <code>2</code>, for example, will double the animation’s speed.
+                        A negative value can be used to reverse the animation. This value can be changed without causing
+                        the animation to restart.
+                      </td>
+                      <td style="text-align: center"></td>
+                      <td>
+                        <code>number</code>
+                      </td>
+                      <td>
+                        <code>1</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code class="nowrap">currentTime</code>
+                      </td>
+                      <td>Gets and sets the current animation time.</td>
+                      <td style="text-align: center"></td>
+                      <td>
+                        <code>CSSNumberish</code>
+                      </td>
+                      <td>-</td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap"><code>updateComplete</code></td>
+                      <td>
+                        A read-only promise that resolves when the component has
+                        <a href="/getting-started/usage?#component-rendering-and-updating">finished updating</a>.
+                      </td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                <em
+                  >Learn more about
+                  <a href="/getting-started/usage#attributes-and-properties">attributes and properties</a>.</em
+                >
+              </p>
+
+              <h2 id="events" class="anchor-heading">
+                Events<a href="#events" aria-label='Direct link to "Events"'></a>
+              </h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name" data-flavor="html">Name</th>
+                      <th class="table-name" data-flavor="react">React Event</th>
+                      <th class="table-description">Description</th>
+                      <th class="table-event-detail">Event Detail</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-flavor="html"><code class="nowrap">p-cancel</code></td>
+                      <td data-flavor="react"><code class="nowrap">onPCancel</code></td>
+                      <td>Emitted when the animation is canceled.</td>
+                      <td>-</td>
+                    </tr>
+
+                    <tr>
+                      <td data-flavor="html"><code class="nowrap">p-finish</code></td>
+                      <td data-flavor="react"><code class="nowrap">onPFinish</code></td>
+                      <td>Emitted when the animation finishes.</td>
+                      <td>-</td>
+                    </tr>
+
+                    <tr>
+                      <td data-flavor="html"><code class="nowrap">p-start</code></td>
+                      <td data-flavor="react"><code class="nowrap">onPStart</code></td>
+                      <td>Emitted when the animation starts or restarts.</td>
+                      <td>-</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                <em>Learn more about <a href="/getting-started/usage#events">events</a>.</em>
+              </p>
+
+              <h2 id="methods" class="anchor-heading">
+                Methods<a href="#methods" aria-label='Direct link to "Methods"'></a>
+              </h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name">Name</th>
+                      <th class="table-description">Description</th>
+                      <th class="table-arguments">Arguments</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nowrap"><code>cancel()</code></td>
+                      <td>Clears all keyframe effects caused by this animation and aborts its playback.</td>
+                      <td>-</td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap"><code>finish()</code></td>
+                      <td>
+                        Sets the playback time to the end of the animation corresponding to the current playback
+                        direction.
+                      </td>
+                      <td>-</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                <em>Learn more about <a href="/getting-started/usage#methods">methods</a>.</em>
+              </p>
             </div>
 
-            <h2 id="importing" class="anchor-heading">
-              Importing<a href="#importing" aria-label='Direct link to "Importing"'></a>
-            </h2>
-            <p>
-              If you’re using the autoloader or the traditional loader, you can ignore this section. Otherwise, feel
-              free to use any of the following snippets to
-              <a href="/getting-started/installation#cherry-picking">cherry pick</a> this component.
-            </p>
-
-            <p-tab-group>
-              <p-tab slot="nav" panel="script">Script</p-tab>
-              <p-tab slot="nav" panel="import">Import</p-tab>
-              <p-tab slot="nav" panel="bundler">Bundler</p-tab>
-              <p-tab slot="nav" panel="react">React</p-tab>
-
-              <p-tab-panel name="script">
-                <p>
-                  To import this component from
-                  <a
-                    href="https://www.jsdelivr.com/package/npm/pure-uikit"
-                    class="external-link"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    >the CDN</a
-                  >
-                  using a script tag:
-                </p>
-                <pre><code class="language-html" id="code-block-185"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.5.11/cdn/components/animation/animation.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-185"></p-copy-button></pre>
-              </p-tab-panel>
-
-              <p-tab-panel name="import">
-                <p>
-                  To import this component from
-                  <a
-                    href="https://www.jsdelivr.com/package/npm/pure-uikit"
-                    class="external-link"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    >the CDN</a
-                  >
-                  using a JavaScript import:
-                </p>
-                <pre><code class="language-js" id="code-block-186"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.5.11/cdn/components/animation/animation.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-186"></p-copy-button></pre>
-              </p-tab-panel>
-
-              <p-tab-panel name="bundler">
-                <p>To import this component using <a href="/getting-started/installation#bundling">a bundler</a>:</p>
-                <pre><code class="language-js" id="code-block-187"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/animation/animation.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-187"></p-copy-button></pre>
-              </p-tab-panel>
-
-              <p-tab-panel name="react">
-                <p>To import this component as a <a href="/frameworks/react">React component</a>:</p>
-                <pre><code class="language-js" id="code-block-188"><span class="token keyword">import</span> PAnimation <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/animation'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-188"></p-copy-button></pre>
-              </p-tab-panel>
-            </p-tab-group>
-
-            <h2 id="slots" class="anchor-heading">Slots<a href="#slots" aria-label='Direct link to "Slots"'></a></h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name">Name</th>
-                    <th class="table-description">Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="nowrap">(default)</td>
-                    <td>
-                      The element to animate. Avoid slotting in more than one element, as subsequent ones will be
-                      ignored. To animate multiple elements, either wrap them in a single container or use multiple
-                      <code>&lt;p-animation&gt;</code> elements.
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="content__toc">
+              <ul>
+                <li class="top"><a href="#">Animation</a></li>
+                <li data-level="2"><a href="#examples">Examples</a></li>
+                <li data-level="3"><a href="#animations-and-easings">Animations &amp; Easings</a></li>
+                <li data-level="3"><a href="#using-intersection-observer">Using Intersection Observer</a></li>
+                <li data-level="3"><a href="#custom-keyframe-formats">Custom Keyframe Formats</a></li>
+                <li data-level="3"><a href="#playing-animations-on-demand">Playing Animations on Demand</a></li>
+                <li data-level="2"><a href="#importing">Importing</a></li>
+                <li data-level="2"><a href="#slots">Slots</a></li>
+                <li data-level="2"><a href="#properties">Properties</a></li>
+                <li data-level="2"><a href="#events">Events</a></li>
+                <li data-level="2"><a href="#methods">Methods</a></li>
+              </ul>
             </div>
-
-            <p>
-              <em>Learn more about <a href="/getting-started/usage#slots">using slots</a>.</em>
-            </p>
-
-            <h2 id="properties" class="anchor-heading">
-              Properties<a href="#properties" aria-label='Direct link to "Properties"'></a>
-            </h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name">Name</th>
-                    <th class="table-description">Description</th>
-                    <th class="table-reflects">Reflects</th>
-                    <th class="table-type">Type</th>
-                    <th class="table-default">Default</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <code class="nowrap">name</code>
-                    </td>
-                    <td>
-                      The name of the built-in animation to use. For custom animations, use the
-                      <code>keyframes</code> prop.
-                    </td>
-                    <td style="text-align: center"></td>
-                    <td>
-                      <code>string</code>
-                    </td>
-                    <td>
-                      <code>"none"</code>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <code class="nowrap">play</code>
-                    </td>
-                    <td>
-                      Plays the animation. When omitted, the animation will be paused. This attribute will be
-                      automatically removed when the animation finishes or gets canceled.
-                    </td>
-                    <td style="text-align: center">
-                      <p-icon label="yes" name="check-lg"></p-icon>
-                    </td>
-                    <td>
-                      <code>boolean</code>
-                    </td>
-                    <td>
-                      <code>false</code>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <code class="nowrap">delay</code>
-                    </td>
-                    <td>The number of milliseconds to delay the start of the animation.</td>
-                    <td style="text-align: center"></td>
-                    <td>
-                      <code>number</code>
-                    </td>
-                    <td>
-                      <code>0</code>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <code class="nowrap">direction</code>
-                    </td>
-                    <td>
-                      Determines the direction of playback as well as the behavior when reaching the end of an
-                      iteration.
-                      <a
-                        href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction"
-                        class="external-link"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        >Learn more</a
-                      >
-                    </td>
-                    <td style="text-align: center"></td>
-                    <td>
-                      <code>PlaybackDirection</code>
-                    </td>
-                    <td>
-                      <code>"normal"</code>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <code class="nowrap">duration</code>
-                    </td>
-                    <td>The number of milliseconds each iteration of the animation takes to complete.</td>
-                    <td style="text-align: center"></td>
-                    <td>
-                      <code>number</code>
-                    </td>
-                    <td>
-                      <code>1000</code>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <code class="nowrap">easing</code>
-                    </td>
-                    <td>
-                      The easing function to use for the animation. This can be a Pure UI easing function or a custom
-                      easing function such as <code>cubic-bezier(0, 1, .76, 1.14)</code>.
-                    </td>
-                    <td style="text-align: center"></td>
-                    <td>
-                      <code>string</code>
-                    </td>
-                    <td>
-                      <code>"linear"</code>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <code class="nowrap">endDelay</code>
-
-                      <br />
-                      <p-tooltip content="This attribute is different from its property">
-                        <small>
-                          <code class="nowrap"> end-delay </code>
-                        </small>
-                      </p-tooltip>
-                    </td>
-                    <td>The number of milliseconds to delay after the active period of an animation sequence.</td>
-                    <td style="text-align: center"></td>
-                    <td>
-                      <code>number</code>
-                    </td>
-                    <td>
-                      <code>0</code>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <code class="nowrap">fill</code>
-                    </td>
-                    <td>Sets how the animation applies styles to its target before and after its execution.</td>
-                    <td style="text-align: center"></td>
-                    <td>
-                      <code>FillMode</code>
-                    </td>
-                    <td>
-                      <code>"auto"</code>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <code class="nowrap">iterations</code>
-                    </td>
-                    <td>
-                      The number of iterations to run before the animation completes. Defaults to <code>Infinity</code>,
-                      which loops.
-                    </td>
-                    <td style="text-align: center"></td>
-                    <td>-</td>
-                    <td>
-                      <code>Infinity</code>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <code class="nowrap">iterationStart</code>
-
-                      <br />
-                      <p-tooltip content="This attribute is different from its property">
-                        <small>
-                          <code class="nowrap"> iteration-start </code>
-                        </small>
-                      </p-tooltip>
-                    </td>
-                    <td>The offset at which to start the animation, usually between 0 (start) and 1 (end).</td>
-                    <td style="text-align: center"></td>
-                    <td>
-                      <code>number</code>
-                    </td>
-                    <td>
-                      <code>0</code>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <code class="nowrap">keyframes</code>
-                    </td>
-                    <td>The keyframes to use for the animation. If this is set, <code>name</code> will be ignored.</td>
-                    <td style="text-align: center"></td>
-                    <td>
-                      <code>Keyframe[] | undefined</code>
-                    </td>
-                    <td>-</td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <code class="nowrap">playbackRate</code>
-
-                      <br />
-                      <p-tooltip content="This attribute is different from its property">
-                        <small>
-                          <code class="nowrap"> playback-rate </code>
-                        </small>
-                      </p-tooltip>
-                    </td>
-                    <td>
-                      Sets the animation’s playback rate. The default is <code>1</code>, which plays the animation at a
-                      normal speed. Setting this to <code>2</code>, for example, will double the animation’s speed. A
-                      negative value can be used to reverse the animation. This value can be changed without causing the
-                      animation to restart.
-                    </td>
-                    <td style="text-align: center"></td>
-                    <td>
-                      <code>number</code>
-                    </td>
-                    <td>
-                      <code>1</code>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <code class="nowrap">currentTime</code>
-                    </td>
-                    <td>Gets and sets the current animation time.</td>
-                    <td style="text-align: center"></td>
-                    <td>
-                      <code>CSSNumberish</code>
-                    </td>
-                    <td>-</td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap"><code>updateComplete</code></td>
-                    <td>
-                      A read-only promise that resolves when the component has
-                      <a href="/getting-started/usage?#component-rendering-and-updating">finished updating</a>.
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <p>
-              <em
-                >Learn more about
-                <a href="/getting-started/usage#attributes-and-properties">attributes and properties</a>.</em
-              >
-            </p>
-
-            <h2 id="events" class="anchor-heading">
-              Events<a href="#events" aria-label='Direct link to "Events"'></a>
-            </h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name" data-flavor="html">Name</th>
-                    <th class="table-name" data-flavor="react">React Event</th>
-                    <th class="table-description">Description</th>
-                    <th class="table-event-detail">Event Detail</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td data-flavor="html"><code class="nowrap">p-cancel</code></td>
-                    <td data-flavor="react"><code class="nowrap">onPCancel</code></td>
-                    <td>Emitted when the animation is canceled.</td>
-                    <td>-</td>
-                  </tr>
-
-                  <tr>
-                    <td data-flavor="html"><code class="nowrap">p-finish</code></td>
-                    <td data-flavor="react"><code class="nowrap">onPFinish</code></td>
-                    <td>Emitted when the animation finishes.</td>
-                    <td>-</td>
-                  </tr>
-
-                  <tr>
-                    <td data-flavor="html"><code class="nowrap">p-start</code></td>
-                    <td data-flavor="react"><code class="nowrap">onPStart</code></td>
-                    <td>Emitted when the animation starts or restarts.</td>
-                    <td>-</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <p>
-              <em>Learn more about <a href="/getting-started/usage#events">events</a>.</em>
-            </p>
-
-            <h2 id="methods" class="anchor-heading">
-              Methods<a href="#methods" aria-label='Direct link to "Methods"'></a>
-            </h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name">Name</th>
-                    <th class="table-description">Description</th>
-                    <th class="table-arguments">Arguments</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="nowrap"><code>cancel()</code></td>
-                    <td>Clears all keyframe effects caused by this animation and aborts its playback.</td>
-                    <td>-</td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap"><code>finish()</code></td>
-                    <td>
-                      Sets the playback time to the end of the animation corresponding to the current playback
-                      direction.
-                    </td>
-                    <td>-</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <p>
-              <em>Learn more about <a href="/getting-started/usage#methods">methods</a>.</em>
-            </p>
           </div>
         </div>
       </div>

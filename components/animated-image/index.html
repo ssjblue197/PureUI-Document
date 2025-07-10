@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="component" data-pure-ui-version="1.5.11">
+<html lang="en" data-layout="component" data-pure-ui-version="1.6.29">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -63,7 +63,7 @@
       <div id="header">
         <div class="left-header">
           <img src="/assets/images/logo.png" alt="Pure UI" id="logo" />
-          <span class="version">v1.5.11</span>
+          <span class="version">v1.6.29</span>
         </div>
         <span id="slogan"> PureUI: Simplify, Customize, Innovate. </span>
         <div class="right-header">
@@ -408,8 +408,6 @@
                 <h2>Resources</h2>
                 <ul>
                   <li><a href="/resources/community">Community</a></li>
-                  <li><a href="/resources/accessibility">Accessibility</a></li>
-                  <li><a href="/resources/contributing">Contributing</a></li>
                   <li><a href="/resources/changelog">Changelog</a></li>
                 </ul>
               </li>
@@ -417,48 +415,49 @@
           </nav>
         </aside>
 
-        <div id="content">
-          <div class="content__body">
-            <header class="component-header">
-              <h1>Animated Image</h1>
+        <div id="content" class="content--with-toc">
+          <div class="content--wrapper">
+            <div class="content__body">
+              <header class="component-header">
+                <h1>Animated Image</h1>
 
-              <div class="component-header__tag">
-                <code>&lt;p-animated-image&gt; | PAnimatedImage</code>
-              </div>
-
-              <div class="component-header__info">
-                <p-badge variant="neutral" pill=""> Since 1.0 </p-badge>
-                <p-badge variant="primary" pill="" style="text-transform: capitalize"> stable </p-badge>
-              </div>
-            </header>
-
-            <p class="component-summary">
-              A component for displaying animated GIFs and WEBPs that play and pause on interaction.
-            </p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <p-animated-image
-                  src="https://pureui.xyz/assets/images/walk.gif"
-                  alt="Animation of untied shoes walking on pavement"
-                ></p-animated-image>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                <div class="component-header__tag">
+                  <code>&lt;p-animated-image&gt; | PAnimatedImage</code>
                 </div>
-              </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-16">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-164"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-animated-image</span>
+                <div class="component-header__info">
+                  <p-badge variant="neutral" pill=""> Since 1.0 </p-badge>
+                  <p-badge variant="primary" pill="" style="text-transform: capitalize"> stable </p-badge>
+                </div>
+              </header>
+
+              <p class="component-summary">
+                A component for displaying animated GIFs and WEBPs that play and pause on interaction.
+              </p>
+
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <p-animated-image
+                    src="https://pureui.xyz/assets/images/walk.gif"
+                    alt="Animation of untied shoes walking on pavement"
+                  ></p-animated-image>
+
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
+                </div>
+
+                <div class="code-preview__source-group" id="code-preview-source-group-9">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-146"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-animated-image</span>
   <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://pureui.xyz/assets/images/walk.gif<span class="token punctuation">"</span></span>
   <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Animation of untied shoes walking on pavement<span class="token punctuation">"</span></span>
 <span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-animated-image</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-164"></p-copy-button></pre>
-                </div>
+</code><p-copy-button class="copy-code-button" from="code-block-146"></p-copy-button></pre>
+                  </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-165"><span class="token keyword">import</span> PAnimatedImage <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/animated-image'</span><span class="token punctuation">;</span>
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-147"><span class="token keyword">import</span> PAnimatedImage <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/animated-image'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PAnimatedImage</span></span>
@@ -466,198 +465,206 @@
     <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Animation of untied shoes walking on pavement<span class="token punctuation">"</span></span>
   <span class="token punctuation">/&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-165"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-147"></p-copy-button></pre>
+                  </div>
+                </div>
+
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-9"
+                  >
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
+
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
+                  >
+                    React
+                  </button>
+
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-16"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
-
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
-
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
-
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
+              <div role="alert" class="callout callout--tip">
+                <p>
+                  This component uses <code>&lt;canvas&gt;</code> to draw freeze frames, so images are subject to
+                  <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_enabled_image"
+                    class="external-link"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >cross-origin restrictions</a
+                  >.
+                </p>
               </div>
-            </div>
+              <h2 id="examples" class="anchor-heading">
+                Examples<a href="#examples" aria-label='Direct link to "Examples"'></a>
+              </h2>
+              <h3 id="webp-images" class="anchor-heading">
+                WEBP Images<a href="#webp-images" aria-label='Direct link to "WEBP Images"'></a>
+              </h3>
+              <p>Both GIF and WEBP images are supported.</p>
 
-            <div role="alert" class="callout callout--tip">
-              <p>
-                This component uses <code>&lt;canvas&gt;</code> to draw freeze frames, so images are subject to
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_enabled_image"
-                  class="external-link"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  >cross-origin restrictions</a
-                >.
-              </p>
-            </div>
-            <h2 id="examples" class="anchor-heading">
-              Examples<a href="#examples" aria-label='Direct link to "Examples"'></a>
-            </h2>
-            <h3 id="webp-images" class="anchor-heading">
-              WEBP Images<a href="#webp-images" aria-label='Direct link to "WEBP Images"'></a>
-            </h3>
-            <p>Both GIF and WEBP images are supported.</p>
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <p-animated-image
+                    src="https://pureui.xyz/assets/images/tie.webp"
+                    alt="Animation of a shoe being tied"
+                  ></p-animated-image>
 
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <p-animated-image
-                  src="https://pureui.xyz/assets/images/tie.webp"
-                  alt="Animation of a shoe being tied"
-                ></p-animated-image>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
                 </div>
-              </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-17">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-166"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-animated-image</span>
+                <div class="code-preview__source-group" id="code-preview-source-group-10">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-148"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-animated-image</span>
   <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://pureui.xyz/assets/images/tie.webp<span class="token punctuation">"</span></span>
   <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Animation of a shoe being tied<span class="token punctuation">"</span></span>
 <span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-animated-image</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-166"></p-copy-button></pre>
-                </div>
+</code><p-copy-button class="copy-code-button" from="code-block-148"></p-copy-button></pre>
+                  </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-167"><span class="token keyword">import</span> PAnimatedImage <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/animated-image'</span><span class="token punctuation">;</span>
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-149"><span class="token keyword">import</span> PAnimatedImage <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/animated-image'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PAnimatedImage</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://pureui.xyz/assets/images/tie.webp<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Animation of a shoe being tied<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-167"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-149"></p-copy-button></pre>
+                  </div>
+                </div>
+
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-10"
+                  >
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
+
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
+                  >
+                    React
+                  </button>
+
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-17"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+              <h3 id="setting-a-width-and-height" class="anchor-heading">
+                Setting a Width and Height<a
+                  href="#setting-a-width-and-height"
+                  aria-label='Direct link to "Setting a Width and Height"'
+                ></a>
+              </h3>
+              <p>To set a custom size, apply a width and/or height to the host element.</p>
+
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <p-animated-image
+                    src="https://pureui.xyz/assets/images/walk.gif"
+                    alt="Animation of untied shoes walking on pavement"
+                    style="width: 150px; height: 200px"
                   >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+                  </p-animated-image>
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
-
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
-
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <h3 id="setting-a-width-and-height" class="anchor-heading">
-              Setting a Width and Height<a
-                href="#setting-a-width-and-height"
-                aria-label='Direct link to "Setting a Width and Height"'
-              ></a>
-            </h3>
-            <p>To set a custom size, apply a width and/or height to the host element.</p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <p-animated-image
-                  src="https://pureui.xyz/assets/images/walk.gif"
-                  alt="Animation of untied shoes walking on pavement"
-                  style="width: 150px; height: 200px"
-                >
-                </p-animated-image>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
                 </div>
-              </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-18">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-168"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-animated-image</span>
+                <div class="code-preview__source-group" id="code-preview-source-group-11">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-150"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-animated-image</span>
   <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://pureui.xyz/assets/images/walk.gif<span class="token punctuation">"</span></span>
   <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Animation of untied shoes walking on pavement<span class="token punctuation">"</span></span>
   <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">width</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span> <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span>
 <span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-animated-image</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-168"></p-copy-button></pre>
-                </div>
+</code><p-copy-button class="copy-code-button" from="code-block-150"></p-copy-button></pre>
+                  </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-169"><span class="token keyword">import</span> PAnimatedImage <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/animated-image'</span><span class="token punctuation">;</span>
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-151"><span class="token keyword">import</span> PAnimatedImage <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/animated-image'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PAnimatedImage</span></span>
@@ -666,100 +673,104 @@
     <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token literal-property property">width</span><span class="token operator">:</span> <span class="token string">'150px'</span><span class="token punctuation">,</span> <span class="token literal-property property">height</span><span class="token operator">:</span> <span class="token string">'200px'</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
   <span class="token punctuation">/&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-169"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-151"></p-copy-button></pre>
+                  </div>
+                </div>
+
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-11"
+                  >
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
+
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
+                  >
+                    React
+                  </button>
+
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-18"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+              <h3 id="customizing-the-control-box" class="anchor-heading">
+                Customizing the Control Box<a
+                  href="#customizing-the-control-box"
+                  aria-label='Direct link to "Customizing the Control Box"'
+                ></a>
+              </h3>
+              <p>
+                You can change the appearance and location of the control box by targeting the
+                <code>control-box</code> part in your styles.
+              </p>
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <p-animated-image
+                    src="https://pureui.xyz/assets/images/walk.gif"
+                    alt="Animation of untied shoes walking on pavement"
+                    class="animated-image-custom-control-box"
+                  ></p-animated-image>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
+                  <style>
+                    .animated-image-custom-control-box::part(control-box) {
+                      top: auto;
+                      right: auto;
+                      bottom: 1rem;
+                      left: 1rem;
+                      background-color: deeppink;
+                      border: none;
+                      color: pink;
+                    }
+                  </style>
 
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <h3 id="customizing-the-control-box" class="anchor-heading">
-              Customizing the Control Box<a
-                href="#customizing-the-control-box"
-                aria-label='Direct link to "Customizing the Control Box"'
-              ></a>
-            </h3>
-            <p>
-              You can change the appearance and location of the control box by targeting the
-              <code>control-box</code> part in your styles.
-            </p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <p-animated-image
-                  src="https://pureui.xyz/assets/images/walk.gif"
-                  alt="Animation of untied shoes walking on pavement"
-                  class="animated-image-custom-control-box"
-                ></p-animated-image>
-
-                <style>
-                  .animated-image-custom-control-box::part(control-box) {
-                    top: auto;
-                    right: auto;
-                    bottom: 1rem;
-                    left: 1rem;
-                    background-color: deeppink;
-                    border: none;
-                    color: pink;
-                  }
-                </style>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
                 </div>
-              </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-19">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-170"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-animated-image</span>
+                <div class="code-preview__source-group" id="code-preview-source-group-12">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-152"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-animated-image</span>
   <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://pureui.xyz/assets/images/walk.gif<span class="token punctuation">"</span></span>
   <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Animation of untied shoes walking on pavement<span class="token punctuation">"</span></span>
   <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>animated-image-custom-control-box<span class="token punctuation">"</span></span>
@@ -776,11 +787,11 @@
     <span class="token property">color</span><span class="token punctuation">:</span> pink<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-170"></p-copy-button></pre>
-                </div>
+</code><p-copy-button class="copy-code-button" from="code-block-152"></p-copy-button></pre>
+                  </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-171"><span class="token keyword">import</span> PAnimatedImage <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/animated-image'</span><span class="token punctuation">;</span>
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-153"><span class="token keyword">import</span> PAnimatedImage <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/animated-image'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> css <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
   .animated-image-custom-control-box::part(control-box) {
@@ -805,332 +816,354 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">{css}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-171"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-153"></p-copy-button></pre>
+                  </div>
+                </div>
+
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-12"
+                  >
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
+
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
+                  >
+                    React
+                  </button>
+
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-19"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+              <h2 id="importing" class="anchor-heading">
+                Importing<a href="#importing" aria-label='Direct link to "Importing"'></a>
+              </h2>
+              <p>
+                If you’re using the autoloader or the traditional loader, you can ignore this section. Otherwise, feel
+                free to use any of the following snippets to
+                <a href="/getting-started/installation#cherry-picking">cherry pick</a> this component.
+              </p>
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+              <p-tab-group>
+                <p-tab slot="nav" panel="script">Script</p-tab>
+                <p-tab slot="nav" panel="import">Import</p-tab>
+                <p-tab slot="nav" panel="bundler">Bundler</p-tab>
+                <p-tab slot="nav" panel="react">React</p-tab>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
+                <p-tab-panel name="script">
+                  <p>
+                    To import this component from
+                    <a
+                      href="https://www.jsdelivr.com/package/npm/pure-uikit"
+                      class="external-link"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      >the CDN</a
+                    >
+                    using a script tag:
+                  </p>
+                  <pre><code class="language-html" id="code-block-154"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.6.29/cdn/components/animated-image/animated-image.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-154"></p-copy-button></pre>
+                </p-tab-panel>
 
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
+                <p-tab-panel name="import">
+                  <p>
+                    To import this component from
+                    <a
+                      href="https://www.jsdelivr.com/package/npm/pure-uikit"
+                      class="external-link"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      >the CDN</a
+                    >
+                    using a JavaScript import:
+                  </p>
+                  <pre><code class="language-js" id="code-block-155"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.6.29/cdn/components/animated-image/animated-image.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-155"></p-copy-button></pre>
+                </p-tab-panel>
+
+                <p-tab-panel name="bundler">
+                  <p>To import this component using <a href="/getting-started/installation#bundling">a bundler</a>:</p>
+                  <pre><code class="language-js" id="code-block-156"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/animated-image/animated-image.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-156"></p-copy-button></pre>
+                </p-tab-panel>
+
+                <p-tab-panel name="react">
+                  <p>To import this component as a <a href="/frameworks/react">React component</a>:</p>
+                  <pre><code class="language-js" id="code-block-157"><span class="token keyword">import</span> PAnimatedImage <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/animated-image'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-157"></p-copy-button></pre>
+                </p-tab-panel>
+              </p-tab-group>
+
+              <h2 id="slots" class="anchor-heading">Slots<a href="#slots" aria-label='Direct link to "Slots"'></a></h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name">Name</th>
+                      <th class="table-description">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nowrap">
+                        <code>play-icon</code>
+                      </td>
+                      <td>
+                        Optional play icon to use instead of the default. Works best with <code>&lt;p-icon&gt;</code>.
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap">
+                        <code>pause-icon</code>
+                      </td>
+                      <td>
+                        Optional pause icon to use instead of the default. Works best with <code>&lt;p-icon&gt;</code>.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
+
+              <p>
+                <em>Learn more about <a href="/getting-started/usage#slots">using slots</a>.</em>
+              </p>
+
+              <h2 id="properties" class="anchor-heading">
+                Properties<a href="#properties" aria-label='Direct link to "Properties"'></a>
+              </h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name">Name</th>
+                      <th class="table-description">Description</th>
+                      <th class="table-reflects">Reflects</th>
+                      <th class="table-type">Type</th>
+                      <th class="table-default">Default</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <code class="nowrap">src</code>
+                      </td>
+                      <td>The path to the image to load.</td>
+                      <td style="text-align: center"></td>
+                      <td>
+                        <code>string</code>
+                      </td>
+                      <td>-</td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code class="nowrap">alt</code>
+                      </td>
+                      <td>A description of the image used by assistive devices.</td>
+                      <td style="text-align: center"></td>
+                      <td>
+                        <code>string</code>
+                      </td>
+                      <td>-</td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <code class="nowrap">play</code>
+                      </td>
+                      <td>Plays the animation. When this attribute is remove, the animation will pause.</td>
+                      <td style="text-align: center">
+                        <p-icon label="yes" name="check-lg"></p-icon>
+                      </td>
+                      <td>
+                        <code>boolean</code>
+                      </td>
+                      <td>-</td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap"><code>updateComplete</code></td>
+                      <td>
+                        A read-only promise that resolves when the component has
+                        <a href="/getting-started/usage?#component-rendering-and-updating">finished updating</a>.
+                      </td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                <em
+                  >Learn more about
+                  <a href="/getting-started/usage#attributes-and-properties">attributes and properties</a>.</em
+                >
+              </p>
+
+              <h2 id="events" class="anchor-heading">
+                Events<a href="#events" aria-label='Direct link to "Events"'></a>
+              </h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name" data-flavor="html">Name</th>
+                      <th class="table-name" data-flavor="react">React Event</th>
+                      <th class="table-description">Description</th>
+                      <th class="table-event-detail">Event Detail</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-flavor="html"><code class="nowrap">p-load</code></td>
+                      <td data-flavor="react"><code class="nowrap">onPLoad</code></td>
+                      <td>Emitted when the image loads successfully.</td>
+                      <td>-</td>
+                    </tr>
+
+                    <tr>
+                      <td data-flavor="html"><code class="nowrap">p-error</code></td>
+                      <td data-flavor="react"><code class="nowrap">onPError</code></td>
+                      <td>Emitted when the image fails to load.</td>
+                      <td>-</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                <em>Learn more about <a href="/getting-started/usage#events">events</a>.</em>
+              </p>
+
+              <h2 id="custom-properties" class="anchor-heading">
+                Custom Properties<a href="#custom-properties" aria-label='Direct link to "Custom Properties"'></a>
+              </h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name">Name</th>
+                      <th class="table-description">Description</th>
+                      <th class="table-default">Default</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nowrap"><code>--control-box-size</code></td>
+                      <td>The size of the icon box.</td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap"><code>--icon-size</code></td>
+                      <td>The size of the play/pause icons.</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                <em
+                  >Learn more about
+                  <a href="/getting-started/usage#custom-properties">customizing CSS custom properties</a>.</em
+                >
+              </p>
+
+              <h2 id="parts" class="anchor-heading">Parts<a href="#parts" aria-label='Direct link to "Parts"'></a></h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name">Name</th>
+                      <th class="table-description">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nowrap"><code>control-box</code></td>
+                      <td>The container that surrounds the pause/play icons and provides their background.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                <em>Learn more about <a href="/getting-started/customizing/#css-parts">customizing CSS parts</a>.</em>
+              </p>
+
+              <h2 id="dependencies" class="anchor-heading">
+                Dependencies<a href="#dependencies" aria-label='Direct link to "Dependencies"'></a>
+              </h2>
+
+              <p>This component automatically imports the following dependencies.</p>
+
+              <ul>
+                <li><code>&lt;p-icon&gt;</code></li>
+              </ul>
             </div>
 
-            <h2 id="importing" class="anchor-heading">
-              Importing<a href="#importing" aria-label='Direct link to "Importing"'></a>
-            </h2>
-            <p>
-              If you’re using the autoloader or the traditional loader, you can ignore this section. Otherwise, feel
-              free to use any of the following snippets to
-              <a href="/getting-started/installation#cherry-picking">cherry pick</a> this component.
-            </p>
-
-            <p-tab-group>
-              <p-tab slot="nav" panel="script">Script</p-tab>
-              <p-tab slot="nav" panel="import">Import</p-tab>
-              <p-tab slot="nav" panel="bundler">Bundler</p-tab>
-              <p-tab slot="nav" panel="react">React</p-tab>
-
-              <p-tab-panel name="script">
-                <p>
-                  To import this component from
-                  <a
-                    href="https://www.jsdelivr.com/package/npm/pure-uikit"
-                    class="external-link"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    >the CDN</a
-                  >
-                  using a script tag:
-                </p>
-                <pre><code class="language-html" id="code-block-172"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.5.11/cdn/components/animated-image/animated-image.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-172"></p-copy-button></pre>
-              </p-tab-panel>
-
-              <p-tab-panel name="import">
-                <p>
-                  To import this component from
-                  <a
-                    href="https://www.jsdelivr.com/package/npm/pure-uikit"
-                    class="external-link"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    >the CDN</a
-                  >
-                  using a JavaScript import:
-                </p>
-                <pre><code class="language-js" id="code-block-173"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.5.11/cdn/components/animated-image/animated-image.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-173"></p-copy-button></pre>
-              </p-tab-panel>
-
-              <p-tab-panel name="bundler">
-                <p>To import this component using <a href="/getting-started/installation#bundling">a bundler</a>:</p>
-                <pre><code class="language-js" id="code-block-174"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/animated-image/animated-image.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-174"></p-copy-button></pre>
-              </p-tab-panel>
-
-              <p-tab-panel name="react">
-                <p>To import this component as a <a href="/frameworks/react">React component</a>:</p>
-                <pre><code class="language-js" id="code-block-175"><span class="token keyword">import</span> PAnimatedImage <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/animated-image'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-175"></p-copy-button></pre>
-              </p-tab-panel>
-            </p-tab-group>
-
-            <h2 id="slots" class="anchor-heading">Slots<a href="#slots" aria-label='Direct link to "Slots"'></a></h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name">Name</th>
-                    <th class="table-description">Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="nowrap">
-                      <code>play-icon</code>
-                    </td>
-                    <td>
-                      Optional play icon to use instead of the default. Works best with <code>&lt;p-icon&gt;</code>.
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap">
-                      <code>pause-icon</code>
-                    </td>
-                    <td>
-                      Optional pause icon to use instead of the default. Works best with <code>&lt;p-icon&gt;</code>.
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="content__toc">
+              <ul>
+                <li class="top"><a href="#">Animated Image</a></li>
+                <li data-level="2"><a href="#examples">Examples</a></li>
+                <li data-level="3"><a href="#webp-images">WEBP Images</a></li>
+                <li data-level="3"><a href="#setting-a-width-and-height">Setting a Width and Height</a></li>
+                <li data-level="3"><a href="#customizing-the-control-box">Customizing the Control Box</a></li>
+                <li data-level="2"><a href="#importing">Importing</a></li>
+                <li data-level="2"><a href="#slots">Slots</a></li>
+                <li data-level="2"><a href="#properties">Properties</a></li>
+                <li data-level="2"><a href="#events">Events</a></li>
+                <li data-level="2"><a href="#custom-properties">Custom Properties</a></li>
+                <li data-level="2"><a href="#parts">Parts</a></li>
+                <li data-level="2"><a href="#dependencies">Dependencies</a></li>
+              </ul>
             </div>
-
-            <p>
-              <em>Learn more about <a href="/getting-started/usage#slots">using slots</a>.</em>
-            </p>
-
-            <h2 id="properties" class="anchor-heading">
-              Properties<a href="#properties" aria-label='Direct link to "Properties"'></a>
-            </h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name">Name</th>
-                    <th class="table-description">Description</th>
-                    <th class="table-reflects">Reflects</th>
-                    <th class="table-type">Type</th>
-                    <th class="table-default">Default</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <code class="nowrap">src</code>
-                    </td>
-                    <td>The path to the image to load.</td>
-                    <td style="text-align: center"></td>
-                    <td>
-                      <code>string</code>
-                    </td>
-                    <td>-</td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <code class="nowrap">alt</code>
-                    </td>
-                    <td>A description of the image used by assistive devices.</td>
-                    <td style="text-align: center"></td>
-                    <td>
-                      <code>string</code>
-                    </td>
-                    <td>-</td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <code class="nowrap">play</code>
-                    </td>
-                    <td>Plays the animation. When this attribute is remove, the animation will pause.</td>
-                    <td style="text-align: center">
-                      <p-icon label="yes" name="check-lg"></p-icon>
-                    </td>
-                    <td>
-                      <code>boolean</code>
-                    </td>
-                    <td>-</td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap"><code>updateComplete</code></td>
-                    <td>
-                      A read-only promise that resolves when the component has
-                      <a href="/getting-started/usage?#component-rendering-and-updating">finished updating</a>.
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <p>
-              <em
-                >Learn more about
-                <a href="/getting-started/usage#attributes-and-properties">attributes and properties</a>.</em
-              >
-            </p>
-
-            <h2 id="events" class="anchor-heading">
-              Events<a href="#events" aria-label='Direct link to "Events"'></a>
-            </h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name" data-flavor="html">Name</th>
-                    <th class="table-name" data-flavor="react">React Event</th>
-                    <th class="table-description">Description</th>
-                    <th class="table-event-detail">Event Detail</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td data-flavor="html"><code class="nowrap">p-load</code></td>
-                    <td data-flavor="react"><code class="nowrap">onPLoad</code></td>
-                    <td>Emitted when the image loads successfully.</td>
-                    <td>-</td>
-                  </tr>
-
-                  <tr>
-                    <td data-flavor="html"><code class="nowrap">p-error</code></td>
-                    <td data-flavor="react"><code class="nowrap">onPError</code></td>
-                    <td>Emitted when the image fails to load.</td>
-                    <td>-</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <p>
-              <em>Learn more about <a href="/getting-started/usage#events">events</a>.</em>
-            </p>
-
-            <h2 id="custom-properties" class="anchor-heading">
-              Custom Properties<a href="#custom-properties" aria-label='Direct link to "Custom Properties"'></a>
-            </h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name">Name</th>
-                    <th class="table-description">Description</th>
-                    <th class="table-default">Default</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="nowrap"><code>--control-box-size</code></td>
-                    <td>The size of the icon box.</td>
-                    <td></td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap"><code>--icon-size</code></td>
-                    <td>The size of the play/pause icons.</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <p>
-              <em
-                >Learn more about
-                <a href="/getting-started/usage#custom-properties">customizing CSS custom properties</a>.</em
-              >
-            </p>
-
-            <h2 id="parts" class="anchor-heading">Parts<a href="#parts" aria-label='Direct link to "Parts"'></a></h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name">Name</th>
-                    <th class="table-description">Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="nowrap"><code>control-box</code></td>
-                    <td>The container that surrounds the pause/play icons and provides their background.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <p>
-              <em>Learn more about <a href="/getting-started/customizing/#css-parts">customizing CSS parts</a>.</em>
-            </p>
-
-            <h2 id="dependencies" class="anchor-heading">
-              Dependencies<a href="#dependencies" aria-label='Direct link to "Dependencies"'></a>
-            </h2>
-
-            <p>This component automatically imports the following dependencies.</p>
-
-            <ul>
-              <li><code>&lt;p-icon&gt;</code></li>
-            </ul>
           </div>
         </div>
       </div>

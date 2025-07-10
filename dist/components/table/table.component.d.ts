@@ -169,6 +169,8 @@ export default class PTable extends PureElement {
     private handleChangeLimit;
     private handleSelectAll;
     private handleSelectRow;
+    private handleRowClick;
+    private handleExpandRow;
     getSelectedRows(): TableRowData[];
     render(): import("lit-html").TemplateResult<1>;
 }

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="default" data-pure-ui-version="1.5.11">
+<html lang="en" data-layout="default" data-pure-ui-version="1.6.29">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -57,7 +57,7 @@
       <div id="header">
         <div class="left-header">
           <img src="/assets/images/logo.png" alt="Pure UI" id="logo" />
-          <span class="version">v1.5.11</span>
+          <span class="version">v1.6.29</span>
         </div>
         <span id="slogan"> PureUI: Simplify, Customize, Innovate. </span>
         <div class="right-header">
@@ -402,8 +402,6 @@
                 <h2>Resources</h2>
                 <ul>
                   <li><a href="/resources/community">Community</a></li>
-                  <li><a href="/resources/accessibility">Accessibility</a></li>
-                  <li><a href="/resources/contributing">Contributing</a></li>
                   <li><a href="/resources/changelog">Changelog</a></li>
                 </ul>
               </li>
@@ -411,67 +409,69 @@
           </nav>
         </aside>
 
-        <div id="content">
-          <div class="content__body">
-            <h1>Integrating with Rails</h1>
-            <p>This page explains how to integrate Pure UI with a Rails app.</p>
-            <div role="alert" class="callout callout--tip">
-              <p>
-                This is a community-maintained document. Please <a href="/resources/community">ask the community</a> if
-                you have questions about this integration. You can also
-                <a
-                  href="https://github.com/ssjblue197/pure-ui/blob/next/docs/tutorials/integrating-with-rails.md"
-                  class="external-link"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  >suggest improvements</a
-                >
-                to make it better.
-              </p>
-            </div>
-            <h2 id="requirements" class="anchor-heading">
-              Requirements<a href="#requirements" aria-label='Direct link to "Requirements"'></a>
-            </h2>
-            <p>This integration has been tested with the following:</p>
-            <ul>
-              <li>Rails &gt;= 6</li>
-              <li>Node &gt;= 12.10</li>
-              <li>Webpacker &gt;= 5</li>
-            </ul>
-            <h2 id="instructions" class="anchor-heading">
-              Instructions<a href="#instructions" aria-label='Direct link to "Instructions"'></a>
-            </h2>
-            <p>To get started using Pure UI with Rails, the following packages must be installed.</p>
-            <pre><code class="language-bash" id="code-block-121"><span class="token function">yarn</span> <span class="token function">add</span> pure-uikit copy-webpack-plugin
+        <div id="content" class="content--with-toc">
+          <div class="content--wrapper">
+            <div class="content__body">
+              <h1>Integrating with Rails</h1>
+              <p>This page explains how to integrate Pure UI with a Rails app.</p>
+              <div role="alert" class="callout callout--tip">
+                <p>
+                  This is a community-maintained document. Please
+                  <a href="/resources/community">ask the community</a> if you have questions about this integration. You
+                  can also
+                  <a
+                    href="https://github.com/ssjblue197/pure-ui/blob/next/docs/tutorials/integrating-with-rails.md"
+                    class="external-link"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >suggest improvements</a
+                  >
+                  to make it better.
+                </p>
+              </div>
+              <h2 id="requirements" class="anchor-heading">
+                Requirements<a href="#requirements" aria-label='Direct link to "Requirements"'></a>
+              </h2>
+              <p>This integration has been tested with the following:</p>
+              <ul>
+                <li>Rails &gt;= 6</li>
+                <li>Node &gt;= 12.10</li>
+                <li>Webpacker &gt;= 5</li>
+              </ul>
+              <h2 id="instructions" class="anchor-heading">
+                Instructions<a href="#instructions" aria-label='Direct link to "Instructions"'></a>
+              </h2>
+              <p>To get started using Pure UI with Rails, the following packages must be installed.</p>
+              <pre><code class="language-bash" id="code-block-121"><span class="token function">yarn</span> <span class="token function">add</span> pure-uikit copy-webpack-plugin
 </code><p-copy-button class="copy-code-button" from="code-block-121"></p-copy-button></pre>
-            <h3 id="importing-the-default-theme" class="anchor-heading">
-              Importing the Default Theme<a
-                href="#importing-the-default-theme"
-                aria-label='Direct link to "Importing the Default Theme"'
-              ></a>
-            </h3>
-            <p>
-              The next step is to import Pure UI’s default theme (stylesheet) in
-              <code>app/javascript/stylesheets/application.scss</code>.
-            </p>
-            <pre><code class="language-css" id="code-block-122"><span class="token atrule"><span class="token rule">@import</span> <span class="token string">'pure-uikit/dist/themes/light'</span><span class="token punctuation">;</span></span>
+              <h3 id="importing-the-default-theme" class="anchor-heading">
+                Importing the Default Theme<a
+                  href="#importing-the-default-theme"
+                  aria-label='Direct link to "Importing the Default Theme"'
+                ></a>
+              </h3>
+              <p>
+                The next step is to import Pure UI’s default theme (stylesheet) in
+                <code>app/javascript/stylesheets/application.scss</code>.
+              </p>
+              <pre><code class="language-css" id="code-block-122"><span class="token atrule"><span class="token rule">@import</span> <span class="token string">'pure-uikit/dist/themes/light'</span><span class="token punctuation">;</span></span>
 <span class="token atrule"><span class="token rule">@import</span> <span class="token string">'pure-uikit/dist/themes/dark'</span><span class="token punctuation">;</span></span> // Optional dark theme
 </code><p-copy-button class="copy-code-button" from="code-block-122"></p-copy-button></pre>
-            <p>
-              Fore more details about themes, please refer to
-              <a href="/getting-started/themes#theme-basics">Theme Basics</a>.
-            </p>
-            <h3 id="importing-required-scripts" class="anchor-heading">
-              Importing Required Scripts<a
-                href="#importing-required-scripts"
-                aria-label='Direct link to "Importing Required Scripts"'
-              ></a>
-            </h3>
-            <p>
-              After importing the theme, you’ll need to import the JavaScript files for Pure UI. Add the following code
-              to <code>app/javascript/packs/application.js</code>.
-            </p>
-            <pre><code class="language-js" id="code-block-123"><span class="token keyword">import</span> <span class="token string">'../stylesheets/application.scss'</span>
+              <p>
+                Fore more details about themes, please refer to
+                <a href="/getting-started/themes#theme-basics">Theme Basics</a>.
+              </p>
+              <h3 id="importing-required-scripts" class="anchor-heading">
+                Importing Required Scripts<a
+                  href="#importing-required-scripts"
+                  aria-label='Direct link to "Importing Required Scripts"'
+                ></a>
+              </h3>
+              <p>
+                After importing the theme, you’ll need to import the JavaScript files for Pure UI. Add the following
+                code to <code>app/javascript/packs/application.js</code>.
+              </p>
+              <pre><code class="language-js" id="code-block-123"><span class="token keyword">import</span> <span class="token string">'../stylesheets/application.scss'</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath<span class="token punctuation">,</span> SlAlert<span class="token punctuation">,</span> SlAnimation<span class="token punctuation">,</span> SlButton<span class="token punctuation">,</span> <span class="token operator">...</span> <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pure-uikit'</span>
 
 <span class="token comment">// ...</span>
@@ -482,14 +482,14 @@
 <span class="token comment">// to work correctly in different environments)</span>
 <span class="token function">setBasePath</span><span class="token punctuation">(</span>rootUrl <span class="token operator">+</span> <span class="token string">'/packs/js/'</span><span class="token punctuation">)</span>
 </code><p-copy-button class="copy-code-button" from="code-block-123"></p-copy-button></pre>
-            <h3 id="webpack-config" class="anchor-heading">
-              webpack Config<a href="#webpack-config" aria-label='Direct link to "webpack Config"'></a>
-            </h3>
-            <p>
-              Next we need to add Pure UI’s assets to the final build output. To do this, modify
-              <code>config/webpack/environment.js</code> to look like this.
-            </p>
-            <pre><code class="language-js" id="code-block-124"><span class="token keyword">const</span> <span class="token punctuation">{</span> environment <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"@rails/webpacker"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <h3 id="webpack-config" class="anchor-heading">
+                webpack Config<a href="#webpack-config" aria-label='Direct link to "webpack Config"'></a>
+              </h3>
+              <p>
+                Next we need to add Pure UI’s assets to the final build output. To do this, modify
+                <code>config/webpack/environment.js</code> to look like this.
+              </p>
+              <pre><code class="language-js" id="code-block-124"><span class="token keyword">const</span> <span class="token punctuation">{</span> environment <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"@rails/webpacker"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">// Pure UI config</span>
 <span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"path"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -510,15 +510,15 @@ environment<span class="token punctuation">.</span>plugins<span class="token pun
 
 module<span class="token punctuation">.</span>exports <span class="token operator">=</span> environment<span class="token punctuation">;</span>
 </code><p-copy-button class="copy-code-button" from="code-block-124"></p-copy-button></pre>
-            <h3 id="adding-pack-tags" class="anchor-heading">
-              Adding Pack Tags<a href="#adding-pack-tags" aria-label='Direct link to "Adding Pack Tags"'></a>
-            </h3>
-            <p>
-              The final step is to add the corresponding <code>pack_tags</code> to the page. You should have the
-              following <code>tags</code> in the <code>&lt;head&gt;</code> section of
-              <code>app/views/layouts/application.html.erb</code>.
-            </p>
-            <pre><code class="language-html" id="code-block-125"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">doctype</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+              <h3 id="adding-pack-tags" class="anchor-heading">
+                Adding Pack Tags<a href="#adding-pack-tags" aria-label='Direct link to "Adding Pack Tags"'></a>
+              </h3>
+              <p>
+                The final step is to add the corresponding <code>pack_tags</code> to the page. You should have the
+                following <code>tags</code> in the <code>&lt;head&gt;</code> section of
+                <code>app/views/layouts/application.html.erb</code>.
+              </p>
+              <pre><code class="language-html" id="code-block-125"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">doctype</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
     <span class="token comment">&lt;!-- ... --&gt;</span>
@@ -531,43 +531,57 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
 </code><p-copy-button class="copy-code-button" from="code-block-125"></p-copy-button></pre>
-            <p>Now you can start using Pure UI components with Rails!</p>
-            <h2 id="additional-resources" class="anchor-heading">
-              Additional Resources<a
-                href="#additional-resources"
-                aria-label='Direct link to "Additional Resources"'
-              ></a>
-            </h2>
-            <ul>
-              <li>
-                There is a third-party
-                <a
-                  href="https://github.com/ParamagicDev/rails-pure-ui-example"
-                  class="external-link"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  >example repo</a
-                >, courtesy of
-                <a
-                  href="https://github.com/ParamagicDev"
-                  class="external-link"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  >ParamagicDev</a
-                >
-                available to help you get started.
-              </li>
-              <li>
-                If you would like to avoid repeating this process, check out the associated
-                <a
-                  href="https://railsbytes.com/templates/X8BsEb"
-                  class="external-link"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  >Railsbyte for Pure UI</a
-                >.
-              </li>
-            </ul>
+              <p>Now you can start using Pure UI components with Rails!</p>
+              <h2 id="additional-resources" class="anchor-heading">
+                Additional Resources<a
+                  href="#additional-resources"
+                  aria-label='Direct link to "Additional Resources"'
+                ></a>
+              </h2>
+              <ul>
+                <li>
+                  There is a third-party
+                  <a
+                    href="https://github.com/ParamagicDev/rails-pure-ui-example"
+                    class="external-link"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >example repo</a
+                  >, courtesy of
+                  <a
+                    href="https://github.com/ParamagicDev"
+                    class="external-link"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >ParamagicDev</a
+                  >
+                  available to help you get started.
+                </li>
+                <li>
+                  If you would like to avoid repeating this process, check out the associated
+                  <a
+                    href="https://railsbytes.com/templates/X8BsEb"
+                    class="external-link"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    >Railsbyte for Pure UI</a
+                  >.
+                </li>
+              </ul>
+            </div>
+
+            <div class="content__toc">
+              <ul>
+                <li class="top"><a href="#">Integrating with Rails</a></li>
+                <li data-level="2"><a href="#requirements">Requirements</a></li>
+                <li data-level="2"><a href="#instructions">Instructions</a></li>
+                <li data-level="3"><a href="#importing-the-default-theme">Importing the Default Theme</a></li>
+                <li data-level="3"><a href="#importing-required-scripts">Importing Required Scripts</a></li>
+                <li data-level="3"><a href="#webpack-config">webpack Config</a></li>
+                <li data-level="3"><a href="#adding-pack-tags">Adding Pack Tags</a></li>
+                <li data-level="2"><a href="#additional-resources">Additional Resources</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

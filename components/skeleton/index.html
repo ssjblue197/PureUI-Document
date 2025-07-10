@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="component" data-pure-ui-version="1.5.11">
+<html lang="en" data-layout="component" data-pure-ui-version="1.6.29">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -63,7 +63,7 @@
       <div id="header">
         <div class="left-header">
           <img src="/assets/images/logo.png" alt="Pure UI" id="logo" />
-          <span class="version">v1.5.11</span>
+          <span class="version">v1.6.29</span>
         </div>
         <span id="slogan"> PureUI: Simplify, Customize, Innovate. </span>
         <div class="right-header">
@@ -408,8 +408,6 @@
                 <h2>Resources</h2>
                 <ul>
                   <li><a href="/resources/community">Community</a></li>
-                  <li><a href="/resources/accessibility">Accessibility</a></li>
-                  <li><a href="/resources/contributing">Contributing</a></li>
                   <li><a href="/resources/changelog">Changelog</a></li>
                 </ul>
               </li>
@@ -417,89 +415,91 @@
           </nav>
         </aside>
 
-        <div id="content">
-          <div class="content__body">
-            <header class="component-header">
-              <h1>Skeleton</h1>
+        <div id="content" class="content--with-toc">
+          <div class="content--wrapper">
+            <div class="content__body">
+              <header class="component-header">
+                <h1>Skeleton</h1>
 
-              <div class="component-header__tag">
-                <code>&lt;p-skeleton&gt; | PSkeleton</code>
-              </div>
-
-              <div class="component-header__info">
-                <p-badge variant="neutral" pill=""> Since 1.0 </p-badge>
-                <p-badge variant="primary" pill="" style="text-transform: capitalize"> stable </p-badge>
-              </div>
-            </header>
-
-            <p class="component-summary">
-              Skeletons are used to provide a visual representation of where content will eventually be drawn.
-            </p>
-
-            <p>
-              These are simple containers for scaffolding layouts that mimic what users will see when content has
-              finished loading. This prevents large areas of empty space during asynchronous operations.
-            </p>
-            <p>
-              Skeletons try not to be opinionated, as there are endless possibilities for designing layouts. Therefore,
-              you’ll likely use more than one skeleton to create the effect you want. If you find yourself using them
-              frequently, consider creating a template that renders them with the desired arrangement and styles.
-            </p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <div class="skeleton-overview">
-                  <header>
-                    <p-skeleton></p-skeleton>
-                    <p-skeleton></p-skeleton>
-                  </header>
-
-                  <p-skeleton></p-skeleton>
-                  <p-skeleton></p-skeleton>
-                  <p-skeleton></p-skeleton>
+                <div class="component-header__tag">
+                  <code>&lt;p-skeleton&gt; | PSkeleton</code>
                 </div>
 
-                <style>
-                  .skeleton-overview header {
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: 1rem;
-                  }
-
-                  .skeleton-overview header p-skeleton:last-child {
-                    flex: 0 0 auto;
-                    width: 30%;
-                  }
-
-                  .skeleton-overview p-skeleton {
-                    margin-bottom: 1rem;
-                  }
-
-                  .skeleton-overview p-skeleton:nth-child(1) {
-                    float: left;
-                    width: 3rem;
-                    height: 3rem;
-                    margin-right: 1rem;
-                    vertical-align: middle;
-                  }
-
-                  .skeleton-overview p-skeleton:nth-child(3) {
-                    width: 95%;
-                  }
-
-                  .skeleton-overview p-skeleton:nth-child(4) {
-                    width: 80%;
-                  }
-                </style>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                <div class="component-header__info">
+                  <p-badge variant="neutral" pill=""> Since 1.0 </p-badge>
+                  <p-badge variant="primary" pill="" style="text-transform: capitalize"> stable </p-badge>
                 </div>
-              </div>
+              </header>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-330">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-962"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>skeleton-overview<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+              <p class="component-summary">
+                Skeletons are used to provide a visual representation of where content will eventually be drawn.
+              </p>
+
+              <p>
+                These are simple containers for scaffolding layouts that mimic what users will see when content has
+                finished loading. This prevents large areas of empty space during asynchronous operations.
+              </p>
+              <p>
+                Skeletons try not to be opinionated, as there are endless possibilities for designing layouts.
+                Therefore, you’ll likely use more than one skeleton to create the effect you want. If you find yourself
+                using them frequently, consider creating a template that renders them with the desired arrangement and
+                styles.
+              </p>
+
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <div class="skeleton-overview">
+                    <header>
+                      <p-skeleton></p-skeleton>
+                      <p-skeleton></p-skeleton>
+                    </header>
+
+                    <p-skeleton></p-skeleton>
+                    <p-skeleton></p-skeleton>
+                    <p-skeleton></p-skeleton>
+                  </div>
+
+                  <style>
+                    .skeleton-overview header {
+                      display: flex;
+                      align-items: center;
+                      margin-bottom: 1rem;
+                    }
+
+                    .skeleton-overview header p-skeleton:last-child {
+                      flex: 0 0 auto;
+                      width: 30%;
+                    }
+
+                    .skeleton-overview p-skeleton {
+                      margin-bottom: 1rem;
+                    }
+
+                    .skeleton-overview p-skeleton:nth-child(1) {
+                      float: left;
+                      width: 3rem;
+                      height: 3rem;
+                      margin-right: 1rem;
+                      vertical-align: middle;
+                    }
+
+                    .skeleton-overview p-skeleton:nth-child(3) {
+                      width: 95%;
+                    }
+
+                    .skeleton-overview p-skeleton:nth-child(4) {
+                      width: 80%;
+                    }
+                  </style>
+
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
+                </div>
+
+                <div class="code-preview__source-group" id="code-preview-source-group-306">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-922"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>skeleton-overview<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-skeleton</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-skeleton</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-skeleton</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-skeleton</span><span class="token punctuation">&gt;</span></span>
@@ -542,11 +542,11 @@
     <span class="token property">width</span><span class="token punctuation">:</span> 80%<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-962"></p-copy-button></pre>
-                </div>
+</code><p-copy-button class="copy-code-button" from="code-block-922"></p-copy-button></pre>
+                  </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-963"><span class="token keyword">import</span> PSkeleton <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/skeleton'</span><span class="token punctuation">;</span>
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-923"><span class="token keyword">import</span> PSkeleton <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/skeleton'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> css <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
   .skeleton-overview header {
@@ -597,104 +597,108 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">{css}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-963"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-923"></p-copy-button></pre>
+                  </div>
                 </div>
-              </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-330"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-306"
                   >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
-
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
                   >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
+                    React
+                  </button>
 
-            <h2 id="examples" class="anchor-heading">
-              Examples<a href="#examples" aria-label='Direct link to "Examples"'></a>
-            </h2>
-            <h3 id="effects" class="anchor-heading">
-              Effects<a href="#effects" aria-label='Direct link to "Effects"'></a>
-            </h3>
-            <p>
-              There are two built-in effects, <code>sheen</code> and <code>pulse</code>. Effects are intentionally
-              subtle, as they can be distracting when used extensively. The default is <code>none</code>, which displays
-              a static, non-animated skeleton.
-            </p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <div class="skeleton-effects">
-                  <p-skeleton effect="none"></p-skeleton>
-                  None
-
-                  <p-skeleton effect="sheen"></p-skeleton>
-                  Sheen
-
-                  <p-skeleton effect="pulse"></p-skeleton>
-                  Pulse
-                </div>
-
-                <style>
-                  .skeleton-effects {
-                    font-size: var(--p-font-size-small);
-                  }
-
-                  .skeleton-effects p-skeleton:not(:first-child) {
-                    margin-top: 1rem;
-                  }
-                </style>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-331">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-964"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>skeleton-effects<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+              <h2 id="examples" class="anchor-heading">
+                Examples<a href="#examples" aria-label='Direct link to "Examples"'></a>
+              </h2>
+              <h3 id="effects" class="anchor-heading">
+                Effects<a href="#effects" aria-label='Direct link to "Effects"'></a>
+              </h3>
+              <p>
+                There are two built-in effects, <code>sheen</code> and <code>pulse</code>. Effects are intentionally
+                subtle, as they can be distracting when used extensively. The default is <code>none</code>, which
+                displays a static, non-animated skeleton.
+              </p>
+
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <div class="skeleton-effects">
+                    <p-skeleton effect="none"></p-skeleton>
+                    None
+
+                    <p-skeleton effect="sheen"></p-skeleton>
+                    Sheen
+
+                    <p-skeleton effect="pulse"></p-skeleton>
+                    Pulse
+                  </div>
+
+                  <style>
+                    .skeleton-effects {
+                      font-size: var(--p-font-size-small);
+                    }
+
+                    .skeleton-effects p-skeleton:not(:first-child) {
+                      margin-top: 1rem;
+                    }
+                  </style>
+
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
+                </div>
+
+                <div class="code-preview__source-group" id="code-preview-source-group-307">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-924"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>skeleton-effects<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-skeleton</span> <span class="token attr-name">effect</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>none<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-skeleton</span><span class="token punctuation">&gt;</span></span>
   None
 
@@ -714,11 +718,11 @@
     <span class="token property">margin-top</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-964"></p-copy-button></pre>
-                </div>
+</code><p-copy-button class="copy-code-button" from="code-block-924"></p-copy-button></pre>
+                  </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-965"><span class="token keyword">import</span> PSkeleton <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/skeleton'</span><span class="token punctuation">;</span>
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-925"><span class="token keyword">import</span> PSkeleton <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/skeleton'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> css <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
   .skeleton-effects {
@@ -744,102 +748,106 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">{css}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-965"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-925"></p-copy-button></pre>
+                  </div>
                 </div>
-              </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-331"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-307"
                   >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
-
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
                   >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
+                    React
+                  </button>
 
-            <h3 id="paragraphs" class="anchor-heading">
-              Paragraphs<a href="#paragraphs" aria-label='Direct link to "Paragraphs"'></a>
-            </h3>
-            <p>Use multiple skeletons and some clever styles to simulate paragraphs.</p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <div class="skeleton-paragraphs">
-                  <p-skeleton></p-skeleton>
-                  <p-skeleton></p-skeleton>
-                  <p-skeleton></p-skeleton>
-                  <p-skeleton></p-skeleton>
-                  <p-skeleton></p-skeleton>
-                </div>
-
-                <style>
-                  .skeleton-paragraphs p-skeleton {
-                    margin-bottom: 1rem;
-                  }
-
-                  .skeleton-paragraphs p-skeleton:nth-child(2) {
-                    width: 95%;
-                  }
-
-                  .skeleton-paragraphs p-skeleton:nth-child(4) {
-                    width: 90%;
-                  }
-
-                  .skeleton-paragraphs p-skeleton:last-child {
-                    width: 50%;
-                  }
-                </style>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-332">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-966"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>skeleton-paragraphs<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+              <h3 id="paragraphs" class="anchor-heading">
+                Paragraphs<a href="#paragraphs" aria-label='Direct link to "Paragraphs"'></a>
+              </h3>
+              <p>Use multiple skeletons and some clever styles to simulate paragraphs.</p>
+
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <div class="skeleton-paragraphs">
+                    <p-skeleton></p-skeleton>
+                    <p-skeleton></p-skeleton>
+                    <p-skeleton></p-skeleton>
+                    <p-skeleton></p-skeleton>
+                    <p-skeleton></p-skeleton>
+                  </div>
+
+                  <style>
+                    .skeleton-paragraphs p-skeleton {
+                      margin-bottom: 1rem;
+                    }
+
+                    .skeleton-paragraphs p-skeleton:nth-child(2) {
+                      width: 95%;
+                    }
+
+                    .skeleton-paragraphs p-skeleton:nth-child(4) {
+                      width: 90%;
+                    }
+
+                    .skeleton-paragraphs p-skeleton:last-child {
+                      width: 50%;
+                    }
+                  </style>
+
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
+                </div>
+
+                <div class="code-preview__source-group" id="code-preview-source-group-308">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-926"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>skeleton-paragraphs<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-skeleton</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-skeleton</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-skeleton</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-skeleton</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-skeleton</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-skeleton</span><span class="token punctuation">&gt;</span></span>
@@ -864,11 +872,11 @@
     <span class="token property">width</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-966"></p-copy-button></pre>
-                </div>
+</code><p-copy-button class="copy-code-button" from="code-block-926"></p-copy-button></pre>
+                  </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-967"><span class="token keyword">import</span> PSkeleton <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/skeleton'</span><span class="token punctuation">;</span>
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-927"><span class="token keyword">import</span> PSkeleton <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/skeleton'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> css <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
   .skeleton-paragraphs p-skeleton {
@@ -901,99 +909,103 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">{css}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-967"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-927"></p-copy-button></pre>
+                  </div>
                 </div>
-              </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-332"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-308"
                   >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
-
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
                   >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
+                    React
+                  </button>
 
-            <h3 id="avatars" class="anchor-heading">
-              Avatars<a href="#avatars" aria-label='Direct link to "Avatars"'></a>
-            </h3>
-            <p>Set a matching width and height to make a circle, square, or rounded avatar skeleton.</p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <div class="skeleton-avatars">
-                  <p-skeleton></p-skeleton>
-                  <p-skeleton></p-skeleton>
-                  <p-skeleton></p-skeleton>
-                </div>
-
-                <style>
-                  .skeleton-avatars p-skeleton {
-                    display: inline-block;
-                    width: 3rem;
-                    height: 3rem;
-                    margin-right: 0.5rem;
-                  }
-
-                  .skeleton-avatars p-skeleton:nth-child(1) {
-                    --border-radius: 0;
-                  }
-
-                  .skeleton-avatars p-skeleton:nth-child(2) {
-                    --border-radius: var(--p-border-radius-medium);
-                  }
-                </style>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-333">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-968"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>skeleton-avatars<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+              <h3 id="avatars" class="anchor-heading">
+                Avatars<a href="#avatars" aria-label='Direct link to "Avatars"'></a>
+              </h3>
+              <p>Set a matching width and height to make a circle, square, or rounded avatar skeleton.</p>
+
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <div class="skeleton-avatars">
+                    <p-skeleton></p-skeleton>
+                    <p-skeleton></p-skeleton>
+                    <p-skeleton></p-skeleton>
+                  </div>
+
+                  <style>
+                    .skeleton-avatars p-skeleton {
+                      display: inline-block;
+                      width: 3rem;
+                      height: 3rem;
+                      margin-right: 0.5rem;
+                    }
+
+                    .skeleton-avatars p-skeleton:nth-child(1) {
+                      --border-radius: 0;
+                    }
+
+                    .skeleton-avatars p-skeleton:nth-child(2) {
+                      --border-radius: var(--p-border-radius-medium);
+                    }
+                  </style>
+
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
+                </div>
+
+                <div class="code-preview__source-group" id="code-preview-source-group-309">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-928"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>skeleton-avatars<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-skeleton</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-skeleton</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-skeleton</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-skeleton</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-skeleton</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-skeleton</span><span class="token punctuation">&gt;</span></span>
@@ -1015,11 +1027,11 @@
     <span class="token property">--border-radius</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--p-border-radius-medium<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-968"></p-copy-button></pre>
-                </div>
+</code><p-copy-button class="copy-code-button" from="code-block-928"></p-copy-button></pre>
+                  </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-969"><span class="token keyword">import</span> PSkeleton <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/skeleton'</span><span class="token punctuation">;</span>
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-929"><span class="token keyword">import</span> PSkeleton <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/skeleton'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> css <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
   .skeleton-avatars p-skeleton {
@@ -1049,139 +1061,147 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">{css}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-969"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-929"></p-copy-button></pre>
+                  </div>
                 </div>
-              </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-333"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-309"
                   >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
-
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
                   >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
+                    React
+                  </button>
 
-            <h3 id="custom-shapes" class="anchor-heading">
-              Custom Shapes<a href="#custom-shapes" aria-label='Direct link to "Custom Shapes"'></a>
-            </h3>
-            <p>
-              Use the <code>--border-radius</code> custom property to make circles, squares, and rectangles. For more
-              complex shapes, you can apply <code>clip-path</code> to the <code>indicator</code> part.
-              <a href="https://bennettfeely.com/clippy/" class="external-link" rel="noopener noreferrer" target="_blank"
-                >Try Clippy</a
-              >
-              if you need help generating custom shapes.
-            </p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <div class="skeleton-shapes">
-                  <p-skeleton class="square"></p-skeleton>
-                  <p-skeleton class="circle"></p-skeleton>
-                  <p-skeleton class="triangle"></p-skeleton>
-                  <p-skeleton class="cross"></p-skeleton>
-                  <p-skeleton class="comment"></p-skeleton>
-                </div>
-
-                <style>
-                  .skeleton-shapes p-skeleton {
-                    display: inline-flex;
-                    width: 50px;
-                    height: 50px;
-                  }
-
-                  .skeleton-shapes .square::part(indicator) {
-                    --border-radius: var(--p-border-radius-medium);
-                  }
-
-                  .skeleton-shapes .circle::part(indicator) {
-                    --border-radius: var(--p-border-radius-circle);
-                  }
-
-                  .skeleton-shapes .triangle::part(indicator) {
-                    --border-radius: 0;
-                    clip-path: polygon(50% 0, 0 100%, 100% 100%);
-                  }
-
-                  .skeleton-shapes .cross::part(indicator) {
-                    --border-radius: 0;
-                    clip-path: polygon(
-                      20% 0%,
-                      0% 20%,
-                      30% 50%,
-                      0% 80%,
-                      20% 100%,
-                      50% 70%,
-                      80% 100%,
-                      100% 80%,
-                      70% 50%,
-                      100% 20%,
-                      80% 0%,
-                      50% 30%
-                    );
-                  }
-
-                  .skeleton-shapes .comment::part(indicator) {
-                    --border-radius: 0;
-                    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
-                  }
-
-                  .skeleton-shapes p-skeleton:not(:last-child) {
-                    margin-right: 0.5rem;
-                  }
-                </style>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-334">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-970"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>skeleton-shapes<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+              <h3 id="custom-shapes" class="anchor-heading">
+                Custom Shapes<a href="#custom-shapes" aria-label='Direct link to "Custom Shapes"'></a>
+              </h3>
+              <p>
+                Use the <code>--border-radius</code> custom property to make circles, squares, and rectangles. For more
+                complex shapes, you can apply <code>clip-path</code> to the <code>indicator</code> part.
+                <a
+                  href="https://bennettfeely.com/clippy/"
+                  class="external-link"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >Try Clippy</a
+                >
+                if you need help generating custom shapes.
+              </p>
+
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <div class="skeleton-shapes">
+                    <p-skeleton class="square"></p-skeleton>
+                    <p-skeleton class="circle"></p-skeleton>
+                    <p-skeleton class="triangle"></p-skeleton>
+                    <p-skeleton class="cross"></p-skeleton>
+                    <p-skeleton class="comment"></p-skeleton>
+                  </div>
+
+                  <style>
+                    .skeleton-shapes p-skeleton {
+                      display: inline-flex;
+                      width: 50px;
+                      height: 50px;
+                    }
+
+                    .skeleton-shapes .square::part(indicator) {
+                      --border-radius: var(--p-border-radius-medium);
+                    }
+
+                    .skeleton-shapes .circle::part(indicator) {
+                      --border-radius: var(--p-border-radius-circle);
+                    }
+
+                    .skeleton-shapes .triangle::part(indicator) {
+                      --border-radius: 0;
+                      clip-path: polygon(50% 0, 0 100%, 100% 100%);
+                    }
+
+                    .skeleton-shapes .cross::part(indicator) {
+                      --border-radius: 0;
+                      clip-path: polygon(
+                        20% 0%,
+                        0% 20%,
+                        30% 50%,
+                        0% 80%,
+                        20% 100%,
+                        50% 70%,
+                        80% 100%,
+                        100% 80%,
+                        70% 50%,
+                        100% 20%,
+                        80% 0%,
+                        50% 30%
+                      );
+                    }
+
+                    .skeleton-shapes .comment::part(indicator) {
+                      --border-radius: 0;
+                      clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+                    }
+
+                    .skeleton-shapes p-skeleton:not(:last-child) {
+                      margin-right: 0.5rem;
+                    }
+                  </style>
+
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
+                </div>
+
+                <div class="code-preview__source-group" id="code-preview-source-group-310">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-930"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>skeleton-shapes<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-skeleton</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>square<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-skeleton</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-skeleton</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>circle<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-skeleton</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-skeleton</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>triangle<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-skeleton</span><span class="token punctuation">&gt;</span></span>
@@ -1236,11 +1256,11 @@
     <span class="token property">margin-right</span><span class="token punctuation">:</span> 0.5rem<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-970"></p-copy-button></pre>
-                </div>
+</code><p-copy-button class="copy-code-button" from="code-block-930"></p-copy-button></pre>
+                  </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-971"><span class="token keyword">import</span> PSkeleton <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/skeleton'</span><span class="token punctuation">;</span>
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-931"><span class="token keyword">import</span> PSkeleton <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/skeleton'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> css <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
   .skeleton-shapes p-skeleton {
@@ -1290,86 +1310,90 @@
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">{css}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-971"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-931"></p-copy-button></pre>
+                  </div>
                 </div>
-              </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-334"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-310"
                   >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
-
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
                   >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
+                    React
+                  </button>
 
-            <h3 id="custom-colors" class="anchor-heading">
-              Custom Colors<a href="#custom-colors" aria-label='Direct link to "Custom Colors"'></a>
-            </h3>
-            <p>
-              Set the <code>--color</code> and <code>--sheen-color</code> custom properties to adjust the skeleton’s
-              color.
-            </p>
-
-            <div class="code-preview">
-              <div class="code-preview__preview">
-                <p-skeleton effect="sheen" style="--color: tomato; --sheen-color: #ffb094"></p-skeleton>
-
-                <div class="code-preview__resizer">
-                  <p-icon name="grip-vertical"></p-icon>
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__source-group" id="code-preview-source-group-335">
-                <div class="code-preview__source code-preview__source--html" data-flavor="html">
-                  <pre><code class="language-html" id="code-block-972"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-skeleton</span> <span class="token attr-name">effect</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sheen<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">--color</span><span class="token punctuation">:</span> tomato<span class="token punctuation">;</span> <span class="token property">--sheen-color</span><span class="token punctuation">:</span> #ffb094<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-skeleton</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-972"></p-copy-button></pre>
+              <h3 id="custom-colors" class="anchor-heading">
+                Custom Colors<a href="#custom-colors" aria-label='Direct link to "Custom Colors"'></a>
+              </h3>
+              <p>
+                Set the <code>--color</code> and <code>--sheen-color</code> custom properties to adjust the skeleton’s
+                color.
+              </p>
+
+              <div class="code-preview">
+                <div class="code-preview__preview">
+                  <p-skeleton effect="sheen" style="--color: tomato; --sheen-color: #ffb094"></p-skeleton>
+
+                  <div class="code-preview__resizer">
+                    <p-icon name="grip-vertical"></p-icon>
+                  </div>
                 </div>
 
-                <div class="code-preview__source code-preview__source--react" data-flavor="react">
-                  <pre><code class="language-jsx" id="code-block-973"><span class="token keyword">import</span> PSkeleton <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/skeleton'</span><span class="token punctuation">;</span>
+                <div class="code-preview__source-group" id="code-preview-source-group-311">
+                  <div class="code-preview__source code-preview__source--html" data-flavor="html">
+                    <pre><code class="language-html" id="code-block-932"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p-skeleton</span> <span class="token attr-name">effect</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sheen<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">--color</span><span class="token punctuation">:</span> tomato<span class="token punctuation">;</span> <span class="token property">--sheen-color</span><span class="token punctuation">:</span> #ffb094<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p-skeleton</span><span class="token punctuation">&gt;</span></span>
+</code><p-copy-button class="copy-code-button" from="code-block-932"></p-copy-button></pre>
+                  </div>
+
+                  <div class="code-preview__source code-preview__source--react" data-flavor="react">
+                    <pre><code class="language-jsx" id="code-block-933"><span class="token keyword">import</span> PSkeleton <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/skeleton'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> css <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
   .skeleton-avatars p-skeleton {
@@ -1389,237 +1413,258 @@
 </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PSkeleton</span></span> <span class="token attr-name">effect</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sheen<span class="token punctuation">"</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token string-property property">'--color'</span><span class="token operator">:</span> <span class="token string">'tomato'</span><span class="token punctuation">,</span> <span class="token string-property property">'--sheen-color'</span><span class="token operator">:</span> <span class="token string">'#ffb094'</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-973"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-933"></p-copy-button></pre>
+                  </div>
+                </div>
+
+                <div class="code-preview__buttons">
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__toggle"
+                    aria-expanded="false"
+                    aria-controls="code-preview-source-group-311"
+                  >
+                    Source
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </button>
+
+                  <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
+                    HTML
+                  </button>
+
+                  <button
+                    type="button"
+                    title="Show React code"
+                    class="code-preview__button code-preview__button--react"
+                  >
+                    React
+                  </button>
+
+                  <button
+                    type="button"
+                    class="code-preview__button code-preview__button--codepen"
+                    title="Edit on CodePen"
+                  >
+                    <svg
+                      width="138"
+                      height="26"
+                      viewBox="0 0 138 26"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
 
-              <div class="code-preview__buttons">
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__toggle"
-                  aria-expanded="false"
-                  aria-controls="code-preview-source-group-335"
-                >
-                  Source
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
+              <h2 id="importing" class="anchor-heading">
+                Importing<a href="#importing" aria-label='Direct link to "Importing"'></a>
+              </h2>
+              <p>
+                If you’re using the autoloader or the traditional loader, you can ignore this section. Otherwise, feel
+                free to use any of the following snippets to
+                <a href="/getting-started/installation#cherry-picking">cherry pick</a> this component.
+              </p>
 
-                <button type="button" title="Show HTML code" class="code-preview__button code-preview__button--html">
-                  HTML
-                </button>
+              <p-tab-group>
+                <p-tab slot="nav" panel="script">Script</p-tab>
+                <p-tab slot="nav" panel="import">Import</p-tab>
+                <p-tab slot="nav" panel="bundler">Bundler</p-tab>
+                <p-tab slot="nav" panel="react">React</p-tab>
 
-                <button type="button" title="Show React code" class="code-preview__button code-preview__button--react">
-                  React
-                </button>
+                <p-tab-panel name="script">
+                  <p>
+                    To import this component from
+                    <a
+                      href="https://www.jsdelivr.com/package/npm/pure-uikit"
+                      class="external-link"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      >the CDN</a
+                    >
+                    using a script tag:
+                  </p>
+                  <pre><code class="language-html" id="code-block-934"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.6.29/cdn/components/skeleton/skeleton.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-934"></p-copy-button></pre>
+                </p-tab-panel>
 
-                <button
-                  type="button"
-                  class="code-preview__button code-preview__button--codepen"
-                  title="Edit on CodePen"
-                >
-                  <svg
-                    width="138"
-                    height="26"
-                    viewBox="0 0 138 26"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"
-                    ></path>
-                  </svg>
-                </button>
+                <p-tab-panel name="import">
+                  <p>
+                    To import this component from
+                    <a
+                      href="https://www.jsdelivr.com/package/npm/pure-uikit"
+                      class="external-link"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      >the CDN</a
+                    >
+                    using a JavaScript import:
+                  </p>
+                  <pre><code class="language-js" id="code-block-935"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.6.29/cdn/components/skeleton/skeleton.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-935"></p-copy-button></pre>
+                </p-tab-panel>
+
+                <p-tab-panel name="bundler">
+                  <p>To import this component using <a href="/getting-started/installation#bundling">a bundler</a>:</p>
+                  <pre><code class="language-js" id="code-block-936"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/skeleton/skeleton.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-936"></p-copy-button></pre>
+                </p-tab-panel>
+
+                <p-tab-panel name="react">
+                  <p>To import this component as a <a href="/frameworks/react">React component</a>:</p>
+                  <pre><code class="language-js" id="code-block-937"><span class="token keyword">import</span> PSkeleton <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/skeleton'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-937"></p-copy-button></pre>
+                </p-tab-panel>
+              </p-tab-group>
+
+              <h2 id="properties" class="anchor-heading">
+                Properties<a href="#properties" aria-label='Direct link to "Properties"'></a>
+              </h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name">Name</th>
+                      <th class="table-description">Description</th>
+                      <th class="table-reflects">Reflects</th>
+                      <th class="table-type">Type</th>
+                      <th class="table-default">Default</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <code class="nowrap">effect</code>
+                      </td>
+                      <td>Determines which effect the skeleton will use.</td>
+                      <td style="text-align: center"></td>
+                      <td>
+                        <code>"pulse" | "sheen" | "none"</code>
+                      </td>
+                      <td>
+                        <code>"none"</code>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap"><code>updateComplete</code></td>
+                      <td>
+                        A read-only promise that resolves when the component has
+                        <a href="/getting-started/usage?#component-rendering-and-updating">finished updating</a>.
+                      </td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
+
+              <p>
+                <em
+                  >Learn more about
+                  <a href="/getting-started/usage#attributes-and-properties">attributes and properties</a>.</em
+                >
+              </p>
+
+              <h2 id="custom-properties" class="anchor-heading">
+                Custom Properties<a href="#custom-properties" aria-label='Direct link to "Custom Properties"'></a>
+              </h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name">Name</th>
+                      <th class="table-description">Description</th>
+                      <th class="table-default">Default</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nowrap"><code>--border-radius</code></td>
+                      <td>The skeleton’s border radius.</td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap"><code>--color</code></td>
+                      <td>The color of the skeleton.</td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap"><code>--sheen-color</code></td>
+                      <td>The sheen color when the skeleton is in its loading state.</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                <em
+                  >Learn more about
+                  <a href="/getting-started/usage#custom-properties">customizing CSS custom properties</a>.</em
+                >
+              </p>
+
+              <h2 id="parts" class="anchor-heading">Parts<a href="#parts" aria-label='Direct link to "Parts"'></a></h2>
+
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="table-name">Name</th>
+                      <th class="table-description">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nowrap"><code>base</code></td>
+                      <td>The component’s base wrapper.</td>
+                    </tr>
+
+                    <tr>
+                      <td class="nowrap"><code>indicator</code></td>
+                      <td>The skeleton’s indicator which is responsible for its color and animation.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                <em>Learn more about <a href="/getting-started/customizing/#css-parts">customizing CSS parts</a>.</em>
+              </p>
             </div>
 
-            <h2 id="importing" class="anchor-heading">
-              Importing<a href="#importing" aria-label='Direct link to "Importing"'></a>
-            </h2>
-            <p>
-              If you’re using the autoloader or the traditional loader, you can ignore this section. Otherwise, feel
-              free to use any of the following snippets to
-              <a href="/getting-started/installation#cherry-picking">cherry pick</a> this component.
-            </p>
-
-            <p-tab-group>
-              <p-tab slot="nav" panel="script">Script</p-tab>
-              <p-tab slot="nav" panel="import">Import</p-tab>
-              <p-tab slot="nav" panel="bundler">Bundler</p-tab>
-              <p-tab slot="nav" panel="react">React</p-tab>
-
-              <p-tab-panel name="script">
-                <p>
-                  To import this component from
-                  <a
-                    href="https://www.jsdelivr.com/package/npm/pure-uikit"
-                    class="external-link"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    >the CDN</a
-                  >
-                  using a script tag:
-                </p>
-                <pre><code class="language-html" id="code-block-974"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/pure-uikit@1.5.11/cdn/components/skeleton/skeleton.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code><p-copy-button class="copy-code-button" from="code-block-974"></p-copy-button></pre>
-              </p-tab-panel>
-
-              <p-tab-panel name="import">
-                <p>
-                  To import this component from
-                  <a
-                    href="https://www.jsdelivr.com/package/npm/pure-uikit"
-                    class="external-link"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    >the CDN</a
-                  >
-                  using a JavaScript import:
-                </p>
-                <pre><code class="language-js" id="code-block-975"><span class="token keyword">import</span> <span class="token string">'https://cdn.jsdelivr.net/npm/pure-uikit@1.5.11/cdn/components/skeleton/skeleton.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-975"></p-copy-button></pre>
-              </p-tab-panel>
-
-              <p-tab-panel name="bundler">
-                <p>To import this component using <a href="/getting-started/installation#bundling">a bundler</a>:</p>
-                <pre><code class="language-js" id="code-block-976"><span class="token keyword">import</span> <span class="token string">'pure-uikit/dist/components/skeleton/skeleton.js'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-976"></p-copy-button></pre>
-              </p-tab-panel>
-
-              <p-tab-panel name="react">
-                <p>To import this component as a <a href="/frameworks/react">React component</a>:</p>
-                <pre><code class="language-js" id="code-block-977"><span class="token keyword">import</span> PSkeleton <span class="token keyword">from</span> <span class="token string">'pure-uikit/dist/react/skeleton'</span><span class="token punctuation">;</span></code><p-copy-button class="copy-code-button" from="code-block-977"></p-copy-button></pre>
-              </p-tab-panel>
-            </p-tab-group>
-
-            <h2 id="properties" class="anchor-heading">
-              Properties<a href="#properties" aria-label='Direct link to "Properties"'></a>
-            </h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name">Name</th>
-                    <th class="table-description">Description</th>
-                    <th class="table-reflects">Reflects</th>
-                    <th class="table-type">Type</th>
-                    <th class="table-default">Default</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <code class="nowrap">effect</code>
-                    </td>
-                    <td>Determines which effect the skeleton will use.</td>
-                    <td style="text-align: center"></td>
-                    <td>
-                      <code>"pulse" | "sheen" | "none"</code>
-                    </td>
-                    <td>
-                      <code>"none"</code>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap"><code>updateComplete</code></td>
-                    <td>
-                      A read-only promise that resolves when the component has
-                      <a href="/getting-started/usage?#component-rendering-and-updating">finished updating</a>.
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="content__toc">
+              <ul>
+                <li class="top"><a href="#">Skeleton</a></li>
+                <li data-level="2"><a href="#examples">Examples</a></li>
+                <li data-level="3"><a href="#effects">Effects</a></li>
+                <li data-level="3"><a href="#paragraphs">Paragraphs</a></li>
+                <li data-level="3"><a href="#avatars">Avatars</a></li>
+                <li data-level="3"><a href="#custom-shapes">Custom Shapes</a></li>
+                <li data-level="3"><a href="#custom-colors">Custom Colors</a></li>
+                <li data-level="2"><a href="#importing">Importing</a></li>
+                <li data-level="2"><a href="#properties">Properties</a></li>
+                <li data-level="2"><a href="#custom-properties">Custom Properties</a></li>
+                <li data-level="2"><a href="#parts">Parts</a></li>
+              </ul>
             </div>
-
-            <p>
-              <em
-                >Learn more about
-                <a href="/getting-started/usage#attributes-and-properties">attributes and properties</a>.</em
-              >
-            </p>
-
-            <h2 id="custom-properties" class="anchor-heading">
-              Custom Properties<a href="#custom-properties" aria-label='Direct link to "Custom Properties"'></a>
-            </h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name">Name</th>
-                    <th class="table-description">Description</th>
-                    <th class="table-default">Default</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="nowrap"><code>--border-radius</code></td>
-                    <td>The skeleton’s border radius.</td>
-                    <td></td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap"><code>--color</code></td>
-                    <td>The color of the skeleton.</td>
-                    <td></td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap"><code>--sheen-color</code></td>
-                    <td>The sheen color when the skeleton is in its loading state.</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <p>
-              <em
-                >Learn more about
-                <a href="/getting-started/usage#custom-properties">customizing CSS custom properties</a>.</em
-              >
-            </p>
-
-            <h2 id="parts" class="anchor-heading">Parts<a href="#parts" aria-label='Direct link to "Parts"'></a></h2>
-
-            <div class="table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="table-name">Name</th>
-                    <th class="table-description">Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="nowrap"><code>base</code></td>
-                    <td>The component’s base wrapper.</td>
-                  </tr>
-
-                  <tr>
-                    <td class="nowrap"><code>indicator</code></td>
-                    <td>The skeleton’s indicator which is responsible for its color and animation.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <p>
-              <em>Learn more about <a href="/getting-started/customizing/#css-parts">customizing CSS parts</a>.</em>
-            </p>
           </div>
         </div>
       </div>
