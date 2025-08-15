@@ -10,7 +10,7 @@ export type { PHideEvent } from "../../events/events.js";
 export type { PAfterHideEvent } from "../../events/events.js";
 /**
  * @summary Dropdowns expose additional content that "drops down" in a panel.
- * @documentation https://pureui.xyz/components/dropdown
+ * @documentation https://pureui.online/components/dropdown
  * @status stable
  * @since 1.0
  *

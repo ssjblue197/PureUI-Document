@@ -12,7 +12,7 @@ export type { PFocusEvent } from "../../events/events.js";
 export type { PInvalidEvent } from "../../events/events.js";
 /**
  * @summary Switches allow the user to toggle an option on or off.
- * @documentation https://pureui.xyz/components/switch
+ * @documentation https://pureui.online/components/switch
  * @status stable
  * @since 1.0
  *

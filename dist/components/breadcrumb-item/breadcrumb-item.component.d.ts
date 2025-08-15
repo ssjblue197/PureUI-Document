@@ -2,7 +2,7 @@ import PureElement from "../../internal/pure-ui-element.js";
 import type { CSSResultGroup } from "lit";
 /**
  * @summary Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.
- * @documentation https://pureui.xyz/components/breadcrumb-item
+ * @documentation https://pureui.online/components/breadcrumb-item
  * @status stable
  * @since 1.0
  *

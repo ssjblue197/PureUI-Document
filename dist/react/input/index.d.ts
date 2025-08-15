@@ -14,7 +14,7 @@ export type { PInputEvent } from "../../events/events.js";
 export type { PInvalidEvent } from "../../events/events.js";
 /**
  * @summary Inputs collect data from the user.
- * @documentation https://pureui.xyz/components/input
+ * @documentation https://pureui.online/components/input
  * @status stable
  * @since 1.0
  *

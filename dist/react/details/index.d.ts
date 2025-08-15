@@ -10,7 +10,7 @@ export type { PHideEvent } from "../../events/events.js";
 export type { PAfterHideEvent } from "../../events/events.js";
 /**
  * @summary Details show a brief summary and expand to show additional content.
- * @documentation https://pureui.xyz/components/details
+ * @documentation https://pureui.online/components/details
  * @status stable
  * @since 1.0
  *

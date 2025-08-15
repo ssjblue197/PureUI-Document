@@ -3,7 +3,7 @@ import PureElement from "../../internal/pure-ui-element.js";
 import type { CSSResultGroup } from "lit";
 /**
  * @summary Details show a brief summary and expand to show additional content.
- * @documentation https://pureui.xyz/components/details
+ * @documentation https://pureui.online/components/details
  * @status stable
  * @since 1.0
  *

@@ -1,7 +1,7 @@
 import Component from "../../components/option/option.component.js";
 /**
  * @summary Options define the selectable items within various form controls such as [select](/components/select).
- * @documentation https://pureui.xyz/components/option
+ * @documentation https://pureui.online/components/option
  * @status stable
  * @since 1.0
  *

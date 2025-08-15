@@ -9,7 +9,7 @@ import type { CSSResultGroup } from "lit";
 import type { PureFormControl } from "../../internal/pure-ui-element.js";
 /**
  * @summary Color pickers allow the user to select a color.
- * @documentation https://pureui.xyz/components/color-picker
+ * @documentation https://pureui.online/components/color-picker
  * @status stable
  * @since 1.0
  *

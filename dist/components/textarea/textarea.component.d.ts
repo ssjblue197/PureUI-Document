@@ -3,7 +3,7 @@ import type { CSSResultGroup } from "lit";
 import type { PureFormControl } from "../../internal/pure-ui-element.js";
 /**
  * @summary Textareas collect data from the user and allow multiple lines of text.
- * @documentation https://pureui.xyz/components/textarea
+ * @documentation https://pureui.online/components/textarea
  * @status stable
  * @since 1.0
  *

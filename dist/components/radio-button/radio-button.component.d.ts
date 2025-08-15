@@ -2,7 +2,7 @@ import PureElement from "../../internal/pure-ui-element.js";
 import type { CSSResultGroup } from "lit";
 /**
  * @summary Radios buttons allow the user to select a single option from a group using a button-like control.
- * @documentation https://pureui.xyz/components/radio-button
+ * @documentation https://pureui.online/components/radio-button
  * @status stable
  * @since 1.0
  *

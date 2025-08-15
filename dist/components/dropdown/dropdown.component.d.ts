@@ -4,7 +4,7 @@ import type { CSSResultGroup } from "lit";
 import type PMenu from "../menu/menu.js";
 /**
  * @summary Dropdowns expose additional content that "drops down" in a panel.
- * @documentation https://pureui.xyz/components/dropdown
+ * @documentation https://pureui.online/components/dropdown
  * @status stable
  * @since 1.0
  *

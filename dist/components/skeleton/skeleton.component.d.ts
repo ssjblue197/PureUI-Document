@@ -2,7 +2,7 @@ import PureElement from "../../internal/pure-ui-element.js";
 import type { CSSResultGroup } from "lit";
 /**
  * @summary Skeletons are used to provide a visual representation of where content will eventually be drawn.
- * @documentation https://pureui.xyz/components/skeleton
+ * @documentation https://pureui.online/components/skeleton
  * @status stable
  * @since 1.0
  *

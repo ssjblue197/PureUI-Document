@@ -2,7 +2,7 @@ import PureElement from "../../internal/pure-ui-element.js";
 import type { CSSResultGroup } from "lit";
 /**
  * @summary The Mutation Observer component offers a thin, declarative interface to the [`MutationObserver API`](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver).
- * @documentation https://pureui.xyz/components/mutation-observer
+ * @documentation https://pureui.online/components/mutation-observer
  * @status stable
  * @since 1.0
  *

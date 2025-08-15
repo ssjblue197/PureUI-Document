@@ -4,7 +4,7 @@ import type { PChangeEvent } from "../../events/events.js";
 export type { PChangeEvent } from "../../events/events.js";
 /**
  * @summary Compare visual differences between similar photos with a sliding panel.
- * @documentation https://pureui.xyz/components/image-comparer
+ * @documentation https://pureui.online/components/image-comparer
  * @status stable
  * @since 1.0
  *

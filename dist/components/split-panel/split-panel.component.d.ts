@@ -2,7 +2,7 @@ import PureElement from "../../internal/pure-ui-element.js";
 import type { CSSResultGroup } from "lit";
 /**
  * @summary Split panels display two adjacent panels, allowing the user to reposition them.
- * @documentation https://pureui.xyz/components/split-panel
+ * @documentation https://pureui.online/components/split-panel
  * @status stable
  * @since 1.0
  *

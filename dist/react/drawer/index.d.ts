@@ -14,7 +14,7 @@ export type { PInitialFocusEvent } from "../../events/events.js";
 export type { PRequestCloseEvent } from "../../events/events.js";
 /**
  * @summary Drawers slide in from a container to expose additional options and information.
- * @documentation https://pureui.xyz/components/drawer
+ * @documentation https://pureui.online/components/drawer
  * @status stable
  * @since 1.0
  *

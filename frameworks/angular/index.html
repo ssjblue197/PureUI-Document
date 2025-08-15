@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="default" data-pure-ui-version="1.6.29">
+<html lang="en" data-layout="default" data-pure-ui-version="1.6.30">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,12 +16,12 @@
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:creator" content="pure_ui" />
-    <meta name="twitter:image" content="https://pureui.xyz/assets/images/og-image.png" />
+    <meta name="twitter:image" content="https://pureui.online/assets/images/og-image.png" />
 
-    <meta property="og:url" content="https://pureui.xyz/frameworks/angular/" />
+    <meta property="og:url" content="https://pureui.online/frameworks/angular/" />
     <meta property="og:title" content="Angular" />
     <meta property="og:description" content="Tips for using Pure UI in your Angular app." />
-    <meta property="og:image" content="https://pureui.xyz/assets/images/og-image.png" />
+    <meta property="og:image" content="https://pureui.online/assets/images/og-image.png" />
 
     <link rel="stylesheet" href="/dist/themes/light.css" />
     <link rel="stylesheet" href="/dist/themes/dark.css" />
@@ -57,7 +57,7 @@
       <div id="header">
         <div class="left-header">
           <img src="/assets/images/logo.png" alt="Pure UI" id="logo" />
-          <span class="version">v1.6.29</span>
+          <span class="version">v1.6.30</span>
         </div>
         <span id="slogan"> PureUI: Simplify, Customize, Innovate. </span>
         <div class="right-header">
@@ -434,8 +434,8 @@
                 ></a>
               </h3>
               <p>To add Pure UI to your Angular app, install the package from npm.</p>
-              <pre><code class="language-bash" id="code-block-11"><span class="token function">npm</span> <span class="token function">install</span> pure-uikit
-</code><p-copy-button class="copy-code-button" from="code-block-11"></p-copy-button></pre>
+              <pre><code class="language-bash" id="code-block-1012"><span class="token function">npm</span> <span class="token function">install</span> pure-uikit
+</code><p-copy-button class="copy-code-button" from="code-block-1012"></p-copy-button></pre>
               <h3 id="update-the-angular-configuration" class="anchor-heading">
                 Update the Angular Configuration<a
                   href="#update-the-angular-configuration"
@@ -451,7 +451,7 @@
                 file. However, the Angular way to do it is by adding a script configurations into your angular.json file
                 as follows:
               </p>
-              <pre><code class="language-json" id="code-block-12"><span class="token property">"architect"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+              <pre><code class="language-json" id="code-block-1013"><span class="token property">"architect"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
   <span class="token property">"build"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     ...
     <span class="token property">"options"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
@@ -464,7 +464,7 @@
         <span class="token string">"pure-uikit/dist/pure-ui.js"</span>
       <span class="token punctuation">]</span>
       ...
-</code><p-copy-button class="copy-code-button" from="code-block-12"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1013"></p-copy-button></pre>
               <h3 id="setting-up-the-base-path" class="anchor-heading">
                 Setting up the base path<a
                   href="#setting-up-the-base-path"
@@ -475,10 +475,10 @@
                 Next, set the <a href="/getting-started/installation#setting-the-base-path">base path</a> for icons and
                 other assets in the <code>main.ts</code>. In this example, we’ll use the CDN as a base path.
               </p>
-              <pre><code class="language-jsx" id="code-block-13"><span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/utilities/base-path"</span><span class="token punctuation">;</span>
+              <pre><code class="language-jsx" id="code-block-1014"><span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/utilities/base-path"</span><span class="token punctuation">;</span>
 
-<span class="token function">setBasePath</span><span class="token punctuation">(</span><span class="token string">"https://cdn.jsdelivr.net/npm/pure-uikit@1.6.29/cdn/"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-13"></p-copy-button></pre>
+<span class="token function">setBasePath</span><span class="token punctuation">(</span><span class="token string">"https://cdn.jsdelivr.net/npm/pure-uikit@1.6.30/cdn/"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code><p-copy-button class="copy-code-button" from="code-block-1014"></p-copy-button></pre>
               <div role="alert" class="callout callout--tip">
                 <p>
                   If you’d rather not use the CDN for assets, you can create a build task that copies
@@ -490,7 +490,7 @@
                 Configuration<a href="#configuration" aria-label='Direct link to "Configuration"'></a>
               </h2>
               <p>Then make sure to apply the custom elements schema as shown below.</p>
-              <pre><code class="language-js" id="code-block-14"><span class="token keyword">import</span> <span class="token punctuation">{</span> BrowserModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@angular/platform-browser"</span><span class="token punctuation">;</span>
+              <pre><code class="language-js" id="code-block-1015"><span class="token keyword">import</span> <span class="token punctuation">{</span> BrowserModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@angular/platform-browser"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> NgModule<span class="token punctuation">,</span> <span class="token constant">CUSTOM_ELEMENTS_SCHEMA</span> <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@angular/core"</span><span class="token punctuation">;</span>
 
 <span class="token keyword">import</span> <span class="token punctuation">{</span> AppComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./app.component"</span><span class="token punctuation">;</span>
@@ -503,14 +503,14 @@
   <span class="token literal-property property">schemas</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token constant">CUSTOM_ELEMENTS_SCHEMA</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppModule</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-</code><p-copy-button class="copy-code-button" from="code-block-14"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1015"></p-copy-button></pre>
               <h2 id="reference-pure-ui-components-in-your-angular-component-code" class="anchor-heading">
                 Reference Pure UI components in your Angular component code<a
                   href="#reference-pure-ui-components-in-your-angular-component-code"
                   aria-label='Direct link to "Reference Pure UI components in your Angular component code"'
                 ></a>
               </h2>
-              <pre><code class="language-js" id="code-block-15"><span class="token keyword">import</span> <span class="token punctuation">{</span> PDrawer <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pure-uikit'</span><span class="token punctuation">;</span>
+              <pre><code class="language-js" id="code-block-1016"><span class="token keyword">import</span> <span class="token punctuation">{</span> PDrawer <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'pure-uikit'</span><span class="token punctuation">;</span>
 
 @<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   <span class="token literal-property property">selector</span><span class="token operator">:</span> <span class="token string">'app-drawer-example'</span><span class="token punctuation">,</span>
@@ -537,7 +537,7 @@
     <span class="token keyword">this</span><span class="token punctuation">.</span>drawer<span class="token operator">?.</span>nativeElement<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code><p-copy-button class="copy-code-button" from="code-block-15"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1016"></p-copy-button></pre>
               <p>Now you can start using Pure UI components in your app!</p>
               <div role="alert" class="callout callout--tip">
                 <p>

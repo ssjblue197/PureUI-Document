@@ -8,7 +8,7 @@ export type { PInputEvent } from "../../events/events.js";
 export type { PInvalidEvent } from "../../events/events.js";
 /**
  * @summary Radio groups are used to group multiple [radios](/components/radio) or [radio buttons](/components/radio-button) so they function as a single form control.
- * @documentation https://pureui.xyz/components/radio-group
+ * @documentation https://pureui.online/components/radio-group
  * @status stable
  * @since 1.0
  *

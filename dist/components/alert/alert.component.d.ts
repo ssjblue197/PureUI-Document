@@ -3,7 +3,7 @@ import PureElement from "../../internal/pure-ui-element.js";
 import type { CSSResultGroup } from "lit";
 /**
  * @summary Alerts are used to display important messages inline or as toast notifications.
- * @documentation https://pureui.xyz/components/alert
+ * @documentation https://pureui.online/components/alert
  * @status stable
  * @since 1.0
  *

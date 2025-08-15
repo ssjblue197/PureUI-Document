@@ -4,7 +4,7 @@ import type { PRepositionEvent } from "../../events/events.js";
 export type { PRepositionEvent } from "../../events/events.js";
 /**
  * @summary Popup is a utility that lets you declaratively anchor "popup" containers to another element.
- * @documentation https://pureui.xyz/components/popup
+ * @documentation https://pureui.online/components/popup
  * @status stable
  * @since 1.0
  *

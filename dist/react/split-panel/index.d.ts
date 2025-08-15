@@ -4,7 +4,7 @@ import type { PRepositionEvent } from "../../events/events.js";
 export type { PRepositionEvent } from "../../events/events.js";
 /**
  * @summary Split panels display two adjacent panels, allowing the user to reposition them.
- * @documentation https://pureui.xyz/components/split-panel
+ * @documentation https://pureui.online/components/split-panel
  * @status stable
  * @since 1.0
  *

@@ -4,7 +4,7 @@ import type { PSelectEvent } from "../../events/events.js";
 export type { PSelectEvent } from "../../events/events.js";
 /**
  * @summary Menus provide a list of options for the user to choose from.
- * @documentation https://pureui.xyz/components/menu
+ * @documentation https://pureui.online/components/menu
  * @status stable
  * @since 1.0
  *

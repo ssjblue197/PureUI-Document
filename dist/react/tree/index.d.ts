@@ -4,7 +4,7 @@ import type { PSelectionChangeEvent } from "../../events/events.js";
 export type { PSelectionChangeEvent } from "../../events/events.js";
 /**
  * @summary Trees allow you to display a hierarchical list of selectable [tree items](/components/tree-item). Items with children can be expanded and collapsed as desired by the user.
- * @documentation https://pureui.xyz/components/tree
+ * @documentation https://pureui.online/components/tree
  * @status stable
  * @since 1.0
  *

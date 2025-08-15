@@ -1,7 +1,7 @@
 import Component from "../../components/spinner/spinner.component.js";
 /**
  * @summary Spinners are used to show the progress of an indeterminate operation.
- * @documentation https://pureui.xyz/components/spinner
+ * @documentation https://pureui.online/components/spinner
  * @status stable
  * @since 1.0
  *

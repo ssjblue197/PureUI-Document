@@ -6,7 +6,7 @@ export type { PBlurEvent } from "../../events/events.js";
 export type { PFocusEvent } from "../../events/events.js";
 /**
  * @summary Radios allow the user to select a single option from a group.
- * @documentation https://pureui.xyz/components/radio
+ * @documentation https://pureui.online/components/radio
  * @status stable
  * @since 1.0
  *

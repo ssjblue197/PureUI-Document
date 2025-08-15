@@ -3,7 +3,7 @@ import type { CSSResultGroup } from "lit";
 import type { PureFormControl } from "../../internal/pure-ui-element.js";
 /**
  * @summary Switches allow the user to toggle an option on or off.
- * @documentation https://pureui.xyz/components/switch
+ * @documentation https://pureui.online/components/switch
  * @status stable
  * @since 1.0
  *

@@ -6,7 +6,7 @@ export type { PChangeEvent } from "../../events/events.js";
 export type { PHoverEvent } from "../../events/events.js";
 /**
  * @summary Ratings give users a way to quickly view and provide feedback.
- * @documentation https://pureui.xyz/components/rating
+ * @documentation https://pureui.online/components/rating
  * @status stable
  * @since 1.0
  *

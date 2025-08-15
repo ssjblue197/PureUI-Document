@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-layout="default" data-pure-ui-version="1.6.29">
+<html lang="en" data-layout="default" data-pure-ui-version="1.6.30">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,12 +16,12 @@
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:creator" content="pure_ui" />
-    <meta name="twitter:image" content="https://pureui.xyz/assets/images/og-image.png" />
+    <meta name="twitter:image" content="https://pureui.online/assets/images/og-image.png" />
 
-    <meta property="og:url" content="https://pureui.xyz/tutorials/integrating-with-laravel/" />
+    <meta property="og:url" content="https://pureui.online/tutorials/integrating-with-laravel/" />
     <meta property="og:title" content="Integrating with Laravel" />
     <meta property="og:description" content="This page explains how to integrate Pure UI with a Laravel app." />
-    <meta property="og:image" content="https://pureui.xyz/assets/images/og-image.png" />
+    <meta property="og:image" content="https://pureui.online/assets/images/og-image.png" />
 
     <link rel="stylesheet" href="/dist/themes/light.css" />
     <link rel="stylesheet" href="/dist/themes/dark.css" />
@@ -57,7 +57,7 @@
       <div id="header">
         <div class="left-header">
           <img src="/assets/images/logo.png" alt="Pure UI" id="logo" />
-          <span class="version">v1.6.29</span>
+          <span class="version">v1.6.30</span>
         </div>
         <span id="slogan"> PureUI: Simplify, Customize, Innovate. </span>
         <div class="right-header">
@@ -476,8 +476,8 @@
                   aria-label='Direct link to "Install the Pure UI package"'
                 ></a>
               </h3>
-              <pre><code class="language-bash" id="code-block-100"><span class="token function">npm</span> <span class="token function">install</span> pure-uikit
-</code><p-copy-button class="copy-code-button" from="code-block-100"></p-copy-button></pre>
+              <pre><code class="language-bash" id="code-block-1129"><span class="token function">npm</span> <span class="token function">install</span> pure-uikit
+</code><p-copy-button class="copy-code-button" from="code-block-1129"></p-copy-button></pre>
               <h3 id="import-the-default-theme" class="anchor-heading">
                 Import the Default Theme<a
                   href="#import-the-default-theme"
@@ -485,8 +485,8 @@
                 ></a>
               </h3>
               <p>Import the Pure UI default theme (stylesheet) in <code>/resources/css/app.css</code>:</p>
-              <pre><code class="language-css" id="code-block-101"><span class="token atrule"><span class="token rule">@import</span> <span class="token string">"/node_modules/pure-uikit/dist/themes/light.css"</span><span class="token punctuation">;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-101"></p-copy-button></pre>
+              <pre><code class="language-css" id="code-block-1130"><span class="token atrule"><span class="token rule">@import</span> <span class="token string">"/node_modules/pure-uikit/dist/themes/light.css"</span><span class="token punctuation">;</span></span>
+</code><p-copy-button class="copy-code-button" from="code-block-1130"></p-copy-button></pre>
               <h3 id="import-your-pure-ui-components" class="anchor-heading">
                 Import Your Pure UI Components<a
                   href="#import-your-pure-ui-components"
@@ -497,7 +497,7 @@
                 Import each Pure UI component you plan to use in <code>/resources/js/bootstrap.js</code>. Use the full
                 path to each component (as outlined in the
                 <a
-                  href="https://pureui.xyz/getting-started/installation#cherry-picking"
+                  href="https://pureui.online/getting-started/installation#cherry-picking"
                   class="external-link"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -505,10 +505,10 @@
                 >). You can find the full import statement for a component in the <em>Importing</em> section of the
                 component’s documentation (use the <em>Bundler</em> import). Your imports should look similar to:
               </p>
-              <pre><code class="language-js" id="code-block-102"><span class="token keyword">import</span> <span class="token string">"pure-uikit/dist/components/button/button.js"</span><span class="token punctuation">;</span>
+              <pre><code class="language-js" id="code-block-1131"><span class="token keyword">import</span> <span class="token string">"pure-uikit/dist/components/button/button.js"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token string">"pure-uikit/dist/components/icon/icon.js"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token string">"pure-uikit/dist/components/dialog/dialog.js"</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-102"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1131"></p-copy-button></pre>
               <h3 id="copy-the-pure-ui-static-assets-icons-images-etc_-to-a-public-folder" class="anchor-heading">
                 Copy the Pure UI Static Assets (icons, images, etc.) to a Public Folder<a
                   href="#copy-the-pure-ui-static-assets-icons-images-etc_-to-a-public-folder"
@@ -520,8 +520,8 @@
                 the Pure UI static assets to your project’s public folder. Run this command from your project’s root
                 directory to copy the Pure UI static assets to the <code>./public/assets</code> folder:
               </p>
-              <pre><code class="language-sh" id="code-block-103"><span class="token function">cp</span> <span class="token parameter variable">-aR</span> node_modules/pure-uikit/dist/assets/ ./public/assets
-</code><p-copy-button class="copy-code-button" from="code-block-103"></p-copy-button></pre>
+              <pre><code class="language-sh" id="code-block-1132"><span class="token function">cp</span> <span class="token parameter variable">-aR</span> node_modules/pure-uikit/dist/assets/ ./public/assets
+</code><p-copy-button class="copy-code-button" from="code-block-1132"></p-copy-button></pre>
               <h3 id="set-the-base-path" class="anchor-heading">
                 Set the Base Path<a href="#set-the-base-path" aria-label='Direct link to "Set the Base Path"'></a>
               </h3>
@@ -530,17 +530,17 @@
                 <code>/resources/js/bootstrap.js</code>. The path must point to the same folder where you copy assets to
                 in the next step.
               </p>
-              <pre><code class="language-js" id="code-block-104"><span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/utilities/base-path.js"</span><span class="token punctuation">;</span>
+              <pre><code class="language-js" id="code-block-1133"><span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/utilities/base-path.js"</span><span class="token punctuation">;</span>
 <span class="token function">setBasePath</span><span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-104"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1133"></p-copy-button></pre>
               <p>Example <code>/resources/js/bootstrap.js</code> file:</p>
-              <pre><code class="language-js" id="code-block-105"><span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/utilities/base-path.js"</span><span class="token punctuation">;</span>
+              <pre><code class="language-js" id="code-block-1134"><span class="token keyword">import</span> <span class="token punctuation">{</span> setBasePath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"pure-uikit/dist/utilities/base-path.js"</span><span class="token punctuation">;</span>
 <span class="token function">setBasePath</span><span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">import</span> <span class="token string">"pure-uikit/dist/components/button/button.js"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token string">"pure-uikit/dist/components/icon/icon.js"</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token string">"pure-uikit/dist/components/dialog/dialog.js"</span><span class="token punctuation">;</span>
-</code><p-copy-button class="copy-code-button" from="code-block-105"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1134"></p-copy-button></pre>
               <h3 id="verify-vite-entry-points" class="anchor-heading">
                 Verify Vite Entry Points<a
                   href="#verify-vite-entry-points"
@@ -552,13 +552,13 @@
                 <code>resources/css/app.css</code> and <code>resources/js/app.js</code>. If you use a different location
                 for your CSS and/or Javascript entry point, update this configuration to accordingly.
               </p>
-              <pre><code class="language-js" id="code-block-106"><span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+              <pre><code class="language-js" id="code-block-1135"><span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span>
         <span class="token function">laravel</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
             <span class="token literal-property property">input</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"resources/css/app.css"</span><span class="token punctuation">,</span> <span class="token string">"resources/js/app.js"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
             <span class="token literal-property property">refresh</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
         <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
     <span class="token punctuation">]</span><span class="token punctuation">,</span>
-</code><p-copy-button class="copy-code-button" from="code-block-106"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1135"></p-copy-button></pre>
               <h3 id="compile-front-end-assets" class="anchor-heading">
                 Compile Front-End Assets<a
                   href="#compile-front-end-assets"
@@ -566,12 +566,12 @@
                 ></a>
               </h3>
               <p>Run the Vite development server or production build.</p>
-              <pre><code class="language-bash" id="code-block-107"><span class="token comment">## run the Vite development bundle</span>
+              <pre><code class="language-bash" id="code-block-1136"><span class="token comment">## run the Vite development bundle</span>
 <span class="token function">npm</span> run dev
 
 <span class="token comment">## build a production bundle (with versioning)</span>
 <span class="token function">npm</span> run build
-</code><p-copy-button class="copy-code-button" from="code-block-107"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1136"></p-copy-button></pre>
               <h3 id="include-front-end-assets-in-your-layout-file" class="anchor-heading">
                 Include Front-End Assets in Your Layout File<a
                   href="#include-front-end-assets-in-your-layout-file"
@@ -582,10 +582,10 @@
                 Add the <code>@vite()</code> Blade directive to the <code>&lt;head&gt;</code> of your application’s root
                 template.
               </p>
-              <pre><code class="language-html" id="code-block-108"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+              <pre><code class="language-html" id="code-block-1137"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
   ... @vite(['resources/css/app.css', 'resources/js/app.js'])
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
-</code><p-copy-button class="copy-code-button" from="code-block-108"></p-copy-button></pre>
+</code><p-copy-button class="copy-code-button" from="code-block-1137"></p-copy-button></pre>
               <p>Have fun using Pure UI components in your Laravel app!</p>
             </div>
 

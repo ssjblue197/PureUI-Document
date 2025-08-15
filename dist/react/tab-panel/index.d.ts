@@ -1,7 +1,7 @@
 import Component from "../../components/tab-panel/tab-panel.component.js";
 /**
  * @summary Tab panels are used inside [tab groups](/components/tab-group) to display tabbed content.
- * @documentation https://pureui.xyz/components/tab-panel
+ * @documentation https://pureui.online/components/tab-panel
  * @status stable
  * @since 1.0
  *

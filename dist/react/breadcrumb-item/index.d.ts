@@ -1,7 +1,7 @@
 import Component from "../../components/breadcrumb-item/breadcrumb-item.component.js";
 /**
  * @summary Breadcrumb Items are used inside [breadcrumbs](/components/breadcrumb) to represent different links.
- * @documentation https://pureui.xyz/components/breadcrumb-item
+ * @documentation https://pureui.online/components/breadcrumb-item
  * @status stable
  * @since 1.0
  *

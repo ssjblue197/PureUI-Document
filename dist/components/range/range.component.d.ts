@@ -3,7 +3,7 @@ import type { CSSResultGroup } from "lit";
 import type { PureFormControl } from "../../internal/pure-ui-element.js";
 /**
  * @summary Ranges allow the user to select a single value within a given range using a slider.
- * @documentation https://pureui.xyz/components/range
+ * @documentation https://pureui.online/components/range
  * @status stable
  * @since 1.0
  *

@@ -2,7 +2,7 @@ import PureElement from "../../internal/pure-ui-element.js";
 import type { CSSResultGroup } from "lit";
 /**
  * @summary Includes give you the power to embed external HTML files into the page.
- * @documentation https://pureui.xyz/components/include
+ * @documentation https://pureui.online/components/include
  * @status stable
  * @since 1.0
  *

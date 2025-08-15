@@ -2,7 +2,7 @@ import PureElement from "../../internal/pure-ui-element.js";
 import type { CSSResultGroup } from "lit";
 /**
  * @summary Button groups can be used to group related buttons into sections.
- * @documentation https://pureui.xyz/components/button-group
+ * @documentation https://pureui.online/components/button-group
  * @status stable
  * @since 1.0
  *

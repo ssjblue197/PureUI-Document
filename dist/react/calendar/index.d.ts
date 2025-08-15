@@ -22,7 +22,7 @@ export type { PAfterHideEvent } from "../../events/events.js";
 export type { PInvalidEvent } from "../../events/events.js";
 /**
  * @summary Calendar shows a monthly view of the Gregorian calendar, optionally allowing users to interact with dates.
- * @documentation https://pureui.xyz/components/calendar
+ * @documentation https://pureui.online/components/calendar
  *
  * @since 1.1.5
  * @status stable

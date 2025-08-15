@@ -10,7 +10,7 @@ export type { PHideEvent } from "../../events/events.js";
 export type { PAfterHideEvent } from "../../events/events.js";
 /**
  * @summary Alerts are used to display important messages inline or as toast notifications.
- * @documentation https://pureui.xyz/components/alert
+ * @documentation https://pureui.online/components/alert
  * @status stable
  * @since 1.0
  *

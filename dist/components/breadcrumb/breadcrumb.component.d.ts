@@ -3,7 +3,7 @@ import PureElement from "../../internal/pure-ui-element.js";
 import type { CSSResultGroup } from "lit";
 /**
  * @summary Breadcrumbs provide a group of links so users can easily navigate a website's hierarchy.
- * @documentation https://pureui.xyz/components/breadcrumb
+ * @documentation https://pureui.online/components/breadcrumb
  * @status stable
  * @since 1.0
  *

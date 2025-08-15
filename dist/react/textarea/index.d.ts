@@ -12,7 +12,7 @@ export type { PInputEvent } from "../../events/events.js";
 export type { PInvalidEvent } from "../../events/events.js";
 /**
  * @summary Textareas collect data from the user and allow multiple lines of text.
- * @documentation https://pureui.xyz/components/textarea
+ * @documentation https://pureui.online/components/textarea
  * @status stable
  * @since 1.0
  *

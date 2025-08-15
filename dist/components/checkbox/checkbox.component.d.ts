@@ -4,7 +4,7 @@ import type { CSSResultGroup } from "lit";
 import type { PureFormControl } from "../../internal/pure-ui-element.js";
 /**
  * @summary Checkboxes allow the user to toggle an option on or off.
- * @documentation https://pureui.xyz/components/checkbox
+ * @documentation https://pureui.online/components/checkbox
  * @status stable
  * @since 1.0
  *

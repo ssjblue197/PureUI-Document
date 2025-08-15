@@ -6,7 +6,7 @@ export type { PCopyEvent } from "../../events/events.js";
 export type { PErrorEvent } from "../../events/events.js";
 /**
  * @summary Copies text data to the clipboard when the user clicks the trigger.
- * @documentation https://pureui.xyz/components/copy
+ * @documentation https://pureui.online/components/copy
  * @status experimental
  * @since 2.7
  *

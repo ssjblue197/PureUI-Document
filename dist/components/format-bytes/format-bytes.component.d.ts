@@ -1,7 +1,7 @@
 import PureElement from "../../internal/pure-ui-element.js";
 /**
  * @summary Formats a number as a human readable bytes value.
- * @documentation https://pureui.xyz/components/format-bytes
+ * @documentation https://pureui.online/components/format-bytes
  * @status stable
  * @since 1.0
  */
